@@ -1,0 +1,45 @@
+political_actions = {
+	IRQ_war = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			original_tag = IRQ
+		}
+
+		available = {
+			IRQ = {
+				has_war_with = ENG
+				}
+		}
+
+		cost = 25
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		visible = {
+			IRQ = {
+				has_completed_focus = pro-axis_coup
+				}
+		}
+
+		complete_effect = {
+			IRQ = {
+				country_event = new.25
+				}
+			set_rule = {
+				can_join_factions = yes
+				}
+	
+		}
+
+	}
+}	

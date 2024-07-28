@@ -1,0 +1,22 @@
+state={
+	id=970
+	name="STATE_970"
+	state_category = wasteland
+	
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+			}
+		add_core_of = EGY
+		victory_points = {
+			1071 1 
+		}
+		}
+	provinces={
+		1071 4145 10127 11910 
+	}
+	manpower=3533
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

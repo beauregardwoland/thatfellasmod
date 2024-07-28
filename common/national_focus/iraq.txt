@@ -1,0 +1,1503 @@
+search_filter_prios = {
+	FOCUS_FILTER_POLITICAL = 1010
+	
+	FOCUS_FILTER_RESEARCH = 522
+	
+	FOCUS_FILTER_INDUSTRY = 509
+
+
+	FOCUS_FILTER_ARMY_XP = 103
+	FOCUS_FILTER_NAVY_XP = 102
+	FOCUS_FILTER_AIR_XP = 101
+	
+
+}
+
+focus_tree = {
+	id = iraq_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = IRQ
+		}
+	}
+	continuous_focus_position = { x = 250 y = 1000 }
+	default = no
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = aftermath_of_the_mandate
+	}
+
+	focus = {
+		id = aftermath_of_the_mandate
+		icon = GFX_focus_eng_decolonization
+		x = 15
+		y = 0
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+			}
+		}
+		
+		focus = {
+		id = arab_labour_board
+		available = {
+		has_completed_focus = 1936_coup
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		prerequisite = { focus = aftermath_of_the_mandate }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_generic_agricultural_subsidies
+		x = 3
+		y = 1
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = arab_labour_board
+			}
+		}
+		
+		focus = {
+		id = fan_pan_arabism
+		prerequisite = { focus = aftermath_of_the_mandate }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_goal_generic_national_unity
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = pan_arabism
+			}
+		}
+		
+		focus = {
+		id = begin_military_reform
+		prerequisite = { focus = aftermath_of_the_mandate }
+		relative_position_id = aftermath_of_the_mandate 
+		icon = GFX_focus_chi_army_reform
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = -3
+		y = 1
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = Sidqis_Reforms
+			}
+		}
+		
+		focus = {
+		id = planning_behind_the_scenes
+		prerequisite = { focus = begin_military_reform }
+		prerequisite = { focus = fan_pan_arabism }
+		relative_position_id = aftermath_of_the_mandate 
+		icon = GFX_goal_conspiracy
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = -2
+		y = 2
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 100
+			army_experience = 25
+			navy_experience = 25
+			air_experience = 25
+			add_stability = -0.05
+			}
+		}
+		
+	focus = {
+		id = 1936_coup
+		prerequisite = { focus = planning_behind_the_scenes }
+		prerequisite = { focus = fan_pan_arabism }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_goal_demand_sudetenland
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = -1
+		y = 3
+		cost = 6
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			country_event = new.16
+		}
+	}
+		focus = {
+		id = new_doctrines_of_war
+		prerequisite = { focus = 1936_coup }
+		prerequisite = { focus = begin_military_reform }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_generic_university_1
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = -4
+		y = 4
+		cost = 8
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 2
+				category = land_doctrine
+			}
+			}
+		}
+		focus = {
+		id = royal_special_forces
+		prerequisite = { focus = new_doctrines_of_war }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_eng_special_air_service
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = -4
+		y = 5
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 2
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+			}
+		}
+		focus = {
+		id = iraqi_marine_corps
+		prerequisite = { focus = royal_special_forces }
+		mutually_exclusive = { focus = iraqi_airborne_corps }
+		mutually_exclusive = { focus = iraqi_mountaineer_corps }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_ICE_modernizing_the_coast_guard
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = -6
+		y = 6
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = marines
+				technology = marines2
+				technology = marines3
+			}
+			}
+		}
+		focus = {
+		id = iraqi_airborne_corps
+		prerequisite = { focus = royal_special_forces }
+		mutually_exclusive = { focus = iraqi_marine_corps }
+		mutually_exclusive = { focus = iraqi_mountaineer_corps }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_generic_armored_air_support
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = -4
+		y = 6
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = paratroopers3
+			}
+			}
+		}
+		focus = {
+		id = iraqi_mountaineer_corps
+		prerequisite = { focus = royal_special_forces }
+		mutually_exclusive = { focus = iraqi_marine_corps }
+		mutually_exclusive = { focus = iraqi_airborne_corps }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_generic_infiltration
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = -2
+		y = 6
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+				technology = tech_mountaineers3
+			}
+			}
+		}
+		
+		focus = {
+		id = finish_army_reform
+		prerequisite = { focus = iraqi_mountaineer_corps focus = iraqi_airborne_corps focus = iraqi_marine_corps }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_generic_combined_arms
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = -4
+		y = 7
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = Sidqis_Reforms
+				add_idea = Sidqis_Reforms_2
+				}
+		}
+	}
+		
+		focus = {
+		id = new_guns
+		prerequisite = { focus = finish_army_reform focus = science_clubs }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_goal_generic_small_arms
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = -4
+		y = 8
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+					bonus = 1
+					uses = 3
+					category = infantry_weapons
+					category = support_tech
+						}
+			}
+		}
+		
+		focus = {
+		id = import_western_designs
+		prerequisite = { focus = new_guns }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_goal_generic_army_tanks
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = -4
+		y = 9
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+					bonus = 1.5
+					uses = 1
+					category = armor
+					category = cat_mechanized_equipment
+						}
+			}
+		}
+		
+		focus = {
+		id = new_theatres
+		prerequisite = { focus = finish_army_reform focus = science_clubs }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_goal_generic_army_doctrines
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = -2
+		y = 8
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 2
+				uses = 2
+				category = land_doctrine
+			}
+			}
+		}
+		
+		focus = {
+		id = dominate_3rd_dimension
+		prerequisite = { focus = new_theatres  }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_goal_generic_air_fighter
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = -2
+		y = 9
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+					bonus = 1.25
+					uses = 2
+					category = light_air
+					category = cat_anti_air
+						}
+			}
+		}
+		
+		focus = {
+		id = might_of_the_war_machine
+		prerequisite = { focus = arab_labour_board }
+		mutually_exclusive = { focus = empower_civilian_sector }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_SWE_let_fly_all_guns
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 1
+		y = 2
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+					bonus = 1.50
+					uses = 2
+					category = cat_production
+						}
+			}
+		}
+		focus = {
+		id = military_industrial_contracts
+		prerequisite = { focus = might_of_the_war_machine }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_goal_industry_air
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 1
+		y = 3
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			}
+		}
+		focus = {
+		id = military_expansion_programs
+		prerequisite = { focus = military_industrial_contracts }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_goal_Focus_Military_Mobilisation
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 1
+		y = 4
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			}
+		}
+		focus = {
+		id = empower_civilian_sector
+		prerequisite = { focus = arab_labour_board }
+		mutually_exclusive = { focus = might_of_the_war_machine }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_collective_housing
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 5
+		y = 2
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+					bonus = 1.50
+					uses = 2
+					category = construction_tech
+						}
+			}
+		}
+		focus = {
+		id = rapid_growth_plans
+		prerequisite = { focus = empower_civilian_sector }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_DEN_no_regulations
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 5
+		y = 3
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			}
+		}
+		
+		focus = {
+		id = black_gold
+		prerequisite = { focus = rapid_growth_plans }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_generic_farmland
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 5
+		y = 4
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			}
+		}
+		focus = {
+		id = improve_standard_of_living
+		prerequisite = { focus = empower_civilian_sector focus = might_of_the_war_machine }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_goal_famine
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 3
+		y = 3
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+			}
+			}
+		}
+		
+		focus = {
+		id = anti_poverty_programs
+		prerequisite = { focus = improve_standard_of_living }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_goal_generic_build_housing
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 3
+		y = 4
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+					bonus = 1.50
+					uses = 3
+					category = industry
+					}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+		focus = {
+		id = Autarky
+		prerequisite = { focus = black_gold focus = military_expansion_programs }
+		prerequisite = { focus = anti_poverty_programs }
+		mutually_exclusive = { focus = foreign_investment }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_generic_industry_1
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 4
+		y = 5
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_autarky_idea
+			}
+		}
+		focus = {
+		id = industrial_planning
+		prerequisite = { focus = Autarky }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_generic_industry_2
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 4
+		y = 6
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			}
+		}
+		focus = {
+		id = phase_one
+		prerequisite = { focus = industrial_planning }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_generic_industry_3
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 4
+		y = 7
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			}
+		}
+		focus = {
+		id = phase_two
+		prerequisite = { focus = phase_one }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_generic_tank_production
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 4
+		y = 8
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			}
+		}
+		focus = {
+		id = foreign_investment
+		prerequisite = { focus = military_expansion_programs focus = black_gold }
+		prerequisite = { focus = anti_poverty_programs }
+		mutually_exclusive = { focus = Autarky }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_generic_diplomatic_treaty
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 2
+		y = 5
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = foreign_investment_idea
+			}
+		}
+		focus = {
+		id = german_experts
+		prerequisite = { focus = foreign_investment }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_chi_mission_to_germany
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 2
+		y = 6
+		cost = 7
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			GER = {
+				country_event = new.22
+				custom_effect_tooltip = needs_approval
+			}
+			custom_effect_tooltip = 2_IRQ_TT
+			custom_effect_tooltip = 3_IRQ_TT
+		}
+	}
+		focus = {
+		id = american_experts
+		prerequisite = { focus = foreign_investment }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_chi_mission_to_the_us
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 1
+		y = 7
+		cost = 7
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			USA = {
+				country_event = new.21
+				custom_effect_tooltip = needs_approval
+			}
+			custom_effect_tooltip = 1_IRQ_TT
+			custom_effect_tooltip = 3_IRQ_TT
+			}
+		}
+		
+		focus = {
+		id = Nationalize_oilfields
+		prerequisite = { focus = american_experts focus = phase_two }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_AST_never_gallipoli
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 1
+		y = 9
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.1
+			ENG = { 
+				remove_resource_rights = 676
+				remove_resource_rights = 291
+				country_event = new.15
+			}
+			}
+		}
+		
+		focus = {
+		id = maximize_effeciency
+		prerequisite = { focus = american_experts focus = german_experts }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_goal_generic_construct_infrastructure
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 2
+		y = 8
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = dandori
+			}
+		}
+		
+		focus = {
+		id = centralized_workflow
+		prerequisite = { focus = phase_two focus = maximize_effeciency }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_goal_generic_production
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 3
+		y = 9
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			}
+		}
+		
+		focus = {
+		id = future_of_iraq
+		prerequisite = { focus = 1936_coup }
+		prerequisite = { focus = Autarky focus = foreign_investment }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_generic_population_growth
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 0
+		y = 6
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = Future_of_iraq
+			}
+		}
+		focus = {
+		id = science_clubs
+		prerequisite = { focus = future_of_iraq }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_goal_tfv_generic_tech_sharing
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = -1
+		y = 7
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+			}
+		}
+		focus = {
+		id = assasination_of_sidqi
+		prerequisite = { focus = future_of_iraq }
+		prerequisite = { focus = science_clubs }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		available = {
+		NOT = {
+			has_completed_focus = pro-axis_coup
+			}
+		}
+		x = 0
+		y = 8
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = Political_chaos
+			remove_ideas = PM_Bakr_Sidqi
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+				}
+			}
+		}
+		
+		focus = {
+		id = pro-axis_coup
+		prerequisite = { focus = assasination_of_sidqi }
+		prerequisite = { focus = centralized_workflow }
+		prerequisite = { focus = Nationalize_oilfields }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_goal_support_fascism
+		available = {
+			has_autonomy_state = autonomy_dominion
+			ENG = {
+				has_war_with = ITA
+				has_war_with = GER
+				}
+			GER = {
+				controls_state = 16
+			}
+		}
+		x = 0
+		y = 10
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+				}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+				}
+			set_autonomy = {
+				target = IRQ
+				autonomous_state = autonomy_free
+				end_wars = yes
+				end_civil_wars = yes
+				}
+			ENG = {
+				end_puppet = IRQ
+				}
+			leave_faction = yes
+			white_peace = GER
+			set_rule = {
+			can_join_factions = no
+			}
+			reverse_add_opinion_modifier = {
+				target = ENG
+				modifier = faction_traitor
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = faction_traitor
+			}
+			ENG = {
+				country_event = new.20
+			}
+			remove_ideas = IRQ_nominal_independence
+			activate_mission = IRQ_war 
+		}
+	}
+		
+		focus = {
+		id = prepare_for_invasion
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		x = -10
+		y = 0
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available = {
+			has_completed_focus = pro-axis_coup
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = tot_economic_mobilisation
+			add_timed_idea = {
+					idea = General_Mobilisation
+					days = 360
+					}
+			}
+		}
+		
+		focus = {
+		id = Fascist_science
+		prerequisite = { focus = prepare_for_invasion }
+		relative_position_id = aftermath_of_the_mandate
+		icon = GFX_goal_tfv_generic_tech_sharing
+		available = {
+		}
+		x = -10
+		y = 1
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+			}
+		}
+		
+		focus = {
+		id = Offensive_stance
+		relative_position_id = prepare_for_invasion
+		prerequisite = { focus = prepare_for_invasion }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 2
+		y = 1
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_manpower = 230000
+			add_ideas = Offensive_stance
+			}
+		}
+		
+		focus = {
+		id = Desert_war
+		relative_position_id = prepare_for_invasion
+		prerequisite = { focus = Offensive_stance }
+		icon = GFX_focus_ITA_comandante_diavolo
+		x = 2
+		y = 2
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Offensive_stance
+				add_idea = War_in_the_desert
+				}
+			}
+		}
+		
+		focus = {
+		id = Defencive_Protocols
+		relative_position_id = prepare_for_invasion
+		prerequisite = { focus = prepare_for_invasion }
+		icon = GFX_goal_fortify_the_westwall
+		x = -2
+		y = 1
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = GER
+				}
+			add_ideas = defencive_stance
+			add_timed_idea = {
+				idea = FRA_fortification_focus
+				days = 600
+				}
+			}
+		}
+		
+	focus = {
+		id = guerilla_war
+		relative_position_id = prepare_for_invasion
+		prerequisite = { focus = Defencive_Protocols }
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = -2
+		y = 2
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = GER
+				}
+			add_equipment_to_stockpile = {
+				type = medium_tank_chassis
+				amount = 75
+				producer = GER
+			}
+			swap_ideas = {
+				remove_idea = defencive_stance
+				add_idea = defencive_stance_2
+				}
+			}
+		}
+		focus = {
+		id = solidify_control
+		relative_position_id = prepare_for_invasion
+		prerequisite = { focus = Desert_war  }
+		prerequisite = { focus = guerilla_war }
+		icon = GFX_focus_ITA_banda_carita
+		x = -0
+		y = 3
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			remove_ideas = Political_chaos
+			add_political_power = 100
+			}
+		}
+		focus = {
+		id = join_axis
+		relative_position_id = prepare_for_invasion
+		prerequisite = { focus = solidify_control }
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = -0
+		y = 4
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			GER = {
+				country_event = new.17
+			}
+			set_rule = {
+			can_join_factions = yes
+			}
+		}
+	}
+		focus = {
+		id = arabian_unification_efforts
+		relative_position_id = prepare_for_invasion
+		prerequisite = { focus = join_axis }
+		icon = GFX_goal_Unite_Arabia
+		x = -1
+		y = 5
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available = {
+			NOT = {
+				is_ai = yes
+				}
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+					type = annex_everything
+					target = SAU
+					expire = 360
+				}
+			}
+		}
+		focus = {
+		id = mesopotamian_project
+		relative_position_id = prepare_for_invasion
+		prerequisite = { focus = join_axis }
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 1
+		y = 5
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available = {
+			NOT = {
+				is_ai = yes
+				}
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+					type = annex_everything
+					target = TUR
+					expire = 60
+				}
+			create_wargoal = {
+					type = annex_everything
+					target = PER
+					expire = 60
+				}
+			}
+		}
+		
+		focus = {
+		id = new_caliphate
+		relative_position_id = prepare_for_invasion
+		prerequisite = { focus = mesopotamian_project focus = arabian_unification_efforts }
+		icon = GFX_focus_TUR_loosen_the_laws_on_secularism
+		available = {
+			NOT = {
+				is_ai = yes
+				}
+			656 = { is_fully_controlled_by = IRQ }
+			455 = { is_fully_controlled_by = IRQ }
+			454 = { is_fully_controlled_by = IRQ }
+			453 = { is_fully_controlled_by = IRQ }
+			SAU = {
+				all_owned_state = { is_fully_controlled_by = IRQ }
+				}
+		}
+		x = 0
+		y = 6
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_cosmetic_tag = CLH_IRQ
+			IRQ = {
+					add_state_core = 656
+					add_state_core = 455
+					add_state_core = 454
+					add_state_core = 453
+					add_state_core = 854
+					add_state_core = 679
+					add_state_core = 855
+					add_state_core = 856
+					add_state_core = 292
+					add_state_core = 858
+					add_state_core = 678
+					add_state_core = 859
+					add_state_core = 857
+					add_state_core = 413
+					add_state_core = 421
+					add_state_core = 419
+					add_state_core = 417
+					add_state_core = 420
+					add_state_core = 344
+					add_state_core = 350
+					add_state_core = 352
+					add_state_core = 800
+					add_state_core = 765
+					add_state_core = 658
+					add_state_core = 294
+					add_state_core = 659
+					add_state_core = 293
+					add_state_core = 229
+					add_state_core = 230
+					add_state_core = 353
+					add_state_core = 680
+					add_state_core = 554
+					add_state_core = 677
+					add_state_core = 553
+					add_state_core = 799
+					
+					}
+			}
+		}
+	}
+
+	
+}

@@ -1,0 +1,62 @@
+﻿###########################
+# Siamese Events
+###########################
+
+add_namespace = siam
+
+country_event = {
+	id = siam.0
+	title = "Army Reform"
+	desc = "We must choose a path"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"Prioritize the Army"
+		ai_chance = { factor = 100 }
+		add_ideas = SIA_Land_Army
+		}
+		
+	option = { 
+		name = "Prioritize the Airforce"
+		ai_chance = { factor = 0 }
+		add_ideas = SIA_Air_Army
+		}
+}
+
+country_event = {
+	id = siam.1
+	title = "Japan Accepts"
+	desc = "We now control Indochina"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"Good!"
+		ai_chance = { factor = 100 }
+		transfer_state = 671
+		transfer_state = 286
+		transfer_state = 741
+		transfer_state = 670
+		}
+
+}
+
+country_event = {
+	id = siam.2
+	title = "Japan Declines"
+	desc = "We have been betrayed"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"Damn!"
+		ai_chance = { factor = 100 }
+			add_stability = -0.05
+		}
+
+}
+

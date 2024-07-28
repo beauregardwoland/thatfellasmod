@@ -1,0 +1,17 @@
+state={
+	id=973
+	name="STATE_973"
+	state_category = city
+	provinces={
+		79 6174 11068 
+	}
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 3
+			}
+		}
+	manpower=277222
+	buildings_max_level_factor=1.000
+	local_supplies=1.000
+}

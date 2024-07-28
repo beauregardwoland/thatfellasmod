@@ -1,0 +1,150 @@
+spriteTypes = {	
+
+	#### Generic continuous goal icons
+#next time you have to fix this copy it onto blank retard
+SpriteType = {
+	name = "GFX_goal_Japanification_of_Foreign_Subsidification"
+	texturefile = "gfx/interface/goals/Japanification_of_Foreign_Subsidification.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_All_resource"
+	texturefile = "gfx/interface/goals/All_resource.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_islamic_government"
+	texturefile = "gfx/interface/goals/goal_islamic_government.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_conspiracy"
+	texturefile = "gfx/interface/goals/goal_conspiracy.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_Unite_Arabia"
+	texturefile = "gfx/interface/goals/goal_Unite_Arabia.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_collective_housing"
+	texturefile = "gfx/interface/goals/focus_collective_housing.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_famine"
+	texturefile = "gfx/interface/goals/goal_famine.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_industry_air"
+	texturefile = "gfx/interface/goals/goal_industry_air.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_Focus_Military_Mobilisation"
+	texturefile = "gfx/interface/goals/Focus_Military_Mobilisation.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_forced_mil"
+	texturefile = "gfx/interface/goals/goal_forced_mil.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_japanese_officer"
+	texturefile = "gfx/interface/goals/goal_japanese_officer.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_focus_chi_collaboration_with_the_japanese"
+	texturefile = "gfx/interface/goals/focus_chi_collaboration_with_the_japanese.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_SIA_siamese_rifles"
+	texturefile = "gfx/interface/goals/SIA_siamese_rifles.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_JAP_REF"
+	texturefile = "gfx/interface/goals/goal_JAP_REF.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_JAP_target_indochina"
+	texturefile = "gfx/interface/goals/goal_JAP_target_indochina.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_Communist_Discourse"
+	texturefile = "gfx/interface/goals/Communist_Discourse.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_generic_build_housing"
+	texturefile = "gfx/interface/goals/goal_generic_build_housing.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_commune_politics"
+	texturefile = "gfx/interface/goals/goal_commune_politics.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_construction"
+	texturefile = "gfx/interface/goals/goal_construction.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_electronics"
+	texturefile = "gfx/interface/goals/goal_electronics.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_OTT_Loosen_Policy"
+	texturefile = "gfx/interface/goals/OTT_Loosen_Policy.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_commune_politics"
+	texturefile = "gfx/interface/goals/goal_commune_politics.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_commune_politics"
+	texturefile = "gfx/interface/goals/goal_commune_politics.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_generic_workers_democracy"
+	texturefile = "gfx/interface/goals/goal_generic_workers_democracy.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_JAP_target_india"
+	texturefile = "gfx/interface/goals/goal_JAP_target_india.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_collaborate_local_elites"
+	texturefile = "gfx/interface/goals/goal_collaborate_local_elites.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_focus_eng_the_sun_never_sets"
+	texturefile = "gfx/interface/goals/focus_eng_the_sun_never_sets.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_national_arsenal"
+	texturefile = "gfx/interface/goals/goal_national_arsenal.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_bluewater_navy"
+	texturefile = "gfx/interface/goals/goal_bluewater_navy.dds"			
+	}	
+
+}

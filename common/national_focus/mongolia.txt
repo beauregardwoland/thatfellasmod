@@ -1,0 +1,986 @@
+search_filter_prios = {
+	FOCUS_FILTER_POLITICAL = 1010
+	
+	FOCUS_FILTER_RESEARCH = 522
+	
+	FOCUS_FILTER_INDUSTRY = 509
+
+
+	FOCUS_FILTER_ARMY_XP = 103
+	FOCUS_FILTER_NAVY_XP = 102
+	FOCUS_FILTER_AIR_XP = 101
+	
+
+}
+
+focus_tree = {
+	id = mongolia_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = MON
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = a_new_mongolia
+	}
+
+	focus = {
+		id = a_new_mongolia
+		available = { 
+			}
+		icon = GFX_focus_generic_join_comintern
+		x = 10
+		y = 0
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_political_power = 150
+				add_ideas = MON_New_Mongol
+		}
+	}
+	
+	focus = {
+		id = asian_communism
+		prerequisite = { focus = a_new_mongolia }
+		available = { 
+			}
+		icon = GFX_goal_generic_war_with_comintern
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = the_peoples_republic
+		prerequisite = { focus = asian_communism }
+		mutually_exclusive = { focus = the_vangaurd_state }
+		available = { 
+			}
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = asian_communism
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_Peoples_Republic
+		}
+	}
+	
+	focus = {
+		id = the_vangaurd_state
+		prerequisite = { focus = asian_communism }
+		mutually_exclusive = { focus = the_peoples_republic }
+		available = { 
+			}
+		icon = GFX_focus_generic_military_mission
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = asian_communism
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_Vangaurd
+		}
+	}
+	
+	focus = {
+		id = encourage_urbanization
+		prerequisite = { focus = the_peoples_republic focus = the_vangaurd_state }
+		available = { 
+			}
+		icon = GFX_focus_SOV_merge_plants
+		x = 0
+		y = 2
+		cost = 5
+		relative_position_id = asian_communism
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				330 = {
+					add_extra_state_shared_building_slots = 4
+					}
+		}
+	}
+	
+	focus = {
+		id = liberate_the_farmlands
+		prerequisite = { focus = the_peoples_republic focus = the_vangaurd_state }
+		available = { 
+			}
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 0
+		y = 3
+		cost = 5
+		relative_position_id = asian_communism
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				819 = {
+					add_extra_state_shared_building_slots = 2
+					}
+				329 = {
+					add_extra_state_shared_building_slots = 2
+					}
+		}
+	}
+	
+	focus = {
+		id = by_the_people
+		prerequisite = { focus = the_peoples_republic }
+		available = { 
+			}
+		icon = GFX_focus_generic_soviet_politics
+		x = -2
+		y = 2
+		cost = 10
+		relative_position_id = asian_communism
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_By_People
+				add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = one_step_closer
+		prerequisite = { focus = by_the_people }
+		available = { 
+			}
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		x = -2
+		y = 3
+		cost = 10
+		relative_position_id = asian_communism
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_one_step_closer
+		}
+	}
+	
+	focus = {
+		id = for_the_people
+		prerequisite = { focus = the_vangaurd_state }
+		available = { 
+			}
+		icon = GFX_Communist_Discourse
+		x = 2
+		y = 2
+		cost = 10
+		relative_position_id = asian_communism
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_For_People
+		}
+	}
+	
+	focus = {
+		id = idolize_the_cause
+		prerequisite = { focus = for_the_people }
+		available = { 
+			}
+		icon = GFX_focus_focus_fra_liberte_egalite_solidarite
+		x = 2
+		y = 3
+		cost = 10
+		relative_position_id = asian_communism
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_Idolization
+		}
+	}
+	
+	focus = {
+		id = workers_of_the_world
+		prerequisite = { focus = one_step_closer focus = idolize_the_cause }
+		available = { 
+			}
+		icon = GFX_focus_SOV_proclaim_soviet_hegemony
+		x = -0
+		y = 4
+		cost = 10
+		relative_position_id = asian_communism
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_workers
+				add_political_power = 125
+		}
+	}
+	
+	#army focuses
+	
+	focus = {
+		id = mongol_armed_forces
+		prerequisite = { focus = a_new_mongolia }
+		available = { 
+			}
+		icon = GFX_focus_generic_manpower
+		x = -6
+		y = 1
+		cost = 10
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				army_experience = 50
+		}
+	}
+	
+	focus = {
+		id = equipment_upgrades
+		prerequisite = { focus = mongol_armed_forces }
+		mutually_exclusive = { focus = improvements_in_thought }
+		available = { 
+			}
+		icon = GFX_goal_generic_small_arms
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = mongol_armed_forces
+	
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 3
+					category = infantry_weapons
+						}
+		}
+	}
+	
+	focus = {
+		id = improvements_in_thought
+		prerequisite = { focus = mongol_armed_forces }
+		mutually_exclusive = { focus = equipment_upgrades }
+		available = { 
+			}
+		icon = GFX_focus_generic_military_academy
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = mongol_armed_forces
+	
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.75
+					uses = 2
+					category = land_doctrine
+						}
+					}
+	}
+	
+	focus = {
+		id = artillery_improvements
+		prerequisite = { focus = equipment_upgrades focus = improvements_in_thought }
+		mutually_exclusive = { focus = a_full_stomach }
+		available = { 
+			}
+		icon = GFX_goal_generic_army_artillery2
+		x = 1
+		y = 2
+		cost = 10
+		relative_position_id = mongol_armed_forces
+	
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_tech_bonus = {
+					bonus = 0.80
+					uses = 2
+					category = artillery
+						}
+		}
+	}
+	
+	focus = {
+		id = a_full_stomach
+		prerequisite = { focus = equipment_upgrades focus = improvements_in_thought }
+		mutually_exclusive = { focus = artillery_improvements }
+		available = { 
+			}
+		icon = GFX_focus_ITA_peasants_rise
+		x = -1
+		y = 2
+		cost = 10
+		relative_position_id = mongol_armed_forces
+	
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 2
+					category = support_tech
+						}
+		}
+	}
+	
+	focus = {
+		id = armored_cavalry
+		prerequisite = { focus = a_full_stomach focus = artillery_improvements }
+		mutually_exclusive = { focus = future_of_airpower }
+		available = { 
+			}
+		icon = GFX_goal_generic_army_tanks
+		x = -1
+		y = 3
+		cost = 10
+		relative_position_id = mongol_armed_forces
+	
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_tech_bonus = {
+					bonus = 1.5
+					uses = 2
+					category = cat_mechanized_equipment
+						}
+		}
+	}
+	
+	focus = {
+		id = ligntning_war
+		prerequisite = { focus = armored_cavalry  }
+		mutually_exclusive = { focus = heavy_cavalry }
+		available = { 
+			}
+		icon = GFX_focus_generic_tankette
+		x = -3
+		y = 4
+		cost = 10
+		relative_position_id = mongol_armed_forces
+	
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_blitzkreig
+				add_tech_bonus = {
+					bonus = 1.25
+					uses = 2
+					category = cat_light_armor
+						}
+		}
+	}
+	
+	focus = {
+		id = heavy_cavalry
+		prerequisite = { focus = armored_cavalry  }
+		mutually_exclusive = { focus = ligntning_war }
+		available = { 
+			}
+		icon = GFX_focus_generic_army_tanks2
+		x = -1
+		y = 4
+		cost = 10
+		relative_position_id = mongol_armed_forces
+	
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_heavy_tanks
+				add_tech_bonus = {
+					bonus = 1
+					uses = 2
+					category = cat_heavy_armor
+						}
+		}
+	}
+	
+	focus = {
+		id = cut_corners
+		prerequisite = { focus = heavy_cavalry focus = ligntning_war }
+		available = { 
+			}
+		icon = GFX_focus_generic_tank_production
+		x = -2
+		y = 5
+		cost = 10
+		relative_position_id = mongol_armed_forces
+	
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_cut_corners
+		}
+	}
+	
+	focus = {
+		id = future_of_airpower
+		prerequisite = { focus = a_full_stomach focus = artillery_improvements }
+		mutually_exclusive = { focus = armored_cavalry }
+		available = { 
+			}
+		icon = GFX_goal_generic_air_doctrine
+		x = 1
+		y = 3
+		cost = 10
+		relative_position_id = mongol_armed_forces
+	
+		search_filters = { FOCUS_FILTER_AIR_XP }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_doctrine_cost_reduction = {
+					cost_reduction = 1.75
+					uses = 3
+					category = air_doctrine
+						}
+				add_tech_bonus = {
+					bonus = 1.5
+					uses = 2
+					category = light_air
+						}
+		}
+	}
+	
+	focus = {
+		id = frontline_bombing
+		prerequisite = { focus = future_of_airpower }
+		mutually_exclusive = { focus = heavy_aircraft }
+		available = { 
+			}
+		icon = GFX_focus_generic_tank_air_support
+		x = 3
+		y = 4
+		cost = 10
+		relative_position_id = mongol_armed_forces
+	
+		search_filters = { FOCUS_FILTER_AIR_XP }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_tech_bonus = {
+					bonus = 1.75
+					uses = 2
+					category = battlefield_support_tree
+						}
+				add_tech_bonus = {
+					bonus = 1.25
+					uses = 1
+					category = light_air
+						}
+				add_ideas = MON_CAS
+		}
+	}
+	
+	focus = {
+		id = heavy_aircraft
+		prerequisite = { focus = future_of_airpower }
+		mutually_exclusive = { focus = frontline_bombing }
+		available = { 
+			}
+		icon = GFX_focus_generic_multi_role_aircraft
+		x = 1
+		y = 4
+		cost = 10
+		relative_position_id = mongol_armed_forces
+	
+		search_filters = { FOCUS_FILTER_AIR_XP }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_tech_bonus = {
+					bonus = 2
+					uses = 1
+					category = heavy_air
+						}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 2
+					category = heavy_air
+						}
+				add_ideas = MON_Heavy_Air
+		}
+	}
+	
+	focus = {
+		id = rule_the_skies
+		prerequisite = { focus = heavy_aircraft focus = frontline_bombing }
+		available = { 
+			}
+		icon = GFX_goal_generic_air_fighter
+		x = 2
+		y = 5
+		cost = 10
+		relative_position_id = mongol_armed_forces
+	
+		search_filters = { FOCUS_FILTER_AIR_XP }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_cut_corners_2
+		}
+	}
+	
+	#industry
+	
+	focus = {
+		id = five_year_plan
+		prerequisite = { focus = a_new_mongolia }
+		available = { 
+			}
+		icon = GFX_goal_generic_workers_democracy
+		x = 8
+		y = 1
+		cost = 10
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_political_power = 50
+				add_tech_bonus = {
+					bonus = 1
+					uses = 3
+					category = industry
+						}
+				add_ideas = MON_Five_Year_Plan_1
+		}
+	}
+	
+	focus = {
+		id = expand_construction_sector
+		prerequisite = { focus = five_year_plan }
+		available = { 
+			}
+		icon = GFX_goal_generic_build_housing
+		x = 8
+		y = 2
+		cost = 10
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				swap_ideas = {
+					remove_idea = MON_Five_Year_Plan_1
+					add_idea = MON_Five_Year_Plan_2
+					}
+		}
+	}
+	
+	focus = {
+		id = public_works
+		prerequisite = { focus = expand_construction_sector }
+		available = { 
+			}
+		icon = GFX_goal_commune_politics
+		x = 8
+		y = 3
+		cost = 10
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				swap_ideas = {
+					remove_idea = MON_Five_Year_Plan_2
+					add_idea = MON_Five_Year_Plan_3
+					}
+				820 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+						}
+					}
+		}
+	}
+	
+	focus = {
+		id = effecient_production_lines
+		prerequisite = { focus = expand_construction_sector }
+		available = { 
+			}
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 6
+		y = 3
+		cost = 10
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_Military_industry
+		}
+	}
+	
+	focus = {
+		id = new_arms_plants
+		prerequisite = { focus = effecient_production_lines }
+		available = { 
+			}
+		icon = GFX_goal_reichsautobahn
+		x = 6
+		y = 4
+		cost = 10
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				329 = {
+					add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+						type = arms_factory
+						level = 5
+						instant_build = yes
+						}
+					}
+		}
+	}
+	
+	focus = {
+		id = soviet_investments
+		prerequisite = { focus = public_works }
+		available = { 
+			}
+		icon = GFX_goal_generic_soviet_construction
+		x = 8
+		y = 4
+		cost = 10
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_offsite_building = { type = industrial_complex level = 7 }
+		}
+	}
+	
+	focus = {
+		id = spirit_of_labour
+		prerequisite = { focus = soviet_investments }
+		prerequisite = { focus = new_arms_plants }
+		available = { 
+				NOT = {
+					has_completed_focus = finish_the_five_year_plan
+					}
+			}
+		icon = GFX_goal_generic_production
+		x = 7
+		y = 5
+		cost = 12
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_Spirit
+		}
+	}
+	
+	focus = {
+		id = workers_unions
+		prerequisite = { focus = soviet_investments }
+		prerequisite = { focus = new_arms_plants }
+		available = { 
+				NOT = {
+					has_completed_focus = finish_the_five_year_plan
+					}
+			}
+		icon = GFX_focus_generic_soviet_politics
+		x = 9
+		y = 5
+		cost = 12
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_Unions
+		}
+	}
+	
+	focus = {
+		id = resource_extraction
+		prerequisite = { focus = soviet_investments }
+		prerequisite = { focus = new_arms_plants }
+		available = { 
+				NOT = {
+					has_completed_focus = finish_the_five_year_plan
+					}
+			}
+		icon = GFX_All_resource
+		x = 5
+		y = 5
+		cost = 12
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_extraction
+				random_owned_controlled_state = {
+					add_resource = {
+						type = Steel
+						amount = 24
+						}
+					add_resource = {
+						type = tungsten
+						amount = 24
+						}
+					add_resource = {
+						type = aluminum
+						amount = 24
+						}	
+}
+		}
+	}
+	
+	focus = {
+		id = further_employment
+		prerequisite = { focus = soviet_investments }
+		prerequisite = { focus = new_arms_plants }
+		available = { 
+				NOT = {
+					has_completed_focus = finish_the_five_year_plan
+					}
+			}
+		icon = GFX_goal_OTT_Loosen_Policy
+		x = 6
+		y = 6
+		cost = 12
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_Employment
+		}
+	}
+	
+	focus = {
+		id = trade_schools
+		prerequisite = { focus = soviet_investments }
+		prerequisite = { focus = new_arms_plants }
+		available = { 
+				NOT = {
+					has_completed_focus = finish_the_five_year_plan
+					}
+			}
+		icon = GFX_goal_electronics
+		x = 8
+		y = 6
+		cost = 12
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_Trade_Schools
+		}
+	}
+	
+	focus = {
+		id = finish_the_five_year_plan
+		prerequisite = { focus = trade_schools focus = further_employment focus = resource_extraction focus = workers_unions focus = spirit_of_labour }
+		available = { 
+			}
+		icon = GFX_goal_construction
+		x = 7
+		y = 7
+		cost = 10
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				swap_ideas = {
+					remove_idea = MON_Five_Year_Plan_3
+					add_idea = MON_Five_Year_Plan_final
+					}
+		}
+	}
+	
+	focus = {
+		id = science_clubs
+		prerequisite = { focus = finish_the_five_year_plan }
+		available = { 
+			}
+		icon = GFX_focus_research
+		x = 7
+		y = 8
+		cost = 10
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_research_slot = 1
+		}
+	}
+	
+	#soviet research
+	
+	focus = {
+		id = soviet_mongol_research
+		prerequisite = { focus = a_new_mongolia }
+		available = { 
+				num_of_civilian_factories > 10
+			}
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 4
+		y = 1
+		cost = 10
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = public_school_system
+		prerequisite = { focus = soviet_mongol_research }
+		available = { 
+				num_of_civilian_factories > 15
+			}
+		icon = GFX_focus_research2
+		x = 4
+		y = 2
+		cost = 10
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = MON_Public_School
+		}
+	}
+	
+	focus = {
+		id = national_university_of_mongolia
+		prerequisite = { focus = public_school_system }
+		available = { 
+				num_of_civilian_factories > 30
+			}
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 4
+		y = 3
+		cost = 20
+		relative_position_id = a_new_mongolia
+	
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_research_slot = 1
+		}
+	}
+}

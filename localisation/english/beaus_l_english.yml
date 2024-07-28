@@ -1,0 +1,15 @@
+﻿l_english:
+ gw_artillery:0 "Interwar Artillery"
+ gw_artillery_desc:0""
+ bigg_artillery_equipment:0"Heavy Artilery Equipment"
+ bigg_artillery_equipment_1:0"Heavy Artilery 1"
+ bigg_artillery_equipment_1_short:0"Heavy Artillery 1"
+ bigg_artillery_equipment_1_desc:0"placeholder"
+ bigg_artillery_equipment_2:0"Heavy Artilery 2"
+ bigg_artillery_equipment_2_short:0"Heavy Artillery 2"
+ bigg_artillery_equipment_2_desc:0"placeholder"
+
+ bigg_artillery_research_2:0"Heavy Howitzer platforms"
+ bigg_artillery_research_3:0"Improved Siege Munitions"
+ heavy_artillery_brigade:0"Heavy Artilery"
+ heavy_support_arty:0"Support Heavy Artillery"

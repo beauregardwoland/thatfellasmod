@@ -1,0 +1,42 @@
+SpriteTypes = {
+	SpriteType = {
+		name = "GFX_bigg_artillery_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/Art_3_axis.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_bigg_artillery_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/Art_3_allies.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_bigg_artillery_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/Art_3_axis.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_bigg_artillery_research_1_medium"
+		texturefile = "gfx/interface/technologies/Art_3_axis.dds"
+	}
+	SpriteType = {
+		name = "GFX_bigg_artillery_research_2_medium"
+		texturefile = "gfx/interface/technologies/basic_light_battery.dds"
+	}
+	SpriteType = {
+		name = "GFX_bigg_artillery_research_3_medium"
+		texturefile = "gfx/interface/technologies/improved_medium_shell.dds"
+	}
+	SpriteType = {
+		name = "GFX_bigg_artillery_research_4_medium"
+		texturefile = "gfx/interface/technologies/Art_3_allies.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_bigg_artillery_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_artillery_materials.dds"
+	}
+	spriteType = { name = "GFX_unit_heavy_support_arty_icon_medium"							textureFile = "gfx/interface/heavy_art_support_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_heavy_support_arty_icon_medium_white"						textureFile = "gfx/interface/onmap_unit_hart_icon.dds" noOfFrames = 2}
+	spriteType = { name = "GFX_unit_heavy_artillery_brigade_icon_medium"							textureFile = "gfx/interface/heavy_art_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_heavy_artillery_brigade_icon_medium_white"						textureFile = "gfx/interface/onmap_unit_hart_icon.dds" noOfFrames = 2}
+}
+
