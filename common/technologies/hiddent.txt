@@ -1,0 +1,105 @@
+technologies = {
+	mountain_tanks = {
+		research_cost = 1
+
+		allow = { always = no } #only added by effect
+
+		category_all_armor = {
+			mountain = {
+				attack = 0.1
+				movement = 0.05
+			}
+			hills = {
+				attack = 0.1
+				movement = 0.05
+			}
+		}
+	}
+	jungle_tanks = {
+		research_cost = 1
+
+		allow = { always = no } #only added by effect
+
+		category_all_armor = {
+			jungle = {
+				attack = 0.1
+				movement = 0.05
+			}
+			forest = {
+				attack = 0.1
+				movement = 0.05
+			}
+		}
+	}
+	river_boatss = {
+		research_cost = 1
+
+		allow = { always = no } #only added by effect
+
+		category_army = {
+			river = {
+				attack = 0.075
+				movement = 0.075
+			}
+		}
+	}
+	jungle_gun = {
+
+		research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		artillery_brigade = {
+			jungle = {
+				attack = 0.1
+				movement = 0.15 #If you change this - Change the custom tooltip too: mountain_guns_tt ROM_modern_at_guns_tech_tt
+			}
+		}
+
+		anti_tank_brigade = {
+			jungle = {
+				attack = 0.1
+				movement = 0.15 #If you change this - Change the custom tooltip too: mountain_guns_tt ROM_modern_at_guns_tech_tt
+			}
+		}
+	}
+	MON_naval_gaurd_detatchement = { #
+
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		category_marines = {
+			marsh = {
+				movement = 0.10
+				attack = 0.10
+				defence = 0.15
+			}
+			plains = {
+				movement = 0.05
+				attack = 0.05
+				defence = 0.15
+			}
+		}
+	}
+	ski_aircraft = { #
+
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_equipment_modules = {
+			MON_self_sealing_fuel_tanks_small
+		}
+	}
+	
+}

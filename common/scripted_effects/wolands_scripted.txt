@@ -1,0 +1,697 @@
+state_of_pacific_up = {
+	if = {
+		limit = { has_idea = ALI_losing_4 }
+		swap_ideas = {
+			remove_idea = ALI_losing_4
+			add_idea = ALI_losing_5
+		}
+		set_variable = {
+			global.state_of_pacific = 2
+		}
+	}
+	else_if = {
+		limit = { has_idea = ALI_losing_5 }
+		swap_ideas = {
+			remove_idea = ALI_losing_5
+			add_idea = ALI_losing_6
+		}
+		set_variable = {
+			global.state_of_pacific = 3
+		}
+	}
+	else_if = {
+		limit = { has_idea = ALI_losing_6 }
+		swap_ideas = {
+			remove_idea = ALI_losing_6
+			add_idea = ALI_losing_7
+		}
+		set_variable = {
+			global.state_of_pacific = 4
+		}
+	}
+	else = {
+		add_ideas = ALI_losing_4
+		set_variable = {
+			global.state_of_pacific = 1
+		}
+	}
+}
+state_of_pacific_down = {
+	if = {
+		limit = { has_idea = ALI_losing_7 }
+		swap_ideas = {
+			remove_idea = ALI_losing_7
+			add_idea = ALI_losing_6
+		}
+		set_variable = {
+			global.state_of_pacific = 3
+		}
+	}
+	else_if = {
+		limit = { has_idea = ALI_losing_6 }
+		swap_ideas = {
+			remove_idea = ALI_losing_6
+			add_idea = ALI_losing_5
+		}
+		set_variable = {
+			global.state_of_pacific = 2
+		}
+	}
+	else_if = {
+		limit = { has_idea = ALI_losing_5 }
+		swap_ideas = {
+			remove_idea = ALI_losing_5
+			add_idea = ALI_losing_4
+		}
+		set_variable = {
+			global.state_of_pacific = 1
+		}
+	}
+	else = {
+		remove_ideas = ALI_losing_4
+		set_variable = {
+			global.state_of_pacific = 0
+		}
+	}
+}
+
+ROM_agri_reform_timeout_ef = {
+	set_country_flag = rom_comeplete_land_reform
+	if = {
+		limit = {
+			check_variable = {
+				rom_agri_reform_var > 19
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = ROM_agrarian_refor
+		}
+		set_variable = {
+			ROM_agrarian_reform_1 = 0.3
+		}
+		set_variable = {
+			ROM_agrarian_reform_2 = 0.2
+		}
+		set_variable = {
+			ROM_agrarian_reform_3 = 0.2
+		}
+	}
+	else_if = {
+		limit = { 
+			check_variable = {
+				rom_agri_reform_var > 15
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = ROM_agrarian_refor
+		}
+		set_variable = {
+			ROM_agrarian_reform_1 = 0.4
+		}
+		set_variable = {
+			ROM_agrarian_reform_2 = 0.15
+		}
+		set_variable = {
+			ROM_agrarian_reform_3 = 0.15
+		}
+	}
+	else_if = {
+		limit = { 
+			check_variable = {
+				rom_agri_reform_var > 9
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = ROM_agrarian_refor
+		}
+		set_variable = {
+			ROM_agrarian_reform_1 = 0.3
+		}
+		set_variable = {
+			ROM_agrarian_reform_2 = 0.1
+		}
+		set_variable = {
+			ROM_agrarian_reform_3 = 0.1
+		}
+	}
+	else_if = {
+		limit = { 
+			check_variable = {
+				rom_agri_reform_var > 5
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = ROM_agrarian_refor
+		}
+		set_variable = {
+			ROM_agrarian_reform_1 = 0.2
+		}
+		set_variable = {
+			ROM_agrarian_reform_2 = 0.05
+		}
+		set_variable = {
+			ROM_agrarian_reform_3 = 0.05
+		}
+	}
+	else = {
+		add_dynamic_modifier = {
+			modifier = ROM_agrarian_refor
+		}
+		set_variable = {
+			ROM_agrarian_reform_1 = 0.1
+		}
+		set_variable = {
+			ROM_agrarian_reform_2 = 0.025
+		}
+		set_variable = {
+			ROM_agrarian_reform_3 = 0.025
+		}
+	}
+}
+
+JAP_mitsubushi_nav_designer_effect = {
+	FROM = {
+		mio:JAP_mitsubushi_nav_designer = {
+			set_temp_variable = { JAP_mitsubushi_nav_temp_funds = funds }
+		}
+		mio:JAP_mitsubushi_nav_designer_upgrade_1 = {
+			complete_mio_trait = JAP_mitsubushi_nav_designer_1_1
+			add_mio_funds = JAP_mitsubushi_nav_temp_funds
+		}
+	}
+}
+
+JAP_mitsubushi_nav_designer_effect_2 = {
+	FROM = {
+		mio:JAP_mitsubushi_nav_designer = {
+			set_temp_variable = { JAP_mitsubushi_nav_temp_funds = funds }
+		}
+		mio:JAP_mitsubushi_nav_designer_upgrade_2 = {
+			complete_mio_trait = JAP_mitsubushi_nav_designer_2_2
+			add_mio_funds = JAP_mitsubushi_nav_temp_funds
+		}
+	}
+}
+
+JAP_kawasaki_nav_designer_effect_2 = {
+	FROM = {
+		mio:JAP_kawasaki_nav_designer = {
+			complete_mio_trait = JAP_kawasaki_nav_designer_21
+		}
+	}
+}
+JAP_mitsubushi_designer_25_ef = {
+	FROM = {
+		mio:JAP_mitsubushi_nav_designer = {
+			complete_mio_trait = JAP_mitsubushi_nav_designer_24
+		}
+	}
+}
+JAP_mitsubushi_designer_25_ef_1 = {
+	FROM = {
+		mio:JAP_mitsubushi_nav_designer_upgrade_1 = {
+			complete_mio_trait = JAP_mitsubushi_nav_designer_24_1
+		}
+	}
+}
+JAP_mitsubushi_designer_25_ef_2 = {
+	FROM = {
+		mio:JAP_mitsubushi_nav_designer_upgrade_2 = {
+			complete_mio_trait = JAP_mitsubushi_nav_designer_24_2
+		}
+	}
+}
+JAP_kawaskai_designer_25_ef_1 = {
+	FROM = {
+		mio:JAP_kawasaki_designer = {
+			complete_mio_trait = JAP_kawasaki_designer_14
+		}
+	}
+}
+JAP_kawaskai_designer_25_ef_2 = {
+	FROM = {
+		
+		mio:JAP_kawasaki_designer_upgrade_1 = {
+			complete_mio_trait = JAP_kawasaki_designer_14_1
+		}
+	}
+}
+JAP_kawaskai_designer_25_ef_3 = {
+	FROM = {
+		mio:JAP_kawasaki_designer = {
+			set_temp_variable = { JAP_kawasaki_nav_temp_funds = funds }
+		}
+		mio:JAP_kawasaki_designer_upgrade_1 = {
+			complete_mio_trait = JAP_kawasaki_designer_1_1
+			add_mio_funds = JAP_kawasaki_nav_temp_funds
+		}
+	}
+}
+JAP_mitsubushi_ic_shared_ef_1 = {
+	FROM = {
+		mio:JAP_mitsubushi_nav_designer = {
+			add_mio_funds = 1000
+		}
+		hidden_effect = {
+			mio:JAP_mitsubushi_nav_designer_upgrade_1 = {
+				add_mio_funds = 1000
+			}
+			mio:JAP_mitsubushi_nav_designer_upgrade_2= {
+				add_mio_funds = 1000
+			}
+		}
+		mio:JAP_mitsubushi_big_arms_manufactoring = {
+			add_mio_funds = 1000
+		}
+	}
+}
+JAP_mitsubushi_ic_shared_ef_2 = {
+	FROM = {
+		mio:JAP_mitsubushi_big_arms_manufactoring = {
+			add_mio_funds = 1000
+		}
+		mio:JAP_mitsubushi_designer = {
+			add_mio_funds = 1000
+		}
+	}
+}
+JAP_mitsubushi_ic_shared_ef_3 = {
+	FROM = {
+		mio:JAP_mitsubushi_nav_designer = {
+			add_mio_funds = 1000
+		}
+		hidden_effect = {
+			mio:JAP_mitsubushi_nav_designer_upgrade_1 = {
+				add_mio_funds = 1000
+			}
+			mio:JAP_mitsubushi_nav_designer_upgrade_2= {
+				add_mio_funds = 1000
+			}
+		}
+		mio:JAP_mitsubushi_designer = {
+			add_mio_funds = 1000
+		}
+	}
+}
+
+JAP_mitsui_ic_shared_ef_1 = {
+	FROM = {
+		mio:JAP_mitsui_arms_manufactoring = {
+			add_mio_funds = 1000
+		}
+		mio:JAP_mitsui_designer = {
+			add_mio_funds = 1000
+		}
+	}
+}
+JAP_mitsui_ic_shared_ef_2 = {
+	FROM = {
+		mio:JAP_mitsui_arms_manufactoring = {
+			add_mio_funds = 1000
+		}
+		mio:JAP_mitsui_heavy_vehicles = {
+			add_mio_funds = 1000
+		}
+	}
+}
+JAP_mitsui_ic_shared_ef_3 = {
+	FROM = {
+		mio:JAP_mitsui_designer = {
+			add_mio_funds = 1000
+		}
+		mio:JAP_mitsui_heavy_vehicles = {
+			add_mio_funds = 1000
+		}
+	}
+}
+
+JAP_kawasaki_ic_shared_ef_1 = {
+	FROM = {
+		mio:JAP_kawasaki_designer = {
+			add_mio_funds = 1000
+		}
+		hidden_effect = {
+			mio:JAP_kawasaki_designer_upgrade_1 = {
+				add_mio_funds = 1000
+			}
+		}
+		mio:JAP_kawasaki_nav_designer = {
+			add_mio_funds = 1000
+		}
+	}
+}
+JAP_kawasaki_ic_shared_ef_2 = {
+	FROM = {
+		mio:JAP_kawasaki_designer = {
+			add_mio_funds = 1000
+		}
+		hidden_effect = {
+			mio:JAP_kawasaki_designer_upgrade_1 = {
+				add_mio_funds = 1000
+			}
+		}
+		mio:JAP_kawasaki_heavy_vehicles = {
+			add_mio_funds = 1000
+		}
+	}
+}
+JAP_kawasaki_ic_shared_ef_3 = {
+	FROM = {
+		mio:JAP_kawasaki_nav_designer = {
+			add_mio_funds = 1000
+		}
+		mio:JAP_kawasaki_heavy_vehicles = {
+			add_mio_funds = 1000
+		}
+	}
+}
+JAP_sumitomo_ic_shared_ef_1 = {
+	FROM = {
+		mio:JAP_sumitomo_nav_designer = {
+			add_mio_funds = 1000
+		} 
+		mio:JAP_sumitomo_arms_manufactoring = {
+			add_mio_funds = 1000
+		}
+		mio:JAP_sumitomo_big_arms_manufactoring = {
+			add_mio_funds = 1000
+		}
+	}
+}
+JAP_sumitomo_ic_shared_ef_2 = {
+	FROM = {
+		mio:JAP_sumitomo_heavy_vehicles = {
+			add_mio_funds = 1000
+		} 
+		mio:JAP_sumitomo_arms_manufactoring = {
+			add_mio_funds = 1000
+		}
+		mio:JAP_sumitomo_big_arms_manufactoring = {
+			add_mio_funds = 1000
+		}
+	}
+}
+JAP_sumitomo_ic_shared_ef_3 = {
+	FROM = {
+		mio:JAP_sumitomo_heavy_vehicles = {
+			add_mio_funds = 1000
+		} 
+		mio:JAP_sumitomo_nav_designer = {
+			add_mio_funds = 1000
+		} 
+		mio:JAP_sumitomo_big_arms_manufactoring = {
+			add_mio_funds = 1000
+		}
+	}
+}
+JAP_sumitomo_ic_shared_ef_4 = {
+	FROM = {
+		mio:JAP_sumitomo_heavy_vehicles = {
+			add_mio_funds = 1000
+		} 
+		mio:JAP_sumitomo_nav_designer = {
+			add_mio_funds = 1000
+		} 
+		mio:JAP_sumitomo_arms_manufactoring = {
+			add_mio_funds = 1000
+		}
+	}
+}
+fuck_nissan = {
+	mio:JAP_nissan_heavy_vehicles = {
+		add_mio_funds = 1000
+	}
+}
+fuck_nissan1 = {
+	mio:MAN_nissan_heavy = {
+		add_mio_funds = 1000
+	}
+}
+fuck_nissan2 = {
+	mio:MAN_nissan_light = {
+		add_mio_funds = 1000
+	}
+}
+wol_sov_spawn_ins = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = spawned_worker_militias_before }
+		}
+		SOV = {
+			division_template = {
+				name = "Worker-Militias"
+				division_names_group = ENG_INF_01
+				template_counter = 14
+				role = garrison
+				is_locked = no
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					infantry = { x = 3 y = 0 }
+					infantry = { x = 3 y = 1 }
+					infantry = { x = 3 y = 2 }
+					infantry = { x = 4 y = 0 }
+					infantry = { x = 4 y = 1 }
+					infantry = { x = 4 y = 2 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					logistics_company = { x = 0 y = 1 }
+					anti_air = { x = 0 y = 2 }
+					artillery = { x = 1 y = 0 }
+					anti_tank = { x = 1 y = 1 }
+				}
+			}
+		}
+		
+	}
+	create_unit = {
+		division = "name = \"Worker-Militias\" division_template = \"Worker-Militias\" start_experience_factor = 0.4"
+		owner = SOV
+		count = 40
+	}
+	custom_effect_tooltip = WOL_sov_spawn_ins_cost
+	SOV = {
+		multiply_variable = {
+			var_WOL_SOV_spawn_in_tick = 2
+		}
+	}
+}
+wol_autarky_faction_wide = {
+	set_variable = { ger.faction_steel = resource_produced@steel }
+	set_variable = { ger.faction_aluminium = resource_produced@aluminium }
+	set_variable = { ger.faction_chromium = resource_produced@chromium }
+	set_variable = { ger.faction_tungsten = resource_produced@tungsten }
+	set_variable = { ger.faction_rubber = resource_produced@rubber }
+	set_variable = { ger.faction_oil = resource_produced@oil }
+	every_country = {
+		limit = {
+			or = {
+				#original_tag = GER
+				original_tag = ITA
+				original_tag = HUN
+				original_tag = ROM
+				original_tag = BUL
+	 		} 
+		}
+		set_variable = {
+			faction_steel = resource_produced@steel
+		}
+		multiply_variable = {
+			var = faction_steel
+			value = 0.75
+		}
+		add_to_variable = {
+			var = ger.faction_steel
+			value = faction_steel
+		}
+	}
+	every_country = {
+		limit = {
+			or = {
+				#original_tag = GER
+				original_tag = ITA
+				original_tag = HUN
+				original_tag = ROM
+				original_tag = BUL
+	 		} 
+		}
+		set_variable = {
+			faction_aluminium = resource_produced@aluminium
+		}
+		multiply_variable = {
+			var = faction_aluminium
+			value = 0.75
+		}
+		add_to_variable = {
+			var = ger.faction_aluminium
+			value = faction_aluminium
+		}
+	}
+	every_country = {
+		limit = {
+			or = {
+				#original_tag = GER
+				original_tag = ITA
+				original_tag = HUN
+				original_tag = ROM
+				original_tag = BUL
+	 		} 
+		}
+		set_variable = {
+			faction_chromium = resource_produced@chromium
+		}
+		multiply_variable = {
+			var = faction_chromium
+			value = 0.75
+		}
+		add_to_variable = {
+			var = ger.faction_chromium
+			value = faction_chromium
+		}
+	}
+	every_country = {
+		limit = {
+			or = {
+				#original_tag = GER
+				original_tag = ITA
+				original_tag = HUN
+				original_tag = ROM
+				original_tag = BUL
+	 		} 
+		}
+		set_variable = {
+			faction_tungsten = resource_produced@tungsten
+		}
+		multiply_variable = {
+			var = faction_tungsten
+			value = 0.75
+		}
+		add_to_variable = {
+			var = ger.faction_tungsten
+			value = faction_tungsten
+		}
+	}
+	every_country = {
+		limit = {
+			or = {
+				#original_tag = GER
+				original_tag = ITA
+				original_tag = HUN
+				original_tag = ROM
+				original_tag = BUL
+	 		} 
+		}
+		set_variable = {
+			faction_rubber = resource_produced@rubber
+		}
+		multiply_variable = {
+			var = faction_rubber
+			value = 0.75
+		}
+		add_to_variable = {
+			var = ger.faction_rubber
+			value = faction_rubber
+		}
+	}
+	every_country = {
+		limit = {
+			or = {
+				#original_tag = GER
+				original_tag = ITA
+				original_tag = HUN
+				original_tag = ROM
+				original_tag = BUL
+	 		} 
+		}
+		set_variable = {
+			faction_oil = resource_produced@oil
+		}
+		multiply_variable = {
+			var = faction_oil
+			value = 0.75
+		}
+		add_to_variable = {
+			var = ger.faction_oil
+			value = faction_oil
+		}
+	}
+}
+JAP_set_state_debuff = {
+	add_dynamic_modifier = { modifier = JAP_allied_debuff days = JAP.JAP_tora_tora_duration }
+	add_dynamic_modifier = { modifier = JAP_attack_buff days = JAP.JAP_tora_tora_duration scope = JAP }
+	hidden_effect = {
+		add_dynamic_modifier = { modifier = JAP_attack_buff_dup_allies days = JAP.JAP_tora_tora_duration scope = SIA }
+		add_dynamic_modifier = { modifier = JAP_attack_buff_dup_allies days = JAP.JAP_tora_tora_duration scope = MAN }
+	}
+}
+JAP_camp_deploy = {
+	if = {
+		limit = { has_country_flag = JAP_burma_campaign  }
+		BRM = { 
+			every_core_state = {
+				JAP_set_state_debuff = yes
+			} 
+		}
+		432 = { JAP_set_state_debuff = yes }
+		434 = { JAP_set_state_debuff = yes  }
+		431 = { JAP_set_state_debuff = yes  }
+		430 = { JAP_set_state_debuff = yes  }
+		990 = { JAP_set_state_debuff = yes }
+		activate_mission = JAP_operation_cooldown
+	}
+	if = {
+		limit = { has_country_flag = JAP_ind_campaign  }
+		MAL = { 
+			every_core_state = {
+				JAP_set_state_debuff = yes
+			}
+		}
+		INS = { 
+			every_core_state = {
+				JAP_set_state_debuff = yes
+			}
+		}
+		PNG = { 
+			every_core_state = {
+				JAP_set_state_debuff = yes
+			}
+		}
+		activate_mission = JAP_operation_cooldown
+	}
+	if = {
+		limit = { has_country_flag = JAP_phi_campaign  }
+		PHI = { 
+			every_core_state = {
+				JAP_set_state_debuff = yes
+			}
+		}
+		activate_mission = JAP_operation_cooldown
+	}
+	if = {
+		limit = { has_country_flag = JAP_pol_campaign  }
+		HAW = { 
+			every_core_state = {
+				JAP_set_state_debuff = yes
+			} 
+		}
+		FSM = { 
+			every_core_state = {
+				JAP_set_state_debuff = yes
+			} 
+		}
+		GUM = {
+			every_core_state = {
+				JAP_set_state_debuff = yes
+			} 
+		}
+		activate_mission = JAP_operation_cooldown
+	}
+}

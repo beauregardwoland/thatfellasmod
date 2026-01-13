@@ -1,0 +1,390 @@
+eng_exiles_cat = {
+	eng_greece_cap = {
+		icon = GFX_decision_generic_break_treaty
+		allowed = {
+			tag = ENG
+		}
+		available = {
+			or = {
+				GRE = {	has_capitulated = yes }
+				GRE = { exists = no }
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					GRE = {
+						exists = no
+					}
+				}
+				add_cic = 1000
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			else = {
+				division_template = {
+					name = "Greek-Exiles"
+					division_names_group = ENG_INF_01
+					template_counter = 99
+					role = garrison
+					is_locked = no
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+						infantry = { x = 3 y = 0 }
+						infantry = { x = 3 y = 1 }
+						artillery_brigade = { x = 4 y = 0 }
+						artillery_brigade = { x = 4 y = 1 }
+						anti_tank_brigade = { x = 4 y = 2 }
+						anti_tank_brigade = { x = 4 y = 3 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						anti_air = { x = 0 y = 2 }
+						anti_tank =  { x = 0 y = 3 }
+						logistics_company = { x = 0 y = 4 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Greek-Exiles\" division_template = \"Greek-Exiles\" start_experience_factor = 0.8"
+						owner = ENG
+						count = 2
+					}
+				}
+			}
+		}
+	}
+	eng_fra_cap = {
+		icon = GFX_decision_generic_break_treaty
+		allowed = {
+			tag = ENG
+		}
+		available = {
+			or = {
+				FRA = {	has_capitulated = yes }
+				FRA = { exists = no }
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					FRA = {
+						exists = no
+					}
+				}
+				add_cic = 2000
+				add_offsite_building = {
+					type = industrial_complex
+					level = 4
+				}
+			}
+			else = {
+				division_template = {
+					name = "French-Exiles"
+					division_names_group = ENG_INF_01
+					template_counter = 99
+					role = garrison
+					is_locked = no
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+						infantry = { x = 3 y = 0 }
+						infantry = { x = 3 y = 1 }
+						artillery_brigade = { x = 4 y = 0 }
+						artillery_brigade = { x = 4 y = 1 }
+						anti_tank_brigade = { x = 4 y = 2 }
+						anti_tank_brigade = { x = 4 y = 3 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						anti_air = { x = 0 y = 2 }
+						anti_tank =  { x = 0 y = 3 }
+						logistics_company = { x = 0 y = 4 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"French-Exiles\" division_template = \"French-Exiles\" start_experience_factor = 0.8"
+						owner = ENG
+						count = 8
+					}
+				}
+			}
+		}
+	}
+	eng_nor_cap = {
+		icon = GFX_decision_generic_break_treaty
+		allowed = {
+			tag = ENG
+		}
+		available = {
+			or = {
+				NOR = {	has_capitulated = yes }
+				NOR = { exists = no }
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					NOR = {
+						exists = no
+					}
+				}
+				add_cic = 1500
+				add_offsite_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			else = {
+				division_template = {
+					name = "Norwegian-Exiles"
+					division_names_group = ENG_INF_01
+					template_counter = 99
+					role = garrison
+					is_locked = no
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+						infantry = { x = 3 y = 0 }
+						infantry = { x = 3 y = 1 }
+						infantry = { x = 3 y = 2 }
+						infantry = { x = 4 y = 0 }
+						infantry = { x = 4 y = 1 }
+						infantry = { x = 4 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						anti_air = { x = 0 y = 2 }
+						anti_tank =  { x = 0 y = 3 }
+						logistics_company = { x = 0 y = 4 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Norwegian-Exiles\" division_template = \"Norwegian-Exiles\" start_experience_factor = 0.8"
+						owner = ENG
+						count = 3
+					}
+				}
+			}
+		}
+	}
+	eng_yug_cap = {
+		icon = GFX_decision_generic_break_treaty
+		allowed = {
+			tag = ENG
+		}
+		available = {
+			or = {
+				YUG = {	has_capitulated = yes }
+				YUG = { exists = no }
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					YUG = {
+						exists = no
+					}
+				}
+				add_cic = 1750
+				add_offsite_building = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			else = {
+				division_template = {
+					name = "Yugoslav-Exiles"
+					division_names_group = ENG_INF_01
+					template_counter = 99
+					role = garrison
+					is_locked = no
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+						artillery_brigade = { x = 3 y = 0 }
+						artillery_brigade = { x = 3 y = 1 }
+						artillery_brigade = { x = 3 y = 2 }
+						artillery_brigade = { x = 3 y = 3 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						anti_air = { x = 0 y = 2 }
+						anti_tank =  { x = 0 y = 3 }
+						logistics_company = { x = 0 y = 4 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Yugoslav-Exiles\" division_template = \"Yugoslav-Exiles\" start_experience_factor = 0.8"
+						owner = ENG
+						count = 4
+					}
+				}
+			}
+		}
+	}
+	eng_chi_cap = {
+		icon = GFX_decision_generic_break_treaty
+		allowed = {
+			tag = ENG
+		}
+		available = {
+			or = {
+				CHI = {	has_capitulated = yes }
+				CHI = { exists = no }
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					CHI = {
+						exists = no
+					}
+				}
+				add_cic = 2000
+				add_offsite_building = {
+					type = industrial_complex
+					level = 4
+				}
+			}
+			else = {
+				division_template = {
+					name = "Chinese-Exiles"
+					division_names_group = ENG_INF_01
+					template_counter = 99
+					role = garrison
+					is_locked = no
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+						infantry = { x = 3 y = 0 }
+						infantry = { x = 3 y = 1 }
+						infantry = { x = 3 y = 2 }
+						infantry = { x = 4 y = 0 }
+						infantry = { x = 4 y = 1 }
+						infantry = { x = 4 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						anti_air = { x = 0 y = 2 }
+						anti_tank =  { x = 0 y = 3 }
+						logistics_company = { x = 0 y = 4 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Chinese-Exiles\" division_template = \"Chinese-Exiles\" start_experience_factor = 0.8"
+						owner = ENG
+						count = 10
+					}
+				}
+			}
+		}
+	}
+}

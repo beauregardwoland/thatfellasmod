@@ -1,0 +1,42 @@
+Impact_buttons_1 = {
+	icon = ger_mefo_bills
+
+	picture = GFX_decision_cat_picture_generic_polynesia
+
+	allowed = {
+		always = yes
+	}
+
+	visible_when_empty = yes
+
+	on_map_area = {
+		targets = {  336 672 335 334 333 673 638 632 630 727 631 648 646 647 645 439 428 423 427 430 431 327 623 627 624 625 628 626 }
+		name = state_of_pacific_map_area
+		zoom = 1000
+	}
+	priority = 100
+}
+
+Impact_buttons = {
+	icon = ger_mefo_bills
+
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	allowed = {
+		always = no
+	}
+	
+
+	priority = 19
+}
+
+Impact_buttons_2 = {
+	icon = ger_mefo_bills
+
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	allowed = {
+		always = no
+	}
+	priority = 100
+}

@@ -1,0 +1,197 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+
+
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+MAN_mamc_organization = {
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_1
+	
+	allowed = {	
+		original_tag = MAN
+		NOT = { has_dlc = "Waking the Tiger" }
+	}
+
+	available = {
+		owner = { controls_state = 714 }
+	}
+}
+
+MAN_mamc_light_organization = {
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_1
+	allowed = {	
+		original_tag = MAN
+		has_dlc = "Waking the Tiger"
+	}
+
+	available = {
+		owner = { 
+			custom_trigger_tooltip = {
+				tooltip = MAN_has_completed_mamc_focus_tt
+				OR = {
+					has_completed_focus = MAN_mamc 
+					has_completed_focus = MAN_tsr_mamc 
+				}
+			}
+		}
+	}
+}
+
+MAN_mamc_medium_organization = {
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_1
+	allowed = {	
+		original_tag = MAN
+		has_dlc = "Waking the Tiger"
+	}
+
+	available = {
+		owner = { 
+			custom_trigger_tooltip = {
+				tooltip = MAN_has_completed_mamc_focus_tt
+				OR = {
+					has_completed_focus = MAN_mamc 
+					has_completed_focus = MAN_tsr_mamc 
+				}
+			}
+		}
+	}
+}
+
+MAN_mamc_heavy_organization = {
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_1
+	allowed = {	
+		original_tag = MAN
+		has_dlc = "Waking the Tiger"
+	}
+
+	available = {
+		owner = { 
+			custom_trigger_tooltip = {
+				tooltip = MAN_has_completed_mamc_focus_tt
+				OR = {
+					has_completed_focus = MAN_mamc 
+					has_completed_focus = MAN_tsr_mamc 
+				}
+			}
+		}
+	}
+}
+
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+MAN_nissan_heavy = {
+	name = JAP_nissan_heavy_vehicles
+	include = JAP_nissan_heavy_vehicles
+	icon = GFX_idea_nissan
+	allowed = {
+		original_TAG = MAN
+		#has_dlc = "Together for Victory"
+
+	}
+	on_tech_research_completed = {
+		from = {
+			fuck_nissan2 = yes
+			if = {
+				limit = { has_completed_focus = MAN_tsr_strengthen_ties_with_nissan }
+				random_core_state = {
+					add_resource = {
+						type = rubber
+						amount = 1
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = {
+					localization_key = tooltip_if_focus_completed
+					FOCUS = MAN_tsr_strengthen_ties_with_nissan
+				}
+				effect_tooltip = {
+					random_core_state = {
+						add_resource = {
+							type = rubber
+							amount = 1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+MAN_nissan_light = {
+	name = JAP_nissan_light_vehicles
+	include = JAP_nissan_light_vehicles
+	icon = GFX_idea_nissan
+	allowed = {
+		original_TAG = MAN
+		#has_dlc = "Together for Victory"
+	}
+	on_tech_research_completed = {
+		from = {
+			fuck_nissan1 = yes
+			if = {
+				limit = { has_completed_focus = MAN_tsr_strengthen_ties_with_nissan }
+				random_core_state = {
+					add_resource = {
+						type = rubber
+						amount = 1
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = {
+					localization_key = tooltip_if_focus_completed
+					FOCUS = MAN_tsr_strengthen_ties_with_nissan
+				}
+				effect_tooltip = {
+					random_core_state = {
+						add_resource = {
+							type = rubber
+							amount = 1
+						}
+					}
+				}
+			}
+		}
+	}
+}

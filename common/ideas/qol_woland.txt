@@ -1,0 +1,1003 @@
+ideas = {
+	country = {
+		woland_gutted_ai = {
+			picture = tfv_can_conscription_crisis
+			cancel = {
+				has_war = yes
+			}
+			on_remove = {
+				country_lock_all_division_template = no
+				clear_rule = {
+					can_not_declare_war = yes
+				}
+			}
+			modifier = {
+				custom_modifier_tooltip = BUL_army_restrictions_mobilization_law_tt
+				min_export = 1
+				production_lack_of_resource_penalty_factor = -1
+				embargo_threshold_factor = 1.5
+				ai_join_ally_desire_factor = -100
+			}
+		}
+		woland_day_one_production = {
+			picture = POL_succesful_four_year_plan
+			
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 100
+			}
+		}
+		
+		woland_warplan_black = {
+			picture = eng_preparing_the_second_front
+			
+			
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.125
+				defense_bonus_against = 0.125
+			}
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.125
+				defense_bonus_against = 0.125
+			}
+			targeted_modifier = {
+				tag = BUL
+				attack_bonus_against = 0.125
+				defense_bonus_against = 0.125
+			}
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = 0.125
+				defense_bonus_against = 0.125
+			}
+			targeted_modifier = {
+				tag = ROM
+				attack_bonus_against = 0.125
+				defense_bonus_against = 0.125
+			}
+		}
+		woland_warplan_orange = {
+			picture = eng_preparing_the_second_front
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = MAN
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = MEN
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		woland_jap_vs_sov = {
+			picture = eng_preparing_the_second_front
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.075
+				defense_bonus_against = 0.075
+			}
+			targeted_modifier = {
+				tag = MON
+				attack_bonus_against = 0.075
+				defense_bonus_against = 0.075
+			}
+			modifier = {
+				supply_consumption_factor = -0.075
+				supply_node_range = 0.1
+			}
+		}
+		woland_jap_vs_usa = {
+			picture = eng_preparing_the_second_front
+			targeted_modifier = {
+				tag = USA
+				attack_bonus_against = 0.075
+				defense_bonus_against = 0.075
+			}
+			modifier = {
+				amphibious_invasion = 0.1
+				army_attack_speed_factor = 0.1
+			}
+		}
+
+		JAP_quick_war_i = {
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+			modifier = {
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_factory_efficiency_gain_factor = -0.15
+				production_lack_of_resource_penalty_factor = -0.05
+			}
+		}
+		JAP_mid_war_i = {
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+		JAP_long_war_i = {
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				production_factory_start_efficiency_factor = 0.075
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+		allied_reclamation = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_core_defence_factor = 0.2
+				army_attack_factor = 0.2
+				naval_invasion_penalty = -0.33
+			}
+		}
+		no_embargo = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				embargo_cost_factor = 10
+				embargo_threshold_factor = 2
+			}
+		}
+		minor_nation = {
+			allowed = {
+				always = no
+			}
+
+			picture = POL_succesful_four_year_plan
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				country_resource_steel = 16
+				country_resource_aluminium = 8
+				country_resource_chromium = 8
+				country_resource_tungsten = 8
+				country_resource_rubber = 4
+				country_resource_oil = 4
+				country_resource_coal = 8
+				military_industrial_organization_size_up_requirement = -0.1
+				land_mastery_gain_factor = 0.1
+				naval_mastery_gain_factor = 0.1
+				air_mastery_gain_factor = 0.1
+			}
+		}
+		generices_industry_bonus = {
+			allowed = {
+				always = no
+			}
+
+			picture = GER_mefo_bills_ended
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.2
+			}
+		}
+		political_stabilit = {
+			allowed = {
+				always = no
+			}
+
+			picture = MAN_low_legitimacy
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_weekly = 0.005
+				war_support_weekly = 0.005
+				political_power_factor = 0.15
+			}
+		}
+		dual_purpose_anti_tank = {
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+			equipment_bonus = {
+				anti_tank_equipment = {
+					soft_attack = 1.5
+					build_cost_ic = 0.15
+					instant = yes
+				}
+				heavy_at_equipment = {
+					soft_attack = 1.5
+					build_cost_ic = 0.05
+					instant = yes
+				}
+			}
+		}
+		west_cap_bonus = {
+			picture = POL_succesful_four_year_plan
+			modifier = {
+				industrial_capacity_factory = 0.15
+			}
+		}
+		plunder_prague = {
+			picture = POL_succesful_four_year_plan
+			modifier = {
+				industrial_capacity_factory = 0.2
+			}
+		}
+
+		plundr_fra = {
+			picture = POL_succesful_four_year_plan
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+		AST_sentinel_tank_line = {
+			picture = generic_acquire_tanks
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+			}
+		}
+		RAJ_vastness_nerf = {
+			picture = RAJ_widespread_turmoil
+			modifier = {
+				production_speed_buildings_factor = -0.25
+			}
+		}
+		CHI_taiyun_revitalized = {
+			picture = generic_acquire_tanks
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				cv_small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				medium_plane_scout_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.15	
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				large_plane_maritime_patrol_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				guided_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+			}
+		}
+		spain_punishm = {
+			picture = economic_control_icon
+			modifier = {
+				consumer_goods_factor = 0.2
+				political_power_factor = -0.1
+			}
+		}
+
+		jap_banzai_charges = {
+			allowed = {
+				always = no
+			}
+
+			picture = man_militarism
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					hard_attack = 0.75
+					soft_attack = 0.05
+				}
+			}
+			modifier = {
+				army_morale_factor = -0.05
+			}
+		}
+		jap_tank_2 = {
+			allowed = {
+				always = no
+			}
+
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				license_armor_purchase_cost = -0.5
+				license_tech_difference_speed = 0.25
+				license_production_speed = 0.5
+				army_armor_attack_factor = 0.1
+			}
+		}
+		commonwealth_industrial_coop = {
+			allowed = {
+				always = no
+			}
+
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				local_resources_factor = 0.05
+			}
+		}
+		commonwealth_armor_1 = {
+			allowed = {
+				always = no
+			}
+
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+			}
+		}
+		commonwealth_armor_2 = {
+			allowed = {
+				always = no
+			}
+
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.05
+			}
+		}
+
+		commonwealth_armor_3 = {
+			allowed = {
+				always = no
+			}
+
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				special_forces_attack_factor = 0.075
+				special_forces_cap = 0.075
+			}
+		}
+
+		commonwealth_armor_4 = {
+			allowed = {
+				always = no
+			}
+
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				special_forces_cap = 0.075
+			}
+		}
+		commonwealth_armor_5 = {
+			allowed = {
+				always = no
+			}
+
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				planning_speed = 0.075
+			}
+		}
+
+		commonwealth_armor_6 = {
+			allowed = {
+				always = no
+			}
+
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				max_planning_factor = 0.075
+				planning_speed = 0.075
+			}
+		}
+		commonwealth_armor_7 = {
+			allowed = {
+				always = no
+			}
+
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				experience_gain_air = 0.1
+				air_accidents_factor = -0.25
+				air_cas_present_factor = 0.05
+			}
+		}
+		commonwealth_armor_8 = {
+			allowed = {
+				always = no
+			}
+
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				air_accidents_factor = -0.25
+				air_cas_present_factor = 0.05
+			}
+		}
+	}
+
+	industrial_concern = {
+
+		ROM_ROMLOC_1 = {
+		
+			picture = generic_industrial_concern_2
+			
+			allowed = {
+				original_tag = ROM
+				has_dlc = "Death or Dishonor"
+			}
+			
+			visible = {
+				has_country_flag = ROM_improved_industrial_1
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier = {
+				global_building_slots_factor = 0.1
+				production_speed_supply_node_factor = 0.15
+			}
+			
+			traits = { industrial_concern }
+		}
+		ROM_ROMLOC_2 = {
+		
+			picture = generic_electronics_concern_1
+			
+			allowed = {
+				original_tag = ROM
+				has_dlc = "Death or Dishonor"
+			}
+			
+			visible = {
+				has_country_flag = ROM_improved_industrial_2
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			modifier = {
+				global_building_slots_factor = 0.1
+				production_factory_max_efficiency_factor = 0.075
+			}
+			
+			traits = { electronics_concern }
+		}
+		ROM_ROMLOC_3 = {
+		
+			picture = generic_electronics_concern_1
+			
+			allowed = {
+				original_tag = ROM
+				has_dlc = "Death or Dishonor"
+			}
+			
+			visible = {
+				original_tag = ROM
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			
+			traits = { electronics_concern }
+		}
+
+
+		kawasaki_ic = {
+			
+			picture = kawasaki
+
+			allowed = {
+				original_tag = JAP
+			}
+			
+			research_bonus = {
+				electronics = 0.1
+				industry = 0.1
+			}
+			modifier = {
+				research_speed_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+			
+			traits = { electronics_concern }
+		}
+		
+		
+		sumitomo_ic = {
+
+			picture = sumitomo
+						
+			allowed = {
+				original_tag = JAP
+			}
+						
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier = {
+				local_resources_factor = 0.125
+				production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+			
+			traits = { industrial_concern }
+		}
+
+		mitsubushi_ic = {
+						
+			picture = mitsubishi
+			
+			allowed = {
+				original_tag = JAP
+			}
+						
+			research_bonus = {
+				industry = 0.15
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.15
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+			
+			traits = { industrial_concern }
+		}
+		mitsui_ic = {
+						
+			picture = mitsui
+			
+			allowed = {
+				original_tag = JAP
+			}
+						
+			research_bonus = {
+				industry = 0.1
+				synth_resources = 0.1
+			}
+			modifier = {
+				fuel_gain_factor = 0.1
+				production_speed_supply_node_factor = 0.15
+				supply_node_range = 0.05
+				production_factory_start_efficiency_factor = -0.05
+				consumer_goods_factor = -0.05
+			}
+			
+			traits = { refinery_concern }
+		}
+	}
+	hidden_ideas = {
+		heavy_fighter_nerf = {
+			equipment_bonus = {
+				heavy_fighter = {
+					build_cost_ic = 0.20
+					instant = yes
+				}
+			}
+		}
+		air_expensiver = {
+			equipment_bonus = {
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = 0.5
+					instant = yes
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = 0.5
+					instant = yes
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = 0.5
+					instant = yes
+				}
+			}
+		}
+		jap_tank_1 = {
+			allowed = {
+				always = no
+			}
+			
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				mio_cat_eq_all_artillery_track ={
+					build_cost_ic = -0.15 instant = yes
+				}
+				mio_cat_eq_all_tank_destroyers = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+		cheaper_convoy_wol = {
+			allowed = {
+				always = no
+			}
+			
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				convoy = {
+					instant = yes
+					build_cost_ic = -0.25
+				}
+			}
+		}
+		cheaper_general_ships = {
+			
+			
+			allowed = {
+				always = no
+			}
+			
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+
+				ship_hull_heavy = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				ship_hull_carrier = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				
+				ship_hull_submarine = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+		cheaper_light_ships = {
+			
+			allowed = {
+				always = no
+			}
+			
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		cheaper_sub = {
+			
+			allowed = {
+				always = no
+			}
+			
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		cheaper_fighters_wol = {
+			
+			allowed = {
+				always = no
+			}
+			
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				medium_plane_fighter_airframe = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+		cheaper_tac_bomb = {
+			
+			allowed = {
+				always = no
+			}
+			
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				small_plane_cas_airframe = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+
+		cheaper_strat_bomb = {
+			
+			allowed = {
+				always = no
+			}
+			
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				large_plane_airframe = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+
+		expensive_inf_equipment = {
+			
+			allowed = {
+				always = no
+			}
+			
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.025
+					reliability = 0.1
+					build_cost_ic = 0.2
+					instant = yes
+				}
+			}
+		}
+		expensive_inf1_equipment = {
+			
+			allowed = {
+				always = no
+			}
+			
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.025
+					reliability = 0.1
+					instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		JAP_prioritize_army_aircraft_construction_1 = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_air_research
+			
+			
+
+			equipment_bonus = {
+				small_plane_cas_airframe = {
+					build_cost_ic = -0.075 instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.075 instant = yes
+				}
+				medium_plane_fighter_airframe = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+		JAP_prioritize_naval_aircraft_construction_1 = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_air_research
+			
+			
+
+			equipment_bonus = {
+				cv_small_plane_airframe = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				cv_small_plane_cas_airframe = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				small_plane_naval_bomber_airframe = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		MAN_specialist_tank = {
+			allowed = {
+				always = no
+			}
+			
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+			}
+		}
+		MAN_specialist_tank_1 = {
+			allowed = {
+				always = no
+			}
+			
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				mio_cat_eq_all_artillery_track = {
+					build_cost_ic = -0.15 
+					breakthrough = 0.05
+					instant = yes
+				}
+				
+			}
+		}
+		MAN_specialist_tank_2 = {
+			allowed = {
+				always = no
+			}
+			
+			#picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				mio_cat_eq_all_tank_destroyers = {
+					build_cost_ic = -0.15 
+					breakthrough = 0.05
+					instant = yes
+				}
+				
+			}
+		}
+	}
+
+}

@@ -1,0 +1,13 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_button_transparent2"
+		texturefile = "gfx/interface/button_transparent2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_medium_cannon_3"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/tank_module_medium_cannon_3.dds"
+		legacy_lazy_load = no
+	}
+}

@@ -1,0 +1,554 @@
+ideas = {
+
+	country = {
+	
+		MON_New_Mongol = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = home_of_revolution
+
+			modifier = {
+				political_power_gain = 0.35
+				drift_defence_factor = 0.3
+			}
+		}
+		
+		MON_Peoples_Republic = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_the_unthinkable_option
+
+			modifier = {
+				stability_weekly = 0.007
+			}
+		}
+		
+		MON_Vangaurd = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = socialist_science_focus
+
+			modifier = {
+				war_support_weekly = 0.007
+			}
+		}
+		
+				MON_By_People = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				political_power_gain = 0.25
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		MON_one_step_closer = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.25
+				party_popularity_stability_factor = 0.2
+				monthly_population = 0.02
+			}
+		}
+		
+				MON_For_People = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				political_power_gain = -0.25
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+		MON_Idolization = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_communist_army
+
+			modifier = {
+				weekly_manpower = 1500
+				land_reinforce_rate = 0.2
+				experience_gain_army_factor = 0.2
+			}
+		}
+		
+		MON_workers = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				conscription = 0.05
+				defensive_war_stability_factor = 0.2
+				weekly_casualties_war_support = 0.003
+			}
+		}
+		
+		MON_blitzkreig = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_tank
+
+
+			modifier = {
+				army_breakthrough_against_major_factor = 0.10
+				army_speed_factor = 0.2
+				army_morale_factor = 0.30
+				pocket_penalty = -0.25
+			}
+		}
+		
+		MON_heavy_tanks = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_tank
+
+			modifier = {
+				army_breakthrough_against_major_factor = 0.35
+				army_speed_factor = -0.1
+				army_morale_factor = 0.30
+				pocket_penalty = 0.1
+			}
+		}
+		
+		MON_cut_corners = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_factory_strikes
+
+				equipment_bonus = {
+					mio_cat_eq_all_heavy_tank = {
+						instant = yes
+						build_cost_ic = -0.15
+					}
+					mio_cat_eq_all_medium_tank = {
+						instant = yes
+						build_cost_ic = -0.15
+					}
+					mio_cat_eq_all_light_tank = {
+						instant = yes
+						build_cost_ic = -0.2
+					}
+					mechanized_equipment = {
+						instant = yes
+						build_cost_ic = -0.15
+					}
+				}
+		}
+		
+		MON_Heavy_Air = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ger_the_great_red_menace
+
+			modifier = {
+				air_mission_efficiency = 0.2
+				air_strategic_bomber_night_penalty = -0.2
+				strategic_bomb_visibility = 0.2
+				air_strategic_bomber_bombing_factor = 0.4
+			}
+		}
+		
+		MON_CAS = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ger_the_great_red_menace
+
+			modifier = {
+				ground_attack_factor = 0.3
+				air_weather_penalty = -0.20
+				air_range_factor = 0.10
+				air_cas_efficiency = 0.40
+			}
+		}
+		
+		MON_cut_corners_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_factory_strikes
+
+				equipment_bonus = {
+					mio_cat_eq_all_large_plane = {
+						instant = yes
+						build_cost_ic = -0.2
+					}
+					mio_cat_eq_all_small_plane = {
+						instant = yes
+						build_cost_ic = -0.1
+					}
+					mio_cat_eq_all_medium_plane = {
+						instant = yes
+						build_cost_ic = -0.15
+					}
+				}
+		}
+		
+		MON_Five_Year_Plan_1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		MON_Five_Year_Plan_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation2
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		MON_Five_Year_Plan_3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation3
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.2
+				global_building_slots = 3
+			}
+		}
+		
+		MON_Military_industry = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+
+			modifier = {
+				consumer_goods_factor = 0.02
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.1
+				line_change_production_efficiency_factor = 0.15
+			}
+		}
+		
+		MON_Spirit = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = country_focus_efficency
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.15
+				political_power_cost = 0.1
+				
+			}
+		}
+		
+		MON_Unions = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = trotskyite_plot
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.15
+				political_power_cost = 0.1
+			}
+		}
+		
+		MON_extraction = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.2
+				fuel_gain_factor_from_states = 0.05
+				political_power_cost = 0.1
+			}
+		}
+		
+		MON_Employment = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_army_war_college
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				political_power_cost = 0.1
+			}
+		}
+		
+		MON_Trade_Schools = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_arms_factory_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+				political_power_cost = 0.1
+			}
+		}
+		
+		MON_Five_Year_Plan_final = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = economic_control_icon
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.2
+				global_building_slots = 3
+				local_resources_factor = 0.25
+				research_speed_factor = 0.05
+			}
+		}
+		
+		MON_Public_School = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_supremacy_of_will
+
+			modifier = {
+				research_speed_factor = 0.15
+				political_power_cost = 0.05
+			}
+		}
+	}
+}

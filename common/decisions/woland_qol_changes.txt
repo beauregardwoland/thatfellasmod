@@ -1,0 +1,2670 @@
+gimp_ai_category = {
+	gimp_ai_decision = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+
+		available = {
+			is_ai = no
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		visible = {
+			is_ai = no
+			date < 1936.1.30
+			not = { has_global_flag = day_1_deciscion }
+		}
+
+		complete_effect = {
+			set_global_flag = day_1_deciscion
+			CHI = {
+				annex_country = {
+					target = YUN
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = GXC
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = SIC
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = GDC
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = HBC
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = SND
+					transfer_troops = yes
+				}
+			}
+			PRC = {
+				annex_country = {
+					target = SHX
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = XSM
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = GSM
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = NXM
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = GXC
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = XIC
+					transfer_troops = yes
+				}
+				load_focus_tree = generic_focus
+			}
+			SIK = {
+				every_unit_leader = {
+					set_nationality = MON
+				}
+				every_core_state = {
+					add_core_of = MON
+				}
+			}
+			KHM = {
+				every_unit_leader = {
+					set_nationality = MON
+				}
+				every_core_state = {
+					add_core_of = MON
+				}
+			}
+			TAN = {
+				every_unit_leader = {
+					set_nationality = MON
+				}
+				every_core_state = {
+					add_core_of = MON
+				}
+			}
+			MEN = {
+				every_unit_leader = {
+					set_nationality = MAN
+				}
+				every_core_state = {
+					add_core_of = MAN
+				}
+			}
+			MAN = {
+				annex_country = {
+					target = MEN
+					transfer_troops = yes
+				}
+			}
+			MON = {
+				annex_country = {
+					target = SIK
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = TAN
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = KHM
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = KHM
+					transfer_troops = yes
+				}
+			}
+			hidden_effect = {
+				RAJ = {
+					BRM = {
+						every_unit_leader = {
+							set_nationality = RAJ
+						}
+						every_core_state = {
+							add_claim_by = RAJ
+						}
+					}
+					annex_country = {
+						target = BRM
+						transfer_troops = yes
+					}
+					every_state = {
+						limit = {
+							is_core_of = BRM
+						}
+						add_compliance = 100
+					}
+				}
+				HON = {
+					every_core_state = {
+						add_core_of = PAN
+					}
+				}
+				COS = {
+					every_core_state = {
+						add_core_of = PAN
+					}
+				}
+				NIC = {
+					every_core_state = {
+						add_core_of = PAN
+					}
+				}
+				ELS = {
+					every_core_state = {
+						add_core_of = PAN
+					}
+				}
+				GUA = {
+					every_core_state = {
+						add_core_of = PAN
+					}
+				}
+				NEP = {
+					every_core_state = {
+						add_core_of = TIB
+					}
+					delete_unit = {}
+				}
+				BHU = {
+					every_core_state = {
+						add_core_of = TIB
+					}
+					delete_unit = {}
+				}
+				TIB = {
+					country_lock_all_division_template = yes
+					add_ideas = woland_gutted_ai
+					annex_country = {
+						target = NEP
+					}
+					annex_country = {
+						target = BHU
+					}
+					delete_unit = {}
+				}
+				PAN = {
+					annex_country = {
+						target = COS
+					}
+					annex_country = {
+						target = NIC
+					}
+					annex_country = {
+						target = ELS
+					}
+					annex_country = {
+						target = HON
+					}
+					annex_country = {
+						target = GUA
+					}
+					delete_unit = {}
+					country_lock_all_division_template = yes
+					add_ideas = woland_gutted_ai
+				}
+				VEN = {
+					every_core_state = {
+						add_core_of = COL
+					}
+					delete_unit = {}
+				}
+				ECU = {
+					every_core_state = {
+						add_core_of = COL
+					}
+					delete_unit = {}
+				}
+				PRU = {
+					every_core_state = {
+						add_core_of = COL
+					}
+					delete_unit = {}
+				}
+				COL = {
+					annex_country = {
+						target = VEN
+					}
+					annex_country = {
+						target = ECU
+					}
+					annex_country = {
+						target = PRU
+					}
+					country_lock_all_division_template = yes
+					add_ideas = woland_gutted_ai
+					delete_unit = {}
+				}
+				CUB = {
+					country_lock_all_division_template = yes
+					add_ideas = woland_gutted_ai
+					delete_unit = {}
+
+				}
+				DOM = {
+					country_lock_all_division_template = yes
+					add_ideas = woland_gutted_ai
+					delete_unit = {}
+				}
+				HAI = {
+					country_lock_all_division_template = yes
+					add_ideas = woland_gutted_ai
+					delete_unit = {}
+				}
+				CHI = {
+					set_rule = { can_create_factions = yes }
+					create_faction_from_template = faction_template_chinese_united_front
+					add_to_faction = PRC
+				}
+				
+				AFG = {
+					country_lock_all_division_template = yes
+					add_ideas = woland_gutted_ai
+					delete_unit = {}
+					load_focus_tree = generic_focus
+				}
+				PHI = {
+					load_focus_tree = generic_focus
+				}
+				CHL = {
+					country_lock_all_division_template = yes
+					add_ideas = woland_gutted_ai
+					delete_unit = {}
+					load_focus_tree = generic_focus
+				}
+
+				BOL = {
+					country_lock_all_division_template = yes
+					add_ideas = woland_gutted_ai
+					delete_unit = {}
+				}
+
+				PAR = {
+					country_lock_all_division_template = yes
+					add_ideas = woland_gutted_ai
+					delete_unit = {}
+					load_focus_tree = generic_focus
+				}
+
+				URG = {
+					country_lock_all_division_template = yes
+					add_ideas = woland_gutted_ai
+					delete_unit = {}
+					load_focus_tree = generic_focus
+				}
+				ARG = {
+					country_lock_all_division_template = yes
+					add_ideas = woland_gutted_ai
+					delete_unit = {}
+					load_focus_tree = generic_focus
+				}
+				PER = {
+					load_focus_tree = generic_focus
+				}
+				SAU = {
+					country_lock_all_division_template = yes
+					add_ideas = woland_gutted_ai
+					delete_unit = {}
+				}
+				IRQ = {
+					load_focus_tree = generic_focus
+					annex_country = {
+						target = KUW
+					}
+					656 = {
+						add_compliance = 100
+					}
+				}
+				OMA ={
+					every_core_state = {
+						add_core_of = ENG
+					}
+				}
+				ENG ={
+					annex_country = {
+						target = OMA
+					}
+				}
+				CHL = {
+					every_core_state = {
+						add_core_of = CHL
+					}
+					delete_unit = {}
+				}
+				BOL = {
+					annex_country = {
+						target = CHL
+					}
+				}
+				304 = {
+					transfer_state_to = USA
+					add_compliance = 60
+				}
+				309 = {
+					add_core_of = HOL
+				}
+				329 = {
+					add_resource = {
+						type = coal
+						amount = 5
+					}
+				}
+			}
+		}
+
+	}
+	
+	repeatable_build_slot = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+
+		available = {
+			is_ai = no
+		}
+
+		cost = 50
+		days_remove = 90
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			#clr_country_flag = JAP_interfered_in_imperial_influence_flag
+		}
+	}
+	reminder_for_yearly_saves = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+
+		available = {
+			is_ai = no
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			activate_mission = yearly_autosave_reminder
+			#clr_country_flag = JAP_interfered_in_imperial_influence_flag
+		}
+	}
+	yearly_autosave_reminder  = {
+
+		priority = 120
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		available = {
+			always = no
+		}
+
+		allowed = {  
+			is_ai = no
+		}
+
+		activation = {
+			always = no
+		} 
+		is_good = yes
+		
+		days_mission_timeout = 365
+
+		timeout_effect = { 
+			country_event = wol_qol.101
+		}
+	}
+	hint_meta_decision = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			country_event = wol_qol.5
+		}
+	}
+	hint_division_presets = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = wants_premade_div_templ
+		}
+	}
+	hint_coutnries = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = wants_country_changes
+		}
+	}
+	hint_coutnries1 = {
+
+		icon = decision_generic_nationalism
+
+		#targets = { GER ITA ENG JAP USA SOV }
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_country_changes
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			country_event = wol_qol.9
+		}
+	}
+
+	hint_coutnries13 = {
+
+		icon = decision_generic_nationalism
+
+		#targets = { GER ITA ENG JAP USA SOV }
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_country_changes
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			country_event = wol_qol.10
+		}
+	}
+
+	hint_coutnries14 = {
+
+		icon = decision_generic_nationalism
+
+		#targets = { GER ITA ENG JAP USA SOV }
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_country_changes
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			country_event = wol_qol.11
+		}
+	}
+
+	hint_coutnries15 = {
+
+		icon = decision_generic_nationalism
+
+		#targets = { GER ITA ENG JAP USA SOV }
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_country_changes
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			country_event = wol_qol.12
+		}
+	}
+
+	hint_coutnries16 = {
+
+		icon = decision_generic_nationalism
+
+		#targets = { GER ITA ENG JAP USA SOV }
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_country_changes
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			country_event = wol_qol.13
+		}
+	}
+
+	hint_coutnries17 = {
+
+		icon = decision_generic_nationalism
+
+		#targets = { GER ITA ENG JAP USA SOV }
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_country_changes
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			country_event = wol_qol.14
+		}
+	}
+
+	hint_coutnries2 = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_country_changes
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			country_event = wol_qol.15
+		}
+	}
+	hint_coutnries3 = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_country_changes
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			country_event = wol_qol.16
+		}
+	}
+	hint_coutnries4 = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_country_changes
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			country_event = wol_qol.17
+		}
+	}
+	hint_coutnries5 = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_country_changes
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			country_event = wol_qol.18
+		}
+	}
+	hint_division_preset1 = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_premade_div_templ
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			division_template = { 
+				name = "30 Width Pure Inf" 
+				division_names_group = ITA_INF_02
+				template_counter = 0
+				regiments = { 
+					infantry = { x = 0 y = 0 }
+                    infantry = { x = 0 y = 1 }
+                    infantry = { x = 0 y = 2 }
+                    infantry = { x = 1 y = 0 }
+                    infantry = { x = 1 y = 1 }
+                    infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					infantry = { x = 3 y = 0 }
+					infantry = { x = 3 y = 1 }
+					infantry = { x = 3 y = 2 }
+					infantry = { x = 4 y = 0 }
+					infantry = { x = 4 y = 1 }
+					infantry = { x = 4 y = 2 }
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					logistics_company = { x = 0 y = 2 }
+					anti_air = { x = 1 y = 0 }
+				}
+			}
+		}
+	}
+	hint_division_preset2 = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_premade_div_templ
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			division_template = { 
+				name = "30 Width w/ Line Arty" 
+				division_names_group = ITA_INF_02
+				template_counter = 0
+				regiments = { 
+					infantry = { x = 0 y = 0 }
+                    infantry = { x = 0 y = 1 }
+                    infantry = { x = 0 y = 2 }
+                    infantry = { x = 1 y = 0 }
+                    infantry = { x = 1 y = 1 }
+                    infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					infantry = { x = 3 y = 0 }
+					infantry = { x = 3 y = 1 }
+					infantry = { x = 3 y = 2 }
+					artillery_brigade = { x = 4 y = 0 }
+					artillery_brigade = { x = 4 y = 1 }
+					artillery_brigade = { x = 4 y = 2 }
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					logistics_company = { x = 0 y = 2 }
+					anti_air = { x = 1 y = 0 }
+				}
+			}
+		}
+	}
+	hint_division_preset3 = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_premade_div_templ
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			division_template = { 
+				name = "20 Width Pure Inf" 
+				division_names_group = ITA_INF_02
+				template_counter = 0
+				regiments = { 
+					infantry = { x = 0 y = 0 }
+                    infantry = { x = 0 y = 1 }
+                    infantry = { x = 0 y = 2 }
+                    infantry = { x = 1 y = 0 }
+                    infantry = { x = 1 y = 1 }
+                    infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					infantry = { x = 3 y = 0 }
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					logistics_company = { x = 0 y = 2 }
+					anti_air = { x = 1 y = 0 }
+				}
+			}
+		}
+	}
+	hint_division_preset4 = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_premade_div_templ
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			division_template = { 
+				name = "10 Width Pure Inf" 
+				division_names_group = ITA_INF_02
+				template_counter = 0
+				regiments = { 
+					infantry = { x = 0 y = 0 }
+                    infantry = { x = 0 y = 1 }
+                    infantry = { x = 0 y = 2 }
+                    infantry = { x = 1 y = 0 }
+                    infantry = { x = 1 y = 1 }
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					logistics_company = { x = 0 y = 2 }
+					anti_air = { x = 1 y = 0 }
+				}
+			}
+		}
+	}
+	hint_division_preset5 = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_premade_div_templ
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			division_template = { 
+				name = "30 Width Heavy Tank" 
+				division_names_group = ITA_INF_02
+				template_counter = 0
+				regiments = { 
+					motorized = { x = 0 y = 0 }
+					motorized = { x = 0 y = 1 }
+					motorized = { x = 0 y = 2 }
+					motorized = { x = 1 y = 0 }
+					motorized = { x = 1 y = 1 }
+					motorized = { x = 1 y = 2 }
+					heavy_armor = { x = 2 y = 0 }
+					heavy_armor = { x = 2 y = 1 }
+					heavy_armor = { x = 2 y = 2 }
+					heavy_armor = { x = 3 y = 0 }
+					heavy_armor = { x = 3 y = 1 }
+					heavy_armor = { x = 3 y = 2 }
+					heavy_armor = { x = 4 y = 0 }
+					heavy_armor = { x = 4 y = 1 }
+					heavy_armor = { x = 4 y = 2 }
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					logistics_company = { x = 0 y = 2 }
+					anti_air = { x = 1 y = 0 }
+				}
+			}
+		}
+	}
+	hint_division_preset6 = {
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_premade_div_templ
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			division_template = { 
+				name = "30 Width Meduim Tank" 
+				division_names_group = ITA_INF_02
+				template_counter = 0
+				regiments = { 
+					motorized = { x = 0 y = 0 }
+					motorized = { x = 0 y = 1 }
+					motorized = { x = 0 y = 2 }
+					motorized = { x = 1 y = 0 }
+					motorized = { x = 1 y = 1 }
+					motorized = { x = 1 y = 2 }
+					medium_armor = { x = 2 y = 0 }
+					medium_armor = { x = 2 y = 1 }
+					medium_armor = { x = 2 y = 2 }
+					medium_armor = { x = 3 y = 0 }
+					medium_armor = { x = 3 y = 1 }
+					medium_armor = { x = 3 y = 2 }
+					medium_armor = { x = 4 y = 0 }
+					medium_armor = { x = 4 y = 1 }
+					medium_armor = { x = 4 y = 2 }
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					logistics_company = { x = 0 y = 2 }
+					anti_air = { x = 1 y = 0 }
+				}
+			}
+		}
+	}
+	hint_division_preset7 = {
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+			has_country_flag = wants_premade_div_templ
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			division_template = { 
+				name = "20 Width pure mech" 
+				division_names_group = ITA_INF_02
+				template_counter = 0
+				regiments = { 
+					mechanized = { x = 0 y = 0 }
+					mechanized = { x = 0 y = 1 }
+					mechanized = { x = 0 y = 2 }
+					mechanized = { x = 1 y = 0 }
+					mechanized = { x = 1 y = 1 }
+					mechanized = { x = 1 y = 2 }
+					mechanized = { x = 2 y = 0 }
+					mechanized = { x = 2 y = 1 }
+					mechanized = { x = 2 y = 2 }
+					mechanized = { x = 3 y = 0 }
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					logistics_company = { x = 0 y = 2 }
+					anti_air = { x = 1 y = 0 }
+				}
+			}
+		}
+	}
+	hint_meta_decision_disable = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = disable_hints }
+		}
+
+		available = {
+			is_ai = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = disable_hints
+		}
+	}
+	award_sia_indochina = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			original_tag = JAP
+		}
+
+		available = {
+			is_ai = no
+			controls_state = 671
+		}
+
+		cost = 0
+		days_remove = 7
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+			741 = {
+				transfer_state_to = SIA
+			}
+			670 = {
+				transfer_state_to = SIA
+			}
+			671 = {
+				transfer_state_to = SIA
+			}
+			286 = {
+				transfer_state_to = SIA
+			}
+			1017 = {
+				transfer_state_to = SIA
+			}
+		}
+		remove_effect = {
+			SIA ={
+				give_resource_rights = {
+				receiver = JAP
+				state = 741
+				}
+				give_resource_rights = {
+					receiver = JAP
+					state = 670
+				}
+				give_resource_rights = {
+					receiver = JAP
+					state = 671
+				}
+				give_resource_rights = {
+					receiver = JAP
+					state = 286
+				}
+				give_resource_rights = {
+					receiver = JAP
+					state = 1017
+				}
+			}
+		}
+	}
+	Release_rom_resource_rights = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			original_tag = GER
+			has_completed_focus = GER_subjugate_romanian_economy
+		}
+
+		available = {
+			is_ai = no
+		}
+
+		cost = 50
+		days_remove = 90
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		visible = {
+			is_ai = no
+			
+		}
+
+		complete_effect = {
+			GER = {
+				remove_resource_rights = 46
+			}
+		}
+	}
+
+	dumb_dutch_ai = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			original_tag = HOL
+		}
+
+		available = {
+			has_capitulated = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 750
+			}
+			309 = {
+				add_core_of = HOL
+				add_resource = {
+					type = aluminium
+					amount = -10
+				}
+			}
+			
+		}
+	}
+	
+	free_facilitys_for_minors_land = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+
+		available = {
+			is_ai = no
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			land_facility < 1
+			NOT = { has_country_flag = free_facility }
+			is_major = no
+		}
+		complete_effect = {
+			random_core_state = {
+				limit = {
+					can_construct_building = land_facility
+					not = { state = 78 }
+					not = { state = 80 }
+					not = { state = 766 }
+				}
+				construct_building_in_random_province = {
+					land_facility = 1
+				}
+			}
+			set_country_flag = free_facility
+		}
+	}
+	free_facilitys_for_minors_air = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+
+		available = {
+			is_ai = no
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			air_facility < 1
+			NOT = { has_country_flag = free_facility }
+			is_major = no
+		}
+		complete_effect = {
+			random_core_state = {
+				limit = {
+					can_construct_building = air_facility
+					not = { state = 78 }
+					not = { state = 80 }
+					not = { state = 766 }
+				}
+				construct_building_in_random_province = {
+					air_facility = 1
+				}
+			}
+			set_country_flag = free_facility
+		}
+	}
+	free_facilitys_for_minors_naval = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+
+		available = {
+			is_ai = no
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			naval_facility < 1
+			NOT = { has_country_flag = free_facility }
+			is_major = no
+		}
+		complete_effect = {
+			random_core_state = {
+				limit = {
+					can_construct_building = naval_facility
+					not = { state = 78 }
+					not = { state = 80 }
+					not = { state = 766 }
+				}
+				construct_building_in_random_province = {
+					naval_facility = 1
+				}
+			}
+			set_country_flag = free_facility
+		}
+	}
+	#allies
+	annex_ice_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+		available = {
+			is_ai = no
+			country_exists = ICE
+			ICE = {
+				is_ai = yes
+			}
+			date > 1940.8.1
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+			}
+		}
+		complete_effect = {
+			annex_country = {
+				target = ICE
+				#transfer_troops = yes
+			}
+		}
+	}
+	annex_can_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+		available = {
+			is_ai = no
+			country_exists = CAN
+			CAN = {
+				is_ai = yes
+			}
+			date > 1939.1.1
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+			}
+		}
+		complete_effect = {
+			CAN = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = root
+				}
+			}
+			annex_country = {
+				target = CAN
+				transfer_troops = yes
+			}
+		}
+	}
+	annex_cog_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+		available = {
+			is_ai = no
+			country_exists = COG
+			COG = {
+				is_ai = yes
+			}
+			date > 1939.1.1
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+			}
+		}
+		complete_effect = {
+			COG = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = root
+				}
+			}
+			annex_country = {
+				target = COG
+				transfer_troops = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = COG
+				}
+				add_compliance = 90
+			}
+		}
+	}
+	annex_ire_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+		available = {
+			is_ai = no
+			country_exists = IRE
+			IRE = {
+				is_ai = yes
+			}
+			date > 1939.1.1
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+			}
+		}
+		complete_effect = {
+			IRE = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = root
+				}
+			}
+			annex_country = {
+				target = IRE
+				transfer_troops = yes
+			}
+		}
+	}
+	annex_raj_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+		available = {
+			is_ai = no
+			country_exists = RAJ
+			RAJ = {
+				is_ai = yes
+			}
+			date > 1939.1.1
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+			}
+		}
+		complete_effect = {
+			RAJ = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_claim_by = root
+				}
+			}
+			annex_country = {
+				target = RAJ
+				transfer_troops = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = RAJ
+				}
+				add_compliance = 90
+			}
+		}
+	}
+	annex_brm_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+		available = {
+			is_ai = no
+			country_exists = BRM
+			BRM = {
+				is_ai = yes
+			}
+			or = {
+				original_tag = RAJ
+				date > 1939.1.1
+			}
+			
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+			}
+		}
+		complete_effect = {
+			BRM = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_claim_by = root
+				}
+			}
+			annex_country = {
+				target = BRM
+				transfer_troops = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = BRM
+				}
+				add_compliance = 100
+			}
+		}
+	}
+	annex_mal_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+		available = {
+			is_ai = no
+			country_exists = MAL
+			MAL = {
+				is_ai = yes
+			}
+			date > 1939.1.1
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+			}
+		}
+		complete_effect = {
+			MAL = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_claim_by = root
+				}
+			}
+			annex_country = {
+				target = MAL
+				transfer_troops = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = MAL
+				}
+				add_compliance = 100
+			}
+		}
+	}
+	annex_aus_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+		available = {
+			is_ai = no
+			country_exists = AST
+			AST = {
+				is_ai = yes
+			}
+			date > 1939.1.1
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+			}
+		}
+		complete_effect = {
+			AST = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+			}
+			annex_country = {
+				target = AST
+				transfer_troops = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = AUS
+				}
+				add_compliance = 100
+			}
+		}
+	}
+	annex_nzl_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+		available = {
+			is_ai = no
+			country_exists = NZL
+			NZL = {
+				is_ai = yes
+			}
+			or = {
+				date > 1939.1.1
+				tag = AST
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+			}
+		}
+		complete_effect = {
+			NZL = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = root
+				}
+			}
+			annex_country = {
+				target = NZL
+				transfer_troops = yes
+			}
+		}
+	}
+	annex_bra_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		available = {
+			is_ai = no
+			country_exists = BRA
+			BRA = {
+				is_ai = yes
+			}
+			or = {
+				date > 1939.1.1
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+				tag = USA
+			}
+		}
+		complete_effect = {
+			BRA = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = root
+					remove_dynamic_modifier = {
+						modifier = BRA_neglected_state_dynamic_modifier
+					}
+				}
+			}
+			annex_country = {
+				target = BRA
+				transfer_troops = yes
+			}
+		}
+	}
+	annex_mex_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+		available = {
+			is_ai = no
+			country_exists = MEX
+			MEX = {
+				is_ai = yes
+			}
+			or = {
+				date > 1939.1.1
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+				tag = USA
+			}
+		}
+		complete_effect = {
+			MEX = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = root
+				}
+			}
+			annex_country = {
+				target = MEX
+				transfer_troops = yes
+			}
+		}
+	}
+	annex_saf_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+		available = {
+			is_ai = no
+			country_exists = SAF
+			SAF = {
+				is_ai = yes
+			}
+			date > 1939.1.1
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+			}
+		}
+		complete_effect = {
+			SAF = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = root
+				}
+			}
+			annex_country = {
+				target = SAF
+				transfer_troops = yes
+			}
+		}
+	}
+	annex_mon_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+		available = {
+			is_ai = no
+			country_exists = MON
+			MON = {
+				is_ai = yes
+			}
+			has_completed_focus = SOV_secure_leningrad
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = SOV
+				tag = SOV
+			}
+		}
+		complete_effect = {
+			MON = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = root
+				}
+			}
+			annex_country = {
+				target = MON
+				transfer_troops = yes
+			}
+		}
+	}
+	#axis
+	annex_hun_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+
+		available = {
+			is_ai = no
+			country_exists = HUN
+			HUN = {
+				is_ai = yes
+			}
+			date > 1938.1.1
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				tag = GER
+				tag = ITA
+				tag = ROM
+				tag = BUL
+			}
+		}
+		complete_effect = {
+			HUN = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = root
+				}
+			}
+			annex_country = {
+				target = HUN
+				transfer_troops = yes
+			}
+		}
+	}
+	annex_rom_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+
+		available = {
+			is_ai = no
+			country_exists = ROM
+			ROM = {
+				is_ai = yes
+			}
+			date > 1938.1.1
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				tag = GER
+				tag = ITA
+				tag = HUN
+				tag = BUL
+			}
+		}
+		complete_effect = {
+			ROM = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = root
+				}
+			}
+			annex_country = {
+				target = ROM
+				transfer_troops = yes
+			}
+		}
+	}
+	annex_bul_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+
+		available = {
+			is_ai = no
+			country_exists = BUL
+			BUL = {
+				is_ai = yes
+			}
+			date > 1938.1.1
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				tag = GER
+				tag = ITA
+				tag = HUN
+				tag = ROM
+			}
+		}
+		complete_effect = {
+			BUL = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = root
+				}
+			}
+			annex_country = {
+				target = BUL
+				transfer_troops = yes
+			}
+		}
+	}
+	annex_sia_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+
+		available = {
+			is_ai = no
+			country_exists = SIA
+			SIA = {
+				is_ai = yes
+			}
+			or = {
+				has_completed_focus = JAP_sea_pressure_siam
+				has_completed_focus = MAN_tsr_national_cooperation_government
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				tag = JAP
+				tag = MAN
+			}
+		}
+		complete_effect = {
+			SIA = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = root
+				}
+			}
+			annex_country = {
+				target = SIA
+				transfer_troops = yes
+			}
+		}
+	}
+	annex_man_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+
+		available = {
+			is_ai = no
+			country_exists = MAN
+			MAN = {
+				is_ai = yes
+			}
+			or = {
+				has_completed_focus = JAP_develop_the_chinese_resources
+				#has_completed_focus = MAN_national_cooperation_government
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				tag = JAP
+				#tag = SIA
+			}
+		}
+		complete_effect = {
+			MAN = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				#every_core_state = {
+				#	add_core_of = root
+				#}
+			}
+			annex_country = {
+				target = MAN
+				transfer_troops = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = MAN
+				}
+				add_compliance = 90
+			}
+		}
+	}
+
+	annex_build_spain = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			tag = SPR
+		}
+
+		available = {
+			tag = SPR
+			surrender_progress > 0.95
+			date < 1940.01.01
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			every_country = {
+				limit = { has_war_with = root }
+				root = {
+					annex_country = {
+						target = PREV
+					}
+				}
+			}
+			219 = {
+				add_extra_state_shared_building_slots = 7
+				add_building_construction = {
+					type = arms_factory
+					level = 7
+				}
+			}
+			add_timed_idea = {
+				idea = spain_punishm
+				days = 365
+			}
+		}
+	}
+	ai_france = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			FRA = { is_ai = yes }
+			is_in_faction_with = ENG
+			NOT = { has_global_flag = no_france_comp }
+		}
+		available = {
+			is_ai = no
+			has_war = yes
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			set_global_flag = no_france_comp
+			country_event = wol_qol.7
+		}
+	}
+
+	debug_faction_steel = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+			always = no
+		}
+
+		available = {
+			always = no
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			wol_autarky_faction_wide = yes
+		}
+	}
+
+
+
+	CHI_wave_1 = {
+		allowed = {
+			original_tag = CHI
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			surrender_progress > 0.3
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+			}
+			division_template = { 
+				name = "20 Width Inf" 
+				division_names_group = ITA_INF_02
+				template_counter = 0
+				regiments = { 
+					infantry = { x = 0 y = 0 }
+                    infantry = { x = 0 y = 1 }
+                    infantry = { x = 0 y = 2 }
+                    infantry = { x = 1 y = 0 }
+                    infantry = { x = 1 y = 1 }
+                    infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					infantry = { x = 3 y = 0 }
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+				}
+			}
+			605 = {
+				create_unit = {
+					division = "name = \"20 Width Inf\" division_template = \"20 Width Inf\" start_experience_factor = 0.4"
+					owner = CHI
+					count = 30
+				}
+			}
+		}
+		timeout_effect = { activate_mission = CHI_wave_1 }
+	}
+	CHI_wave_2 = {
+		allowed = {
+			original_tag = CHI
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			surrender_progress > 0.65
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+			}
+			division_template = { 
+				name = "20 Width Inf" 
+				division_names_group = ITA_INF_02
+				template_counter = 0
+				regiments = { 
+					infantry = { x = 0 y = 0 }
+                    infantry = { x = 0 y = 1 }
+                    infantry = { x = 0 y = 2 }
+                    infantry = { x = 1 y = 0 }
+                    infantry = { x = 1 y = 1 }
+                    infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					infantry = { x = 3 y = 0 }
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+				}
+			}
+			605 = {
+				create_unit = {
+					division = "name = \"20 Width Inf\" division_template = \"20 Width Inf\" start_experience_factor = 0.4"
+					owner = CHI
+					count = 20
+				}
+			}
+		}
+		timeout_effect = { activate_mission = CHI_wave_2 }
+	}
+}

@@ -1,0 +1,228 @@
+ideas = {
+
+	country = {
+		idea_SIA_army_of_siam = {
+			picture = MEX_politicised_army_2
+			allowed_civil_war = {
+				always = yes
+			}
+
+			allowed = {
+				original_tag = SIA
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				supply_consumption_factor = -0.1
+				supply_node_range = 0.15
+			}
+		}
+		SIA_West_Idea = {
+
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				removal_cost = -1
+
+				picture = generic_pp_unity_bonus
+
+				modifier = {
+					democratic_drift = 0.05
+				}
+			}
+			
+			SIA_Japan_Idea = {
+
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				removal_cost = -1
+
+				picture = jap_militarism_showa
+
+				modifier = {
+					fascism_drift = 0.05
+				}
+			}
+			
+			SIA_Shithole_Idea = {
+
+				allowed = {
+					always = yes
+				}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				removal_cost = -1
+
+				picture = chi_hyper_inflation4
+
+				modifier = {
+					consumer_goods_factor = -0.3
+					production_speed_buildings_factor = 0.2
+				}
+			}
+			
+			SIA_Shithole_Idea_1 = {
+
+				allowed = {
+					always = yes
+				}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				removal_cost = -1
+
+				picture = chi_hyper_inflation2
+
+				modifier = {
+					consumer_goods_factor = -0.15
+					production_speed_buildings_factor = 0.05
+				}
+			}
+			
+			SIA_West_Idea_1 = {
+
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				removal_cost = -1
+
+				picture = generic_pp_unity_bonus
+
+				modifier = {
+					democratic_drift = 0.05
+					stability_weekly_factor = 0.001
+				}
+			}
+			
+			SIA_Mass_Fortifications = {
+
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				removal_cost = -1
+
+				picture = generic_fortify_the_borders
+
+				modifier = {
+					max_dig_in = 5
+					army_core_defence_factor = 0.1
+					production_speed_bunker_factor = 0.2
+					production_speed_coastal_bunker_factor = 0.2
+				}
+			}
+			
+			SIA_sudden_shift = {
+
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				removal_cost = -1
+
+				picture = generic_communism_drift_bonus
+
+				modifier = {
+					communism_drift = 0.1
+				}
+			}
+			
+			SIA_Land_Army = {
+
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				removal_cost = -1
+
+				picture = generic_infantry_bonus
+
+				modifier = {
+					army_attack_factor = 0.05
+					army_defence_factor = 0.05
+					dig_in_speed_factor = 0.05
+					experience_loss_factor = -0.05
+					special_forces_cap = 0.1
+				}
+			}
+			
+			SIA_Air_Army = {
+
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				removal_cost = -1
+
+				picture = generic_air_research
+
+				modifier = {
+					naval_strike_targetting_factor = 0.1
+					naval_strike_attack_factor = 0.05
+					air_mission_efficiency = 0.2
+					air_range_factor = 0.1
+					ground_attack_factor = 0.1
+				}
+			}
+			
+			SIA_Sea_Army = {
+
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				removal_cost = -1
+
+				picture = liberty_ships_focus
+
+				modifier = {
+					convoy_raiding_efficiency_factor = 0.15
+					convoy_escort_efficiency = 0.15
+					naval_retreat_speed = 0.3
+					navy_max_range_factor = 0.25
+					naval_hit_chance = 0.05
+				}
+			}
+		}	
+}

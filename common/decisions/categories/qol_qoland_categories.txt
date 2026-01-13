@@ -1,0 +1,97 @@
+gimp_ai_category = {
+	icon = generic_economy
+	priority = 50
+}
+eng_exiles_cat = {
+	icon = generic_economy
+}
+ROM_liscenseing = {
+	icon = GFX_decision_category_generic_arms_trade
+	priority = 40
+	picture = GFX_decision_cat_generic_mefo_bills
+	visible_when_empty = no	
+	allowed = {
+		original_tag = ROM
+	}
+}
+ROM_agriculture_reform = {
+	icon = GFX_decision_category_generic_arms_trade
+	priority = 40
+	picture = GFX_decision_cat_picture_faction_management_bulgaria
+	visible_when_empty = no	
+	allowed = {
+		original_tag = ROM
+	}
+}
+COM_nationbuilding = {
+	icon = GFX_decision_category_generic_arms_trade
+	priority = 40
+	picture = GFX_decision_cat_picture_NOR_rousing_proletariat
+	visible_when_empty = no	
+	allowed = {
+		or = {
+			original_tag = AST
+			original_tag = SAF
+		}
+	}
+}
+CHI_arsenals = {
+	icon = GFX_decision_category_generic_arms_trade
+	priority = 40
+	picture = GFX_decision_cat_generic_mefo_bills
+	visible_when_empty = no	
+	allowed = {
+		or = {
+			original_tag = CHI
+			original_tag = MAN
+			original_tag = JAP
+		}
+	}
+}
+axis_industrial_hubs = {
+	icon = GFX_decision_category_generic_arms_trade
+	priority = 40
+	picture = GFX_decision_cat_generic_mefo_bills
+	visible_when_empty = no	
+	allowed = {
+		or = {
+			original_tag = GER
+			original_tag = ITA
+			original_tag = HUN
+			original_tag = ROM
+			original_tag = BUL
+		}
+		is_ai = no
+	}
+}
+axis_wall_hub = {
+	icon = GFX_decision_category_generic_arms_trade
+	priority = 40
+	picture = GFX_decision_cat_generic_mefo_bills
+	visible_when_empty = no	
+	allowed = {
+		or = {
+			original_tag = GER
+			original_tag = ITA
+			original_tag = HUN
+			original_tag = ROM
+			original_tag = BUL
+		}
+		is_ai = no
+	}
+}
+MON_mining = {
+	icon = generic_prospect_for_resources
+	priority = 40
+	#picture = GFX_decision_cat_generic_mefo_bills
+	visible_when_empty = no	
+	allowed = {
+		original_tag = MON
+	}
+}
+ITA_demand_na = {
+	allowed = {
+		original_tag = ITA
+		has_dlc = "Waking the Tiger"
+	}
+}

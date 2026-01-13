@@ -1,0 +1,196 @@
+ITA_demand_na = {
+
+	ITA_demand_Savoy_from_france = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			GER = {
+				controls_state = 16
+				}
+			ITA = {
+				has_war_with = ENG
+				}
+			VIC = {
+				controls_state = 735
+				controls_state = 851
+				controls_state = 32
+				controls_state = 21
+				controls_state = 1
+				}
+		}
+
+		cost = 100
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		visible = {
+			GER = {
+				controls_state = 16
+			}
+		}
+
+		complete_effect = {
+			ITA = {
+				country_event = new.3
+				}
+		}
+
+	}
+	
+	ITA_demand_tunis_from_france = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			GER = {
+				controls_state = 16
+				}
+			ITA = {
+				has_war_with = ENG
+				}
+			VIC = {
+				controls_state = 665
+				controls_state = 458
+				}
+		}
+
+		cost = 100
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		visible = {
+			GER = {
+				controls_state = 16
+				}
+		}
+
+		complete_effect = {
+			ITA = {
+				country_event = new.4
+				}
+		}
+
+	}
+	
+	ITA_demand_Algieria_from_france = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			GER = {
+				controls_state = 16
+				}
+			ITA = {
+				has_war_with = ENG
+				}
+			VIC = {
+				controls_state = 459
+				controls_state = 460
+				controls_state = 513
+				controls_state = 514
+				}
+		}
+
+		cost = 100
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		visible = {
+			GER = {
+				controls_state = 16
+				}
+		}
+
+		complete_effect = {
+			ITA = {
+				country_event = new.5
+				}
+		}
+
+	}
+	
+	ITA_demand_morrocco_from_france = {
+
+		icon = decision_generic_nationalism
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			GER = {
+				controls_state = 16
+				}
+			ITA = {
+				has_war_with = ENG
+				}
+			VIC = {
+				controls_state = 462
+				controls_state = 461
+				}
+		}
+
+		cost = 100
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		visible = {
+			GER = {
+				controls_state = 16
+				}
+		}
+
+		complete_effect = {
+			ITA = {
+				country_event = new.6
+				}
+		}
+
+	}
+
+}

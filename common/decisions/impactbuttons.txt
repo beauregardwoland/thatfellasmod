@@ -1,0 +1,1496 @@
+Impact_buttons = {
+	GER_Winning_in_the_East = {
+
+		icon = ger_mefo_bills
+	
+		allowed = {
+			original_tag = GER
+			always = no
+		}
+	
+		available = {
+			has_war_with = ENG
+			#any_country = {
+			#	is_in_faction_with = GER
+			#	controls_state = 219
+			#	controls_state = 206
+			#	controls_state = 202
+			#	controls_state = 195
+			#	controls_state = 217
+			#	controls_state = 137
+			#}
+			or = {
+				controls_state = 219
+				any_allied_country = {
+					controls_state = 219
+				}
+			}
+			or = {
+				controls_state = 206
+				any_allied_country = {
+					controls_state = 206
+				}
+			}
+			or = {
+				controls_state = 202
+				any_allied_country = {
+					controls_state = 202
+				}
+			}
+			or = {
+				controls_state = 195
+				any_allied_country = {
+					controls_state = 195
+				}
+			}
+			or = {
+				controls_state = 217
+				any_allied_country = {
+					controls_state = 217
+				}
+			}
+			or = {
+				controls_state = 137
+				any_allied_country = {
+					controls_state = 137
+				}
+			}
+		}
+	
+		cost = 0
+	
+		fire_only_once = yes
+	
+		ai_will_do = {
+			factor = 75
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	
+		visible = {
+			has_war_with = SOV
+		}
+	
+		complete_effect = {
+			USA = {
+				country_event = allied.0
+			}
+			ENG = {
+				country_event = allied.0
+			}	
+		}
+	
+	}
+	
+	GER_Secured_Mediterranean = {
+	
+		icon = ger_mefo_bills
+	
+		allowed = {
+			original_tag = GER
+			always = no
+		}
+	
+		available = {
+			has_war_with = ENG
+			#any_country = {
+			#	is_in_faction_with = GER
+			#	controls_state = 118
+			#	controls_state = 907
+			#	controls_state = 183
+			#	controls_state = 116
+			#	controls_state = 182
+			#}
+			or = {
+				controls_state = 118
+				any_allied_country = {
+					controls_state = 118
+				}
+			}
+			or = {
+				controls_state = 907
+				any_allied_country = {
+					controls_state = 907
+				}
+			}
+			or = {
+				controls_state = 183
+				any_allied_country = {
+					controls_state = 183
+				}
+			}
+			or = {
+				controls_state = 116
+				any_allied_country = {
+					controls_state = 116
+				}
+			}
+			or = {
+				controls_state = 182
+				any_allied_country = {
+					controls_state = 182
+				}
+			}
+		}
+	
+		cost = 0
+	
+		fire_only_once = yes
+	
+		ai_will_do = {
+			factor = 75
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	
+		visible = {
+			has_war_with = ENG
+		}
+	
+		complete_effect = {
+			USA = {
+				country_event = allied.1
+			}
+			ENG = {
+				country_event = allied.1
+			}	
+		}
+	
+	}
+	
+	GER_Success_of_Sealion = {
+	
+		icon = ger_mefo_bills
+	
+		allowed = {
+			original_tag = GER
+			always = no
+		}
+	
+		available = {
+			has_war_with = ENG
+			any_country = {
+				is_in_faction_with = GER
+				controls_state = 16
+				controls_state = 126
+			}
+			or = {
+				controls_state = 16
+				any_allied_country = {
+					controls_state = 16
+				}
+			}
+			or = {
+				controls_state = 126
+				any_allied_country = {
+					controls_state = 126
+				}
+			}
+		}
+	
+		cost = 0
+	
+		fire_only_once = yes
+	
+		ai_will_do = {
+			factor = 75
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	
+		visible = {
+			has_war_with = ENG
+		}
+	
+		complete_effect = {
+			USA = {
+				country_event = allied.2
+			}
+			ENG = {
+				country_event = allied.2
+			}	
+		}
+	
+	}
+}
+
+Impact_buttons_1 = {
+	JAP_Victory_on_the_Continent = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			or = {
+				controls_state = 439
+				any_allied_country = {
+					controls_state = 439
+				}
+			}
+			or = {
+				controls_state = 428
+				any_allied_country = {
+					controls_state = 428
+				}
+			}
+			or = {
+				controls_state = 423
+				any_allied_country = {
+					controls_state = 423
+				}
+			}
+			or = {
+				controls_state = 427
+				any_allied_country = {
+					controls_state = 427
+				}
+			}
+			or = {
+				controls_state = 430
+				any_allied_country = {
+					controls_state = 430
+				}
+			}
+			or = {
+				controls_state = 431
+				any_allied_country = {
+					controls_state = 431
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			every_enemy_country = {
+				state_of_pacific_up = yes
+				country_event = allied.3
+			}
+			activate_mission = JAP_Victory_on_the_Continent1
+			add_ideas = woland_jap_vs_sov
+		}
+		timeout_effect = { activate_mission = JAP_Victory_on_the_Continent }
+	}
+	JAP_phillipines_conquest = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			or = {
+				controls_state = 327
+				any_allied_country = {
+					controls_state = 327
+				}
+			}
+			or = {
+				controls_state = 623
+				any_allied_country = {
+					controls_state = 623
+				}
+			}
+			or = {
+				controls_state = 627
+				any_allied_country = {
+					controls_state = 627
+				}
+			}
+			or = {
+				controls_state = 624
+				any_allied_country = {
+					controls_state = 624
+				}
+			}
+			or = {
+				controls_state = 625
+				any_allied_country = {
+					controls_state = 625
+				}
+			}
+			or = {
+				controls_state = 628
+				any_allied_country = {
+					controls_state = 628
+				}
+			}
+			or = {
+				controls_state = 626
+				any_allied_country = {
+					controls_state = 626
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			every_enemy_country = {
+				state_of_pacific_up = yes
+				country_event = allied.16
+			}
+			activate_mission = JAP_phillipines_conquest1
+		}
+		timeout_effect = { activate_mission = JAP_phillipines_conquest }
+	}
+
+	JAP_Conquest_of_the_Spice_Islands = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			or = {
+				controls_state = 336
+				any_allied_country = {
+					controls_state = 336
+				}
+			}
+			or = {
+				controls_state = 672
+				any_allied_country = {
+					controls_state = 672
+				}
+			}
+			or = {
+				controls_state = 335
+				any_allied_country = {
+					controls_state = 335
+				}
+			}
+	
+			or = {
+				controls_state = 334
+				any_allied_country = {
+					controls_state = 334
+				}
+			}
+			or = {
+				controls_state = 333
+				any_allied_country = {
+					controls_state = 333
+				}
+			}
+			or = {
+				controls_state = 673
+				any_allied_country = {
+					controls_state = 673
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+
+		complete_effect = {
+			every_enemy_country = {
+				state_of_pacific_up = yes
+				country_event = allied.5
+			}
+			activate_mission = JAP_Conquest_of_the_Spice_Islands1
+		}
+		timeout_effect = { activate_mission = JAP_Conquest_of_the_Spice_Islands }
+	}
+
+
+	JAP_Full_Control_of_the_Pacific = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			or = {
+				controls_state = 638
+				any_allied_country = {
+					controls_state = 638
+				}
+			}
+			or = {
+				controls_state = 632
+				any_allied_country = {
+					controls_state = 632
+				}
+			}
+			or = {
+				controls_state = 630
+				any_allied_country = {
+					controls_state = 630
+				}
+			}
+	
+			or = {
+				controls_state = 727
+				any_allied_country = {
+					controls_state = 727
+				}
+			}
+			or = {
+				controls_state = 631
+				any_allied_country = {
+					controls_state = 631
+				}
+			}
+			or = {
+				controls_state = 648
+				any_allied_country = {
+					controls_state = 648
+				}
+			}
+			
+	
+			or = {
+				controls_state = 646
+				any_allied_country = {
+					controls_state = 646
+				}
+			}
+			or = {
+				controls_state = 647
+				any_allied_country = {
+					controls_state = 647
+				}
+			}
+			or = {
+				controls_state = 645
+				any_allied_country = {
+					controls_state = 645
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+
+		complete_effect = {
+			every_enemy_country = {
+				state_of_pacific_up = yes
+				country_event = allied.4
+			}
+			activate_mission = JAP_Full_Control_of_the_Pacific1
+			add_ideas = woland_jap_vs_usa
+		}
+		timeout_effect = { activate_mission = JAP_Full_Control_of_the_Pacific }
+	}
+
+
+
+
+	JAP_Victory_on_the_Continent1 = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			NOT = {
+				AND = {
+					or = {
+						controls_state = 439
+						any_allied_country = {
+							controls_state = 439
+						}
+					}
+					or = {
+						controls_state = 428
+						any_allied_country = {
+							controls_state = 428
+						}
+					}
+					or = {
+						controls_state = 423
+						any_allied_country = {
+							controls_state = 423
+						}
+					}
+					or = {
+						controls_state = 427
+						any_allied_country = {
+							controls_state = 427
+						}
+					}
+					or = {
+						controls_state = 430
+						any_allied_country = {
+							controls_state = 430
+						}
+					}
+					or = {
+						controls_state = 431
+						any_allied_country = {
+							controls_state = 431
+						}
+					}
+				}
+			}
+		}
+
+		is_good = yes
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			every_enemy_country = {
+				state_of_pacific_down = yes
+				country_event = allied.9
+			}
+			remove_ideas = woland_jap_vs_sov
+			activate_mission = JAP_Victory_on_the_Continent
+		}
+		timeout_effect = { activate_mission = JAP_Victory_on_the_Continent1 }
+	}
+	JAP_phillipines_conquest1 = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			NOT = {
+				AND = {
+					or = {
+						controls_state = 327
+						any_allied_country = {
+							controls_state = 327
+						}
+					}
+					or = {
+						controls_state = 623
+						any_allied_country = {
+							controls_state = 623
+						}
+					}
+					or = {
+						controls_state = 627
+						any_allied_country = {
+							controls_state = 627
+						}
+					}
+					or = {
+						controls_state = 624
+						any_allied_country = {
+							controls_state = 624
+						}
+					}
+					or = {
+						controls_state = 625
+						any_allied_country = {
+							controls_state = 625
+						}
+					}
+					or = {
+						controls_state = 628
+						any_allied_country = {
+							controls_state = 628
+						}
+					}
+					or = {
+						controls_state = 626
+						any_allied_country = {
+							controls_state = 626
+						}
+					}
+				}
+			}
+		}
+
+		is_good = yes
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			every_enemy_country = {
+				state_of_pacific_down = yes
+				country_event = allied.17
+			}
+			activate_mission = JAP_phillipines_conquest
+		}
+		timeout_effect = { activate_mission = JAP_phillipines_conquest1 }
+	}
+
+	JAP_Conquest_of_the_Spice_Islands1 = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			NOT = {
+				AND = {
+					or = {
+						controls_state = 336
+						any_allied_country = {
+							controls_state = 336
+						}
+					}
+					or = {
+						controls_state = 672
+						any_allied_country = {
+							controls_state = 672
+						}
+					}
+					or = {
+						controls_state = 335
+						any_allied_country = {
+							controls_state = 335
+						}
+					}
+			
+					or = {
+						controls_state = 334
+						any_allied_country = {
+							controls_state = 334
+						}
+					}
+					or = {
+						controls_state = 333
+						any_allied_country = {
+							controls_state = 333
+						}
+					}
+					or = {
+						controls_state = 673
+						any_allied_country = {
+							controls_state = 673
+						}
+					}
+				}
+			}
+		}
+
+		is_good = yes
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+	
+		complete_effect = {
+			every_enemy_country = {
+				state_of_pacific_down = yes
+				country_event = allied.11
+			}
+			remove_ideas = woland_jap_vs_usa
+			activate_mission = JAP_Conquest_of_the_Spice_Islands
+		}
+		timeout_effect = { activate_mission = JAP_Conquest_of_the_Spice_Islands1 }
+	}
+
+
+	JAP_Full_Control_of_the_Pacific1 = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			NOT = {
+				AND = {
+					or = {
+						controls_state = 638
+						any_allied_country = {
+							controls_state = 638
+						}
+					}
+					or = {
+						controls_state = 632
+						any_allied_country = {
+							controls_state = 632
+						}
+					}
+					or = {
+						controls_state = 630
+						any_allied_country = {
+							controls_state = 630
+						}
+					}
+			
+					or = {
+						controls_state = 727
+						any_allied_country = {
+							controls_state = 727
+						}
+					}
+					or = {
+						controls_state = 631
+						any_allied_country = {
+							controls_state = 631
+						}
+					}
+					or = {
+						controls_state = 648
+						any_allied_country = {
+							controls_state = 648
+						}
+					}
+					
+			
+					or = {
+						controls_state = 646
+						any_allied_country = {
+							controls_state = 646
+						}
+					}
+					or = {
+						controls_state = 647
+						any_allied_country = {
+							controls_state = 647
+						}
+					}
+					or = {
+						controls_state = 645
+						any_allied_country = {
+							controls_state = 645
+						}
+					}
+				}
+			}
+		}
+
+		is_good = yes
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			every_enemy_country = {
+				state_of_pacific_down = yes
+				country_event = allied.10
+			}
+			remove_ideas = woland_jap_vs_usa
+			activate_mission = JAP_Full_Control_of_the_Pacific
+		}
+		timeout_effect = { activate_mission = JAP_Full_Control_of_the_Pacific1 }
+	}
+
+	JAP_Victory_on_the_Continent_allied = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			or = {
+				controls_state = 439
+				any_allied_country = {
+					controls_state = 439
+				}
+			}
+			or = {
+				controls_state = 428
+				any_allied_country = {
+					controls_state = 428
+				}
+			}
+			or = {
+				controls_state = 423
+				any_allied_country = {
+					controls_state = 423
+				}
+			}
+			or = {
+				controls_state = 427
+				any_allied_country = {
+					controls_state = 427
+				}
+			}
+			or = {
+				controls_state = 430
+				any_allied_country = {
+					controls_state = 430
+				}
+			}
+			or = {
+				controls_state = 431
+				any_allied_country = {
+					controls_state = 431
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			effect_tooltip = {
+				every_allied_country = {
+					state_of_pacific_down = yes
+				}
+				JAP = {
+					remove_ideas = woland_jap_vs_sov
+				}
+			}
+		}
+		timeout_effect = { activate_mission = JAP_Victory_on_the_Continent_allied }
+	}
+	JAP_phillipines_conquest_allied = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			or = {
+				controls_state = 327
+				any_allied_country = {
+					controls_state = 327
+				}
+			}
+			or = {
+				controls_state = 623
+				any_allied_country = {
+					controls_state = 623
+				}
+			}
+			or = {
+				controls_state = 627
+				any_allied_country = {
+					controls_state = 627
+				}
+			}
+			or = {
+				controls_state = 624
+				any_allied_country = {
+					controls_state = 624
+				}
+			}
+			or = {
+				controls_state = 625
+				any_allied_country = {
+					controls_state = 625
+				}
+			}
+			or = {
+				controls_state = 628
+				any_allied_country = {
+					controls_state = 628
+				}
+			}
+			or = {
+				controls_state = 626
+				any_allied_country = {
+					controls_state = 626
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			effect_tooltip = {
+				every_allied_country = {
+					state_of_pacific_down = yes
+				}
+			}
+		}
+		timeout_effect = { activate_mission = JAP_phillipines_conquest_allied }
+	}
+
+	JAP_Conquest_of_the_Spice_Islands_allied = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			or = {
+				controls_state = 336
+				any_allied_country = {
+					controls_state = 336
+				}
+			}
+			or = {
+				controls_state = 672
+				any_allied_country = {
+					controls_state = 672
+				}
+			}
+			or = {
+				controls_state = 335
+				any_allied_country = {
+					controls_state = 335
+				}
+			}
+	
+			or = {
+				controls_state = 334
+				any_allied_country = {
+					controls_state = 334
+				}
+			}
+			or = {
+				controls_state = 333
+				any_allied_country = {
+					controls_state = 333
+				}
+			}
+			or = {
+				controls_state = 673
+				any_allied_country = {
+					controls_state = 673
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+	
+		complete_effect = {
+			effect_tooltip = {
+				every_allied_country = {
+					state_of_pacific_down = yes
+				}
+			}
+		}
+		timeout_effect = { activate_mission = JAP_Conquest_of_the_Spice_Islands_allied }
+	}
+
+
+	JAP_Full_Control_of_the_Pacific_allied = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			or = {
+				controls_state = 638
+				any_allied_country = {
+					controls_state = 638
+				}
+			}
+			or = {
+				controls_state = 632
+				any_allied_country = {
+					controls_state = 632
+				}
+			}
+			or = {
+				controls_state = 630
+				any_allied_country = {
+					controls_state = 630
+				}
+			}
+	
+			or = {
+				controls_state = 727
+				any_allied_country = {
+					controls_state = 727
+				}
+			}
+			or = {
+				controls_state = 631
+				any_allied_country = {
+					controls_state = 631
+				}
+			}
+			or = {
+				controls_state = 648
+				any_allied_country = {
+					controls_state = 648
+				}
+			}
+			
+	
+			or = {
+				controls_state = 646
+				any_allied_country = {
+					controls_state = 646
+				}
+			}
+			or = {
+				controls_state = 647
+				any_allied_country = {
+					controls_state = 647
+				}
+			}
+			or = {
+				controls_state = 645
+				any_allied_country = {
+					controls_state = 645
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			effect_tooltip = {
+				every_allied_country = {
+					state_of_pacific_down = yes
+				}
+				JAP = {
+					remove_ideas = woland_jap_vs_sov
+				}
+			}
+		}
+		timeout_effect = { activate_mission = JAP_Full_Control_of_the_Pacific_allied }
+	}
+
+
+	JAP_operational_strikes_bur = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		allowed = {
+			tag = JAP
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = JAP_set_campaign_tt
+				NOT = { has_country_flag = JAP_set_campaign }
+			}
+		}
+		cost = 0
+		fire_only_once = no
+
+		highlight_states = { highlight_states_trigger  = { or ={ is_core_of = BRM state = 432 state = 431 state = 434 state = 430 state = 990 }  } }
+
+		visible = {
+			has_completed_focus = JAP_nanshin_ron
+		}
+		complete_effect = {
+			if = {
+				limit = { or = { has_completed_focus = JAP_strike_the_southern_road } }
+				BRM = { 
+					every_core_state = {
+						JAP_set_state_debuff = yes
+					}
+				}
+				432 = { JAP_set_state_debuff = yes }
+				434 = { JAP_set_state_debuff = yes }
+				431 = { JAP_set_state_debuff = yes }
+				430 = { JAP_set_state_debuff = yes }
+				990 = { JAP_set_state_debuff = yes }
+				activate_mission = JAP_operation_cooldown
+			}
+			else = {
+				set_country_flag = JAP_burma_campaign
+				custom_effect_tooltip = JAP_set_camp_tt
+				custom_effect_tooltip = generic_skip_one_line_tt
+				effect_tooltip = {
+					BRM = { 
+						every_core_state = {
+							JAP_set_state_debuff = yes
+						}
+					}
+					432 = { JAP_set_state_debuff = yes }
+					434 = { JAP_set_state_debuff = yes }
+					431 = { JAP_set_state_debuff = yes }
+					430 = { JAP_set_state_debuff = yes }
+					990 = { JAP_set_state_debuff = yes }
+				}
+				#activate_mission = JAP_operation_cooldown
+			}
+			set_country_flag = JAP_set_campaign
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	JAP_operational_strikes_ind = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		allowed = {
+			tag = JAP
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = JAP_set_campaign_tt
+				NOT = { has_country_flag = JAP_set_campaign }
+			}
+		}
+		cost = 0
+		fire_only_once = no
+
+		highlight_states = { highlight_states_trigger  = { or = { is_core_of = INS is_core_of = MAL is_core_of = PNG } } }
+
+		visible = {
+			has_completed_focus = JAP_nanshin_ron
+		}
+		complete_effect = {
+			if = {
+				limit = { or = { has_completed_focus = JAP_strike_the_southern_road } }
+				MAL = { 
+					every_core_state = {
+						JAP_set_state_debuff = yes
+					}
+				}
+				INS = { 
+					every_core_state = {
+						JAP_set_state_debuff = yes
+					}
+				}
+				PNG = { 
+					every_core_state = {
+						JAP_set_state_debuff = yes
+					}
+				}	
+				activate_mission = JAP_operation_cooldown			
+			}
+			else = {
+				set_country_flag = JAP_ind_campaign
+				custom_effect_tooltip = JAP_set_camp_tt
+				custom_effect_tooltip = generic_skip_one_line_tt
+				effect_tooltip = {
+					MAL = { 
+						every_core_state = {
+							JAP_set_state_debuff = yes
+						}
+					}
+					INS = { 
+						every_core_state = {
+							JAP_set_state_debuff = yes
+						}
+					}
+					PNG = { 
+						every_core_state = {
+							JAP_set_state_debuff = yes
+						}
+					}	
+				}
+				#activate_mission = JAP_operation_cooldown
+			}
+			set_country_flag = JAP_set_campaign
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	JAP_operational_strikes_phi = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		allowed = {
+			tag = JAP
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = JAP_set_campaign_tt
+				NOT = { has_country_flag = JAP_set_campaign }
+			}
+		}
+		cost = 0
+		fire_only_once = no
+
+		highlight_states = { highlight_states_trigger  = { is_core_of = PHI } }
+
+		visible = {
+			has_completed_focus = JAP_nanshin_ron
+		}
+		complete_effect = {
+			if = {
+				limit = { or = { has_completed_focus = JAP_strike_the_southern_road } }
+				PHI = { 
+					every_core_state = {
+						JAP_set_state_debuff = yes
+					}
+				}
+				activate_mission = JAP_operation_cooldown
+			}
+			else = {
+				set_country_flag = JAP_phi_campaign
+				custom_effect_tooltip = JAP_set_camp_tt
+				custom_effect_tooltip = generic_skip_one_line_tt
+				effect_tooltip = {
+					PHI = { 
+						every_core_state = {
+							JAP_set_state_debuff = yes
+						}
+					}
+					#activate_mission = JAP_operation_cooldown
+				}
+			}
+			set_country_flag = JAP_set_campaign
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	JAP_operational_strikes_pol = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		allowed = {
+			tag = JAP
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = JAP_set_campaign_tt
+				NOT = { has_country_flag = JAP_set_campaign }
+			}
+		}
+		cost = 0
+		fire_only_once = no
+
+		highlight_states = { highlight_states_trigger  = { or = { is_core_of = HAW is_core_of = FSM is_core_of = GUM  } } }
+
+		visible = {
+			has_completed_focus = JAP_nanshin_ron
+		}
+		complete_effect = {
+			if = {
+				limit = { or = { has_completed_focus = JAP_strike_the_southern_road } }
+				HAW = { 
+					every_core_state = {
+						JAP_set_state_debuff = yes
+					} 
+				}
+				FSM = {
+					every_core_state = {
+						JAP_set_state_debuff = yes
+					} 
+				}
+				GUM = {
+					every_core_state = {
+						JAP_set_state_debuff = yes
+					} 
+				}
+				activate_mission = JAP_operation_cooldown
+			}
+			else = {
+				set_country_flag = JAP_pol_campaign
+				custom_effect_tooltip = JAP_set_camp_tt
+				custom_effect_tooltip = generic_skip_one_line_tt
+				effect_tooltip = {
+					HAW = { 
+						every_core_state = {
+							JAP_set_state_debuff = yes
+						} 
+					}
+					FSM = {
+						every_core_state = {
+							JAP_set_state_debuff = yes
+						} 
+					}
+					GUM = {
+						every_core_state = {
+							JAP_set_state_debuff = yes
+						} 
+					}
+				}
+				#activate_mission = JAP_operation_cooldown
+			}
+			set_country_flag = JAP_set_campaign
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	JAP_operation_cooldown = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			always = no
+		}
+
+		is_good = yes
+		
+		days_mission_timeout = 365
+		
+		activation = {
+			always = no
+		}
+		
+		complete_effect = {
+				
+		}
+		timeout_effect = { custom_effect_tooltip = JAP_operation_cooldown_tt clr_country_flag = JAP_set_campaign  }
+	}
+	MAN_tank_line  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = MAN
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = MAN_army_direction_army_tank1
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			num_of_military_factories > 25
+		} 
+
+		days_remove = 120
+
+		#fire_only_once = yes
+
+		cost = 50
+
+		modifier = {
+			consumer_goods_factor = 0.15
+			production_factory_efficiency_gain_factor = 0.1
+		}
+
+		complete_effect = { 
+			add_timed_idea = {
+				idea = AST_sentinel_tank_line
+				days = 60
+			}
+		}
+
+		remove_effect = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}
+	MAN_kwantang_influence  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = MAN
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = MAN_army_direction_general_5
+			}
+		}
+
+		available = {
+			has_war = yes
+		} 
+
+		days_remove = 60
+
+		#fire_only_once = yes
+
+		cost = 50
+
+		modifier = {
+			experience_gain_army_factor = -0.15
+			planning_speed = 0.1
+			army_attack_factor = 0.05
+			max_planning_factor = 0.05
+		}
+	}
+}
+

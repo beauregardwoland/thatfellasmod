@@ -1,0 +1,8 @@
+state_categories={
+	biggest_city = {
+		local_building_slots = 17
+	
+			color = { 0 240 240 }
+
+	}
+}

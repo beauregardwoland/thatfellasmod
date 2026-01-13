@@ -1,0 +1,362 @@
+MON_mining = {
+	MONG_mining_1  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = MON
+		}
+
+		visible = { 
+			has_completed_focus = five_year_plan
+		}
+
+		state_target = yes
+
+		target_trigger = {
+	        FROM = {
+	        	is_controlled_by = root
+				is_core_of = root
+	        }
+	    }
+
+		available = {
+			from = {
+				is_controlled_by = root
+			}
+			#custom_trigger_tooltip = {
+			#	tooltip = rom_land_re
+			#	NOT = { has_country_flag = rom_land_reform_sub }
+			#}
+		} 
+
+		days_remove = 120
+
+		cost = 35
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = { 
+			#set_country_flag = rom_land_reform_sub
+			#add_manpower = -1000
+		}
+
+		remove_effect = {
+			#clr_country_flag = rom_land_reform_sub
+			from = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = mon_set_mine
+				add_resource = {
+					type = steel
+					amount = 1
+				}
+				add_resource = {
+					type = coal
+					amount = 1
+				}
+			}
+			hidden_effect = { add_to_variable = { mon_mining_number = 1 } }
+		}
+	}
+	MONG_mining_2  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = MON
+		}
+
+		visible = { 
+			has_completed_focus = five_year_plan
+		}
+
+		state_target = yes
+
+		target_trigger = {
+	        FROM = {
+	        	is_controlled_by = root
+				is_core_of = root
+				has_state_flag = mon_set_mine
+	        }
+	    }
+
+		available = {
+			from = {
+				is_controlled_by = root
+			}
+			#custom_trigger_tooltip = {
+			#	tooltip = rom_land_re
+			#	NOT = { has_country_flag = rom_land_reform_sub }
+			#}
+		} 
+
+		days_remove = 30
+
+		cost = 50
+		#fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = { 
+			#set_country_flag = rom_land_reform_sub
+			from = {
+				add_manpower = 1000
+				clr_state_flag = mon_set_mine
+			}
+			SOV = { add_manpower = -1000 }
+		}
+
+		remove_effect = {
+			#clr_country_flag = rom_land_reform_sub
+			add_manpower = 2500
+		}
+	}
+	MONG_mining_3  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = MON
+		}
+
+		visible = { 
+			has_completed_focus = resource_extraction
+		}
+
+		state_target = yes
+
+		targets = { 820 330 817 760 }
+
+		available = {
+			from = {
+				is_controlled_by = root
+				custom_trigger_tooltip = {
+					NOT = { has_state_flag = mon_set_mine }
+					tooltip = mon_fixed_permancy
+				}
+			}
+			#custom_trigger_tooltip = {
+			#	tooltip = rom_land_re
+			#	NOT = { has_country_flag = rom_land_reform_sub }
+			#}
+		} 
+
+		days_remove = 60
+
+		cost = 50
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = { 
+			#set_country_flag = rom_land_reform_sub
+			#add_manpower = -1000
+		}
+
+		remove_effect = {
+			#clr_country_flag = rom_land_reform_sub
+			from = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = mon_set_mine
+				add_resource = {
+					type = tungsten
+					amount = 2
+				}
+				add_resource = {
+					type = coal
+					amount = 1
+				}
+			}
+		}
+	}
+	MONG_mining_4  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = MON
+		}
+
+		visible = { 
+			has_completed_focus = resource_extraction
+		}
+
+		state_target = yes
+
+		targets = { 329 819 330 617 618 }
+
+		available = {
+			from = {
+				is_controlled_by = root
+				custom_trigger_tooltip = {
+					NOT = { has_state_flag = mon_set_mine }
+					tooltip = mon_fixed_permancy
+				}
+			}
+			#custom_trigger_tooltip = {
+			#	tooltip = rom_land_re
+			#	NOT = { has_country_flag = rom_land_reform_sub }
+			#}
+		} 
+
+		days_remove = 60
+
+		cost = 50
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = { 
+			#set_country_flag = rom_land_reform_sub
+			#add_manpower = -1000
+		}
+
+		remove_effect = {
+			#clr_country_flag = rom_land_reform_sub
+			from = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = mon_set_mine
+				add_resource = {
+					type = chromium
+					amount = 2
+				}
+				add_resource = {
+					type = coal
+					amount = 1
+				}
+			}
+		}
+	}
+	MONG_mining_5  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = MON
+		}
+
+		visible = { 
+			has_completed_focus = five_year_plan
+		}
+
+		state_target = yes
+
+		target_trigger = {
+	        FROM = {
+	        	is_controlled_by = root
+				is_core_of = root
+				or = {
+					has_state_flag = mon_set_mine
+					has_state_flag = mon_set_mine_2
+				}
+				
+	        }
+	    }
+
+		available = {
+			from = {
+				is_controlled_by = root
+			}
+			#custom_trigger_tooltip = {
+			#	tooltip = rom_land_re
+			#	NOT = { has_country_flag = rom_land_reform_sub }
+			#}
+		} 
+
+		days_remove = 30
+
+		cost = 0
+		#fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = { 
+			#set_country_flag = rom_land_reform_sub
+			from = {
+				set_state_flag = mon_set_mine_2
+			}
+			add_manpower = -2000
+			from = {
+				clr_state_flag = mon_set_mine
+			}
+		}
+
+		remove_effect = {
+			#clr_country_flag = rom_land_reform_sub
+			add_political_power = 30
+			add_stability = 0.02
+			add_war_support = 0.02
+			from = {
+				clr_state_flag = mon_set_mine_2
+			}
+		}
+	}
+}

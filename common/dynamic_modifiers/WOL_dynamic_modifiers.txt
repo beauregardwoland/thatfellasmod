@@ -1,0 +1,343 @@
+#	Example:
+#
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#       attacker_modifier = no  # if yes this modifier will also be read in combat for
+#                               # people engaging in the combat even if not in the state
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+
+#commonwealth
+
+commonwealth_air_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_generic_air_bonus
+
+	air_ace_generation_chance_factor = commonwealth_air_ace_generation_chance_factor
+	air_accidents_factor = commonwealth_air_accidents_factor
+	air_range_factor = commonwealth_air_range_factor
+
+	experience_gain_air = commonwealth_air_experience_gain_army_factor
+	air_cas_present_factor = commonwealth_air_cas_present_factor
+}
+
+commonwealth_army_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_eng_imperial_conscription
+
+	planning_speed = commonwealth_army_planning_speed
+	max_planning_factor = commonwealth_army_max_planning
+	
+
+	special_forces_cap = commonwealth_special_forces_cap
+	special_forces_attack_factor = commonwealth_special_forces_attack_factor
+
+	experience_gain_army_factor = commonwealth_army_experience_gain_army_factor
+
+	army_armor_attack_factor = commonwealth_army_armor
+	army_armor_defence_factor = commonwealth_army_armor
+	
+	experience_loss_factor = commonwealth_experience_loss_factor
+	monthly_population = commonwealth_monthly_population
+	army_org_factor = commonwealth_army_org_factor
+	modifier_army_sub_unit_category_mobile_infantry_max_org_factor = commonwealth_army_mobile_infantry_org_factor
+	supply_node_range = commonwealth_supply_node_range
+	conscription_factor = commonwealth_conscription_factor
+	org_loss_when_moving = commonwealth_org_loss_when_moving
+	coordination_bonus = commonwealth_coordination_bonus
+}
+
+
+commonwealth_naval_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_generic_navy_bonus
+
+	industrial_capacity_dockyard = commonwealth_industrial_capacity_dockyard
+
+	convoy_retreat_speed = commonwealth_convoy_retreat_speed
+	convoy_escort_efficiency = commonwealth_convoy_escort_efficiency
+	naval_detection = commonwealth_naval_detection
+}
+
+ROM_agrarian_refor = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_generic_agrarian_reform
+
+	monthly_population = ROM_agrarian_reform_1
+	conscription_factor = ROM_agrarian_reform_2
+	stability_factor = ROM_agrarian_reform_3
+	conscription = 0.005
+	industrial_capacity_factory = 0.05
+}
+cont_axis_eco = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = generic_fascism_drift_2
+	industrial_capacity_factory = cont_axis_eco_1
+	production_factory_max_efficiency_factor = cont_axis_eco_2
+	production_factory_efficiency_gain_factor = cont_axis_eco_3
+	industrial_capacity_dockyard = cont_axis_eco_4
+	military_factory_donations = cont_axis_eco_5
+	research_speed_factor = cont_axis_eco_7
+}
+cont_axis_army = {
+	enable = { always = yes }
+	icon = ITA_bandits_war
+	
+	conscription = cont_axis_army_1
+	conscription_factor = cont_axis_army_2
+	breakthrough_factor = cont_axis_army_3
+	max_planning_factor = cont_axis_army_4
+	max_command_power = cont_axis_army_5
+	planning_speed = cont_axis_army_6
+	army_org_factor = cont_axis_army_7
+	army_armor_attack_factor = cont_axis_army_8
+	army_armor_defence_factor = cont_axis_army_9
+	army_defence_factor = cont_axis_army_10
+}
+axis_industrial_area = { 
+	enable = { always = yes } 
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	state_production_speed_buildings_factor = 0.15
+	local_building_slots = 2
+	local_resources = 0.1
+}
+axis_naval_area = { 
+	enable = { always = yes } 
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	state_production_speed_buildings_factor = 0.15
+	naval_invasion_penalty = 0.1
+	dig_in_speed_factor = 0.05
+	max_dig_in_factor = 0.05
+}
+
+sia_army_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_eng_imperial_conscription
+
+	planning_speed = SIA_army_planning_speed
+	max_planning_factor = SIA_army_max_planning
+	
+	supply_consumption_factor = -0.05
+	army_infantry_attack_factor = 0.05
+	army_infantry_defence_factor = 0.05
+
+
+	experience_gain_army_factor = SIA_experience_gain_army_factor
+
+	army_attack_against_major_factor = SIA_army_attack_against_major_factor
+	army_defence_against_major_factor = SIA_army_defence_against_major_factor	
+
+	supply_node_range = SIA_supply_node_range
+}
+
+JAP_allied_debuff = { 
+	enable = { always = yes } 
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	
+	dig_in_speed_factor = -0.2
+	max_dig_in_factor = -0.30
+	army_armor_attack_factor = -0.1
+	army_defence_factor = -0.1
+}
+
+JAP_attack_buff = { 
+	enable = { always = yes } 
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	breakthrough_factor = 0.2
+	army_attack_factor = 0.10
+	dig_in_speed_factor = 0.2
+	max_dig_in_factor = 0.30
+	custom_modifier_tooltip = JAP_attack_buff_tt
+}
+
+JAP_attack_buff_dup_allies = { 
+	enable = { always = yes } 
+	#icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	breakthrough_factor = 0.2
+	army_attack_factor = 0.10
+	dig_in_speed_factor = 0.2
+	max_dig_in_factor = 0.33
+}
+2_tile_gibralter = {
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+	max_dig_in_factor = -0.05
+	army_defence_factor = -0.15
+	army_morale_factor = -0.75
+}
+JAP_IJN = {
+	icon = GFX_idea_warrior_traditions_idea
+	sortie_efficiency = IJN_var_1
+	navy_capital_ship_defence_factor = IJN_var_2
+	sp_naval_super_heavy_battleship_speed_factor = IJN_var_3
+	naval_torpedo_screen_penetration_factor = IJN_var_4
+	naval_torpedo_damage_reduction_factor = IJN_var_5
+	air_agility_factor = IJN_var_6
+	air_nav_efficiency = IJN_var_7
+	air_strategic_bomber_bombing_factor = IJN_var_8
+	air_cas_efficiency = IJN_var_9
+	air_intercept_efficiency = IJN_var_10
+	air_mission_efficiency = IJN_var_11
+}
+JAP_IJA = {
+	icon = GFX_idea_generic_navy_carrier_bonus
+	special_forces_cap = IJA_var_1
+	army_defence_factor = IJA_var_2
+	army_attack_factor = IJA_var_3
+	army_morale_factor = IJA_var_4
+	army_armor_attack_factor = IJA_var_5
+	army_armor_defence_factor = IJA_var_6
+	army_artillery_attack_factor = IJA_var_7
+	army_artillery_defence_factor = IJA_var_8
+	special_project_speed_factor = IJA_var_9
+	military_industrial_organization_research_bonus = IJA_var_10
+	license_production_speed = IJA_var_11
+	sp_tag_jet_speed_factor = IJA_var_12
+	air_superiority_bonus_in_combat = IJA_var_13
+	railway_gun_bombardment_factor = IJA_var_14
+	custom_modifier_tooltip = specialist_tank_1_tt
+}
+JAP_IJA_1 = {
+	icon = GFX_idea_generic_navy_carrier_bonus
+	special_forces_cap = IJA_var_1
+	army_defence_factor = IJA_var_2
+	army_attack_factor = IJA_var_3
+	army_morale_factor = IJA_var_4
+	army_armor_attack_factor = IJA_var_5
+	army_armor_defence_factor = IJA_var_6
+	army_artillery_attack_factor = IJA_var_7
+	army_artillery_defence_factor = IJA_var_8
+	special_project_speed_factor = IJA_var_9
+	military_industrial_organization_research_bonus = IJA_var_10
+	license_production_speed = IJA_var_11
+	sp_tag_jet_speed_factor = IJA_var_12
+	air_superiority_bonus_in_combat = IJA_var_13
+	railway_gun_bombardment_factor = IJA_var_14
+	#custom_modifier_tooltip = specialist_tank_1_tt
+}
+
+USA_army = {
+	icon = GFX_idea_usa_department_of_defense
+	conscription = usa_army_1
+	command_power_gain_mult = usa_army_2
+	acclimatization_cold_climate_gain_factor = usa_army_3
+	planning_speed = usa_army_4
+	max_command_power = usa_army_5
+	mobilization_speed = usa_army_6
+	special_forces_cap = usa_army_7
+	supply_consumption_factor = -0.025
+	experience_gain_army_factor = 0.05
+	coordination_bonus = 0.05
+	modifier_army_sub_unit_category_mobile_infantry_max_org_factor = usa_army_9
+	custom_modifier_tooltip = more_gun_wol_tt #usa_army_8
+	
+}
+USA_navy = {
+	icon = GFX_idea_liberty_ships_focus
+	production_speed_dockyard_factor = usa_navy_1
+	amphibious_invasion = usa_navy_2
+	naval_detection = usa_navy_7
+	navy_visibility = usa_navy_8
+	experience_gain_navy_factor = usa_navy_9
+	spotting_chance = usa_navy_10
+	repair_speed_factor = 0.1
+	custom_modifier_tooltip = burea_ship_wol_tt #usa_navy_5
+	custom_modifier_tooltip = lib_ship_wol_tt #usa_navy_3
+	custom_modifier_tooltip = escort_eff_wol_tt #usa_navy_4
+	custom_modifier_tooltip = fleet_sub_wol_tt #usa_navy_6
+}
+USA_air = {
+	icon = GFX_idea_usa_airborne_divisions
+	air_doctrine_cost_factor = usa_air_1
+	air_range_factor = usa_air_2
+	air_mission_xp_gain_factor = 0.15
+	air_training_xp_gain_factor = 0.15
+	air_manpower_requirement_factor = 0.15
+	custom_modifier_tooltip = air_war_plans_tt #usa_air_4
+	custom_modifier_tooltip = air_sup_plans_tt #usa_air_5
+	custom_modifier_tooltip = strat_bomb_plans_tt #usa_air_6
+	air_attack_factor = usa_air_7
+	air_cas_present_factor = usa_air_8
+	air_cas_efficiency = usa_air_9
+	naval_strike_targetting_factor = usa_air_10
+	air_defence_factor = usa_air_11
+
+}
+
+MAN_army_modif = {
+	icon = GFX_idea_MEN_mongol_banners
+	#resistance_target = -0.05
+	max_command_power = MAN_army_modif_1
+
+	planning_speed = MAN_army_modif_2
+	army_speed_factor = MAN_army_modif_3
+	acclimatization_cold_climate_gain_factor = MAN_army_modif_4
+
+	army_artillery_defence_factor = MAN_army_modif_5
+	army_artillery_attack_factor = MAN_army_modif_6
+
+	breakthrough_factor = MAN_army_modif_7
+	max_dig_in_factor = MAN_army_modif_8
+
+	modifier_army_sub_unit_category_mobile_infantry_max_org_factor = MAN_army_modif_9
+	cavalry_attack_factor = MAN_army_modif_10
+	cavalry_defence_factor = MAN_army_modif_11
+
+	land_night_attack = MAN_army_modif_12
+	army_morale_factor = MAN_army_modif_13
+
+	dig_in_speed_factor = MAN_army_modif_14
+	max_dig_in = MAN_army_modif_15
+	modifier_army_sub_unit_category_mobile_infantry_speed_factor = MAN_army_modif_16
+
+	army_strength_factor = MAN_army_modif_17
+	max_planning_factor = MAN_army_modif_18
+	army_defence_factor = MAN_army_modif_19
+	army_org_factor = MAN_army_modif_20
+
+	army_armor_attack_factor = MAN_army_modif_21
+	army_armor_defence_factor = MAN_army_modif_22
+	custom_modifier_tooltip = specialist_tank_2_tt
+	cas_damage_reduction = MAN_army_modif_23
+}
+
+ENG_operations_enemy = { 
+	enable = { always = yes } 
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	breakthrough_factor = 0.2
+	army_attack_factor = 0.10
+	dig_in_speed_factor = 0.2
+	max_dig_in_factor = 0.30
+	custom_modifier_tooltip = ENG_operations_enemy_tt
+}

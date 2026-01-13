@@ -1,0 +1,1522 @@
+﻿#	shared_focus = {
+#		id = CHI_sea_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = yes
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+
+shared_focus = {
+	id = MAN_army_direction_start
+	icon = GFX_goal_generic_position_armies
+	x = 25
+	y = 0
+
+	cost = 4
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		#add_ideas = MAN_mukden_military_academy
+		custom_effect_tooltip = MAN_army_modif_tt
+		add_to_variable = {
+			MAN_army_modif_1 = 20
+			tooltip = max_command_power_tt
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		add_mastery_bonus = {
+			bonus = 0.1
+			days = 365
+			track = armor
+			name = JAP_reform_the_army
+		}
+		add_mastery_bonus = {
+			bonus = 0.1
+			days = 365
+			track = infantry
+			name = JAP_reform_the_army
+		}
+		add_mastery_bonus = {
+			bonus = 0.1
+			days = 365
+			track = operations
+			name = JAP_reform_the_army
+		}
+		add_mastery_bonus = {
+			bonus = 0.1
+			days = 365
+			track = combat_support
+			name = JAP_reform_the_army
+		}
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_navy_start
+	icon = GFX_focus_MAN_manchurian_navy
+	prerequisite = { focus = MAN_army_direction_start }
+	x = 5
+	y = 1
+	relative_position_id = MAN_army_direction_start
+
+	cost = 2
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = JAP_expand_the_snlf
+			bonus = 1.5
+			uses = 4
+			category = mio_cat_tech_all_screen_ship_and_modules
+		}
+		add_tech_bonus = {
+			name = JAP_expand_the_snlf
+			bonus = 1.5
+			uses = 4
+			category = mio_cat_tech_all_capital_ship_and_modules
+		}
+		add_mastery_bonus = {
+			bonus = 0.1
+			days = 365
+			track = submarines
+			name = JAP_reform_the_army
+		}
+		add_mastery_bonus = {
+			bonus = 0.1
+			days = 365
+			track = screens
+			name = JAP_reform_the_army
+		}
+		add_mastery_bonus = {
+			bonus = 0.1
+			days = 365
+			track = capital_ships
+			name = JAP_reform_the_army
+		}
+		add_mastery_bonus = {
+			bonus = 0.1
+			days = 365
+			track = carriers
+			name = JAP_reform_the_army
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		swap_ideas = {
+			remove_idea = MAN_navy_tier1
+			add_idea = MAN_navy_tier2
+		}
+
+		navy_experience = 75
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		716 = {
+			IF = {
+				limit = {
+				free_building_slots = {
+					building = dockyard
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		IF = {
+			limit = {
+				has_dlc = "Man the Guns"
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "Momo Class"
+				creator = JAP
+				name = "Hai Wei"
+			}
+		}
+		ELSE = {
+			create_ship = {
+				type = destroyer_1
+				creator = "JAP"
+				name = "Hai Wei"
+			}
+		}	
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_navy_choice1
+	icon = GFX_focus_JAP_expand_navy_technical_department
+	prerequisite = { focus = MAN_army_direction_navy_start }
+	x = -1
+	y = 1
+	relative_position_id = MAN_army_direction_navy_start
+	mutually_exclusive = { focus = MAN_army_direction_navy_choice2 }
+	cost = 2
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		set_technology = {
+			early_ship_hull_light = 1
+			#basic_ship_hull_light = 1
+			early_ship_hull_submarine = 1
+			#basic_ship_hull_submarine = 1
+			basic_battery = 1
+			basic_torpedo = 1
+		}
+		swap_ideas = {
+			remove_idea = MAN_navy_tier2
+			add_idea = MAN_navy_coice1_tier1
+		}
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_navy_choice2
+	icon = GFX_focus_JAP_naval_armaments_program
+	prerequisite = { focus = MAN_army_direction_navy_start }
+	x = 1
+	y = 1
+	relative_position_id = MAN_army_direction_navy_start
+	mutually_exclusive = { focus = MAN_army_direction_navy_choice1 }
+
+	cost = 2
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		set_technology = {
+			early_ship_hull_heavy = 1
+			early_ship_hull_carrier = 1
+			early_ship_hull_cruiser = 1
+			basic_battery = 1
+			basic_torpedo = 1
+		}
+		swap_ideas = {
+			remove_idea = MAN_navy_tier2
+			add_idea = MAN_navy_coice2_tier1
+		}
+	}
+}
+shared_focus = {
+	id = MAN_army_direction_navy_choice12
+	icon = GFX_focus_generic_merchant_fleet
+	prerequisite = { focus = MAN_army_direction_navy_choice1 }
+	x = 0
+	y = 1
+	relative_position_id = MAN_army_direction_navy_choice1
+
+	cost = 2
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = MAN_navy_coice1_tier1
+			add_idea = MAN_navy_coice1_tier2
+		}
+		
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_navy_choice22
+	icon = GFX_focus_POL_develop_polish_shipbuilding
+	prerequisite = { focus = MAN_army_direction_navy_choice2 }
+	x = 0
+	y = 1
+	relative_position_id = MAN_army_direction_navy_choice2
+
+	cost = 2
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = MAN_navy_coice2_tier1
+			add_idea = MAN_navy_coice2_tier2
+		}
+
+	}
+}
+shared_focus = {
+	id = MAN_army_direction_navy_end
+	icon = GFX_focus_generic_naval_invasion
+	prerequisite = { focus = MAN_army_direction_navy_choice12 focus = MAN_army_direction_navy_choice22 }
+	x = 0
+	y = 3
+	relative_position_id = MAN_army_direction_navy_start
+
+	cost = 2
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		navy_experience = 75
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = {
+			localization_key = tooltip_if_focus_completed
+			FOCUS = MAN_army_direction_navy_choice1
+		}
+		effect_tooltip = {
+			add_ideas = BRA_brown_water_navy_idea
+		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = {
+			localization_key = tooltip_if_focus_completed
+			FOCUS = MAN_army_direction_navy_choice2
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = MAN_navy_coice2_tier2
+				add_idea = MAN_navy_coice2_tier3
+			}
+			add_tech_bonus = {
+				name = JAP_expand_the_snlf
+				bonus = 1
+				uses = 1
+				category = marine_tech
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 3
+				name = JAP_expand_the_snlf
+				category = naval_doctrine
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_completed_focus = MAN_army_direction_navy_choice1 }
+				set_technology = { 
+					ToA_river_boats_tech = 1	
+					popup = yes
+				}
+			}
+			else_if = {
+				limit = { has_completed_focus = MAN_army_direction_navy_choice2 }
+				swap_ideas = {
+					remove_idea = MAN_navy_coice2_tier2
+					add_idea = MAN_navy_coice2_tier3
+				}
+				add_tech_bonus = {
+					name = JAP_expand_the_snlf
+					bonus = 1
+					uses = 1
+					category = marine_tech
+				}
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.5
+					uses = 3
+					name = JAP_expand_the_snlf
+					category = naval_doctrine
+				}
+			}
+		}
+		
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_army_choice1
+	icon = GFX_focus_CHI_protracted_warfare
+	prerequisite = { focus = MAN_army_direction_start }
+	x = -1
+	y = 1
+	relative_position_id = MAN_army_direction_start
+	mutually_exclusive = { focus = MAN_army_direction_army_choice2 }
+	cost = 2
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+
+		custom_effect_tooltip = MAN_army_modif_tt
+		add_to_variable = {
+			MAN_army_modif_17 = 0.05
+			tooltip = army_strength_factor_tt
+		}
+		add_to_variable = {
+			MAN_army_modif_19 = 0.05
+			tooltip = army_defence_factor_tt
+		}
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_army_choice2
+	icon = GFX_focus_CHI_decisive_battles
+	prerequisite = { focus = MAN_army_direction_start }
+	x = 1
+	y = 1
+	relative_position_id = MAN_army_direction_start
+	mutually_exclusive = { focus = MAN_army_direction_army_choice1 }
+
+	cost = 2
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		custom_effect_tooltip = MAN_army_modif_tt
+		add_to_variable = {
+			MAN_army_modif_18 = 0.05
+			tooltip = max_planning_factor_tt
+		}
+		add_to_variable = {
+			MAN_army_modif_2 = -0.075
+			tooltip = planning_speed_factor_tt
+		}
+		add_to_variable = {
+			MAN_army_modif_20 = 0.025
+			tooltip = army_org_factor_tt
+		}
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_general_1
+	icon = GFX_focus_SWE_let_fly_all_guns
+	prerequisite = { focus = MAN_army_direction_army_choice1 focus = MAN_army_direction_army_choice2 }
+	x = -1
+	y = 2
+	relative_position_id = MAN_army_direction_start
+
+	cost = 4
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+	
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = JAP_develop_sophisticated_artillery_equipment
+			bonus = 0.75
+			uses = 2
+			category = artillery
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = {
+			localization_key = tooltip_if_focus_completed
+			FOCUS = MAN_army_direction_army_choice1
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = MAN_army_modif_tt
+			add_to_variable = {
+				MAN_army_modif_5 = 0.15
+				tooltip = army_artillery_defence_factor_tt
+			}
+		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = {
+			localization_key = tooltip_if_focus_completed
+			FOCUS = MAN_army_direction_army_choice2
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = MAN_army_modif_tt
+			add_to_variable = {
+				MAN_army_modif_6 = 0.1
+				tooltip = army_artillery_attack_factor_tt
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_completed_focus = MAN_army_direction_army_choice1 }
+				add_to_variable = {
+					MAN_army_modif_5 = 0.15
+				}
+			}
+			else = {
+				add_to_variable = {
+					MAN_army_modif_6 = 0.1
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_general_2
+	icon = GFX_SOV_increase_state_reserves_ccp_2d_sov_compatibility
+	prerequisite = { focus = MAN_army_direction_army_choice1 focus = MAN_army_direction_army_choice2 }
+	x = 1
+	y = 2
+	relative_position_id = MAN_army_direction_start
+
+	cost = 4
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+	
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = BUL_darzhavna_voenna_fabrika
+			bonus = 0.5
+			uses = 2
+			category = support_tech
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = MAN_army_modif_tt
+		add_to_variable = {
+			MAN_army_modif_14 = 0.15
+			tooltip = dig_in_speed_factor_tt
+		}
+		add_to_variable = {
+			MAN_army_modif_15 = 1
+			tooltip = max_dig_in_tt
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = {
+			localization_key = tooltip_if_focus_completed
+			FOCUS = MAN_army_direction_army_choice1
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = MAN_army_modif_tt
+			add_to_variable = {
+				MAN_army_modif_8 = 0.15
+				tooltip = max_dig_in_factor_tt
+			}
+		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = {
+			localization_key = tooltip_if_focus_completed
+			FOCUS = MAN_army_direction_army_choice2
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = MAN_army_modif_tt
+			add_to_variable = {
+				MAN_army_modif_7 = 0.1
+				tooltip = breakthrough_factor_tt
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_completed_focus = MAN_army_direction_army_choice1 }
+				add_to_variable = {
+					MAN_army_modif_8 = 0.15
+				}
+			}
+			else = {
+				add_to_variable = {
+					MAN_army_modif_7 = 0.1
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_general_3
+	icon = GFX_focus_generic_horse_studs
+	prerequisite = { focus = MAN_army_direction_general_2 }
+	x = 1
+	y = 3
+	relative_position_id = MAN_army_direction_start
+
+	cost = 4
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+	
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = BUL_war_logistics
+			ahead_reduction = 1
+			bonus = 1
+			uses = 2
+			category = mio_cat_tech_all_motorized_mechanized
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = MAN_army_modif_tt
+		add_to_variable = {
+			MAN_army_modif_16 = 0.1
+			tooltip = modifier_army_sub_unit_category_mobile_infantry_speed_factor_tt
+		}
+		custom_effect_tooltip = {
+			localization_key = tooltip_if_focus_completed
+			FOCUS = MAN_army_direction_army_choice1
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = MAN_army_modif_tt
+			add_to_variable = {
+				MAN_army_modif_10 = 0.15
+				tooltip = cavalry_attack_factor_tt
+			}
+			add_to_variable = {
+				MAN_army_modif_11 = 0.15
+				tooltip = cavalry_defence_factor_tt
+			}
+		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = {
+			localization_key = tooltip_if_focus_completed
+			FOCUS = MAN_army_direction_army_choice2
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = MAN_army_modif_tt
+			add_to_variable = {
+				MAN_army_modif_9 = 0.05
+				tooltip = modifier_army_sub_unit_category_mobile_infantry_max_org_factor_tt
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_completed_focus = MAN_army_direction_army_choice1 }
+				add_to_variable = {
+					MAN_army_modif_10 = 0.15
+					tooltip = cavalry_attack_factor_tt
+				}
+				add_to_variable = {
+					MAN_army_modif_11 = 0.15
+					tooltip = cavalry_defence_factor_tt
+				}
+			}
+			else = {
+				add_to_variable = {
+					MAN_army_modif_9 = 0.05
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_general_4
+	icon = GFX_focus_JAP_the_imperial_defense_plan
+	prerequisite = { focus = MAN_army_direction_general_1 }
+	x = -1
+	y = 3
+	relative_position_id = MAN_army_direction_start
+
+	cost = 4
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+	
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		army_experience = 100
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = {
+			localization_key = tooltip_if_focus_completed
+			FOCUS = MAN_army_direction_army_choice1
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = MAN_army_modif_tt
+			add_to_variable = {
+				MAN_army_modif_12 = 0.15
+				tooltip = land_night_attack_tt
+			}
+		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = {
+			localization_key = tooltip_if_focus_completed
+			FOCUS = MAN_army_direction_army_choice2
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = MAN_army_modif_tt
+			add_to_variable = {
+				MAN_army_modif_13 = 0.1
+				tooltip = army_morale_factor_tt
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_completed_focus = MAN_army_direction_army_choice1 }
+				add_to_variable = {
+					MAN_army_modif_12 = 0.15
+				}
+			}
+			else = {
+				add_to_variable = {
+					MAN_army_modif_13 = 0.1
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_general_5
+	icon = GFX_focus_JAP_rely_on_infantry_charges
+	prerequisite = { focus = MAN_army_direction_general_3 focus = MAN_army_direction_general_4 }
+	x = 0
+	y = 4
+	relative_position_id = MAN_army_direction_start
+
+	cost = 4
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+	
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		custom_effect_tooltip = JAP_operational_strikes
+		custom_effect_tooltip = MAN_army_modif_tt
+			add_to_variable = {
+				MAN_army_modif_3 = 0.15
+				tooltip = army_speed_factor_tt
+			}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = {
+			localization_key = tooltip_if_focus_completed
+			FOCUS = MAN_army_direction_army_choice1
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = MAN_army_modif_tt
+			add_to_variable = {
+				MAN_army_modif_17 = 0.05
+				tooltip = army_strength_factor_tt
+			}
+		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = {
+			localization_key = tooltip_if_focus_completed
+			FOCUS = MAN_army_direction_army_choice2
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = MAN_army_modif_tt
+			add_to_variable = {
+				MAN_army_modif_18 = 0.05
+				tooltip = max_planning_factor_tt
+			}
+			add_to_variable = {
+				MAN_army_modif_2 = -0.075
+				tooltip = planning_speed_factor_tt
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_completed_focus = MAN_army_direction_army_choice1 }
+				add_to_variable = {
+					MAN_army_modif_17 = 0.05
+				}
+			}
+			else = {
+				add_to_variable = {
+					MAN_army_modif_18 = 0.05
+				}
+				add_to_variable = {
+					MAN_army_modif_2 = -0.075
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_army_tank1
+	icon = GFX_focus_generic_tank_assembly
+	prerequisite = { focus = MAN_army_direction_army_choice1 focus = MAN_army_direction_army_choice2 }
+	x = -4
+	y = 2
+	relative_position_id = MAN_army_direction_start
+
+	cost = 4
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+	
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		custom_effect_tooltip = "Modify Production by:"
+		add_equipment_bonus = {
+			name = MAN_panxers
+			bonus = {
+				mio_cat_eq_all_light_tank = { build_cost_ic = -0.025 instant = yes}
+				mio_cat_eq_all_medium_tank = { build_cost_ic = -0.025 instant = yes }
+				mio_cat_eq_all_heavy_tank = { build_cost_ic = -0.025 instant = yes }	
+			}		
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		every_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+			random_select_amount = 2
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		custom_effect_tooltip = JAP_operational_strikes
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_army_tank2
+	icon = GFX_focus_CHI_200th_division
+	prerequisite = { focus = MAN_army_direction_army_tank1 }
+	x = -1
+	y = 1
+	relative_position_id = MAN_army_direction_army_tank1
+
+	cost = 4
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+	
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		custom_effect_tooltip = MAN_army_modif_tt
+		add_to_variable = {
+			MAN_army_modif_21 = 0.05
+			tooltip = army_armor_attack_factor_tt
+		}
+		add_to_variable = {
+			MAN_army_modif_22 = 0.05
+			tooltip = army_armor_defence_factor_tt
+		}
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_army_tank3
+	icon = GFX_focus_JAP_army_weapons_administration_hq
+	prerequisite = { focus = MAN_army_direction_army_tank1 }
+	x = 1
+	y = 1
+	relative_position_id = MAN_army_direction_army_tank1
+
+	cost = 4
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+	
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		every_military_industrial_organization = {
+			limit = {
+				or = {
+					is_military_industrial_organization = JAP_sumitomo_heavy_vehicles
+					is_military_industrial_organization = JAP_mitsui_heavy_vehicles
+					is_military_industrial_organization = JAP_kawasaki_heavy_vehicles
+					is_military_industrial_organization = MAN_nissan_heavy
+				}
+			}
+			add_mio_funds_gain_factor = 0.15
+			add_mio_research_bonus = 0.05
+		}
+	}
+}
+
+
+shared_focus = {
+	id = MAN_army_direction_army_tank4
+	icon = GFX_focus_generic_tank_assault
+	prerequisite = { focus = MAN_army_direction_army_tank1 }
+	x = 0
+	y = 2
+	relative_position_id = MAN_army_direction_army_tank1
+
+	cost = 4
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			tag = MAN
+		}
+	}
+
+	available = {
+
+	}
+	
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = yes
+	available_if_capitulated = no
+
+	completion_reward = {
+		custom_effect_tooltip = MAN_army_modif_tt
+		add_to_variable = {
+			MAN_army_modif_21 = 0.025
+			tooltip = army_armor_attack_factor_tt
+		}
+		add_to_variable = {
+			MAN_army_modif_22 = 0.025
+			tooltip = army_armor_defence_factor_tt
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = {
+			localization_key = tooltip_if_focus_completed
+			FOCUS = MAN_army_direction_army_choice1
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = MAN_specialist_tank
+				add_idea = MAN_specialist_tank_1
+			}
+		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = {
+			localization_key = tooltip_if_focus_completed
+			FOCUS = MAN_army_direction_army_choice2
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = MAN_specialist_tank
+				add_idea = MAN_specialist_tank_2
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_completed_focus = MAN_army_direction_army_choice1 }
+				swap_ideas = {
+					remove_idea = MAN_specialist_tank
+					add_idea = MAN_specialist_tank_1
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = MAN_specialist_tank
+					add_idea = MAN_specialist_tank_2
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_air_choice1
+	icon = GFX_goal_generic_air_production
+	prerequisite = { focus = MAN_army_direction_start }
+	x = -8
+	y = 1
+	relative_position_id = MAN_army_direction_start
+	mutually_exclusive = { focus = MAN_army_direction_air_choice2 }
+	cost = 4
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
+
+		
+
+	completion_reward = {
+		add_ideas = MAN_air_choice_1
+		add_tech_bonus = {
+				name = ITA_citta_dell_aria
+				bonus = 0.5
+				uses = 3 # was 4
+				category = air_equipment
+			}
+	}
+}
+shared_focus = {
+	id = MAN_army_direction_air_choice2
+	icon = GFX_focus_generic_copy_plane_designs
+	prerequisite = { focus = MAN_army_direction_start }
+	mutually_exclusive = { focus = MAN_army_direction_air_choice1 }
+	x = -10
+	y = 1
+	relative_position_id = MAN_army_direction_start
+
+	cost = 4
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
+
+		
+
+	completion_reward = {
+		add_ideas = MAN_air_choice_2
+		add_tech_bonus = {
+				name = ITA_citta_dell_aria
+				bonus = 0.5
+				uses = 3 # was 4
+				category = air_equipment
+			}
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_air_choice3
+	icon = GFX_focus_generic_paratrooper
+	prerequisite = { focus = MAN_army_direction_air_choice1 }
+	x = 0
+	y = 1
+	relative_position_id = MAN_army_direction_air_choice1
+	cost = 4
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
+
+		
+
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = MAN_air_choice_1
+			add_idea = MAN_air_choice_12
+		}
+	}
+}
+shared_focus = {
+	id = MAN_army_direction_air_choice4
+	icon = GFX_focus_generic_air_bases
+	prerequisite = { focus = MAN_army_direction_air_choice2 }
+	x = 0
+	y = 1
+	relative_position_id = MAN_army_direction_air_choice2
+
+	cost = 4
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
+
+		
+
+	completion_reward = {
+		create_equipment_variant = { 
+			name = "Nakajima Ki-4" 
+			type = medium_plane_scout_plane_airframe_2
+			allow_without_tech = yes
+			#design_team = mio:JAP_kawasaki_designer_upgrade_1
+			modules = {
+				fixed_main_weapon_slot = recon_camera
+				#fixed_auxiliary_weapon_slot_1 = 
+				#fixed_auxiliary_weapon_slot_2 = 
+				engine_type_slot = engine_3_2x
+				special_type_slot_1 = fuel_tanks_medium
+				special_type_slot_2 = fuel_tanks_medium	
+			}
+			icon = "GFX_JAP_heavy_fighter2_medium"
+			#model = "GER_medium_plane_entity"
+		}
+		custom_effect_tooltip = MAN_scout_plane_tt
+		add_equipment_to_stockpile = {
+			type = medium_plane_scout_plane_airframe_2
+			amount = 60
+		}
+	}
+}
+shared_focus = {
+	id = MAN_army_direction_air_choice5
+	icon = GFX_focus_JAP_strenghten_manchukuo_imperial_airforce
+	prerequisite = { focus = MAN_army_direction_air_choice3 focus = MAN_army_direction_air_choice4 }
+	x = 1
+	y = 2
+	relative_position_id = MAN_army_direction_air_choice2
+
+	cost = 4
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
+
+		
+
+	completion_reward = {
+		custom_effect_tooltip = {
+			localization_key = tooltip_if_focus_completed
+			FOCUS = MAN_army_direction_air_choice1
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = MAN_air_choice_12
+				add_idea = MAN_air_choice_13
+			}
+		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = {
+			localization_key = tooltip_if_focus_completed
+			FOCUS = MAN_army_direction_air_choice2
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = MAN_air_choice_2
+				add_idea = MAN_air_choice_21
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_completed_focus = MAN_army_direction_air_choice1 }
+				swap_ideas = {
+					remove_idea = MAN_air_choice_12
+					add_idea = MAN_air_choice_13
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = MAN_air_choice_2
+					add_idea = MAN_air_choice_21
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = MAN_army_direction_air_choice6
+	icon = GFX_focus_PER_construct_air_defenses
+	prerequisite = { focus = MAN_army_direction_air_choice2 focus = MAN_army_direction_air_choice1 }
+	prerequisite = { focus = MAN_army_direction_army_choice1 focus = MAN_army_direction_army_choice2 }
+	x = 4
+	y = 1
+	relative_position_id = MAN_army_direction_air_choice2
+
+	cost = 4
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
+
+		
+
+	completion_reward = {
+		set_technology = {
+			interwar_antiair = 1
+		}
+		custom_effect_tooltip = MAN_army_modif_tt
+		add_to_variable = {
+			MAN_army_modif_23 = 0.05
+			tooltip = cas_damage_reduction_tt
+		}
+	}
+}
+
+shared_focus = {
+	id = MAN_army_direction_reposition
+	icon = GFX_focus_SOV_approach_semyonov
+	prerequisite = { focus = MAN_army_direction_start }
+	x = 3
+	y = 1
+	relative_position_id = MAN_army_direction_start
+
+	cost = 4
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
+
+		
+
+	completion_reward = {
+		add_ideas = MAN_white_russian_advisers
+	}
+}

@@ -1,0 +1,664 @@
+add_namespace = wol_qol
+
+
+country_event = {
+	id = wol_qol.1
+	title = wol_qol.1.t
+	desc = wol_qol.1.d
+	picture = GFX_portrait_juan_pujol
+	
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = wol_qol.1.a
+	}
+
+}
+
+country_event = {
+	id = wol_qol.2
+	title = wol_qol.2.t
+	desc = wol_qol.2.d
+	#picture = GFX_report_event_yugoslavian_king_peter
+	
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = {
+		name = wol_qol.2.a
+		division_template = {
+			name = "PanzerGrenadiers"
+			division_names_group = ENG_INF_01
+			#template_counter = 99
+			role = garrison
+			is_locked = no
+			regiments = {
+				mechanized = { x = 0 y = 0 }
+				mechanized = { x = 0 y = 1 }
+				mechanized = { x = 0 y = 2 }
+				mechanized = { x = 1 y = 0 }
+				mechanized = { x = 1 y = 1 }
+				mechanized = { x = 1 y = 2 }
+				medium_armor = { x = 2 y = 0 }
+				medium_armor = { x = 2 y = 1 }
+				medium_armor = { x = 2 y = 2 }
+				medium_armor = { x = 3 y = 0 }
+				medium_armor = { x = 3 y = 1 }
+				medium_armor = { x = 3 y = 2 }
+				medium_armor = { x = 4 y = 0 }
+				medium_armor = { x = 4 y = 1 }
+				medium_armor = { x = 4 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				logistics_company = { x = 0 y = 1 }
+				anti_air = { x = 0 y = 2 }
+				field_hospital = { x = 1 y = 0 }
+				light_tank_recon = { x = 1 y = 1 }
+			}
+		}
+		capital_scope = {
+			create_unit = {
+				division = "name = \"PanzerGrenadiers\" division_template = \"PanzerGrenadiers\" start_experience_factor = 0.8"
+				owner = GER
+				count = 3
+			}
+		}
+	}
+	option = {
+		name = wol_qol.2.b
+		division_template = {
+			name = "PanzerGrenadiers"
+			division_names_group = ENG_INF_01
+			#template_counter = 99
+			role = garrison
+			is_locked = no
+			regiments = {
+				mechanized = { x = 0 y = 0 }
+				mechanized = { x = 0 y = 1 }
+				mechanized = { x = 0 y = 2 }
+				mechanized = { x = 1 y = 0 }
+				mechanized = { x = 1 y = 1 }
+				mechanized = { x = 1 y = 2 }
+				heavy_armor = { x = 2 y = 0 }
+				heavy_armor = { x = 2 y = 1 }
+				heavy_armor = { x = 2 y = 2 }
+				heavy_armor = { x = 3 y = 0 }
+				heavy_armor = { x = 3 y = 1 }
+				heavy_armor = { x = 3 y = 2 }
+				heavy_armor = { x = 4 y = 0 }
+				heavy_armor = { x = 4 y = 1 }
+				heavy_armor = { x = 4 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				logistics_company = { x = 0 y = 1 }
+				anti_air = { x = 0 y = 2 }
+				field_hospital = { x = 1 y = 0 }
+				light_tank_recon = { x = 1 y = 1 }
+			}
+		}
+		capital_scope = {
+			create_unit = {
+				division = "name = \"PanzerGrenadiers\" division_template = \"PanzerGrenadiers\" start_experience_factor = 0.8"
+				owner = GER
+				count = 2
+			}
+		}
+	}
+}
+country_event = {
+	id = wol_qol.3
+	title = wol_qol.2.t
+	desc = wol_qol.2.d
+	#picture = GFX_report_event_yugoslavian_king_peter
+	
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = {
+		name = wol_qol.2.a
+		division_template = {
+			name = "AfricaKorps"
+			division_names_group = ENG_INF_01
+			#template_counter = 99
+			role = garrison
+			is_locked = no
+			regiments = {
+				mechanized = { x = 0 y = 0 }
+				mechanized = { x = 0 y = 1 }
+				mechanized = { x = 0 y = 2 }
+				mechanized = { x = 1 y = 0 }
+				mechanized = { x = 1 y = 1 }
+				mechanized = { x = 1 y = 2 }
+				medium_armor = { x = 2 y = 0 }
+				medium_armor = { x = 2 y = 1 }
+				medium_armor = { x = 2 y = 2 }
+				medium_armor = { x = 3 y = 0 }
+				medium_armor = { x = 3 y = 1 }
+				medium_armor = { x = 3 y = 2 }
+				medium_armor = { x = 4 y = 0 }
+				medium_armor = { x = 4 y = 1 }
+				medium_armor = { x = 4 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				logistics_company = { x = 0 y = 1 }
+				anti_air = { x = 0 y = 2 }
+				field_hospital = { x = 1 y = 0 }
+				light_tank_recon = { x = 1 y = 1 }
+			}
+		}
+		450 = {
+			create_unit = {
+				division = "name = \"AfricaKorps\" division_template = \"AfricaKorps\" start_experience_factor = 0.8"
+				owner = GER
+				count = 2
+				allow_spawning_on_enemy_provs = yes
+			}
+		}
+		448 = {
+			create_unit = {
+				division = "name = \"AfricaKorps\" division_template = \"AfricaKorps\" start_experience_factor = 0.8"
+				owner = GER
+				count = 1
+				allow_spawning_on_enemy_provs = yes
+			}
+		}
+	}
+	option = {
+		name = wol_qol.2.b
+		division_template = {
+			name = "AfricaKorps"
+			division_names_group = ENG_INF_01
+			#template_counter = 99
+			role = garrison
+			is_locked = no
+			regiments = {
+				mechanized = { x = 0 y = 0 }
+				mechanized = { x = 0 y = 1 }
+				mechanized = { x = 0 y = 2 }
+				mechanized = { x = 1 y = 0 }
+				mechanized = { x = 1 y = 1 }
+				mechanized = { x = 1 y = 2 }
+				heavy_armor = { x = 2 y = 0 }
+				heavy_armor = { x = 2 y = 1 }
+				heavy_armor = { x = 2 y = 2 }
+				heavy_armor = { x = 3 y = 0 }
+				heavy_armor = { x = 3 y = 1 }
+				heavy_armor = { x = 3 y = 2 }
+				heavy_armor = { x = 4 y = 0 }
+				heavy_armor = { x = 4 y = 1 }
+				heavy_armor = { x = 4 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				logistics_company = { x = 0 y = 1 }
+				anti_air = { x = 0 y = 2 }
+				field_hospital = { x = 1 y = 0 }
+				light_tank_recon = { x = 1 y = 1 }
+			}
+		}
+		448 = {
+			create_unit = {
+				division = "name = \"AfricaKorps\" division_template = \"AfricaKorps\" start_experience_factor = 0.8"
+				owner = GER
+				count = 1
+				allow_spawning_on_enemy_provs = yes
+			}
+		}
+		450 = {
+			create_unit = {
+				division = "name = \"AfricaKorps\" division_template = \"AfricaKorps\" start_experience_factor = 0.8"
+				owner = GER
+				count = 1
+				allow_spawning_on_enemy_provs = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = wol_qol.4
+	title = wol_qol.3.t
+	desc = wol_qol.3.d
+	picture = GFX_portrait_juan_pujol
+	
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = wol_qol.1.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = wol_qol.5
+	title = wol_qol.5.t
+	desc = wol_qol.5.d
+	#picture = GFX_portrait_juan_pujol
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.5.a
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = wol_qol.5.b
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = wol_qol.6
+	title = wol_qol.6.t
+	desc = wol_qol.6.d
+	#picture = GFX_portrait_juan_pujol
+	
+	is_triggered_only = yes
+
+	immediate = {
+		
+		if = {
+			limit = {
+				NOT = { has_tech = interwar_antitank }
+			}
+			FRA = {
+				set_technology = { antitank2 = 1 }
+			}
+		}
+	}
+	
+	option = {
+		name = wol_qol.6.a
+		ai_chance = { base = 100 }
+		add_equipment_to_stockpile = {
+			type = anti_air_equipment_2
+			producer = fra
+			amount = 1152
+		}
+		division_template = {
+				name = "Division d'Infanterie"
+				division_names_group = ENG_INF_01
+				template_counter = 0
+				role = garrison
+				is_locked = no
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					infantry = { x = 3 y = 0 }
+					infantry = { x = 3 y = 1 }
+					infantry = { x = 3 y = 2 }
+					anti_tank_brigade = { x = 4 y = 0 }
+					anti_tank_brigade = { x = 4 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					logistics_company = { x = 0 y = 1 }
+					anti_air = { x = 0 y = 2 }
+					artillery = { x = 1 y = 0 }
+					anti_tank = { x = 1 y = 1 }
+				}
+			}
+		24 = {
+			create_unit = {
+				division = "name = \"Division d'Infanterie\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.5"
+				owner = ENG
+				count = 4
+				allow_spawning_on_enemy_provs = yes
+			}
+		}
+		785 = {
+			create_unit = {
+				division = "name = \"Division d'Infanterie\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.5"
+				owner = ENG
+				count = 5
+				allow_spawning_on_enemy_provs = yes
+			}
+		}
+		27 = {
+			create_unit = {
+				division = "name = \"Division d'Infanterie\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.5"
+				owner = ENG
+				count = 5
+				allow_spawning_on_enemy_provs = yes
+			}
+		}
+		
+	}
+}
+
+country_event = {
+	id = wol_qol.7
+	title = wol_qol.7.t
+	desc = wol_qol.7.d
+	#picture = GFX_report_event_yugoslavian_king_peter
+	
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = {
+		name = wol_qol.2.a
+		division_template = {
+			name = "Tank Division"
+			division_names_group = ENG_INF_01
+			#template_counter = 99
+			role = garrison
+			is_locked = no
+			regiments = {
+				mechanized = { x = 0 y = 0 }
+				mechanized = { x = 0 y = 1 }
+				mechanized = { x = 0 y = 2 }
+				mechanized = { x = 1 y = 0 }
+				mechanized = { x = 1 y = 1 }
+				mechanized = { x = 1 y = 2 }
+				medium_armor = { x = 2 y = 0 }
+				medium_armor = { x = 2 y = 1 }
+				medium_armor = { x = 2 y = 2 }
+				medium_armor = { x = 3 y = 0 }
+				medium_armor = { x = 3 y = 1 }
+				medium_armor = { x = 3 y = 2 }
+				medium_armor = { x = 4 y = 0 }
+				medium_armor = { x = 4 y = 1 }
+				medium_armor = { x = 4 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				logistics_company = { x = 0 y = 1 }
+				anti_air = { x = 0 y = 2 }
+				field_hospital = { x = 1 y = 0 }
+				light_tank_recon = { x = 1 y = 1 }
+			}
+		}
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Tank Division\" division_template = \"Tank Division\" start_experience_factor = 0.8"
+				owner = root
+				count = 2
+			}
+		}
+		447 = {
+			create_unit = {
+				division = "name = \"Tank Division\" division_template = \"Tank Division\" start_experience_factor = 0.8"
+				owner = root
+				count = 1
+			}
+		}
+	}
+	option = {
+		name = wol_qol.2.b
+		division_template = {
+			name = "Tank Division"
+			division_names_group = ENG_INF_01
+			#template_counter = 99
+			role = garrison
+			is_locked = no
+			regiments = {
+				mechanized = { x = 0 y = 0 }
+				mechanized = { x = 0 y = 1 }
+				mechanized = { x = 0 y = 2 }
+				mechanized = { x = 1 y = 0 }
+				mechanized = { x = 1 y = 1 }
+				mechanized = { x = 1 y = 2 }
+				heavy_armor = { x = 2 y = 0 }
+				heavy_armor = { x = 2 y = 1 }
+				heavy_armor = { x = 2 y = 2 }
+				heavy_armor = { x = 3 y = 0 }
+				heavy_armor = { x = 3 y = 1 }
+				heavy_armor = { x = 3 y = 2 }
+				heavy_armor = { x = 4 y = 0 }
+				heavy_armor = { x = 4 y = 1 }
+				heavy_armor = { x = 4 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				logistics_company = { x = 0 y = 1 }
+				anti_air = { x = 0 y = 2 }
+				field_hospital = { x = 1 y = 0 }
+				light_tank_recon = { x = 1 y = 1 }
+			}
+		}
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Tank Division\" division_template = \"Tank Division\" start_experience_factor = 0.8"
+				owner = root
+				count = 1
+			}
+		}
+		447 = {
+			create_unit = {
+				division = "name = \"Tank Division\" division_template = \"Tank Division\" start_experience_factor = 0.8"
+				owner = root
+				count = 1
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = wol_qol.8
+	title = wol_qol.8.t
+	desc = wol_qol.8.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.8.a
+		ai_chance = { base = 100 }
+		activate_mission = ITA_public_demands_war
+	}
+	
+}
+
+country_event = {  ###germany changes
+	id = wol_qol.9  
+	title = wol_qol.9.t
+	desc = wol_qol.9.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.9.a
+		ai_chance = { base = 100 }
+	}
+	
+}
+
+country_event = {   ###Italy changes
+	id = wol_qol.10
+	title = wol_qol.10.t
+	desc = wol_qol.10.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.10.a
+		ai_chance = { base = 100 }
+	}
+	
+}
+
+country_event = {   ###japan changes
+	id = wol_qol.11
+	title = wol_qol.11.t
+	desc = wol_qol.11.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.11.a
+		ai_chance = { base = 100 }
+	}
+	
+}
+
+country_event = {  ###Soviet changes
+	id = wol_qol.12
+	title = wol_qol.12.t
+	desc = wol_qol.12.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.12.a
+		ai_chance = { base = 100 }
+	}
+	
+}
+
+
+country_event = {  ###England Change
+	id = wol_qol.13
+	title = wol_qol.13.t
+	desc = wol_qol.13.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.13.a
+		ai_chance = { base = 100 }
+	}
+	
+}
+
+country_event = {  ###US changes
+	id = wol_qol.14
+	title = wol_qol.14.t
+	desc = wol_qol.14.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.14.a
+		ai_chance = { base = 100 }
+	}
+	
+}
+
+country_event = {  ###Commonwealth changes
+	id = wol_qol.15
+	title = wol_qol.15.t
+	desc = wol_qol.15.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.15.a
+		ai_chance = { base = 100 }
+	}
+	
+}
+
+country_event = {  ###Commintern changes
+	id = wol_qol.16
+	title = wol_qol.16.t
+	desc = wol_qol.16.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.16.a
+		ai_chance = { base = 100 }
+	}
+	
+}
+
+country_event = {  ###Axis changes
+	id = wol_qol.17
+	title = wol_qol.17.t
+	desc = wol_qol.17.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.17.a
+		ai_chance = { base = 100 }
+	}
+	
+}
+country_event = {  ###Axis changes
+	id = wol_qol.18
+	title = wol_qol.18.t
+	desc = wol_qol.18.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.18.a
+		ai_chance = { base = 100 }
+	}
+	
+}
+
+country_event = {
+	id = wol_qol.101
+	title = wol_qol.101.t
+	desc = wol_qol.101.d
+	picture = GFX_portrait_juan_pujol
+	
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = wol_qol.101.a
+		activate_mission = yearly_autosave_reminder
+	}
+	option = {
+		name = wol_qol.101.b
+	}
+}
+
+country_event = { 
+	id = wol_qol.666
+	title = wol_qol.666.t
+	desc = wol_qol.666.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.666.a
+		ai_chance = { base = 100 }
+	}
+	
+}

@@ -1,0 +1,336 @@
+﻿###########################
+# Allied
+###########################
+
+add_namespace = allied
+
+country_event = {
+	id = allied.0
+	title = "Fall of Western Russia"
+	desc = "We must divert the Reichs attention"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"Damn Them!"
+		ai_chance = { factor = 100 }
+		add_ideas = ALI_losing_1
+	}
+}
+
+country_event = {
+	id = allied.1
+	title = "Fall of The Mediterranean"
+	desc = "We must divert the Reichs attention"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"Damn Them!"
+		ai_chance = { factor = 100 }
+		#add_ideas = ALI_losing_2
+	}
+}
+
+country_event = {
+	id = allied.2
+	title = "Fall of Western Europe"
+	desc = "We must divert the Reichs attention"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"Damn Them!"
+		ai_chance = { factor = 100 }
+		#add_ideas = ALI_losing_3
+	}
+}
+
+country_event = {
+	id = allied.3
+	title = "Fall of India"
+	desc = "We must divert Japans attention"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"Damn Them!"
+		activate_mission = JAP_Victory_on_the_Continent_allied
+		ai_chance = { factor = 100 }
+		#add_ideas = ALI_losing_4
+		effect_tooltip = {
+			every_allied_country = {
+				state_of_pacific_up = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = allied.4
+	title = "Fall of The Pacific Islands"
+	desc = "We must divert Japans attention"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"Damn Them!"
+		activate_mission = JAP_Full_Control_of_the_Pacific_allied
+		ai_chance = { factor = 100 }
+		#add_ideas = ALI_losing_5
+		effect_tooltip = {
+			every_allied_country = {
+				state_of_pacific_up = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = allied.5
+	title = "Fall of Indonesia"
+	desc = "We must divert Japans attention"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"Damn Them!"
+		activate_mission = JAP_Conquest_of_the_Spice_Islands_allied
+		ai_chance = { factor = 100 }
+		#add_ideas = ALI_losing_6
+		effect_tooltip = {
+			every_allied_country = {
+				state_of_pacific_up = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = allied.16
+	title = "Fall of The Phillipines"
+	desc = "We must divert Japans attention"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"Damn Them!"
+		activate_mission = JAP_phillipines_conquest_allied
+		ai_chance = { factor = 100 }
+		#add_ideas = ALI_losing_6
+		effect_tooltip = {
+			every_allied_country = {
+				state_of_pacific_up = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = allied.6
+	title = "Liberation of Western Russia"
+	desc = "dopamine"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"All according to cake"
+		ai_chance = { factor = 100 }
+		#remove_ideas = ALI_losing_1
+	}
+}
+
+country_event = {
+	id = allied.7
+	title = "We have regained access to the Mediterranean"
+	desc = "dopamine"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"All according to cake"
+		ai_chance = { factor = 100 }
+		remove_ideas = ALI_losing_2
+	}
+}
+
+country_event = {
+	id = allied.8
+	title = "Liberation of Western Europe"
+	desc = "dopamine"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"All according to cake"
+		ai_chance = { factor = 100 }
+		remove_ideas = ALI_losing_3
+	}
+}
+
+country_event = {
+	id = allied.9
+	title = "Liberation of India"
+	desc = "dopamine"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"All according to cake"
+		ai_chance = { factor = 100 }
+		#remove_ideas = ALI_losing_4
+		effect_tooltip = {
+			every_allied_country = {
+				state_of_pacific_down = yes
+			}
+		}
+		hidden_effect = {
+			every_allied_country = {
+				remove_mission = JAP_Victory_on_the_Continent_allied
+			}
+		}
+	}
+}
+
+country_event = {
+	id = allied.10
+	title = "Liberation of The Pacific Islands"
+	desc = "dopamine"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"All according to cake"
+		ai_chance = { factor = 100 }
+		#remove_ideas = ALI_losing_5
+		effect_tooltip = {
+			every_allied_country = {
+				state_of_pacific_down = yes
+			}
+		}
+		hidden_effect = {
+			every_allied_country = {
+				remove_mission = JAP_Full_Control_of_the_Pacific_allied
+			}
+		}
+	}
+}
+
+country_event = {
+	id = allied.11
+	title = "Recapture of Indonesia"
+	desc = "dopamine"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"All according to cake"
+		ai_chance = { factor = 100 }
+		#remove_ideas = ALI_losing_6
+		effect_tooltip = {
+			every_allied_country = {
+				state_of_pacific_down = yes
+			}
+		}
+		hidden_effect = {
+			every_allied_country = {
+				remove_mission = JAP_Conquest_of_the_Spice_Islands_allied
+			}
+		}
+	}
+}
+country_event = {
+	id = allied.17
+	title = "Liberation of the Phillipines"
+	desc = "dopamine"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"All according to cake"
+		ai_chance = { factor = 100 }
+		#remove_ideas = ALI_losing_6
+		effect_tooltip = {
+			every_allied_country = {
+				state_of_pacific_down = yes
+			}
+		}
+		hidden_effect = {
+			every_allied_country = {
+				remove_mission = JAP_phillipines_conquest_allied
+			}
+		}
+	}
+}
+
+country_event = {
+	id = allied.12
+	title = "Battle of the Bulge Begins"
+	desc = ""
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"Nuts!"
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = allied.13
+	title = "Steiner's Counterattack"
+	desc = "Mein Fuhrer..."
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"Good for them"
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = allied.14
+	title = "Case Blue Begins"
+	desc = ""
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"Not one step back"
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = allied.15
+	title = "Operation Citadel Begins"
+	desc = ""
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"Not one step back"
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+

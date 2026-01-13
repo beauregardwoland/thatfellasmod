@@ -1,0 +1,522 @@
+COM_nationbuilding = {
+
+	COM_domestic_munitions  = {
+
+		priority = 100
+
+		icon = ger_military_buildup
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				original_tag = SAF
+				original_tag = AST
+			}
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = SAF_domestic_armarmants
+				has_completed_focus =AST_expand_domestic_designs
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+		} 
+
+		days_remove = 60
+
+		cost = 25
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.075
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+	}
+
+    COM_domestic_rifle_production  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_industry
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				original_tag = SAF
+				original_tag = AST
+			}
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = SAF_domestic_armarmants
+				has_completed_focus =AST_expand_domestic_designs
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+		} 
+
+		days_remove = 60
+
+		cost = 25
+		fire_only_once = yes
+
+		modifier = {
+			industrial_capacity_factory = -0.05
+			military_industrial_organization_funds_gain = 0.15
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					tag = SAF
+				}
+				mio:generic_infantry_equipment_organization = {
+					add_mio_size = 1
+				}
+			}
+			else = {
+				mio:AST_lithgow_saf_organization = {
+					add_mio_size = 1
+				}
+			}
+
+		}
+	}
+	
+	COM_domestic_air_production  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				original_tag = SAF
+				original_tag = AST
+			}
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = SAF_domestic_armarmants
+				has_completed_focus =AST_expand_domestic_designs
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+		} 
+
+		days_remove = 60
+
+		cost = 33
+		fire_only_once = yes
+
+		modifier = {
+			industrial_capacity_factory = -0.05
+			consumer_goods_factor = 0.075
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			add_tech_bonus = {
+				name = ROM_the_zb_53
+				bonus = 0.5
+				uses = 2
+				category = air_equipment
+			}
+		}
+	}
+
+	COM_domestic_armor_production  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_tank
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				original_tag = SAF
+				original_tag = AST
+			}
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = SAF_domestic_armarmants
+				has_completed_focus =AST_expand_domestic_designs
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+		} 
+
+		days_remove = 60
+
+		cost = 33
+		fire_only_once = yes
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+			consumer_goods_factor = 0.075
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			add_tech_bonus = {
+				name = ROM_the_zb_53
+				bonus = 0.33
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	COM_domestic_research  = {
+
+		priority = 100
+
+		icon = ger_mefo_bills
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				original_tag = SAF
+				original_tag = AST
+			}
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = SAF_domestic_armarmants
+				has_completed_focus =AST_expand_domestic_designs
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+		} 
+
+		days_remove = 120
+		days_re_enable = 90
+
+		cost = 33
+		#fire_only_once = yes
+
+		modifier = {
+			special_project_speed_factor = 0.15
+			research_speed_factor = 0.15
+			political_power_factor = -0.15
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+
+		}
+	}
+
+	SAF_pmp_forming  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				original_tag = SAF
+			}
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = SAF_domestic_armarmants
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			num_of_military_factories > 30
+		} 
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		cost = 50
+
+		modifier = {
+			consumer_goods_factor = 0.075
+			industrial_capacity_factory = 0.15
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+				}
+			}
+		}
+	}
+	SAF_domestic_mammon_factory  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				original_tag = SAF
+			}
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = SAF_domestic_armarmants
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			has_tech = armored_car1
+		} 
+
+		days_remove = 60
+
+		fire_only_once = yes
+
+		cost = 50
+
+		modifier = {
+			consumer_goods_factor = 0.1
+			industrial_capacity_factory = -0.05
+		}
+
+		complete_effect = { 
+			mio:ENG_crossley_motors_organization = {
+				add_mio_size = 3
+			}
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = armored_car_equipment
+				amount = 800
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+				add_resource = {
+					type = rubber
+					amount = 3
+				}
+			}
+		}
+	}
+
+	AST_retool_domestic_rifle  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				original_tag = AST
+			}
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = AST_expand_domestic_designs
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			num_of_military_factories > 25
+		} 
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		cost = 25
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			production_factory_efficiency_gain_factor = 0.15
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+	}
+
+	AST_sentinel_production_run  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				original_tag = AST
+			}
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = AST_expand_domestic_designs
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			num_of_military_factories > 25
+		} 
+
+		days_remove = 120
+
+		#fire_only_once = yes
+
+		cost = 100
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = { 
+			add_timed_idea = {
+				idea = AST_sentinel_tank_line
+				days = 120
+			}
+		}
+
+		remove_effect = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,57 @@
+buildings = {
+	
+	industrial_expansion = {
+		base_cost = 2500
+		per_level_extra_cost = 750
+		icon_frame = 32
+		value = 1
+		infrastructure_construction_effect = yes
+		show_modifier = yes
+		
+		state_modifiers = {
+			local_building_slots = 1
+			local_factory_energy_consumption = -0.05
+		}
+
+		level_cap = {
+			state_max = 4
+		}
+	}
+	
+	resource_expansion_steel = {
+		base_cost = 7000
+		icon_frame = 33
+		value = 1
+		infrastructure_construction_effect = yes
+		refinery = yes
+		show_modifier = yes
+		
+		local_resources_steel = 2
+		local_resources_aluminium = 2
+
+		level_cap = {
+			shares_slots = yes
+			state_max = 3
+			group_by = extractors
+		}
+	}
+	
+	resource_expansion_tungsten = {
+		base_cost = 10000
+		icon_frame = 35
+		value = 1
+		infrastructure_construction_effect = yes
+		refinery = yes
+		show_modifier = yes
+		
+		local_resources_tungsten = 2
+		local_resources_chromium = 2
+
+
+		level_cap = {
+			shares_slots = yes
+			state_max = 3
+			group_by = extractors
+		}
+	}
+}

@@ -1,0 +1,1665 @@
+ideas = {
+	country = {
+		MAN_manetsu_state_idea_1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = MAN_south_manchuria_railway_company
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_rail_way_factor = 0.1
+				production_speed_buildings_factor = -0.05
+				research_speed_factor = 0.05
+				supply_node_range = -0.1
+			}
+		}
+		MAN_manetsu_state_idea_2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = MAN_south_manchuria_railway_company
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_rail_way_factor = 0.15
+				research_speed_factor = 0.05
+				supply_node_range = -0.1
+			}
+		}
+		MAN_manetsu_state_idea_3 = {
+			allowed = {
+				always = no
+			}
+
+			picture = MAN_south_manchuria_railway_company
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_rail_way_factor = 0.25
+				research_speed_factor = 0.05
+				supply_node_range = 0.1
+				production_speed_supply_node_factor = 0.2
+			}
+		}
+		MAN_manetsu_state_idea_4 = {
+			allowed = {
+				always = no
+			}
+
+			picture = MAN_south_manchuria_railway_company
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_rail_way_factor = 0.15
+				research_speed_factor = 0.1
+				local_resources_factor = 0.1
+				production_factory_max_efficiency_factor = 0.033
+			}
+		}
+		MAN_navy_tier1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = NORDIC_navy_communist
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				dockyard_donations = 1
+				political_power_cost = 0.15
+			}
+			equipment_bonus = {
+				mio_cat_eq_all_ships_no_convoys = {
+					build_cost_ic = 0.05 instant = yes
+				}
+			}
+		}
+		MAN_navy_tier2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = NORDIC_navy_communist
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				dockyard_donations = 2
+				political_power_cost = 0.05
+			}
+			
+		}
+		MAN_navy_coice1_tier1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_navy_submarines
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				dockyard_donations = 3
+				#political_power_cost = 0.05
+				navy_max_range_factor = 0.2
+			}
+			equipment_bonus = {
+				ship_hull_submarine = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				mio_cat_eq_all_destroyer = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		MAN_navy_coice1_tier2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_navy_submarines
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				dockyard_donations = 3
+				navy_max_range_factor = 0.2
+				convoy_raiding_efficiency_factor = 0.15
+			}
+			equipment_bonus = {
+				ship_hull_submarine = {
+					build_cost_ic = -0.125
+					instant = yes
+				}
+				mio_cat_eq_all_destroyer = {
+					build_cost_ic = -0.125
+					instant = yes
+				}
+			}
+		}
+
+		MAN_navy_coice2_tier1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_navy_cruiser_warfare
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				dockyard_donations = 3
+				#political_power_cost = 0.05
+				shore_bombardment_bonus = 0.25
+			}
+			equipment_bonus = {
+				mio_cat_eq_all_ships_no_convoys = {
+					build_cost_ic = -0.05 maximum_speed = 0.1 instant = yes
+				}
+			}
+		}
+		MAN_navy_coice2_tier2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_navy_cruiser_warfare
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				dockyard_donations = 5
+				#political_power_cost = 0.05
+				shore_bombardment_bonus = 0.25
+				industrial_capacity_dockyard = 0.2
+			}
+			equipment_bonus = {
+				mio_cat_eq_all_ships_no_convoys = {
+					build_cost_ic = -0.075 maximum_speed = 0.1 instant = yes
+				}
+			}
+		}
+		MAN_navy_coice2_tier3 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_navy_cruiser_warfare
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				dockyard_donations = 5
+				#political_power_cost = 0.05
+				shore_bombardment_bonus = 0.25
+				industrial_capacity_dockyard = 0.2
+				extra_marine_supply_grace = 48
+			}
+			equipment_bonus = {
+				mio_cat_eq_all_ships_no_convoys = {
+					build_cost_ic = -0.075 maximum_speed = 0.1 instant = yes
+				}
+			}
+			
+		}
+		MAN_air_choice_1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_air_payment
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+			equipment_bonus = {
+				transport_plane_equipment = {
+					build_cost_ic = -0.15
+					maximum_speed = 0.1
+					instant = yes
+				}
+			}
+			
+		}
+		MAN_air_choice_12 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_air_payment
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				paradrop_organization_factor = 0.2
+				modifier_army_sub_unit_paratrooper_attack_factor = 0.05
+				modifier_army_sub_unit_paratrooper_max_org_factor = 0.05
+			}
+			equipment_bonus = {
+				transport_plane_equipment = {
+					build_cost_ic = -0.15
+					maximum_speed = 0.1
+					instant = yes
+				}
+			}
+			
+		}
+		MAN_air_choice_13 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_air_payment
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.075
+				paradrop_organization_factor = 0.2
+				modifier_army_sub_unit_paratrooper_attack_factor = 0.05
+				modifier_army_sub_unit_paratrooper_max_org_factor = 0.05
+			}
+			equipment_bonus = {
+				transport_plane_equipment = {
+					build_cost_ic = -0.15
+					maximum_speed = 0.1
+					instant = yes
+				}
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.15
+					maximum_speed = 0.1
+					instant = yes
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.15
+					maximum_speed = 0.1
+					instant = yes
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.15
+					maximum_speed = 0.1
+					instant = yes
+				}
+			}
+			
+		}
+		MAN_air_choice_2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_air_payment
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				military_factory_donations = 2
+				political_power_gain = 0.1
+				air_superiority_bonus_in_combat = 0.05
+			}
+			
+		}
+		MAN_air_choice_21 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_air_payment
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				military_factory_donations = 3
+				political_power_gain = 0.1
+				air_superiority_bonus_in_combat = 0.075
+				army_bonus_air_superiority_factor = 0.05
+			}
+			
+		}
+
+		MON_nav_start = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_air_payment
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				custom_modifier_tooltip = MON_naval_gaurd_training_tt
+			}
+			
+		}
+		MON_milchoice_1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_artillery_attack_factor = 0.1
+				army_artillery_defence_factor = 0.15
+				sp_land_super_heavy_railway_gun_speed_factor = 0.2
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					build_cost_ic = -0.075
+					instant = yes
+				}
+				anti_tank_equipment = {
+					build_cost_ic = -0.075
+					instant = yes
+				}
+				anti_air_equipment = {
+					build_cost_ic = -0.075
+					instant = yes
+				}
+				rocket_artillery_equipment = {
+					build_cost_ic = -0.075
+					instant = yes
+				}
+			}
+		}
+		MON_milchoice_2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = SOV_soviet_hegemony
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = 0.25
+				conscription = 0.02
+				army_org_factor = 0.05
+			}
+		}
+		MON_milchoice_3 = {
+			allowed = {
+				always = no
+			}
+
+			picture = GFX_goal_MON_spirit_genghis
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				modifier_army_sub_unit_category_mobile_infantry_max_org_factor = 0.1
+				supply_consumption_factor = -0.075
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				motorized_rocket_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				amphibious_mechanized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		MON_milchoice_4 = {
+			allowed = {
+				always = no
+			}
+
+			picture = ARG_war_division
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.05
+			}
+			research_bonus = {
+				armor = 0.2
+			}
+		}
+
+		MON_infantrty_choice1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = SOV_honest_serfdom_idea_ccp_sov_compatibility
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_breakthrough_against_major_factor = 0.05
+				experience_gain_army = 0.1
+			}
+			
+		}
+		MON_infantrty_choice12 = {
+			allowed = {
+				always = no
+			}
+
+			picture = SOV_honest_serfdom_idea_ccp_sov_compatibility
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_breakthrough_against_major_factor = 0.075
+				experience_gain_army = 0.15
+				coordination_bonus = 0.05
+			}
+			
+		}
+
+		MON_infantrty_choice2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = SOV_honest_serfdom_idea_ccp_sov_compatibility
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_strength_factor = 0.05
+				army_infantry_attack_factor = 0.05
+			}
+			
+		}
+		MON_infantrty_choice22 = {
+			allowed = {
+				always = no
+			}
+
+			picture = SOV_honest_serfdom_idea_ccp_sov_compatibility
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_strength_factor = 0.075
+				army_infantry_attack_factor = 0.075
+				army_infantry_defence_factor = 0.075
+			}
+			
+		}
+
+		MON_infantrty_choice3 = {
+			allowed = {
+				always = no
+			}
+
+			picture = SOV_honest_serfdom_idea_ccp_sov_compatibility
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				terrain_penalty_reduction = 0.025
+				recon_factor = 0.05
+			}
+			
+		}
+		MON_infantrty_choice32 = {
+			allowed = {
+				always = no
+			}
+
+			picture = SOV_honest_serfdom_idea_ccp_sov_compatibility
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				terrain_penalty_reduction = 0.033
+				recon_factor = 0.05
+				army_speed_factor = 0.05
+			}
+			
+		}
+
+		MON_infantrty_choice4 = {
+			allowed = {
+				always = no
+			}
+
+			picture = SOV_honest_serfdom_idea_ccp_sov_compatibility
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				breakthrough_factor = 0.025
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					hardness = 75
+					instant = yes
+				}
+			}
+		}
+		MON_infantrty_choice42 = {
+			allowed = {
+				always = no
+			}
+
+			picture = SOV_honest_serfdom_idea_ccp_sov_compatibility
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				breakthrough_factor = 0.025
+				max_dig_in_factor = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					hardness = 75
+					soft_attack = 0.05
+					hard_attack = 0.5
+					instant = yes
+				}
+			}
+		}
+
+		MON_cav_choice1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = HABSBURG_cavalry
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				recon_factor = 0.05
+				army_attack_speed_factor = 0.1
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		MON_cav_choice12 = {
+			allowed = {
+				always = no
+			}
+
+			picture = HABSBURG_cavalry
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				recon_factor = 0.1
+				army_attack_speed_factor = 0.1
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					maximum_speed = 0.15
+					instant = yes
+				}
+				anti_tank_equipment = {
+					maximum_speed = 0.15
+					instant = yes
+				}
+				anti_air_equipment = {
+					maximum_speed = 0.15
+					instant = yes
+				}
+				rocket_artillery_equipment = {
+					maximum_speed = 0.15
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+
+		MON_cav_choice2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = HABSBURG_cavalry
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				supply_node_range = 0.05
+				initiative_factor = 0.05
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		MON_cav_choice22 = {
+			allowed = {
+				always = no
+			}
+
+			picture = HABSBURG_cavalry
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				supply_node_range = 0.15
+				initiative_factor = 0.1
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+
+		MON_cav_choice3 = {
+			allowed = {
+				always = no
+			}
+
+			picture = HABSBURG_cavalry
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				modifier_army_sub_unit_category_mobile_infantry_attack_factor = 0.075
+				modifier_army_sub_unit_category_mobile_infantry_defence_factor = 0.075
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.025
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.025
+					instant = yes
+				}
+			}
+		}
+		MON_cav_choice32 = {
+			allowed = {
+				always = no
+			}
+
+			picture = HABSBURG_cavalry
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				modifier_army_sub_unit_category_mobile_infantry_attack_factor = 0.15
+				modifier_army_sub_unit_category_mobile_infantry_defence_factor = 0.15
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.025
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.025
+					instant = yes
+				}
+			}
+		}
+
+		MON_cav_choice4 = {
+			allowed = {
+				always = no
+			}
+
+			picture = HABSBURG_cavalry
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_speed_factor = 0.05
+				army_org_regain = 0.15
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		MON_cav_choice42 = {
+			allowed = {
+				always = no
+			}
+
+			picture = HABSBURG_cavalry
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_speed_factor = 0.1
+				army_org_regain = 0.3
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+
+		MON_armor_choice1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = CZE_skoda_armor
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_breakthrough_against_major_factor = 0.075
+			}
+			equipment_bonus = {
+				mio_cat_eq_all_artillery_track = {
+					build_cost_ic = -0.1 
+					breakthrough = 0.1
+					instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		MON_armor_choice12 = {
+			allowed = {
+				always = no
+			}
+
+			picture = CZE_skoda_armor
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_breakthrough_against_major_factor = 0.15
+			}
+			equipment_bonus = {
+				mio_cat_eq_all_artillery_track = {
+					build_cost_ic = -0.15
+					breakthrough = 0.25
+					instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+			
+		}
+
+		MON_armor_choice2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = CZE_skoda_armor
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.125
+					instant = yes
+				}
+				mechanized_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		MON_armor_choice22 = {
+			allowed = {
+				always = no
+			}
+
+			picture = CZE_skoda_armor
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+				mechanized_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+			}
+		}
+
+		MON_armor_choice3 = {
+			allowed = {
+				always = no
+			}
+
+			picture = CZE_skoda_armor
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_morale_factor = 0.1
+			}
+			equipment_bonus = {
+				mio_cat_eq_all_tank_destroyers = {
+					defense = 0.05
+					ap_attack = 0.075
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		MON_armor_choice32 = {
+			allowed = {
+				always = no
+			}
+
+			picture = CZE_skoda_armor
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_morale_factor = 0.1
+			}
+			equipment_bonus = {
+				mio_cat_eq_all_tank_destroyers = {
+					defense = 0.15
+					ap_attack = 0.075
+					hard_attack = 0.075
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+
+		MON_armor_choice4 = {
+			allowed = {
+				always = no
+			}
+
+			picture = CZE_skoda_armor
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_armor_attack_factor = 0.025
+				army_armor_defence_factor = 0.025
+			}
+			equipment_bonus = {
+				armor = {
+					defense = 0.2
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				
+			}
+		}
+		MON_armor_choice42 = {
+			allowed = {
+				always = no
+			}
+
+			picture = CZE_skoda_armor
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_armor_attack_factor = 0.025
+				army_armor_defence_factor = 0.025
+				army_speed_factor = 0.05
+			}
+			equipment_bonus = {
+				armor = {
+					defense = 0.2
+					hardness = 0.2
+					soft_attack = 0.075
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		mongol_mil_air_start = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_air_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				experience_gain_air = 0.1
+			}
+			equipment_bonus = {
+				transport_plane_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		mongol_mil_air_1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_air_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				experience_gain_air = 0.1
+				air_mission_efficiency = 0.075
+				air_range_factor = 0.1
+				air_strategic_bomber_bombing_factor = 0.2
+			}
+			equipment_bonus = {
+				transport_plane_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		mongol_mil_air_2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_air_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				experience_gain_air = 0.1
+				air_mission_efficiency = 0.075
+				air_range_factor = 0.1
+				air_strategic_bomber_bombing_factor = 0.2
+				paratrooper_aa_defense = 0.15
+				modifier_army_sub_unit_paratrooper_attack_factor = 0.025
+				ground_attack_factor = 0.15
+				air_cas_efficiency = 0.15
+			}
+			equipment_bonus = {
+				transport_plane_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		mongol_mil_air_fin = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_air_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				experience_gain_air = 0.15
+				air_mission_efficiency = 0.075
+				air_range_factor = 0.1
+				air_strategic_bomber_bombing_factor = 0.2
+				air_ace_bonuses_factor = 0.25
+				air_ace_generation_chance_factor = 0.2
+				air_training_xp_gain_factor = 0.2
+			}
+			equipment_bonus = {
+				transport_plane_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
+		mongol_mil_air_fin2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_air_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				experience_gain_air = 0.15
+				air_mission_efficiency = 0.075
+				air_range_factor = 0.1
+				air_strategic_bomber_bombing_factor = 0.2
+				paratrooper_aa_defense = 0.15
+				modifier_army_sub_unit_paratrooper_attack_factor = 0.025
+				ground_attack_factor = 0.15
+				air_cas_efficiency = 0.15
+				air_ace_bonuses_factor = 0.25
+				air_ace_generation_chance_factor = 0.2
+				air_training_xp_gain_factor = 0.2
+			}
+			equipment_bonus = {
+				transport_plane_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
+		british_jet_project = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_bomber_production_diverted
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				sp_tag_jet_speed_factor = 0.075
+			}
+		}
+		british_tank_doctrine_1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = ETH_conservative_high_command
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				heavy_tank_chassis = {
+					maximum_speed = -0.2
+					armor_value = 0.2
+				}
+				medium_tank_chassis = {
+					maximum_speed = 0.1
+					hard_attack = 0.1
+					build_cost_ic = 0.075
+				}
+				light_tank_chassis = {
+					maximum_speed = 0.15
+					breakthrough = 0.15
+					armor_value = -0.1
+				}
+				armor = {
+					defense = 0.15
+					build_cost_ic = -0.025
+				}
+			}
+		}
+		british_tank_doctrine_2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = ETH_conservative_high_command
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				heavy_tank_chassis = {
+					maximum_speed = -0.2
+					armor_value = 0.2
+				}
+				medium_tank_chassis = {
+					maximum_speed = 0.1
+					hard_attack = 0.1
+					build_cost_ic = 0.075
+				}
+				light_tank_chassis = {
+					maximum_speed = 0.15
+					breakthrough = 0.15
+					armor_value = -0.1
+				}
+				armor = {
+					soft_attack = 0.075
+					breakthrough = 0.05
+					build_cost_ic = 0.025
+				}
+			}
+		}
+		british_carrier_project = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_navy_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				sp_naval_ice_carrier_speed_factor = 0.25
+			}
+		}
+		stiff_upper_lip_2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				drift_defence_factor = 0.5
+				consumer_goods_factor = -0.15
+			}
+			
+			picture = stiff_upper_lip
+
+			rule = {
+				can_create_factions = yes
+			}			
+		}
+		stiff_upper_lip_3 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				drift_defence_factor = 0.5
+				consumer_goods_factor = -0.2
+				war_support_factor = 0.05
+				weekly_bombing_war_support = 0.001
+			}
+			
+			picture = stiff_upper_lip
+
+			rule = {
+				can_create_factions = yes
+			}			
+		}
+		wol_eng_serv_over_1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			modifier = {
+				acclimatization_hot_climate_gain_factor = 0.1
+			}
+
+			picture = hol_caved_to_the_british
+
+			removal_cost = -1
+		}
+		wol_eng_serv_over_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			modifier = {
+				acclimatization_hot_climate_gain_factor = 0.1
+				research_speed_factor = 0.07
+			}
+
+			picture = hol_caved_to_the_british
+
+			removal_cost = -1
+		}
+		wol_eng_serv_over_3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			modifier = {
+				acclimatization_hot_climate_gain_factor = 0.1
+				research_speed_factor = 0.07
+				production_speed_bunker_factor = 0.1
+				production_speed_coastal_bunker_factor = 0.1
+				army_defence_factor = 0.02
+			}
+
+			picture = hol_caved_to_the_british
+
+			removal_cost = -1
+		}
+		wol_eng_serv_over_4 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			modifier = {
+				acclimatization_hot_climate_gain_factor = 0.1
+				research_speed_factor = 0.07
+				production_speed_bunker_factor = 0.15
+				production_speed_coastal_bunker_factor = 0.15
+				army_defence_factor = 0.05
+			}
+
+			picture = hol_caved_to_the_british
+
+			removal_cost = -1
+		}
+		wol_eng_spec_forces_1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			modifier = {
+				special_forces_cap = 0.05
+				special_forces_training_time_factor = -0.1
+			}
+
+			picture = eng_special_air_service
+
+			removal_cost = -1
+		}
+		wol_eng_spec_forces_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			modifier = {
+				max_command_power = 20
+				command_power_gain_mult = 0.1
+				planning_speed = 0.1
+			}
+
+			picture = eng_chiefs_of_staff_committee
+
+			removal_cost = -1
+		}
+		wol_eng_spec_forces_3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			modifier = {
+				special_forces_cap = 0.05
+				special_forces_training_time_factor = -0.1
+				max_command_power = 20
+				command_power_gain_mult = 0.1
+				planning_speed = 0.1
+			}
+
+			picture = eng_chiefs_of_staff_committee
+
+			removal_cost = -1
+		}
+		wol_convoy_protection_1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				convoy = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+
+			picture = generic_coastal_defense_ships2
+
+			removal_cost = -1
+		}
+		wol_convoy_protection_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				convoy = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			modifier = {
+				experience_gain_destroyer_combat_factor = 0.15
+				experience_gain_destroyer_training_factor = 0.15
+			}
+
+			picture = generic_coastal_defense_ships2
+
+			removal_cost = -1
+		}
+		wol_aircraft_group_1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			equipment_bonus = {
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+
+			picture = generic_air_bonus
+
+			removal_cost = -1
+		}
+		wol_aircraft_group_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			equipment_bonus = {
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				sp_tag_jet_speed_factor = 0.075
+				special_project_speed_factor = 0.05
+			}
+			picture = generic_air_bonus
+
+			removal_cost = -1
+		}
+	}
+	
+}

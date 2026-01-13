@@ -1,0 +1,275 @@
+defined_text = {
+	name = state_of_pacific
+	text = {
+        trigger = {
+            check_variable = {
+				global.state_of_pacific = 0
+			}
+        }
+        localization_key = state_of_pacific1_key
+    }
+    text = {
+		trigger = {
+            check_variable = {
+				global.state_of_pacific = 1
+			}
+        }
+        localization_key = state_of_pacific2_key
+    }
+	text = {
+		trigger = {
+            check_variable = {
+				global.state_of_pacific = 2
+			}
+        }
+        localization_key = state_of_pacific3_key
+    }
+	text = {
+		trigger = {
+            check_variable = {
+				global.state_of_pacific = 3
+			}
+        }
+        localization_key = state_of_pacific4_key
+    }
+	text = {
+		trigger = {
+            check_variable = {
+				global.state_of_pacific = 4
+			}
+        }
+        localization_key = state_of_pacific5_key
+    }
+}
+
+defined_text = {
+	name = specialist_tank_wol
+	text = {
+        trigger = {
+            check_variable = {
+				JAP.IJA_var_15 = 0
+			}
+        }
+        localization_key = specialist_tank_wol1_key
+    }
+    text = {
+        localization_key = specialist_tank_wol2_key
+    }
+}
+
+defined_text = {
+	name = lib_ship_wol
+	text = {
+        trigger = {
+            check_variable = {
+				USA.usa_navy_3 = 0
+			}
+        }
+        localization_key = lib_ship_wol1_key
+    }
+    text = {
+        localization_key = lib_ship_wol2_key
+    }
+}
+
+defined_text = {
+	name = escort_eff_wol
+	text = {
+        trigger = {
+            check_variable = {
+				USA.usa_navy_4 = 0
+			}
+        }
+        localization_key = escort_eff_wol1_key
+    }
+    text = {
+        localization_key = escort_eff_wol2_key
+    }
+}
+
+defined_text = {
+	name = burea_ship_wol
+	text = {
+        trigger = {
+            check_variable = {
+				USA.usa_navy_5 = 0
+			}
+        }
+        localization_key = burea_ship_wol1_key
+    }
+    text = {
+        localization_key = burea_ship_wol2_key
+    }
+}
+
+defined_text = {
+	name = fleet_sub_wol
+	text = {
+        trigger = {
+            check_variable = {
+				USA.usa_navy_6 = 0
+			}
+        }
+        localization_key = fleet_sub_wol1_key
+    }
+    text = {
+        localization_key = fleet_sub_wol2_key
+    }
+}
+
+defined_text = {
+	name = air_war_plans_wol
+	text = {
+        trigger = {
+            check_variable = {
+				USA.usa_air_4 = 0
+			}
+        }
+        localization_key = air_war_plans_wol1_key
+    }
+    text = {
+        localization_key = air_war_plans_wol2_key
+    }
+}
+
+defined_text = {
+	name = air_sup_plans_wol
+	text = {
+        trigger = {
+            check_variable = {
+				USA.usa_air_5 = 0
+			}
+        }
+        localization_key = air_sup_plans_wol1_key
+    }
+    text = {
+        localization_key = air_sup_plans_wol2_key
+    }
+}
+
+defined_text = {
+	name = air_strat_plans_wol
+	text = {
+        trigger = {
+            check_variable = {
+				USA.usa_air_6 = 0
+			}
+        }
+        localization_key = air_strat_plans_wol1_key
+    }
+    text = {
+        localization_key = air_strat_plans_wol2_key
+    }
+}
+
+defined_text = {
+	name = more_gun_wol
+	text = {
+        trigger = {
+            check_variable = {
+				USA.usa_army_8 = 0
+			}
+        }
+        localization_key = more_gun_wol1_key
+    }
+    text = {
+        localization_key = more_gun_wol2_key
+    }
+}
+
+#/////////////////////////////////////////////////////////////////////////////# 
+
+defined_text = {
+	name = xp_into_mastery_has_cost_tt
+	text = {
+        trigger = {
+            has_army_experience > 49
+        }
+        localization_key = xp_into_mastery_has_cost_tt1_key
+    }
+    text = {
+        localization_key = xp_into_mastery_has_cost_tt2_key
+    }
+}
+
+defined_text = {
+	name = xp_into_mastery_air_tt
+	text = {
+        trigger = {
+            has_air_experience > 49
+        }
+        localization_key = xp_into_mastery_air_has_cost_tt1_key
+    }
+    text = {
+        localization_key = xp_into_mastery_air_has_cost_tt2_key
+    }
+}
+
+defined_text = {
+	name = xp_into_mastery_navy_tt
+	text = {
+        trigger = {
+            has_navy_experience > 49
+        }
+        localization_key = xp_into_mastery_navy_has_cost_tt1_key
+    }
+    text = {
+        localization_key = xp_into_mastery_navy_has_cost_tt2_key
+    }
+}
+
+defined_text = {
+	name = jap_old_style_bop_plane_discount
+	text = {
+		trigger = {
+			has_idea = JAP_prioritize_naval_aircraft_construction_1
+		}
+		localization_key = idea_desc|JAP_prioritize_naval_aircraft_construction_1
+		
+	}
+	text = {
+		trigger = {
+			has_idea = JAP_prioritize_army_aircraft_construction_1
+		}
+		localization_key = idea_desc|JAP_prioritize_army_aircraft_construction_1
+		
+	}
+
+	text = {
+		trigger = {
+			NOT = { has_idea = JAP_prioritize_army_aircraft_construction_1 }
+            NOT = { has_idea = JAP_prioritize_naval_aircraft_construction_1 }
+		}
+		localization_key = ""
+		
+	}
+	
+}
+
+defined_text = {
+	name = specialist_tank_wol2
+	text = {
+		trigger = {
+			has_idea = MAN_specialist_tank_1
+		}
+		localization_key = idea_desc|MAN_specialist_tank_1
+		
+	}
+	text = {
+		trigger = {
+			has_idea = MAN_specialist_tank_2
+		}
+		localization_key = idea_desc|MAN_specialist_tank_2
+		
+	}
+
+	text = {
+		trigger = {
+			NOT = { has_idea = MAN_specialist_tank_1 }
+            NOT = { has_idea = MAN_specialist_tank_2 }
+		}
+		localization_key = ""
+		
+	}
+	
+}

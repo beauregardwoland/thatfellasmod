@@ -1,0 +1,664 @@
+axis_industrial_hubs = {
+	axis_designate_industrial_hub  = {
+
+		priority = 100
+
+		icon = GFX_decision_ger_military_buildup
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+
+		}
+
+		visible = { 
+			has_global_flag = axis_shared_industry_enable
+		}
+
+		state_target = any_owned_state
+		target_trigger = {
+	        FROM = {
+	        	is_controlled_by = root
+				or = {
+					arms_factory > 6
+					industrial_complex > 6
+				}
+	        }
+	    }
+	    #on_map_mode = map_and_decisions_view 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = axis_foriegn_cost_tt
+				check_variable = {
+					var_axis_spare_industrial_hubs > 0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = axis_mil_invest_tt
+				NOT = { has_country_flag = axis_mil_invest }
+			}
+			FROM = {
+	        	is_controlled_by = root
+				or = {
+					arms_factory > 6
+					industrial_complex > 6
+				}
+				NOT = { has_dynamic_modifier = { modifier = axis_industrial_area } }
+	        }
+		}
+
+		days_remove = 60
+
+		cost = 33
+
+		modifier = {
+			industrial_capacity_factory = 0.05
+		}
+
+		complete_effect = {
+			set_country_flag = axis_mil_invest
+		}
+
+		remove_effect = {
+			clr_country_flag = axis_mil_invest
+			from = {
+				add_dynamic_modifier = { modifier = axis_industrial_area }
+			}
+			add_to_variable = {
+				var_axis_spare_industrial_hubs = -1
+				tooltip = axis_foriegn_buildup_tt
+			}
+		}
+	}
+	axis_generic_investment  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_industry
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+
+		}
+
+		visible = { 
+			has_global_flag = axis_shared_industry_enable
+		}
+
+		state_target = any_owned_state
+		target_trigger = {
+	        FROM = {
+	        	is_controlled_by = root
+				or = {
+					arms_factory > 4
+					industrial_complex > 4
+				}
+				free_building_slots = {
+  					building = arms_factory
+   					size > 2
+   					include_locked = yes
+				}
+	        }
+	    }
+	    on_map_mode = map_only 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = axis_foriegn_cost_tt
+				check_variable = {
+					var_axis_spare_industrial_hubs > 0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = axis_mil_invest_tt
+				NOT = { has_country_flag = axis_mil_invest }
+			}
+			FROM = {
+	        	is_controlled_by = root
+				or = {
+					arms_factory > 4
+					industrial_complex > 4
+				}
+				free_building_slots = {
+  					building = arms_factory
+   					size > 2
+   					include_locked = yes
+				}
+	        }
+		}
+
+		days_remove = 60
+
+		cost = 33
+
+		modifier = {
+			industrial_capacity_factory = 0.05
+		}
+
+		complete_effect = {
+			set_country_flag = axis_mil_invest
+		}
+
+		remove_effect = {
+			clr_country_flag = axis_mil_invest
+			from = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_to_variable = {
+				var_axis_spare_industrial_hubs = -1
+				tooltip = axis_foriegn_buildup_tt
+			}
+		}
+	}
+	axis_foriegn_buildup  = {
+
+		priority = 100
+
+		icon = GFX_decision_ger_military_buildup
+
+		ai_will_do = {
+			base = 10
+		}
+		allowed = {
+
+		}
+		visible = { 
+			has_global_flag = axis_shared_industry_enable
+		}
+		available = {
+			num_of_owned_factories > 70
+		}
+
+		days_remove = 90
+
+		cost = 50
+
+		modifier = {
+			#consumer_goods_factor = 0.1
+			#military_factory_donations = -2
+		}
+
+		complete_effect = {
+			if = {
+				limit = { original_tag = GER }
+				ITA = {
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+				BUL ={
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+				ROM = {
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+				HUN = {
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+			}
+			if = {
+				limit = { original_tag = ITA }
+				GER = {
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+				BUL ={
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+				ROM = {
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+				HUN = {
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+			}
+			if = {
+				limit = { original_tag = BUL }
+				GER = {
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+				ITA ={
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+				ROM = {
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+				HUN = {
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+			}
+			if = {
+				limit = { original_tag = ROM }
+				GER = {
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+				ITA ={
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+				BUL = {
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+				HUN = {
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+			}
+			if = {
+				limit = { original_tag = HUN }
+				GER = {
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+				ITA ={
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+				BUL = {
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+				ROM = {
+					add_to_variable = {
+						var_axis_spare_industrial_hubs = 1
+						tooltip = axis_foriegn_buildup_tt
+					}
+				}
+			}
+			custom_effect_tooltip = modify_cont_axis_eco
+			add_to_variable = { 
+				cont_axis_eco_5 = -2
+				tooltip = military_factory_donations_tt
+			}
+			hidden_effect = {
+				country_event = wol_qol.4
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = modify_cont_axis_eco
+			add_to_variable = { 
+				cont_axis_eco_5 = 1
+				tooltip = military_factory_donations_tt
+			}
+			hidden_effect = {
+				country_event = wol_qol.4
+			}
+		}
+	}
+	axis_designate_industrial_hub_naval  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_naval
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+
+		}
+
+		visible = { 
+			has_global_flag = axis_shared_industry_enable_2
+		}
+
+		state_target = any_owned_state
+		target_trigger = {
+	        FROM = {
+	        	is_controlled_by = root
+				is_coastal = yes
+				or = {
+					dockyard > 2
+					industrial_complex > 3
+				}
+				NOT = { has_dynamic_modifier = { modifier = axis_naval_area } }
+	        }
+	    }
+	    on_map_mode = map_only 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = axis_foriegn_cost_tt
+				check_variable = {
+					var_axis_spare_industrial_hubs > 0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = axis_nav_invest_tt
+				NOT = { has_country_flag = axis_nav_invest }
+			}
+			FROM = {
+	        	is_controlled_by = root
+				is_coastal = yes
+				or = {
+					dockyard > 2
+					industrial_complex > 3
+				}
+	        }
+		}
+
+		days_remove = 60
+
+		cost = 33
+
+		modifier = {
+			industrial_capacity_dockyard = 0.075
+			industrial_capacity_factory = 0.025
+		}
+
+		complete_effect = { 
+			set_country_flag = axis_nav_invest
+		}
+
+		remove_effect = {
+			clr_country_flag = axis_nav_invest
+			add_to_variable = {
+				var_axis_spare_industrial_hubs = -1
+				tooltip = axis_foriegn_buildup_tt
+			}
+			from = {
+				add_dynamic_modifier = { modifier = axis_naval_area }
+			}
+		}
+	}
+	axis_generic_investment_naval  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_decision
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+
+		}
+
+		visible = { 
+			has_global_flag = axis_shared_industry_enable_2
+		}
+
+		state_target = any_owned_state
+		target_trigger = {
+	        FROM = {
+	        	is_controlled_by = root
+				is_coastal = yes
+				or = {
+					dockyard > 2
+					industrial_complex > 4
+				}
+	        }
+	    }
+	    on_map_mode = map_only 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = axis_foriegn_cost_tt
+				check_variable = {
+					var_axis_spare_industrial_hubs > 0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = axis_nav_invest_tt
+				NOT = { has_country_flag = axis_nav_invest }
+			}
+			FROM = {
+	        	is_controlled_by = root
+				is_coastal = yes
+				or = {
+					dockyard > 2
+					industrial_complex > 4
+				}
+	        }
+		}
+
+		days_remove = 60
+
+		cost = 20
+
+		modifier = {
+			industrial_capacity_dockyard = 0.075
+			industrial_capacity_factory = 0.025
+		}
+
+		complete_effect = {
+			set_country_flag = axis_nav_invest
+		}
+
+		remove_effect = {
+			clr_country_flag = axis_nav_invest
+			from = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_to_variable = {
+				var_axis_spare_industrial_hubs = -1
+				tooltip = axis_foriegn_buildup_tt
+			}
+		}
+	}
+}
+axis_wall_hub = {
+	westwall_from_share = {
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+
+		}
+
+		visible = { 
+			has_global_flag = axis_shared_industry_enable_4
+		}
+
+		state_target = any_owned_state
+		target_trigger = {
+	        FROM = {
+	        	is_controlled_by = root
+				is_coastal = yes
+				or = {
+					is_core_of = FRA
+					is_core_of = GRE
+					is_core_of = MOR
+					is_core_of = ALG
+					is_core_of = EGY
+					is_core_of = TTS
+					is_core_of = LBA
+					is_core_of = NOR
+					is_core_of = SPA
+				}
+	        }
+	    }
+	    on_map_mode = map_only 
+		available = {
+			FROM = {
+	        	is_controlled_by = root
+	        }
+			custom_trigger_tooltip = {
+				tooltip = axis_foriegn_cost_tt
+				check_variable = {
+					var_axis_spare_industrial_hubs > 0
+				}
+			}
+		}
+
+		days_remove = 30
+
+		cost = 50
+
+		modifier = {
+			consumer_goods_factor = 0.33
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			from = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+				}
+			}
+			add_to_variable = {
+				var_axis_spare_industrial_hubs = -1
+				tooltip = axis_foriegn_buildup_tt
+			}
+		}
+	}
+	ostwall_from_share = {
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+
+		}
+
+		visible = { 
+			has_global_flag = axis_shared_industry_enable_3
+		}
+
+		state_target = any_owned_state
+		target_trigger = {
+	        FROM = {
+	        	is_controlled_by = root
+				or = {
+					is_core_of = SOV
+					is_core_of = LIT
+					is_core_of = POL
+					is_core_of = EST
+					is_core_of = LAT
+					is_core_of = MOL
+				}
+	        }
+	    }
+	    on_map_mode = map_only 
+		available = {
+			FROM = {
+	        	is_controlled_by = root
+	        }
+			custom_trigger_tooltip = {
+				tooltip = axis_foriegn_cost_tt
+				check_variable = {
+					var_axis_spare_industrial_hubs > 0
+				}
+			}
+		}
+
+		days_remove = 50
+
+		cost = 33
+
+		modifier = {
+			consumer_goods_factor = 0.33
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			from = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						limit_to_border_country = SOV
+					}
+				}
+			}
+			add_to_variable = {
+				var_axis_spare_industrial_hubs = -1
+				tooltip = axis_foriegn_buildup_tt
+			}
+		}
+	}
+}

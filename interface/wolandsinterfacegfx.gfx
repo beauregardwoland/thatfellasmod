@@ -1,0 +1,427 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_ship_hull_carrier_submarine_medium" #Used for MTG equipment
+		texturefile = "gfx/interface/technologies/generic_ship_hull_cruiser_submarine.dds" #Was ship_hull_cruiser_submarine, with GOT we got a new icon that matches the new 3D model
+	}
+	SpriteType = {
+		name = "GFX_ship_hull_carrier_submarine_medium" #Used for MTG equipment
+		texturefile = "gfx/interface/technologies/generic_ship_hull_cruiser_submarine.dds" #Was ship_hull_cruiser_submarine, with GOT we got a new icon that matches the new 3D model
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_ship_hull_carrier_submarine"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_ship_submarine_quality.dds"
+	}
+	spriteType = {
+		name = "GFX_mio_cat_eq_all_artillery_track"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_tank_medium_tank_spg.dds"
+	}
+	SpriteType = {
+		name = "GFX_ship_hull_carrier_submarine_0_medium" #Used for MTG equipment
+		texturefile = "gfx/interface/technologies/generic_ship_hull_cruiser_submarine.dds" #Was ship_hull_cruiser_submarine, with GOT we got a new icon that matches the new 3D model
+	}
+	SpriteType = {
+		name = "GFX_SOV_amphibious_mechanized_infantry_medium"
+		texturefile = "gfx/interface/SOV_amphibious_mech_1.png"
+	}
+	SpriteType = {
+		name = "GFX_SOV_amphibious_mechanized_infantry_2_medium"
+		texturefile = "gfx/interface/SOV_amphibious_mech_2.png"
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_ammunition_types"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/tank_module_wet_ammo_storage.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sp_naval_compact_bbs"
+		texturefile = "gfx/interface/special_project/project_icons/sp_naval_super_heavy_battleship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_hesh_round"
+		textureFile = "gfx/interface/technologies/basic_heavy_shell.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_apcr_round"
+		textureFile = "gfx/interface/technologies/basic_light_shell.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_heat_round"
+		textureFile = "gfx/interface/technologies/antitank3.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_timed_round"
+		textureFile = "gfx/interface/tank_timed_round.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_aphe_round"
+		textureFile = "gfx/interface/technologies/basic_medium_shell.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_smoke_round"
+		texturefile = "gfx/interface/technologies/sp_surface_shock_hardening_techniques.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_tank_hesh_round_re_medium"
+		textureFile = "gfx/interface/technologies/basic_heavy_shell.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tank_apcr_round_re_medium"
+		textureFile = "gfx/interface/technologies/basic_light_shell.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tank_heat_round_re_medium"
+		textureFile = "gfx/interface/technologies/antitank3.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tank_timed_round_re_medium"
+		textureFile = "gfx/interface/tank_timed_round.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tank_aphe_round_re_medium"
+		textureFile = "gfx/interface/technologies/basic_medium_shell.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tank_smoke_round_re_medium"
+		texturefile = "gfx/interface/technologies/sp_surface_shock_hardening_techniques.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_helicopter_bat_icon_medium"
+		textureFile = "gfx/interface/unit_helicopter_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_helicopter_bat_brigade_icon_medium_white"
+		textureFile = "gfx/interface/helicopter_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_helicopter_bat_icon_small"
+		textureFile = "gfx/interface/helicopter_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_heavy_artillery_brigade_icon_medium"
+		textureFile = "gfx/interface/heavy_art_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_heavy_artillery_brigade_brigade_icon_medium_white"
+		textureFile = "gfx/interface/helicopter_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_heavy_artillery_brigade_icon_small"
+		textureFile = "gfx/interface/helicopter_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+
+
+
+	spriteType = {
+		name = "GFX_unit_armored_train_company_icon_medium"
+		textureFile = "gfx/interface/armored_train_comeplete_1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_armored_train_company_brigade_icon_medium_white"
+		textureFile = "gfx/interface/template_armored_train_small_white.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_armored_train_company_icon_small"
+		textureFile = "gfx/interface/armored_train_comeplete_1_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_heavy_aa_sup_icon_medium"
+		textureFile = "gfx/interface/support_unit_heavy_anti_air_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_heavy_aa_sup_brigade_icon_medium_white"
+		textureFile = "gfx/interface/template_armored_train_small_white.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_heavy_aa_sup_icon_small"
+		textureFile = "gfx/interface/armored_train_comeplete_1_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_heavy_aa_brigade_icon_medium"
+		textureFile = "gfx/interface/support_unit_heavy_anti_air_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_heavy_aa_brigade_brigade_icon_medium_white"
+		textureFile = "gfx/interface/helicopter_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_heavy_aa_brigade_icon_small"
+		textureFile = "gfx/interface/helicopter_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+
+	spriteType = {
+		name = "GFX_unit_self_propelled_heavy_aa_sup_icon_medium"
+		textureFile = "gfx/interface/armored_train_comeplete_1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_self_propelled_heavy_aa_sup_brigade_icon_medium_white"
+		textureFile = "gfx/interface/template_armored_train_small_white.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_self_propelled_heavy_aa_sup_icon_small"
+		textureFile = "gfx/interface/armored_train_comeplete_1_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_unit_heavy_at_sup_icon_medium"
+		textureFile = "gfx/interface/unit_heavy_at_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_heavy_at_sup_brigade_icon_medium_white"
+		textureFile = "gfx/interface/template_armored_train_small_white.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_heavy_at_sup_icon_small"
+		textureFile = "gfx/interface/armored_train_comeplete_1_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_self_propelled_heavy_at_sup_icon_medium"
+		textureFile = "gfx/interface/armored_train_comeplete_1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_self_propelled_heavy_at_sup_brigade_icon_medium_white"
+		textureFile = "gfx/interface/template_armored_train_small_white.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_self_propelled_heavy_at_sup_icon_small"
+		textureFile = "gfx/interface/armored_train_comeplete_1_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_heavy_at_brigade_icon_medium"
+		textureFile = "gfx/interface/unit_heavy_at_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_heavy_at_brigade_brigade_icon_medium_white"
+		textureFile = "gfx/interface/helicopter_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_heavy_at_brigade_icon_small"
+		textureFile = "gfx/interface/helicopter_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_self_propelled_heavy_aa_equipment_medium"
+		texturefile = "gfx/interface/technologies/ger_light_tank_aa_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_aa_equipment_medium"
+		texturefile = "gfx/interface/technologies/JAP_anti_air_equipment_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_self_propelled_heavy_at_equipment_medium"
+		texturefile = "gfx/interface/technologies/SOV_self_propelled_super_heavy_artillery.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_at_equipment_medium"
+		texturefile = "gfx/interface/technologies/FRA_super_heavy_artillery.dds"
+	}
+
+
+
+	spriteType = {
+		name = "GFX_idea_mitsui"
+		texturefile = "gfx/interface/ideas/mitsuilogo_hoi4.dds"
+	}
+
+
+	spriteType = {
+		name = "GFX_ger_exclusive_focus_unavaible"
+		textureFile = "gfx/interface/ger_exclusive_focus_unavaible.dds"
+	}
+	spriteType = {
+		name = "GFX_ger_exclusive_focus_can_comeplete"
+		textureFile = "gfx/interface/ger_exclusive_focus_can_comeplete.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_MON_spirit_genghis"
+		texturefile = "gfx/interface/MON_spirit_genghis.png"
+	}
+	spriteType = {
+		name = "GFX_EMI_MON_self_sealing_fuel_tanks_small"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_self_sealing_fueltank_icon.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ger_exclusive_focus_current"  
+		texturefile = "gfx/interface/ger_exclusive_focus_can_comeplete.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+#		effectFile = "gfx/FX/buttonstate.lua"		
+		animation = {
+			animationmaskfile = "gfx/interface/focusview/titlebar/focus_ongoing_mask2.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_ongoing_texture.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 20.0				# in seconds
+			animationdelay = 0.2			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+#			animationframes = {1 2 3 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/focusview/titlebar/focus_ongoing_mask4.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_ongoing_texture.dds"
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 15.0				# in seconds
+			animationdelay = 0.2			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating_ccw"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+#			animationframes = {1 2 3 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_ger_exclusive_focus_comeplete"
+		texturefile = "gfx/interface/ger_exclusive_focus_comeplete.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+#		effectFile = "gfx/FX/buttonstate.lua"		
+		animation = {
+			animationmaskfile = "gfx/interface/focusview/titlebar/focus_completed_mask.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 26.0				# in seconds
+			animationdelay = 0.0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+#			animationframes = {1 2 3 }
+		}
+	
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ita_exclusive_focus_unavaible"
+		textureFile = "gfx/interface/ita_exclusive_focus_unavaible.dds"
+	}
+	spriteType = {
+		name = "GFX_ita_exclusive_focus_can_comeplete"
+		textureFile = "gfx/interface/ita_exclusive_focus_can_comeplete.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ita_exclusive_focus_current"  
+		texturefile = "gfx/interface/ita_exclusive_focus_can_comeplete.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+#		effectFile = "gfx/FX/buttonstate.lua"		
+		animation = {
+			animationmaskfile = "gfx/interface/focusview/titlebar/focus_ongoing_mask2.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_ongoing_texture.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 20.0				# in seconds
+			animationdelay = 0.2			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+#			animationframes = {1 2 3 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/focusview/titlebar/focus_ongoing_mask4.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_ongoing_texture.dds"
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 15.0				# in seconds
+			animationdelay = 0.2			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating_ccw"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+#			animationframes = {1 2 3 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_ita_exclusive_focus_comeplete"
+		texturefile = "gfx/interface/ita_exclusive_focus_comeplete.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+#		effectFile = "gfx/FX/buttonstate.lua"		
+		animation = {
+			animationmaskfile = "gfx/interface/focusview/titlebar/focus_completed_mask.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 26.0				# in seconds
+			animationdelay = 0.0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+#			animationframes = {1 2 3 }
+		}
+	
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_div_subunit_item_bg_sup"
+		textureFile = "gfx/interface/div_subunit_item_bg_sup.dds"
+	}
+	SpriteType = {
+		name = "GFX_mobile_infantry_medium"
+		texturefile = "gfx/interface/technologies/mobile_infantry.dds"
+		alwaystransparent = yes
+	}
+}

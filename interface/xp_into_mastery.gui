@@ -1,0 +1,13 @@
+#guiTypes = {
+#	containerWindowType = {
+#		name = "xp_into_mastery_inf"
+#			
+#		buttonType = {
+#			name = "inf_gib_mastery"  
+#			position = { x = 195 y = 345 }  
+#   		spriteType = "GFX_doctrine_milestone_infantry_land"
+#			scale = 0.7
+#			pdx_tooltip = "xp_into_mastery_inf_tt"
+#		}
+#	}
+#}

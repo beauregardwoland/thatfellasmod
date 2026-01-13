@@ -1,0 +1,20 @@
+﻿l_english:
+ VICTORY_POINTS_11332:1 "Cockermouth" 
+ JAP_agility_focus:0"Expand Mitsubishi Contracts"
+ JAP_range_focus:0"Expand Kawasaki Contracts"
+ GER_gain_autarkic_economy_lock_free_trade_tt: "§RLock§! §Y$free_trade$§!. Gain §Y$autarkic_economy$§!."
+ RAJ_the_empires_workshop_civs_to_the_empire_subjects_tt: "(§Y[ENG.GetFlag][ENG.GetName]§! in a random core state): \n Add §G1§! Building Slots. \n Add §G1§! §Y$industrial_complex$§! \n\n(§YEvery [ENG.GetFlag][ENG.GetAdjective] subject§! in a random core state): \n Add §G1§! Building Slots. \n Add §G1§! §Y$industrial_complex$§!"
+ SOV_impregnable_forts:0"The Defense of Leningrad"
+ SOV_protect_the_white_sea_baltic_canal:0"The Defense of Stalingrad"
+ SOV_mine_warfare:0"Strip Coastal Defence Guns"
+ JAP_the_zero_tt:0"Enables production of §HMitsubishi A6M Zero-sen§! and  §HNakajima B6N§!"
+ JAP_approach_yasuda:0"Approach Kawasaki"
+ leningrad_polytechnical_institute:0"[195.GetName] Polytechnical Institute"
+ sp_land_super_heavy_howitzer:"Heavy Artillery Platforms"
+ sp_land_self_propelled_super_heavy_howitzer:0"Self Propelled Artillery Platforms" 
+ JAP_7075_aluminium_alloy_tt: "§Y$small_plane_airframe$§!, §Y$cv_small_plane_airframe$§! and §Y$medium_plane_airframe$§! $MODIFIER_AIR_AGILITY$: §G+10%§!"
+ MAN_tsr_expand_the_textile_industry: "Expand Manetsu Contracting"
+ MAN_tsr_mukden_military_academy: "Procurement Efforts"
+
+
+ 

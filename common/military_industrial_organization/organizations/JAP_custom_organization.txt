@@ -1,0 +1,8142 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+
+ JAP_mitsubushi_designer = {
+	icon = GFX_idea_mitsubishi
+
+	allowed = { original_tag = JAP }
+
+	equipment_type = {
+		mio_cat_eq_all_small_plane
+		mio_cat_eq_all_cv_aircraft
+	}
+
+	research_categories = {	mio_cat_all_light_fighter_and_modules }
+
+	on_tech_research_completed = {
+		if = {
+			limit = { FROM = { has_idea = mitsubushi_ic } }
+			JAP_mitsubushi_ic_shared_ef_1 = yes
+			custom_effect_tooltip = JAP_mitsubushi_ic_shared_ef_tt
+		}
+		else = {
+			custom_effect_tooltip = JAP_mitsubushi_ic_shared_ef_tt_2
+		}
+	}
+	
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_mitsubushi_designer_initial
+
+		equipment_bonus = {
+			air_agility = 0.10
+			air_range = 0.15
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_size_up_requirement = -0.33
+			military_industrial_organization_funds_gain = 0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_designer_1
+		name = generic_mio_trait_fabric_skin
+		icon = GFX_generic_mio_department_icon_plane_general_production
+
+		position = { x=0 y=0 }
+
+		mutually_exclusive = { JAP_mitsubushi_designer_2 }
+
+		production_bonus = {
+			production_resource_penalty_factor = -0.05
+			production_capacity_factor = 0.05
+		}
+
+		equipment_bonus = {
+			air_agility = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_mitsubushi_designer_2
+		name = generic_mio_trait_metal_skin
+		icon = GFX_generic_mio_trait_icon_defense
+
+		position = { x=1 y=0 }
+		relative_position_id = JAP_mitsubushi_designer_1
+
+		mutually_exclusive = { JAP_mitsubushi_designer_1 }
+
+		equipment_bonus = {
+			air_defence = 0.10
+			maximum_speed = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_mitsubushi_designer_3
+		name = generic_mio_trait_bigger_engines
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		position = { x=3 y=0 }
+		relative_position_id = JAP_mitsubushi_designer_1
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_mitsubushi_designer_4
+		name = generic_mio_trait_high_octane_fuels
+		icon = GFX_generic_mio_trait_icon_naval_strike_attack
+
+		position = { x=1 y=1 }
+		relative_position_id = JAP_mitsubushi_designer_3
+
+		all_parents = { 
+			JAP_mitsubushi_designer_3
+		}
+
+		equipment_bonus = {
+			naval_strike_attack = 0.1
+		}
+	}
+
+	trait = {
+		token = JAP_mitsubushi_designer_5
+		name = generic_mio_trait_fuel_injection_engines
+		icon = GFX_generic_mio_trait_icon_air_agility
+
+		position = { x=0 y=1 }
+		relative_position_id = JAP_mitsubushi_designer_3
+
+		all_parents = { 
+			JAP_mitsubushi_designer_3
+		}
+
+		equipment_bonus = {
+			air_ground_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_mitsubushi_designer_7
+		name = generic_mio_trait_cantilever_wing_structure
+		icon = GFX_generic_mio_trait_icon_air_agility
+
+		position = { x=2 y=0 }
+		relative_position_id = JAP_mitsubushi_designer_3
+
+		equipment_bonus = {
+			air_defence = 0.1
+			air_agility = 0.1
+		}
+
+	}
+
+	trait = {
+		token = JAP_mitsubushi_designer_8
+		name = generic_mio_trait_minimum_weapon_requirements
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+
+		position = { x=2 y=0 }
+		relative_position_id = JAP_mitsubushi_designer_7
+
+		equipment_bonus = {
+			air_attack = 0.1
+		}
+	}
+
+	trait = {
+		token = JAP_mitsubushi_designer_9
+		name = generic_mio_trait_shortened_wings
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x=1 y=1 }
+		relative_position_id = JAP_mitsubushi_designer_7
+
+		all_parents = { 
+			JAP_mitsubushi_designer_7 
+			JAP_mitsubushi_designer_8
+		}
+
+		equipment_bonus = {
+			reliability = 0.05
+			air_agility = 0.1
+			maximum_speed = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_mitsubushi_designer_10
+		name = generic_mio_trait_interceptor
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+
+		position = { x=-1 y=1 }
+		relative_position_id = JAP_mitsubushi_designer_9
+
+		all_parents = { 
+			JAP_mitsubushi_designer_9
+		}
+
+		mutually_exclusive = { JAP_mitsubushi_designer_11 }
+
+		equipment_bonus = {
+			air_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_mitsubushi_designer_11
+		name = generic_mio_trait_gunboat
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+
+		position = { x=1 y=1 }
+		relative_position_id = JAP_mitsubushi_designer_9
+
+		all_parents = { 
+			JAP_mitsubushi_designer_9
+		}
+
+		mutually_exclusive = { JAP_mitsubushi_designer_10 }
+
+		equipment_bonus = {
+			air_ground_attack = 0.10
+		}
+	}
+
+
+	trait = {
+		token = JAP_mitsubushi_designer_14
+		name = JAP_mitsubushi_designer_14
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+
+		position = { x = 0 y = 1 }
+
+		any_parent = { JAP_mitsubushi_designer_1 JAP_mitsubushi_designer_2 }
+
+		equipment_bonus = {
+			fuel_consumption = -0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_designer_15
+		name = JAP_mitsubushi_designer_15
+		icon = GFX_generic_mio_trait_icon_air_agility
+
+		position = { x = 1 y = 1 }
+
+		any_parent = { JAP_mitsubushi_designer_1 JAP_mitsubushi_designer_2 }
+
+		equipment_bonus = {
+			air_range = 0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_designer_16
+		name = JAP_mitsubushi_designer_16
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		position = { x = 0 y = 2 }
+
+		all_parents = { JAP_mitsubushi_designer_14 JAP_mitsubushi_designer_15 }
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_designer_17
+		name = JAP_mitsubushi_designer_17
+		icon = GFX_generic_mio_trait_icon_air_range
+
+		position = { x = 1 y = 2 }
+
+		all_parents = { JAP_mitsubushi_designer_14 JAP_mitsubushi_designer_15 }
+
+		equipment_bonus = {
+			air_range = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_designer_18
+		name = JAP_mitsubushi_designer_18
+		icon = GFX_generic_mio_trait_icon_air_superiority
+
+		position = { x = 0 y = 3 }
+
+		all_parents = { JAP_mitsubushi_designer_16 JAP_mitsubushi_designer_17 }
+
+		equipment_bonus = {
+			thrust = 0.2
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_designer_19
+		name = JAP_mitsubushi_designer_19
+		icon = GFX_generic_mio_trait_icon_air_agility
+
+		position = { x = 1 y = 3 }
+
+		all_parents = { JAP_mitsubushi_designer_16 JAP_mitsubushi_designer_17 }
+
+		equipment_bonus = {
+			air_agility = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_designer_20
+		name = JAP_mitsubushi_designer_20
+		icon = GFX_generic_mio_trait_icon_air_range
+
+		position = { x = 0 y = 4 }
+
+		mutually_exclusive = { JAP_mitsubushi_designer_21 }
+
+		all_parents = { JAP_mitsubushi_designer_18 JAP_mitsubushi_designer_19 }
+
+		equipment_bonus = {
+			air_range = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_designer_21
+		name = JAP_mitsubushi_designer_21
+		icon = GFX_generic_mio_trait_icon_air_defence
+
+		position = { x = 1 y = 4 }
+
+		mutually_exclusive = { JAP_mitsubushi_designer_20 }
+
+		all_parents = { JAP_mitsubushi_designer_18 JAP_mitsubushi_designer_19 }
+
+		equipment_bonus = {
+			air_range = 0.15
+			air_defence = -0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_designer_22
+		name = JAP_mitsubushi_designer_22
+		icon = GFX_generic_mio_trait_icon_unique
+
+		position = { x = 2 y = 1 }
+
+		any_parent = { JAP_mitsubushi_designer_3 }
+
+		on_complete = {
+			from = {
+				navy_experience = 33
+				air_experience = 33
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.15
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_designer_24
+		name = JAP_mitsubushi_designer_25
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x = 2 y = 2 }
+
+		any_parent = { JAP_mitsubushi_designer_22 }
+
+		on_complete = {
+			from = {
+				air_experience = 75
+				navy_experience = 75
+			}
+			JAP_mitsubushi_designer_25_ef = yes
+			hidden_effect = {
+				JAP_mitsubushi_designer_25_ef_1 = yes
+				JAP_mitsubushi_designer_25_ef_2 = yes
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+			military_industrial_organization_size_up_requirement = -0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_designer_26
+		name = JAP_mitsubushi_designer_26
+		icon = GFX_generic_mio_department_icon_plane_cas_combat
+
+		position = { x = 3 y = 2 }
+
+		any_parent = { JAP_mitsubushi_designer_5 }
+
+		limit_to_equipment_type = {
+			small_plane_cas_airframe
+			cv_small_plane_cas_airframe
+		}
+
+		equipment_bonus = {
+			thrust = 0.15
+			air_defence = 0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_designer_28
+		name = JAP_mitsubushi_designer_28
+		icon = GFX_generic_mio_department_icon_plane_naval_bomber_combat
+
+		position = { x = 4 y = 2 }
+
+		any_parent = { JAP_mitsubushi_designer_4 }
+
+		limit_to_equipment_type = {
+			small_plane_naval_bomber_airframe
+			cv_small_plane_naval_bomber_airframe
+		}
+
+		equipment_bonus = {
+			naval_strike_targetting = 0.1
+		}
+		production_bonus = {
+			production_conversion_speed_factor = 0.15
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_designer_30
+		name = JAP_mitsubushi_designer_30
+		icon = GFX_generic_mio_trait_icon_production_capacity
+
+		position = { x = 8 y = 1 }
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_designer_32
+		name = JAP_mitsubushi_designer_32
+		icon = GFX_generic_mio_trait_icon_unique
+
+		position = { x = 8 y = 3 }
+
+		any_parent = { JAP_mitsubushi_designer_30 }
+
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
+		}
+		equipment_bonus = {
+			air_attack = 0.05
+			air_ground_attack = 0.025
+		}
+	}
+}
+
+ JAP_sumitomo_heavy_vehicles = {
+	icon = GFX_idea_sumitomo
+
+	allowed = { or = { original_tag = JAP original_tag = MAN } }
+
+	equipment_type = { armor }
+	research_categories = { mio_cat_tech_all_armor_and_modules }
+	on_tech_research_completed = {
+		if = {
+			limit = { FROM = { has_idea = sumitomo_ic } }
+			JAP_sumitomo_ic_shared_ef_1 = yes
+			custom_effect_tooltip = JAP_sumitomo_ic_shared_ef_tt
+		}
+		else = {
+			custom_effect_tooltip = JAP_sumitomo_ic_shared_ef_tt_2
+		}
+	}
+
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_sumitomo_heavy_vehicles_initial
+
+		equipment_bonus = {
+			build_cost_ic = 0.025
+			armor_value = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.1
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_heavy_vehicles_1
+		name = JAP_sumitomo_heavy_vehicles_1
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		#mutually_exclusive = {  }
+
+		position = { x = 3 y = 0 }
+
+		equipment_bonus = {
+			armor_value = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_heavy_vehicles_2
+		name = JAP_sumitomo_heavy_vehicles_2
+		icon = GFX_generic_mio_trait_icon_hardness
+
+		#mutually_exclusive = {  }
+
+		position = { x = 5 y = 0 }
+
+		equipment_bonus = {
+			hardness = 0.05
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_heavy_vehicles_3
+		name = JAP_sumitomo_heavy_vehicles_3
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		#mutually_exclusive = {  }
+
+		position = { x = 4 y = 0 }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_heavy_vehicles_4
+		name = JAP_sumitomo_heavy_vehicles_4
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		mutually_exclusive = { JAP_sumitomo_heavy_vehicles_5 }
+
+		any_parent = { JAP_sumitomo_heavy_vehicles_1 }
+
+		position = { x = 1 y = 1 }
+
+		equipment_bonus = {
+			armor_value = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_heavy_vehicles_5
+		name = JAP_sumitomo_heavy_vehicles_5
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		mutually_exclusive = { JAP_sumitomo_heavy_vehicles_4 }
+
+		any_parent = { JAP_sumitomo_heavy_vehicles_1 }
+
+		position = { x = 3 y = 1 }
+
+		equipment_bonus = {
+			armor_value = 0.1
+		}
+		production_bonus = {
+			production_resource_need_factor = 0.1
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_heavy_vehicles_6
+		name = JAP_sumitomo_heavy_vehicles_6
+		icon = GFX_generic_mio_trait_icon_hardness
+
+		mutually_exclusive = { JAP_sumitomo_heavy_vehicles_7 }
+
+		any_parent = { JAP_sumitomo_heavy_vehicles_2 }
+
+		position = { x = 7 y = 1 }
+
+		equipment_bonus = {
+			hardness = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_heavy_vehicles_7
+		name = JAP_sumitomo_heavy_vehicles_7
+		icon = GFX_generic_mio_trait_icon_hardness
+
+		mutually_exclusive = { JAP_sumitomo_heavy_vehicles_6 }
+
+		any_parent = { JAP_sumitomo_heavy_vehicles_2 }
+
+		position = { x = 5 y = 1 }
+
+		equipment_bonus = {
+			hardness = 0.1
+			build_cost_ic = 0.1
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_heavy_vehicles_8
+		name = JAP_sumitomo_heavy_vehicles_8
+		icon = GFX_generic_mio_trait_icon_hardness
+
+		#mutually_exclusive = { JAP_sumitomo_heavy_vehicles_6 }
+
+		any_parent = { JAP_sumitomo_heavy_vehicles_6 JAP_sumitomo_heavy_vehicles_7 }
+
+		position = { x = 6 y = 2 }
+
+		equipment_bonus = {
+			hardness = 0.1
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_heavy_vehicles_9
+		name = JAP_sumitomo_heavy_vehicles_9
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		#mutually_exclusive = { JAP_sumitomo_heavy_vehicles_6 }
+
+		any_parent = { JAP_sumitomo_heavy_vehicles_5 JAP_sumitomo_heavy_vehicles_4 }
+
+		position = { x = 2 y = 2 }
+
+		equipment_bonus = {
+			armor_value = 0.1
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_heavy_vehicles_14
+		name = JAP_sumitomo_heavy_vehicles_14
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		#mutually_exclusive = { JAP_sumitomo_heavy_vehicles_6 }
+
+		any_parent = { JAP_sumitomo_heavy_vehicles_3 }
+
+		position = { x = 4 y = 1 }
+
+		equipment_bonus = {
+			ap_attack = 0.1
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_heavy_vehicles_10
+		name = JAP_sumitomo_heavy_vehicles_10
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		#mutually_exclusive = { JAP_sumitomo_heavy_vehicles_6 }
+
+		any_parent = { JAP_sumitomo_heavy_vehicles_14 }
+
+		position = { x = 4 y = 2 }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_heavy_vehicles_11
+		name = JAP_sumitomo_heavy_vehicles_11
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		mutually_exclusive = { JAP_sumitomo_heavy_vehicles_12 JAP_sumitomo_heavy_vehicles_13 }
+
+		any_parent = { JAP_sumitomo_heavy_vehicles_10 }
+
+		position = { x = 4 y = 3 }
+
+		equipment_bonus = {
+			soft_attack = 0.075
+			hard_attack = 0.075
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = -0.2
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_heavy_vehicles_12
+		name = JAP_sumitomo_heavy_vehicles_12
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		mutually_exclusive = { JAP_sumitomo_heavy_vehicles_13 JAP_sumitomo_heavy_vehicles_11 }
+
+		any_parent = { JAP_sumitomo_heavy_vehicles_10 }
+
+		position = { x = 2 y = 3 }
+
+		equipment_bonus = {
+			armor_value = 0.15
+		}
+		production_bonus = {
+			production_resource_penalty_factor = 0.15
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_heavy_vehicles_13
+		name = JAP_sumitomo_heavy_vehicles_13
+		icon = GFX_generic_mio_trait_icon_hardness
+
+		mutually_exclusive = { JAP_sumitomo_heavy_vehicles_12 JAP_sumitomo_heavy_vehicles_11 }
+
+		any_parent = { JAP_sumitomo_heavy_vehicles_10 }
+
+		position = { x = 6 y = 3 }
+
+		equipment_bonus = {
+			hardness = 0.15
+			build_cost_ic = 0.1
+		}
+		
+	}
+	trait = {
+		token = JAP_sumitomo_heavy_vehicles_15
+		name = JAP_sumitomo_heavy_vehicles_15
+		icon = GFX_generic_mio_department_icon_facilities
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_sumitomo_heavy_vehicles_12 JAP_sumitomo_heavy_vehicles_11 JAP_sumitomo_heavy_vehicles_13 }
+
+		position = { x = 5 y = 4 }
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.15
+		}
+		
+	}
+	trait = {
+		token = JAP_sumitomo_heavy_vehicles_16
+		name = JAP_sumitomo_heavy_vehicles_16
+		icon = GFX_generic_mio_trait_icon_production_capacity
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_sumitomo_heavy_vehicles_12 JAP_sumitomo_heavy_vehicles_11 JAP_sumitomo_heavy_vehicles_13 }
+
+		position = { x = 3 y = 4 }
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+ }
+
+ JAP_kawasaki_heavy_vehicles = {
+	icon = GFX_idea_kawasaki
+
+	allowed = { or = { original_tag = JAP original_tag = MAN } }
+
+	equipment_type = { armor train_equipment }
+	research_categories = { mio_cat_tech_all_armor_and_modules train_tech }
+	on_tech_research_completed = {
+		if = {
+			limit = { FROM = { has_idea = kawasaki_ic } }
+			JAP_kawasaki_ic_shared_ef_1 = yes
+			custom_effect_tooltip = JAP_kawasaki_ic_shared_ef_tt
+		}
+		else = {
+			custom_effect_tooltip = JAP_kawasaki_ic_shared_ef_tt_2
+		}
+	}
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_kawasaki_heavy_vehicles_initial
+
+		equipment_bonus = {
+			maximum_speed = 0.1
+			reliability = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.15
+		}
+	}
+
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_1
+		name = JAP_kawasaki_heavy_vehicles_1
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		#mutually_exclusive = {  }
+
+		position = { x = 1 y = 0 }
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_2
+		name = JAP_kawasaki_heavy_vehicles_2
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		#mutually_exclusive = {  }
+
+		position = { x = 4 y = 0 }
+
+		equipment_bonus = {
+			reliability = 0.1
+		}
+	}
+
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_3
+		name = JAP_kawasaki_heavy_vehicles_3
+		icon = GFX_generic_mio_trait_icon_unique
+
+		#mutually_exclusive = {  }
+
+		position = { x = 7 y = 0 }
+
+		on_complete = {
+			FROM = {
+				army_experience = 25
+				navy_experience = 25
+				air_experience = 25
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
+		}
+	}
+
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_4
+		name = JAP_kawasaki_heavy_vehicles_4
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_heavy_vehicles_1 }
+
+		position = { x = 0 y = 1 }
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_5
+		name = JAP_kawasaki_heavy_vehicles_5
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_heavy_vehicles_1 }
+
+		position = { x = 2 y = 1 }
+
+		equipment_bonus = {
+			fuel_consumption = -0.05
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_6
+		name = JAP_kawasaki_heavy_vehicles_6
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		mutually_exclusive = { JAP_kawasaki_heavy_vehicles_7 }
+
+		all_parents = { JAP_kawasaki_heavy_vehicles_4 JAP_kawasaki_heavy_vehicles_5 }
+
+		position = { x = 0 y = 2 }
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_7
+		name = JAP_kawasaki_heavy_vehicles_7
+		icon = GFX_generic_mio_trait_icon_defense
+
+		mutually_exclusive = { JAP_kawasaki_heavy_vehicles_6 }
+
+		all_parents = { JAP_kawasaki_heavy_vehicles_4 JAP_kawasaki_heavy_vehicles_5 }
+
+		position = { x = 2 y = 2 }
+
+		equipment_bonus = {
+			defense = 0.05
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_8
+		name = JAP_kawasaki_heavy_vehicles_8
+		icon = GFX_generic_mio_department_icon_tank_general_line_efficiency
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_heavy_vehicles_6 JAP_kawasaki_heavy_vehicles_7 }
+
+		position = { x = 1 y = 3 }
+
+		equipment_bonus = {
+			defense = 0.1
+		}
+		production_bonus = {
+			production_cost_factor = -0.05
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_9
+		name = JAP_kawasaki_heavy_vehicles_9
+		icon = GFX_generic_mio_department_icon_tank_general_engine
+
+		mutually_exclusive = { JAP_kawasaki_heavy_vehicles_10 }
+
+		any_parent = { JAP_kawasaki_heavy_vehicles_2 }
+
+		position = { x = 3 y = 1 }
+
+		equipment_bonus = {
+			entrenchment = 0.5
+		}
+		on_complete = {
+			from = {
+				set_technology = {
+					mountain_tanks = 1 #popup = no
+				}
+				custom_effect_tooltip = mountain_tanks_wol
+			}
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_10
+		name = JAP_kawasaki_heavy_vehicles_10
+		icon = GFX_generic_mio_department_icon_tank_general_quality
+
+		mutually_exclusive = { JAP_kawasaki_heavy_vehicles_9 }
+
+		any_parent = { JAP_kawasaki_heavy_vehicles_2 }
+
+		position = { x = 5 y = 1 }
+
+		equipment_bonus = {
+			entrenchment = 0.5
+		}
+		on_complete = {
+			from = {
+				set_technology = {
+					jungle_tanks = 1 #popup = no
+				}
+				custom_effect_tooltip = jungle_tanks_wol
+			}
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_11
+		name = JAP_kawasaki_heavy_vehicles_11
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_heavy_vehicles_9 JAP_kawasaki_heavy_vehicles_10 }
+
+		position = { x = 4 y = 2 }
+
+		equipment_bonus = {
+			reliability = 0.1
+		}
+		
+	}
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_12
+		name = JAP_kawasaki_heavy_vehicles_12
+		icon = GFX_generic_mio_department_icon_tank_general_line_efficiency
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_heavy_vehicles_11 }
+
+		position = { x = 4 y = 3 }
+
+		equipment_bonus = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			build_cost_ic = 0.1
+		}
+		
+	}
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_13
+		name = JAP_kawasaki_heavy_vehicles_13
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+
+		mutually_exclusive = { JAP_kawasaki_heavy_vehicles_14 }
+
+		any_parent = { JAP_kawasaki_heavy_vehicles_12 }
+
+		position = { x = 3 y = 4 }
+
+		equipment_bonus = {
+			fuel_capacity = 0.1
+			reliability = 0.1
+		}
+		
+	}
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_14
+		name = JAP_kawasaki_heavy_vehicles_14
+		icon = GFX_generic_mio_department_icon_tank_general_quality
+
+		mutually_exclusive = { JAP_kawasaki_heavy_vehicles_13 }
+
+		any_parent = { JAP_kawasaki_heavy_vehicles_12 }
+
+		position = { x = 5 y = 4 }
+
+		equipment_bonus = {
+			build_cost_ic = 0.075
+			soft_attack = 0.05
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_15
+		name = JAP_kawasaki_heavy_vehicles_15
+		icon = GFX_generic_mio_department_icon_facilities
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_heavy_vehicles_3 }
+
+		position = { x = 7 y = 1 }
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+			#military_industrial_organization_size_up_requirement = 0.05
+		}
+		on_complete = {
+			FROM = {
+				282 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_16
+		name = JAP_kawasaki_heavy_vehicles_16
+		icon = GFX_generic_mio_department_icon_plane_fighter
+
+		#mutually_exclusive = { JAP_kawasaki_heavy_vehicles_13 }
+
+		any_parent = { JAP_kawasaki_heavy_vehicles_15 }
+
+		position = { x = 6 y = 2 }
+		organization_modifier = {
+			#military_industrial_organization_size_up_requirement = 0.05
+		}
+		on_complete = {
+			from = {
+				air_experience = 25
+				random_core_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		
+	}
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_17
+		name = JAP_kawasaki_heavy_vehicles_17
+		icon = GFX_generic_mio_department_icon_tank_general_materials
+
+		#mutually_exclusive = { JAP_kawasaki_heavy_vehicles_13 }
+
+		any_parent = { JAP_kawasaki_heavy_vehicles_15 }
+
+		position = { x = 7 y = 2 }
+		organization_modifier = {
+			#military_industrial_organization_size_up_requirement = 0.05
+		}
+		on_complete = {
+			from = {
+				army_experience = 25
+				random_core_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		
+	}
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_18
+		name = JAP_kawasaki_heavy_vehicles_18
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_offense
+
+		#mutually_exclusive = { JAP_kawasaki_heavy_vehicles_13 }
+
+		any_parent = { JAP_kawasaki_heavy_vehicles_15 }
+
+		position = { x = 8 y = 2 }
+		organization_modifier = {
+			#military_industrial_organization_size_up_requirement = 0.05
+		}
+		on_complete = {
+			from = {
+				navy_experience = 25
+				random_core_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		
+	}
+
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_19
+		name = JAP_kawasaki_heavy_vehicles_19
+		icon = GFX_generic_mio_trait_icon_unique
+
+		#mutually_exclusive = { JAP_kawasaki_heavy_vehicles_13 }
+
+		any_parent = { JAP_kawasaki_heavy_vehicles_16 }
+
+		position = { x = 6 y = 3 }
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.1
+		}
+		on_complete = {
+			from = {
+				air_experience = 25
+			}
+			JAP_kawaskai_designer_25_ef_1 = yes
+			hidden_effect = {
+				JAP_kawaskai_designer_25_ef_2 = yes
+			}
+		}
+		
+	}
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_20
+		name = JAP_kawasaki_heavy_vehicles_20
+		icon = GFX_generic_mio_trait_icon_unique
+
+		#mutually_exclusive = { JAP_kawasaki_heavy_vehicles_13 }
+
+		any_parent = { JAP_kawasaki_heavy_vehicles_17 }
+
+		position = { x = 7 y = 3 }
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.1
+		}
+		on_complete = {
+			from = {
+				army_experience = 25
+				every_core_state = {
+					limit = {
+						is_fully_controlled_by = from
+						free_building_slots = {
+							building = synthetic_refinery
+							size > 1
+							include_locked = yes
+						}
+					}
+					random_select_amount = 2
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		
+	}
+	trait = {
+		token = JAP_kawasaki_heavy_vehicles_21
+		name = JAP_kawasaki_heavy_vehicles_21
+		icon = GFX_generic_mio_trait_icon_unique
+
+		#mutually_exclusive = { JAP_kawasaki_heavy_vehicles_13 }
+
+		any_parent = { JAP_kawasaki_heavy_vehicles_18 }
+
+		position = { x = 8 y = 3 }
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.1
+		}
+		on_complete = {
+			from = {
+				navy_experience = 25
+				#mio:JAP_kawasaki_nav_designer = {
+				#	complete_mio_trait = JAP_kawasaki_nav_designer_21
+				#}
+			}
+			JAP_kawasaki_nav_designer_effect_2 = yes
+		}
+		
+	}
+ }
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+JAP_mitsubushi_nav_designer = {
+	icon = GFX_idea_mitsubishi
+
+	allowed = { original_tag = JAP }
+
+	equipment_type = {
+		mio_cat_eq_all_carrier
+		mio_cat_eq_all_battleship
+		mio_cat_eq_all_cruiser
+	}
+
+	visible = {
+		from = {
+			NOT = { has_country_flag = JAP_mitsubushi_1 }
+			NOT = { has_country_flag = JAP_mitsubushi_2 }
+		}
+	}
+
+	research_categories = {	mio_cat_tech_all_carrier_and_modules mio_cat_tech_all_capital_ship_and_modules mio_cat_tech_all_cruiser_and_modules }
+	on_tech_research_completed = {
+		if = {
+			limit = { FROM = { has_idea = mitsubushi_ic } }
+			JAP_mitsubushi_ic_shared_ef_2 = yes
+			custom_effect_tooltip = JAP_mitsubushi_ic_shared_ef_tt
+		}
+		else = {
+			custom_effect_tooltip = JAP_mitsubushi_ic_shared_ef_tt_2
+		}
+	}
+	
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_mitsubushi_nav_designer_initial
+
+		equipment_bonus = {
+			armor_value = 0.05
+			naval_heavy_gun_hit_chance_factor = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_size_up_requirement = -0.10
+		}
+	}
+
+
+	trait = {
+		token = JAP_mitsubushi_nav_designer_1
+		name = JAP_mitsubushi_nav_designer_1
+		icon = GFX_generic_mio_trait_icon_production_capacity
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_2 }
+
+
+		position = { x = 3 y = 0 }
+		on_complete = {
+			hidden_effect = {
+				JAP_mitsubushi_nav_designer_effect = yes
+			}
+			#JAP_mitsubushi_nav_designer_effect = yes
+			from = {
+				set_country_flag  = JAP_mitsubushi_1
+			}
+			custom_effect_tooltip = JAP_mitsubushi_nav_designer_tt_1
+			custom_effect_tooltip = wol_reset_mio_tt
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_2
+		name = JAP_mitsubushi_nav_designer_2
+		icon = GFX_generic_mio_trait_icon_unique
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_1 }
+
+
+		position = { x = 5 y = 0 }
+		on_complete = {
+			hidden_effect = {
+				JAP_mitsubushi_nav_designer_effect_2 = yes
+			}
+			#JAP_mitsubushi_nav_designer_effect_2 = yes
+			from = {
+				set_country_flag  = JAP_mitsubushi_2
+			}
+			custom_effect_tooltip = JAP_mitsubushi_nav_designer_tt_2
+			custom_effect_tooltip = wol_reset_mio_tt
+		}
+	}
+
+	trait = {
+		token = JAP_mitsubushi_nav_designer_3
+		name = JAP_mitsubushi_nav_designer_3
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_offense
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 1 y = 1 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship
+		}
+
+		any_parent = { JAP_mitsubushi_nav_designer_2 JAP_mitsubushi_nav_designer_1 }
+
+		equipment_bonus = {
+			naval_heavy_gun_hit_chance_factor = 0.025
+			naval_light_gun_hit_chance_factor = 0.025
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_4
+		name = JAP_mitsubushi_nav_designer_4
+		icon = GFX_generic_mio_trait_icon_hg_attack
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 2 y = 1 }
+		
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship
+		}
+
+		any_parent = { JAP_mitsubushi_nav_designer_2 JAP_mitsubushi_nav_designer_1 }
+
+		equipment_bonus = {
+			hg_attack = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_5
+		name = JAP_mitsubushi_nav_designer_5
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 4 y = 1 }
+
+
+		any_parent = { JAP_mitsubushi_nav_designer_2 JAP_mitsubushi_nav_designer_1 }
+		
+		equipment_bonus = {
+			armor_value = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_mitsubushi_nav_designer_6
+		name = JAP_mitsubushi_nav_designer_6
+		icon = GFX_generic_mio_trait_icon_unique
+
+		#mutually_exclusive = {  }
+
+		
+
+		any_parent = { JAP_mitsubushi_nav_designer_2 JAP_mitsubushi_nav_designer_1 }
+
+		position = { x = 7 y = 1 }
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.10
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_7
+		name = JAP_mitsubushi_nav_designer_7
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_offense
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 1 y = 2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship
+		}
+
+		all_parents = { JAP_mitsubushi_nav_designer_4 JAP_mitsubushi_nav_designer_3 }
+
+		equipment_bonus = {
+			naval_heavy_gun_hit_chance_factor = 0.025
+			hg_attack = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_8
+		name = JAP_mitsubushi_nav_designer_8
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_offense
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 2 y = 2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship
+		}
+
+		all_parents = { JAP_mitsubushi_nav_designer_4 JAP_mitsubushi_nav_designer_3 }
+
+		equipment_bonus = {
+			naval_light_gun_hit_chance_factor = 0.025
+			lg_attack = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_9
+		name = JAP_mitsubushi_nav_designer_9
+		icon = GFX_generic_mio_trait_icon_hg_attack
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_10 }
+
+
+		position = { x = 1 y = 3 }
+
+		all_parents = { JAP_mitsubushi_nav_designer_7 JAP_mitsubushi_nav_designer_8 }
+
+		equipment_bonus = {
+			naval_heavy_gun_hit_chance_factor = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_10
+		name = JAP_mitsubushi_nav_designer_10
+		icon = GFX_generic_mio_trait_icon_lg_attack
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_9 }
+
+
+		position = { x = 2 y = 3 }
+
+		all_parents = { JAP_mitsubushi_nav_designer_7 JAP_mitsubushi_nav_designer_8 }
+
+		equipment_bonus = {
+			naval_light_gun_hit_chance_factor = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_11
+		name = JAP_mitsubushi_nav_designer_11
+		icon = GFX_generic_mio_trait_icon_hg_attack
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_12 }
+
+
+		position = { x = 1 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_9 JAP_mitsubushi_nav_designer_10 }
+
+		equipment_bonus = {
+			hg_attack = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_12
+		name = JAP_mitsubushi_nav_designer_12
+		icon = GFX_generic_mio_trait_icon_lg_attack
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_11 }
+
+
+		position = { x = 2 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_9 JAP_mitsubushi_nav_designer_10 }
+
+		equipment_bonus = {
+			lg_attack = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_13
+		name = JAP_mitsubushi_nav_designer_13
+		icon = GFX_generic_mio_trait_icon_naval_torpedo_damage_reduction_factor
+
+		#mutually_exclusive = { JAP_mitsubushi_nav_designer_11 }
+
+
+		position = { x = 3 y = 2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship mio_cat_eq_all_carrier
+		}
+
+		any_parent = { JAP_mitsubushi_nav_designer_5 }
+
+		equipment_bonus = {
+			naval_torpedo_enemy_critical_chance_factor = -0.2
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_14
+		name = JAP_mitsubushi_nav_designer_14
+		icon = GFX_generic_mio_trait_icon_max_strength
+
+		#mutually_exclusive = { JAP_mitsubushi_nav_designer_11 }
+
+
+		position = { x = 5 y = 2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship mio_cat_eq_all_carrier
+		}
+
+		any_parent = { JAP_mitsubushi_nav_designer_5 }
+
+		equipment_bonus = {
+			max_strength = 0.15
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_15
+		name = JAP_mitsubushi_nav_designer_15
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 4 y = 3 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_14 JAP_mitsubushi_nav_designer_13 }
+
+		equipment_bonus = {
+			armor_value = 0.15
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_16
+		name = JAP_mitsubushi_nav_designer_16
+		icon = GFX_generic_mio_department_icon_ship_carrier_quality
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_17 }
+
+
+		position = { x = 3 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_15 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_carrier
+		}
+
+		equipment_bonus = {
+			max_strength = 0.10
+			anti_air_attack = 0.2
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_17
+		name = JAP_mitsubushi_nav_designer_17
+		icon = GFX_generic_mio_department_icon_ship_carrier_offense
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_16 }
+
+
+		position = { x = 5 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_15 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_carrier
+		}
+
+		equipment_bonus = {
+			max_strength = -0.05
+			carrier_size = 1
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_18
+		name = JAP_mitsubushi_nav_designer_18
+		icon = GFX_generic_mio_department_icon_facilities
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 6 y = 2 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_6 }
+
+		on_complete = {
+			from = {
+				random_core_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
+		}
+		equipment_bonus = {
+			hg_armor_piercing = 0.15
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_19
+		name = JAP_mitsubushi_nav_designer_19
+		icon = GFX_generic_mio_department_icon_facilities
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 8 y = 2 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_6 }
+
+		on_complete = {
+			from = {
+				random_core_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_22
+		name = JAP_mitsubushi_nav_designer_22
+		icon = GFX_generic_mio_trait_icon_lg_attack
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 6 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_18 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_cruiser
+		}
+
+		equipment_bonus = {
+			lg_armor_piercing = 0.15
+			hg_armor_piercing = 0.15
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_23
+		name = JAP_mitsubushi_nav_designer_23
+		icon = GFX_generic_mio_department_icon_ship_carrier_offense
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 8 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_19 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_cruiser
+			mio_cat_eq_all_carrier
+		}
+
+		equipment_bonus = {
+			carrier_size = 1
+			anti_air_attack = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_24
+		name = JAP_mitsubushi_nav_designer_24
+		icon = GFX_generic_mio_trait_icon_unique
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 7 y = 2 }
+
+		#any_parent = { JAP_mitsubushi_nav_designer_6 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_carrier
+		}
+
+		available = {
+			from = {
+				mio:JAP_mitsubushi_designer = {
+					is_mio_trait_completed = JAP_mitsubushi_designer_25
+				}
+			}
+		}
+
+		equipment_bonus = {
+			naval_speed = 0.05
+		}
+		production_bonus = {
+			production_capacity_factor = 0.075
+		}
+	}
+}
+
+JAP_mitsubushi_nav_designer_upgrade_1 = {
+	icon = GFX_idea_mitsubishi
+
+	allowed = { original_tag = JAP }
+
+	equipment_type = {
+		mio_cat_eq_all_carrier
+		mio_cat_eq_all_battleship
+		mio_cat_eq_all_cruiser
+	}
+
+	visible = {
+		from = {
+			mio:JAP_mitsubushi_nav_designer = {
+				is_mio_trait_completed = JAP_mitsubushi_nav_designer_1
+			}
+		}
+	}
+
+	research_categories = {	mio_cat_tech_all_carrier_and_modules mio_cat_tech_all_capital_ship_and_modules mio_cat_tech_all_cruiser_and_modules cat_production concentrated_industry_category dispersed_industry_category }
+	on_tech_research_completed = {
+		if = {
+			limit = { FROM = { has_idea = mitsubushi_ic } }
+			JAP_mitsubushi_ic_shared_ef_2 = yes
+			custom_effect_tooltip = JAP_mitsubushi_ic_shared_ef_tt
+		}
+		else = {
+			custom_effect_tooltip = JAP_mitsubushi_ic_shared_ef_tt_2
+		}
+	}
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_mitsubushi_nav_designer_initial_1
+
+		equipment_bonus = {
+			armor_value = 0.05
+			naval_heavy_gun_hit_chance_factor = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_size_up_requirement = -0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_1_1
+		name = JAP_mitsubushi_nav_designer_1
+		icon = GFX_generic_mio_trait_icon_production_capacity
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_2_1 }
+
+
+		position = { x = 3 y = 0 }
+		on_complete = {
+			#from = {
+			#	set_country_flag  = JAP_mitsubushi_1
+			#}
+			custom_effect_tooltip = JAP_mitsubushi_nav_designer_tt_1
+			custom_effect_tooltip = wol_reset_mio_tt
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_2_1
+		name = JAP_mitsubushi_nav_designer_2
+		icon = GFX_generic_mio_trait_icon_unique
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_1_1 }
+
+
+		position = { x = 5 y = 0 }
+		on_complete = {
+			#from = {
+			#	set_country_flag  = JAP_mitsubushi_2
+			#}
+			custom_effect_tooltip = JAP_mitsubushi_nav_designer_tt_2
+			custom_effect_tooltip = wol_reset_mio_tt
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_3_1
+		name = JAP_mitsubushi_nav_designer_3
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_offense
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 1 y = 1 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship
+		}
+
+		any_parent = { JAP_mitsubushi_nav_designer_2_1 JAP_mitsubushi_nav_designer_1_1 }
+
+		equipment_bonus = {
+			naval_heavy_gun_hit_chance_factor = 0.025
+			naval_light_gun_hit_chance_factor = 0.025
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_4_1
+		name = JAP_mitsubushi_nav_designer_4
+		icon = GFX_generic_mio_trait_icon_hg_attack
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 2 y = 1 }
+		
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship
+		}
+
+		any_parent = { JAP_mitsubushi_nav_designer_2_1 JAP_mitsubushi_nav_designer_1_1 }
+
+		equipment_bonus = {
+			hg_attack = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_5_1
+		name = JAP_mitsubushi_nav_designer_5
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 4 y = 1 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_2_1 JAP_mitsubushi_nav_designer_1_1 }
+		
+		equipment_bonus = {
+			armor_value = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_6_1
+		name = JAP_mitsubushi_nav_designer_6
+		icon = GFX_generic_mio_trait_icon_unique
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_mitsubushi_nav_designer_2_1 JAP_mitsubushi_nav_designer_1_1 }
+
+		position = { x = 7 y = 1 }
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.10
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_7_1
+		name = JAP_mitsubushi_nav_designer_7
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_offense
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 1 y = 2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship mio_cat_eq_all_carrier
+		}
+
+		all_parents = { JAP_mitsubushi_nav_designer_4_1 JAP_mitsubushi_nav_designer_3_1 }
+
+		equipment_bonus = {
+			naval_heavy_gun_hit_chance_factor = 0.025
+			hg_attack = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_8_1
+		name = JAP_mitsubushi_nav_designer_8
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_offense
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 2 y = 2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship mio_cat_eq_all_carrier
+		}
+
+		all_parents = { JAP_mitsubushi_nav_designer_4_1 JAP_mitsubushi_nav_designer_3_1 }
+
+		equipment_bonus = {
+			naval_light_gun_hit_chance_factor = 0.025
+			lg_attack = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_9_1
+		name = JAP_mitsubushi_nav_designer_9
+		icon = GFX_generic_mio_trait_icon_hg_attack
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_10_1 }
+
+
+		position = { x = 1 y = 3 }
+
+		all_parents = { JAP_mitsubushi_nav_designer_7_1 JAP_mitsubushi_nav_designer_8_1 }
+
+		equipment_bonus = {
+			naval_heavy_gun_hit_chance_factor = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_10_1
+		name = JAP_mitsubushi_nav_designer_10
+		icon = GFX_generic_mio_trait_icon_lg_attack
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_9_1 }
+
+
+		position = { x = 2 y = 3 }
+
+		all_parents = { JAP_mitsubushi_nav_designer_7_1 JAP_mitsubushi_nav_designer_8_1 }
+
+		equipment_bonus = {
+			naval_light_gun_hit_chance_factor = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_11_1
+		name = JAP_mitsubushi_nav_designer_11
+		icon = GFX_generic_mio_trait_icon_hg_attack
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_12_1 }
+
+
+		position = { x = 1 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_9_1 JAP_mitsubushi_nav_designer_10_1 }
+
+		equipment_bonus = {
+			hg_attack = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_12_1
+		name = JAP_mitsubushi_nav_designer_12
+		icon = GFX_generic_mio_trait_icon_lg_attack
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_11_1 }
+
+
+		position = { x = 2 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_9_1 JAP_mitsubushi_nav_designer_10_1 }
+
+		equipment_bonus = {
+			lg_attack = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_13_1
+		name = JAP_mitsubushi_nav_designer_13
+		icon = GFX_generic_mio_trait_icon_naval_torpedo_damage_reduction_factor
+
+		#mutually_exclusive = { JAP_mitsubushi_nav_designer_11 }
+
+
+		position = { x = 3 y = 2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship mio_cat_eq_all_carrier
+		}
+
+		any_parent = { JAP_mitsubushi_nav_designer_5_1 }
+
+		equipment_bonus = {
+			naval_torpedo_enemy_critical_chance_factor = -0.2
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_14_1
+		name = JAP_mitsubushi_nav_designer_14
+		icon = GFX_generic_mio_trait_icon_max_strength
+
+		#mutually_exclusive = { JAP_mitsubushi_nav_designer_11 }
+
+
+		position = { x = 5 y = 2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship mio_cat_eq_all_carrier
+		}
+
+		any_parent = { JAP_mitsubushi_nav_designer_5_1 }
+
+		equipment_bonus = {
+			max_strength = 0.15
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_15_1
+		name = JAP_mitsubushi_nav_designer_15
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 4 y = 3 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_14_1 JAP_mitsubushi_nav_designer_13_1 }
+
+		equipment_bonus = {
+			armor_value = 0.15
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_16_1
+		name = JAP_mitsubushi_nav_designer_16
+		icon = GFX_generic_mio_department_icon_ship_carrier_quality
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_17_1 }
+
+
+		position = { x = 3 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_15_1 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_carrier
+		}
+
+		equipment_bonus = {
+			max_strength = 0.10
+			anti_air_attack = 0.2
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_17_1
+		name = JAP_mitsubushi_nav_designer_17
+		icon = GFX_generic_mio_department_icon_ship_carrier_offense
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_16_1 }
+
+
+		position = { x = 5 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_15_1 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_carrier
+		}
+
+		equipment_bonus = {
+			max_strength = -0.05
+			carrier_size = 1
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_18_1
+		name = JAP_mitsubushi_nav_designer_18
+		icon = GFX_generic_mio_department_icon_facilities
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 6 y = 2 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_6_1 }
+
+		on_complete = {
+			from = {
+				random_core_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_19_1
+		name = JAP_mitsubushi_nav_designer_19
+		icon = GFX_generic_mio_department_icon_facilities
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 8 y = 2 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_6_1 }
+
+		on_complete = {
+			from = {
+				random_core_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_22_1
+		name = JAP_mitsubushi_nav_designer_22
+		icon = GFX_generic_mio_trait_icon_lg_attack
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 6 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_18_1 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_cruiser
+		}
+
+		equipment_bonus = {
+			lg_armor_piercing = 0.15
+			hg_armor_piercing = 0.15
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_23_1
+		name = JAP_mitsubushi_nav_designer_23
+		icon = GFX_generic_mio_department_icon_ship_carrier_offense
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 8 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_19_1 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_cruiser
+			mio_cat_eq_all_carrier
+		}
+
+		equipment_bonus = {
+			carrier_size = 1
+			anti_air_attack = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_24_1
+		name = JAP_mitsubushi_nav_designer_24
+		icon = GFX_generic_mio_trait_icon_unique
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 7 y = 2 }
+
+		#any_parent = { JAP_mitsubushi_nav_designer_6_1 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_carrier
+		}
+
+		available = {
+			from = {
+				mio:JAP_mitsubushi_designer = {
+					is_mio_trait_completed = JAP_mitsubushi_designer_25
+				}
+			}
+		}
+
+		equipment_bonus = {
+			naval_speed = 0.05
+		}
+		production_bonus = {
+			production_capacity_factor = 0.075
+		}
+	}
+}
+JAP_mitsubushi_nav_designer_upgrade_2 = {
+	icon = GFX_idea_mitsubishi
+
+	allowed = { original_tag = JAP }
+
+	equipment_type = {
+		mio_cat_eq_all_carrier
+		mio_cat_eq_all_battleship
+		mio_cat_eq_all_cruiser
+	}
+
+	visible = {
+		from = {
+			mio:JAP_mitsubushi_nav_designer = {
+				is_mio_trait_completed = JAP_mitsubushi_nav_designer_2
+			}
+		}
+	}
+
+	research_categories = {	mio_cat_tech_all_carrier_and_modules mio_cat_tech_all_capital_ship_and_modules construction_tech mio_cat_tech_all_cruiser_and_modules }
+	on_tech_research_completed = {
+		if = {
+			limit = { FROM = { has_idea = mitsubushi_ic } }
+			JAP_mitsubushi_ic_shared_ef_2 = yes
+			custom_effect_tooltip = JAP_mitsubushi_ic_shared_ef_tt
+		}
+		else = {
+			custom_effect_tooltip = JAP_mitsubushi_ic_shared_ef_tt_2
+		}
+	}
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_mitsubushi_nav_designer_initial_2
+
+		equipment_bonus = {
+			armor_value = 0.05
+			naval_heavy_gun_hit_chance_factor = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_size_up_requirement = -0.1
+		}
+	}
+
+
+	trait = {
+		token = JAP_mitsubushi_nav_designer_1_2
+		name = JAP_mitsubushi_nav_designer_1
+		icon = GFX_generic_mio_trait_icon_production_capacity
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_2_2 }
+
+
+		position = { x = 3 y = 0 }
+		on_complete = {
+			from = {
+				set_country_flag  = JAP_mitsubushi_1
+			}
+			custom_effect_tooltip = JAP_mitsubushi_nav_designer_tt_1
+			custom_effect_tooltip = wol_reset_mio_tt
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_2_2
+		name = JAP_mitsubushi_nav_designer_2
+		icon = GFX_generic_mio_trait_icon_unique
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_1_2 }
+
+
+		position = { x = 5 y = 0 }
+		on_complete = {
+			from = {
+				set_country_flag  = JAP_mitsubushi_2
+			}
+			custom_effect_tooltip = JAP_mitsubushi_nav_designer_tt_2
+			custom_effect_tooltip = wol_reset_mio_tt
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_3_2
+		name = JAP_mitsubushi_nav_designer_3
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_offense
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 1 y = 1 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship
+		}
+
+		any_parent = { JAP_mitsubushi_nav_designer_2_2 JAP_mitsubushi_nav_designer_1_2 }
+
+		equipment_bonus = {
+			naval_heavy_gun_hit_chance_factor = 0.025
+			naval_light_gun_hit_chance_factor = 0.025
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_4_2
+		name = JAP_mitsubushi_nav_designer_4
+		icon = GFX_generic_mio_trait_icon_hg_attack
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 2 y = 1 }
+		
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship
+		}
+
+		any_parent = { JAP_mitsubushi_nav_designer_2_2 JAP_mitsubushi_nav_designer_1_2 }
+
+		equipment_bonus = {
+			hg_attack = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_5_2
+		name = JAP_mitsubushi_nav_designer_5
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 4 y = 1 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_2_2 JAP_mitsubushi_nav_designer_1_2 }
+		
+		equipment_bonus = {
+			armor_value = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_6_2
+		name = JAP_mitsubushi_nav_designer_6
+		icon = GFX_generic_mio_trait_icon_unique
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_mitsubushi_nav_designer_2_2 JAP_mitsubushi_nav_designer_1_2 }
+
+		position = { x = 7 y = 1 }
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.10
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_7_2
+		name = JAP_mitsubushi_nav_designer_7
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_offense
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 1 y = 2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship mio_cat_eq_all_carrier
+		}
+
+		all_parents = { JAP_mitsubushi_nav_designer_4_2 JAP_mitsubushi_nav_designer_3_2 }
+
+		equipment_bonus = {
+			naval_heavy_gun_hit_chance_factor = 0.025
+			hg_attack = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_8_2
+		name = JAP_mitsubushi_nav_designer_8
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_offense
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 2 y = 2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship mio_cat_eq_all_carrier
+		}
+
+		all_parents = { JAP_mitsubushi_nav_designer_4_2 JAP_mitsubushi_nav_designer_3_2 }
+
+		equipment_bonus = {
+			naval_light_gun_hit_chance_factor = 0.025
+			lg_attack = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_9_2
+		name = JAP_mitsubushi_nav_designer_9
+		icon = GFX_generic_mio_trait_icon_hg_attack
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_10_2 }
+
+
+		position = { x = 1 y = 3 }
+
+		all_parents = { JAP_mitsubushi_nav_designer_7_2 JAP_mitsubushi_nav_designer_8_2 }
+
+		equipment_bonus = {
+			naval_heavy_gun_hit_chance_factor = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_10_2
+		name = JAP_mitsubushi_nav_designer_10
+		icon = GFX_generic_mio_trait_icon_lg_attack
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_9_2 }
+
+
+		position = { x = 2 y = 3 }
+
+		all_parents = { JAP_mitsubushi_nav_designer_7_2 JAP_mitsubushi_nav_designer_8_2 }
+
+		equipment_bonus = {
+			naval_light_gun_hit_chance_factor = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_11_2
+		name = JAP_mitsubushi_nav_designer_11
+		icon = GFX_generic_mio_trait_icon_hg_attack
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_12_2 }
+
+
+		position = { x = 1 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_9_2 JAP_mitsubushi_nav_designer_10_2 }
+
+		equipment_bonus = {
+			hg_attack = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_12_2
+		name = JAP_mitsubushi_nav_designer_12
+		icon = GFX_generic_mio_trait_icon_lg_attack
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_11_2 }
+
+
+		position = { x = 2 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_9_2 JAP_mitsubushi_nav_designer_10_2 }
+
+		equipment_bonus = {
+			lg_attack = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_13_2
+		name = JAP_mitsubushi_nav_designer_13
+		icon = GFX_generic_mio_trait_icon_naval_torpedo_damage_reduction_factor
+
+		#mutually_exclusive = { JAP_mitsubushi_nav_designer_11 }
+
+
+		position = { x = 3 y = 2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship mio_cat_eq_all_carrier
+		}
+
+		any_parent = { JAP_mitsubushi_nav_designer_5_2 }
+
+		equipment_bonus = {
+			naval_torpedo_enemy_critical_chance_factor = -0.2
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_14_2
+		name = JAP_mitsubushi_nav_designer_14
+		icon = GFX_generic_mio_trait_icon_max_strength
+
+		#mutually_exclusive = { JAP_mitsubushi_nav_designer_11 }
+
+
+		position = { x = 5 y = 2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_battleship mio_cat_eq_all_carrier
+		}
+
+		any_parent = { JAP_mitsubushi_nav_designer_5_2 }
+
+		equipment_bonus = {
+			max_strength = 0.15
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_15_2
+		name = JAP_mitsubushi_nav_designer_15
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 4 y = 3 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_14_2 JAP_mitsubushi_nav_designer_13_2 }
+
+		equipment_bonus = {
+			armor_value = 0.15
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_16_2
+		name = JAP_mitsubushi_nav_designer_16
+		icon = GFX_generic_mio_department_icon_ship_carrier_quality
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_17_2 }
+
+
+		position = { x = 3 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_15_2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_carrier
+		}
+
+		equipment_bonus = {
+			max_strength = 0.10
+			anti_air_attack = 0.2
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_17_2
+		name = JAP_mitsubushi_nav_designer_17
+		icon = GFX_generic_mio_department_icon_ship_carrier_offense
+
+		mutually_exclusive = { JAP_mitsubushi_nav_designer_16_2 }
+
+
+		position = { x = 5 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_15_2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_carrier
+		}
+
+		equipment_bonus = {
+			max_strength = -0.05
+			carrier_size = 1
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_18_2
+		name = JAP_mitsubushi_nav_designer_18
+		icon = GFX_generic_mio_department_icon_facilities
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 6 y = 2 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_6_2 }
+
+		on_complete = {
+			from = {
+				random_core_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_19_2
+		name = JAP_mitsubushi_nav_designer_19
+		icon = GFX_generic_mio_department_icon_facilities
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 8 y = 2 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_6_2 }
+
+		on_complete = {
+			from = {
+				random_core_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_22_2
+		name = JAP_mitsubushi_nav_designer_22
+		icon = GFX_generic_mio_trait_icon_lg_attack
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 6 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_18_2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_cruiser
+		}
+
+		equipment_bonus = {
+			lg_armor_piercing = 0.15
+			hg_armor_piercing = 0.15
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_23_2
+		name = JAP_mitsubushi_nav_designer_23
+		icon = GFX_generic_mio_department_icon_ship_carrier_offense
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 8 y = 4 }
+
+		any_parent = { JAP_mitsubushi_nav_designer_19_2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_cruiser
+			mio_cat_eq_all_carrier
+		}
+
+		equipment_bonus = {
+			carrier_size = 1
+			anti_air_attack = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_nav_designer_24_2
+		name = JAP_mitsubushi_nav_designer_24
+		icon = GFX_generic_mio_trait_icon_unique
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 7 y = 2 }
+
+		#any_parent = { JAP_mitsubushi_nav_designer_6_1 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_carrier
+		}
+
+		available = {
+			from = {
+				mio:JAP_mitsubushi_designer = {
+					is_mio_trait_completed = JAP_mitsubushi_designer_25
+				}
+			}
+		}
+
+		equipment_bonus = {
+			naval_speed = 0.05
+		}
+		production_bonus = {
+			production_capacity_factor = 0.075
+		}
+	}
+}
+
+JAP_sumitomo_nav_designer = {
+	icon = GFX_idea_sumitomo
+
+	allowed = { original_tag = JAP }
+
+	equipment_type = {
+		mio_cat_eq_all_destroyer
+		convoy_1
+		ship_hull_submarine
+	}
+
+	research_categories = {	mio_cat_tech_all_carrier_and_modules mio_cat_tech_all_capital_ship_and_modules mio_cat_tech_all_cruiser_and_modules }
+	on_tech_research_completed = {
+		if = {
+			limit = { FROM = { has_idea = sumitomo_ic } }
+			JAP_sumitomo_ic_shared_ef_2 = yes
+			custom_effect_tooltip = JAP_sumitomo_ic_shared_ef_tt
+		}
+		else = {
+			custom_effect_tooltip = JAP_sumitomo_ic_shared_ef_tt_2
+		}
+	}
+
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_sumitomo_nav_designer_initial
+
+		equipment_bonus = {
+			max_strength = 0.1
+			naval_speed = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_size_up_requirement = -0.05
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_1
+		name = JAP_sumitomo_nav_designer_1
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+
+		mutually_exclusive = { JAP_sumitomo_nav_designer_2 }
+
+
+		position = { x = 1 y = 0 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_destroyer
+		}
+
+		equipment_bonus = {
+			torpedo_attack = 0.1
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_nav_designer_2
+		name = JAP_sumitomo_nav_designer_2
+		icon = GFX_generic_mio_trait_icon_lg_attack
+
+		mutually_exclusive = { JAP_sumitomo_nav_designer_1 }
+
+
+		position = { x = 3 y = 0 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_destroyer
+		}
+
+		equipment_bonus = {
+			lg_attack = 0.1
+			lg_armor_piercing = 0.1
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_3
+		name = JAP_sumitomo_nav_designer_3
+		icon = GFX_generic_mio_trait_icon_naval_range
+
+		mutually_exclusive = { JAP_sumitomo_nav_designer_4 }
+
+
+		position = { x = 5 y = 0 }
+
+		limit_to_equipment_type = {
+			ship_hull_submarine
+		}
+
+		equipment_bonus = {
+			naval_range = 0.15
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_4
+		name = JAP_sumitomo_nav_designer_4
+		icon = GFX_generic_mio_trait_icon_surface_visibility
+
+		mutually_exclusive = { JAP_sumitomo_nav_designer_3 }
+
+		limit_to_equipment_type = {
+			convoy
+		}
+
+		position = { x = 7 y = 0 }
+
+		equipment_bonus = {
+			surface_visibility = -0.2
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_5
+		name = JAP_sumitomo_nav_designer_5
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_offense
+
+		mutually_exclusive = { JAP_sumitomo_nav_designer_6 }
+
+		any_parent = { JAP_sumitomo_nav_designer_1 JAP_sumitomo_nav_designer_2 }
+
+		position = { x = 2 y = 1 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_destroyer
+		}
+
+		equipment_bonus = {
+			build_cost_ic = 0.075
+		}
+		on_complete = {
+			from = {
+				set_technology = {
+					river_boatss = 1 #popup = no
+				}
+				custom_effect_tooltip = river_boats_wol
+			}
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_6
+		name = JAP_sumitomo_nav_designer_6
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		mutually_exclusive = { JAP_sumitomo_nav_designer_5 }
+
+		any_parent = { JAP_sumitomo_nav_designer_1 JAP_sumitomo_nav_designer_2 }
+
+		position = { x = 0 y = 1 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_destroyer
+		}
+
+		equipment_bonus = {
+			naval_speed = 0.10
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_7
+		name = JAP_sumitomo_nav_designer_7
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+
+		any_parent = { JAP_sumitomo_nav_designer_5 JAP_sumitomo_nav_designer_6 }
+
+		position = { x = 1 y = 2 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_destroyer
+		}
+
+		equipment_bonus = {
+			fuel_consumption = -0.2
+			convoy_raiding_coordination = 0.2
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_8
+		name = JAP_sumitomo_nav_designer_8
+		icon = GFX_generic_mio_trait_icon_sub_attack
+
+		any_parent = { JAP_sumitomo_nav_designer_7 }
+
+		position = { x = 1 y = 3 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_destroyer
+		}
+
+		equipment_bonus = {
+			sub_detection = 0.05
+			sub_attack = 0.05
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_9
+		name = JAP_sumitomo_nav_designer_9
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_production
+
+		any_parent = { JAP_sumitomo_nav_designer_8 }
+
+		position = { x = 1 y = 4 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_destroyer
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_10
+		name = JAP_sumitomo_nav_designer_10
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_production
+
+		any_parent = { JAP_sumitomo_nav_designer_1 JAP_sumitomo_nav_designer_2 JAP_sumitomo_nav_designer_3 JAP_sumitomo_nav_designer_4 }
+
+		position = { x = 4 y = 1 }
+
+		production_bonus = {
+			production_cost_factor = -0.025
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_11
+		name = JAP_sumitomo_nav_designer_11
+		icon = GFX_generic_mio_trait_icon_resources
+
+		any_parent = { JAP_sumitomo_nav_designer_10 }
+
+		position = { x = 4 y = 2 }
+
+		production_bonus = {
+			production_resource_need_factor = -0.1
+		}
+		equipment_bonus = {
+			naval_range = -0.075
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_12
+		name = JAP_sumitomo_nav_designer_12
+		icon = GFX_generic_mio_trait_icon_surface_detection
+
+		any_parent = { JAP_sumitomo_nav_designer_11 }
+
+		position = { x = 4 y = 3 }
+
+		equipment_bonus = {
+			surface_detection = 0.15
+			sub_detection = 0.075
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_13
+		name = JAP_sumitomo_nav_designer_13
+		icon = GFX_generic_mio_trait_icon_surface_detection
+
+		any_parent = { JAP_sumitomo_nav_designer_3 JAP_sumitomo_nav_designer_4 }
+
+		mutually_exclusive = { JAP_sumitomo_nav_designer_14 }
+
+		position = { x = 6 y = 1 }
+
+		limit_to_equipment_type = {
+			ship_hull_submarine
+		}
+
+		equipment_bonus = {
+			convoy_raiding_coordination = 0.1
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_14
+		name = JAP_sumitomo_nav_designer_14
+		icon = GFX_generic_mio_trait_icon_surface_detection
+
+		any_parent = { JAP_sumitomo_nav_designer_3 JAP_sumitomo_nav_designer_4 }
+
+		mutually_exclusive = { JAP_sumitomo_nav_designer_13 }
+
+		position = { x = 8 y = 1 }
+
+		limit_to_equipment_type = {
+			ship_hull_submarine
+		}
+
+		equipment_bonus = {
+			naval_range = 0.1
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_15
+		name = JAP_sumitomo_nav_designer_15
+		icon = GFX_generic_mio_trait_icon_air_attack
+
+		any_parent = { JAP_sumitomo_nav_designer_14 JAP_sumitomo_nav_designer_13 }
+
+		mutually_exclusive = { JAP_sumitomo_nav_designer_16 }
+
+		position = { x = 6 y = 2 }
+
+		limit_to_equipment_type = {
+			convoy
+		}
+
+		equipment_bonus = {
+			air_attack = 0.15
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_16
+		name = JAP_sumitomo_nav_designer_16
+		icon = GFX_generic_mio_trait_icon_max_strength
+
+		any_parent = { JAP_sumitomo_nav_designer_14 JAP_sumitomo_nav_designer_13 }
+
+		mutually_exclusive = { JAP_sumitomo_nav_designer_15 }
+
+		position = { x = 8 y = 2 }
+
+		limit_to_equipment_type = {
+			convoy
+		}
+
+		equipment_bonus = {
+			max_strength = 0.1
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_17
+		name = JAP_sumitomo_nav_designer_17
+		icon = GFX_generic_mio_trait_icon_sub_visibility
+
+		any_parent = { JAP_sumitomo_nav_designer_16 JAP_sumitomo_nav_designer_15 }
+
+
+		position = { x = 7 y = 3 }
+
+		limit_to_equipment_type = {
+			convoy
+			ship_hull_submarine
+		}
+
+		equipment_bonus = {
+			surface_visibility = -0.1
+			sub_visibility = -0.1
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_18
+		name = JAP_sumitomo_nav_designer_18
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		any_parent = { JAP_sumitomo_nav_designer_17 }
+
+
+		position = { x = 7 y = 4 }
+
+		limit_to_equipment_type = {
+			convoy
+			ship_hull_submarine
+		}
+
+		equipment_bonus = {
+			maximum_speed = 0.1
+			max_strength = -0.075
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_19
+		name = JAP_sumitomo_nav_designer_19
+		icon = GFX_generic_mio_department_icon_facilities
+
+		#any_parent = { JAP_sumitomo_nav_designer_17 }
+
+
+		position = { x = 2 y = 3 }
+
+		on_complete = {
+			from = {
+				random_core_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_20
+		name = JAP_sumitomo_nav_designer_20
+		icon = GFX_generic_mio_trait_icon_unique
+
+		any_parent = { JAP_sumitomo_nav_designer_19 }
+
+
+		position = { x = 2 y = 4 }
+
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.075
+			military_industrial_organization_size_up_requirement = -0.025
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_21
+		name = JAP_sumitomo_nav_designer_21
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+
+		any_parent = { JAP_sumitomo_nav_designer_19 }
+
+
+		position = { x = 3 y = 4 }
+
+		equipment_bonus = {
+			torpedo_attack = 0.075
+			naval_torpedo_hit_chance_factor = 0.05
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_22
+		name = JAP_sumitomo_nav_designer_22
+		icon = GFX_generic_mio_department_icon_facilities
+
+		#any_parent = { JAP_sumitomo_nav_designer_17 }
+
+
+		position = { x = 6 y = 3 }
+
+		on_complete = {
+			from = {
+				random_core_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_23
+		name = JAP_sumitomo_nav_designer_23
+		icon = GFX_generic_mio_trait_icon_unique
+
+		any_parent = { JAP_sumitomo_nav_designer_22 }
+
+
+		position = { x = 6 y = 4 }
+
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.075
+			military_industrial_organization_size_up_requirement = -0.025
+		}
+	}
+	trait = {
+		token =JAP_sumitomo_nav_designer_24
+		name = JAP_sumitomo_nav_designer_24
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		any_parent = { JAP_sumitomo_nav_designer_22 }
+
+
+		position = { x = 5 y = 4 }
+
+		equipment_bonus = {
+			naval_speed = 0.075
+		}
+	}
+}
+
+JAP_kawasaki_nav_designer = {
+	icon = GFX_idea_kawasaki
+
+	allowed = { original_tag = JAP }
+
+	equipment_type = {
+		mio_cat_eq_all_cruiser
+		mio_cat_eq_all_destroyer
+		ship_hull_submarine
+		ship_hull_carrier_submarine
+	}
+
+	research_categories = {	mio_cat_tech_all_submarine_and_modules mio_cat_tech_all_cruiser_and_modules }
+	on_tech_research_completed = {
+		if = {
+			limit = { FROM = { has_idea = kawasaki_ic } }
+			JAP_kawasaki_ic_shared_ef_2 = yes
+			custom_effect_tooltip = JAP_kawasaki_ic_shared_ef_tt
+		}
+		else = {
+			custom_effect_tooltip = JAP_kawasaki_ic_shared_ef_tt_2
+		}
+	}
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_kawasaki_nav_designer_initial
+
+		
+		equipment_bonus = {
+			surface_visibility = -0.05
+			sub_visibility = -0.05
+		}
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.05
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_1
+		name = JAP_kawasaki_nav_designer_1
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_production
+
+		mutually_exclusive = { JAP_kawasaki_nav_designer_2 }
+		limit_to_equipment_type = {
+			mio_cat_eq_all_cruiser
+			mio_cat_eq_all_destroyer
+		}
+
+
+		position = { x = 0 y = 0 }
+
+		equipment_bonus = {
+			build_cost_ic = -0.025
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_2
+		name = JAP_kawasaki_nav_designer_2
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_offense
+
+		mutually_exclusive = { JAP_kawasaki_nav_designer_1 }
+		limit_to_equipment_type = {
+			mio_cat_eq_all_cruiser
+			mio_cat_eq_all_destroyer
+		}
+
+		position = { x = 2 y = 0 }
+
+		equipment_bonus = {
+			naval_speed = 0.1
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_3
+		name = JAP_kawasaki_nav_designer_3
+		icon = GFX_generic_mio_trait_icon_naval_range
+
+		mutually_exclusive = { JAP_kawasaki_nav_designer_4 }
+
+		position = { x = 6 y = 0 }
+		limit_to_equipment_type = {
+			ship_hull_submarine
+			ship_hull_carrier_submarine
+		}
+
+		equipment_bonus = {
+			naval_range = 0.1
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_4
+		name = JAP_kawasaki_nav_designer_4
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		mutually_exclusive = { JAP_kawasaki_nav_designer_3 }
+		limit_to_equipment_type = {
+			ship_hull_submarine
+			ship_hull_carrier_submarine
+		}
+
+
+		position = { x = 8 y = 0 }
+
+		equipment_bonus = {
+			torpedo_attack = 0.1
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_5
+		name = JAP_kawasaki_nav_designer_5
+		icon = GFX_generic_mio_trait_icon_naval_range
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_nav_designer_1 JAP_kawasaki_nav_designer_2 }
+
+		position = { x = 3 y = 1 }
+		limit_to_equipment_type = {
+			mio_cat_eq_all_cruiser
+			mio_cat_eq_all_destroyer
+		}
+
+		equipment_bonus = {
+			lg_attack = 0.1
+			surface_visibility = -0.1
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_6
+		name = JAP_kawasaki_nav_designer_6
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_nav_designer_4 JAP_kawasaki_nav_designer_3 }
+
+		limit_to_equipment_type = {
+			ship_hull_submarine
+			ship_hull_carrier_submarine
+		}
+
+		position = { x = 5 y = 1 }
+
+		equipment_bonus = {
+			naval_range = 0.05
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_7
+		name = JAP_kawasaki_nav_designer_7
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_nav_designer_5 JAP_kawasaki_nav_designer_6 }
+		all_parents = { JAP_kawasaki_nav_designer_21 }
+
+		position = { x = 4 y = 2 }
+
+		production_bonus = {
+			production_cost_factor = -0.05
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_8
+		name = JAP_kawasaki_nav_designer_8
+		icon = GFX_generic_mio_trait_icon_surface_detection
+
+		mutually_exclusive = { JAP_kawasaki_nav_designer_9 }
+
+
+		position = { x = 1 y = 3 }
+		limit_to_equipment_type = {
+			mio_cat_eq_all_cruiser
+			mio_cat_eq_all_destroyer
+		}
+
+		equipment_bonus = {
+			surface_detection = 0.1
+			sub_detection = 0.05
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_9
+		name = JAP_kawasaki_nav_designer_9
+		icon = GFX_generic_mio_trait_icon_lg_attack
+
+		mutually_exclusive = { JAP_kawasaki_nav_designer_8 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_cruiser
+			mio_cat_eq_all_destroyer
+		}
+
+		position = { x = 3 y = 3 }
+
+		equipment_bonus = {
+			lg_attack = 0.1
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_10
+		name = JAP_kawasaki_nav_designer_10
+		icon = GFX_generic_mio_department_icon_ship_submarine_offense
+
+		mutually_exclusive = { JAP_kawasaki_nav_designer_11 }
+
+		position = { x = 5 y = 3 }
+		limit_to_equipment_type = {
+			mio_cat_eq_all_cruiser
+			mio_cat_eq_all_destroyer
+		}
+
+		equipment_bonus = {
+			convoy_raiding_coordination = 0.1
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_11
+		name = JAP_kawasaki_nav_designer_11
+		icon = GFX_generic_mio_trait_icon_max_strength
+
+		mutually_exclusive = { JAP_kawasaki_nav_designer_10 }
+
+		limit_to_equipment_type = {
+			ship_hull_submarine
+			ship_hull_carrier_submarine
+		}
+
+		position = { x = 7 y = 3 }
+
+		equipment_bonus = {
+			max_strength = 0.2
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_12
+		name = JAP_kawasaki_nav_designer_12
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+
+		#mutually_exclusive = {  }
+
+		limit_to_equipment_type = {
+			ship_hull_submarine
+			ship_hull_carrier_submarine
+		}
+
+		any_parent = { JAP_kawasaki_nav_designer_11 JAP_kawasaki_nav_designer_10 }
+
+		position = { x = 6 y = 4 }
+
+		equipment_bonus = {
+			naval_torpedo_hit_chance_factor = 0.1
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_13
+		name = JAP_kawasaki_nav_designer_13
+		icon = GFX_generic_mio_trait_icon_lg_attack
+
+		#mutually_exclusive = {  }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_cruiser
+			mio_cat_eq_all_destroyer
+		}
+
+		any_parent = { JAP_kawasaki_nav_designer_8 JAP_kawasaki_nav_designer_9 }
+
+		position = { x = 2 y = 4 }
+
+		equipment_bonus = {
+			naval_light_gun_hit_chance_factor = 0.075
+			lg_armor_piercing = 0.15
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_14
+		name = JAP_kawasaki_nav_designer_14
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_nav_designer_7 }
+
+		position = { x = 4 y = 3 }
+
+		equipment_bonus = {
+			fuel_consumption = -0.1
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_15
+		name = JAP_kawasaki_nav_designer_15
+		icon = GFX_generic_mio_trait_icon_unique
+
+		#mutually_exclusive = {  }
+
+		all_parents = { JAP_kawasaki_nav_designer_14  }
+		any_parent = { JAP_kawasaki_nav_designer_8 JAP_kawasaki_nav_designer_9 JAP_kawasaki_nav_designer_10 JAP_kawasaki_nav_designer_11  }
+
+		position = { x = 4 y = 4 }
+
+		production_bonus = {
+			production_capacity_factor = 0.075
+			production_resource_need_factor = -0.1
+		}
+		equipment_bonus = {
+			naval_speed = 0.05
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_16
+		name = JAP_kawasaki_nav_designer_16
+		icon = GFX_generic_mio_department_icon_facilities
+
+		#mutually_exclusive = {  }
+
+		position = { x = 0 y = 1 }
+
+		on_complete = {
+			from = {
+				random_core_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_nav_designer_17
+		name = JAP_kawasaki_nav_designer_17
+		icon = GFX_generic_mio_department_icon_facilities
+
+		#mutually_exclusive = {  }
+
+		position = { x = 8 y = 1 }
+
+		on_complete = {
+			from = {
+				random_core_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_18
+		name = JAP_kawasaki_nav_designer_18
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_offense
+
+		#mutually_exclusive = {  }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_destroyer
+		}
+
+		any_parent = { JAP_kawasaki_nav_designer_16 }
+
+		position = { x = 0 y = 2 }
+
+		equipment_bonus = {
+			lg_attack = 0.033
+			lg_armor_piercing = 0.05
+			maximum_speed = 0.03
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_19
+		name = JAP_kawasaki_nav_designer_19
+		icon = GFX_generic_mio_trait_icon_max_strength
+
+		mutually_exclusive = { JAP_kawasaki_nav_designer_20 }
+
+		limit_to_equipment_type = {
+			ship_hull_submarine
+			ship_hull_carrier_submarine
+		}
+
+		any_parent = { JAP_kawasaki_nav_designer_17 }
+
+		position = { x = 7 y = 2 }
+
+		equipment_bonus = {
+			max_strength = 0.15
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_20
+		name = JAP_kawasaki_nav_designer_20
+		icon = GFX_generic_mio_trait_icon_max_strength
+
+		mutually_exclusive = { JAP_kawasaki_nav_designer_19 }
+
+		limit_to_equipment_type = {
+			ship_hull_submarine
+			ship_hull_carrier_submarine
+		}
+
+		any_parent = { JAP_kawasaki_nav_designer_17 }
+
+		position = { x = 8 y = 2 }
+
+		equipment_bonus = {
+			naval_range = 0.2
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_21
+		name = JAP_kawasaki_nav_designer_21
+		icon = GFX_generic_mio_trait_icon_unique
+
+		position = { x = 4 y = 0 }
+
+		available = {
+			from = {
+				mio:JAP_kawasaki_heavy_vehicles = {
+					is_mio_trait_completed = JAP_kawasaki_heavy_vehicles_21
+				}
+			}
+		}
+
+		on_complete = {
+			from = {
+				random_core_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		equipment_bonus = {
+			naval_range = 0.05
+			naval_speed = 0.05
+			fuel_consumption = -0.05
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_nav_designer_22
+		name = JAP_kawasaki_nav_designer_22
+		icon = GFX_generic_mio_department_icon_facilities
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_nav_designer_18 }
+
+		position = { x = 0 y = 3 }
+
+		on_complete = {
+			from = {
+				random_core_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token =JAP_kawasaki_nav_designer_23
+		name = JAP_kawasaki_nav_designer_23
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_offense
+
+		#mutually_exclusive = {  }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_cruiser
+		}
+
+		any_parent = { JAP_kawasaki_nav_designer_22 }
+
+		position = { x = 0 y = 4 }
+
+		equipment_bonus = {
+			lg_attack = 0.033
+			lg_armor_piercing = 0.05
+			maximum_speed = 0.03
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+
+JAP_mitsui_designer = {
+	icon = GFX_idea_nakajima
+
+	allowed = { original_tag = JAP }
+
+	equipment_type = {
+		mio_cat_eq_all_small_plane
+		mio_cat_eq_all_medium_plane
+		mio_cat_eq_all_large_plane
+		transport_plane_equipment
+	}
+
+	research_categories = {	mio_cat_all_light_fighter_and_modules mio_cat_all_medium_aircraft_and_modules mio_cat_all_heavy_aircraft_and_modules }
+	on_tech_research_completed = {
+		if = {
+			limit = { FROM = { has_idea = mitsui_ic } }
+			JAP_mitsui_ic_shared_ef_2 = yes
+			custom_effect_tooltip = JAP_mitsui_ic_shared_ef_tt
+		}
+		else = {
+			custom_effect_tooltip = JAP_mitsui_ic_shared_ef_tt_2
+		}
+	}
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_mitsui_designer_initial
+
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_size_up_requirement = -0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_1
+		name = JAP_mitsui_designer_1
+		icon = GFX_generic_mio_trait_icon_efficiency_cap 
+
+		#mutually_exclusive = {  }
+
+		position = { x = 0 y = 0 }
+
+		equipment_bonus = {
+			air_attack = 0.025
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.025
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_2
+		name = JAP_mitsui_designer_2
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		#mutually_exclusive = {  }
+		any_parent = { JAP_mitsui_designer_1 }
+
+		position = { x = 3 y = 0 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.033
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_3
+		name = JAP_mitsui_designer_3
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		mutually_exclusive = { JAP_mitsui_designer_4 }
+
+		any_parent = { JAP_mitsui_designer_1 }
+
+		position = { x = 0 y = 1 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.025
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_4
+		name = JAP_mitsui_designer_4
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		mutually_exclusive = { JAP_mitsui_designer_3 }
+
+		any_parent = { JAP_mitsui_designer_1 }
+
+		position = { x = 2 y = 1 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.075
+			production_efficiency_gain_factor = -0.15
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_5
+		name = JAP_mitsui_designer_5
+		icon = GFX_generic_mio_trait_icon_efficiency_gain 
+
+		#mutually_exclusive = {  }
+
+		position = { x = 8 y = 0 }
+
+		equipment_bonus = {
+			build_cost_ic = -0.015
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.033
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_6
+		name = JAP_mitsui_designer_6
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_mitsui_designer_5 }
+
+		position = { x = 5 y = 0 }
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_7
+		name = JAP_mitsui_designer_7
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		mutually_exclusive = { JAP_mitsui_designer_8 }
+		any_parent = { JAP_mitsui_designer_5 }
+
+		position = { x = 8 y = 1 }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_8
+		name = JAP_mitsui_designer_8
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		mutually_exclusive = { JAP_mitsui_designer_7 }
+
+		any_parent = { JAP_mitsui_designer_5 }
+
+		position = { x = 6 y = 1 }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.15
+			production_efficiency_cap_factor = -0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_9
+		name = JAP_mitsui_designer_9
+		icon = GFX_generic_mio_trait_icon_resources 
+
+		#mutually_exclusive = {  }
+
+		position = { x = 0 y = 4 }
+
+		production_bonus = {
+			production_resource_need_factor = -0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_10
+		name = JAP_mitsui_designer_10
+		icon = GFX_generic_mio_trait_icon_resources
+
+		#mutually_exclusive = {  }
+		any_parent = { JAP_mitsui_designer_9 }
+
+		position = { x = 3 y = 4 }
+
+		production_bonus = {
+			production_resource_need_factor = -0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_11
+		name = JAP_mitsui_designer_11
+		icon = GFX_generic_mio_trait_icon_resources
+
+		mutually_exclusive = { JAP_mitsui_designer_12 }
+
+		any_parent = { JAP_mitsui_designer_9 }
+
+		position = { x = 0 y = 3 }
+
+		production_bonus = {
+			production_resource_need_factor = -0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_12
+		name = JAP_mitsui_designer_12
+		icon = GFX_generic_mio_trait_icon_resources
+
+		mutually_exclusive = { JAP_mitsui_designer_11 }
+
+		any_parent = { JAP_mitsui_designer_9 }
+
+		position = { x = 2 y = 3 }
+
+		production_bonus = {
+			production_resource_need_factor = -0.15
+			production_cost_factor = 0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_13
+		name = JAP_mitsui_designer_13
+		icon = GFX_generic_mio_trait_icon_conversion_speed 
+
+		#mutually_exclusive = {  }
+
+		position = { x = 8 y = 4 }
+
+		production_bonus = {
+			production_conversion_speed_factor = 0.033
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_14
+		name = JAP_mitsui_designer_14
+		icon = GFX_generic_mio_trait_icon_conversion_speed
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_mitsui_designer_13 }
+
+		position = { x = 5 y = 4 }
+
+		production_bonus = {
+			production_conversion_speed_factor = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_15
+		name = JAP_mitsui_designer_15
+		icon = GFX_generic_mio_trait_icon_conversion_speed
+
+		mutually_exclusive = { JAP_mitsui_designer_16 }
+		any_parent = { JAP_mitsui_designer_13 }
+
+		position = { x = 8 y = 3 }
+
+		production_bonus = {
+			production_conversion_speed_factor = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_16
+		name = JAP_mitsui_designer_16
+		icon = GFX_generic_mio_trait_icon_conversion_speed
+
+		mutually_exclusive = { JAP_mitsui_designer_15 }
+
+		any_parent = { JAP_mitsui_designer_13 }
+
+		position = { x = 6 y = 3 }
+
+		production_bonus = {
+			production_conversion_speed_factor = 0.15
+		}
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = 0.15
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_17
+		name = JAP_mitsui_designer_17
+		icon = GFX_generic_mio_department_icon_plane_heavy_quality
+
+		
+
+		position = { x = 4 y = 0 }
+
+		limit_to_equipment_type = {
+			large_plane_airframe
+		}
+
+		equipment_bonus = {
+			strategic_attack = 0.1
+			air_range = 0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_18
+		name = JAP_mitsui_designer_18
+		icon = GFX_generic_mio_department_icon_plane_heavy_combat
+
+		
+
+		position = { x = 4 y = 1 }
+
+		any_parent = { JAP_mitsui_designer_17 }
+
+		limit_to_equipment_type = {
+			large_plane_airframe
+		}
+
+		equipment_bonus = {
+			air_defence = 0.05
+			air_attack = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_19
+		name = JAP_mitsui_designer_19
+		icon = GFX_generic_mio_trait_icon_unique
+		position = { x = 4 y = 4 }
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_20
+		name = JAP_mitsui_designer_20
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 3 y = 3 }
+		any_parent = { JAP_mitsui_designer_19 }
+		on_complete = {
+			from = {
+				add_political_power = 33
+				add_cic = 1000
+			}
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_21
+		name = JAP_mitsui_designer_21
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 5 y = 3 }
+
+		any_parent = { JAP_mitsui_designer_19 }
+		on_complete = {
+			from = {
+				random_core_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_22
+		name = JAP_mitsui_designer_22
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 2 y = 2 }
+		mutually_exclusive = { JAP_mitsui_designer_23 JAP_mitsui_designer_24 }
+
+		any_parent = { JAP_mitsui_designer_3 JAP_mitsui_designer_4 JAP_mitsui_designer_7 JAP_mitsui_designer_8 JAP_mitsui_designer_11 JAP_mitsui_designer_12 JAP_mitsui_designer_15 JAP_mitsui_designer_16 }
+		all_parents = { JAP_mitsui_designer_21 JAP_mitsui_designer_20 JAP_mitsui_designer_18 }
+		equipment_bonus = {
+			thrust = 0.2
+		}
+		production_bonus = {
+			production_resource_need_factor = 0.075
+			production_resource_penalty_factor = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_23
+		name = JAP_mitsui_designer_23
+		icon = GFX_generic_mio_trait_icon_air_superiority
+		position = { x = 4 y = 2 }
+		mutually_exclusive = { JAP_mitsui_designer_24 JAP_mitsui_designer_22 }
+
+		any_parent = { JAP_mitsui_designer_3 JAP_mitsui_designer_4 JAP_mitsui_designer_7 JAP_mitsui_designer_8 JAP_mitsui_designer_11 JAP_mitsui_designer_12 JAP_mitsui_designer_15 JAP_mitsui_designer_16 }
+		all_parents = { JAP_mitsui_designer_21 JAP_mitsui_designer_20 JAP_mitsui_designer_18 }
+		equipment_bonus = {
+			air_superiority = 0.15
+			air_range = -0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsui_designer_24
+		name = JAP_mitsui_designer_24
+		icon = GFX_generic_mio_trait_icon_resources
+		position = { x = 6 y = 2 }
+
+		mutually_exclusive = { JAP_mitsui_designer_23 JAP_mitsui_designer_22 }
+
+		any_parent = { JAP_mitsui_designer_3 JAP_mitsui_designer_4 JAP_mitsui_designer_7 JAP_mitsui_designer_8 JAP_mitsui_designer_11 JAP_mitsui_designer_12 JAP_mitsui_designer_15 JAP_mitsui_designer_16 }
+		all_parents = { JAP_mitsui_designer_21 JAP_mitsui_designer_20 JAP_mitsui_designer_18 }
+		equipment_bonus = {
+			air_range = 0.075
+			air_defence = -0.075
+		}
+	}
+}
+
+JAP_kawasaki_designer = {
+	icon = GFX_idea_kawasaki
+
+	allowed = { original_tag = JAP }
+
+	equipment_type = {
+		mio_cat_eq_all_medium_plane
+		transport_plane_equipment
+	}
+
+	visible = {
+		from = {
+			not = { has_country_flag = JAP_kawasaki_designer_1_flg }
+		}
+	}
+
+	research_categories = {	mio_cat_all_medium_aircraft_and_modules }
+	on_tech_research_completed = {
+		if = {
+			limit = { FROM = { has_idea = kawasaki_ic } }
+			JAP_kawasaki_ic_shared_ef_3 = yes
+			custom_effect_tooltip = JAP_kawasaki_ic_shared_ef_tt
+		}
+		else = {
+			custom_effect_tooltip = JAP_kawasaki_ic_shared_ef_tt_2
+		}
+	}
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_kawasaki_designer_initial
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+		equipment_bonus = {
+			air_defence = 0.10
+			air_range = 0.075
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.075
+			military_industrial_organization_size_up_requirement = -0.1
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_1
+		name = JAP_kawasaki_designer_1
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 4 y = 2 }
+
+		#mutually_exclusive = {  }
+
+		#any_parent = {   }
+		on_complete = {
+			custom_effect_tooltip = JAP_kawasaki_designer_tt
+			custom_effect_tooltip = wol_reset_mio_tt
+			hidden_effect = {
+				JAP_kawaskai_designer_25_ef_3 = yes
+			}
+			from = {
+				set_country_flag = JAP_kawasaki_designer_1_flg
+			}
+		}
+		equipment_bonus = {
+			sub_detection = 0.1
+			surface_detection = 0.1
+			air_superiority = 0.025
+			air_range = 0.075
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_2
+		name = JAP_kawasaki_designer_2
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+		position = { x = 3 y = 1 }
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_designer_1  }
+		equipment_bonus = {
+			air_ground_attack = 0.1
+			build_cost_ic = 0.1
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_3
+		name = JAP_kawasaki_designer_3
+		icon = GFX_generic_mio_trait_icon_air_attack
+		position = { x = 5 y = 1 }
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_designer_1 }
+		on_complete = {
+			
+		}
+		equipment_bonus = {
+			air_attack = 0.1
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_4
+		name = JAP_kawasaki_designer_4
+		icon = GFX_generic_mio_department_icon_plane_medium_quality
+		position = { x = 0 y = 0 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_5 }
+
+		any_parent = { JAP_kawasaki_designer_2 }
+		on_complete = {
+			from = {
+				air_experience = 33
+			}
+		}
+		equipment_bonus = {
+			air_ground_attack = 0.1
+			fuel_consumption = -0.05
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_5
+		name = JAP_kawasaki_designer_5
+		icon = GFX_generic_mio_department_icon_tank_general_spg
+		position = { x = 2 y = 0 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_4 }
+
+		any_parent = { JAP_kawasaki_designer_2 }
+		on_complete = {
+			from = {
+				army_experience = 33
+			}
+		}
+		equipment_bonus = {
+			air_ground_attack = 0.1
+			air_bombing = 0.1
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_6
+		name = JAP_kawasaki_designer_6
+		icon = GFX_generic_mio_department_icon_plane_medium_combat
+		position = { x = 6 y = 0 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_7 }
+
+		any_parent = { JAP_kawasaki_designer_3 }
+		on_complete = {
+			
+		}
+		equipment_bonus = {
+			air_attack = 0.05
+			air_range = 0.075
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_7
+		name = JAP_kawasaki_designer_7
+		icon = GFX_generic_mio_department_icon_plane_medium_line_efficiency
+		position = { x = 8 y = 0 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_6 }
+
+		any_parent = { JAP_kawasaki_designer_3 }
+		on_complete = {
+			
+		}
+		equipment_bonus = {
+			air_defence = 0.075
+
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_8
+		name = JAP_kawasaki_designer_8
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+		position = { x = 3 y = 3 }
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_designer_1  }
+		equipment_bonus = {
+			air_defence = 0.1
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_9
+		name = JAP_kawasaki_designer_9
+		icon = GFX_generic_mio_trait_icon_air_attack
+		position = { x = 5 y = 3 }
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_designer_1 }
+		on_complete = {
+			
+		}
+		equipment_bonus = {
+			air_range = 0.125
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_10
+		name = JAP_kawasaki_designer_10
+		icon = GFX_generic_mio_department_icon_plane_medium_quality
+		position = { x = 0 y = 4 }
+		mutually_exclusive = { JAP_kawasaki_designer_11 }
+		any_parent = { JAP_kawasaki_designer_8 }
+		equipment_bonus = {
+			air_defence = 0.15
+			air_attack = 0.15
+		}
+		production_bonus = {
+			production_cost_factor = 0.025
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_11
+		name = JAP_kawasaki_designer_11
+		icon = GFX_generic_mio_trait_icon_air_superiority
+		position = { x = 2 y = 4 }
+		mutually_exclusive = { JAP_kawasaki_designer_10 }
+		any_parent = { JAP_kawasaki_designer_8 }
+		equipment_bonus = {
+			air_defence = 0.1
+			air_superiority = 0.025
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_12
+		name = JAP_kawasaki_designer_12
+		icon = GFX_generic_mio_trait_icon_sub_detection
+		position = { x = 6 y = 4 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_13 }
+
+		any_parent = { JAP_kawasaki_designer_9 }
+		on_complete = {
+			
+		}
+		equipment_bonus = {
+			air_range = 0.125
+			sub_detection = 0.05
+			naval_strike_attack = 0.1
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_13
+		name = JAP_kawasaki_designer_13
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		position = { x = 8 y = 4 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_12 }
+
+		any_parent = { JAP_kawasaki_designer_9 }
+		on_complete = {
+			
+		}
+		equipment_bonus = {
+			air_range = 0.125
+			fuel_consumption = -0.15
+			naval_strike_attack = 0.1
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_14
+		name = JAP_kawasaki_designer_14
+		icon = GFX_generic_mio_trait_icon_unique
+		position = { x = 0 y = 2 }
+
+		#mutually_exclusive = {  }
+		available = {
+			from = {
+				mio:JAP_kawasaki_heavy_vehicles = {
+					is_mio_trait_completed = JAP_kawasaki_heavy_vehicles_19
+				}
+			}
+		}
+		#any_parent = {  }
+		equipment_bonus = {
+			fuel_consumption = -0.05
+			air_range = 0.05
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_15
+		name = JAP_kawasaki_designer_15
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 8 y = 2 }
+
+		#mutually_exclusive = {  }
+
+		#any_parent = {  }
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.15
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_16
+		name = JAP_kawasaki_designer_16
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		position = { x = 1 y = 1 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_17 }
+
+		any_parent = { JAP_kawasaki_designer_14 }
+		equipment_bonus = {
+			fuel_consumption = -0.05
+			build_cost_ic = -0.025
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_17
+		name = JAP_kawasaki_designer_17
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		position = { x = 2 y = 1 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_16 }
+
+		any_parent = { JAP_kawasaki_designer_14 }
+		equipment_bonus = {
+			maximum_speed = 0.15
+			build_cost_ic = -0.025
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_18
+		name = JAP_kawasaki_designer_18
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		position = { x = 7 y = 1 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_19 }
+
+		any_parent = { JAP_kawasaki_designer_15 }
+		on_complete = {
+			from = {
+				random_core_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_19
+		name = JAP_kawasaki_designer_19
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = { x = 6 y = 1 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_18 }
+
+		any_parent = { JAP_kawasaki_designer_15 }
+		on_complete = {
+			from = {
+				random_core_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+
+	}
+	trait = {
+		token = JAP_kawasaki_designer_20
+		name = JAP_kawasaki_designer_20
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = { x = 6 y = 2 }
+
+		any_parent = { JAP_kawasaki_designer_18 JAP_kawasaki_designer_19 }
+		on_complete = {
+			from = {
+				random_core_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+}
+JAP_kawasaki_designer_upgrade_1 = {
+	icon = GFX_idea_kawasaki
+
+	allowed = { original_tag = JAP }
+
+	equipment_type = {
+		mio_cat_eq_all_medium_plane
+		transport_plane_equipment
+	}
+
+	research_categories = {	mio_cat_all_medium_aircraft_and_modules electronics radar_tech }
+	on_tech_research_completed = {
+		if = {
+			limit = { FROM = { has_idea = kawasaki_ic } }
+			JAP_kawasaki_ic_shared_ef_3 = yes
+			custom_effect_tooltip = JAP_kawasaki_ic_shared_ef_tt
+		}
+		else = {
+			custom_effect_tooltip = JAP_kawasaki_ic_shared_ef_tt_2
+		}
+	}
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+	visible = {
+		from = {
+			mio:JAP_kawasaki_designer = {
+				is_mio_trait_completed = JAP_kawasaki_designer_1
+			}
+		}
+	}
+
+	initial_trait = {
+		name = JAP_kawasaki_designer_initial
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+		equipment_bonus = {
+			air_defence = 0.10
+			air_range = 0.075
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.075
+			military_industrial_organization_size_up_requirement = -0.1
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_1_1
+		name = JAP_kawasaki_designer_1
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 4 y = 2 }
+
+		#mutually_exclusive = {  }
+
+		#any_parent = {   }
+		on_complete = {
+			custom_effect_tooltip = JAP_kawasaki_designer_tt
+			#hidden_effect = {
+			#	JAP_kawaskai_designer_25_ef_3 = yes
+			#}
+		}
+		equipment_bonus = {
+			sub_detection = 0.1
+			surface_detection = 0.1
+			air_superiority = 0.025
+			air_range = 0.075
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_2_1
+		name = JAP_kawasaki_designer_2
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+		position = { x = 3 y = 1 }
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_designer_1_1  }
+		equipment_bonus = {
+			air_ground_attack = 0.1
+			build_cost_ic = 0.1
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_3_1
+		name = JAP_kawasaki_designer_3
+		icon = GFX_generic_mio_trait_icon_air_attack
+		position = { x = 5 y = 1 }
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_designer_1_1 }
+		on_complete = {
+			
+		}
+		equipment_bonus = {
+			air_attack = 0.1
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_4_1
+		name = JAP_kawasaki_designer_4
+		icon = GFX_generic_mio_department_icon_plane_medium_quality
+		position = { x = 0 y = 0 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_5_1 }
+
+		any_parent = { JAP_kawasaki_designer_2_1 }
+		on_complete = {
+			from = {
+				air_experience = 33
+			}
+		}
+		equipment_bonus = {
+			air_ground_attack = 0.1
+			fuel_consumption = -0.05
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_5_1
+		name = JAP_kawasaki_designer_5
+		icon = GFX_generic_mio_department_icon_tank_general_spg
+		position = { x = 2 y = 0 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_4_1 }
+
+		any_parent = { JAP_kawasaki_designer_2_1 }
+		on_complete = {
+			from = {
+				army_experience = 33
+			}
+		}
+		equipment_bonus = {
+			air_ground_attack = 0.1
+			air_bombing = 0.1
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_6_1
+		name = JAP_kawasaki_designer_6
+		icon = GFX_generic_mio_department_icon_plane_medium_combat
+		position = { x = 6 y = 0 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_7_1 }
+
+		any_parent = { JAP_kawasaki_designer_3_1 }
+		on_complete = {
+			
+		}
+		equipment_bonus = {
+			air_attack = 0.05
+			air_range = 0.075
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_7_1
+		name = JAP_kawasaki_designer_7
+		icon = GFX_generic_mio_department_icon_plane_medium_line_efficiency
+		position = { x = 8 y = 0 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_6_1 }
+
+		any_parent = { JAP_kawasaki_designer_3_1 }
+		on_complete = {
+			
+		}
+		equipment_bonus = {
+			air_defence = 0.075
+
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_8_1
+		name = JAP_kawasaki_designer_8
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+		position = { x = 3 y = 3 }
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_designer_1_1  }
+		equipment_bonus = {
+			air_defence = 0.1
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_9_1
+		name = JAP_kawasaki_designer_9
+		icon = GFX_generic_mio_trait_icon_air_attack
+		position = { x = 5 y = 3 }
+
+		#mutually_exclusive = {  }
+
+		any_parent = { JAP_kawasaki_designer_1_1 }
+		on_complete = {
+			
+		}
+		equipment_bonus = {
+			air_range = 0.125
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_10_1
+		name = JAP_kawasaki_designer_10
+		icon = GFX_generic_mio_department_icon_plane_medium_quality
+		position = { x = 0 y = 4 }
+		mutually_exclusive = { JAP_kawasaki_designer_11_1 }
+		any_parent = { JAP_kawasaki_designer_8_1 }
+		equipment_bonus = {
+			air_defence = 0.15
+			air_attack = 0.15
+		}
+		production_bonus = {
+			production_cost_factor = 0.025
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_11_1
+		name = JAP_kawasaki_designer_11
+		icon = GFX_generic_mio_trait_icon_air_superiority
+		position = { x = 2 y = 4 }
+		mutually_exclusive = { JAP_kawasaki_designer_10_1 }
+		any_parent = { JAP_kawasaki_designer_8_1 }
+		equipment_bonus = {
+			air_defence = 0.1
+			air_superiority = 0.025
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_12_1
+		name = JAP_kawasaki_designer_12
+		icon = GFX_generic_mio_trait_icon_sub_detection
+		position = { x = 6 y = 4 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_13_1 }
+
+		any_parent = { JAP_kawasaki_designer_9_1 }
+		on_complete = {
+			
+		}
+		equipment_bonus = {
+			air_range = 0.125
+			sub_detection = 0.05
+			naval_strike_attack = 0.1
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_13_1
+		name = JAP_kawasaki_designer_13
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		position = { x = 8 y = 4 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_12_1 }
+
+		any_parent = { JAP_kawasaki_designer_9_1 }
+		on_complete = {
+			
+		}
+		equipment_bonus = {
+			air_range = 0.125
+			fuel_consumption = -0.15
+			naval_strike_attack = 0.1
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_14_1
+		name = JAP_kawasaki_designer_14
+		icon = GFX_generic_mio_trait_icon_unique
+		position = { x = 0 y = 2 }
+
+		#mutually_exclusive = {  }
+		available = {
+			from = {
+				mio:JAP_kawasaki_heavy_vehicles = {
+					is_mio_trait_completed = JAP_kawasaki_heavy_vehicles_19
+				}
+			}
+		}
+		#any_parent = {  }
+		equipment_bonus = {
+			fuel_consumption = -0.05
+			air_range = 0.05
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_15_1
+		name = JAP_kawasaki_designer_15
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 8 y = 2 }
+
+		#mutually_exclusive = {  }
+
+		#any_parent = {  }
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.15
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_16_1
+		name = JAP_kawasaki_designer_16
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		position = { x = 1 y = 1 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_17_1 }
+
+		any_parent = { JAP_kawasaki_designer_14_1 }
+		equipment_bonus = {
+			fuel_consumption = -0.05
+			build_cost_ic = -0.025
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_17_1
+		name = JAP_kawasaki_designer_17
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		position = { x = 2 y = 1 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_16_1 }
+
+		any_parent = { JAP_kawasaki_designer_14_1 }
+		equipment_bonus = {
+			maximum_speed = 0.15
+			build_cost_ic = -0.025
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_18_1
+		name = JAP_kawasaki_designer_18
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		position = { x = 7 y = 1 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_19_1 }
+
+		any_parent = { JAP_kawasaki_designer_15_1 }
+		on_complete = {
+			from = {
+				random_core_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+	trait = {
+		token = JAP_kawasaki_designer_19_1
+		name = JAP_kawasaki_designer_19
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = { x = 6 y = 1 }
+
+		mutually_exclusive = { JAP_kawasaki_designer_18_1 }
+
+		any_parent = { JAP_kawasaki_designer_15_1 }
+		on_complete = {
+			from = {
+				random_core_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+
+	}
+	trait = {
+		token = JAP_kawasaki_designer_20_1
+		name = JAP_kawasaki_designer_20
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = { x = 6 y = 2 }
+
+		any_parent = { JAP_kawasaki_designer_18_1 JAP_kawasaki_designer_19_1 }
+		on_complete = {
+			from = {
+				random_core_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+}
+
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+JAP_mitsui_arms_manufactoring = {
+
+	icon = GFX_idea_mitsui
+
+	equipment_type = { infantry_equipment support_equipment }
+	research_categories = { infantry_weapons support_tech }
+	on_tech_research_completed = {
+		if = {
+			limit = { FROM = { has_idea = mitsui_ic } }
+			JAP_mitsui_ic_shared_ef_3 = yes
+			custom_effect_tooltip = JAP_mitsui_ic_shared_ef_tt
+		}
+		else = {
+			custom_effect_tooltip = JAP_mitsui_ic_shared_ef_tt_2
+		}
+	}
+	allowed = { original_tag = JAP }
+
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_mitsui_arms_manufactoring_initial
+		production_bonus = {
+			production_cost_factor = -0.03
+			production_efficiency_cap_factor = 0.03
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_size_up_requirement = -0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_1
+		name = JAP_mitsui_arms_manufactoring_1
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		position = { x = 1 y = 0 }
+
+		#any_parent = { JAP_kawasaki_designer_18 JAP_kawasaki_designer_19_1 }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = 0.015
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_2
+		name = JAP_mitsui_arms_manufactoring_2
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		position = { x = 3 y = 0 }
+
+		#any_parent = { JAP_kawasaki_designer_18 JAP_kawasaki_designer_19_1 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.033
+		}
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = 0.015
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_3
+		name = JAP_mitsui_arms_manufactoring_3
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+		position = { x = 5 y = 0 }
+
+		#any_parent = { JAP_kawasaki_designer_18 JAP_kawasaki_designer_19_1 }
+
+		production_bonus = {
+			production_resource_need_factor = -0.05
+			production_resource_penalty_factor = -0.025
+		}
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = 0.015
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_4
+		name = JAP_mitsui_arms_manufactoring_4
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = { x = 7 y = 0 }
+
+		#any_parent = { JAP_kawasaki_designer_18 JAP_kawasaki_designer_19_1 }
+
+		production_bonus = {
+			production_cost_factor = -0.033
+		}
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = 0.015
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_5
+		name = JAP_mitsui_arms_manufactoring_5
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		position = { x = 0 y = 1 }
+
+		any_parent = { JAP_mitsui_arms_manufactoring_1 }
+
+		mutually_exclusive = { JAP_mitsui_arms_manufactoring_6 }
+
+		limit_to_equipment_type = {
+			infantry_equipment
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.15
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_6
+		name = JAP_mitsui_arms_manufactoring_6
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+		position = { x = 2 y = 1 }
+
+		any_parent = { JAP_mitsui_arms_manufactoring_1 }
+
+		mutually_exclusive = { JAP_mitsui_arms_manufactoring_5 }
+
+		limit_to_equipment_type = {
+			infantry_equipment
+		}
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+			production_efficiency_gain_factor = -0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_7
+		name = JAP_mitsui_arms_manufactoring_7
+		icon = GFX_generic_mio_trait_icon_resources
+		position = { x = 6 y = 1 }
+
+		any_parent = { JAP_mitsui_arms_manufactoring_4 }
+
+		mutually_exclusive = { JAP_mitsui_arms_manufactoring_8 }
+
+		limit_to_equipment_type = {
+			support_equipment
+		}
+
+		production_bonus = {
+			production_resource_need_factor = -0.33
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_8
+		name = JAP_mitsui_arms_manufactoring_8
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = { x = 8 y = 1 }
+
+		any_parent = { JAP_mitsui_arms_manufactoring_4 }
+
+		mutually_exclusive = { JAP_mitsui_arms_manufactoring_7 }
+
+		limit_to_equipment_type = {
+			support_equipment
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.067
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_9
+		name = JAP_mitsui_arms_manufactoring_9
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 4 y = 1 }
+
+		any_parent = { JAP_mitsui_arms_manufactoring_4 JAP_mitsui_arms_manufactoring_3 JAP_mitsui_arms_manufactoring_2 JAP_mitsui_arms_manufactoring_1 }
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.05
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_10
+		name = JAP_mitsui_arms_manufactoring_10
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+		position = { x = 3 y = 2 }
+
+		any_parent = { JAP_mitsui_arms_manufactoring_5 JAP_mitsui_arms_manufactoring_6 }
+		all_parents ={ JAP_mitsui_arms_manufactoring_9 }
+
+
+		mutually_exclusive = { JAP_mitsui_arms_manufactoring_11 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_11
+		name = JAP_mitsui_arms_manufactoring_11
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = { x = 5 y = 2 }
+
+		any_parent = { JAP_mitsui_arms_manufactoring_7 JAP_mitsui_arms_manufactoring_8 }
+		all_parents ={ JAP_mitsui_arms_manufactoring_9 }
+
+		mutually_exclusive = { JAP_mitsui_arms_manufactoring_10 }
+
+		production_bonus = {
+			production_cost_factor = -0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_12
+		name = JAP_mitsui_arms_manufactoring_12
+		icon = GFX_generic_mio_trait_icon_unique
+		position = { x = 4 y = 3 }
+
+		any_parent = { JAP_mitsui_arms_manufactoring_11 JAP_mitsui_arms_manufactoring_10 }
+
+		production_bonus = {
+			production_cost_factor = -0.05
+			production_efficiency_cap_factor = 0.03
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_13
+		name = JAP_mitsui_arms_manufactoring_13
+		icon = GFX_generic_mio_trait_icon_defense
+		position = { x = 1 y = 2 }
+
+		any_parent = { JAP_mitsui_arms_manufactoring_5 JAP_mitsui_arms_manufactoring_6 }
+
+		equipment_bonus = {
+			defense = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_14
+		name = JAP_mitsui_arms_manufactoring_14
+		icon = GFX_generic_mio_trait_icon_defense
+		position = { x = 7 y = 2 }
+
+		any_parent = { JAP_mitsui_arms_manufactoring_7 JAP_mitsui_arms_manufactoring_8 }
+
+		equipment_bonus = {
+			reliability = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_15
+		name = JAP_mitsui_arms_manufactoring_15
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 1 y = 3 }
+
+		#any_parent = { JAP_mitsui_arms_manufactoring_5 JAP_mitsui_arms_manufactoring_6 }
+
+		on_complete = {
+			from = {
+				add_cic = 750
+				FROM = {
+					282 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_16
+		name = JAP_mitsui_arms_manufactoring_16
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 7 y = 3 }
+
+		#any_parent = { JAP_mitsui_arms_manufactoring_7 JAP_mitsui_arms_manufactoring_8 }
+
+		on_complete = {
+			FROM = {
+				add_political_power = 33
+				532 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_17
+		name = JAP_mitsui_arms_manufactoring_17
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 0 y = 4 }
+
+		any_parent = { JAP_mitsui_arms_manufactoring_15 }
+		mutually_exclusive = { JAP_mitsui_arms_manufactoring_18 }
+
+		on_complete = {
+			from = {
+				add_cic = 750
+				FROM = {
+					282 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_18
+		name = JAP_mitsui_arms_manufactoring_18
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 2 y = 4 }
+
+		any_parent = { JAP_mitsui_arms_manufactoring_15 }
+		mutually_exclusive = { JAP_mitsui_arms_manufactoring_17 }
+
+		on_complete = {
+			FROM = {
+				add_political_power = 33
+				282 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_19
+		name = JAP_mitsui_arms_manufactoring_19
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 6 y = 4 }
+
+		any_parent = { JAP_mitsui_arms_manufactoring_16 }
+		mutually_exclusive = { JAP_mitsui_arms_manufactoring_20 }
+
+		on_complete = {
+			from = {
+				FROM = {
+					532 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsui_arms_manufactoring_20
+		name = JAP_mitsui_arms_manufactoring_20
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 8 y = 4 }
+
+		any_parent = { JAP_mitsui_arms_manufactoring_16 }
+		mutually_exclusive = { JAP_mitsui_arms_manufactoring_19 }
+
+		on_complete = {
+			FROM = {
+				532 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.02
+		}
+	}
+}
+
+JAP_sumitomo_arms_manufactoring = {
+
+	icon = GFX_idea_sumitomo
+
+	equipment_type = { infantry_equipment }
+	research_categories = { infantry_weapons cat_special_forces_generic }
+	on_tech_research_completed = {
+		if = {
+			limit = { FROM = { has_idea = sumitomo_ic } }
+			JAP_sumitomo_ic_shared_ef_3 = yes
+			custom_effect_tooltip = JAP_sumitomo_ic_shared_ef_tt
+		}
+		else = {
+			custom_effect_tooltip = JAP_sumitomo_ic_shared_ef_tt_2
+		}
+	}
+	allowed = { original_tag = JAP }
+
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_sumitomo_arms_manufactoring_initial
+		equipment_bonus = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = -0.075
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_size_up_requirement = -0.25
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_1
+		name = JAP_sumitomo_arms_manufactoring_1
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		position = { x = 0 y = 0 }
+
+		#any_parent = {  }
+		mutually_exclusive = { JAP_sumitomo_arms_manufactoring_2 }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			build_cost_ic = 0.02
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_2
+		name = JAP_sumitomo_arms_manufactoring_2
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		position = { x = 1 y = 0 }
+
+		#any_parent = {  }
+		mutually_exclusive = { JAP_sumitomo_arms_manufactoring_1 }
+
+		equipment_bonus = {
+			breakthrough = 0.05
+			build_cost_ic = 0.02
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_3
+		name = JAP_sumitomo_arms_manufactoring_3
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		position = { x = 8 y = 0 }
+
+		#any_parent = {  }
+		mutually_exclusive = { JAP_sumitomo_arms_manufactoring_4 }
+
+		on_complete = {
+			
+		}
+		equipment_bonus = {
+			hard_attack = 0.33
+			build_cost_ic = 0.02
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_4
+		name = JAP_sumitomo_arms_manufactoring_4
+		icon = GFX_generic_mio_trait_icon_ap_attack
+		position = { x = 7 y = 0 }
+
+		#any_parent = {  }
+		mutually_exclusive = { JAP_sumitomo_arms_manufactoring_3 }
+
+		equipment_bonus = {
+			ap_attack = 0.075
+			build_cost_ic = 0.02
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_5
+		name = JAP_sumitomo_arms_manufactoring_5
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		position = { x = 1 y = 1 }
+
+		any_parent = { JAP_sumitomo_arms_manufactoring_1 JAP_sumitomo_arms_manufactoring_2 }
+		mutually_exclusive = { JAP_sumitomo_arms_manufactoring_6 }
+
+		equipment_bonus = {
+			maximum_speed = 0.35
+		}
+		production_bonus = {
+			production_cost_factor = 0.1
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_6
+		name = JAP_sumitomo_arms_manufactoring_6
+		icon = GFX_generic_mio_trait_icon_defense
+		position = { x = 2 y = 1 }
+
+		any_parent = { JAP_sumitomo_arms_manufactoring_2 JAP_sumitomo_arms_manufactoring_1 }
+		mutually_exclusive = { JAP_sumitomo_arms_manufactoring_5 }
+
+		equipment_bonus = {
+			defense = 0.15
+		}
+		production_bonus = {
+			production_cost_factor = 0.1
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_7
+		name = JAP_sumitomo_arms_manufactoring_7
+		icon = GFX_generic_mio_trait_icon_ap_attack
+		position = { x = 7 y = 1 }
+
+		any_parent = { JAP_sumitomo_arms_manufactoring_3 JAP_sumitomo_arms_manufactoring_4 }
+		mutually_exclusive = { JAP_sumitomo_arms_manufactoring_8 }
+
+		equipment_bonus = {
+			hard_attack = 0.2
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = -0.1
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_8
+		name = JAP_sumitomo_arms_manufactoring_8
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		position = { x = 6 y = 1 }
+
+		any_parent = { JAP_sumitomo_arms_manufactoring_4 JAP_sumitomo_arms_manufactoring_3 }
+		mutually_exclusive = { JAP_sumitomo_arms_manufactoring_7 }
+
+		equipment_bonus = {
+			ap_attack  = 0.1
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = -0.1
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_9
+		name = JAP_sumitomo_arms_manufactoring_9
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 1 y = 3 }
+
+		any_parent = { JAP_sumitomo_arms_manufactoring_5 JAP_sumitomo_arms_manufactoring_6 }
+		mutually_exclusive = { JAP_sumitomo_arms_manufactoring_10 JAP_sumitomo_arms_manufactoring_11 }
+
+		equipment_bonus = {
+			soft_attack = 0.01
+			hard_attack = 0.01
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_10
+		name = JAP_sumitomo_arms_manufactoring_10
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 2 y = 3 }
+
+		any_parent = { JAP_sumitomo_arms_manufactoring_5 JAP_sumitomo_arms_manufactoring_6 }
+		mutually_exclusive = { JAP_sumitomo_arms_manufactoring_9 JAP_sumitomo_arms_manufactoring_11 }
+
+		on_complete = {
+			from = {
+				army_experience = 10
+			}
+		}
+		equipment_bonus = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+			build_cost_ic = 0.01
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_11
+		name = JAP_sumitomo_arms_manufactoring_11
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 3 y = 3 }
+
+		any_parent = { JAP_sumitomo_arms_manufactoring_5 JAP_sumitomo_arms_manufactoring_6 }
+		mutually_exclusive = { JAP_sumitomo_arms_manufactoring_10 JAP_sumitomo_arms_manufactoring_9 }
+
+		on_complete = {
+			from = {
+				army_experience = 33
+			}
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			build_cost_ic = 0.025
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_12
+		name = JAP_sumitomo_arms_manufactoring_12
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 7 y = 3 }
+
+		any_parent = { JAP_sumitomo_arms_manufactoring_7 JAP_sumitomo_arms_manufactoring_8 }
+		mutually_exclusive = { JAP_sumitomo_arms_manufactoring_13 JAP_sumitomo_arms_manufactoring_14 }
+
+		on_complete = {
+			
+		}
+		equipment_bonus = {
+			defense = 0.01
+			breakthrough = 0.01
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_13
+		name = JAP_sumitomo_arms_manufactoring_13
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 6 y = 3 }
+
+		any_parent = { JAP_sumitomo_arms_manufactoring_7 JAP_sumitomo_arms_manufactoring_8 }
+		mutually_exclusive = { JAP_sumitomo_arms_manufactoring_12 JAP_sumitomo_arms_manufactoring_14 }
+
+		equipment_bonus = {
+			defense = 0.03
+			breakthrough = 0.03
+			build_cost_ic = 0.01
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.025
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_14
+		name = JAP_sumitomo_arms_manufactoring_14
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 5 y = 3 }
+
+		any_parent = { JAP_sumitomo_arms_manufactoring_7 JAP_sumitomo_arms_manufactoring_8 }
+		mutually_exclusive = { JAP_sumitomo_arms_manufactoring_12 JAP_sumitomo_arms_manufactoring_13 }
+
+		equipment_bonus = {
+			defense = 0.05
+			breakthrough = 0.05
+			build_cost_ic = 0.025
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.075
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_16
+		name = JAP_sumitomo_arms_manufactoring_16
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 3 y = 0 }
+
+		#any_parent = {  }
+		#all_parents = {  }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_17
+		name = JAP_sumitomo_arms_manufactoring_17
+		icon = GFX_generic_mio_trait_icon_entrenchment
+		position = { x = 5 y = 0 }
+
+		#any_parent = { JAP_sumitomo_arms_manufactoring_16 }
+		#all_parents = {  }
+
+		equipment_bonus = {
+			entrenchment = 20
+		}
+		on_complete = {
+			custom_effect_tooltip = wierd_scale_tt
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_18
+		name = JAP_sumitomo_arms_manufactoring_18
+		icon = GFX_generic_mio_department_icon_tank_general_at
+		position = { x = 4 y = 1 }
+
+		any_parent = { JAP_sumitomo_arms_manufactoring_17 JAP_sumitomo_arms_manufactoring_16 }
+		#all_parents = {  }
+
+		equipment_bonus = {
+			hard_attack = 0.3
+		}
+		production_bonus = {
+			production_resource_need_factor = 0.15
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_19
+		name = JAP_sumitomo_arms_manufactoring_19
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = { x = 4 y = 2 }
+
+		any_parent = { JAP_sumitomo_arms_manufactoring_18 }
+		#all_parents = {  }
+
+		equipment_bonus = {
+			reliability = 0.15
+			build_cost_ic = 0.075
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_20
+		name = JAP_sumitomo_arms_manufactoring_20
+		icon = GFX_generic_mio_department_icon_tank_general_spg
+		position = { x = 4 y = 3 }
+
+		any_parent = { JAP_sumitomo_arms_manufactoring_19 }
+		#all_parents = {  }
+
+		equipment_bonus = {
+			defense = 0.05
+			breakthrough = 0.05
+			hardness = 75
+		}
+		on_complete = {
+			custom_effect_tooltip = wierd_scale_tt
+		}
+		production_bonus = {
+			production_cost_factor = 0.05
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_21
+		name = JAP_sumitomo_arms_manufactoring_21
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 0 y = 2 }
+
+		on_complete = {
+			FROM = {
+				282 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_22
+		name = JAP_sumitomo_arms_manufactoring_22
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 8 y = 2 }
+
+		on_complete = {
+			FROM = {
+				528 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_23
+		name = JAP_sumitomo_arms_manufactoring_23
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 0 y = 4 }
+
+		any_parent = { JAP_sumitomo_arms_manufactoring_21 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_24
+		name = JAP_sumitomo_arms_manufactoring_24
+		icon = GFX_generic_mio_department_icon_facilities
+		position = { x = 8 y = 4 }
+
+		any_parent = { JAP_sumitomo_arms_manufactoring_22 }
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_arms_manufactoring_15
+		name = JAP_sumitomo_arms_manufactoring_15
+		icon = GFX_generic_mio_trait_icon_unique
+		position = { x = 4 y = 4 }
+
+		any_parent = { JAP_sumitomo_arms_manufactoring_9 JAP_sumitomo_arms_manufactoring_10 JAP_sumitomo_arms_manufactoring_11 JAP_sumitomo_arms_manufactoring_12 JAP_sumitomo_arms_manufactoring_13 JAP_sumitomo_arms_manufactoring_14 }
+		all_parents = { JAP_sumitomo_arms_manufactoring_20 }
+
+		equipment_bonus = {
+			defense = 0.05
+			breakthrough = 0.05
+			soft_attack = 0.075
+			hard_attack = 0.25
+			entrenchment = 10
+			build_cost_ic = 0.2
+		}
+		on_complete = {
+			custom_effect_tooltip = wierd_scale_tt
+		}
+	}
+}
+
+
+
+JAP_mitsubushi_big_arms_manufactoring = {
+
+	icon = GFX_idea_mitsubishi
+
+	equipment_type = { 
+		artillery_equipment
+		anti_air_equipment
+		railway_gun
+		#super_heavy_railway_gun_equipment
+		train_equipment
+	}
+	research_categories = { 
+		mio_cat_all_artillery_equipment
+		train_tech
+	}
+	on_tech_research_completed = {
+		if = {
+			limit = { FROM = { has_idea = mitsubushi_ic } }
+			JAP_mitsubushi_ic_shared_ef_3 = yes
+			custom_effect_tooltip = JAP_mitsubushi_ic_shared_ef_tt
+		}
+		else = {
+			custom_effect_tooltip = JAP_mitsubushi_ic_shared_ef_tt_2
+		}
+	}
+	allowed = { original_tag = JAP }
+
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_mitsubushi_big_arms_manufactoring_initial
+		limit_to_equipment_type = { artillery_equipment anti_air_equipment }
+		equipment_bonus = {
+			build_cost_ic = 0.05
+			soft_attack = 0.05
+			hard_attack = 0.05
+			air_attack = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_size_up_requirement = -0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_1
+		name = JAP_mitsubushi_big_arms_manufactoring_1
+		icon = GFX_generic_mio_department_icon_anti_air
+		position = { x = 1 y = 0 }
+
+		#any_parent = {  }
+		#all_parents = {  }
+
+		on_complete = {
+			from = {
+				set_technology = {
+					interwar_antiair = 1
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment
+					amount = 400
+					producer = GER
+				}
+			}
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_2
+		name = JAP_mitsubushi_big_arms_manufactoring_2
+		icon = GFX_generic_mio_department_icon_anti_air
+		position = { x = 0 y = 1 }
+		mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_3 }
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_1 }
+		#all_parents = {  }
+		limit_to_equipment_type = { anti_air_equipment }
+
+		equipment_bonus = {
+			anti_air_attack = 0.15
+			build_cost_ic = 0.075
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_3
+		name = JAP_mitsubushi_big_arms_manufactoring_3
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		position = { x = 2 y = 1 }
+		mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_2 }
+
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_1 }
+		#all_parents = {  }
+		limit_to_equipment_type = { anti_air_equipment }
+
+		equipment_bonus = {
+			anti_air_attack = 0.075
+			build_cost_ic = 0.025
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_4
+		name = JAP_mitsubushi_big_arms_manufactoring_4
+		icon = GFX_generic_mio_department_icon_anti_air
+		position = { x = 0 y = 2 }
+		mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_5 }
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_2 JAP_mitsubushi_big_arms_manufactoring_3 }
+		#all_parents = {  }
+		limit_to_equipment_type = { anti_air_equipment }
+
+		equipment_bonus = {
+			reliability = 0.15
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_5
+		name = JAP_mitsubushi_big_arms_manufactoring_5
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		position = { x = 2 y = 2 }
+		mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_4 }
+
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_2 JAP_mitsubushi_big_arms_manufactoring_3 }
+		#all_parents = {  }
+		limit_to_equipment_type = { anti_air_equipment }
+
+		equipment_bonus = {
+			reliability = 0.075
+			build_cost_ic = 0.02
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_6
+		name = JAP_mitsubushi_big_arms_manufactoring_6
+		icon = GFX_generic_mio_department_icon_anti_air
+		position = { x = 0 y = 3 }
+		mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_7 }
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_4 JAP_mitsubushi_big_arms_manufactoring_5 }
+		#all_parents = {  }
+		limit_to_equipment_type = { anti_air_equipment }
+
+		equipment_bonus = {
+			hard_attack = 0.2
+			ap_attack = 0.15
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_7
+		name = JAP_mitsubushi_big_arms_manufactoring_7
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		position = { x = 2 y = 3 }
+		mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_6 }
+
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_4 JAP_mitsubushi_big_arms_manufactoring_5 }
+		#all_parents = {  }
+		limit_to_equipment_type = { anti_air_equipment }
+
+		equipment_bonus = {
+			soft_attack = 0.1
+			ap_attack = 0.15
+			build_cost_ic = 0.02
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_8
+		name = JAP_mitsubushi_big_arms_manufactoring_8
+		icon = GFX_generic_mio_trait_icon_defense
+		position = { x = 1 y = 4 }
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_6 JAP_mitsubushi_big_arms_manufactoring_7 }
+		#all_parents = {  }
+		limit_to_equipment_type = { anti_air_equipment }
+
+		on_complete = {
+			from = {
+				528 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+						}
+					}
+				}
+				530 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_9
+		name = JAP_mitsubushi_big_arms_manufactoring_9
+		icon = GFX_generic_mio_department_icon_artillery
+		position = { x = 3 y = 0 }
+
+		#any_parent = {  }
+		#all_parents = {  }
+		limit_to_equipment_type = { artillery_equipment }
+		mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_10 }
+
+		on_complete = {
+			from = {
+				529 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+						}
+					}
+				}
+			}
+		}
+		equipment_bonus = {
+			soft_attack = 0.1
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_10
+		name = JAP_mitsubushi_big_arms_manufactoring_10
+		icon = GFX_generic_mio_department_icon_tank_general_spg
+		position = { x = 4 y = 0 }
+
+		#any_parent = {  }
+		#all_parents = {  }
+		limit_to_equipment_type = { artillery_equipment }
+		mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_9 }
+
+		on_complete = {
+			from = {
+				529 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+						}
+					}
+				}
+			}
+		}
+		equipment_bonus = {
+			breakthrough = 0.1
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_11
+		name = JAP_mitsubushi_big_arms_manufactoring_11
+		icon = GFX_generic_mio_department_icon_artillery
+		position = { x = 3 y = 1 }
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_9 JAP_mitsubushi_big_arms_manufactoring_10 }
+		#all_parents = {  }
+		limit_to_equipment_type = { artillery_equipment }
+		mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_12 }
+
+		on_complete = {
+			from = {
+				531 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+						}
+					}
+				}
+			}
+		}
+		equipment_bonus = {
+			soft_attack = 0.1
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_12
+		name = JAP_mitsubushi_big_arms_manufactoring_12
+		icon = GFX_generic_mio_department_icon_tank_general_spg
+		position = { x = 4 y = 1 }
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_9 JAP_mitsubushi_big_arms_manufactoring_10 }
+		#all_parents = {  }
+		limit_to_equipment_type = { artillery_equipment }
+		mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_11 }
+
+		on_complete = {
+			from = {
+				531 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+						}
+					}
+				}
+			}
+		}
+		equipment_bonus = {
+			breakthrough = 0.1
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_13
+		name = JAP_mitsubushi_big_arms_manufactoring_13
+		icon = GFX_generic_mio_department_icon_artillery
+		position = { x = 3 y = 2 }
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_11 JAP_mitsubushi_big_arms_manufactoring_12 }
+		#all_parents = {  }
+		limit_to_equipment_type = { artillery_equipment }
+		mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_14 }
+
+		on_complete = {
+			from = {
+				532 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+						}
+					}
+				}
+			}
+		}
+		equipment_bonus = {
+			soft_attack = 0.1
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_14
+		name = JAP_mitsubushi_big_arms_manufactoring_14
+		icon = GFX_generic_mio_department_icon_tank_general_spg
+		position = { x = 4 y = 2 }
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_11 JAP_mitsubushi_big_arms_manufactoring_12 }
+		#all_parents = {  }
+		limit_to_equipment_type = { artillery_equipment }
+		mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_13 }
+
+		on_complete = {
+			from = {
+				532 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+						}
+					}
+				}
+			}
+		}
+		equipment_bonus = {
+			breakthrough = 0.1
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_15
+		name = JAP_mitsubushi_big_arms_manufactoring_15
+		icon = GFX_generic_mio_department_icon_artillery_production
+		position = { x = 4 y = 3 }
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_13 JAP_mitsubushi_big_arms_manufactoring_14 }
+		#all_parents = {  }
+		limit_to_equipment_type = { artillery_equipment }
+
+		on_complete = {
+			from = {
+				533 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+						}
+					}
+				}
+			}
+		}
+		equipment_bonus = {
+			hard_attack = 0.5
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_16
+		name = JAP_mitsubushi_big_arms_manufactoring_16
+		icon = GFX_generic_mio_department_icon_tank_general_spg
+		position = { x = 3 y = 4 }
+
+		any_parent = {  JAP_mitsubushi_big_arms_manufactoring_15 }
+		#all_parents = {  }
+		limit_to_equipment_type = { artillery_equipment }
+		mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_17 }
+
+		on_complete = {
+			from = {
+				533 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+						}
+					}
+				}
+			}
+		}
+		equipment_bonus = {
+			hard_attack = 0.5
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_17
+		name = JAP_mitsubushi_big_arms_manufactoring_17
+		icon = GFX_generic_mio_department_icon_artillery_production
+		position = { x = 4 y = 4 }
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_15 }
+		#all_parents = {  }
+		limit_to_equipment_type = { artillery_equipment }
+		mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_16 }
+
+		on_complete = {
+			from = {
+				533 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+						}
+					}
+				}
+			}
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+			production_efficiency_gain_factor = -0.15
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_18
+		name = JAP_mitsubushi_big_arms_manufactoring_18
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_weapons
+		position = { x = 6 y = 0 }
+
+		#any_parent = {  }
+		#all_parents = {  }
+		#limit_to_equipment_type = { artillery_equipment }
+		#mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_16 }
+
+		
+		available = {
+			from = {
+				has_political_power > 75
+			}
+		}
+		on_complete = {
+			from = {
+				hidden_effect = {
+					if = {
+						limit = { has_tech = railway_gun }
+						create_railway_gun = {
+							name = "Type 90 240 mm"
+							equipment = railway_gun_equipment_1
+							location = 1182
+						}
+					}
+					else = {
+						set_technology = {
+							railway_gun = 1
+						}
+					}
+				}
+				add_political_power = -75
+				custom_effect_tooltip = Jap_railwaygun_tt_1
+				effect_tooltip = {
+					create_railway_gun = {
+						name = "Type 90 240 mm"
+						equipment = railway_gun_equipment_1
+						location = 1182
+					}
+				}
+				custom_effect_tooltip = Jap_railwaygun_tt_2
+				effect_tooltip = {
+					set_technology = {
+						railway_gun = 1
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_19
+		name = JAP_mitsubushi_big_arms_manufactoring_19
+		icon = GFX_generic_mio_department_icon_tank_general_spg
+		position = { x = 5 y = 2 }
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_18 }
+		#all_parents = {  }
+		#limit_to_equipment_type = { artillery_equipment }
+		#mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_16 }
+
+		limit_to_equipment_type = {
+			railway_gun_equipment
+			super_heavy_railway_gun_equipment
+		}
+		equipment_bonus = {
+			railway_gun_attack = 0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_20
+		name = JAP_mitsubushi_big_arms_manufactoring_20
+		icon = GFX_generic_mio_department_icon_artillery_production
+		position = { x = 7 y = 2 }
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_18 }
+		#all_parents = {  }
+		#limit_to_equipment_type = { artillery_equipment }
+		#mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_16 }
+
+		limit_to_equipment_type = {
+			railway_gun_equipment
+			super_heavy_railway_gun_equipment
+		}
+		production_bonus = {
+			production_cost_factor = -0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_21
+		name = JAP_mitsubushi_big_arms_manufactoring_21
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		position = { x = 6 y = 3 }
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_19 JAP_mitsubushi_big_arms_manufactoring_20 }
+		#all_parents = {  }
+		#limit_to_equipment_type = { artillery_equipment }
+		#mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_16 }
+
+		limit_to_equipment_type = {
+			railway_gun_equipment
+			super_heavy_railway_gun_equipment
+		}
+		equipment_bonus = {
+			maximum_speed = 0.15
+		}
+	}
+	trait = {
+		token = JAP_mitsubushi_big_arms_manufactoring_22
+		name = JAP_mitsubushi_big_arms_manufactoring_22
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_weapons
+		position = { x = 6 y = 4 }
+
+		any_parent = { JAP_mitsubushi_big_arms_manufactoring_21 }
+		#all_parents = {  }
+		#limit_to_equipment_type = { artillery_equipment }
+		#mutually_exclusive = { JAP_mitsubushi_big_arms_manufactoring_16 }
+
+		limit_to_equipment_type = {
+			railway_gun_equipment
+			super_heavy_railway_gun_equipment
+		}
+		on_complete = {
+			from = {
+				282 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+						}
+					}
+				}
+			}
+		}
+		equipment_bonus = {
+			railway_gun_attack = 0.1
+		}
+	}
+}
+
+JAP_sumitomo_big_arms_manufactoring = {
+
+	icon = GFX_idea_sumitomo
+
+	equipment_type = { 
+		artillery_equipment
+		anti_tank_equipment
+		anti_air_equipment
+		rocket_artillery_equipment
+	}
+	research_categories = { mio_cat_all_artillery_equipment }
+	on_tech_research_completed = {
+		if = {
+			limit = { FROM = { has_idea = sumitomo_ic } }
+			JAP_sumitomo_ic_shared_ef_4 = yes
+			custom_effect_tooltip = JAP_sumitomo_ic_shared_ef_tt
+		}
+		else = {
+			custom_effect_tooltip = JAP_sumitomo_ic_shared_ef_tt_2
+		}
+	}
+	allowed = { original_tag = JAP }
+
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_sumitomo_arms_manufactoring_initial
+		equipment_bonus = {
+			reliability = 0.075
+			defense = 0.05
+		}
+		production_bonus = {
+			production_cost_factor = -0.03 
+			production_efficiency_gain_factor = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_big_arms_manufactoring_1
+		name = generic_mio_trait_mobile_limbers
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		position = { x=0 y=0 }
+		mutually_exclusive = { JAP_sumitomo_big_arms_manufactoring_2 }
+
+		equipment_bonus = {
+			breakthrough = 0.1
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_big_arms_manufactoring_2
+		name = generic_mio_trait_stable_platforms
+		icon = GFX_generic_mio_trait_icon_defense
+
+		position = { x=2 y=0 }
+		relative_position_id = JAP_sumitomo_big_arms_manufactoring_1
+
+		mutually_exclusive = { JAP_sumitomo_big_arms_manufactoring_1 }
+
+		equipment_bonus = {
+			defense = 0.03
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_big_arms_manufactoring_3
+		name = generic_mio_trait_improved_hydraulic_recoil_system
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x=1 y=1 }
+		relative_position_id = JAP_sumitomo_big_arms_manufactoring_1
+
+		any_parent = {
+			JAP_sumitomo_big_arms_manufactoring_2
+			JAP_sumitomo_big_arms_manufactoring_1
+		}
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_big_arms_manufactoring_4
+		name = generic_mio_trait_improved_direct_fire_targeting
+		icon = GFX_generic_mio_department_icon_anti_tank
+
+		position = { x=-1 y=3 }
+		relative_position_id = JAP_sumitomo_big_arms_manufactoring_3
+
+		all_parents = {
+			JAP_sumitomo_big_arms_manufactoring_3
+		}
+
+		mutually_exclusive = { JAP_sumitomo_big_arms_manufactoring_5 JAP_sumitomo_big_arms_manufactoring_6 }
+		
+		limit_to_equipment_type = { 
+			anti_tank_equipment
+		}
+
+		equipment_bonus = {
+			ap_attack = 0.05
+			hard_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_big_arms_manufactoring_5
+		name = generic_mio_trait_advanced_anti_air_targeting
+		icon = GFX_generic_mio_department_icon_anti_air
+
+		position = { x=1 y=0 }
+		relative_position_id = JAP_sumitomo_big_arms_manufactoring_4
+		
+		all_parents = {
+			JAP_sumitomo_big_arms_manufactoring_3
+		}
+		
+		mutually_exclusive = {
+			JAP_sumitomo_big_arms_manufactoring_4
+			JAP_sumitomo_big_arms_manufactoring_6
+		}
+		
+		limit_to_equipment_type = { 
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			air_attack = 0.07
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_big_arms_manufactoring_6
+		name = generic_mio_trait_advanced_trajectory_calculations
+		icon = GFX_generic_mio_department_icon_artillery
+
+		position = { x=2 y=0 }
+		relative_position_id = JAP_sumitomo_big_arms_manufactoring_4
+
+		all_parents = {
+			JAP_sumitomo_big_arms_manufactoring_3
+		}
+
+		mutually_exclusive = { 
+			JAP_sumitomo_big_arms_manufactoring_4
+			JAP_sumitomo_big_arms_manufactoring_5
+		}
+
+		limit_to_equipment_type = { 
+			artillery_equipment
+			rocket_artillery_equipment
+		}
+
+		equipment_bonus = {
+			hard_attack = 1
+			breakthrough = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_big_arms_manufactoring_7
+		name = generic_mio_trait_sliding_breech_block
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		position = { x=0 y=2 }
+		relative_position_id = JAP_sumitomo_big_arms_manufactoring_8	
+
+		all_parents = {
+			JAP_sumitomo_big_arms_manufactoring_3
+			JAP_sumitomo_big_arms_manufactoring_8
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.03
+			breakthrough = 0.03
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_big_arms_manufactoring_8
+		name = generic_mio_trait_rapid_fire
+		icon = GFX_generic_mio_department_icon_tank_general_weapons
+
+		position = { x=4 y=0 }
+		relative_position_id = JAP_sumitomo_big_arms_manufactoring_1	
+
+		limit_to_equipment_type = { 
+			anti_tank_equipment
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.1
+			hard_attack = 0.04
+			air_attack = 0.04
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_big_arms_manufactoring_9
+		name = generic_mio_trait_advanced_barrel_forging
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		position = { x=2 y=0 }
+		relative_position_id = JAP_sumitomo_big_arms_manufactoring_8
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_big_arms_manufactoring_10
+		name = generic_mio_trait_big_guns
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		position = { x=2 y=0 }
+		relative_position_id = JAP_sumitomo_big_arms_manufactoring_9
+
+		limit_to_equipment_type = { 
+			artillery_equipment
+			rocket_artillery_equipment
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.02
+			build_cost_ic = 0.03
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_big_arms_manufactoring_11
+		name = generic_mio_trait_gun_mass_production
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x=0 y=2 }
+		relative_position_id = JAP_sumitomo_big_arms_manufactoring_9
+
+		all_parents = {	JAP_sumitomo_big_arms_manufactoring_9 }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.03
+			production_efficiency_cap_factor = 0.03
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_assign_cost = -0.15
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_big_arms_manufactoring_12
+		name = generic_mio_trait_super_charges
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x=0 y=2 }
+		relative_position_id = JAP_sumitomo_big_arms_manufactoring_10
+
+		all_parents = {	JAP_sumitomo_big_arms_manufactoring_10 }
+
+		limit_to_equipment_type = { 
+			artillery_equipment
+			rocket_artillery_equipment
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.03
+			production_efficiency_cap_factor = 0.03
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_assign_cost = -0.15
+		}
+	}
+
+	trait = {
+		token = JAP_sumitomo_big_arms_manufactoring_13
+		name = generic_mio_trait_light_weight_barrels
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		position = { x=0 y=1 }
+		relative_position_id = JAP_sumitomo_big_arms_manufactoring_11
+
+		all_parents = {
+			JAP_sumitomo_big_arms_manufactoring_12
+			JAP_sumitomo_big_arms_manufactoring_11
+			JAP_sumitomo_big_arms_manufactoring_7
+
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.03
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.06
+			defense = 0.1
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_big_arms_manufactoring_14
+		name = JAP_sumitomo_big_arms_manufactoring_14
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x = 3 y = 4 }
+		equipment_bonus = {
+			defense = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_big_arms_manufactoring_15
+		name = JAP_sumitomo_big_arms_manufactoring_15
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x = 4 y = 4 }
+
+		limit_to_equipment_type = {
+			rocket_artillery_equipment
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.15
+			soft_attack = -0.075
+		}
+		production_bonus = {
+			production_cost_factor = -0.1
+		}
+	}
+	trait = {
+		token = JAP_sumitomo_big_arms_manufactoring_16
+		name = JAP_sumitomo_big_arms_manufactoring_16
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x = 5 y = 4 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+}
+
+JAP_nissan_light_vehicles = {
+	 
+	icon = GFX_idea_nissan
+
+	equipment_type = {
+		motorized_equipment
+		mechanized_equipment
+		motorized_rocket_equipment
+		amphibious_mechanized_equipment
+	}
+	
+	research_categories = { mio_cat_tech_all_motorized_mechanized }
+	on_tech_research_completed = {
+		from = {
+			fuck_nissan = yes
+		}
+	}
+	allowed = {
+		or = {
+			original_tag = JAP 
+			#original_tag = MAN
+		}
+	}
+
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_nissan_light_vehicles_initial
+		equipment_bonus = {
+			reliability = 0.05
+			build_cost_ic = -0.025
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+	trait = {
+		token = JAP_nissan_light_vehicles_1
+		name = generic_mio_trait_composite_cargo_bed
+		icon = GFX_generic_mio_department_icon_motorized_production
+		
+		position = { x=0 y=0 }
+		
+		mutually_exclusive = { JAP_nissan_light_vehicles_2 }
+
+		limit_to_equipment_type = { motorized_equipment motorized_rocket_equipment }
+
+		equipment_bonus = {
+			reliability = -0.07
+			build_cost_ic = -0.05
+		}
+	}
+
+	trait = {
+		token = JAP_nissan_light_vehicles_2
+		name = generic_mio_trait_steel_cargo_bed
+		icon = GFX_generic_mio_trait_icon_reliability
+		
+		position = { x=2 y=0 }
+		relative_position_id = JAP_nissan_light_vehicles_1
+		
+		mutually_exclusive = { JAP_nissan_light_vehicles_1 }
+
+		limit_to_equipment_type = { motorized_equipment motorized_rocket_equipment }
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+		production_bonus = {
+			production_resource_need_factor = 0.02
+		}
+	}
+
+	trait = {
+		token = JAP_nissan_light_vehicles_3
+		name = generic_mio_trait_all_wheel_drive
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		
+		position = { x=1 y=2 }
+		relative_position_id = JAP_nissan_light_vehicles_1
+		
+		any_parent = { JAP_nissan_light_vehicles_1 JAP_nissan_light_vehicles_2 }
+
+		limit_to_equipment_type = { motorized_equipment motorized_rocket_equipment }
+		
+		equipment_bonus = {
+			breakthrough = 0.035
+		}
+	}
+
+	trait = {
+		token = JAP_nissan_light_vehicles_4
+		name = generic_mio_trait_attached_wood_gas_generator
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		
+		position = { x=-1 y=2 }
+		relative_position_id = JAP_nissan_light_vehicles_3
+		
+		all_parents = { JAP_nissan_light_vehicles_3 }
+		
+		mutually_exclusive = { JAP_nissan_light_vehicles_5 }
+
+		limit_to_equipment_type = { motorized_equipment motorized_rocket_equipment }
+
+		equipment_bonus = {
+			fuel_consumption = -0.05
+		}
+	}
+
+	trait = {
+		token = JAP_nissan_light_vehicles_5
+		name = generic_mio_trait_high_powered_engine
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		
+		position = { x=2 y=0 }
+		relative_position_id = JAP_nissan_light_vehicles_4
+		
+		all_parents = { JAP_nissan_light_vehicles_3 }
+		
+		mutually_exclusive = { JAP_nissan_light_vehicles_4 }
+
+		limit_to_equipment_type = { motorized_equipment motorized_rocket_equipment }
+
+		equipment_bonus = {
+			fuel_consumption = 0.05
+			maximum_speed = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_nissan_light_vehicles_6
+		name = generic_mio_trait_medium_machinegun_mounts
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		
+		position = { x=2 y=0 }
+		relative_position_id = JAP_nissan_light_vehicles_2
+
+		equipment_bonus = {
+			breakthrough = 0.03
+		}
+	}
+
+	trait = {
+		token = JAP_nissan_light_vehicles_7
+		name = generic_mio_trait_armored_pulpit_mount
+		icon = GFX_generic_mio_trait_icon_hardness
+		
+		position = { x=0 y=2 }
+		relative_position_id = JAP_nissan_light_vehicles_6
+
+		all_parents = { JAP_nissan_light_vehicles_6 }
+
+		equipment_bonus = {
+			hardness = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_nissan_light_vehicles_8
+		name = generic_mio_trait_advanced_artillery_racks
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		
+		position = { x=-1 y=2 }
+		relative_position_id = JAP_nissan_light_vehicles_7
+		
+		all_parents = { JAP_nissan_light_vehicles_7 }
+		
+		mutually_exclusive = { JAP_nissan_light_vehicles_9 JAP_nissan_light_vehicles_10 }
+		
+		limit_to_equipment_type = { motorized_rocket_equipment }
+
+		equipment_bonus = {
+			soft_attack = 0.035
+			build_cost_ic = 0.06
+		}
+	}
+
+	trait = {
+		token = JAP_nissan_light_vehicles_9
+		name = generic_mio_trait_heavy_machinegun_mount
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		
+		position = { x=2 y=0 }
+		relative_position_id = JAP_nissan_light_vehicles_8
+		
+		all_parents = { JAP_nissan_light_vehicles_7 }
+		
+		mutually_exclusive = { JAP_nissan_light_vehicles_8 JAP_nissan_light_vehicles_10 }
+		
+		limit_to_equipment_type = { mechanized_equipment motorized_equipment amphibious_mechanized_equipment }
+		
+		equipment_bonus = {
+			breakthrough = 0.04
+			build_cost_ic = 0.01
+		}
+	}
+
+	trait = {
+		token = JAP_nissan_light_vehicles_10 #elephant gun
+		name = generic_mio_trait_mounted_light_anti_tank_gun
+		icon = GFX_generic_mio_trait_icon_ap_attack
+		
+		position = { x=1 y=0 }
+		relative_position_id = JAP_nissan_light_vehicles_9
+		
+		mutually_exclusive = { JAP_nissan_light_vehicles_8 JAP_nissan_light_vehicles_9 }
+		
+		all_parents = { JAP_nissan_light_vehicles_13  }
+		
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
+
+		equipment_bonus = {
+			ap_attack = 0.1
+			hard_attack = 0.02
+		}
+	}
+
+	trait = {
+		token = JAP_nissan_light_vehicles_11
+		name = generic_mio_trait_open_chassi
+		icon = GFX_generic_mio_department_icon_mechanized_production
+		
+		position = { x=2 y=0 }
+		relative_position_id = JAP_nissan_light_vehicles_6
+		
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
+		
+		mutually_exclusive = { JAP_nissan_light_vehicles_12 }
+
+		equipment_bonus = {
+			defense = -0.02
+			build_cost_ic = -0.03
+		}
+	}
+
+	trait = {
+		token = JAP_nissan_light_vehicles_12
+		name = generic_mio_trait_closed_chassi
+		icon = GFX_generic_mio_department_icon_mechanized_hull
+		
+		position = { x=2 y=0 }
+		relative_position_id = JAP_nissan_light_vehicles_11
+		
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
+		
+		mutually_exclusive = { JAP_nissan_light_vehicles_11 }
+
+		equipment_bonus = {
+			armor_value = 0.05
+		}
+	}
+
+
+	trait = {
+		token = JAP_nissan_light_vehicles_13
+		name = generic_mio_trait_bulletproof_panels
+		icon = GFX_generic_mio_trait_icon_hardness
+		
+		position = { x=-1 y=2 }
+		relative_position_id = JAP_nissan_light_vehicles_12
+		
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
+		
+		any_parent = { JAP_nissan_light_vehicles_12 JAP_nissan_light_vehicles_11 }
+
+		equipment_bonus = {
+			hardness = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_nissan_light_vehicles_14
+		name = generic_mio_trait_light_flame_projectors
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		
+		position = { x=0 y=2 }
+		relative_position_id = JAP_nissan_light_vehicles_13
+		
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
+		
+		all_parents = { JAP_nissan_light_vehicles_13 }
+
+		equipment_bonus = {
+			breakthrough = 0.035
+		}
+	}
+
+	trait = {
+		token = JAP_nissan_light_vehicles_15
+		name = generic_mio_trait_land_mine_racks
+		icon = GFX_generic_mio_department_icon_mechanized_hull
+		
+		position = { x=1 y=0 }
+		relative_position_id = JAP_nissan_light_vehicles_14
+		
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
+		
+		all_parents = { JAP_nissan_light_vehicles_13 }
+
+		equipment_bonus = {
+			defense = 0.06
+			maximum_speed = -0.02
+		}
+	}
+
+}
+
+ JAP_mitsui_heavy_vehicles = {
+	icon = GFX_idea_mitsui
+	allowed = { or = { original_tag = JAP original_tag = MAN } }
+
+	equipment_type = { mio_cat_eq_all_heavy_tank mio_cat_eq_all_tank_destroyers mio_cat_eq_all_artillery_track }
+	research_categories = { mio_cat_tech_all_armor_and_modules }
+	on_tech_research_completed = {
+		if = {
+			limit = { FROM = { has_idea = mitsui_ic } }
+			JAP_mitsui_ic_shared_ef_1 = yes
+			custom_effect_tooltip = JAP_mitsui_ic_shared_ef_tt
+		}
+		else = {
+			custom_effect_tooltip = JAP_mitsui_ic_shared_ef_tt_2
+		}
+	}
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_mitsui_heavy_vehicles_initial
+
+		production_bonus = {
+			production_conversion_speed_factor = 0.1
+		}
+		equipment_bonus = {
+			reliability = -0.05
+		}
+	}
+	trait = {
+		token = JAP_mitsui_heavy_vehicles_1
+		name = generic_mio_trait_light_assault_gun_improvements
+		icon = GFX_generic_mio_department_icon_tank_light_tank_weapons
+
+		position = { x = 1 y = 0 }
+		
+		limit_to_equipment_type = { light_tank_artillery_chassis light_tank_destroyer_chassis }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			maximum_speed = 0.1
+		}
+	}
+
+	trait = {
+		token = JAP_mitsui_heavy_vehicles_2
+		name = generic_mio_trait_light_assault_gun_anti_tank_combo
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		
+		position = { x = -1  y = 2 }
+
+		relative_position_id = JAP_mitsui_heavy_vehicles_1
+		
+		all_parents = { JAP_mitsui_heavy_vehicles_1 }
+
+		mutually_exclusive = { JAP_mitsui_heavy_vehicles_3 }
+
+		limit_to_equipment_type = { light_tank_artillery_chassis light_tank_destroyer_chassis }
+ 
+		equipment_bonus = {
+			hard_attack = 0.2
+		}
+	}
+
+	trait = {
+		token = JAP_mitsui_heavy_vehicles_3
+		name = generic_mio_trait_light_assault_gun_improved_cannon_stabilization
+		icon = GFX_generic_mio_trait_icon_breakthrough
+				
+		position = { x = 1  y = 2 }
+
+		relative_position_id = JAP_mitsui_heavy_vehicles_1
+		
+		all_parents = { JAP_mitsui_heavy_vehicles_1 }
+
+		mutually_exclusive = { JAP_mitsui_heavy_vehicles_2 }
+
+		limit_to_equipment_type = { light_tank_artillery_chassis light_tank_destroyer_chassis }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			breakthrough = 0.1
+		}
+	}
+
+	trait = {
+		token = JAP_mitsui_heavy_vehicles_4
+		name = generic_mio_trait_light_assault_gun_10_5_iefh_ammunition
+		icon = GFX_generic_mio_trait_icon_reliability
+		
+		position = { x = 0  y = 1 }
+
+		relative_position_id = JAP_mitsui_heavy_vehicles_1
+		
+		all_parents = { JAP_mitsui_heavy_vehicles_1 }
+
+		#mutually_exclusive = { JAP_mitsui_heavy_vehicles_2 }
+
+		limit_to_equipment_type = { light_tank_artillery_chassis light_tank_destroyer_chassis }
+
+		equipment_bonus = {
+			soft_attack = 0.1
+			reliability = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_mitsui_heavy_vehicles_5
+		name = generic_mio_trait_medium_assault_gun_improvements
+		icon = GFX_generic_mio_department_icon_tank_medium_tank_weapons
+		
+		position = { x = 3 y = 0 }
+
+		relative_position_id = JAP_mitsui_heavy_vehicles_1
+		
+		#all_parents = { JAP_mitsui_heavy_vehicles_1 }
+
+		#mutually_exclusive = { JAP_mitsui_heavy_vehicles_3 }
+
+		limit_to_equipment_type = { medium_tank_destroyer_chassis medium_tank_artillery_chassis }
+
+		equipment_bonus = {
+			armor_value = 0.05
+			breakthrough = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_mitsui_heavy_vehicles_6
+		name = generic_mio_lighter_materials_assault_guns
+		icon = GFX_generic_mio_trait_icon_resources
+
+		position = { x = -1 y = 1 }
+		relative_position_id = JAP_mitsui_heavy_vehicles_5
+
+		any_parent = { JAP_mitsui_heavy_vehicles_5 JAP_mitsui_heavy_vehicles_1 }
+
+		mutually_exclusive = { JAP_mitsui_heavy_vehicles_7 }
+		
+		production_bonus = {
+			production_resource_penalty_factor = -0.15
+		}
+	}
+
+	trait = {
+		token = JAP_mitsui_heavy_vehicles_7
+		name = generic_mio_armor_hardening_process_assault_guns
+		icon = GFX_generic_mio_department_icon_tank_general_armor
+
+		position = { x = 1 y = 1 }
+		relative_position_id = JAP_mitsui_heavy_vehicles_5
+
+		any_parent = { JAP_mitsui_heavy_vehicles_5 JAP_mitsui_heavy_vehicles_10 }
+
+		mutually_exclusive = { JAP_mitsui_heavy_vehicles_6 }
+		
+		equipment_bonus = {
+			defense = 0.05
+			armor_value = 0.1
+		}
+	}
+
+	trait = {
+		token = JAP_mitsui_heavy_vehicles_8
+		name = generic_mio_medium_assault_gun_low_slung_superstructure_and_fighting_compartment
+		icon = GFX_generic_mio_department_icon_tank_general_production
+
+		position = { x = 1 y = 1 }
+		relative_position_id = JAP_mitsui_heavy_vehicles_6
+
+		any_parent = { JAP_mitsui_heavy_vehicles_6 JAP_mitsui_heavy_vehicles_7 }
+
+		#mutually_exclusive = { JAP_mitsui_heavy_vehicles_7 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		limit_to_equipment_type = { medium_tank_artillery_chassis }
+
+		equipment_bonus = {
+			defense = 0.1
+			reliability = 0.1
+			armor_value = 0.05
+		}
+	}
+	
+	trait = {
+		token = JAP_mitsui_heavy_vehicles_9
+		name = generic_mio_medium_assault_gun_75_mm_43M_tank_gun
+		icon = GFX_generic_mio_department_icon_tank_general_quality
+
+		position = { x = 2 y = 2 }
+		relative_position_id = JAP_mitsui_heavy_vehicles_5
+
+		any_parent = { JAP_mitsui_heavy_vehicles_5 JAP_mitsui_heavy_vehicles_10 }
+
+		#mutually_exclusive = { JAP_mitsui_heavy_vehicles_7 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			breakthrough = 0.1
+			defense = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_mitsui_heavy_vehicles_10
+		name = generic_mio_trait_heavy_assault_gun_improvements
+		icon = GFX_generic_mio_department_icon_tank_heavy_tank_quality
+		
+		position = { x = 6  y = 0 }
+
+		relative_position_id = JAP_mitsui_heavy_vehicles_1
+		
+		#all_parents = { JAP_mitsui_heavy_vehicles_1 }
+
+		#mutually_exclusive = { JAP_mitsui_heavy_vehicles_3 }
+
+		limit_to_equipment_type = { heavy_tank_chassis }
+
+		equipment_bonus = {
+			maximum_speed = -0.1
+			soft_attack = 0.15
+		}
+	}
+
+	trait = {
+		token = JAP_mitsui_heavy_vehicles_11
+		name = generic_mio_trait_fully_cast_turret_assault_gun
+		icon = GFX_generic_mio_department_icon_tank_general_armor
+
+		position = { x = 0 y = 1 }
+		relative_position_id = JAP_mitsui_heavy_vehicles_10
+
+		all_parents = { JAP_mitsui_heavy_vehicles_10 }
+
+		limit_to_equipment_type = { heavy_tank_chassis }
+		
+		equipment_bonus = {
+			armor_value = 0.05
+			defense = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_mitsui_heavy_vehicles_12
+		name = generic_mio_trait_assault_gun_improved_tracks
+		icon = GFX_generic_mio_department_icon_tank_general_engine
+
+		position = { x = 1 y = 2 }
+		relative_position_id = JAP_mitsui_heavy_vehicles_10
+
+		all_parents = { JAP_mitsui_heavy_vehicles_10 }
+
+		limit_to_equipment_type = { heavy_tank_chassis }
+		
+		equipment_bonus = {
+			maximum_speed = 0.1
+			reliability = 0.05
+		}
+	}
+
+	trait = {
+		token = JAP_mitsui_heavy_vehicles_13
+		name = generic_mio_medium_assault_gun_rocket_tubes
+		icon = GFX_generic_mio_department_icon_tank_general_weapons
+
+		position = { x = 0 y = 1 }
+		relative_position_id = JAP_mitsui_heavy_vehicles_8
+
+		all_parents = { JAP_mitsui_heavy_vehicles_8 }
+
+		available = {
+			owner = {
+				has_tech = rocket_artillery
+			}
+		}
+
+		#mutually_exclusive = { JAP_mitsui_heavy_vehicles_7 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		#limit_to_equipment_type = { medium_tank_artillery_chassis }
+
+		equipment_bonus = {
+			soft_attack = 0.15
+			breakthrough = 0.05
+			reliability = -0.1
+		}
+	}
+ }
+
+ JAP_nissan_heavy_vehicles = {
+	icon = GFX_idea_nissan
+
+	allowed = { or = { original_tag = JAP } }
+
+	equipment_type = { motorized_equipment mio_cat_eq_all_light_tank mechanized_equipment armored_car_equipment amphibious_mechanized_equipment }
+	research_categories = { mio_cat_tech_light_armor_and_modules mio_cat_tech_all_motorized_mechanized cat_armored_cars }
+	on_tech_research_completed = {
+		from = {
+			mio:JAP_nissan_light_vehicles = {
+				add_mio_funds = 1000
+			}
+		}
+	}
+	tree_header_text = {
+		text = "First Column"
+		x = 0
+	}
+
+	tree_header_text = {
+		text = "Second Column"
+		x = 4.1
+	}
+
+	tree_header_text = {
+		text = "Third Column"
+		x = 8
+	}
+
+	initial_trait = {
+		name = JAP_nissan_heavy_vehicles_initial
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		equipment_bonus = {
+			armor_value = -0.05
+			reliability = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_size_up_requirement = -0.1
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_1
+		name = JAP_nissan_heavy_vehicles_1
+		icon = GFX_generic_mio_trait_icon_unique
+
+		position = { x = 3 y = 0 }
+
+		#all_parents = { JAP_mitsui_heavy_vehicles_8 }
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_2 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		limit_to_equipment_type = { motorized_equipment }
+
+		equipment_bonus = {
+			hardness = 0.5
+			maximum_speed = -0.075
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_2
+		name = JAP_nissan_heavy_vehicles_2
+		icon = GFX_generic_mio_trait_icon_unique
+
+		position = { x = 5 y = 0 }
+
+		#all_parents = { JAP_mitsui_heavy_vehicles_8 }
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_1 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		limit_to_equipment_type = { motorized_equipment }
+
+		equipment_bonus = {
+			hardness = 0.2
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_3
+		name = JAP_nissan_heavy_vehicles_3
+		icon = GFX_generic_mio_trait_icon_unique
+
+		position = { x = 3 y = 1 }
+
+		any_parent = { JAP_nissan_heavy_vehicles_1 JAP_nissan_heavy_vehicles_2 }
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_4 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		limit_to_equipment_type = { motorized_equipment }
+
+		on_complete = {
+			from = {
+				random_core_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_4
+		name = JAP_nissan_heavy_vehicles_4
+		icon = GFX_generic_mio_trait_icon_unique
+
+		position = { x = 5 y = 1 }
+
+		any_parent = { JAP_nissan_heavy_vehicles_1 JAP_nissan_heavy_vehicles_2 }
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_3 }
+		
+
+		limit_to_equipment_type = { motorized_equipment }
+
+		on_complete = {
+			from = {
+				random_core_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_5
+		name = JAP_nissan_heavy_vehicles_5
+		icon = GFX_generic_mio_trait_icon_unique
+
+		position = { x = 3 y = 2 }
+
+		any_parent = { JAP_nissan_heavy_vehicles_3 JAP_nissan_heavy_vehicles_4 }
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_6 }
+
+		on_complete = {
+			from = {
+				add_cic = 1000
+			}
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_6
+		name = JAP_nissan_heavy_vehicles_6
+		icon = GFX_generic_mio_trait_icon_unique
+
+		position = { x = 5 y = 2 }
+
+		any_parent = { JAP_nissan_heavy_vehicles_3 JAP_nissan_heavy_vehicles_4 }
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_5 }
+	
+		on_complete = {
+			from = {
+				army_experience = 50
+			}
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_7
+		name = JAP_nissan_heavy_vehicles_7
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x = 0 y = 2 }
+
+		any_parent = { JAP_nissan_heavy_vehicles_1 JAP_nissan_heavy_vehicles_2 }
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_8 JAP_nissan_heavy_vehicles_9 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
+
+		equipment_bonus = {
+			soft_attack = 0.02
+			hardness = 0.03
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_8
+		name = JAP_nissan_heavy_vehicles_8
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x = 1 y = 2 }
+
+		any_parent = { JAP_nissan_heavy_vehicles_1 JAP_nissan_heavy_vehicles_2 }
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_7 JAP_nissan_heavy_vehicles_9 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
+
+		equipment_bonus = {
+			soft_attack = 0.04
+			hardness = 0.05
+			build_cost_ic = 0.03
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_9
+		name = JAP_nissan_heavy_vehicles_9
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x = 2 y = 2 }
+
+		any_parent = { JAP_nissan_heavy_vehicles_1 JAP_nissan_heavy_vehicles_2 }
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_7 JAP_nissan_heavy_vehicles_8 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
+
+		equipment_bonus = {
+			soft_attack = 0.075
+			hardness = 0.1
+			build_cost_ic = 0.125
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_10
+		name = JAP_nissan_heavy_vehicles_10
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x = 8 y = 2 }
+
+		any_parent = { JAP_nissan_heavy_vehicles_1 JAP_nissan_heavy_vehicles_2 }
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_11 JAP_nissan_heavy_vehicles_12 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		limit_to_equipment_type = { armored_car_equipment mio_cat_eq_all_light_tank }
+
+		equipment_bonus = {
+			soft_attack = 0.02
+			hardness = 0.03
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_11
+		name = JAP_nissan_heavy_vehicles_11
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x = 7 y = 2 }
+
+		any_parent = { JAP_nissan_heavy_vehicles_1 JAP_nissan_heavy_vehicles_2 }
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_10 JAP_nissan_heavy_vehicles_12 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		limit_to_equipment_type = { armored_car_equipment mio_cat_eq_all_light_tank }
+
+		equipment_bonus = {
+			soft_attack = 0.04
+			hardness = 0.05
+			build_cost_ic = 0.03
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_12
+		name = JAP_nissan_heavy_vehicles_12
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x = 6 y = 2 }
+
+		any_parent = { JAP_nissan_heavy_vehicles_1 JAP_nissan_heavy_vehicles_2 }
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_10 JAP_nissan_heavy_vehicles_11 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		limit_to_equipment_type = { armored_car_equipment mio_cat_eq_all_light_tank }
+
+		equipment_bonus = {
+			soft_attack = 0.075
+			hardness = 0.1
+			build_cost_ic = 0.125
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_13
+		name = JAP_nissan_heavy_vehicles_13
+		icon = GFX_generic_mio_department_icon_mechanized_hull
+
+		position = { x = 1 y = 3 }
+
+		#all_parents = { JAP_mitsui_heavy_vehicles_8 }
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_14 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
+		any_parent = { JAP_nissan_heavy_vehicles_7 JAP_nissan_heavy_vehicles_8 JAP_nissan_heavy_vehicles_9 }
+
+		on_complete = {
+			from = {
+				add_cic = 1000
+			}
+		}
+		equipment_bonus = {
+			breakthrough = 0.05
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_14
+		name = JAP_nissan_heavy_vehicles_14
+		icon = GFX_generic_mio_department_icon_mechanized_production
+
+		position = { x = 2 y = 3 }
+
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_13 }
+		any_parent = { JAP_nissan_heavy_vehicles_7 JAP_nissan_heavy_vehicles_8 JAP_nissan_heavy_vehicles_9 }
+
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment}
+
+		equipment_bonus = {
+			breakthrough = 0.15
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_15
+		name = JAP_nissan_heavy_vehicles_15
+		icon = GFX_generic_mio_department_icon_armored_car_defense
+
+		position = { x = 7 y = 3 }
+
+		#all_parents = { JAP_mitsui_heavy_vehicles_8 }
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_16 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		limit_to_equipment_type = { armored_car_equipment mio_cat_eq_all_light_tank }
+		any_parent = { JAP_nissan_heavy_vehicles_10 JAP_nissan_heavy_vehicles_11 JAP_nissan_heavy_vehicles_12 }
+
+		equipment_bonus = {
+			hard_attack = 0.05
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_16
+		name = JAP_nissan_heavy_vehicles_16
+		icon = GFX_generic_mio_department_icon_armored_car_offense
+
+		position = { x = 6 y = 3 }
+
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_15 }
+		any_parent = { JAP_nissan_heavy_vehicles_10 JAP_nissan_heavy_vehicles_11 JAP_nissan_heavy_vehicles_12 }
+
+		limit_to_equipment_type = { armored_car_equipment mio_cat_eq_all_light_tank }
+
+		equipment_bonus = {
+			hard_attack = 0.15
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_17
+		name = JAP_nissan_heavy_vehicles_17
+		icon = GFX_generic_mio_department_icon_mechanized_hull
+
+		position = { x = 3 y = 3 }
+
+		#all_parents = { JAP_mitsui_heavy_vehicles_8 }
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_18 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		limit_to_equipment_type = { mechanized_equipment }
+		any_parent = { JAP_nissan_heavy_vehicles_6 JAP_nissan_heavy_vehicles_5 JAP_nissan_heavy_vehicles_7 JAP_nissan_heavy_vehicles_8 JAP_nissan_heavy_vehicles_9 JAP_nissan_heavy_vehicles_10 JAP_nissan_heavy_vehicles_11 JAP_nissan_heavy_vehicles_12 }
+
+		equipment_bonus = {
+			hard_attack = 0.075
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_18
+		name = JAP_nissan_heavy_vehicles_18
+		icon = GFX_generic_mio_department_icon_armored_car_offense
+
+		position = { x = 5 y = 3 }
+
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_17 }
+		any_parent = { JAP_nissan_heavy_vehicles_6 JAP_nissan_heavy_vehicles_5 JAP_nissan_heavy_vehicles_7 JAP_nissan_heavy_vehicles_8 JAP_nissan_heavy_vehicles_9 JAP_nissan_heavy_vehicles_10 JAP_nissan_heavy_vehicles_11 JAP_nissan_heavy_vehicles_12 }
+
+		limit_to_equipment_type = { armored_car_equipment mio_cat_eq_all_light_tank }
+
+		equipment_bonus = {
+			hard_attack = 0.075
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_19
+		name = JAP_nissan_heavy_vehicles_19
+		icon = GFX_generic_mio_trait_icon_hardness
+
+		position = { x = 3 y = 4 }
+
+		#all_parents = { JAP_mitsui_heavy_vehicles_8 }
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_20 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		#limit_to_equipment_type = { mechanized_equipment }
+		any_parent = { JAP_nissan_heavy_vehicles_13 JAP_nissan_heavy_vehicles_14 JAP_nissan_heavy_vehicles_15 JAP_nissan_heavy_vehicles_16 JAP_nissan_heavy_vehicles_17 JAP_nissan_heavy_vehicles_18 }
+
+		equipment_bonus = {
+			hardness = 0.075
+		}
+	}
+	trait = {
+		token = JAP_nissan_heavy_vehicles_20
+		name = JAP_nissan_heavy_vehicles_20
+		icon = GFX_generic_mio_department_icon_armored_car_offense
+
+		position = { x = 5 y = 4 }
+
+
+		mutually_exclusive = { JAP_nissan_heavy_vehicles_19 }
+		any_parent = { JAP_nissan_heavy_vehicles_13 JAP_nissan_heavy_vehicles_14 JAP_nissan_heavy_vehicles_15 JAP_nissan_heavy_vehicles_16 JAP_nissan_heavy_vehicles_17 JAP_nissan_heavy_vehicles_18 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+		}
+	}
+ }

@@ -1,0 +1,1459 @@
+ROM_liscenseing = {
+
+	ROM_work_with_axis  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		targets = { GER ITA }
+
+		allowed = {  
+			original_tag = ROM
+		}
+
+		visible = { 
+			has_completed_focus = ROM_liscense_equipment
+			NOT = { has_country_flag = rom_wartime_liscen } 
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			FROM = {
+				has_opinion = {
+					target = ROOT
+					value > 99
+				}
+				NOT = { has_war_with = ROOT }
+			}
+		} 
+
+		days_remove = 60
+
+		cost = 50
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = { 
+			add_cic = 500
+			set_country_flag = rom_wartime_liscen
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					FROM = { tag = GER }
+				}
+				random_core_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = ITA }
+				}
+				random_core_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_core_state = {
+					limit = { is_coastal = yes }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	ROM_import_arms  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_industry
+
+		ai_will_do = {
+			base = 10
+		}
+
+		targets = { GER ITA ENG FRA CZE JAP AUS BEL SWE }
+
+		allowed = {  
+			original_tag = ROM
+		}
+
+		visible = { 
+			has_completed_focus = ROM_liscense_equipment 
+			check_variable = {
+				rom_small_arms_var < 3
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			FROM = {
+				has_opinion = {
+					target = ROOT
+					value > 74
+				}
+			}
+			or = {
+				FROM = {
+					has_same_ideology = yes
+				}
+				threat < 0.40
+			}
+		} 
+
+		days_remove = 60
+
+		cost = 10
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.075
+		}
+
+		complete_effect = { 
+			add_cic = 500
+			add_to_variable = {
+				rom_small_arms_var = 1
+			}
+			hidden_effect = {
+				if = {
+					limit = { tag = CZE }
+					set_technology = { improved_infantry_weapons = 1 }
+				}
+			}
+			
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					FROM = { tag = GER }
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 3000
+					producer = GER
+				}
+				add_cic = 500
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = ITA }
+				}
+				random_core_state = {
+					limit = {
+						NOT = {
+							or = {
+								state = 80
+								state = 78
+								state = 766
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_cic = 500
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = ENG }
+				}
+				FROM = {
+					random_core_state = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					add_cic = 500
+				}
+				add_cic = 1500
+				add_tech_bonus = {
+					name = ROM_the_zb_53
+					bonus = 0.75
+					uses = 2
+					category = infantry_weapons
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = FRA }
+				}
+				FROM = {
+					459 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				add_cic = 1000
+				random_core_state = {
+					limit = {
+						NOT = {
+							or = {
+								state = 80
+								state = 78
+								state = 766
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = CZE }
+				}
+				add_cic = 1500
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 4000
+					producer = CZE
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = JAP }
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 650
+					producer = JAP
+				}
+				add_cic = 500
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = AUS }
+				}
+				add_cic = 1000
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+					producer = AUS
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = BEL }
+				}
+				add_tech_bonus = {
+					name = ROM_the_zb_53
+					bonus = 1.5
+					uses = 1
+					category = infantry_weapons
+				}
+				add_cic = 2500
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = SWE }
+				}
+				add_tech_bonus = {
+					name = ROM_the_zb_53
+					bonus = 0.5
+					uses = 3
+					category = support_tech
+				}
+				add_cic = 1500
+			}
+		}
+	}
+
+	ROM_import_big_guns  = {
+
+		priority = 90
+
+		icon = GFX_decision_ger_military_buildup
+
+		ai_will_do = {
+			base = 10
+		}
+
+		targets = { GER ITA ENG FRA CZE JAP BEL SWE }
+
+		allowed = {  
+			original_tag = ROM
+		}
+
+		visible = { 
+			has_completed_focus = ROM_liscense_equipment 
+			check_variable = {
+				rom_big_guns_var < 2
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			FROM = {
+				has_opinion = {
+					target = ROOT
+					value > 74
+				}
+			}
+			or = {
+				FROM = {
+					has_same_ideology = yes
+				}
+				threat < 0.40
+			}
+		} 
+
+		days_remove = 90
+
+		cost = 30
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = { 
+			add_cic = 500
+			add_to_variable = {
+				rom_big_guns_var = 1
+			}
+			
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					FROM = { tag = GER }
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment
+					amount = 750
+					producer = GER
+				}
+				add_cic = 500
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = ITA }
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 850
+					producer = ITA
+				}
+				add_cic = 500
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = ENG }
+				}
+				FROM = {
+					random_core_state = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+					}
+					add_cic = 500
+				}
+				add_cic = 1000
+				mio:ROM_resita_works_organization = {
+					add_mio_funds = 1000
+				}
+				add_tech_bonus = {
+					name = ROM_the_zb_53
+					bonus = 0.33
+					uses = 2
+					category = artillery
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = FRA }
+				}
+				FROM = {
+					459 = {
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = arms_factory
+							level = 3
+							instant_build = yes
+						}
+					}
+				}
+				add_cic = 1000
+				random_core_state = {
+					limit = {
+						NOT = {
+							or = {
+								state = 80
+								state = 78
+								state = 766
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				mio:ROM_resita_works_organization = {
+					add_mio_funds = 500
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = CZE }
+				}
+				add_cic = 1500
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment
+					amount = 1250
+					producer = CZE
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = JAP }
+				}
+				random_core_state = {
+					limit = {
+						NOT = {
+							or = {
+								state = 80
+								state = 78
+								state = 766
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_cic = 600
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = BEL }
+				}
+				add_tech_bonus = {
+					name = ROM_the_zb_53
+					bonus = 1.5
+					uses = 1
+					category = artillery
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 750
+					producer = BEL
+				}
+				add_cic = 1000
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = SWE }
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment
+					amount = 1000
+					producer = SWE
+				}
+				add_breakthrough_points = {
+					specialization = specialization_land
+					value = 1
+				}
+				add_cic = 1000
+			}
+		}
+	}
+	ROM_import_mech  = {
+
+		priority = 80
+
+		icon = GFX_decision_generic_tank
+
+		ai_will_do = {
+			base = 10
+		}
+
+		targets = { GER ITA ENG FRA CZE USA }
+
+		allowed = {  
+			original_tag = ROM
+		}
+
+		visible = { 
+			has_completed_focus = ROM_liscense_equipment 
+			check_variable = {
+				rom_armor_var < 1
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			FROM = {
+				has_opinion = {
+					target = ROOT
+					value > 74
+				}
+			}
+			or = {
+				FROM = {
+					has_same_ideology = yes
+				}
+				threat < 0.40
+			}
+		} 
+
+		days_remove = 120
+
+		cost = 40
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.15
+		}
+
+		complete_effect = { 
+			add_cic = 500
+			add_to_variable = {
+				rom_armor_var = 1
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					FROM = { tag = GER }
+				}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = 1000
+					producer = GER
+				}
+				add_cic = 500
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = ITA }
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis
+					amount = 1100
+					producer = ITA
+				}
+				add_cic = 500
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = ENG }
+				}
+				FROM = {
+					random_core_state = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					add_cic = 500
+				}
+				add_cic = 1000
+				mio:ROM_malaxa_organization = {
+					add_mio_funds = 750
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis
+					amount = 700
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 900
+					producer = ENG
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = CZE }
+				}
+				add_cic = 1000
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis
+					amount = 1330
+					producer = CZE
+				}
+				add_tech_bonus = {
+					name = ROM_the_zb_53
+					bonus = 0.75
+					uses = 1
+					category = armor
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = FRA }
+				}
+				FROM = {
+					459 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				add_cic = 1000
+				random_core_state = {
+					limit = {
+						NOT = {
+							or = {
+								state = 80
+								state = 78
+								state = 766
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = medium_tank_chassis
+					amount = 650
+					producer = FRA
+				}
+				mio:ROM_leonidas_works_organization = {
+					add_mio_funds = 1000
+				}
+				mio:POL_pzinz_organization = {
+					add_mio_funds = 1000
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { tag = USA }
+				}
+				from = {
+					add_cic = 1500
+				}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = 1300
+					producer = USA
+				}
+				mio:ROM_malaxa_organization = {
+					add_mio_size = 1
+				}
+				add_cic = 1000
+			}
+		}
+	}
+}
+
+ROM_agriculture_reform = {
+	ROM_agri_reform_timeout  = {
+
+		priority = 120
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		available = {
+			always = no
+		}
+
+		allowed = {  
+			original_tag = ROM
+		}
+
+		activation = {
+			always = no
+		} 
+		is_good = yes
+		
+		days_mission_timeout = 365
+
+		timeout_effect = { 
+			ROM_agri_reform_timeout_ef = yes
+		}
+	}
+	ROM_bolster_loc  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = ROM
+			#has_idea = ROM_ROMLOC
+		}
+
+		visible = { 
+			has_completed_focus = ROM_agrarian_reform
+		}
+
+		available = {
+			controls_state = 76
+			controls_state = 79
+			has_idea = ROM_ROMLOC
+		} 
+
+		days_remove = 60
+
+		cost = 25
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = { 
+			set_country_flag = ROM_improved_industrial_1
+			swap_ideas = {
+				remove_idea = ROM_ROMLOC
+				add_idea = ROM_ROMLOC_1
+			}
+		}
+
+		remove_effect = {
+			build_railway = {
+				level = 2
+				start_province = 6711
+				target_province = 9548
+			}
+			if = {
+				limit = { NOT = { has_country_flag = rom_comeplete_land_reform } }
+				effect_tooltip = {
+					set_variable = {
+						var = rom_agri_reform_var
+						value = 2
+						tooltip = rom_change_land_reform_tt
+					}
+				}
+				add_to_variable = {
+					rom_agri_reform_var = 2
+				}
+			}
+		}
+	}
+	ROM_bolster_elc  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = ROM
+			#has_idea = ROM_ROMLOC
+		}
+
+		visible = { 
+			has_completed_focus = ROM_agrarian_reform
+		}
+
+		available = {
+			controls_state = 76
+			controls_state = 79
+			has_idea = ROM_ROMLOC_3
+		} 
+
+		days_remove = 60
+
+		cost = 25
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.2
+		}
+
+		complete_effect = { 
+			set_country_flag = ROM_improved_industrial_2
+			swap_ideas = {
+				remove_idea = generic_electronics_concern
+				add_idea = ROM_ROMLOC_2
+			}
+		}
+
+		remove_effect = {
+			82 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			if = {
+				limit = { NOT = { has_country_flag = rom_comeplete_land_reform } }
+				effect_tooltip = {
+					set_variable = {
+						var = rom_agri_reform_var
+						value = 2
+						tooltip = rom_change_land_reform_tt
+					}
+				}
+				add_to_variable = {
+					rom_agri_reform_var = 2
+				}
+			}
+		}
+	}
+	ROM_bolster_elc_1  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = ROM
+			#has_idea = ROM_ROMLOC
+		}
+
+		visible = { 
+			has_idea = ROM_ROMLOC_2
+		}
+
+		available = {
+			controls_state = 76
+			controls_state = 79
+		} 
+
+		days_remove = 60
+
+		cost = 25
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = { 
+		}
+
+		remove_effect = {
+			84 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			83 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			76 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			if = {
+				limit = { NOT = { has_country_flag = rom_comeplete_land_reform } }
+				effect_tooltip = {
+					set_variable = {
+						var = rom_agri_reform_var
+						value = 2
+						tooltip = rom_change_land_reform_tt
+					}
+				}
+				add_to_variable = {
+					rom_agri_reform_var = 2
+				}
+			}
+		}
+	}
+
+	ROM_bolster_loc_1  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = ROM
+		}
+
+		visible = { 
+			has_idea = ROM_ROMLOC_1
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+		} 
+
+		days_remove = 60
+
+		cost = 25
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = { 
+			79 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+
+		remove_effect = {
+			build_railway = {
+				level = 2
+				start_province = 746
+				target_province = 9548
+			}
+			build_railway = {
+				level = 2
+				start_province = 657
+				target_province = 687
+			}
+			build_railway = {
+				level = 2
+				start_province = 687
+				target_province = 6727
+			}
+			build_railway = {
+				level = 2
+				start_province = 687
+				target_province = 3707
+			}
+			78 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = {
+						id = 414
+					}
+				}
+			}
+			build_railway = {
+				level = 2
+				start_province = 414
+				target_province = 3707
+			}
+			if = {
+				limit = { NOT = { has_country_flag = rom_comeplete_land_reform } }
+				effect_tooltip = {
+					set_variable = {
+						var = rom_agri_reform_var
+						value = 2
+						tooltip = rom_change_land_reform_tt
+					}
+				}
+				add_to_variable = {
+					rom_agri_reform_var = 2
+				}
+			}
+		}
+	}
+
+	ROM_expand_hydroelectric_1  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = ROM
+			#has_idea = ROM_ROMLOC
+		}
+
+		visible = { 
+			has_completed_focus = ROM_agrarian_reform
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 83 }
+		}
+
+		available = {
+			controls_state = 83
+		} 
+
+		days_remove = 60
+
+		cost = 50
+		fire_only_once = yes
+
+		modifier = {
+			production_speed_buildings_factor = -0.075
+		}
+
+		complete_effect = { 
+			83 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+
+		remove_effect = {
+			83 = {
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 696
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { has_country_flag = rom_comeplete_land_reform } }
+				effect_tooltip = {
+					set_variable = {
+						var = rom_agri_reform_var
+						value = 2
+						tooltip = rom_change_land_reform_tt
+					}
+				}
+				add_to_variable = {
+					rom_agri_reform_var = 2
+				}
+			}
+		}
+	}
+	ROM_expand_hydroelectric_2  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = ROM
+			#has_idea = ROM_ROMLOC
+		}
+
+		visible = { 
+			has_completed_focus = ROM_agrarian_reform
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 84 }
+		}
+
+		available = {
+			controls_state = 84
+		} 
+
+		days_remove = 90
+
+		cost = 50
+		fire_only_once = yes
+
+		modifier = {
+			production_speed_buildings_factor = -0.075
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			84 = {
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 9619
+					}
+				}
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
+			if = {
+				limit = { NOT = { has_country_flag = rom_comeplete_land_reform } }
+				effect_tooltip = {
+					set_variable = {
+						var = rom_agri_reform_var
+						value = 2
+						tooltip = rom_change_land_reform_tt
+					}
+				}
+				add_to_variable = {
+					rom_agri_reform_var = 2
+				}
+			}
+		}
+	}
+	ROM_land_reform  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = ROM
+		}
+
+		visible = { 
+			has_completed_focus = ROM_agrarian_reform
+		}
+
+		state_target = yes
+
+		targets = { 76 84 83 82 80 766 78 77 }
+
+		available = {
+			from = {
+				is_controlled_by = root
+			}
+			custom_trigger_tooltip = {
+				tooltip = rom_land_re
+				NOT = { has_country_flag = rom_land_reform_sub }
+			}
+		} 
+
+		days_remove = 60
+
+		cost = 25
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = { 
+			set_country_flag = rom_land_reform_sub
+		}
+
+		remove_effect = {
+			clr_country_flag = rom_land_reform_sub
+			from = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_manpower = 15000
+			}
+			if = {
+				limit = { NOT = { has_country_flag = rom_comeplete_land_reform } }
+				effect_tooltip = {
+					set_variable = {
+						var = rom_agri_reform_var
+						value = 2
+						tooltip = rom_change_land_reform_tt
+					}
+				}
+				add_to_variable = {
+					rom_agri_reform_var = 2
+				}
+			}
+			
+		}
+	}
+	ROM_city_reform  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = ROM
+		}
+
+		visible = { 
+			has_completed_focus = ROM_agrarian_reform
+		}
+
+		state_target = yes
+
+		targets = { 79 46 971 81 }
+
+		available = {
+			from = {
+				is_controlled_by = root
+			}
+			custom_trigger_tooltip = {
+				tooltip = rom_land_r
+				NOT = { has_country_flag = rom_planis }
+			}
+		} 
+
+		days_remove = 75
+
+		cost = 33
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = { 
+			set_country_flag = rom_planis
+		}
+
+		remove_effect = {
+			clr_country_flag = rom_planis
+			from = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_manpower = 30000
+			}
+			if = {
+				limit = { NOT = { has_country_flag = rom_comeplete_land_reform } }
+				effect_tooltip = {
+					set_variable = {
+						var = rom_agri_reform_var
+						value = 2
+						tooltip = rom_change_land_reform_tt
+					}
+				}
+				add_to_variable = {
+					rom_agri_reform_var = 2
+				}
+			}
+		}
+	}
+	ROM_cexport_agri = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = ROM
+		}
+
+		visible = { 
+			has_completed_focus = ROM_agrarian_reform
+		}
+
+
+		available = {
+			
+		} 
+
+		days_remove = 90
+
+		cost = 33
+
+		modifier = {
+			political_power_factor = -0.15
+			consumer_goods_factor = -0.33
+			production_speed_buildings_factor = 0.075
+		}
+
+		complete_effect = { 
+			if = {
+				limit = { NOT = { has_country_flag = rom_comeplete_land_reform } }
+				effect_tooltip = {
+					set_variable = {
+						var = rom_agri_reform_var
+						value = -4
+						tooltip = rom_change_land_reform_tt
+					}
+				}
+				subtract_from_variable = {
+					rom_agri_reform_var = 4
+				}
+			}
+			add_cic = 1500
+		}
+
+	}
+	ROM_debug_spirit = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = ROM
+		}
+
+		visible = { 
+			always = no
+		}
+
+
+		available = {
+			
+		} 
+
+		cost = 0
+		complete_effect = { 
+			add_dynamic_modifier = {
+				modifier = ROM_agrarian_refor
+			}
+		}
+	}
+	ROM_debug_spiri = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = ROM
+		}
+
+		visible = { 
+			always = no
+		}
+
+
+		available = {
+			
+		} 
+		days_remove = 1
+		cost = 0
+		complete_effect = { 
+			#add_to_variable = {
+			#	ROM_agrarian_reform_1 = 0.075
+			#}
+			#add_to_variable = {
+			#	ROM_agrarian_reform_2 = 0.05
+			#}
+			#add_to_variable = {
+			#	ROM_agrarian_reform_3 = 0.05
+			#}
+
+			#set_variable = {
+			#	var = rom_agri_reform_var
+			#	value = 10
+			#}
+			set_variable = {
+				rom_agri_reform_var = 20
+			}
+		}
+		remove_effect = {
+			ROM_agri_reform_timeout_ef = yes
+		}
+
+	}
+}

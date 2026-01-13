@@ -1,0 +1,964 @@
+CHI_arsenals = {
+	CHI_arsenal_hubei  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				tag = CHI
+				tag = JAP
+				tag = MAN
+			}
+			
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = MAN_chinese_arsenals
+				has_completed_focus = JAP_develop_the_chinese_resources
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			controls_state = 620
+		} 
+
+		highlight_states = {
+			highlight_state_targets = { state = 620 }
+		}
+		
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		cost = 33
+
+		modifier = {
+			consumer_goods_factor = 0.033
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			620 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { tag = JAP }
+				mio:JAP_mitsui_arms_manufactoring = {
+					add_mio_funds = 500
+				}
+			}
+			if = {
+				limit = { tag = MAN }
+				mio:CHI_mukden_arsenal_organization = {
+					add_mio_funds = 500
+				}
+			}
+		}
+	}
+	
+	CHI_arsenal_jinling  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				tag = CHI
+				tag = JAP
+				tag = MAN
+			}
+			
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = MAN_chinese_arsenals
+				has_completed_focus = JAP_develop_the_chinese_resources
+			}
+			controls_state = 613
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+		} 
+
+		highlight_states = {
+			highlight_state_targets = { state = 613 }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		cost = 33
+
+		modifier = {
+			consumer_goods_factor = 0.033
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			613 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { tag = JAP }
+				mio:JAP_sumitomo_big_arms_manufactoring = {
+					add_mio_funds = 500
+				}
+			}
+			if = {
+				limit = { tag = MAN }
+				mio:CHI_taiyuan_arsenal_organization = {
+					add_mio_funds = 500
+				}
+			}
+		}
+	}
+
+	CHI_arsenal_guangdong   = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				tag = CHI
+				tag = JAP
+				tag = MAN
+			}
+			
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = MAN_chinese_arsenals
+				has_completed_focus = JAP_develop_the_chinese_resources
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			controls_state = 592
+		} 
+
+		highlight_states = {
+			highlight_state_targets = { state = 592 }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		cost = 33
+
+		modifier = {
+			consumer_goods_factor = 0.033
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			592 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { tag = JAP }
+				mio:JAP_sumitomo_big_arms_manufactoring = {
+					add_mio_funds = 500
+				}
+			}
+			if = {
+				limit = { tag = MAN }
+				mio:CHI_taiyuan_arsenal_organization = {
+					add_mio_funds = 500
+				}
+			}
+		}
+	}
+
+	CHI_arsenal_mukden    = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				tag = CHI
+				tag = JAP
+				tag = MAN
+			}
+			
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = MAN_chinese_arsenals
+				has_completed_focus = JAP_develop_the_chinese_resources
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			controls_state = 716
+		} 
+
+		highlight_states = {
+			highlight_state_targets = { state = 716 }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		cost = 33
+
+		modifier = {
+			consumer_goods_factor = 0.033
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			716 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			if = {
+				limit = { tag = JAP }
+				mio:JAP_mitsui_arms_manufactoring = {
+					add_mio_funds = 250
+				}
+			}
+			if = {
+				limit = { tag = MAN }
+				mio:CHI_mukden_arsenal_organization = {
+					add_mio_funds = 250
+				}
+			}
+			if = {
+				limit = { tag = JAP }
+				mio:JAP_sumitomo_big_arms_manufactoring = {
+					add_mio_funds = 250
+				}
+			}
+			if = {
+				limit = { tag = MAN }
+				mio:CHI_taiyuan_arsenal_organization = {
+					add_mio_funds = 250
+				}
+			}
+		}
+	}
+
+	CHI_arsenal_shanghai   = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				tag = CHI
+				tag = JAP
+				tag = MAN
+			}
+			
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = MAN_chinese_arsenals
+				has_completed_focus = JAP_develop_the_chinese_resources
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			controls_state = 613
+		} 
+
+		highlight_states = {
+			highlight_state_targets = { state = 613 }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		cost = 33
+
+		modifier = {
+			consumer_goods_factor = 0.033
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			613 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { tag = JAP }
+				mio:JAP_mitsui_arms_manufactoring = {
+					add_mio_funds = 250
+				}
+			}
+			if = {
+				limit = { tag = MAN }
+				mio:CHI_mukden_arsenal_organization = {
+					add_mio_funds = 250
+				}
+			}
+			add_tech_bonus = {
+				name = ROM_the_zb_53
+				bonus = 0.33
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	CHI_arsenal_chongqing   = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				tag = CHI
+				tag = JAP
+				tag = MAN
+			}
+			
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = MAN_chinese_arsenals
+				has_completed_focus = JAP_develop_the_chinese_resources
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			controls_state = 605
+		} 
+
+		highlight_states = {
+			highlight_state_targets = { state = 605 }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		cost = 33
+
+		modifier = {
+			consumer_goods_factor = 0.033
+			production_factory_efficiency_gain_factor = 0.15
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			605 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { tag = JAP }
+				mio:JAP_mitsui_arms_manufactoring = {
+					add_mio_funds = 250
+				}
+			}
+			if = {
+				limit = { tag = MAN }
+				mio:CHI_mukden_arsenal_organization = {
+					add_mio_funds = 250
+				}
+			}
+		}
+	}
+
+	CHI_arsenal_kunming   = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				tag = CHI
+				tag = JAP
+				tag = MAN
+			}
+			
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = MAN_chinese_arsenals
+				has_completed_focus = JAP_develop_the_chinese_resources
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			controls_state = 325
+		} 
+
+		highlight_states = {
+			highlight_state_targets = { state = 325 }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		cost = 33
+
+		modifier = {
+			consumer_goods_factor = 0.033
+			industrial_capacity_factory = 0.1
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			325 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { tag = JAP }
+				mio:JAP_mitsui_arms_manufactoring = {
+					add_mio_funds = 250
+				}
+			}
+			if = {
+				limit = { tag = MAN }
+				mio:CHI_mukden_arsenal_organization = {
+					add_mio_funds = 250
+				}
+			}
+		}
+	}
+
+	 
+
+	CHI_arsenal_xian   = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				tag = CHI
+				tag = JAP
+				tag = MAN
+			}
+			
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = MAN_chinese_arsenals
+				has_completed_focus = JAP_develop_the_chinese_resources
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			controls_state = 744
+		} 
+
+		highlight_states = {
+			highlight_state_targets = { state = 744 }
+		}
+		
+		days_remove = 90
+
+		fire_only_once = yes
+
+		cost = 33
+
+		modifier = {
+			consumer_goods_factor = 0.033
+			industrial_capacity_factory = 0.1
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			744 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { tag = JAP }
+				mio:JAP_mitsui_arms_manufactoring = {
+					add_mio_funds = 250
+				}
+			}
+			if = {
+				limit = { tag = MAN }
+				mio:CHI_mukden_arsenal_organization = {
+					add_mio_funds = 250
+				}
+			}
+		}
+	}
+
+	CHI_arsenal_taiyuan    = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				tag = CHI
+				tag = JAP
+				tag = MAN
+			}
+			
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = MAN_chinese_arsenals
+				has_completed_focus = JAP_develop_the_chinese_resources
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			controls_state = 615
+		} 
+
+		highlight_states = {
+			highlight_state_targets = { state = 615 }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		cost = 33
+
+		modifier = {
+			consumer_goods_factor = 0.033
+		}
+
+		complete_effect = { 
+			JAP = {
+				add_timed_idea = { idea = CHI_taiyun_revitalized days = 180 }
+			}
+			MAN = {
+				add_timed_idea = { idea = CHI_taiyun_revitalized days = 180 }
+			}
+			SIA = {
+				add_timed_idea = { idea = CHI_taiyun_revitalized days = 180 }
+			}
+
+		}
+
+		remove_effect = {
+			615 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			
+			if = {
+				limit = { tag = JAP }
+				mio:JAP_mitsui_arms_manufactoring = {
+					add_mio_funds = 250
+				}
+			}
+			if = {
+				limit = { tag = MAN }
+				mio:CHI_mukden_arsenal_organization = {
+					add_mio_funds = 250
+				}
+			}
+		}
+	}
+
+	CHI_arsenal_liuzhou = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				tag = CHI
+				tag = JAP
+				tag = MAN
+			}
+			
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = MAN_chinese_arsenals
+				has_completed_focus = JAP_develop_the_chinese_resources
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			controls_state = 599
+		} 
+
+		highlight_states = {
+			highlight_state_targets = { state = 599 }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		cost = 33
+
+		modifier = {
+			consumer_goods_factor = 0.033
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			599 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			
+			if = {
+				limit = { tag = JAP }
+				mio:JAP_sumitomo_big_arms_manufactoring = {
+					add_mio_funds = 250
+				}
+			}
+			if = {
+				limit = { tag = MAN }
+				mio:CHI_taiyuan_arsenal_organization = {
+					add_mio_funds = 250
+				}
+			}
+			add_tech_bonus = {
+				name = ROM_the_zb_53
+				bonus = 0.33
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	CHI_arsenal_lanzhou  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				tag = CHI
+				tag = JAP
+				tag = MAN
+			}
+			
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = MAN_chinese_arsenals
+				has_completed_focus = JAP_develop_the_chinese_resources
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			controls_state = 283
+		} 
+
+		highlight_states = {
+			highlight_state_targets = { state = 283 }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		cost = 33
+
+		modifier = {
+			consumer_goods_factor = 0.033
+			industrial_capacity_factory = 0.075
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			283 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { tag = JAP }
+				mio:JAP_mitsui_arms_manufactoring = {
+					add_mio_funds = 250
+				}
+			}
+
+			if = {
+				limit = { tag = MAN }
+				mio:CHI_mukden_arsenal_organization = {
+					add_mio_funds = 250
+				}
+			}
+		}
+	}
+
+	CHI_arsenal_fuzhou = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			or = {
+				tag = CHI
+				tag = JAP
+				tag = MAN
+			}
+			
+		}
+
+		visible = { 
+			or = {
+				has_completed_focus = MAN_chinese_arsenals
+				has_completed_focus = JAP_develop_the_chinese_resources
+			}
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+			controls_state = 595
+		} 
+
+		highlight_states = {
+			highlight_state_targets = { state = 595 }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		cost = 33
+
+		modifier = {
+			consumer_goods_factor = 0.033
+			industrial_capacity_dockyard = 0.15
+		}
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			595 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			595 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			if = {
+				limit = { tag = JAP }
+				mio:JAP_sumitomo_big_arms_manufactoring = {
+					add_mio_funds = 250
+				}
+			}
+			if = {
+				limit = { tag = MAN }
+				mio:CHI_taiyuan_arsenal_organization = {
+					add_mio_funds = 250
+				}
+			}
+			add_tech_bonus = {
+				name = ROM_the_zb_53
+				bonus = 0.33
+				uses = 3
+				category = ship_modules_tech
+			}
+		}
+	}
+
+}

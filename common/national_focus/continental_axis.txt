@@ -1,0 +1,1607 @@
+joint_focus = {
+	id = cont_axis_joint_wol
+	
+	#dynamic = yes 
+	
+	icon = GFX_goal_support_fascism
+	
+	
+	#prerequisite = { focus = NORDIC_strengthen_ties }
+	#prerequisite = { focus = NORDIC_mutual_guarantees }
+
+
+	x = 0
+	y = 0
+	offset = {
+		x = 32
+		y = 6
+		trigger = {
+			tag = GER
+		}
+	}
+	offset = {
+		x = 25
+		y = 6
+		trigger = {
+			tag = ITA
+		}
+	}
+	offset = {
+		x = 70
+		y = 9
+		trigger = {
+			tag = HUN
+		}
+	}
+	offset = {
+		x = 32
+		y = 5
+		trigger = {
+			tag = ROM
+		}
+	}
+	offset = {
+		x = 8
+		y = 7
+		trigger = {
+			tag = BUL
+		}
+	}
+	#relative_position_id = NORDIC_mutual_guarantees
+	cost = 1
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		num_faction_members > 1
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  } 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		add_political_power = 50
+		add_dynamic_modifier = {
+			modifier = cont_axis_eco
+		}
+		add_dynamic_modifier = {
+			modifier = cont_axis_army
+		}
+	}
+
+	completion_reward_joint_member = { 
+		add_political_power = 50
+		add_dynamic_modifier = {
+			modifier = cont_axis_eco
+		}
+		add_dynamic_modifier = {
+			modifier = cont_axis_army
+		}
+	}
+	completion_reward = {
+		set_global_flag = axis_shared_industry_enable
+		custom_effect_tooltip = axis_shared_industry_enable_1_tt
+		add_to_variable = {
+			var_axis_spare_industrial_hubs = 1
+			tooltip = axis_foriegn_buildup_tt
+		}
+	}
+}
+
+joint_focus = {
+	id = cont_axis_joint_wol_one
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_ITA_mare_nostrum
+	
+	
+	#prerequisite = { focus = NORDIC_strengthen_ties }
+	prerequisite = { focus = cont_axis_joint_wol }
+
+
+	x = 5
+	y = 1
+
+
+
+	relative_position_id = cont_axis_joint_wol
+	cost = 4
+
+	text_icon = WOL_ita_cont_share_style
+
+	available = {
+		original_tag = ITA
+		has_war = yes
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  } 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		#add_political_power = 50
+		
+	}
+	
+	completion_reward_joint_member = { 
+		add_to_variable = {
+			var_axis_spare_industrial_hubs = 1
+			tooltip = axis_foriegn_buildup_tt
+		}
+	}		
+	completion_reward = {
+		set_global_flag = axis_shared_industry_enable_2
+		custom_effect_tooltip = axis_shared_industry_enable_2_tt
+	}
+}
+
+joint_focus = {
+	id = cont_axis_joint_wol_two
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_generic_modernize_industry
+	prerequisite = { focus = cont_axis_joint_wol }
+
+	x = -5
+	y = 1
+
+	relative_position_id = cont_axis_joint_wol
+	cost = 4
+
+	text_icon = WOL_ger_cont_share_style
+
+	available = {
+		original_tag = GER
+		has_war = yes
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  	} 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		add_political_power = 50
+	}
+
+	completion_reward_joint_member = { 
+		add_to_variable = {
+			var_axis_spare_industrial_hubs = 1
+			tooltip = axis_foriegn_buildup_tt
+		}
+		custom_effect_tooltip = modify_cont_axis_eco
+		add_to_variable = { 
+			cont_axis_eco_2 = 0.05
+			tooltip = production_factory_max_efficiency_factor_tt
+		}
+		add_to_variable = { 
+			cont_axis_eco_3 = 0.05
+			tooltip = production_factory_efficiency_gain_factor_tt
+		}
+		
+	}
+}
+
+joint_focus = {
+	id = cont_axis_joint_wol_three
+	
+	#dynamic = yes 
+	
+	icon = GFX_goal_support_fascism
+	prerequisite = { focus = cont_axis_joint_wol }
+
+	x = 0
+	y = 1
+
+	relative_position_id = cont_axis_joint_wol
+	cost = 4
+
+	text_icon = NORDIC_focus_style
+
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	 	} 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		add_political_power = 50
+	}
+
+	completion_reward_joint_member = { 
+		add_political_power = 50
+	}
+	completion_reward = {
+		every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	}
+}
+
+joint_focus = {
+	id = cont_axis_joint_wol_four
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_GER_expand_ss_security_duties
+	prerequisite = { focus = cont_axis_joint_wol_two }
+	mutually_exclusive = { focus = cont_axis_joint_wol_five }
+
+	x = 1
+	y = 1
+
+	relative_position_id = cont_axis_joint_wol_two
+	cost = 5
+
+	text_icon = WOL_ger_cont_share_style
+
+	available = {
+		original_tag = GER
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  	} 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		custom_effect_tooltip = modify_cont_axis_eco
+		add_to_variable = { 
+			cont_axis_army_2 = -0.075
+			tooltip = conscription_factor_tt
+		}
+	}
+
+	completion_reward_joint_member = { 
+		custom_effect_tooltip = modify_cont_axis_army
+		add_to_variable = { 
+			cont_axis_army_1 = 0.005
+			tooltip = conscription_tt
+		}
+		add_to_variable = { 
+			cont_axis_army_3 = 0.05
+			tooltip = breakthrough_factor_tt
+		}
+	}
+}
+
+joint_focus = {
+	id = cont_axis_joint_wol_five
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_generic_full_employment
+	prerequisite = { focus = cont_axis_joint_wol_two }
+	mutually_exclusive = { focus = cont_axis_joint_wol_four }
+
+	x = -1
+	y = 1
+
+	relative_position_id = cont_axis_joint_wol_two
+	cost = 5
+
+	text_icon = WOL_ger_cont_share_style
+
+	available = {
+		original_tag = GER
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  	} 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		custom_effect_tooltip = modify_cont_axis_eco
+		add_to_variable = { 
+			cont_axis_eco_2 = 0.075
+			tooltip = production_factory_max_efficiency_factor_tt
+		}
+	}
+
+	completion_reward_joint_member = { 
+		custom_effect_tooltip = modify_cont_axis_army
+		add_to_variable = { 
+			cont_axis_army_2 = -0.075
+			tooltip = conscription_factor_tt
+		}
+	}
+}
+joint_focus = {
+	id = cont_axis_joint_wol_six
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_generic_befriend_hungary
+	prerequisite = { focus = cont_axis_joint_wol_three }
+
+	x = 2
+	y = 1
+
+	relative_position_id = cont_axis_joint_wol_three
+	cost = 3
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		NOT = { original_tag = HUN }
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  #tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  } 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		add_cic = 1000
+		43 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		capital_scope = {
+			add_resource = {
+				type = aluminium
+				amount = 4
+			}
+		}
+		HUN = {
+			add_to_variable = {
+				var_axis_spare_industrial_hubs = 1
+				tooltip = axis_foriegn_buildup_tt
+			}
+		}
+	}
+
+	completion_reward_joint_member = {
+		capital_scope = {
+			add_resource = {
+				type = aluminium
+				amount = 4
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = cont_axis_joint_wol_seven
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_invite_romania
+	prerequisite = { focus = cont_axis_joint_wol_three }
+
+	x = -2
+	y = 1
+
+	relative_position_id = cont_axis_joint_wol_three
+	cost = 3
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		NOT = { original_tag = ROM }
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+			tag = GER
+			tag = ITA
+			tag = HUN
+			#tag = ROM
+			tag = BUL
+	 	} 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		add_cic = 1000
+		46 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		capital_scope = {
+			add_resource = {
+				type = oil
+				amount = 2
+			}
+		}
+		ROM = {
+			add_to_variable = {
+				var_axis_spare_industrial_hubs = 1
+				tooltip = axis_foriegn_buildup_tt
+			}
+		}
+	}
+
+	completion_reward_joint_member = {
+		capital_scope = {
+			add_resource = {
+				type = oil
+				amount = 2
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = cont_axis_joint_wol_eight
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_generic_befriend_bulgaria
+	prerequisite = { focus = cont_axis_joint_wol_three }
+
+	x = 0
+	y = 1
+
+	relative_position_id = cont_axis_joint_wol_three
+	cost = 3
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		NOT = { original_tag = BUL }
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+			tag = GER
+			tag = ITA
+			tag = HUN
+			tag = ROM
+			#tag = BUL
+	  } 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		add_cic = 1000
+		48 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		capital_scope = {
+			add_resource = {
+				type = chromium
+				amount = 3
+			}
+			add_resource = {
+				type = tungsten
+				amount = 3
+			}
+		}
+		BUL = {
+			add_to_variable = {
+				var_axis_spare_industrial_hubs = 1
+				tooltip = axis_foriegn_buildup_tt
+			}
+		}
+	}
+
+	completion_reward_joint_member = {
+		capital_scope = {
+			add_resource = {
+				type = chromium
+				amount = 3
+			}
+			add_resource = {
+				type = tungsten
+				amount = 3
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = cont_axis_joint_wol_nine
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_generic_merchant_fleet
+	prerequisite = { focus = cont_axis_joint_wol_one }
+
+	x = 1
+	y = 1
+
+	relative_position_id = cont_axis_joint_wol_one
+	cost = 5
+
+	text_icon = WOL_ita_cont_share_style
+
+	available = {
+		original_tag = ITA
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  	} 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		navy_experience = 33
+	}
+
+	completion_reward_joint_member = { 
+		navy_experience = 50
+		add_equipment_to_stockpile = {
+			type = convoy_1
+			amount = 50
+		}
+	}
+}
+
+joint_focus = {
+	id = cont_axis_joint_wol_ten
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_generic_air_research_boost
+	prerequisite = { focus = cont_axis_joint_wol_one }
+
+	x = -1
+	y = 1
+
+	relative_position_id = cont_axis_joint_wol_one
+	cost = 5
+
+	text_icon = WOL_ita_cont_share_style
+
+	available = {
+		original_tag = ITA
+		has_air_experience > 50
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  	} 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		air_experience = -50
+	}
+
+	completion_reward_joint_member = {
+		custom_effect_tooltip = modify_cont_axis_eco
+		add_to_variable = { 
+			cont_axis_eco_7 = 0.05
+			tooltip = research_speed_factor_tt
+		}
+		add_tech_bonus = {
+			name = GER_aeronautical_research_institute
+			bonus = 0.5
+			uses = 1
+			category = air_equipment
+		}
+	}
+}
+
+joint_focus = {
+	id = cont_axis_joint_wol_elev
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_generic_reorient_production
+	prerequisite = { focus = cont_axis_joint_wol_three }
+
+	x = 1
+	y = 2
+
+	relative_position_id = cont_axis_joint_wol_three
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		FRA = { has_capitulated = yes }
+		BEL = { has_capitulated = yes }
+		HOL = { has_capitulated = yes }
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  } 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		custom_effect_tooltip = modify_cont_axis_eco
+		add_to_variable = { 
+			cont_axis_eco_2 = 0.033
+			tooltip = production_factory_max_efficiency_factor_tt
+		}
+		add_to_variable = { 
+			cont_axis_eco_4 = 0.05
+			tooltip = industrial_capacity_dockyard_tt
+		}
+	}
+
+	completion_reward_joint_member = { 
+		custom_effect_tooltip = modify_cont_axis_eco
+		add_to_variable = { 
+			cont_axis_eco_2 = 0.025
+			tooltip = production_factory_max_efficiency_factor_tt
+		}
+		add_to_variable = { 
+			cont_axis_eco_4 = 0.05
+			tooltip = industrial_capacity_dockyard_tt
+		}
+	}
+}
+
+joint_focus = {
+	id = cont_axis_joint_wol_twel
+	
+	#dynamic = yes 
+	
+	icon = GFX_goal_fortify_the_westwall
+	prerequisite = { focus = cont_axis_joint_wol_elev }
+
+	x = 0
+	y = 1
+
+	relative_position_id = cont_axis_joint_wol_elev
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  } 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		set_global_flag = axis_shared_industry_enable_4
+	}
+
+	completion_reward_joint_member = { 
+		
+	}
+	completion_reward = {
+		custom_effect_tooltip = axis_shared_industry_enable_4_tt
+	}
+}
+
+joint_focus = {
+	id = cont_axis_joint_wol_thirt
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_generic_spread_fascism
+	prerequisite = { focus = cont_axis_joint_wol_three }
+
+	x = -1
+	y = 2
+
+	relative_position_id = cont_axis_joint_wol_three
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		SOV = {
+			casualties_inflicted_by = {
+				opponent = ROOT
+				thousands > 1000
+			}
+		}
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  } 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		custom_effect_tooltip = modify_cont_axis_eco
+		add_to_variable = { 
+			cont_axis_eco_1 = 0.075
+			tooltip = industrial_capacity_factory_tt
+		}
+	}
+
+	completion_reward_joint_member = { 
+		custom_effect_tooltip = modify_cont_axis_eco
+		add_to_variable = { 
+			cont_axis_eco_1 = 0.05
+			tooltip = industrial_capacity_factory_tt
+		}
+
+	}
+}
+joint_focus = {
+	id = cont_axis_joint_wol_fourt
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_GER_appease_the_wehrmacht
+	prerequisite = { focus = cont_axis_joint_wol_five focus = cont_axis_joint_wol_four }
+	mutually_exclusive = { focus = cont_axis_joint_wol_fivet }
+
+	x = 1
+	y = 2
+
+	relative_position_id = cont_axis_joint_wol_two
+	cost = 5
+
+	text_icon = WOL_ger_cont_share_style
+
+	available = {
+		original_tag = GER
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  	} 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		custom_effect_tooltip = modify_cont_axis_army
+		add_to_variable = { 
+			cont_axis_army_5 = -30
+			tooltip = max_command_power_tt
+		}
+	}
+	completion_reward_joint_member = { 
+		custom_effect_tooltip = modify_cont_axis_army
+		add_to_variable = { 
+			cont_axis_army_4 = 0.05
+			tooltip = max_planning_factor_tt
+		}
+		add_to_variable = { 
+			cont_axis_army_7 = 0.05
+			tooltip = army_org_factor_tt
+		}
+	}
+}
+
+joint_focus = {
+	id = cont_axis_joint_wol_fivet
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_generic_fascist_troops
+	prerequisite = { focus = cont_axis_joint_wol_five focus = cont_axis_joint_wol_four }
+	mutually_exclusive = { focus = cont_axis_joint_wol_fourt }
+
+	x = -1
+	y = 2
+
+	relative_position_id = cont_axis_joint_wol_two
+	cost = 5
+
+	text_icon = WOL_ger_cont_share_style
+
+	available = {
+		original_tag = GER
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	 	} 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		custom_effect_tooltip = modify_cont_axis_army
+		add_to_variable = { 
+			cont_axis_army_4 = 0.075
+			tooltip = max_planning_factor_tt
+		}
+	}
+
+	completion_reward_joint_member = { 
+		custom_effect_tooltip = modify_cont_axis_army
+		add_to_variable = { 
+			cont_axis_army_6 = -0.15
+			tooltip = planning_speed_factor_tt
+		}
+		add_to_variable = { 
+			cont_axis_army_7 = 0.05
+			tooltip = army_org_factor_tt
+		}
+	}
+}
+
+joint_focus = {
+	id = cont_axis_joint_wol_sixt
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_generic_italy_first
+	prerequisite = { focus = cont_axis_joint_wol_ten focus = cont_axis_joint_wol_nine }
+	mutually_exclusive = { focus = cont_axis_joint_wol_sevt }
+	x = 1
+	y = 2
+
+	relative_position_id = cont_axis_joint_wol_one
+	cost = 15
+
+	text_icon = WOL_ita_cont_share_style
+
+	available = {
+		original_tag = ITA
+		or = {
+			YUG = { exists = no }
+			YUG = { has_capitulated = yes }
+		}
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  	} 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		custom_effect_tooltip = every_yug_core_tt
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					or = {
+						is_core_of = YUG
+						is_core_of = MAC
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	completion_reward_joint_member = { 
+		capital_scope = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = cont_axis_joint_wol_sevt
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_generic_balkan_diplomacy
+	prerequisite = { focus = cont_axis_joint_wol_ten focus = cont_axis_joint_wol_nine }
+	mutually_exclusive = { focus = cont_axis_joint_wol_sixt }
+
+	x = -1
+	y = 2
+
+	relative_position_id = cont_axis_joint_wol_one
+	cost = 15
+
+	text_icon = WOL_ita_cont_share_style
+
+	available = {
+		original_tag = ITA
+		or = {
+			YUG = { exists = no }
+			YUG = { has_capitulated = yes }
+		}
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  	} 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		custom_effect_tooltip = every_yug_core_tt
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					or = {
+						is_core_of = YUG
+						is_core_of = MAC
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	completion_reward_joint_member = {
+		custom_effect_tooltip = every_yug_core_tt
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					or = {
+						is_core_of = YUG
+						is_core_of = MAC
+					}
+					is_owned_by = root
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+joint_focus = {
+	id = cont_axis_joint_wol_eigt
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_generic_rubber
+	prerequisite = { focus = cont_axis_joint_wol_sixt focus = cont_axis_joint_wol_sevt }
+
+	x = 0
+	y = 3
+
+	relative_position_id = cont_axis_joint_wol_one
+	cost = 5
+
+	text_icon = WOL_ita_cont_share_style
+
+	available = {
+		original_tag = ITA
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  #tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  	} 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		
+	}
+
+	completion_reward_joint_member = {
+		capital_scope = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = synthetic_refinery
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+joint_focus = {
+	id = cont_axis_joint_wol_nint
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_SWE_hedgehog_defense
+	prerequisite = { focus = cont_axis_joint_wol_thirt }
+
+	x = 0
+	y = 1
+
+	relative_position_id = cont_axis_joint_wol_thirt
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  } 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		set_global_flag = axis_shared_industry_enable_3
+	}
+
+	completion_reward_joint_member = { 
+		
+	}
+	completion_reward = {
+		custom_effect_tooltip = axis_shared_industry_enable_3_tt
+	}
+}
+joint_focus = {
+	id = cont_axis_joint_wol_twent
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_generic_befriend_hungary
+	prerequisite = { focus = cont_axis_joint_wol_six }
+
+	x = 0
+	y = 3
+
+	relative_position_id = cont_axis_joint_wol_six
+	cost = 3
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		NOT = { original_tag = HUN }
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+	available = {
+		has_war = yes
+	}
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  #tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  } 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		add_cic = 1000
+		43 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+		capital_scope = {
+			add_resource = {
+				type = aluminium
+				amount = 2
+			}
+		}
+	}
+
+	completion_reward_joint_member = {
+		capital_scope = {
+			add_resource = {
+				type = aluminium
+				amount = 2
+			}
+		}
+	}
+}
+joint_focus = {
+	id = cont_axis_joint_wol_twone
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_invite_romania
+	prerequisite = { focus = cont_axis_joint_wol_seven }
+
+	x = 0
+	y = 3
+
+	relative_position_id = cont_axis_joint_wol_seven
+	cost = 3
+
+	text_icon = NORDIC_focus_style
+
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+	available = {
+		has_war = yes
+		NOT = { original_tag = ROM }
+	}
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  #tag = ROM
+		  tag = BUL
+	  } 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		add_cic = 1000
+		46 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+		capital_scope = {
+			add_resource = {
+				type = oil
+				amount = 1
+			}
+		}
+	}
+
+	completion_reward_joint_member = {
+		capital_scope = {
+			add_resource = {
+				type = oil
+				amount = 1
+			}
+		}
+	}
+}
+joint_focus = {
+	id = cont_axis_joint_wol_twtwo
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_generic_befriend_bulgaria
+	prerequisite = { focus = cont_axis_joint_wol_eight }
+
+	x = 0
+	y = 3
+
+	relative_position_id = cont_axis_joint_wol_eight
+	cost = 3
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		NOT = { original_tag = BUL }
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+	available = {
+		has_war = yes
+	}
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  #tag = BUL
+	  } 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		add_cic = 1000
+		48 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+		capital_scope = {
+			add_resource = {
+				type = chromium
+				amount = 2
+			}
+			add_resource = {
+				type = tungsten
+				amount = 2
+			}
+		}
+	}
+
+	completion_reward_joint_member = {
+		capital_scope = {
+			add_resource = {
+				type = chromium
+				amount = 2
+			}
+			add_resource = {
+				type = tungsten
+				amount = 2
+			}
+		}
+	}
+}
+joint_focus = {
+	id = cont_axis_joint_wol_twothre
+	
+	#dynamic = yes 
+	
+	icon = GFX_focus_GER_prussian_legacy
+	prerequisite = { focus = cont_axis_joint_wol_fourt focus = cont_axis_joint_wol_fivet }
+
+	x = 1
+	y = 1
+
+	relative_position_id = cont_axis_joint_wol_fivet
+	cost = 5
+
+	text_icon = WOL_ger_cont_share_style
+
+	available = {
+		original_tag = GER
+	}
+	ai_will_do = {
+		
+	}
+	bypass = {
+	}
+
+	joint_trigger = {
+		or = {
+		  tag = GER
+		  tag = ITA
+		  tag = HUN
+		  tag = ROM
+		  tag = BUL
+	  	} 
+    }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		custom_effect_tooltip = modify_cont_axis_army
+		add_to_variable = { 
+			cont_axis_army_10 = 0.05
+			tooltip = army_defence_factor_tt
+		}
+	}
+
+	completion_reward_joint_member = { 
+		custom_effect_tooltip = modify_cont_axis_army
+		add_to_variable = { 
+			cont_axis_army_8 = 0.05
+			tooltip = army_armor_attack_factor_tt
+		}
+		add_to_variable = { 
+			cont_axis_army_9 = 0.05
+			tooltip = army_armor_defence_factor_tt
+		}
+	}
+}

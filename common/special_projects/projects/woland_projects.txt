@@ -1,0 +1,71 @@
+sp_naval_compact_bbs = {
+	specialization = specialization_naval 
+
+	project_tags = sp_tag_submarine
+	
+	complexity = sp_complexity.small
+	prototype_time = sp_time.prototype.short
+	allowed = {
+		has_dlc = "Man the Guns"
+	}
+
+	special_project_parent = {
+		
+	}
+
+	available = { 
+		FROM = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}  
+				has_tech = early_ship_hull_cruiser
+			}
+			else = {
+				has_tech = early_battlecruiser
+			}
+
+		}
+	}
+
+	breakthrough_cost = {
+		specialization_naval = 1
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 8
+			chromium = 8
+		 }
+	}
+	
+	project_output = {
+		enable_equipments = {	
+			limit = {
+				has_dlc = "Man the Guns"
+			}
+			ship_hull_pre_dreadnought
+			ship_hull_cruiser_panzerschiff
+			ship_hull_cruiser_coastal_defense_ship
+		}
+		
+		country_effects = {
+		}
+	}
+
+	generic_prototype_rewards = {
+		sp_naval_generic_reward_scientist_xp_1
+		sp_naval_generic_reward_scientist_xp_2
+		sp_naval_generic_reward_scientist_xp_3
+		sp_naval_generic_reward_navy_xp_1
+		sp_naval_generic_reward_navy_xp_2
+		sp_naval_generic_reward_navy_xp_3
+		sp_naval_generic_reward_major_progress_1
+		sp_naval_generic_reward_major_progress_2
+		sp_naval_generic_reward_major_progress_3
+		sp_naval_generic_reward_test_failure_1
+		sp_naval_generic_reward_test_failure_2
+		sp_naval_generic_reward_test_failure_3
+	}
+	
+}

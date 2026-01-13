@@ -1,0 +1,23 @@
+army_mastery_category = {
+	icon = army_reform
+	priority = 100
+	allowed = {
+		always = yes
+	}
+}
+
+air_mastery_category = {
+	icon = military_operation
+	priority = 100
+	allowed = {
+		always = yes
+	}
+}
+
+navy_mastery_category = {
+	icon = generic_naval
+	priority = 100
+	allowed = {
+		always = yes
+	}
+}

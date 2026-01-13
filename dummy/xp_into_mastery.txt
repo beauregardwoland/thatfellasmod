@@ -1,0 +1,145 @@
+scripted_gui = {
+		
+	xp_into_mastery_inf = {
+		context_type = player_context
+		ai_enabled = { always = no}
+		window_name = "xp_into_mastery_inf"
+		parent_window_name = country_doctrine_view
+		
+		visible = {
+			always = no
+		}
+
+		triggers = {
+			inf_gib_mastery_click_enabled = {
+				ROOT = {
+					has_army_experience > 49
+				}
+			}
+			arty_gib_mastery_click_enabled = {
+				ROOT = {
+					has_army_experience > 49
+				}
+			}
+			tank_gib_mastery_click_enabled = {
+				ROOT = {
+					has_army_experience > 49
+				}
+			}
+			operan_gib_mastery_click_enabled = {
+				ROOT = {
+					has_army_experience > 49
+				}
+			}
+
+
+			air1_gib_mastery_click_enabled = {
+				ROOT = {
+					has_air_experience > 49
+				}
+			}
+			air2_gib_mastery_click_enabled = {
+				ROOT = {
+					has_air_experience > 49
+				}
+			}
+			air3_gib_mastery_click_enabled = {
+				ROOT = {
+					has_air_experience > 49
+				}
+			}
+			air4_gib_mastery_click_enabled = {
+				ROOT = {
+					has_air_experience > 49
+				}
+			}
+
+			nav1_gib_mastery_click_enabled = {
+				ROOT = {
+					has_navy_experience > 49
+				}
+			}
+			nav2_gib_mastery_click_enabled = {
+				ROOT = {
+					has_navy_experience > 49
+				}
+			}
+			nav3_gib_mastery_click_enabled = {
+				ROOT = {
+					has_navy_experience > 49
+				}
+			}
+			nav4_gib_mastery_click_enabled = {
+				ROOT = {
+					has_navy_experience > 49
+				}
+			}
+		}
+
+		effects = {
+			inf_gib_mastery_click = {
+				ROOT = {
+					army_experience = -10
+				}
+			}
+			arty_gib_mastery_click = {
+				ROOT = {
+					army_experience = -10
+				}
+			}
+			tank_gib_mastery_click = {
+				ROOT = {
+					army_experience = -10
+				}
+			}
+			operan_gib_mastery_click = {
+				ROOT = {
+					army_experience = -10
+				}
+			}
+
+			air1_gib_mastery_click = {
+				ROOT = {
+					air_experience = -10
+				}
+			}
+			air2_gib_mastery_click = {
+				ROOT = {
+					air_experience = -10
+				}
+			}
+			air3_gib_mastery_click = {
+				ROOT = {
+					air_experience = -10
+				}
+			}
+			air4_gib_mastery_click = {
+				ROOT = {
+					air_experience = -10
+				}
+			}
+
+			nav1_gib_mastery_click = {
+				ROOT = {
+					navy_experience = -10
+				}
+			}
+			nav2_gib_mastery_click = {
+				ROOT = {
+					navy_experience = -10
+				}
+			}
+			nav3_gib_mastery_click = {
+				ROOT = {
+					navy_experience = -10
+				}
+			}
+			nav4_gib_mastery_click = {
+				ROOT = {
+					navy_experience = -10
+				}
+			}
+
+		}
+	}
+}

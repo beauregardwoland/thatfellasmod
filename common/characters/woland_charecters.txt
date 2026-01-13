@@ -1,0 +1,24 @@
+characters = {
+	JAP_yasuda_adv={
+		name=JAP_yasuda_adv
+		portraits={
+			civilian={
+				small="GFX_idea_SPR_anarchist_council"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = JAP_yasuda_adv
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				yasuda_corp 
+			}
+			ai_will_do = {
+				base = 0.100
+			}
+			cost = 100
+		}		
+	}
+}

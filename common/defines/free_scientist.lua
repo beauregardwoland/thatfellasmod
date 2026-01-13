@@ -1,0 +1,1 @@
+NDefines.NProject.RECRUIT_SCIENTIST_COST = {0,			0,			0,			0			}
