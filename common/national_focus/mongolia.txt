@@ -184,7 +184,7 @@ focus_tree = {
 		icon = GFX_focus_generic_soviet_politics
 		x = -2
 		y = 2
-		cost = 10
+		cost = 5
 		relative_position_id = asian_communism
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -205,7 +205,7 @@ focus_tree = {
 		icon = GFX_focus_ITA_corpo_volontari_della_liberta
 		x = -2
 		y = 3
-		cost = 10
+		cost = 5
 		relative_position_id = asian_communism
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -225,7 +225,7 @@ focus_tree = {
 		icon = GFX_Communist_Discourse
 		x = 2
 		y = 2
-		cost = 10
+		cost = 5
 		relative_position_id = asian_communism
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -245,7 +245,7 @@ focus_tree = {
 		icon = GFX_focus_focus_fra_liberte_egalite_solidarite
 		x = 2
 		y = 3
-		cost = 10
+		cost = 5
 		relative_position_id = asian_communism
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -318,7 +318,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_housing
 		x = 8
 		y = 2
-		cost = 10
+		cost = 5
 		relative_position_id = a_new_mongolia
 	
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -341,7 +341,7 @@ focus_tree = {
 		icon = GFX_goal_commune_politics
 		x = 8
 		y = 3
-		cost = 10
+		cost = 7
 		relative_position_id = a_new_mongolia
 	
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -372,7 +372,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 6
 		y = 3
-		cost = 10
+		cost = 5
 		relative_position_id = a_new_mongolia
 	
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -392,7 +392,7 @@ focus_tree = {
 		icon = GFX_goal_reichsautobahn
 		x = 6
 		y = 4
-		cost = 10
+		cost = 5
 		relative_position_id = a_new_mongolia
 	
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1532,6 +1532,185 @@ focus_tree = {
 			}
 		}
 	}
-
+	focus = {
+		id = mongol_mil_research_gun1_bonus
+		prerequisite = { focus = mongol_mil_choice1 focus = mongol_mil_choice2 focus = mongol_mil_choice3 focus = mongol_mil_choice4 }
+		available = { 
+		}
+		
+		icon = GFX_goal_generic_small_arms
+		x = -1
+		y = 1
+		cost = 3
+		relative_position_id = mongol_mil_choice1
 	
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 1
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_tech_bonus = {
+				name = JAP_develop_lethal_infantry_equipment
+				bonus = 0.66
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = mongol_mil_research_gun2_bonus
+		prerequisite = { focus = mongol_mil_research_gun1_bonus }
+		available = { 
+		}
+		
+		icon = GFX_focus_generic_anti_tank_guns
+		x = 0
+		y = 1
+		cost = 3
+		relative_position_id = mongol_mil_research_gun1_bonus
+	
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 1
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_tech_bonus = {
+				name = JAP_develop_lethal_infantry_equipment
+				bonus = 0.75
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = mongol_mil_research_armor1_bonus
+		prerequisite = { focus = mongol_mil_choice1 focus = mongol_mil_choice2 focus = mongol_mil_choice3 focus = mongol_mil_choice4 }
+		available = { 
+		}
+		
+		icon = GFX_focus_generic_truck
+		x = 1
+		y = 1
+		cost = 3
+		relative_position_id = mongol_mil_choice4
+	
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 1
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_tech_bonus = {
+				name = JAP_develop_lethal_infantry_equipment
+				bonus = 0.66
+				uses = 2
+				category = mio_cat_tech_all_motorized_mechanized
+			}
+		}
+	}
+	focus = {
+		id = mongol_mil_research_armor2_bonus
+		prerequisite = { focus = mongol_mil_research_armor1_bonus }
+		available = { 
+		}
+		
+		icon = GFX_focus_NOR_rikstanken
+		x = 0
+		y = 1
+		cost = 3
+		relative_position_id = mongol_mil_research_armor1_bonus
+	
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 1
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_tech_bonus = {
+				name = JAP_develop_lethal_infantry_equipment
+				bonus = 0.75
+				uses = 2
+				category = armor
+			}
+		}
+	}
 }

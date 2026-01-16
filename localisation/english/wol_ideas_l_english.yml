@@ -122,6 +122,10 @@
  mongol_mil_cav2:0"Mongolian Cavalry Doctrine"
  mongol_mil_tank1:0"Tank Experimentation"
  mongol_mil_tank2:0"Mongolian Tank Doctrine"
+ mongol_mil_research_gun1_bonus:0"Small Arms Modernization Program"
+ mongol_mil_research_gun2_bonus:0"Artillery Specialisation Program"
+ mongol_mil_research_armor1_bonus:0"Adapt the Truck to the Steppe"
+ mongol_mil_research_armor2_bonus:0"Armor Research Board"
 
  MON_milchoice_1:0"Russian Way of War"
  MON_milchoice_2:0"Ideolgogical Mobilization"
