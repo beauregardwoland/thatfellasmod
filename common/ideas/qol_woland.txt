@@ -161,6 +161,19 @@ ideas = {
 				embargo_threshold_factor = 2
 			}
 		}
+		annexed_australia = {
+			picture = SWE_neither_death_nor_dishonor
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				surrender_limit = -0.05
+			}
+		}
 		minor_nation = {
 			allowed = {
 				always = no

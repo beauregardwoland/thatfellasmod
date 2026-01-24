@@ -1585,6 +1585,54 @@ gimp_ai_category = {
 			}
 		}
 	}
+	annex_phi_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+		available = {
+			is_ai = no
+			country_exists = PHI
+			PHI = {
+				is_ai = yes
+			}
+			date > 1940.8.1
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+			}
+		}
+		complete_effect = {
+			PHI = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = root
+				}
+			}
+			annex_country = {
+				target = PHI
+				transfer_troops = yes
+			}
+		}
+	}
 	annex_can_decision = {
 		icon = decision_generic_nationalism
 		allowed = {
@@ -1881,6 +1929,10 @@ gimp_ai_category = {
 			}
 		}
 		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = 750
+			}
 			MAL = {
 				every_unit_leader = {
 					set_nationality = ROOT
@@ -1916,7 +1968,7 @@ gimp_ai_category = {
 			AST = {
 				is_ai = yes
 			}
-			date > 1939.1.1
+			#date > 1939.1.1
 		}
 		cost = 0
 		fire_only_once = yes
@@ -1935,6 +1987,10 @@ gimp_ai_category = {
 			}
 		}
 		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = 150
+			}
 			AST = {
 				every_unit_leader = {
 					set_nationality = ROOT
@@ -1946,10 +2002,11 @@ gimp_ai_category = {
 			}
 			every_state = {
 				limit = {
-					is_core_of = AUS
+					is_core_of = AST
 				}
-				add_compliance = 100
+				add_core_of = root
 			}
+			add_ideas = annexed_australia
 		}
 	}
 	annex_nzl_decision = {
