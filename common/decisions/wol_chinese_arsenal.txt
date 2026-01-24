@@ -1,4 +1,49 @@
 CHI_arsenals = {
+	JAP_award_man_china  = {
+
+		priority = 100
+
+		icon = GFX_decision_jap_conquer_china
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			tag = JAP
+		}
+
+		visible = { 
+			not = { country_exists = CHI }
+		}
+
+		available = {
+			any_core_state = {
+				is_fully_controlled_by = ROOT
+			}
+		} 
+
+		state_target = any_owned_state
+		target_trigger = {
+	        FROM = {
+	        	is_controlled_by = root
+				is_core_of = CHI
+	        }
+	    }
+		
+		cost = 0
+
+		complete_effect = { 
+			
+		}
+
+		remove_effect = {
+			MAN = {
+				transfer_state = from
+			}
+		}
+	}
+
 	CHI_arsenal_hubei  = {
 
 		priority = 100
@@ -74,7 +119,6 @@ CHI_arsenals = {
 			}
 		}
 	}
-	
 	CHI_arsenal_jinling  = {
 
 		priority = 100

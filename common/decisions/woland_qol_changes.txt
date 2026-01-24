@@ -408,8 +408,12 @@ gimp_ai_category = {
 		}
 
 		complete_effect = {
-			random_core_state = {
-				add_extra_state_shared_building_slots = 1
+			#random_core_state = {
+			#	add_extra_state_shared_building_slots = 1
+			#}
+			add_collaboration = {
+				target = ETH
+				value = 50
 			}
 			#clr_country_flag = JAP_interfered_in_imperial_influence_flag
 		}

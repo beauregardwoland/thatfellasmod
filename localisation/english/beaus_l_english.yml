@@ -109,6 +109,13 @@
  ai_france:0"Free Tank Division because ai france §Y(may only be selected once across the lobby)§!"
 
  ITA_public_demands_war:0"Public Demands War"
+ ITA_eth_war_tension:0"Fallout of Ethiopian War"
+ eth_war_tension_rework:0"Tension at end of Ethipian war"
+ ITA_eth_war_script:0"Conquest of Ethiopia"
+ ITA_eth_war_script_1:0"Conquest of Yugoslavia"
+ ITA_eth_war_script_2:0"Conquest of China"
+ eth_war_tension_rework_tt:0" Increases tension at end of Ethiopian war by: $RIGHT|-=0$"
+ 
 
  debug_faction_steel_desc:0"current faction steel = §Y[?ger.faction_steel]§!\ncurrent faction aluminum = §Y[?ger.faction_aluminium]§!\ncurrent faction chromium = §Y[?ger.faction_chromium]§!\ncurrent faction tungsten = §Y[?ger.faction_tungsten]§!\ncurrent faction rubber = §Y[?ger.faction_rubber]§!\ncurrent faction oil = §Y[?ger.faction_oil]§!\n"
 
@@ -581,6 +588,7 @@
  CHI_arsenal_lanzhou:0"Modernize Lanzhou Arsenal"
  CHI_arsenal_fuzhou:0"Expand Fuzhou Arsenal"
  CHI_taiyun_revitalized:0"Restarting Taiyuan Aero-works"
+ JAP_award_man_china:0"Award §Y[FROM.GetName]§! to Manchuria"
 
  
  EQ_MOD_CAT_tank_ammunition_types_TITLE:0 "Ammunitions"

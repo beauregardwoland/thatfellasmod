@@ -113,6 +113,59 @@ debug_decisions = {
 
 
 ETH_second_italo_ethiopian_war_category = {
+
+	ITA_eth_war_tension = {
+		icon = GFX_decision_generic_operation
+
+		allowed = {
+			tag = ITA
+		}
+
+		available = { #GOAL
+			not = { country_exists = ETH }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			original_tag = ITA
+		}
+
+		#highlight_states = {
+		#	highlight_states_trigger = {
+		#		OR = {
+		#			state = 841 #BEGEMDER
+		#			state = 842 #TIGRAY
+		#			state = 843 #WELLO
+		#		}
+		#	}
+		#	highlight_color_while_active = 2
+		#}
+
+		cancel_if_not_visible = yes
+		is_good = no #Tooltip purposes
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 35
+
+		timeout_effect = { #MISSION FAILS
+			add_to_variable = {
+				eth_war_tension_rework = 1
+				tooltip = eth_war_tension_rework_tt
+			}
+			activate_mission = ITA_eth_war_tension
+		}
+
+		complete_effect = { #MISSION SUCCEEDS
+			add_named_threat = {
+				threat = ITA.eth_war_tension_rework
+				name = ITA_eth_war_script
+			}
+		}
+	}
+
 	ITA_withdraw_from_ethiopia = {
 		priority = -10
 		icon = GFX_decision_eng_trade_unions_support
@@ -283,10 +336,6 @@ ITA_missiolinis = {
 			add_political_power = 10
 		}
 	}
-
-
-
-
 
 	# Hold the north "dummy" mission for Italy
 	ITA_conquer_the_north_mission = {

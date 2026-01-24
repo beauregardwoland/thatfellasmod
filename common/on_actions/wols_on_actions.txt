@@ -1,0 +1,75 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			ITA = {
+				activate_mission = ITA_eth_war_tension
+				add_to_variable = {
+					eth_war_tension_rework = 1
+				}
+			}
+		}
+	}
+	 on_before_peace_conference_start = { 
+		effect = {
+			if = {
+				limit = {  ETH = { has_war_with = ITA } 
+				FROM = { tag = ETH }
+				}
+				ITA = { white_peace = ETH }
+				ITA = {
+					annex_country = {
+						target = ETH
+					}
+					add_named_threat = {
+						threat = ITA.eth_war_tension_rework
+						name = ITA_eth_war_script
+					}
+				}
+			}
+
+			if = {
+				limit = {  YUG = { has_war_with = ITA } 
+				FROM = { tag = YUG }
+				}
+				ITA = { white_peace = YUG }
+				ITA = {
+					annex_country = {
+						target = YUG
+					}
+					add_named_threat = {
+						threat = 5
+						name = ITA_eth_war_script_1
+					}
+				}
+			} 
+			if = {
+				limit = {  CHI = { has_war_with = JAP } 
+				FROM = { tag = CHI }
+				}
+				JAP = { white_peace = CHI }
+				MAN = { white_peace = CHI }
+				JAP = { white_peace = PRC }
+				MAN = { white_peace = PRC }
+				JAP = {
+					annex_country = {
+						target = CHI
+					}
+					add_named_threat = {
+						threat = 15
+						name = ITA_eth_war_script_2
+					}
+				}
+				MAN = {
+					annex_country = {
+						target = PRC
+					}
+					add_named_threat = {
+						threat = 5
+						name = ITA_eth_war_script_2
+					}
+				}
+			}   
+			}
+		}
+}
+
