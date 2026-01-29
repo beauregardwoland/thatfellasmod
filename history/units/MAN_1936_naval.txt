@@ -1,0 +1,44 @@
+﻿
+
+
+##### OOB #####
+units = {
+### IJN ###
+	#Hiroshima (Kure)
+	fleet = {
+		name = "Kure Kantai"			
+		naval_base = 9998  # Hiroshima
+		task_force = {
+			name = "Kure Yobikantai" # Patrol and reserve fleet, including ships under modernization
+			location = 964  #Yokosuka
+			ship = { name = "Kako" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = MAN version_name = "Furutaka/Aoba Class"} } }
+			ship = { name = "Oi" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = MAN version_name = "Kuma/Nagara Class"} } }
+			ship = { name = "Tenryu" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = MAN version_name = "Tenryu Class"} } }
+			# Dai 11 Kuchikutai
+			
+			# Dai 12 Kuchikutai
+			ship = { name = "Murakumo" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_2 = {amount = 1 owner = MAN version_name = "Fubuki Class"} } }		
+			ship = { name = "Usugumo" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_2 = {amount = 1 owner = MAN version_name = "Fubuki Class"} } }	
+			ship = { name = "Shirakumo" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_2 = {amount = 1 owner = MAN version_name = "Fubuki Class"} } }
+			# Dai 7 Kuchikutai
+			ship = { name = "Oboro" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_2 = {amount = 1 owner = MAN version_name = "Fubuki Class"} } }	
+			ship = { name = "Akebono" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_2 = {amount = 1 owner = MAN version_name = "Fubuki Class"} } }	
+			ship = { name = "Sazanami" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_2 = {amount = 1 owner = MAN version_name = "Fubuki Class"} } }		}
+		task_force = {
+			name = "3 Sensui Kantai"
+			location = 964  #Yokosuka
+			#Kaichū-class Submarines
+			ship = { name = "Ro-26" definition = submarine equipment = { ship_hull_submarine_1 = {amount = 1 owner = MAN version_name = "Kaichū IV Class"} } }
+			ship = { name = "Ro-27" definition = submarine equipment = { ship_hull_submarine_1 = {amount = 1 owner = MAN version_name = "Kaichū IV Class"} } }
+		}
+	}
+}
+
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+}

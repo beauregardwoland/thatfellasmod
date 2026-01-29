@@ -5957,8 +5957,8 @@ focus_tree = {
 			#add_ideas = USA_airborne_divisions
 			custom_effect_tooltip = modify_USA_army
 			add_to_variable = { 
-				usa_army_7 = 0.05
-				tooltip = special_forces_cap_tt
+				usa_army_7 = 0.033
+				tooltip = special_forces_attack_factor_tt
 			}
 			if = {
 				limit = {

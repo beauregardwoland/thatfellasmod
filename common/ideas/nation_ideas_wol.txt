@@ -83,7 +83,7 @@ ideas = {
 			}
 
 			modifier = {
-				dockyard_donations = 1
+				dockyard_donations = 2
 				political_power_cost = 0.15
 			}
 			equipment_bonus = {
@@ -104,7 +104,7 @@ ideas = {
 			}
 
 			modifier = {
-				dockyard_donations = 2
+				dockyard_donations = 4
 				political_power_cost = 0.05
 			}
 			
@@ -121,7 +121,7 @@ ideas = {
 			}
 
 			modifier = {
-				dockyard_donations = 3
+				dockyard_donations = 5
 				#political_power_cost = 0.05
 				navy_max_range_factor = 0.2
 			}
@@ -148,7 +148,7 @@ ideas = {
 			}
 
 			modifier = {
-				dockyard_donations = 3
+				dockyard_donations = 5
 				navy_max_range_factor = 0.2
 				convoy_raiding_efficiency_factor = 0.15
 			}
@@ -176,7 +176,7 @@ ideas = {
 			}
 
 			modifier = {
-				dockyard_donations = 3
+				dockyard_donations = 5
 				#political_power_cost = 0.05
 				shore_bombardment_bonus = 0.25
 			}
@@ -198,7 +198,7 @@ ideas = {
 			}
 
 			modifier = {
-				dockyard_donations = 5
+				dockyard_donations = 8
 				#political_power_cost = 0.05
 				shore_bombardment_bonus = 0.25
 				industrial_capacity_dockyard = 0.2
@@ -255,7 +255,6 @@ ideas = {
 					instant = yes
 				}
 			}
-			
 		}
 		MAN_air_choice_12 = {
 			allowed = {

@@ -8559,7 +8559,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_enact_religious_organizations_law }
 
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -33351,7 +33351,7 @@ focus_tree = {
 	focus = {
 		id = JAP_quick_war
 		icon = GFX_focus_GER_create_asian_reichskommissariat
-		prerequisite = { focus = JAP_sea_pressure_siam focus = JAP_sea_occupy_siam }
+		prerequisite = { focus = JAP_sea_pressure_siam focus = JAP_occupy_siam }
 		x = -1
 		y = 1
 		relative_position_id = JAP_sea_pressure_siam
@@ -33360,11 +33360,7 @@ focus_tree = {
 		cost = 1
 
 		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_completed_focus = JAP_support_the_kodoha_faction
-			}
+			
 		}
 
 		available = {
@@ -33388,7 +33384,7 @@ focus_tree = {
 	focus = {
 		id = JAP_mid_war
 		icon = GFX_focus_GER_south_east_asian_natural_wealth
-		prerequisite = { focus = JAP_sea_pressure_siam focus = JAP_sea_occupy_siam }
+		prerequisite = { focus = JAP_sea_pressure_siam focus = JAP_occupy_siam }
 		x = 1
 		y = 1
 		relative_position_id = JAP_sea_pressure_siam
@@ -33397,11 +33393,7 @@ focus_tree = {
 		cost = 1
 
 		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_completed_focus = JAP_support_the_kodoha_faction
-			}
+			
 		}
 
 		available = {
@@ -33428,7 +33420,7 @@ focus_tree = {
 	focus = {
 		id = JAP_long_war
 		icon = GFX_focus_GER_sentinels_of_the_pacific
-		prerequisite = { focus = JAP_sea_pressure_siam focus = JAP_sea_occupy_siam }
+		prerequisite = { focus = JAP_sea_pressure_siam focus = JAP_occupy_siam }
 		x = 3
 		y = 1
 		relative_position_id = JAP_sea_pressure_siam
@@ -33437,11 +33429,7 @@ focus_tree = {
 		cost = 1
 
 		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				has_completed_focus = JAP_support_the_kodoha_faction
-			}
+			
 		}
 
 		available = {

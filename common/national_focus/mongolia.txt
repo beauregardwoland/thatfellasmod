@@ -290,7 +290,7 @@ focus_tree = {
 		icon = GFX_goal_generic_workers_democracy
 		x = 8
 		y = 1
-		cost = 4
+		cost = 5
 		relative_position_id = a_new_mongolia
 	
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -704,6 +704,10 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 50	
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
 		}
 	}
 	focus = {
@@ -1541,7 +1545,7 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		x = -1
 		y = 1
-		cost = 3
+		cost = 4
 		relative_position_id = mongol_mil_choice1
 	
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1587,7 +1591,7 @@ focus_tree = {
 		icon = GFX_focus_generic_anti_tank_guns
 		x = 0
 		y = 1
-		cost = 3
+		cost = 4
 		relative_position_id = mongol_mil_research_gun1_bonus
 	
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1634,7 +1638,7 @@ focus_tree = {
 		icon = GFX_focus_generic_truck
 		x = 1
 		y = 1
-		cost = 3
+		cost = 4
 		relative_position_id = mongol_mil_choice4
 	
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1680,7 +1684,7 @@ focus_tree = {
 		icon = GFX_focus_NOR_rikstanken
 		x = 0
 		y = 1
-		cost = 3
+		cost = 4
 		relative_position_id = mongol_mil_research_armor1_bonus
 	
 		search_filters = { FOCUS_FILTER_RESEARCH }
