@@ -221,7 +221,7 @@ ideas = {
 			}
 
 			modifier = {
-				dockyard_donations = 5
+				dockyard_donations = 8
 				#political_power_cost = 0.05
 				shore_bombardment_bonus = 0.25
 				industrial_capacity_dockyard = 0.2

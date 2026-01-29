@@ -1,0 +1,141 @@
+﻿
+
+
+##### OOB #####
+instant_effect = {
+	create_equipment_variant = {
+		name = "Temu Class"
+		type = ship_hull_cruiser_1
+		#name_group = JAP_CA_HISTORICAL
+		#design_team = mio:JAP_sasebo_naval_arsenal_organization
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = ship_medium_battery_1
+			mid_2_custom_slot = ship_medium_battery_1
+			rear_1_custom_slot = empty
+		}
+		#obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Wish.com Class"
+		type = ship_hull_cruiser_1
+		#name_group = JAP_CL_HISTORICAL
+		#design_team = mio:JAP_maizuru_naval_arsenal_organization
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+		#obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Deng Xiaoping Class"
+		type = ship_hull_cruiser_1
+		#name_group = JAP_CL_HISTORICAL
+		#design_team = mio:JAP_maizuru_naval_arsenal_organization
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		#obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Xiaohongshu Class"
+		type = ship_hull_light_1
+		#name_group = JAP_DD_HISTORICAL
+		#design_team = mio:JAP_maizuru_naval_arsenal_organization
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Donghua Jinlong Class"
+		type = ship_hull_submarine_1
+		#design_team = mio:JAP_sasebo_naval_arsenal_organization
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+	}
+
+	add_equipment_production = {				
+			equipment = {
+				type = convoy_1
+				creator = "MAN" 
+			}
+			requested_factories = 1
+			progress = 0
+			amount = 99
+			#industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
+		}
+}
+
+
+
+units = {
+### IJN ###
+	#Hiroshima (Kure)
+	fleet = {
+		name = "Kure Kantai"			
+		naval_base = 964  # Hiroshima
+		task_force = {
+			name = "Kure Yobikantai" # Patrol and reserve fleet, including ships under modernization
+			location = 964  #Yokosuka
+			ship = { name = "Kako" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = MAN version_name = "Temu Class"} } }
+			ship = { name = "Oi" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = MAN version_name = "Wish.com Class"} } }
+			ship = { name = "Tenryu" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = MAN version_name = "Deng Xiaoping Class"} } }
+			# Dai 11 Kuchikutai
+			
+			# Dai 12 Kuchikutai
+			ship = { name = "Murakumo" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_1 = {amount = 1 owner = MAN version_name = "Xiaohongshu Class"} } }		
+			ship = { name = "Usugumo" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_1 = {amount = 1 owner = MAN version_name = "Xiaohongshu Class"} } }	
+			ship = { name = "Shirakumo" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_1 = {amount = 1 owner = MAN version_name = "Xiaohongshu Class"} } }
+			# Dai 7 Kuchikutai
+			ship = { name = "Oboro" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_1 = {amount = 1 owner = MAN version_name = "Xiaohongshu Class"} } }	
+			ship = { name = "Akebono" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_1 = {amount = 1 owner = MAN version_name = "Xiaohongshu Class"} } }	
+			ship = { name = "Sazanami" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_1 = {amount = 1 owner = MAN version_name = "Xiaohongshu Class"} } }		}
+		task_force = {
+			name = "3 Sensui Kantai"
+			location = 964  #Yokosuka
+			#Kaichū-class Submarines
+			ship = { name = "Ro-26" definition = submarine equipment = { ship_hull_submarine_1 = {amount = 1 owner = MAN version_name = "Donghua Jinlong Class"} } }
+			ship = { name = "Ro-27" definition = submarine equipment = { ship_hull_submarine_1 = {amount = 1 owner = MAN version_name = "Donghua Jinlong Class"} } }
+		}
+	}
+}
