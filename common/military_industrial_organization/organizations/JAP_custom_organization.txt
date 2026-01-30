@@ -493,7 +493,7 @@
 			armor_value = 0.05
 		}
 		organization_modifier = {
-			military_industrial_organization_size_up_requirement = -0.1
+			military_industrial_organization_size_up_requirement = -0.15
 		}
 	}
 
@@ -663,13 +663,16 @@
 
 		#mutually_exclusive = { JAP_sumitomo_heavy_vehicles_6 }
 
-		any_parent = { JAP_sumitomo_heavy_vehicles_14 }
+		#any_parent = { JAP_sumitomo_heavy_vehicles_14 }
+
+		all_parents = { JAP_sumitomo_heavy_vehicles_14 }
+		any_parent = { JAP_sumitomo_heavy_vehicles_13 JAP_sumitomo_heavy_vehicles_11 JAP_sumitomo_heavy_vehicles_12 }
 
 		position = { x = 4 y = 2 }
 
 		equipment_bonus = {
-			soft_attack = 0.05
-			hard_attack = 0.05
+			soft_attack = 0.075
+			hard_attack = 0.075
 		}
 	}
 	trait = {
@@ -679,7 +682,7 @@
 
 		mutually_exclusive = { JAP_sumitomo_heavy_vehicles_12 JAP_sumitomo_heavy_vehicles_13 }
 
-		any_parent = { JAP_sumitomo_heavy_vehicles_10 }
+		any_parent = { JAP_sumitomo_heavy_vehicles_16 JAP_sumitomo_heavy_vehicles_15 }
 
 		position = { x = 4 y = 3 }
 
@@ -698,7 +701,7 @@
 
 		mutually_exclusive = { JAP_sumitomo_heavy_vehicles_13 JAP_sumitomo_heavy_vehicles_11 }
 
-		any_parent = { JAP_sumitomo_heavy_vehicles_10 }
+		any_parent = { JAP_sumitomo_heavy_vehicles_16 JAP_sumitomo_heavy_vehicles_15 }
 
 		position = { x = 2 y = 3 }
 
@@ -716,12 +719,12 @@
 
 		mutually_exclusive = { JAP_sumitomo_heavy_vehicles_12 JAP_sumitomo_heavy_vehicles_11 }
 
-		any_parent = { JAP_sumitomo_heavy_vehicles_10 }
+		any_parent = { JAP_sumitomo_heavy_vehicles_16 JAP_sumitomo_heavy_vehicles_15 }
 
 		position = { x = 6 y = 3 }
 
 		equipment_bonus = {
-			hardness = 0.15
+			hardness = 0.2
 			build_cost_ic = 0.1
 		}
 		
@@ -733,7 +736,7 @@
 
 		#mutually_exclusive = {  }
 
-		any_parent = { JAP_sumitomo_heavy_vehicles_12 JAP_sumitomo_heavy_vehicles_11 JAP_sumitomo_heavy_vehicles_13 }
+		#any_parent = { JAP_sumitomo_heavy_vehicles_12 JAP_sumitomo_heavy_vehicles_11 JAP_sumitomo_heavy_vehicles_13 }
 
 		position = { x = 5 y = 4 }
 
@@ -749,7 +752,7 @@
 
 		#mutually_exclusive = {  }
 
-		any_parent = { JAP_sumitomo_heavy_vehicles_12 JAP_sumitomo_heavy_vehicles_11 JAP_sumitomo_heavy_vehicles_13 }
+		#any_parent = { JAP_sumitomo_heavy_vehicles_12 JAP_sumitomo_heavy_vehicles_11 JAP_sumitomo_heavy_vehicles_13 }
 
 		position = { x = 3 y = 4 }
 
@@ -1060,7 +1063,7 @@
 		}
 		on_complete = {
 			FROM = {
-				282 = {
+				random_core_state = {
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
@@ -1088,10 +1091,10 @@
 			from = {
 				air_experience = 25
 				random_core_state = {
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1116,10 +1119,10 @@
 			from = {
 				army_experience = 25
 				random_core_state = {
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -5845,11 +5848,11 @@ JAP_sumitomo_arms_manufactoring = {
 
 		on_complete = {
 			FROM = {
-				282 = {
-					add_extra_state_shared_building_slots = 1
+				random_core_state = {
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -5864,7 +5867,7 @@ JAP_sumitomo_arms_manufactoring = {
 
 		on_complete = {
 			FROM = {
-				528 = {
+				random_core_state = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -5886,6 +5889,9 @@ JAP_sumitomo_arms_manufactoring = {
 		production_bonus = {
 			production_efficiency_cap_factor = 0.05
 		}
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.1
+		}
 	}
 	trait = {
 		token = JAP_sumitomo_arms_manufactoring_24
@@ -5897,6 +5903,7 @@ JAP_sumitomo_arms_manufactoring = {
 
 		organization_modifier = {
 			military_industrial_organization_research_bonus = 0.1
+			military_industrial_organization_size_up_requirement = -0.1
 		}
 	}
 	trait = {
@@ -7602,8 +7609,8 @@ JAP_nissan_light_vehicles = {
 		limit_to_equipment_type = { heavy_tank_chassis }
 		
 		equipment_bonus = {
-			armor_value = 0.05
-			defense = 0.05
+			armor_value = 0.075
+			defense = 0.075
 		}
 	}
 
@@ -7653,6 +7660,29 @@ JAP_nissan_light_vehicles = {
 			soft_attack = 0.15
 			breakthrough = 0.05
 			reliability = -0.1
+		}
+	}
+	trait = {
+		token = JAP_mitsui_heavy_vehicles_14
+		name = generic_mio_medium_assault_gun_rocket_tubes
+		icon = GFX_generic_mio_department_icon_tank_general_weapons
+
+		position = { x = 0 y = 1 }
+		relative_position_id = JAP_mitsui_heavy_vehicles_11
+
+		all_parents = { JAP_mitsui_heavy_vehicles_11 }
+
+		#mutually_exclusive = { JAP_mitsui_heavy_vehicles_7 }
+		
+		#production_bonus = {
+		#	production_resource_penalty_factor = -0.15
+		#}
+
+		#limit_to_equipment_type = { medium_tank_artillery_chassis }
+
+		equipment_bonus = {
+			hard_attack = 0.1
+			breakthrough = 0.15
 		}
 	}
  }

@@ -95,3 +95,12 @@ ITA_demand_na = {
 		has_dlc = "Waking the Tiger"
 	}
 }
+france_mp_standardization = {
+	icon = generic_economy
+	priority = 40
+	picture = GFX_decision_cat_generic_mefo_bills
+	visible_when_empty = no
+	allowed = {
+		original_tag = FRA
+	}
+}

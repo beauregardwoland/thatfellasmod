@@ -19,6 +19,17 @@
 			add_political_power = 33
 		}
 	}
+	initial_trait = {
+		name = JAP_sumitomo_heavy_vehicles_initial
+
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.15
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
  }
 
  HUN_hti_turan_organization = {
@@ -57,6 +68,17 @@
 	on_tech_research_completed = {
 		root = {
 			add_political_power = 33
+		}
+	}
+	initial_trait = {
+		name = JAP_sumitomo_heavy_vehicles_initial
+
+		production_bonus = {
+			production_conversion_speed_factor = 0.1
+			production_efficiency_cap_factor = 0.033
+		}
+		equipment_bonus = {
+			breakthrough = 0.05
 		}
 	}
  }

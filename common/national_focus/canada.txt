@@ -2003,7 +2003,7 @@ focus_tree = {
 	focus = {
 		id = CAN_army_modernization
 		icon = GFX_goal_generic_army_doctrines
-		x = 15
+		x = 17
 		y = 0
 
 		cost = 10
@@ -2472,7 +2472,7 @@ focus_tree = {
 		id = CAN_strengthen_the_commonwealth_ties
 		mutually_exclusive = { focus = CAN_patriation }
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		x = 21
+		x = 25
 		y = 0
 
 		cost = 10
@@ -4360,7 +4360,7 @@ focus_tree = {
 	focus = {
 		id = CAN_rcaf_station_borden
 		icon = GFX_goal_generic_build_airforce
-		x = 39
+		x = 43
 		y = 0
 
 		cost = 10
@@ -4922,7 +4922,7 @@ focus_tree = {
 	focus = {
 		id = CAN_halifax_shipyards
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 43
+		x = 48
 		y = 0
 
 		cost = 2

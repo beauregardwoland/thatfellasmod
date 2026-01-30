@@ -415,6 +415,11 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
+		add_breakthrough_progress = {
+			specialization = specialization_naval
+			value = 1
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
 		navy_experience = 75
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = {
@@ -510,7 +515,11 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
-
+		add_breakthrough_progress = {
+			specialization = specialization_land
+			value = 0.5
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = MAN_army_modif_tt
 		add_to_variable = {
 			MAN_army_modif_17 = 0.05
@@ -555,6 +564,11 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
+		add_breakthrough_progress = {
+			specialization = specialization_land
+			value = 0.5
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = MAN_army_modif_tt
 		add_to_variable = {
 			MAN_army_modif_18 = 0.05
@@ -1077,6 +1091,14 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
+		add_tech_bonus = {
+			name = JAP_develop_lethal_infantry_equipment
+			bonus = 0.5
+			uses = 2
+			ahead_reduction = 1
+			category = armor
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = MAN_army_modif_tt
 		add_to_variable = {
 			MAN_army_modif_21 = 0.05
@@ -1245,13 +1267,17 @@ shared_focus = {
 		
 
 	completion_reward = {
+		add_breakthrough_progress = {
+			specialization = specialization_air
+			value = 1
+		}
 		add_ideas = MAN_air_choice_1
 		add_tech_bonus = {
-				name = ITA_citta_dell_aria
-				bonus = 0.5
-				uses = 3 # was 4
-				category = air_equipment
-			}
+			name = ITA_citta_dell_aria
+			bonus = 0.5
+			uses = 3 # was 4
+			category = air_equipment
+		}
 	}
 }
 shared_focus = {
@@ -1482,7 +1508,7 @@ shared_focus = {
 		}
 		custom_effect_tooltip = MAN_army_modif_tt
 		add_to_variable = {
-			MAN_army_modif_23 = 0.05
+			MAN_army_modif_23 = 0.075
 			tooltip = cas_damage_reduction_tt
 		}
 	}

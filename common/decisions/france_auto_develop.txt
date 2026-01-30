@@ -1,0 +1,65 @@
+france_mp_standardization = {
+	fra_build_civilian_eco = {
+		allowed = {
+			original_tag = FRA
+		}
+
+		icon = GFX_decision_generic_construction
+
+		available = {
+			
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = fra_build_civ_eco_timer
+
+		modifier = {
+			
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			
+		}
+		timeout_effect = { 
+
+		}
+	}
+
+	fra_build_military_eco = {
+		allowed = {
+			original_tag = FRA
+		}
+
+		icon = GFX_decision_ger_military_buildup
+
+		available = {
+			
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = fra_build_mil_eco_timer
+
+		modifier = {
+			
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			
+		}
+		timeout_effect = { 
+
+		}
+	}
+}
