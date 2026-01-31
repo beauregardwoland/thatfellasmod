@@ -20896,6 +20896,38 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = HUN_support_spa 
+
+		prerequisite = { focus = wuw_HUN_secret_rearmament }
+
+		available = {
+			date > 1937.1.1
+		} 
+
+
+		icon = GFX_focus_intervention_spain_nationalists
+
+		x = 3
+		y = 1
+		relative_position_id = wuw_HUN_secret_rearmament
+
+		cost = 1
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = woland_minor_allowed_vols
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 67
+			}
+		}
+	}
 	shared_focus = cont_axis_joint_wol
 
 }

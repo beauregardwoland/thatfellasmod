@@ -7,9 +7,29 @@ on_actions = {
 					eth_war_tension_rework = 1
 				}
 			}
+			FRA = {
+				set_variable = { fra_build_mil_eco_timer = 110 }
+				set_variable = { fra_build_civ_eco_timer = 90 }
+				set_variable = { fra_evacuate_eco_timer = 45 }
+				activate_mission = fra_build_civilian_eco
+				activate_mission = fra_build_military_eco
+				add_ideas = fra_decision_vased_eco
+			}
+			GER = {
+				add_ideas = woland_gp_allowed_vols
+			}
+			SOV = {
+				add_ideas = woland_gp_allowed_vols
+			}
+			JAP = {
+				add_ideas = woland_major_allowed_vols
+			}
+			ITA = {
+				add_ideas = woland_major_allowed_vols
+			}
 		}
 	}
-	 on_before_peace_conference_start = { 
+	 on_before_peace_conference_start = {
 		effect = {
 			if = {
 				limit = {  ETH = { has_war_with = ITA } 

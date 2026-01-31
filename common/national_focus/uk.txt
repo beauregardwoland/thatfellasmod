@@ -13662,5 +13662,32 @@ focus_tree = {
 			
 		}
 	}
+	focus = {
+		id = ENG_support_spa 
+
+		prerequisite = { focus = limited_rearmament_focus }
+
+		available = {
+			date > 1937.1.1
+		} 
+
+		allow_branch = {
+			FRA = { is_ai = yes}
+		}
+
+		icon = GFX_focus_intervention_spain_republic
+
+		x = 2
+		y = 1
+		relative_position_id = limited_rearmament_focus
+
+		cost = 1
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = woland_major_allowed_vols
+		}
+	}
 	shared_focus = commonwealth_joint_wol
 }

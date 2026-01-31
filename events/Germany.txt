@@ -4011,7 +4011,7 @@ country_event = {
 					is_controlled_by = ROOT
 				}
 				add_claim_by = GER
-				add_compliance = 30
+				set_compliance = 50
 			}
 		}
 		GER_czechoslovakia_modify_mefo_bills_or_economy_of_conquest = yes

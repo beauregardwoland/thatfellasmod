@@ -15147,7 +15147,7 @@ ai_will_do = {
 		x = 5
 		y = 0
 		relative_position_id = SOV_middle_east_diplomacy
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -15337,7 +15337,7 @@ ai_will_do = {
 		x = 2
 		y = 0
 		relative_position_id = SOV_the_gobi_gambit
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -15372,6 +15372,11 @@ ai_will_do = {
 		search_filters = {}
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = woland_gp_allowed_vols
+				add_idea = woland_major_allowed_vols
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			PRC = {
 				add_opinion_modifier = { #Good relations with Mao
 					target = ROOT
@@ -15403,7 +15408,7 @@ ai_will_do = {
 		x = 2
 		y = 0
 		relative_position_id = SOV_two_red_flags
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -15435,6 +15440,11 @@ ai_will_do = {
 		search_filters = {}
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = woland_gp_allowed_vols
+				add_idea = woland_major_allowed_vols
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			CHI = {
 				add_opinion_modifier = { #Good relations with Mao
 					target = ROOT

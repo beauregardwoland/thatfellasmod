@@ -5268,5 +5268,36 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = ROM_support_spa 
+
+		prerequisite = { focus = ROM_institute_royal_dictatorship }
+
+		available = {
+			date > 1937.1.1
+		} 
+
+
+		icon = GFX_focus_intervention_spain_nationalists
+
+		x = 5
+		y = 1
+		relative_position_id = ROM_institute_royal_dictatorship
+
+		cost = 1
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = woland_minor_allowed_vols
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 67
+			}
+		}
 	shared_focus = cont_axis_joint_wol
 }

@@ -169,6 +169,61 @@ JAP_allied_debuff = {
 	army_defence_factor = -0.1
 }
 
+GER_break_france_1 = { 
+	enable = { always = yes } 
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	breakthrough_factor = 0.025
+	army_attack_factor = 0.025
+	army_defence_factor = 0.025
+	#custom_modifier_tooltip = JAP_attack_buff_tt
+}
+GER_break_france_2 = { 
+	enable = { always = yes } 
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	breakthrough_factor = 0.05
+	army_attack_factor = 0.05
+	army_defence_factor = 0.05
+	#custom_modifier_tooltip = JAP_attack_buff_tt
+}
+GER_break_france_3 = { 
+	enable = { always = yes } 
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	breakthrough_factor = 0.1
+	army_attack_factor = 0.1
+	army_defence_factor = 0.1
+	#custom_modifier_tooltip = JAP_attack_buff_tt
+}
+GER_break_france_4= { 
+	enable = { always = yes } 
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	breakthrough_factor = 0.15
+	army_attack_factor = 0.15
+	army_defence_factor = 0.15
+	#custom_modifier_tooltip = JAP_attack_buff_tt
+}
+GER_break_france_5 = { 
+	enable = { always = yes } 
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	breakthrough_factor = 0.2
+	army_attack_factor = 0.2
+	army_defence_factor = 0.2
+	#custom_modifier_tooltip = JAP_attack_buff_tt
+}
+GER_break_france_6 = { 
+	enable = { always = yes } 
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	breakthrough_factor = 0.3
+	army_attack_factor = 0.3
+	army_defence_factor = 0.3
+	#custom_modifier_tooltip = JAP_attack_buff_tt
+}
+
 JAP_attack_buff = { 
 	enable = { always = yes } 
 	icon = GFX_modifiers_SOV_civilian_labor_in_defense

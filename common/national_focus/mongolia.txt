@@ -1726,4 +1726,35 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = MON_support_spa 
+
+		prerequisite = { focus = a_new_mongolia }
+
+		available = {
+		} 
+
+
+		icon = GFX_focus_intervention_spain_republic
+
+		x = -2
+		y = 1
+		relative_position_id = a_new_mongolia
+
+		cost = 1
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = woland_minor_allowed_vols
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 67
+			}
+		}
+	}
 }

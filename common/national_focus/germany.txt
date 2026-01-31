@@ -8894,6 +8894,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				FRA = {
+					country_event = {
+						id = wol_qol.19
+						days = 6
+					}
+				}
+			}
 			if = {
 				limit = {
 					has_dlc = "La Resistance"
@@ -9772,6 +9780,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
+			hidden_effect = {
+				FRA = {
+					country_event = {
+						id = wol_qol.20
+						days = 10
+					}
+				}
+			}
 			### CLAIMS
 			if = {
 				limit = {
@@ -10090,6 +10106,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
+			hidden_effect = {
+				FRA = {
+					country_event = {
+						id = wol_qol.21
+						days = 3
+					}
+				}
+			}
 			add_named_threat = { threat = 5 name = GER_end_of_czechoslovakia }
 			add_timed_idea = {
 				idea = plunder_prague

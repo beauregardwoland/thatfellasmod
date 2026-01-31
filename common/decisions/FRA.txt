@@ -1110,9 +1110,7 @@ FRA_spanish_intervention_category = {
 		}
 
 		complete_effect = { 
-			set_country_flag = FRA_covert_intervention_allowed 
-			clr_country_flag = FRA_non_intervention
-			set_rule = { can_send_volunteers = yes }
+			add_ideas = woland_major_allowed_vols
 		}
 
 		cost = 25
@@ -1129,7 +1127,7 @@ FRA_spanish_intervention_category = {
 		}
 		days_remove = -1
 		modifier = {
-			stability_factor = -0.25
+			stability_factor = -0.15
 			war_support_factor = 0.125
 			send_volunteers_tension = -0.9
 		}

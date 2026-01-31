@@ -99,7 +99,7 @@ france_mp_standardization = {
 	icon = generic_economy
 	priority = 40
 	picture = GFX_decision_cat_generic_mefo_bills
-	visible_when_empty = no
+	visible_when_empty = yes
 	allowed = {
 		original_tag = FRA
 	}

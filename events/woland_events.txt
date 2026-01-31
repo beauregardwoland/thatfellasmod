@@ -626,6 +626,103 @@ country_event = {  ###Axis changes
 	}
 	
 }
+country_event = {  ###
+	id = wol_qol.19
+	title = wol_qol.19.t
+	desc = wol_qol.19.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.19.a
+		ai_chance = { base = 100 }
+		add_to_variable = {
+			fra_build_mil_eco_timer = -10
+			tooltip = france_adjust_missions_eco2
+		}
+		add_to_variable = {
+			fra_build_civ_eco_timer = 50
+			tooltip = france_adjust_missions_eco1
+		}
+		hidden_effect = {
+			add_days_mission_timeout = {
+				mission = fra_build_civilian_eco
+				days = 50
+			}
+			add_days_mission_timeout = {
+				mission = fra_build_military_eco
+				days = -10
+			}
+		}
+	}
+	
+}
+country_event = {  ###
+	id = wol_qol.20
+	title = wol_qol.20.t
+	desc = wol_qol.20.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.20.a
+		ai_chance = { base = 100 }
+		add_to_variable = {
+			fra_build_mil_eco_timer = -10
+			tooltip = france_adjust_missions_eco2
+		}
+		add_to_variable = {
+			fra_build_civ_eco_timer = 30
+			tooltip = france_adjust_missions_eco1
+		}
+		hidden_effect = {
+			add_days_mission_timeout = {
+				mission = fra_build_civilian_eco
+				days = 30
+			}
+			add_days_mission_timeout = {
+				mission = fra_build_military_eco
+				days = -10
+			}
+		}
+	}
+	
+}
+country_event = {  ###
+	id = wol_qol.21
+	title = wol_qol.21.t
+	desc = wol_qol.21.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.21.a
+		ai_chance = { base = 100 }
+		add_to_variable = {
+			fra_build_mil_eco_timer = -15
+			tooltip = france_adjust_missions_eco2
+		}
+		add_to_variable = {
+			fra_build_civ_eco_timer = 30
+			tooltip = france_adjust_missions_eco1
+		}
+		hidden_effect = {
+			add_days_mission_timeout = {
+				mission = fra_build_civilian_eco
+				days = 30
+			}
+			add_days_mission_timeout = {
+				mission = fra_build_military_eco
+				days = -15
+			}
+		}
+	}
+	
+}
+
 
 country_event = {
 	id = wol_qol.101
