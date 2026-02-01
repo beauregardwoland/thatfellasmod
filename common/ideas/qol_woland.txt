@@ -7,10 +7,30 @@ ideas = {
 				production_speed_arms_factory_factor = -3
 			}
 		}
+		woland_spa_allowed_vols = {
+			picture = economic_control_icon
+			modifier = {
+				send_volunteer_size = 24
+				send_volunteers_tension = -1
+			}
+			rule = {
+				can_send_volunteers = yes
+			}
+		}
 		woland_gp_allowed_vols = {
 			picture = economic_control_icon
 			modifier = {
 				send_volunteer_size = 5
+				send_volunteers_tension = -1
+			}
+			rule = {
+				can_send_volunteers = yes
+			}
+		}
+		woland_gp_allowed_vols_1 = {
+			picture = economic_control_icon
+			modifier = {
+				send_volunteer_size = 6
 				send_volunteers_tension = -1
 			}
 			rule = {

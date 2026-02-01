@@ -8,9 +8,10 @@ on_actions = {
 				}
 			}
 			FRA = {
-				set_variable = { fra_build_mil_eco_timer = 110 }
-				set_variable = { fra_build_civ_eco_timer = 90 }
+				set_variable = { fra_build_mil_eco_timer = 100 }
+				set_variable = { fra_build_civ_eco_timer = 80 }
 				set_variable = { fra_evacuate_eco_timer = 45 }
+				set_variable = { fra_evacuate_debuff_counter = 0 }
 				activate_mission = fra_build_civilian_eco
 				activate_mission = fra_build_military_eco
 				add_ideas = fra_decision_vased_eco
@@ -19,7 +20,7 @@ on_actions = {
 				add_ideas = woland_gp_allowed_vols
 			}
 			SOV = {
-				add_ideas = woland_gp_allowed_vols
+				add_ideas = woland_gp_allowed_vols_1
 			}
 			JAP = {
 				add_ideas = woland_major_allowed_vols

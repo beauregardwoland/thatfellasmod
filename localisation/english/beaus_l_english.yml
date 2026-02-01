@@ -15,8 +15,10 @@
  sp_naval_compact_bbs_desc:0"The great war and following naval treaties have constrained and limited the size of battleships, in order to truly maintain the battleship as a viable weapon we must look to innovate to maintain the advantage of firepower on the seas."
  minor_nation:0"Minor Nation QOL"
  woland_gp_allowed_vols:0"§Y6§! Volunteer Divisions Allowed"
+ woland_gp_allowed_vols_1:0"§Y7§! Volunteer Divisions Allowed"
  woland_major_allowed_vols:0"§Y4§! Volunteer Divisions Allowed"
  woland_minor_allowed_vols:0"§Y2§! Volunteer Divisions Allowed"
+ woland_spa_allowed_vols:0"§Y24§! Volunteer Divisions Allowed"
 
  bigg_artillery_research_2:0"Heavy Howitzer platforms"
  bigg_artillery_research_3:0"Improved Siege Munitions"

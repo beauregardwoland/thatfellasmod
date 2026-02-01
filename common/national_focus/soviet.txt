@@ -15373,7 +15373,7 @@ ai_will_do = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = woland_gp_allowed_vols
+				remove_idea = woland_gp_allowed_vols_1
 				add_idea = woland_major_allowed_vols
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt

@@ -7588,7 +7588,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_konoes_first_cabinet }
 
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -8164,7 +8164,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_sea_national_spiritual_mobliization_movement }
 
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -8361,7 +8361,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_form_the_central_economic_council }
 
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -24936,7 +24936,7 @@ focus_tree = {
 		x = 3
 		y = 1
 
-		cost = 4
+		cost = 1
 
 		ai_will_do = {
 			factor = 3
@@ -25012,7 +25012,7 @@ focus_tree = {
 		x = 5
 		y = 1
 
-		cost = 4
+		cost = 1
 
 		ai_will_do = {
 			factor = 3
@@ -28170,7 +28170,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 3
+		cost = 1
 
 		ai_will_do = {
 			factor = 3
@@ -28730,7 +28730,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 3
+		cost = 1
 
 		ai_will_do = {
 			factor = 3
@@ -29292,7 +29292,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 3
@@ -29821,7 +29821,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 3
@@ -31056,7 +31056,7 @@ focus_tree = {
 		x = 9
 		y = 1
 
-		cost = 2
+		cost = 1
 
 		ai_will_do = {
 			factor = 3
@@ -33000,7 +33000,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_the_imperial_defense_plan
 
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 2

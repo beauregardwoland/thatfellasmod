@@ -46,21 +46,21 @@
 			#}
 			
 			add_to_variable = {
-				fra_build_civ_eco_timer = -15
+				fra_build_civ_eco_timer = -20
 				tooltip = france_adjust_missions_eco1
 			}
 			add_to_variable = {
-				fra_build_mil_eco_timer = -15
+				fra_build_mil_eco_timer = -20
 				tooltip = france_adjust_missions_eco2
 			}
 			hidden_effect = {
 				add_days_mission_timeout = {
 					mission = fra_build_civilian_eco
-					days = -15
+					days = -20
 				}
 				add_days_mission_timeout = {
 					mission = fra_build_military_eco
-					days = -15
+					days = -20
 				}
 			}
 		}
@@ -908,21 +908,21 @@
 				}
 			}
 			add_to_variable = {
-				fra_build_mil_eco_timer = -25
+				fra_build_mil_eco_timer = -30
 				tooltip = france_adjust_missions_eco2
 			}
 			add_to_variable = {
-				fra_build_civ_eco_timer = 50
+				fra_build_civ_eco_timer = 45
 				tooltip = france_adjust_missions_eco1
 			}
 			hidden_effect = {
 				add_days_mission_timeout = {
 					mission = fra_build_civilian_eco
-					days = 50
+					days = 45
 				}
 				add_days_mission_timeout = {
 					mission = fra_build_military_eco
-					days = -25
+					days = -30
 				}
 			}
 		}
