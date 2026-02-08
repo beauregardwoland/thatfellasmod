@@ -7565,6 +7565,30 @@ focus_tree = {
 					days = 365
 				}
 			}
+			AST = {
+				add_timed_idea = {
+					idea = USA_vic_plan43
+					days = 365
+				}
+			}
+			FRA = {
+				add_timed_idea = {
+					idea = USA_vic_plan43
+					days = 365
+				}
+			}
+			MEX = {
+				add_timed_idea = {
+					idea = USA_vic_plan43
+					days = 365
+				}
+			}
+			SAF = {
+				add_timed_idea = {
+					idea = USA_vic_plan43
+					days = 365
+				}
+			}
 		}
 	}
 	focus = {
