@@ -1407,7 +1407,6 @@ ideas = {
 				army_core_defence_factor = 0.2
 				naval_invasion_penalty = -0.25
 				extra_marine_supply_grace = 24
-				industrial_capacity_factory = -0.2
 			}
 		}
 	}
