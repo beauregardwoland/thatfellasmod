@@ -1,4 +1,4 @@
-﻿focus_tree = {
+focus_tree = {
 	id = south_african_focus
 	
 	country = {
@@ -213,7 +213,6 @@
 		id = SAF_expand_the_cape_corps
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = SAF_reconstitute_the_cape_corps }
-		mutually_exclusive = { focus = SAF_outlaw_strikes }
 		x = 0
 		y = 5
 		relative_position_id = SAF_war_measures_act
@@ -245,7 +244,6 @@
 		id = SAF_outlaw_strikes
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = SAF_work_for_all_poor }
-		mutually_exclusive = { focus = SAF_expand_the_cape_corps }
 		x = 2
 		y = 5
 		relative_position_id = SAF_war_measures_act
@@ -2559,15 +2557,12 @@
 		y = 7
 		relative_position_id = SAF_south_african_railways
 
-		cost = 10
+		cost = 15
 
 		ai_will_do = {
 			factor = 100
 		}
 
-		available = {
-			is_subject = no
-		}
 		
 		bypass = {
 
@@ -2598,16 +2593,7 @@
 		}
 
 		available = {
-			is_subject = no
 			has_war = yes
-			is_in_faction = yes
-			OR = {
-				num_of_factories > 50
-				any_other_country = {
-					is_in_faction_with = ROOT
-					num_of_factories > 50
-				}
-			}
 		}
 		
 		bypass = {
