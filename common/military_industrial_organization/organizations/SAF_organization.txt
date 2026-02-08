@@ -1,0 +1,65 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+SAF_iscor_organization = {
+    name = SAF_iscor_organization
+    include = generic_medium_tank_organization
+    icon = GFX_idea_SAF_idea_iscor
+    allowed = {
+        original_TAG = SAF
+        has_dlc = "Together for Victory"
+    }
+}
+
+SAF_vauxhall_heavy_organization = {
+    name = "Vauxhall - Heavy Armor Branch"
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_vauxhall
+	
+	allowed = {
+        original_TAG = SAF
+        has_dlc = "Together for Victory"
+    }
+}
+
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
