@@ -658,13 +658,13 @@ equipment_modules = {
 			}
 		}
 		add_stats = {
-			build_cost_ic = 10
+			build_cost_ic = 9
 			reliability = -0.1
 			maximum_speed = -0.2
 			breakthrough = 24
 		}
 		multiply_stats = {
-			build_cost_ic = 0.50
+			build_cost_ic = 0.25
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 0
@@ -693,7 +693,7 @@ equipment_modules = {
 			breakthrough = 35
 		}
 		multiply_stats = {
-			build_cost_ic = 0.50
+			build_cost_ic = 0.25
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 0
@@ -1375,13 +1375,13 @@ equipment_modules = {
 			hard_attack = 50
 			ap_attack = 225
 			build_cost_ic = 12.5
-			maximum_speed = -0.6
+			maximum_speed = -0.5
 			reliability = -0.35
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 0
 		build_cost_resources = {
-			tungsten = 5
+			tungsten = 4
 			chromium = 2
 		}
 	}

@@ -1135,7 +1135,7 @@ equipments = {
 
 		fuel_consumption = 0
 		maximum_speed = 4
-		build_cost_ic = 28
+		build_cost_ic = 22
 		reliability = 1
 		armor_value = 120
 		hardness = 1

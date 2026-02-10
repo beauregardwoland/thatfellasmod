@@ -49,6 +49,7 @@
 
  heavy_support_arty:0"Support Heavy Artillery"
  helicopter_bat:0 "Helicopter Battalion"
+ super_heavy_armor_brigade:0 "Super Heavy Tank"
  armored_train_company:0"Armored Assault Train"
 
  JAP_power_balance:0"Interservice Rivalry"
