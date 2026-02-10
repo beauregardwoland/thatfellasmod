@@ -422,7 +422,11 @@ on_actions = {
 			}
 			
 			RAJ = {
-				add_ideas = RAJ_vastness_nerf
+				if = {
+					limit = { SIA = { is_ai = yes } }
+					add_ideas = RAJ_vastness_nerf_1
+				}
+				else = { add_ideas = RAJ_vastness_nerf }
 			}
 			SWE = {
 				add_ideas = no_embargo

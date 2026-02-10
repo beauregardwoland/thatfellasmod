@@ -1059,6 +1059,7 @@
  cheaper_tac_bomb:0"Bolstered Air Industry"
  cheaper_strat_bomb:0"Bolstered Air Industry"
  RAJ_vastness_nerf:0"Subcontinents Vastness"
+ RAJ_vastness_nerf_1:0"Subcontinents Vastness"
  expensive_inf_equipment:0"Expensive Production Runs"
  expensive_inf1_equipment:0"Quality Production Runs"
  

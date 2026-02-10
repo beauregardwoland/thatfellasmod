@@ -337,6 +337,12 @@ ideas = {
 				production_speed_buildings_factor = -0.25
 			}
 		}
+		RAJ_vastness_nerf_1 = {
+			picture = RAJ_widespread_turmoil
+			modifier = {
+				production_speed_buildings_factor = -0.15
+			}
+		}
 		CHI_taiyun_revitalized = {
 			picture = generic_acquire_tanks
 			equipment_bonus = {
