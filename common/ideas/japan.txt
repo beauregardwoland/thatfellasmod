@@ -4725,7 +4725,7 @@ ideas = {
 			}
 			
 			modifier = {
-				army_armor_attack_factor = -0.1
+				army_armor_attack_factor = -0.075
 				custom_modifier_tooltip = JAP_jungle_armor_tt
 			}
 		}
@@ -4744,7 +4744,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				army_armor_attack_factor = -0.1
+				army_armor_attack_factor = -0.075
 				custom_modifier_tooltip = JAP_jungle_armor_tt
 			}
 
@@ -4775,7 +4775,7 @@ ideas = {
 
 			equipment_bonus = {
 				mio_cat_eq_all_tanks = {
-					build_cost_ic = -0.1
+					build_cost_ic = -0.15
 					instant = yes
 				}
 			}

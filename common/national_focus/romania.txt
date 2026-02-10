@@ -5299,5 +5299,6 @@ focus_tree = {
 				amount = 67
 			}
 		}
+	}
 	shared_focus = cont_axis_joint_wol
 }
