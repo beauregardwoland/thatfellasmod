@@ -416,6 +416,7 @@
 				remove_ideas = { FRA_defeatism }
 			}
 			load_focus_tree = french_focus
+			set_country_flag = back_to_old_tree
 			#TODO_GABRIEL: Make scripted effect to give correct focuses depending on left/right
 		}
 	}
@@ -976,5 +977,5 @@
 			}
 		}
 	}
-		
+	shared_focus = FRA_begin_rearmament
 }

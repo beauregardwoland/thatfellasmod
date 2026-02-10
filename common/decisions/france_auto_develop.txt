@@ -159,7 +159,7 @@ france_mp_standardization = {
 				}
 			}
 			else_if = {
-				limit = { check_variable = { fra_evacuate_debuff_counter = 1 } }
+				limit = { check_variable = { fra_evacuate_debuff_counter > 5.5 } }
 				add_cic = 500
 			}
 			else = {
