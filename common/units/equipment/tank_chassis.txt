@@ -389,6 +389,10 @@ equipments = {
 			count < 3 #two secondary turrets only
 		}
 		module_count_limit = {
+			module = secondary_turret_small_cannon
+			count < 2 #two secondary cannons only
+		}
+		module_count_limit = {
 			module = amphibious_drive
 			count < 2
 		}
@@ -644,6 +648,10 @@ equipments = {
 		module_count_limit = {
 			category = tank_secondary_turret
 			count < 3
+		}
+		module_count_limit = {
+			module = secondary_turret_small_cannon
+			count < 2 #two secondary cannons only
 		}
 		module_count_limit = {
 			module = amphibious_drive
@@ -1105,6 +1113,10 @@ equipments = {
 			count < 3
 		}
 		module_count_limit = {
+			module = secondary_turret_small_cannon
+			count < 2 #two secondary turrets only
+		}
+		module_count_limit = {
 			module = squeezebore_adaptor
 			count < 2
 		}
@@ -1296,6 +1308,10 @@ equipments = {
 		module_count_limit = {
 			category = tank_secondary_turret
 			count < 3
+		}
+		module_count_limit = {
+			module = secondary_turret_small_cannon
+			count < 2 #two secondary turrets only
 		}
 		module_count_limit = {
 			module = dozer_blade
