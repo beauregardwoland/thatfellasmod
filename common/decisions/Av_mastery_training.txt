@@ -75,7 +75,7 @@ army_mastery_category = {
 
 		complete_effect = {
 			add_mastery = {
-				amount = 50
+				amount = 45
 				track = infantry
 			}
 
@@ -157,7 +157,7 @@ army_mastery_category = {
 
 		complete_effect = {
 			add_mastery = {
-				amount = 50
+				amount = 45
 				track = combat_support
 			}
 		
@@ -239,7 +239,7 @@ army_mastery_category = {
 
 		complete_effect = {
 			add_mastery = {
-				amount = 50
+				amount = 45
 				track = armor
 			}
 		
@@ -321,7 +321,7 @@ army_mastery_category = {
 
 		complete_effect = {
 			add_mastery = {
-				amount = 50
+				amount = 45
 				track = operations
 			}
 		
@@ -409,7 +409,7 @@ air_mastery_category = {
 
 		complete_effect = {
 			add_mastery = {
-				amount = 50
+				amount = 45
 				track = fighter_aircraft
 			}
 		
@@ -491,7 +491,7 @@ air_mastery_category = {
 
 		complete_effect = {
 			add_mastery = {
-				amount = 50
+				amount = 45
 				track = strike_aircraft
 			}
 		
@@ -573,7 +573,7 @@ air_mastery_category = {
 
 		complete_effect = {
 			add_mastery = {
-				amount = 50
+				amount = 45
 				track = medium_aircraft
 			}
 		
@@ -655,7 +655,7 @@ air_mastery_category = {
 
 		complete_effect = {
 			add_mastery = {
-				amount = 50
+				amount = 45
 				track = heavy_aircraft
 			}
 		
@@ -743,7 +743,7 @@ navy_mastery_category = {
 
 		complete_effect = {
 			add_mastery = {
-				amount = 50
+				amount = 45
 				track = submarines
 			}
 		
@@ -825,7 +825,7 @@ navy_mastery_category = {
 
 		complete_effect = {
 			add_mastery = {
-				amount = 50
+				amount = 45
 				track = screens
 			}
 		
@@ -907,7 +907,7 @@ navy_mastery_category = {
 
 		complete_effect = {
 			add_mastery = {
-				amount = 50
+				amount = 45
 				track = carriers
 			}
 		
@@ -989,7 +989,7 @@ navy_mastery_category = {
 
 		complete_effect = {
 			add_mastery = {
-				amount = 50
+				amount = 45
 				track = capital_ships
 			}
 		
