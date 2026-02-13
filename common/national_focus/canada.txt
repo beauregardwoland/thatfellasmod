@@ -3099,8 +3099,7 @@ focus_tree = {
 	focus = {
 		id = CAN_habakkuk_carrier
 		icon = GFX_goal_generic_navy_carrier
-		prerequisite = { focus = CAN_escort_fleet }
-		prerequisite = { focus = CAN_fleet_in_being }
+		prerequisite = { focus = CAN_escort_fleet focus = CAN_fleet_in_being }
 		x = 1
 		y = 1
 		relative_position_id = CAN_escort_fleet
