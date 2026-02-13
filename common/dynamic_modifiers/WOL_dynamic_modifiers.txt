@@ -40,6 +40,10 @@ commonwealth_air_modifier = { #NATIONAL SPIRIT
 
 	experience_gain_air = commonwealth_air_experience_gain_army_factor
 	air_cas_present_factor = commonwealth_air_cas_present_factor
+
+	air_training_xp_gain_factor = commonwealth_air_training_xp_gain_factor
+	production_factory_max_efficiency_factor = commonwealth_production_factory_max_efficiency_factor
+	custom_modifier_tooltip = CAN_lancastors_tt
 }
 
 commonwealth_army_modifier = { #NATIONAL SPIRIT
@@ -67,6 +71,13 @@ commonwealth_army_modifier = { #NATIONAL SPIRIT
 	conscription_factor = commonwealth_conscription_factor
 	org_loss_when_moving = commonwealth_org_loss_when_moving
 	coordination_bonus = commonwealth_coordination_bonus
+	cas_damage_reduction = CAN_modifier_var_1
+	breakthrough_factor = CAN_modifier_var_2
+	experience_gain_army_unit_factor = CAN_modifier_var_3
+	army_artillery_attack_factor = CAN_modifier_var_4
+	modifier_army_sub_unit_marine_attack_factor = CAN_modifier_var_5
+	custom_modifier_tooltip = can_kangaroo_tt
+	custom_modifier_tooltip = can_skink_tt
 }
 
 
@@ -80,6 +91,11 @@ commonwealth_naval_modifier = { #NATIONAL SPIRIT
 	convoy_retreat_speed = commonwealth_convoy_retreat_speed
 	convoy_escort_efficiency = commonwealth_convoy_escort_efficiency
 	naval_detection = commonwealth_naval_detection
+
+	spotting_chance = commonwealth_spotting_chance
+	shore_bombardment_bonus = commonwealth_shore_bombardment_bonus
+	navy_capital_ship_attack_factor = commonwealth_navy_capital_ship_attack_factor
+	custom_modifier_tooltip = CAN_destroyer_tt
 }
 
 ROM_agrarian_refor = { #NATIONAL SPIRIT

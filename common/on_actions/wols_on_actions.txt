@@ -1,6 +1,36 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			CAN = {  
+				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
+				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
+				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
+			}
+			AST = {  
+				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
+				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
+				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
+			}
+			RAJ = {  
+				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
+				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
+				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
+			}
+			NZL = {  
+				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
+				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
+				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
+			}
+			SAF = {  
+				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
+				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
+				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
+			}
+			MAL = {  
+				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
+				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
+				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
+			}
 			ITA = {
 				activate_mission = ITA_eth_war_tension
 				add_to_variable = {

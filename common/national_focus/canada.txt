@@ -418,7 +418,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = CAN_rowell_sirois_commission
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 75
@@ -557,7 +557,7 @@ focus_tree = {
 		}
 
 		available = {
-			threat > 0.2
+			threat > 0.15
 		}
 		
 		bypass = {
@@ -591,7 +591,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = CAN_defence_of_canada_regulations
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 80
@@ -754,7 +754,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = CAN_defence_of_canada_regulations
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 50
@@ -786,7 +786,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = CAN_defence_of_canada_regulations
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 25
@@ -818,7 +818,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = CAN_defence_of_canada_regulations
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 75
@@ -997,7 +997,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = CAN_defence_of_canada_regulations
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 25
@@ -1204,7 +1204,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = CAN_defence_of_canada_regulations
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -1241,7 +1241,7 @@ focus_tree = {
 				limit = {
 					has_state_flag = CAN_john_inglis_and_company_AF1
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
@@ -1252,10 +1252,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = CAN_john_inglis_and_company_AF2
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1288,10 +1288,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = CAN_john_inglis_and_company_AF2
@@ -1560,7 +1560,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = CAN_defence_of_canada_regulations
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -1593,7 +1593,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = CAN_defence_of_canada_regulations
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 25
@@ -1632,7 +1632,7 @@ focus_tree = {
 		y = 6
 		relative_position_id = CAN_defence_of_canada_regulations
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 25
@@ -1785,6 +1785,12 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
+			add_mastery_bonus = {
+				bonus = 0.15
+				days = 365
+				track = operations
+				name = JAP_reform_the_army
+			}
 		}
 	}
 
@@ -1869,7 +1875,7 @@ focus_tree = {
 		y = 7
 		relative_position_id = CAN_defence_of_canada_regulations
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 25
@@ -2006,7 +2012,7 @@ focus_tree = {
 		x = 17
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -2126,7 +2132,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = CAN_army_modernization 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -2196,6 +2202,15 @@ focus_tree = {
 				specialization = specialization_land
 				value = 0.15
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_mastery_bonus = {
+				bonus = 0.15
+				days = 365
+				track = combat_support
+				name = JAP_reform_the_army
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = CAN_royal_regiment_of_canadian_artillery
 				bonus = 1.0
@@ -2262,7 +2277,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = CAN_army_modernization 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -2289,15 +2304,21 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
+			add_mastery_bonus = {
+				bonus = 0.15
+				days = 700
+				track = infantry
+				name = JAP_reform_the_army
+			}
 		}
 	}
 
 	focus = {
 		id = CAN_1st_canadian_parachute_battalion
 		icon = GFX_goal_generic_special_forces 
-		prerequisite = { focus = CAN_the_plan focus = CAN_a_motorized_army }
-		x = 2
-		y = 4
+		prerequisite = { focus = CAN_the_plan focus = CAN_army_modernization }
+		x = 4
+		y = 3
 		relative_position_id = CAN_army_modernization 
 
 		cost = 10
@@ -2342,10 +2363,10 @@ focus_tree = {
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = CAN_red_deer_training_camp }
 		x = -1
-		y = 5
-		relative_position_id = CAN_army_modernization 
+		y = 1
+		relative_position_id = CAN_red_deer_training_camp 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -2372,6 +2393,12 @@ focus_tree = {
 				category = marine_tech
 				category = para_tech
 			}
+			custom_effect_tooltip = modify_commonwealth_spirit_army
+			add_to_variable = {
+				var = commonwealth_special_forces_attack_factor
+				value = 0.01
+				tooltip = special_forces_attack_factor_tt
+			}
 		}
 	}
 
@@ -2380,10 +2407,10 @@ focus_tree = {
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = CAN_red_deer_training_camp }
 		x = 1
-		y = 5
-		relative_position_id = CAN_army_modernization 
+		y = 1
+		relative_position_id = CAN_red_deer_training_camp 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -2409,18 +2436,24 @@ focus_tree = {
 				uses = 1
 				category = mountaineers_tech
 			}
+			custom_effect_tooltip = modify_commonwealth_spirit_army
+			add_to_variable = {
+				var = commonwealth_special_forces_attack_factor
+				value = 0.01
+				tooltip = special_forces_attack_factor_tt
+			}
 		}
 	}
 
 	focus = {
 		id = CAN_the_valentine_tank
 		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = CAN_red_deer_training_camp }
-		x = 0
-		y = 6
-		relative_position_id = CAN_army_modernization 
+		prerequisite = { focus = CAN_a_motorized_army }
+		x = 1
+		y = 1
+		relative_position_id = CAN_a_motorized_army 
 
-		cost = 10
+		cost = 7
 
 		ai_will_do = {
 			factor = 25
@@ -2445,19 +2478,22 @@ focus_tree = {
 				specialization = specialization_land
 				value = 0.5
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_mastery_bonus = {
+				bonus = 0.15
+				days = 365
+				track = armor
+				name = JAP_reform_the_army
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			add_tech_bonus = {
 				name = CAN_the_valentine_tank
+				ahead_reduction = 1
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = armor
-			}
-			add_tech_bonus = {
-				name = CAN_the_valentine_tank
-				ahead_reduction = 2
-				bonus = 1.0
-				uses = 1
-				category = cat_light_armor
 			}
 
 		}
@@ -2475,7 +2511,7 @@ focus_tree = {
 		x = 25
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -3063,19 +3099,20 @@ focus_tree = {
 	focus = {
 		id = CAN_habakkuk_carrier
 		icon = GFX_goal_generic_navy_carrier
-		prerequisite = { focus = CAN_north_american_alliance }
-		x = -1
-		y = 2
-		relative_position_id = CAN_permanent_joint_defense_board
+		prerequisite = { focus = CAN_escort_fleet }
+		prerequisite = { focus = CAN_fleet_in_being }
+		x = 1
+		y = 1
+		relative_position_id = CAN_escort_fleet
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 25
 		}
 
 		available = {
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
+			#NOT = { has_country_flag = britain_enforced_our_loyalty }
 		}
 		
 		bypass = {
@@ -4363,7 +4400,7 @@ focus_tree = {
 		x = 43
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -4404,6 +4441,13 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = modify_commonwealth_spirit_air
+			set_variable = {
+				var = commonwealth_air_experience_gain_army_factor
+				value = 0.05
+				tooltip = experience_gain_air_tt
+			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -4424,6 +4468,7 @@ focus_tree = {
 				uses = 1
 				category = air_doctrine
 			}
+
 		}
 	}
 
@@ -4435,7 +4480,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = CAN_rcaf_station_borden
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -4455,11 +4500,24 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			custom_effect_tooltip = modify_commonwealth_spirit_air
+			add_to_variable = {
+				var = commonwealth_production_factory_max_efficiency_factor
+				value = 0.025
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = CAN_we_have_the_hurricane
 				bonus = 1.0
 				uses = 1
 				category = light_fighter
+			}
+			random_core_state = {
+				add_resource = {
+					type = rubber
+					amount = 6
+				}
 			}
 		}
 	}
@@ -4720,6 +4778,49 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = modify_commonwealth_spirit_air
+			set_variable = {
+				var = commonwealth_air_experience_gain_army_factor
+				value = 0.05
+				tooltip = experience_gain_air_tt
+			}
+			set_variable = {
+				var = commonwealth_air_ace_generation_chance_factor
+				value = 0.05
+				tooltip = air_ace_generation_chance_factor_tt
+			}
+			set_variable = {
+				var = commonwealth_air_training_xp_gain_factor
+				value = 0.15
+				tooltip = air_training_xp_gain_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_mastery_bonus = {
+				name = JAP_reform_the_army
+				track = fighter_aircraft
+				bonus = 0.15
+				days = 365
+			}
+			add_mastery_bonus = {
+				name = JAP_reform_the_army
+				track = strike_aircraft
+				bonus = 0.15
+				days = 365
+			}
+			add_mastery_bonus = {
+				name = JAP_reform_the_army
+				track = medium_aircraft
+				bonus = 0.15
+				days = 365
+			}
+			add_mastery_bonus = {
+				name = JAP_reform_the_army
+				track = heavy_aircraft
+				bonus = 0.15
+				days = 365
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -4751,7 +4852,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = CAN_rcaf_station_borden
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -4800,6 +4901,12 @@ focus_tree = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = CAN_fairchild_aircraft_ltd
 			}
+			random_core_state = {
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+			}
 		}
 	}
 
@@ -4811,7 +4918,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = CAN_rcaf_station_borden
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -4864,6 +4971,12 @@ focus_tree = {
 			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = CAN_handley_page
+			}
+			random_core_state = {
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
 			}
 		}
 	}
@@ -4990,7 +5103,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = CAN_halifax_shipyards
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 25
@@ -5010,7 +5123,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-
+			custom_effect_tooltip = modify_commonwealth_spirit_navy
+			add_ideas = CAN_destroyer
 			navy_experience = 25
 
 			add_tech_bonus = {
@@ -5034,7 +5148,7 @@ focus_tree = {
 
 		mutually_exclusive = { focus = CAN_heavy_cruiser_effort }
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 25
@@ -5054,6 +5168,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			custom_effect_tooltip = modify_commonwealth_spirit_navy
+			add_to_variable = {
+				var = commonwealth_naval_detection
+				value = 0.05
+				tooltip = naval_detection_tt
+			}
+			swap_ideas = {
+				remove_idea = CAN_destroyer
+				add_idea = CAN_destroyers_1
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = CAN_light_cruiser_effort
 				bonus = 0.5
@@ -5085,7 +5210,7 @@ focus_tree = {
 
 		mutually_exclusive = { focus = CAN_light_cruiser_effort }
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 25
@@ -5105,6 +5230,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			custom_effect_tooltip = modify_commonwealth_spirit_navy
+			add_to_variable = {
+				var = commonwealth_shore_bombardment_bonus
+				value = 0.2
+				tooltip = shore_bombardment_bonus_tt
+			}
+			swap_ideas = {
+				remove_idea = CAN_destroyer
+				add_idea = CAN_destroyers_2
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = CAN_heavy_cruiser_effort
 				bonus = 1.0
@@ -5135,7 +5271,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = CAN_halifax_shipyards
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 25
@@ -5159,6 +5295,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			custom_effect_tooltip = modify_commonwealth_spirit_navy
+			add_to_variable = {
+				var = commonwealth_spotting_chance
+				value = 0.1
+				tooltip = spotting_chance_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			navy_experience = 25
 			add_breakthrough_progress = {
 				specialization = specialization_naval
@@ -5189,7 +5332,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = CAN_halifax_shipyards
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 25
@@ -5209,6 +5352,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			custom_effect_tooltip = modify_commonwealth_spirit_navy
+			add_to_variable = {
+				var = commonwealth_navy_capital_ship_attack_factor
+				value = 0.1
+				tooltip = navy_capital_ship_attack_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			navy_experience = 25
 			add_breakthrough_progress = {
 				specialization = specialization_naval
@@ -5234,11 +5384,11 @@ focus_tree = {
 		id = CAN_degauss_ship_hulls
 		icon = GFX_goal_generic_navy_anti_submarine
 		prerequisite = { focus = CAN_escort_fleet focus = CAN_fleet_in_being }
-		x = -1
+		x = -2
 		y = 4
 		relative_position_id = CAN_halifax_shipyards
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 25
@@ -5295,11 +5445,11 @@ focus_tree = {
 		id = CAN_trade_fleet
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = CAN_escort_fleet focus = CAN_fleet_in_being }
-		x = 1
+		x = 2
 		y = 4
 		relative_position_id = CAN_halifax_shipyards
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 25
@@ -5326,12 +5476,12 @@ focus_tree = {
 	focus = {
 		id = CAN_united_shipyards
 		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = CAN_trade_fleet focus = CAN_degauss_ship_hulls }
+		prerequisite = { focus = CAN_trade_fleet focus = CAN_habakkuk_carrier focus = CAN_degauss_ship_hulls }
 		x = 0
 		y = 5
 		relative_position_id = CAN_halifax_shipyards
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 25
@@ -5384,6 +5534,403 @@ focus_tree = {
 				}
 				set_state_flag = CAN_united_shipyards_DY
 			}
+		}
+	}
+
+	focus = {
+		id = CAN_kangaroo_apc
+		icon = GFX_focus_generic_mechanized
+		prerequisite = { focus = CAN_cmp_truck }
+		x = 1
+		y = 1
+		relative_position_id = CAN_cmp_truck
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			hidden_effect = { set_technology = { CAN_kangaroo_apcs = 1 } }
+			effect_tooltip = { add_ideas = CAN_dummy_tech }
+		}
+	}
+
+	focus = {
+		id = CAN_america_1
+		icon = GFX_focus_generic_befriend_usa
+		#prerequisite = { focus = CAN_cmp_truck }
+		x = 6
+		y = 0
+		relative_position_id = CAN_defence_of_canada_regulations
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_ideas = CAN_american_friend_1
+		}
+	}
+
+	focus = {
+		id = CAN_america_2
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		prerequisite = { focus = CAN_america_1 }
+		x = 0
+		y = 1
+		relative_position_id = CAN_america_1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			USA = { has_idea = great_depression_3 }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CAN_american_friend_1
+				add_idea = CAN_american_friend_2
+			}
+		}
+	}
+	focus = {
+		id = CAN_america_3
+		icon = GFX_focus_usa_recruit_the_free_corps
+		prerequisite = { focus = CAN_america_2 }
+		prerequisite = { focus = CAN_canadian_infantry_corps }
+		x = 1
+		y = 1
+		relative_position_id = CAN_america_2
+		mutually_exclusive = { focus = CAN_america_4 }
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			USA = { has_war = yes }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CAN_american_friend_2
+				add_idea = CAN_american_friend_3
+			}
+		}
+	}
+	focus = {
+		id = CAN_america_4
+		icon = GFX_focus_generic_industrialists
+		prerequisite = { focus = CAN_america_2 }
+		x = -1
+		y = 1
+		relative_position_id = CAN_america_2
+		mutually_exclusive = { focus = CAN_america_3 }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			USA = { has_war = yes }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CAN_american_friend_2
+				add_idea = CAN_american_friend_4
+			}
+		}
+	}
+	focus = {
+		id = CAN_tank_aa
+		icon = GFX_focus_FIN_foreign_anti_air
+		prerequisite = { focus = CAN_the_valentine_tank }
+		x = -1
+		y = 1
+		relative_position_id = CAN_the_valentine_tank
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			has_tech = basic_medium_tank_chassis
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			custom_effect_tooltip = modify_commonwealth_spirit_army
+			add_to_variable = {
+				var = CAN_modifier_var_1
+				value = 0.05
+				tooltip = cas_damage_reduction_tt
+			}
+			add_ideas = CAN_skink_aa
+			create_equipment_variant = {
+				name = "The Skink"
+				type = medium_tank_aa_chassis_2
+				design_team = mio:ENG_vickers_armstrong_eng_organization
+				allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+				modules = {
+					main_armament_slot = tank_anti_air_cannon_3
+					turret_type_slot = tank_medium_three_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_3
+					special_type_slot_2 = additional_machine_guns
+					special_type_slot_3 = sloped_armor
+					special_type_slot_4 = auto_loader
+				}
+				icon = GFX_USA_improved_medium_tank_medium
+			}
+		}
+	}
+	focus = {
+		id = CAN_tank_2
+		icon = GFX_focus_generic_self_propelled_gun
+		prerequisite = { focus = CAN_the_valentine_tank }
+		x = 1
+		y = 1
+		relative_position_id = CAN_the_valentine_tank
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			USA = { has_war = yes }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			custom_effect_tooltip = modify_commonwealth_spirit_army
+			add_to_variable = {
+				var = CAN_modifier_var_2
+				value = 0.05
+				tooltip = breakthrough_factor_tt
+			}
+			add_to_variable = {
+				var = CAN_modifier_var_4
+				value = 0.05
+				tooltip = army_artillery_attack_factor_tt
+			}
+			add_timed_idea = {
+				idea = CAN_allied_conversions
+				days = 365
+			}
+		}
+	}
+	focus = {
+		id = CAN_quality_men
+		icon = GFX_focus_BEL_legacy_of_the_great_war
+		prerequisite = { focus = CAN_royal_regiment_of_canadian_artillery }
+		prerequisite = { focus = CAN_a_motorized_army }
+		x = 1
+		y = 1
+		relative_position_id = CAN_royal_regiment_of_canadian_artillery
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			USA = { has_war = yes }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			custom_effect_tooltip = modify_commonwealth_spirit_army
+			add_to_variable = {
+				var = CAN_modifier_var_3
+				value = 0.05
+				tooltip = experience_gain_army_unit_factor_tt
+			}
+			add_to_variable = {
+				var = commonwealth_experience_loss_factor
+				value = -0.05
+				tooltip = experience_loss_factor_tt
+			}
+		}
+	}
+	focus = {
+		id = CAN_diepe_landings
+		icon = GFX_focus_generic_naval_invasion
+		prerequisite = { focus = CAN_the_black_devils }
+		prerequisite = { focus = CAN_the_rocky_mountain_rangers }
+		x = 1
+		y = 1
+		relative_position_id = CAN_the_black_devils
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			FRA = { has_capitulated = yes }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			custom_effect_tooltip = modify_commonwealth_spirit_army
+			add_to_variable = {
+				var = CAN_modifier_var_5
+				value = 0.05
+				tooltip = modifier_army_sub_unit_marine_attack_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = CAN_ski_craft
+		prerequisite = { focus = CAN_the_pacific_coast_air_defence_radar_system }
+		available = { 
+			has_tech = rangers_tech
+		}
+		
+		icon = GFX_focus_generic_winter_warfare
+		x = 1
+		y = 1
+		cost = 4
+		relative_position_id = CAN_the_pacific_coast_air_defence_radar_system
+	
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = MON_landng_ski_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			set_technology = {
+				ski_aircraft = 1
+			}	
+		}
+	}
+	focus = {
+		id = CAN_lancasters_foc
+		prerequisite = { focus = CAN_we_have_the_hurricane }
+		available = { 
+			
+		}
+		
+		icon = GFX_focus_generic_long_range_aircraft
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = CAN_we_have_the_hurricane
+	
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = modify_commonwealth_spirit_air
+			add_ideas = CAN_lancastors
 		}
 	}
 	shared_focus = commonwealth_joint_wol

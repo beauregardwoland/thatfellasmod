@@ -273,3 +273,58 @@ defined_text = {
 	}
 	
 }
+defined_text = {
+	name = can_kangaroo_loc_tt
+	text = {
+		trigger = { has_tech = CAN_kangaroo_apcs }
+		localization_key = tech_effect|CAN_kangaroo_apcs
+	}
+	text = {
+		trigger = { NOT = { has_tech = CAN_kangaroo_apcs } }
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = can_skink_loc_tt
+	text = {
+		trigger = { has_idea = CAN_skink_aa }
+		localization_key = idea_desc|CAN_skink_aa
+	}
+	text = {
+		trigger = { NOT = { has_idea = CAN_skink_aa } }
+		localization_key = ""
+	}
+	
+}
+defined_text = {
+	name = CAN_lancastors_loc_tt
+	text = {
+		trigger = { has_idea = CAN_lancastors }
+		localization_key = idea_desc|CAN_lancastors
+	}
+	text = {
+		trigger = { NOT = { has_idea = CAN_lancastors } }
+		localization_key = ""
+	}
+	
+}
+defined_text = {
+	name = CAN_destroyer_loc_tt
+	text = {
+		trigger = { has_idea = CAN_destroyer }
+		localization_key = idea_desc|CAN_destroyer
+	}
+    text = {
+		trigger = { has_idea = CAN_destroyers_1 }
+		localization_key = idea_desc|CAN_destroyers_1
+	}
+    text = {
+		trigger = { has_idea = CAN_destroyers_2 }
+		localization_key = idea_desc|CAN_destroyers_2
+	}
+	text = {
+		trigger = { NOT = { has_idea = CAN_destroyer has_idea = CAN_destroyers_1 has_idea = CAN_destroyers_2 } }
+		localization_key = ""
+	}
+	
+}

@@ -69,6 +69,15 @@ mio_cat_eq_all_artillery_track = { #Includes Super Heavy Tank Chassis
 		super_heavy_tank_artillery_chassis
 	}
 }
+mio_cat_eq_all_aa_track = { #Includes Super Heavy Tank Chassis
+	equipment_type = {
+		light_tank_aa_chassis
+		medium_tank_aa_chassis
+		heavy_tank_aa_chassis
+		modern_tank_aa_chassis
+		super_heavy_tank_aa_chassis
+	}
+}
 
 
  ######  ##     ## #### ########      ######   ########   #######  ##     ## ########   ######  
@@ -122,7 +131,16 @@ mio_cat_eq_all_ships_no_convoys = { #Includes all ships except convoys
 ##        ##       ######### ##  #### ##          ##    ##  ##   ##   ##     ## ##     ## ##              ## 
 ##        ##       ##     ## ##   ### ##          ##    ##  ##    ##  ##     ## ##     ## ##        ##    ## 
 ##        ######## ##     ## ##    ## ########     ######   ##     ##  #######   #######  ##         ######  
-
+mio_cat_eq_all_planes_period = {
+	equipment_type = {
+		small_plane_airframe
+		cv_small_plane_airframe
+		medium_plane_airframe
+		large_plane_airframe
+		strat_bomber_intercontinental_equipment
+		mothership_equipment
+	}
+}
 mio_cat_eq_all_small_plane = { #Includes all Small Aircraft (Fighter, CAS, Nav) and CV versions --- Used due to custom loc capabilities
 	equipment_type = {
 		small_plane_airframe

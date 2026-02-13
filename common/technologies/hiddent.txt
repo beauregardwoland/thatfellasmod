@@ -101,5 +101,18 @@ technologies = {
 			MON_self_sealing_fuel_tanks_small
 		}
 	}
-	
+	CAN_kangaroo_apcs = { #
+
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		category_vehicle_infantry = {
+			max_strength = 2
+			maximum_speed = -0.2
+		}
+	}
 }

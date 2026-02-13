@@ -98,15 +98,6 @@ joint_focus = {
 			set_variable = { commonwealth_special_forces_attack_factor = 0 }
 			set_variable = { commonwealth_army_armor = 0 }
 			set_variable = { commonwealth_army_armor2 = 0 }
-			add_dynamic_modifier = {
-				modifier = commonwealth_army_modifier
-			}
-			add_dynamic_modifier = {
-				modifier = commonwealth_air_modifier
-			}
-			add_dynamic_modifier = {
-				modifier = commonwealth_naval_modifier
-			}
 		}
 		every_core_state = {
 			limit = {
@@ -138,15 +129,6 @@ joint_focus = {
 			set_variable = { commonwealth_special_forces_attack_factor = 0 }
 			set_variable = { commonwealth_army_armor = 0 }
 			set_variable = { commonwealth_army_armor2 = 0 }
-			add_dynamic_modifier = {
-				modifier = commonwealth_army_modifier
-			}
-			add_dynamic_modifier = {
-				modifier = commonwealth_air_modifier
-			}
-			add_dynamic_modifier = {
-				modifier = commonwealth_naval_modifier
-			}
 		}
 		every_core_state = {
 			limit = {
