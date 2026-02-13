@@ -29669,7 +29669,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_war_with_major = yes
+			#has_war_with_major = yes
 		}
 
 		bypass = {
@@ -29715,7 +29715,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_war_with_major = yes
+			#has_war_with_major = yes
 		}
 
 		bypass = {
@@ -29756,7 +29756,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_war_with_major = yes
+			#has_war_with_major = yes
 			JAP_army_faction_is_at_least_influential = yes
 		}
 
@@ -30605,7 +30605,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_war_with_major = yes
+			#has_war_with_major = yes
 		}
 
 		bypass = {
@@ -31939,12 +31939,12 @@ focus_tree = {
 		}
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = JAP_expand_hiratsuka_navy_arsenal_tt
-				NOT = {
-					has_idea = MTG_naval_treaty_adherent
-				}
-			}
+			#custom_trigger_tooltip = {
+			#	tooltip = JAP_expand_hiratsuka_navy_arsenal_tt
+			#	NOT = {
+			#		has_idea = MTG_naval_treaty_adherent
+			#	}
+			#}
 		}
 
 		bypass = {
@@ -31987,12 +31987,12 @@ focus_tree = {
 		}
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = JAP_expand_hiratsuka_navy_arsenal_tt
-				NOT = {
-					has_idea = MTG_naval_treaty_adherent
-				}
-			}
+			#custom_trigger_tooltip = {
+			#	tooltip = JAP_expand_hiratsuka_navy_arsenal_tt
+			#	NOT = {
+			#		has_idea = MTG_naval_treaty_adherent
+			#	}
+			#}
 		}
 
 		bypass = {
@@ -32408,7 +32408,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_war_with_major = yes
+			#has_war_with_major = yes
 			JAP_naval_faction_is_at_least_influential = yes
 		}
 
@@ -32460,7 +32460,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_war_with_major = yes
+			#has_war_with_mjaor = yes
 			JAP_naval_faction_is_at_least_influential = yes
 		}
 
@@ -32636,7 +32636,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_war_with_major = yes
+			#has_war_with_major = yes
 		}
 
 		bypass = {
