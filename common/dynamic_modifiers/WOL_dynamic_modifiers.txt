@@ -44,6 +44,10 @@ commonwealth_air_modifier = { #NATIONAL SPIRIT
 	air_training_xp_gain_factor = commonwealth_air_training_xp_gain_factor
 	production_factory_max_efficiency_factor = commonwealth_production_factory_max_efficiency_factor
 	custom_modifier_tooltip = CAN_lancastors_tt
+	air_agility_factor = commonwealth_air_agility_factor
+	naval_strike_targetting_factor = commonwealth_naval_strike_targetting_factor
+	strategic_bomb_visibility = commonwealth_strategic_bomb_visibility
+
 }
 
 commonwealth_army_modifier = { #NATIONAL SPIRIT
@@ -112,7 +116,7 @@ ROM_agrarian_refor = { #NATIONAL SPIRIT
 cont_axis_eco = { #NATIONAL SPIRIT
 	enable = { always = yes }
 
-	icon = generic_fascism_drift_2
+	icon = GFX_idea_ARG_economic_reactivation
 	industrial_capacity_factory = cont_axis_eco_1
 	production_factory_max_efficiency_factor = cont_axis_eco_2
 	production_factory_efficiency_gain_factor = cont_axis_eco_3
@@ -122,7 +126,7 @@ cont_axis_eco = { #NATIONAL SPIRIT
 }
 cont_axis_army = {
 	enable = { always = yes }
-	icon = ITA_bandits_war
+	icon = GFX_idea_generic_fascism_drift_2
 	
 	conscription = cont_axis_army_1
 	conscription_factor = cont_axis_army_2

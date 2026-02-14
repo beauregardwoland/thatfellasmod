@@ -586,7 +586,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_industrial_expansion
-		cost = 10
+		cost = 5
 		available = {
 			42 = {
 				is_fully_controlled_by = ROOT
@@ -670,7 +670,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_industrial_expansion
-		cost = 10
+		cost = 5
 		available = {
 			has_tech = advanced_machine_tools
 		}
@@ -795,7 +795,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_invest_in_vereinigte_stahlwerke
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -858,7 +858,7 @@ focus_tree = {
 		x =-1
 		y = 1
 		relative_position_id = GER_wirtschaftswunder
-		cost = 10
+		cost = 5
 		available = {
 			OR = {
 				has_war = yes
@@ -914,7 +914,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_wirtschaftswunder
-		cost = 10
+		cost = 5
 		available = {
 			OR = {
 				has_war = yes
@@ -971,7 +971,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_mass_production
-		cost = 10
+		cost = 5
 		available = {
 			has_war_with_major = yes
 		}
@@ -3544,7 +3544,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_instill_auftragstaktik
-		cost = 5
+		cost = 4
 		available = {
 			OR = {
 				AND = {
@@ -3663,7 +3663,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_instill_auftragstaktik
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -4169,7 +4169,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_improve_the_logistics_system
-		cost = 5
+		cost = 4
 		available = {
 			has_war_with_major = yes
 		}
@@ -5540,7 +5540,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_form_the_jagdwaffe
-		cost = 10
+		cost = 5
 		available = {
 			GER_hermann_goring = {
 				is_air_chief = no
@@ -5587,7 +5587,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = GER_reorganize_the_luftwaffe
-		cost = 10
+		cost = 5
 		available = {
 			GER_hermann_goring = {
 				is_air_chief = no
@@ -6030,7 +6030,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_torpedobomber
-		cost = 10
+		cost = 4
 		available = {
 		}
 
@@ -6058,13 +6058,12 @@ focus_tree = {
 	focus = {
 		id = GER_aerodynamic_research_institute
 		icon = GFX_focus_generic_aircraft_production
-		prerequisite = { focus = GER_solve_the_logistical_bottlenecks focus = GER_construct_the_kammhuber_line focus = GER_establish_night_fighter_squadrons}
-		prerequisite = { focus = GER_rocketry_innovations }
+		prerequisite = { focus = GER_rocketry_innovations focus = GER_solve_the_logistical_bottlenecks focus = GER_construct_the_kammhuber_line focus = GER_establish_night_fighter_squadrons}
 
 		x = 0
 		y = 2
 		relative_position_id = GER_solve_the_logistical_bottlenecks
-		cost = 5
+		cost = 4
 		available = {
 		}
 
@@ -6180,7 +6179,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_aerodynamic_research_institute
-		cost = 10
+		cost = 4
 
 		continue_if_invalid = yes
 		cancel_if_invalid = no
@@ -6267,7 +6266,7 @@ focus_tree = {
 		x = 12
 		y = 0
 		relative_position_id = GER_expanding_the_luftwaffe
-		cost = 2
+		cost = 1
 		available = {
 		}
 
@@ -6305,7 +6304,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_strengthen_the_kriegsmarine
-		cost = 5
+		cost = 3
 		available = {
 			OR = {
 				NOT = { has_completed_focus = GER_trade_interdiction }
@@ -6360,7 +6359,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_plan_z
-		cost = 10
+		cost = 4
 		available = {
 			#NOT = { has_completed_focus = GER_high_seas_fleet }
 		}
@@ -6452,7 +6451,7 @@ focus_tree = {
 					}
 					name = "Bismarck"
 					requested_factories = 1
-					progress = 0.3
+					progress = 0.7
 					amount = 1
 					industrial_manufacturer = mio:GER_germaniawerft_organization
 				}
@@ -6464,7 +6463,7 @@ focus_tree = {
 					}
 					name = "Tirpitz"
 					requested_factories = 1
-					progress = 0.15
+					progress = 0.7
 					amount = 1
 					industrial_manufacturer = mio:GER_germaniawerft_organization
 				}
@@ -6505,7 +6504,7 @@ focus_tree = {
 					}
 					name = "Bismarck"
 					requested_factories = 1
-					progress = 0.3
+					progress = 0.7
 					amount = 1
 					industrial_manufacturer = mio:GER_germaniawerft_organization
 				}
@@ -6517,7 +6516,7 @@ focus_tree = {
 					}
 					name = "Tirpitz"
 					requested_factories = 1
-					progress = 0.15
+					progress = 0.7
 					amount = 1
 					industrial_manufacturer = mio:GER_germaniawerft_organization
 				}
@@ -6558,7 +6557,7 @@ focus_tree = {
 					}
 					name = "Bismarck"
 					requested_factories = 1
-					progress = 0.3
+					progress = 0.7
 					amount = 1
 					industrial_manufacturer = mio:GER_germaniawerft_organization
 				}
@@ -6570,7 +6569,7 @@ focus_tree = {
 					}
 					name = "Tirpitz"
 					requested_factories = 1
-					progress = 0.15
+					progress = 0.7
 					amount = 1
 					industrial_manufacturer = mio:GER_germaniawerft_organization
 				}
@@ -6611,7 +6610,7 @@ focus_tree = {
 					}
 					name = "Bismarck"
 					requested_factories = 1
-					progress = 0.3
+					progress = 0.7
 					amount = 1
 					industrial_manufacturer = mio:GER_germaniawerft_organization
 				}
@@ -6623,7 +6622,7 @@ focus_tree = {
 					}
 					name = "Tirpitz"
 					requested_factories = 1
-					progress = 0.15
+					progress = 0.7
 					amount = 1
 					industrial_manufacturer = mio:GER_germaniawerft_organization
 				}
@@ -6674,7 +6673,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_expand_kriegsmarinewerft
-		cost = 5
+		cost = 4
 		available = {
 			IF = {
 				limit = {
@@ -6773,7 +6772,7 @@ focus_tree = {
 						}
 						name = "Graf Zeppelin"
 						requested_factories = 1
-						progress = 0.3
+						progress = 0.7
 						amount = 1
 						industrial_manufacturer = mio:GER_deutsche_werke_organization
 					}
@@ -6807,7 +6806,7 @@ focus_tree = {
 						}
 						name = "Graf Zeppelin"
 						requested_factories = 1
-						progress = 0.3
+						progress = 0.7
 						amount = 1
 						industrial_manufacturer = mio:GER_deutsche_werke_organization
 					}
@@ -6839,7 +6838,7 @@ focus_tree = {
 						}
 						name = "Graf Zeppelin"
 						requested_factories = 1
-						progress = 0.3
+						progress = 0.7
 						amount = 1
 						industrial_manufacturer = mio:GER_deutsche_werke_organization
 					}
@@ -6891,7 +6890,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_expand_kriegsmarinewerft
-		cost = 10
+		cost = 4
 		available = {
 			IF = {
 				limit = {
@@ -7067,7 +7066,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_construct_aircraft_carriers
-		cost = 10
+		cost = 4
 		available = {
 		}
 
@@ -7142,7 +7141,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = GER_strengthen_the_kriegsmarine
-		cost = 5
+		cost = 3
 		available = {
 		}
 
@@ -7182,7 +7181,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_re_establish_the_seekriegsleitung
-		cost = 5
+		cost = 3
 		available = {
 		}
 
@@ -7230,7 +7229,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_re_establish_the_seekriegsleitung
-		cost = 5
+		cost = 3
 		available = { #These states start out with naval bases in western France
 			14 = { #Brittany
 				state_is_fully_controlled_by_ROOT_or_subject = yes
@@ -7321,7 +7320,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_marinestosstrupp
-		cost = 10
+		cost = 3
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_controls_an_atantic_island_tt
@@ -7459,7 +7458,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_strengthen_the_kriegsmarine
-		cost = 5
+		cost = 3
 	
 		available = {
 			OR = {
@@ -7513,7 +7512,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_trade_interdiction
-		cost = 5
+		cost = 3
 		available = {
 			NOT = { has_completed_focus = GER_unrestricted_convoy_raiding }
 		}
@@ -7641,7 +7640,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_cruiser_warfare
-		cost = 5
+		cost = 3
 		available = {
 			NOT = { has_completed_focus = GER_unrestricted_convoy_raiding }
 		}
@@ -7718,7 +7717,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = GER_trade_interdiction
-		cost = 5
+		cost = 3
 		available = {
 			NOT = { has_completed_focus = GER_unrestricted_convoy_raiding }
 			has_war = yes
@@ -7897,7 +7896,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_panzerschiff_raiders
-		cost = 10
+		cost = 4
 		available = {
 		}
 
@@ -7975,7 +7974,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_atlantic_naval_dominance
 
-		cost = 5
+		cost = 2
 		available = {
 		}
 
@@ -14525,64 +14524,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_molotov_ribbentrop_pact
-
-		icon = GFX_goal_molotov_ribbentrop_pact
-		alternate_icon = GFX_focus_GER_molotov_ribbentrop_pact
-
-		prerequisite = { focus = GER_treaty_with_the_ussr }
-		#mutually_exclusive = { focus = GER_anti_soviet_pact }
-		x = 0
-		y = 1
-		relative_position_id = GER_treaty_with_the_ussr
-		cost = 2
-		
-		available = {
-			is_subject = no
-			has_government = fascism
-			has_army_manpower = { size > 849999 } #ca 90 div
-			SOV = {
-				NOT = { has_war_with = GER }
-				country_exists = SOV
-				has_civil_war = no
-			}
-			NOT = { has_global_flag = beck_ribbentrop_signed }
-		}
-
-		cancel = {
-			OR = {
-				has_war_with = SOV
-				NOT = { country_exists = SOV }
-				has_global_flag = beck_ribbentrop_signed
-			}
-		}
-
-		continue_if_invalid = yes
-
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				NOT = { has_completed_focus = GER_anti_comintern_pact }
-			}
-			modifier = {
-				factor = 2
-				has_idea = SOV_soviet_german_trade_agreement
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL }
-	
-		completion_reward = {
-			SOV = {
-				country_event = { id = germany.11 days = 1 }
-				custom_effect_tooltip = GER_mol_rib_pact_tt
-				custom_effect_tooltip = needs_approval
-			}
-		}
-	}
-
-	focus = {
 		id = GER_treaty_with_the_ussr
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = GER_reorganize_the_wehrmacht focus = GER_heed_von_neuraths_concerns}
@@ -14719,6 +14660,64 @@ focus_tree = {
 					specialization = specialization_land
 					value = 1
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_molotov_ribbentrop_pact
+
+		icon = GFX_goal_molotov_ribbentrop_pact
+		alternate_icon = GFX_focus_GER_molotov_ribbentrop_pact
+
+		prerequisite = { focus = GER_treaty_with_the_ussr }
+		#mutually_exclusive = { focus = GER_anti_soviet_pact }
+		x = 0
+		y = 1
+		relative_position_id = GER_treaty_with_the_ussr
+		cost = 2
+		
+		available = {
+			is_subject = no
+			has_government = fascism
+			has_army_manpower = { size > 849999 } #ca 90 div
+			SOV = {
+				NOT = { has_war_with = GER }
+				country_exists = SOV
+				has_civil_war = no
+			}
+			NOT = { has_global_flag = beck_ribbentrop_signed }
+		}
+
+		cancel = {
+			OR = {
+				has_war_with = SOV
+				NOT = { country_exists = SOV }
+				has_global_flag = beck_ribbentrop_signed
+			}
+		}
+
+		continue_if_invalid = yes
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = GER_anti_comintern_pact }
+			}
+			modifier = {
+				factor = 2
+				has_idea = SOV_soviet_german_trade_agreement
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL }
+	
+		completion_reward = {
+			SOV = {
+				country_event = { id = germany.11 days = 1 }
+				custom_effect_tooltip = GER_mol_rib_pact_tt
+				custom_effect_tooltip = needs_approval
 			}
 		}
 	}

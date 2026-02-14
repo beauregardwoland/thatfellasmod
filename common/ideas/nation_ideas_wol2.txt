@@ -213,7 +213,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-
+			
 			equipment_bonus = {
 				mio_cat_eq_all_destroyer = {
 					sub_detection = 0.1
@@ -222,7 +222,12 @@ ideas = {
 				}
 				mio_cat_eq_all_cruiser = {
 					hg_attack = 0.1
-					shore_bombardment = 0.15
+					#shore_bombardment = 0.15
+					instant = yes
+				}
+				mio_cat_eq_all_battleship = {
+					hg_attack = 0.1
+					#shore_bombardment = 0.15
 					instant = yes
 				}
 			}
@@ -302,30 +307,6 @@ ideas = {
 					armor_value = -0.2
 					max_strength = -0.2
 					build_cost_ic = -0.33
-					instant = yes
-				}
-			}
-		}
-		ROM_procurement_1 = {
-			allowed = {
-				always = no
-			}
-
-			picture = general_staff
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-				political_power_gain = 0.1
-				military_factory_donations = 2
-				production_factory_efficiency_gain_factor = 0.075
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					soft_attack = 0.05
-					build_cost_ic = 0.025
 					instant = yes
 				}
 			}

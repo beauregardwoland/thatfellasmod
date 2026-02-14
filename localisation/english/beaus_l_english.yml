@@ -297,6 +297,7 @@
  experience_gain_army_unit_factor_tt:0" Division Experience Gain: $RIGHT|+=%1$"
  amphibious_invasion_tt:0" $MODIFIER_AMPHIBIOUS_INVASION$: $RIGHT|+=%1$"
  navy_capital_ship_attack_factor_tt:0" $MODIFIER_NAVY_CAPITAL_SHIP_ATTACK_FACTOR$: $RIGHT|+=%1$"
+ strategic_bomb_visibility_tt:0" Strategic Bombing Visibility: $RIGHT|-=%1$"
  mio_cat_eq_all_artillery_track:0"All Self Propelled Artillery Equipment"
  mio_cat_eq_all_aa_track:0"All Self Propelled Anti-Air Equipment"
  mio_cat_eq_all_planes_period:0"All Aircraft Types"

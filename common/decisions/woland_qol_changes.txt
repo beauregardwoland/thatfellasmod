@@ -466,7 +466,7 @@ gimp_ai_category = {
 		}
 
 		allowed = {  
-			is_ai = no
+			#is_ai = no
 		}
 
 		activation = {

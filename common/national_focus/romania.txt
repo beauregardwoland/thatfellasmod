@@ -1323,84 +1323,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ROM_invest_in_the_iar
-		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = ROM_expand_the_air_force  }
-		x = 1
-		y = 1
-		relative_position_id = ROM_expand_the_air_force
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = ROM_invest_in_the_iar_AF1
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 81 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					free_building_slots = {
-						building = arms_factory
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = ROM_invest_in_the_iar_AF1
-			}
-
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = ROM_iar_organization
-				mio:ROM_iar_organization = {
-					complete_mio_trait = generic_mio_trait_heavily_armed_aircraft
-					add_mio_funds = 2500
-				}
-			}
-			else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = ROM_iar
-			}
-		}
-	}
-
-	focus = {
 		id = ROM_expand_ploiesti_oil_production
 		icon = GFX_goal_generic_oil_refinery
 		#prerequisite = { focus = ROM_invest_in_the_iar }
@@ -3247,6 +3169,84 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = ROM_invest_in_the_iar
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = ROM_expand_the_air_force  }
+		x = 1
+		y = 1
+		relative_position_id = ROM_expand_the_air_force
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = ROM_invest_in_the_iar_AF1
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 81 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ROM_invest_in_the_iar_AF1
+			}
+
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = ROM_iar_organization
+				mio:ROM_iar_organization = {
+					complete_mio_trait = generic_mio_trait_heavily_armed_aircraft
+					add_mio_funds = 2500
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = ROM_iar
+			}
+		}
+	}
+
+	focus = {
 		id = ROM_white_squadron_focus
 		icon = GFX_goal_generic_build_airforce
 		x = -1
@@ -3923,6 +3923,105 @@ focus_tree = {
 	}
 
 	focus = {
+		id = ROM_royal_guards_divisions
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = ROM_army_maneuvers }
+		x = -1
+		y = 1
+		relative_position_id = ROM_army_maneuvers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = ROM_procurement
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = ROM_royal_guards_divisions_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = tech_recon
+					}
+					division_template = {
+						name = "Royal Guards Division"
+						priority = 2
+						division_names_group = ROM_INF_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+				
+		    	   		 	infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+				
+		    	   		 	infantry = { x = 2 y = 0 }
+							artillery_brigade = { x = 3 y = 0 }
+							artillery_brigade = { x = 3 y = 1 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							recon = { x = 0 y = 1 }
+						}
+					}
+					else = {
+						division_template = {
+							name = "Royal Guards Division"
+							priority = 2
+							division_names_group = ROM_INF_01
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+					
+			    	   		 	infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								infantry = { x = 1 y = 2 }
+					
+			    	   		 	infantry = { x = 2 y = 0 }
+								artillery_brigade = { x = 3 y = 0 }
+								artillery_brigade = { x = 3 y = 1 }
+							}
+							support = {
+								engineer = { x = 0 y = 0 }
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 46 }
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = ROM
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
+						owner = ROM
+					}
+				}
+			}			
+		}
+	}
+
+	focus = {
 		id = ROM_the_zb_53
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = ROM_royal_guards_divisions }
@@ -4149,105 +4248,6 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = mountain_guns_tt
 			hidden_effect = { set_technology = { mountain_gun = 1 } }
-		}
-	}
-
-	focus = {
-		id = ROM_royal_guards_divisions
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = ROM_army_maneuvers }
-		x = -1
-		y = 1
-		relative_position_id = ROM_army_maneuvers
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 9
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = ROM_procurement
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = ROM_royal_guards_divisions_tt
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = tech_recon
-					}
-					division_template = {
-						name = "Royal Guards Division"
-						priority = 2
-						division_names_group = ROM_INF_01
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-							infantry = { x = 0 y = 3 }
-				
-		    	   		 	infantry = { x = 1 y = 0 }
-							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 }
-				
-		    	   		 	infantry = { x = 2 y = 0 }
-							artillery_brigade = { x = 3 y = 0 }
-							artillery_brigade = { x = 3 y = 1 }
-						}
-						support = {
-							engineer = { x = 0 y = 0 }
-							recon = { x = 0 y = 1 }
-						}
-					}
-					else = {
-						division_template = {
-							name = "Royal Guards Division"
-							priority = 2
-							division_names_group = ROM_INF_01
-							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								infantry = { x = 0 y = 2 }
-								infantry = { x = 0 y = 3 }
-					
-			    	   		 	infantry = { x = 1 y = 0 }
-								infantry = { x = 1 y = 1 }
-								infantry = { x = 1 y = 2 }
-					
-			    	   		 	infantry = { x = 2 y = 0 }
-								artillery_brigade = { x = 3 y = 0 }
-								artillery_brigade = { x = 3 y = 1 }
-							}
-							support = {
-								engineer = { x = 0 y = 0 }
-							}
-						}
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 46 }
-					create_unit = {
-						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
-						owner = ROM
-					}
-					create_unit = {
-						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
-						owner = ROM
-					}
-				}
-			}			
 		}
 	}
 

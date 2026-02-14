@@ -58,6 +58,21 @@ on_actions = {
 			ITA = {
 				add_ideas = woland_major_allowed_vols
 			}
+			ETH = {
+				set_technology = {
+					tech_support = 1
+				}
+			}
+			NEP = {
+				set_technology = {
+					tech_support = 1
+				}
+			}
+			ARG = {
+				set_technology = {
+					tech_support = 1
+				}
+			}
 		}
 	}
 	 on_before_peace_conference_start = {

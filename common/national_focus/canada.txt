@@ -3097,83 +3097,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CAN_habakkuk_carrier
-		icon = GFX_goal_generic_navy_carrier
-		prerequisite = { focus = CAN_escort_fleet focus = CAN_fleet_in_being }
-		x = 1
-		y = 1
-		relative_position_id = CAN_escort_fleet
-
-		cost = 4
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			#NOT = { has_country_flag = britain_enforced_our_loyalty }
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-
-			add_breakthrough_progress = {
-				specialization = specialization_naval
-				value = 0.5
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					has_dlc = "Gotterdammerung"
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					add_ideas = habakkuk_carriers_ns_mtg
-					custom_effect_tooltip = generic_skip_one_line_tt
-					
-					add_tech_bonus = {
-						name = CAN_habakkuk_carrier
-						bonus = 0.5
-						uses = 1 
-						category = pykrete_tech
-					}
-				}
-				else = {
-					add_ideas = habakkuk_carriers_ns
-					custom_effect_tooltip = generic_skip_one_line_tt
-				}
-
-				add_tech_bonus = {
-					name = CAN_habakkuk_carrier
-					bonus = 1.0
-					uses = 1
-					category = cv_tech
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = CAN_habakkuk_carrier
-					bonus = 1.0
-					uses = 2
-					category = cv_tech
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = CAN_refuge_for_scientists
 		icon = GFX_goal_tfv_generic_tech_sharing
 		prerequisite = { focus = CAN_north_american_alliance }
@@ -5469,6 +5392,83 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = CAN_trade_fleet			
+		}
+	}
+	
+	focus = {
+		id = CAN_habakkuk_carrier
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = CAN_escort_fleet focus = CAN_fleet_in_being }
+		x = 1
+		y = 1
+		relative_position_id = CAN_escort_fleet
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			#NOT = { has_country_flag = britain_enforced_our_loyalty }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.5
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					add_ideas = habakkuk_carriers_ns_mtg
+					custom_effect_tooltip = generic_skip_one_line_tt
+					
+					add_tech_bonus = {
+						name = CAN_habakkuk_carrier
+						bonus = 0.5
+						uses = 1 
+						category = pykrete_tech
+					}
+				}
+				else = {
+					add_ideas = habakkuk_carriers_ns
+					custom_effect_tooltip = generic_skip_one_line_tt
+				}
+
+				add_tech_bonus = {
+					name = CAN_habakkuk_carrier
+					bonus = 1.0
+					uses = 1
+					category = cv_tech
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = CAN_habakkuk_carrier
+					bonus = 1.0
+					uses = 2
+					category = cv_tech
+				}
+			}
 		}
 	}
 

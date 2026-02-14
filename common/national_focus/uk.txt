@@ -260,138 +260,6 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
-		id = ENG_motorized_focus
-		prerequisite = { focus = ENG_wol_land_rearmament }
-		available = { 
-			or = {
-				has_completed_focus = ENG_wol_army_bef_one
-				has_completed_focus = ENG_wol_army_mass_one
-			}			
-		}
-		icon = GFX_goal_generic_army_motorized
-		x = 0
-		y = 2
-		relative_position_id = ENG_wol_land_rearmament
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 1.0
-				uses = 1
-				category = motorized_equipment
-			}
-			hidden_effect = {
-				if = {
-					limit = { has_completed_focus = ENG_wol_army_bef_one }
-					add_to_variable = {
-						commonwealth_army_mobile_infantry_org_factor = 0.05
-						tooltip = modifier_army_sub_unit_category_mobile_infantry_max_org_factor_tt
-					}
-				}
-				else = {
-					add_to_variable = {
-						commonwealth_supply_node_range = 0.075
-						tooltip = supply_node_range_tt
-					}
-				}
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = {
-				localization_key = tooltip_if_focus_completed
-				FOCUS = ENG_wol_army_bef_one
-			}
-			effect_tooltip = {
-				custom_effect_tooltip = modify_commonwealth_spirit_army
-				add_to_variable = {
-					commonwealth_army_mobile_infantry_org_factor = 0.05
-					tooltip = modifier_army_sub_unit_category_mobile_infantry_max_org_factor_tt
-				}
-			}
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = {
-				localization_key = tooltip_if_focus_completed
-				FOCUS = ENG_wol_army_mass_one
-			}
-			effect_tooltip = {
-				custom_effect_tooltip = modify_commonwealth_spirit_army
-				add_to_variable = {
-					commonwealth_supply_node_range = 0.075
-					tooltip = supply_node_range_tt
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = ENG_tank_focus
-		prerequisite = { focus = ENG_motorized_focus }
-		icon = GFX_goal_generic_army_tanks
-		x = -1
-		y = 2
-		relative_position_id = ENG_motorized_focus
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		available_if_capitulated = yes
-		
-		completion_reward = {
-			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 1.0
-				uses = 1
-				category = armor
-			}
-			hidden_effect = {
-				if = {
-					limit = { has_completed_focus = ENG_wol_army_bef_one }
-					add_to_variable = {
-						commonwealth_coordination_bonus = 0.025
-						tooltip = modifier_army_sub_unit_category_mobile_infantry_max_org_factor_tt
-					}
-				}
-				else = {
-					add_to_variable = {
-						commonwealth_org_loss_when_moving = -0.075
-						tooltip = supply_node_range_tt
-					}
-				}
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = {
-				localization_key = tooltip_if_focus_completed
-				FOCUS = ENG_wol_army_bef_one
-			}
-			effect_tooltip = {
-				custom_effect_tooltip = modify_commonwealth_spirit_army
-				add_to_variable = {
-					commonwealth_coordination_bonus = 0.025
-					tooltip = coordination_bonus_tt
-				}
-			}
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = {
-				localization_key = tooltip_if_focus_completed
-				FOCUS = ENG_wol_army_mass_one
-			}
-			effect_tooltip = {
-				custom_effect_tooltip = modify_commonwealth_spirit_army
-				add_to_variable = {
-					commonwealth_org_loss_when_moving = -0.075
-					tooltip = org_loss_when_moving_tt
-				}
-			}
-		}
-	}
 	
 	focus = {
 		id = ENG_expand_the_secret_intelligence_service_focus 
@@ -954,67 +822,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = ENG_special_air_service
-		prerequisite = { focus = air_rearmament_focus }
-		available = { 
-			
-		}
-
-		continue_if_invalid = yes
-
-		icon = GFX_focus_eng_special_air_service
-		x = -2
-		y = 1
-		relative_position_id = air_rearmament_focus
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}	
-		completion_reward = {
-			if = {
-				limit = { has_idea = wol_eng_spec_forces_2 }
-				swap_ideas = {
-					remove_idea = wol_eng_spec_forces_2
-					add_idea = wol_eng_spec_forces_3
-				}
-			}
-			else = {
-				add_ideas = wol_eng_spec_forces_1
-			}
-			#add_ideas = ENG_special_air_service_idea
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = ENG_david_stirling
-		}
-	}
 	
-	focus = {
-		id = ENG_parachute_regiments
-		prerequisite = { focus = ENG_special_air_service }
-		allow_branch = {
-			has_dlc = "Arms Against Tyranny"
-		}
-		continue_if_invalid = yes
-
-		icon = GFX_focus_generic_paratrooper
-		x = 0
-		y = 2
-		relative_position_id = ENG_special_air_service
-		cost = 3
-		ai_will_do = {
-			factor = 1
-		}	
-		completion_reward = {
-			add_potential_special_forces_tree = yes
-			add_doctrine_cost_reduction = {
-				name = ENG_parachute_regiments
-				cost_reduction = 0.25
-				uses = 2
-				category = special_forces_doctrine
-			}
-		}
-	}
 	
 	focus = {
 		id = royal_ordinance_focus
@@ -1159,7 +967,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = royal_ordinance_focus
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 1
 		}
@@ -1191,7 +999,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = general_rearmament_focus
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 3
 		}
@@ -1394,6 +1202,68 @@ focus_tree = {
 	}
 
 	focus = {
+		id = ENG_special_air_service
+		prerequisite = { focus = air_rearmament_focus }
+		available = { 
+			
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_eng_special_air_service
+		x = -2
+		y = 1
+		relative_position_id = air_rearmament_focus
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			if = {
+				limit = { has_idea = wol_eng_spec_forces_2 }
+				swap_ideas = {
+					remove_idea = wol_eng_spec_forces_2
+					add_idea = wol_eng_spec_forces_3
+				}
+			}
+			else = {
+				add_ideas = wol_eng_spec_forces_1
+			}
+			#add_ideas = ENG_special_air_service_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = ENG_david_stirling
+		}
+	}
+	
+	focus = {
+		id = ENG_parachute_regiments
+		prerequisite = { focus = ENG_special_air_service }
+		allow_branch = {
+			has_dlc = "Arms Against Tyranny"
+		}
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_paratrooper
+		x = 0
+		y = 2
+		relative_position_id = ENG_special_air_service
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_potential_special_forces_tree = yes
+			add_doctrine_cost_reduction = {
+				name = ENG_parachute_regiments
+				cost_reduction = 0.25
+				uses = 2
+				category = special_forces_doctrine
+			}
+		}
+	}
+
+	focus = {
 		id = ENG_chiefs_of_staff_committee
 		prerequisite = { focus = air_rearmament_focus }
 		prerequisite = { focus = naval_rearmament_focus }
@@ -1444,6 +1314,19 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			custom_effect_tooltip = modify_commonwealth_spirit_air
+			set_variable = {
+				var = commonwealth_air_agility_factor
+				value = 0.05
+				tooltip = air_agility_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_mastery_bonus = {
+				name = JAP_reform_the_army
+				track = fighter_aircraft
+				bonus = 0.05
+				days = 365
+			}
 			if = {
 				limit = {
 					NOT = { has_dlc = "By Blood Alone" }
@@ -1493,6 +1376,19 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			custom_effect_tooltip = modify_commonwealth_spirit_air
+			set_variable = {
+				var = commonwealth_strategic_bomb_visibility
+				value = -0.075
+				tooltip = strategic_bomb_visibility_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_mastery_bonus = {
+				name = JAP_reform_the_army
+				track = heavy_aircraft
+				bonus = 0.05
+				days = 365
+			}
 			if = {
 				limit = {
 					NOT = { has_dlc = "By Blood Alone" }
@@ -1542,6 +1438,19 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			custom_effect_tooltip = modify_commonwealth_spirit_air
+			set_variable = {
+				var = commonwealth_naval_strike_targetting_factor
+				value = 0.075
+				tooltip = naval_strike_targetting_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_mastery_bonus = {
+				name = JAP_reform_the_army
+				track = medium_aircraft
+				bonus = 0.05
+				days = 365
+			}
 			if = {
 				limit = {
 					NOT = { has_dlc = "By Blood Alone" }
@@ -1769,8 +1678,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_secure_the_imperial_shipping_routes
-		prerequisite = { focus = naval_rearmament_focus }
-		prerequisite = { focus = uk_service_focus }
+		prerequisite = { focus = naval_rearmament_focus focus = uk_service_focus }
 		icon = GFX_focus_generic_cruiser2
 		x = 4
 		y = 2
@@ -1782,7 +1690,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = naval_rearmament_focus
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}
@@ -13319,6 +13227,413 @@ focus_tree = {
 			add_ideas = ENG_spirit_of_the_industrial_revolution_idea
 		}
 	}
+	
+	focus = {
+		id = ENG_wol_land_rearmament
+		prerequisite = { focus = general_rearmament_focus }
+		icon = GFX_focus_SWE_defense_act
+		x = -7
+		y = 1
+		relative_position_id = general_rearmament_focus
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		available_if_capitulated = yes
+		available = {
+			threat > 0.15
+		}
+		
+		completion_reward = {
+			army_experience = 25
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 3
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_wol_army_bef_one
+		mutually_exclusive = { focus = ENG_wol_army_mass_one }
+		prerequisite = { focus = ENG_wol_land_rearmament }
+		icon = GFX_focus_generic_military_mission
+		x = 3
+		y = 1
+		relative_position_id = ENG_wol_land_rearmament
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_mastery_bonus = {
+				bonus = 0.15
+				days = 365
+				track = armor
+				name = JAP_reform_the_army
+			}
+			add_mastery_bonus = {
+				bonus = 0.15
+				days = 365
+				track = operations
+				name = JAP_reform_the_army
+			}
+			army_experience = 25
+			add_tech_bonus = {
+				name = GER_establish_the_skijager
+				bonus = 0.75
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = ENG_wol_army_bef_two
+		prerequisite = { focus = ENG_wol_army_bef_one }
+		icon = GFX_focus_RAJ_tea_exports
+		x = -1
+		y = 2
+		relative_position_id = ENG_wol_army_bef_one
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			army_experience = 25
+			custom_effect_tooltip = modify_commonwealth_spirit_army
+			set_variable = {
+				var = commonwealth_army_org_factor
+				value = 0.05
+				tooltip = army_org_factor_tt
+			}
+		}
+	}
+	focus = {
+		id = ENG_wol_army_bef_three
+		prerequisite = { focus = ENG_wol_army_bef_one }
+		icon = GFX_focus_RAJ_indian_gurkhas
+		x = 1
+		y = 2
+		relative_position_id = ENG_wol_army_bef_one
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			custom_effect_tooltip = modify_commonwealth_spirit_army
+			add_to_variable = {
+				commonwealth_special_forces_attack_factor = 0.05
+				tooltip = special_forces_attack_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_doctrine_cost_reduction = {
+				name = GER_establish_the_skijager
+				cost_reduction = 0.25
+				uses = 2
+				category = cat_mountaineers_doctrine
+			}
+			add_tech_bonus = {
+				name = GER_establish_the_skijager
+				bonus = 0.75
+				uses = 1
+				category = mountaineers_tech
+			}
+		}
+	}
+	focus = {
+		id = ENG_wol_army_bef_four
+		prerequisite = { focus = ENG_wol_army_bef_three }
+		prerequisite = { focus = ENG_wol_army_bef_two }
+		icon = GFX_focus_SWE_defense_act
+		x = 1
+		y = 1
+		relative_position_id = ENG_wol_army_bef_two
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		allow_branch = {
+			always = no
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			army_experience = 25
+			
+		}
+	}
+
+	focus = {
+		id = ENG_wol_army_mass_one
+		mutually_exclusive = { focus = ENG_wol_army_bef_one }
+		prerequisite = { focus = ENG_wol_land_rearmament }
+		icon = GFX_focus_generic_limited_social_mobilization
+		x = -3
+		y = 1
+		relative_position_id = ENG_wol_land_rearmament
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_mastery_bonus = {
+				bonus = 0.15
+				days = 365
+				track = infantry
+				name = JAP_reform_the_army
+			}
+			add_mastery_bonus = {
+				bonus = 0.15
+				days = 365
+				track = combat_support
+				name = JAP_reform_the_army
+			}
+			army_experience = 25
+			add_tech_bonus = {
+				name = GER_establish_the_skijager
+				bonus = 0.75
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = ENG_wol_army_mass_two
+		prerequisite = { focus = ENG_wol_army_mass_one }
+		icon = GFX_focus_RAJ_british_investors
+		x = 1
+		y = 2
+		relative_position_id = ENG_wol_army_mass_one
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			custom_effect_tooltip = modify_commonwealth_spirit_army
+			add_to_variable = {
+				commonwealth_conscription_factor = 0.15
+				tooltip = conscription_factor_tt
+			}
+			RAJ = {
+				custom_effect_tooltip = modify_commonwealth_spirit_army
+				add_to_variable = {
+					commonwealth_conscription_factor = -0.15
+					tooltip = conscription_factor_tt
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_wol_army_mass_three
+		prerequisite = { focus = ENG_wol_army_mass_one }
+		icon = GFX_focus_SWE_rations
+		x = -1
+		y = 2
+		relative_position_id = ENG_wol_army_mass_one
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			custom_effect_tooltip = modify_commonwealth_spirit_army
+			add_to_variable = {
+				commonwealth_experience_loss_factor = -0.15
+				tooltip = experience_loss_factor_tt
+			}
+			add_to_variable = {
+				commonwealth_monthly_population = 0.33
+				tooltip = monthly_population_tt
+			}
+		}
+	}
+	focus = {
+		id = ENG_wol_army_mass_four
+		prerequisite = { focus = ENG_wol_army_mass_three }
+		prerequisite = { focus = ENG_wol_army_mass_two }
+		icon = GFX_focus_SWE_defense_act
+		x = -1
+		y = 1
+		relative_position_id = ENG_wol_army_mass_two
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		allow_branch = {
+			always = no
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			army_experience = 25
+			
+		}
+	}
+
+	focus = {
+		id = ENG_motorized_focus
+		prerequisite = { focus = ENG_wol_land_rearmament }
+		available = { 
+			or = {
+				has_completed_focus = ENG_wol_army_bef_one
+				has_completed_focus = ENG_wol_army_mass_one
+			}			
+		}
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 2
+		relative_position_id = ENG_wol_land_rearmament
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = motorized_equipment
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_completed_focus = ENG_wol_army_bef_one }
+					add_to_variable = {
+						commonwealth_army_mobile_infantry_org_factor = 0.05
+						tooltip = modifier_army_sub_unit_category_mobile_infantry_max_org_factor_tt
+					}
+				}
+				else = {
+					add_to_variable = {
+						commonwealth_supply_node_range = 0.075
+						tooltip = supply_node_range_tt
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_if_focus_completed
+				FOCUS = ENG_wol_army_bef_one
+			}
+			effect_tooltip = {
+				custom_effect_tooltip = modify_commonwealth_spirit_army
+				add_to_variable = {
+					commonwealth_army_mobile_infantry_org_factor = 0.05
+					tooltip = modifier_army_sub_unit_category_mobile_infantry_max_org_factor_tt
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = {
+				localization_key = tooltip_if_focus_completed
+				FOCUS = ENG_wol_army_mass_one
+			}
+			effect_tooltip = {
+				custom_effect_tooltip = modify_commonwealth_spirit_army
+				add_to_variable = {
+					commonwealth_supply_node_range = 0.075
+					tooltip = supply_node_range_tt
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_tank_focus
+		prerequisite = { focus = ENG_motorized_focus }
+		icon = GFX_goal_generic_army_tanks
+		x = -1
+		y = 2
+		relative_position_id = ENG_motorized_focus
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_completed_focus = ENG_wol_army_bef_one }
+					add_to_variable = {
+						commonwealth_coordination_bonus = 0.025
+						tooltip = modifier_army_sub_unit_category_mobile_infantry_max_org_factor_tt
+					}
+				}
+				else = {
+					add_to_variable = {
+						commonwealth_org_loss_when_moving = -0.075
+						tooltip = supply_node_range_tt
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_if_focus_completed
+				FOCUS = ENG_wol_army_bef_one
+			}
+			effect_tooltip = {
+				custom_effect_tooltip = modify_commonwealth_spirit_army
+				add_to_variable = {
+					commonwealth_coordination_bonus = 0.025
+					tooltip = coordination_bonus_tt
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = {
+				localization_key = tooltip_if_focus_completed
+				FOCUS = ENG_wol_army_mass_one
+			}
+			effect_tooltip = {
+				custom_effect_tooltip = modify_commonwealth_spirit_army
+				add_to_variable = {
+					commonwealth_org_loss_when_moving = -0.075
+					tooltip = org_loss_when_moving_tt
+				}
+			}
+		}
+	}
+
 	focus = {
 		id = ENG_tank_focus_one
 		prerequisite = { focus = ENG_motorized_focus }
@@ -13413,255 +13728,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = ENG_wol_land_rearmament
-		prerequisite = { focus = general_rearmament_focus }
-		icon = GFX_focus_SWE_defense_act
-		x = -7
-		y = 1
-		relative_position_id = general_rearmament_focus
-		cost = 3
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		available_if_capitulated = yes
-		available = {
-			threat > 0.15
-		}
-		
-		completion_reward = {
-			army_experience = 25
-			every_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				random_select_amount = 3
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = ENG_wol_army_bef_one
-		mutually_exclusive = { focus = ENG_wol_army_mass_one }
-		prerequisite = { focus = ENG_wol_land_rearmament }
-		icon = GFX_focus_generic_military_mission
-		x = 3
-		y = 1
-		relative_position_id = ENG_wol_land_rearmament
-		cost = 4
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		available_if_capitulated = yes
-		
-		completion_reward = {
-			army_experience = 25
-			add_tech_bonus = {
-				name = GER_establish_the_skijager
-				bonus = 0.75
-				uses = 1
-				category = land_doctrine
-			}
-		}
-	}
-	focus = {
-		id = ENG_wol_army_bef_two
-		prerequisite = { focus = ENG_wol_army_bef_one }
-		icon = GFX_focus_RAJ_tea_exports
-		x = -1
-		y = 2
-		relative_position_id = ENG_wol_army_bef_one
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		available_if_capitulated = yes
-		
-		completion_reward = {
-			army_experience = 25
-			custom_effect_tooltip = modify_commonwealth_spirit_army
-			set_variable = {
-				var = commonwealth_army_org_factor
-				value = 0.05
-				tooltip = army_org_factor_tt
-			}
-		}
-	}
-	focus = {
-		id = ENG_wol_army_bef_three
-		prerequisite = { focus = ENG_wol_army_bef_one }
-		icon = GFX_focus_RAJ_indian_gurkhas
-		x = 1
-		y = 2
-		relative_position_id = ENG_wol_army_bef_one
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		available_if_capitulated = yes
-		
-		completion_reward = {
-			custom_effect_tooltip = modify_commonwealth_spirit_army
-			add_to_variable = {
-				special_forces_cap = 0.075
-				tooltip = special_forces_cap_tt
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_doctrine_cost_reduction = {
-				name = GER_establish_the_skijager
-				cost_reduction = 0.25
-				uses = 2
-				category = cat_mountaineers_doctrine
-			}
-			add_tech_bonus = {
-				name = GER_establish_the_skijager
-				bonus = 0.75
-				uses = 1
-				category = mountaineers_tech
-			}
-		}
-	}
-	focus = {
-		id = ENG_wol_army_bef_four
-		prerequisite = { focus = ENG_wol_army_bef_three }
-		prerequisite = { focus = ENG_wol_army_bef_two }
-		icon = GFX_focus_SWE_defense_act
-		x = 1
-		y = 1
-		relative_position_id = ENG_wol_army_bef_two
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		allow_branch = {
-			always = no
-		}
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		available_if_capitulated = yes
-		
-		completion_reward = {
-			army_experience = 25
-			
-		}
-	}
 
-	focus = {
-		id = ENG_wol_army_mass_one
-		mutually_exclusive = { focus = ENG_wol_army_bef_one }
-		prerequisite = { focus = ENG_wol_land_rearmament }
-		icon = GFX_focus_generic_limited_social_mobilization
-		x = -3
-		y = 1
-		relative_position_id = ENG_wol_land_rearmament
-		cost = 4
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		available_if_capitulated = yes
-		
-		completion_reward = {
-			army_experience = 25
-			add_tech_bonus = {
-				name = GER_establish_the_skijager
-				bonus = 0.75
-				uses = 1
-				category = land_doctrine
-			}
-		}
-	}
-	focus = {
-		id = ENG_wol_army_mass_two
-		prerequisite = { focus = ENG_wol_army_mass_one }
-		icon = GFX_focus_RAJ_british_investors
-		x = 1
-		y = 2
-		relative_position_id = ENG_wol_army_mass_one
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		available_if_capitulated = yes
-		
-		completion_reward = {
-			custom_effect_tooltip = modify_commonwealth_spirit_army
-			add_to_variable = {
-				commonwealth_conscription_factor = 0.15
-				tooltip = conscription_factor_tt
-			}
-			RAJ = {
-				custom_effect_tooltip = modify_commonwealth_spirit_army
-				add_to_variable = {
-					commonwealth_conscription_factor = -0.15
-					tooltip = conscription_factor_tt
-				}
-			}
-		}
-	}
-	focus = {
-		id = ENG_wol_army_mass_three
-		prerequisite = { focus = ENG_wol_army_mass_one }
-		icon = GFX_focus_SWE_rations
-		x = -1
-		y = 2
-		relative_position_id = ENG_wol_army_mass_one
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		available_if_capitulated = yes
-		
-		completion_reward = {
-			custom_effect_tooltip = modify_commonwealth_spirit_army
-			add_to_variable = {
-				commonwealth_experience_loss_factor = -0.15
-				tooltip = experience_loss_factor_tt
-			}
-			add_to_variable = {
-				commonwealth_monthly_population = 0.33
-				tooltip = monthly_population_tt
-			}
-		}
-	}
-	focus = {
-		id = ENG_wol_army_mass_four
-		prerequisite = { focus = ENG_wol_army_mass_three }
-		prerequisite = { focus = ENG_wol_army_mass_two }
-		icon = GFX_focus_SWE_defense_act
-		x = -1
-		y = 1
-		relative_position_id = ENG_wol_army_mass_two
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		allow_branch = {
-			always = no
-		}
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		available_if_capitulated = yes
-		
-		completion_reward = {
-			army_experience = 25
-			
-		}
-	}
 	focus = {
 		id = ENG_support_spa 
 
