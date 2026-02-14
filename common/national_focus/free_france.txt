@@ -57,6 +57,12 @@
 			every_owned_state = {
 				add_compliance = 15
 			}
+			set_capital = {
+				state = 779
+			}
+			779 = {
+				add_core_of = ROOT
+			}
 		}
 	}
 	focus = {

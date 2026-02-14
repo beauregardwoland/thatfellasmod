@@ -227,5 +227,439 @@ ideas = {
 				}
 			}
 		}
+		ROM_navy_1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				dockyard_donations = 1
+			}
+			
+		}
+		ROM_navy_2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_dockyard = 0.15
+			}
+			
+		}
+		ROM_navy_21 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				dockyard_donations = 3
+			}
+			equipment_bonus = {
+				mio_cat_eq_all_cruiser = {
+					armor_value = 0.2
+					build_cost_ic = -0.2
+					instant = yes
+				}
+			}
+		}
+		ROM_navy_22 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+				shore_bombardment_bonus = 0.25
+				shore_bombardment_collateral_damage_factor = 0.2
+			}
+			equipment_bonus = {
+				mio_cat_eq_all_battleship = {
+					armor_value = -0.2
+					max_strength = -0.2
+					build_cost_ic = -0.33
+					instant = yes
+				}
+			}
+		}
+		ROM_procurement_1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				military_factory_donations = 2
+				production_factory_efficiency_gain_factor = 0.075
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.05
+					build_cost_ic = 0.025
+					instant = yes
+				}
+			}
+		}
+		ROM_procurement = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.05
+					build_cost_ic = 0.025
+					instant = yes
+				}
+			}
+		}
+		ROM_procurement_1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				military_factory_donations = 2
+				production_factory_efficiency_gain_factor = 0.075
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.05
+					build_cost_ic = 0.025
+					instant = yes
+				}
+			}
+		}
+		ROM_procurement_2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			research_bonus = {
+				infantry_tech = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.025
+					build_cost_ic = 0.02
+					instant = yes
+				}
+			}
+		}
+		ROM_procurement_21 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				military_factory_donations = 2
+				production_factory_efficiency_gain_factor = 0.075
+			}
+			research_bonus = {
+				infantry_tech = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.05
+					build_cost_ic = 0.025
+					instant = yes
+				}
+			}
+		}
+		ROM_procurement_22 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				equipment_capture_factor = 0.2
+				production_factory_max_efficiency_factor = 0.025
+				production_factory_efficiency_gain_factor = 0.025
+			}
+			research_bonus = {
+				infantry_tech = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.05
+					build_cost_ic = 0.025
+					instant = yes
+				}
+			}
+		}
+		ROM_staffing_1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_leader_cost_factor = -0.3
+				experience_gain_factor = 0.2
+			}
+		}
+		ROM_staffing_21 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_leader_cost_factor = -0.3
+				experience_gain_factor = 0.2
+				conscription_factor = 0.075
+			}
+		}
+		ROM_staffing_22 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_leader_cost_factor = -0.3
+				experience_gain_factor = 0.2
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+		}
+		ROM_staffing_31 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_leader_cost_factor = -0.3
+				experience_gain_factor = 0.2
+				conscription_factor = 0.075
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.025
+				}
+			}
+		}
+		ROM_staffing_32 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_leader_cost_factor = -0.3
+				experience_gain_factor = 0.2
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.025
+				}
+			}
+		}
+		ROM_staffing_51 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_leader_cost_factor = -0.3
+				experience_gain_factor = 0.2
+				conscription_factor = 0.075
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.025
+					instant = yes
+				}
+				mio_cat_eq_all_tank_destroyers = {
+					hard_attack = 0.075
+					instant = yes
+				}
+			}
+		}
+		ROM_staffing_52 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_leader_cost_factor = -0.3
+				experience_gain_factor = 0.2
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.025
+					instant = yes
+				}
+				mio_cat_eq_all_tank_destroyers = {
+					hard_attack = 0.075
+					instant = yes
+				}
+			}
+		}
+		ROM_staffing_41 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_leader_cost_factor = -0.3
+				experience_gain_factor = 0.2
+				conscription_factor = 0.075
+				army_armor_defence_factor = 0.05
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.025
+					instant = yes
+				}
+				mio_cat_eq_all_tank_destroyers = {
+					hard_attack = 0.075
+					instant = yes
+				}
+			}
+		}
+		ROM_staffing_42 = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_leader_cost_factor = -0.3
+				experience_gain_factor = 0.2
+				army_armor_defence_factor = 0.05
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.025
+					instant = yes
+				}
+				mio_cat_eq_all_tank_destroyers = {
+					hard_attack = 0.075
+					instant = yes
+				}
+			}
+		}
 	}
 }

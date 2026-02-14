@@ -191,6 +191,28 @@
  CAN_tank_2:0"The Sexton"
 
 
+ ROM_scavenge_equipment:0"Develop More Refurbishing Workshops"
+ ROM_staffing_1:0"Romanian General Staff"
+ ROM_staffing_21:0"Romanian General Staff"
+ ROM_staffing_31:0"Romanian General Staff"
+ ROM_staffing_41:0"Romanian General Staff"
+ ROM_staffing_51:0"Romanian General Staff"
+ ROM_staffing_22:0"Romanian General Staff"
+ ROM_staffing_32:0"Romanian General Staff"
+ ROM_staffing_42:0"Romanian General Staff"
+ ROM_staffing_52:0"Romanian General Staff"
+ ROM_procurement:0"Procurement Department"
+ ROM_procurement_1:0"Procurement Department"
+ ROM_procurement_2:0"Procurement Department"
+ ROM_procurement_21:0"Directorate of Armaments"
+ ROM_procurement_22:0"Directorate of Armaments"
+ ROM_navy_1:0"Romanian Navy"
+ ROM_navy_2:0"Romanian Navy"
+ ROM_navy_21:0"Romanian Navy"
+ ROM_navy_22:0"Romanian Navy"
+
+
+
  ski_aircraft:0"Ski Landing Gear Development"
  CAN_kangaroo_apcs:0"Kangaroo Apcs"
  CAN_dummy_tech:0"Kangaroo Apcs"

@@ -34,7 +34,7 @@ joint_focus = {
 		}
 	}
 	offset = {
-		x = 32
+		x = 30
 		y = 5
 		trigger = {
 			tag = ROM
