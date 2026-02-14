@@ -301,6 +301,11 @@ ideas = {
 					build_cost_ic = 0.05
 					instant = yes
 				}
+				self_propelled_heavy_at_equipment = {
+					soft_attack = 1.5
+					build_cost_ic = 0.05
+					instant = yes
+				}
 			}
 		}
 		west_cap_bonus = {
