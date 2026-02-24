@@ -2534,7 +2534,7 @@ gimp_ai_category = {
 
 		available = {
 			tag = SPR
-			surrender_progress > 0.95
+			surrender_progress > 0.8
 			date < 1940.01.01
 		}
 		cost = 0
@@ -2562,6 +2562,8 @@ gimp_ai_category = {
 				idea = spain_punishm
 				days = 365
 			}
+			set_global_flag = nationalist_victory
+			set_global_flag = scw_over
 		}
 	}
 	ai_france = {
