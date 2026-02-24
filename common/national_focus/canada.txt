@@ -5616,7 +5616,7 @@ focus_tree = {
 		}
 
 		available = {
-			USA = { has_idea = great_depression_3 }
+			USA = { NOT = { has_idea = great_depression } }
 		}
 		
 		bypass = {

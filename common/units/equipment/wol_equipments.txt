@@ -108,7 +108,7 @@ equipments = {
 	self_propelled_heavy_aa_equipment_1 = {
 		year = 1936
 
-		archetype = self_propelled_super_heavy_artillery_equipment
+		archetype = self_propelled_heavy_aa_equipment
 		priority = 50
 		visual_level = 0
 	}
@@ -218,7 +218,7 @@ equipments = {
 	self_propelled_heavy_at_equipment_1 = {
 		year = 1936
 
-		archetype = self_propelled_super_heavy_artillery_equipment
+		archetype = self_propelled_heavy_at_equipment
 		priority = 50
 		visual_level = 0
 	}
