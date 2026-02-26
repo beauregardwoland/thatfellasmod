@@ -326,5 +326,30 @@ defined_text = {
 		trigger = { NOT = { has_idea = CAN_destroyer has_idea = CAN_destroyers_1 has_idea = CAN_destroyers_2 } }
 		localization_key = ""
 	}
+}
+
+defined_text = {
+	name = JAP_sen_toku_loc_tt
+	text = {
+		trigger = { has_idea = JAP_sen_toku }
+		localization_key = idea_desc|JAP_sen_toku
+	}
+	text = {
+		trigger = { NOT = { has_idea = JAP_sen_toku } }
+		localization_key = ""
+	}
+	
+}
+
+defined_text = {
+	name = JAP_ka_mi_projects_loc_tt
+	text = {
+		trigger = { has_idea = JAP_ka_mi_projects }
+		localization_key = idea_desc|JAP_ka_mi_projects
+	}
+	text = {
+		trigger = { NOT = { has_idea = JAP_ka_mi_projects } }
+		localization_key = ""
+	}
 	
 }

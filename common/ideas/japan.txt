@@ -362,7 +362,7 @@ ideas = {
 				mobilization_laws_cost_factor = -0.25
 				justify_war_goal_time = -0.2
 				research_speed_factor = -0.05
-				production_speed_industrial_complex_factor = -0.1
+				#production_speed_industrial_complex_factor = -0.1
 				ai_desired_divisions_factor = 0.25
 				send_volunteers_tension = -0.4
 			}
@@ -1350,18 +1350,18 @@ ideas = {
 			picture = tfv_can_conscription_crisis
 			
 			modifier = {
-				army_attack_factor = 0.15
-				army_speed_factor = 0.15
-				army_org_factor = 0.2
+				army_attack_factor = 0.1
+				army_speed_factor = 0.1
+				army_org_factor = 0.15
 				experience_gain_army_unit_factor = 0.1
 				terrain_penalty_reduction = 0.15
 				planning_speed = 0.2
 				naval_invasion_penalty = -0.25
 				naval_invasion_planning_bonus_speed = 0.5
-				army_fuel_consumption_factor = -0.2
+				army_fuel_consumption_factor = -0.15
 				ground_attack_factor = 0.15
 				air_cas_efficiency = 0.15
-				air_range_factor = 0.15
+				air_range_factor = 0.1
 			}
 		}
 

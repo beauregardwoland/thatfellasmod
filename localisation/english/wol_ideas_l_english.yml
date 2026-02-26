@@ -254,3 +254,11 @@
  GER_break_france_5:0 "Tightening Command Structure V"
  GER_break_france_6:0 "Tightening Command Structure VI"
  fra_decision_vased_eco:0"§YDecision Structure Economy§!"
+
+ wol_qol.22.t:0"Favoring a Zaibatsu"
+ wol_qol.22.d:0" In order to further our economic development, we have decided to favor a zaibatsu to lead our industrial efforts. Their resources and connections will be invaluable to our efforts, and we will ensure they are well taken care of in return for their support."
+ wol_qol.22.a:0"Mitsbishi"
+ wol_qol.22.b:0"Kawasaki"
+ wol_qol.22.c:0"Mitsui"
+ wol_qol.22.d1:0"Sumitomo"
+ jap_starter_event_tt: "§YThis will empower their associeted mios allowing them to share funds via research!§!"

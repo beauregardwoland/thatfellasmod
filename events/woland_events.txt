@@ -626,7 +626,7 @@ country_event = {  ###Axis changes
 	}
 	
 }
-country_event = {  ###
+country_event = {  ###anschluss mil boost(france auto build eco)
 	id = wol_qol.19
 	title = wol_qol.19.t
 	desc = wol_qol.19.d
@@ -658,7 +658,7 @@ country_event = {  ###
 	}
 	
 }
-country_event = {  ###
+country_event = {  ###munich conference mil boost
 	id = wol_qol.20
 	title = wol_qol.20.t
 	desc = wol_qol.20.d
@@ -690,7 +690,7 @@ country_event = {  ###
 	}
 	
 }
-country_event = {  ###
+country_event = {  ###fate of czechs mil boost
 	id = wol_qol.21
 	title = wol_qol.21.t
 	desc = wol_qol.21.d
@@ -723,6 +723,39 @@ country_event = {  ###
 	
 }
 
+country_event = {  ###zaibatsu choice
+	id = wol_qol.22
+	title = wol_qol.22.t
+	desc = wol_qol.22.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.22.a
+		ai_chance = { base = 100 }
+		add_ideas = mitsubushi_ic
+		custom_effect_tooltip = jap_starter_event_tt
+	}
+	option = {
+		name = wol_qol.22.b
+		ai_chance = { base = 100 }
+		add_ideas = kawasaki_ic
+		custom_effect_tooltip = jap_starter_event_tt
+	}
+	option = {
+		name = wol_qol.22.c
+		ai_chance = { base = 100 }
+		add_ideas = mitsui_ic
+		custom_effect_tooltip = jap_starter_event_tt
+	}
+	option = {
+		name = wol_qol.22.d1
+		ai_chance = { base = 100 }
+		add_ideas = sumitomo_ic
+		custom_effect_tooltip = jap_starter_event_tt
+	}
+}
 
 country_event = {
 	id = wol_qol.101

@@ -111,127 +111,6 @@ ideas = {
 				resource_trade_cost_bonus_per_factory = 6
 			}
 		}
-	}
-	hidden_ideas = {
-		CAN_skink_aa = {
-			allowed = {
-				always = no
-			}
-
-			picture = usa_desegregation_2
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			equipment_bonus = {
-				mio_cat_eq_all_aa_track = {
-					build_cost_ic = -0.2
-					soft_attack = 0.4
-					breakthrough = 0.33
-					hard_attack = 0.2
-					instant = yes
-				}
-			}
-		}
-		CAN_lancastors = {
-			allowed = {
-				always = no
-			}
-
-			picture = strategic_bombing_focus
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			equipment_bonus = {
-				mio_cat_eq_all_large_plane = {
-					build_cost_ic = -0.075
-					air_defence = 0.05
-					air_bombing = 0.15
-					instant = yes
-				}
-				mio_cat_eq_all_planes_period = {
-					build_cost_ic = -0.025
-					air_defence = 0.05
-					instant = yes
-				}
-			}
-		}
-		CAN_destroyer = {
-			allowed = {
-				always = no
-			}
-
-			picture = strategic_bombing_focus
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			equipment_bonus = {
-				mio_cat_eq_all_destroyer = {
-					sub_detection = 0.1
-					build_cost_ic = -0.025
-					instant = yes
-				}
-			}
-		}
-		CAN_destroyers_1 = {
-			allowed = {
-				always = no
-			}
-
-			picture = strategic_bombing_focus
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			equipment_bonus = {
-				mio_cat_eq_all_destroyer = {
-					sub_detection = 0.1
-					build_cost_ic = -0.033
-					sub_attack = 0.1
-					instant = yes
-				}
-				mio_cat_eq_all_cruiser = {
-					naval_speed = 0.1
-					sub_attack = 0.1
-					instant = yes
-				}
-			}
-		}
-		CAN_destroyers_2 = {
-			allowed = {
-				always = no
-			}
-
-			picture = strategic_bombing_focus
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			equipment_bonus = {
-				mio_cat_eq_all_destroyer = {
-					sub_detection = 0.1
-					build_cost_ic = -0.033
-					instant = yes
-				}
-				mio_cat_eq_all_cruiser = {
-					hg_attack = 0.1
-					#shore_bombardment = 0.15
-					instant = yes
-				}
-				mio_cat_eq_all_battleship = {
-					hg_attack = 0.1
-					#shore_bombardment = 0.15
-					instant = yes
-				}
-			}
-		}
 		ROM_navy_1 = {
 			allowed = {
 				always = no
@@ -298,14 +177,14 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_dockyard = 0.1
+				industrial_capacity_dockyard = 0.15
 				shore_bombardment_bonus = 0.25
 				shore_bombardment_collateral_damage_factor = 0.2
 			}
 			equipment_bonus = {
 				mio_cat_eq_all_battleship = {
-					armor_value = -0.2
-					max_strength = -0.2
+					armor_value = -0.15
+					max_strength = -0.15
 					build_cost_ic = -0.33
 					instant = yes
 				}
@@ -420,7 +299,8 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.025
 			}
 			research_bonus = {
-				infantry_tech = 0.1
+				infantry_weapons = 0.1
+				support_tech = 0.10
 			}
 			equipment_bonus = {
 				infantry_equipment = {
@@ -638,6 +518,169 @@ ideas = {
 				}
 				mio_cat_eq_all_tank_destroyers = {
 					hard_attack = 0.075
+					instant = yes
+				}
+			}
+		}
+	}
+
+
+
+
+	hidden_ideas = {
+		CAN_skink_aa = {
+			allowed = {
+				always = no
+			}
+
+			picture = usa_desegregation_2
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_aa_track = {
+					build_cost_ic = -0.2
+					soft_attack = 0.4
+					breakthrough = 0.33
+					hard_attack = 0.2
+					instant = yes
+				}
+			}
+		}
+		CAN_lancastors = {
+			allowed = {
+				always = no
+			}
+
+			picture = strategic_bombing_focus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.075
+					air_defence = 0.05
+					air_bombing = 0.15
+					instant = yes
+				}
+				mio_cat_eq_all_planes_period = {
+					build_cost_ic = -0.025
+					air_defence = 0.05
+					instant = yes
+				}
+			}
+		}
+		CAN_destroyer = {
+			allowed = {
+				always = no
+			}
+
+			picture = strategic_bombing_focus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_destroyer = {
+					sub_detection = 0.1
+					build_cost_ic = -0.025
+					instant = yes
+				}
+			}
+		}
+		CAN_destroyers_1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = strategic_bombing_focus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_destroyer = {
+					sub_detection = 0.1
+					build_cost_ic = -0.033
+					sub_attack = 0.1
+					instant = yes
+				}
+				mio_cat_eq_all_cruiser = {
+					naval_speed = 0.1
+					sub_attack = 0.1
+					instant = yes
+				}
+			}
+		}
+		CAN_destroyers_2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = strategic_bombing_focus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+				mio_cat_eq_all_destroyer = {
+					sub_detection = 0.1
+					build_cost_ic = -0.033
+					instant = yes
+				}
+				mio_cat_eq_all_cruiser = {
+					hg_attack = 0.1
+					#shore_bombardment = 0.15
+					instant = yes
+				}
+				mio_cat_eq_all_battleship = {
+					hg_attack = 0.1
+					#shore_bombardment = 0.15
+					instant = yes
+				}
+			}
+		}
+		JAP_sen_toku = {
+			allowed = {
+				always = no
+			}
+
+			picture = strategic_bombing_focus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+				ship_hull_submarine = {
+					build_cost_ic = -0.1
+					max_strength = 0.1
+					instant = yes
+				}
+			}
+		}
+		JAP_ka_mi_projects = {
+			allowed = {
+				always = no
+			}
+
+			picture = strategic_bombing_focus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+				mio_cat_eq_all_amphibious_tank = {
+					breakthrough = 0.1
+					maximum_speed = 0.1
 					instant = yes
 				}
 			}

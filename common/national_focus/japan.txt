@@ -8421,7 +8421,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_sea_national_spiritual_mobliization_movement }
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -8471,7 +8471,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_sea_national_spiritual_mobliization_movement }
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -8510,7 +8510,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_issue_the_ten_commandments_for_marriage focus = JAP_sea_state_general_mobilization_law }
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -8611,7 +8611,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_new_order_movement }
 
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -8739,7 +8739,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_sea_tripartite_pact }
 
-		cost = 4
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -8818,7 +8818,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_new_order_movement }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -8942,7 +8942,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_imperial_rule_assistance_association }
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -8983,7 +8983,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_form_the_yokusan_sonendan }
 
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -9027,7 +9027,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_imperial_rule_assistance_association }
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -24867,7 +24867,7 @@ focus_tree = {
 			}
 		}
 
-		cost = 3
+		cost = 4
 
 		ai_will_do = {
 			factor = 3
@@ -24888,6 +24888,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+
+			country_event = { id = wol_qol.22 }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			every_core_state = {
 				limit = {
@@ -25159,7 +25163,7 @@ focus_tree = {
 
 			#custom_effect_tooltip = available_industrial_concern
 			#show_ideas_tooltip = mitsui_bank
-			add_ideas = mitsui_ic
+			#add_ideas = mitsui_ic
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = JAP_reduce_zaibatsu_focus_cost_tt
@@ -25275,7 +25279,7 @@ focus_tree = {
 
 			#custom_effect_tooltip = available_industrial_concern
 			#show_ideas_tooltip = mitsubishi_civilian
-			add_ideas = mitsubushi_ic
+			#add_ideas = mitsubushi_ic
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -25390,7 +25394,7 @@ focus_tree = {
 
 			#custom_effect_tooltip = available_industrial_concern
 			#show_ideas_tooltip = sumitomo
-			add_ideas = sumitomo_ic
+			#add_ideas = sumitomo_ic
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = JAP_reduce_zaibatsu_focus_cost_tt
@@ -25493,7 +25497,7 @@ focus_tree = {
 
 			#custom_effect_tooltip = available_industrial_concern
 			#show_ideas_tooltip = yasuda_zaibatsu
-			add_ideas = kawasaki_ic
+			#add_ideas = kawasaki_ic
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = JAP_reduce_zaibatsu_focus_cost_tt
@@ -28227,19 +28231,27 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			JAP_add_or_modify_imperial_army = yes
-			add_to_variable = { JAP_army_org_loss_when_moving = -0.1 tooltip = org_loss_when_moving_tt }		
+			add_to_variable = { JAP_army_org_loss_when_moving = -0.1 tooltip = org_loss_when_moving_tt }	
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			reduce_focus_completion_cost = {
+				focus = { JAP_rethink_armor_doctrine JAP_foreign_tank_modernization_cooperation JAP_domestic_tank_modernization_program JAP_the_ultimate_tank }
+				cost = 21
+			}
 		}
 	}
 
 	focus = {
 		id = JAP_rethink_armor_doctrine
 		icon = GFX_focus_generic_tank_assault
-		
+		overlay = GFX_focus_fast_overlay_generic_clock
+
 		#mutually_exclusive = {
 		#	focus = 
 		#}
 
-		prerequisite = { focus = JAP_reform_the_army }
+		prerequisite = { focus = JAP_reform_the_army focus = JAP_rely_on_supremacy_of_the_will }
 
 		relative_position_id = JAP_reform_the_army
 		x = -3
@@ -28321,7 +28333,8 @@ focus_tree = {
 	focus = {
 		id = JAP_foreign_tank_modernization_cooperation
 		icon = GFX_focus_generic_heavy_tank
-		
+		overlay = GFX_focus_fast_overlay_generic_clock
+
 		mutually_exclusive = {
 			focus = JAP_domestic_tank_modernization_program
 		}
@@ -28444,7 +28457,8 @@ focus_tree = {
 	focus = {
 		id = JAP_domestic_tank_modernization_program
 		icon = GFX_focus_generic_tank_assembly
-		
+		overlay = GFX_focus_fast_overlay_generic_clock
+
 		mutually_exclusive = {
 			focus = JAP_foreign_tank_modernization_cooperation
 		}
@@ -28536,6 +28550,7 @@ focus_tree = {
 	focus = {
 		id = JAP_the_ultimate_tank
 		icon = GFX_focus_JAP_the_ultimate_tank
+		overlay = GFX_focus_fast_overlay_generic_clock
 		
 		#mutually_exclusive = {
 		#	focus = 
@@ -28779,6 +28794,13 @@ focus_tree = {
 			add_to_variable = { JAP_army_army_morale_factor = 0.05 tooltip = army_morale_factor_tt }
 			add_to_variable = { JAP_army_army_org_factor = 0.03 tooltip = army_org_factor_tt }
 			add_to_variable = { JAP_army_experience_loss_factor = 0.05 tooltip = experience_loss_factor_tt }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			reduce_focus_completion_cost = {
+				focus = { JAP_adopt_new_assault_doctrine JAP_develop_lethal_infantry_equipment JAP_develop_sophisticated_artillery_equipment JAP_expand_the_irago_proving_ground }
+				cost = 21
+			}
 		}
 
 	}
@@ -28786,12 +28808,13 @@ focus_tree = {
 	focus = {
 		id = JAP_adopt_new_assault_doctrine
 		icon = GFX_focus_generic_full_social_mobilization
+		overlay = GFX_focus_fast_overlay_generic_clock
 		
 		#mutually_exclusive = {
 		#	focus = 
 		#}
 
-		prerequisite = { focus = JAP_rely_on_supremacy_of_the_will }
+		prerequisite = { focus = JAP_reform_the_army focus = JAP_rely_on_supremacy_of_the_will }
 
 		relative_position_id = JAP_rely_on_supremacy_of_the_will
 		x = 3
@@ -28872,6 +28895,7 @@ focus_tree = {
 	focus = {
 		id = JAP_develop_lethal_infantry_equipment
 		icon = GFX_goal_generic_small_arms
+		overlay = GFX_focus_fast_overlay_generic_clock
 		
 		#mutually_exclusive = {
 		#	focus = JAP_develop_sophisticated_artillery_equipment
@@ -28883,7 +28907,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 7
+		cost = 6
 
 		ai_will_do = {
 			factor = 3
@@ -28978,6 +29002,7 @@ focus_tree = {
 	focus = {
 		id = JAP_develop_sophisticated_artillery_equipment
 		icon = GFX_focus_SWE_let_fly_all_guns
+		overlay = GFX_focus_fast_overlay_generic_clock
 		
 		#mutually_exclusive = {
 		#	focus = JAP_develop_lethal_infantry_equipment
@@ -29087,6 +29112,7 @@ focus_tree = {
 	focus = {
 		id = JAP_expand_the_irago_proving_ground
 		icon = GFX_focus_JAP_expand_the_irago_proving_ground
+		overlay = GFX_focus_fast_overlay_generic_clock
 		
 		#mutually_exclusive = {
 		#	focus = 
@@ -29099,7 +29125,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 3
@@ -30483,7 +30509,7 @@ focus_tree = {
 		#	focus = 
 		#}
 
-		prerequisite = { focus = JAP_sea_long_operational_range }
+		prerequisite = { focus = JAP_sea_long_operational_range focus = JAP_sea_sturdy_aircraft }
 
 		relative_position_id = JAP_sea_long_operational_range
 		x = 1
@@ -30496,17 +30522,17 @@ focus_tree = {
 		}
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = GER_war_with_american_country_tt
-				any_enemy_country = {
-					capital_scope = { 
-						OR = {
-							is_on_continent = north_america
-							is_on_continent = south_america
-						}
-					}
-				}
-			}
+			#custom_trigger_tooltip = {
+			#	tooltip = GER_war_with_american_country_tt
+			#	any_enemy_country = {
+			#		capital_scope = { 
+			#			OR = {
+			#				is_on_continent = north_america
+			#				is_on_continent = south_america
+			#			}
+			#		}
+			#	}
+			#}
 		}
 
 		bypass = {
@@ -31406,6 +31432,17 @@ focus_tree = {
 				}	
 				add_trait = { trait = air_controller }
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			activate_advisor = osami_nagano
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			reduce_focus_completion_cost = {
+				focus = { JAP_yokosuka_naval_air_technical_arsenal JAP_carrier_subs JAP_form_the_kido_butai }
+				cost = 42
+			}
 			
 		}
 
@@ -31414,31 +31451,32 @@ focus_tree = {
 	focus = {
 		id = JAP_yokosuka_naval_air_technical_arsenal
 		icon = GFX_goal_generic_navy_carrier
+		overlay = GFX_focus_fast_overlay_generic_clock
 		
 		#mutually_exclusive = {
 		#	focus = 
 		#}
 
-		prerequisite = { focus = JAP_focus_on_aircraft_carriers }
+		prerequisite = { focus = JAP_focus_on_aircraft_carriers focus = JAP_balanced_naval_approach focus = JAP_sea_battleship_initiative }
 
 		relative_position_id = JAP_focus_on_aircraft_carriers
-		x = -1
+		x = -2
 		y = 1
 
-		cost = 3
+		cost = 7
 
 		ai_will_do = {
 			factor = 3
 		}
 
 		available = {
-			has_tech = improved_ship_hull_carrier
-			custom_trigger_tooltip = {
-				tooltip = JAP_expand_hiratsuka_navy_arsenal_tt
-				NOT = {
-					has_idea = MTG_naval_treaty_adherent
-				}
-			}
+			#has_tech = improved_ship_hull_carrier
+			#custom_trigger_tooltip = {
+			#	tooltip = JAP_expand_hiratsuka_navy_arsenal_tt
+			#	NOT = {
+			#		has_idea = MTG_naval_treaty_adherent
+			#	}
+			#}
 		}
 
 		bypass = {
@@ -31500,7 +31538,7 @@ focus_tree = {
 		prerequisite = { focus = JAP_improve_the_type_91_aerial_torpedo }
 
 		relative_position_id = JAP_yokosuka_naval_air_technical_arsenal
-		x = -2
+		x = -1
 		y = 1
 
 		cost = 5
@@ -31633,6 +31671,17 @@ focus_tree = {
 				add_trait = { trait = ironside }
 			}
 
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			activate_advisor = fushimi_hiroyasu
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			reduce_focus_completion_cost = {
+				focus = { JAP_amphib_tanks JAP_torp_prowess JAP_akizuki_class_destroyers }
+				cost = 42
+			}
+
 		}
 
 	}
@@ -31722,6 +31771,17 @@ focus_tree = {
 				}	
 				add_trait = { trait = ironside }
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			activate_advisor = shigetaro_shimada
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			reduce_focus_completion_cost = {
+				focus = { JAP_night_fghting JAP_sea_heavier_naval_guns JAP_sea_bigger_better_yamato }
+				cost = 42
+			}
 		}
 
 	}
@@ -31729,30 +31789,28 @@ focus_tree = {
 	focus = {
 		id = JAP_sea_bigger_better_yamato
 		icon = GFX_focus_generic_navy_battleship2
+		overlay = GFX_focus_fast_overlay_generic_clock
 		
 		#mutually_exclusive = {
 		#	focus = 
 		#}
 
-		prerequisite = { focus = JAP_sea_battleship_initiative }
+		prerequisite = { focus = JAP_focus_on_aircraft_carriers focus = JAP_balanced_naval_approach focus = JAP_sea_battleship_initiative }
 
 		relative_position_id = JAP_sea_battleship_initiative
-		x = 1
+		x = 2
 		y = 1
 
-		cost = 3
+		cost = 7
 
 		ai_will_do = {
 			factor = 3
 		}
 
 		available = {
-			is_special_project_completed = sp:sp_naval_super_heavy_battleship
-			custom_trigger_tooltip = {
-				tooltip = JAP_expand_hiratsuka_navy_arsenal_tt
-				NOT = {
-					has_idea = MTG_naval_treaty_adherent
-				}
+			or = {
+				is_special_project_being_researched = sp:sp_naval_super_heavy_battleship
+				is_special_project_completed = sp:sp_naval_super_heavy_battleship
 			}
 		}
 
@@ -31819,6 +31877,7 @@ focus_tree = {
 	focus = {
 		id = JAP_akizuki_class_destroyers
 		icon = GFX_focus_generic_destroyer
+		overlay = GFX_focus_fast_overlay_generic_clock
 		
 		#mutually_exclusive = {
 		#	focus = 
@@ -31827,10 +31886,10 @@ focus_tree = {
 		prerequisite = { focus = JAP_focus_on_aircraft_carriers focus = JAP_balanced_naval_approach focus = JAP_sea_battleship_initiative }
 
 		relative_position_id = JAP_focus_on_aircraft_carriers
-		x = 2
-		y = 1
+		x = 3
+		y = 2
 
-		cost = 4
+		cost = 7
 
 		ai_will_do = {
 			factor = 3
@@ -31921,18 +31980,19 @@ focus_tree = {
 	focus = {
 		id = JAP_form_the_kido_butai
 		icon = GFX_focus_SMB_blue_water_fleet
+		overlay = GFX_focus_fast_overlay_generic_clock
 		
 		#mutually_exclusive = {
 		#	focus = 
 		#}
 
-		prerequisite = { focus = JAP_focus_on_aircraft_carriers focus = JAP_balanced_naval_approach }
+		prerequisite = { focus = JAP_focus_on_aircraft_carriers focus = JAP_balanced_naval_approach focus = JAP_sea_battleship_initiative }
 
 		relative_position_id = JAP_focus_on_aircraft_carriers
-		x = 1
+		x = -1
 		y = 2
 
-		cost = 1
+		cost = 7
 
 		ai_will_do = {
 			factor = 3
@@ -31969,18 +32029,19 @@ focus_tree = {
 	focus = {
 		id = JAP_sea_heavier_naval_guns
 		icon = GFX_focus_generic_battleship_guns
+		overlay = GFX_focus_fast_overlay_generic_clock
 		
 		#mutually_exclusive = {
 		#	focus = 
 		#}
 
-		prerequisite = { focus = JAP_balanced_naval_approach focus = JAP_sea_battleship_initiative }
+		prerequisite = { focus = JAP_balanced_naval_approach focus = JAP_sea_battleship_initiative focus = JAP_focus_on_aircraft_carriers }
 
 		relative_position_id = JAP_balanced_naval_approach
-		x = 1
+		x = 3
 		y = 2
 
-		cost = 1
+		cost = 8
 
 		ai_will_do = {
 			factor = 3
@@ -32030,10 +32091,10 @@ focus_tree = {
 		#	focus = 
 		#}
 
-		prerequisite = { focus = JAP_form_the_kido_butai focus = JAP_sea_heavier_naval_guns }
+		prerequisite = { focus = JAP_form_the_kido_butai focus = JAP_sea_heavier_naval_guns focus = JAP_amphib_tanks focus = JAP_akizuki_class_destroyers }
 
 		relative_position_id = JAP_form_the_kido_butai
-		x = -2
+		x = 0
 		y = 1
 
 		cost = 2
@@ -32395,10 +32456,10 @@ focus_tree = {
 			focus = JAP_seek_strength_in_numbers
 		}
 
-		prerequisite = { focus = JAP_form_the_kido_butai focus = JAP_sea_heavier_naval_guns }
+		prerequisite = { focus = JAP_form_the_kido_butai focus = JAP_sea_heavier_naval_guns focus = JAP_amphib_tanks focus = JAP_akizuki_class_destroyers }
 
 		relative_position_id = JAP_form_the_kido_butai
-		x = 0
+		x = 2
 		y = 1
 
 		cost = 4
@@ -32447,10 +32508,10 @@ focus_tree = {
 			focus = JAP_assure_superior_naval_quality
 		}
 
-		prerequisite = { focus = JAP_form_the_kido_butai focus = JAP_sea_heavier_naval_guns }
+		prerequisite = { focus = JAP_form_the_kido_butai focus = JAP_sea_heavier_naval_guns focus = JAP_amphib_tanks focus = JAP_akizuki_class_destroyers }
 
 		relative_position_id = JAP_form_the_kido_butai
-		x = 2
+		x = 4
 		y = 1
 
 		cost = 4
@@ -32500,10 +32561,10 @@ focus_tree = {
 		#	focus = 
 		#}
 
-		prerequisite = { focus = JAP_form_the_kido_butai focus = JAP_sea_heavier_naval_guns }
+		prerequisite = { focus = JAP_form_the_kido_butai focus = JAP_sea_heavier_naval_guns focus = JAP_amphib_tanks focus = JAP_akizuki_class_destroyers }
 
 		relative_position_id = JAP_form_the_kido_butai
-		x = 4
+		x = 6
 		y = 1
 
 		cost = 1
@@ -33451,6 +33512,172 @@ focus_tree = {
 			add_to_variable = {
 				JAP_tora_tora_duration = 150
 			}
+		}
+	}
+	focus = {
+		id = JAP_carrier_subs
+		icon = GFX_focus_generic_cruiser_submarines 
+		overlay = GFX_focus_fast_overlay_generic_clock
+
+		prerequisite = { focus = JAP_focus_on_aircraft_carriers focus = JAP_balanced_naval_approach focus = JAP_sea_battleship_initiative }
+		x = 0
+		y = 1
+		relative_position_id = JAP_focus_on_aircraft_carriers
+
+		cost = 7
+
+		ai_will_do = {
+			
+		}
+
+		available = {
+			or = {
+				is_special_project_being_researched = sp:sp_naval_submarine_carrier
+				is_special_project_completed = sp:sp_naval_submarine_carrier
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.25
+			}
+			sp:sp_naval_submarine_carrier = {
+				add_project_progress_ratio = 0.4
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			JAP_add_or_modify_imperial_navy = yes
+			add_ideas = JAP_sen_toku
+		}
+	}
+	focus = {
+		id = JAP_amphib_tanks
+		icon = GFX_goal_focus_jap_amphib 
+		overlay = GFX_focus_fast_overlay_generic_clock
+
+		prerequisite = { focus = JAP_focus_on_aircraft_carriers focus = JAP_balanced_naval_approach focus = JAP_sea_battleship_initiative }
+		x = 1
+		y = 2
+		relative_position_id = JAP_focus_on_aircraft_carriers
+
+		cost = 7
+
+		ai_will_do = {
+			
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			set_technology = {
+				amphibious_tank_chassis = 1
+				popup = yes
+			}
+			JAP_add_or_modify_imperial_army = yes
+			add_ideas = JAP_ka_mi_projects
+		}
+	}
+	focus = {
+		id = JAP_torp_prowess
+		icon = GFX_focus_generic_torpedo_production
+		overlay = GFX_focus_fast_overlay_generic_clock
+
+		prerequisite = { focus = JAP_focus_on_aircraft_carriers focus = JAP_balanced_naval_approach focus = JAP_sea_battleship_initiative }
+		x = 2
+		y = 1
+		relative_position_id = JAP_focus_on_aircraft_carriers
+
+		cost = 7
+
+		ai_will_do = {
+			
+		}
+
+		available = {
+			or = {
+				is_special_project_being_researched = sp:sp_naval_torpedo_cruiser
+				is_special_project_completed = sp:sp_naval_torpedo_cruiser
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.25
+			}
+			sp:sp_naval_submarine_carrier = {
+				add_project_progress_ratio = 0.4
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			JAP_add_or_modify_imperial_navy = yes
+			add_to_variable = { JAP_navy_naval_torpedo_hit_chance_factor = 0.1 tooltip = naval_torpedo_hit_chance_factor_tt }
+			add_to_variable = { JAP_naval_torpedo_screen_penetration_factor = 0.15 tooltip = naval_torpedo_screen_penetration_factor_tt }
+
+		}
+	}
+	focus = {
+		id = JAP_night_fghting
+		icon = GFX_focus_TUR_reconfigure_turkish_foreign_policy
+		overlay = GFX_focus_fast_overlay_generic_clock
+
+		prerequisite = { focus = JAP_focus_on_aircraft_carriers focus = JAP_balanced_naval_approach focus = JAP_sea_battleship_initiative }
+		x = 0
+		y = 1
+		relative_position_id = JAP_sea_battleship_initiative
+
+		cost = 7
+
+		ai_will_do = {
+			
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			JAP_add_or_modify_imperial_navy = yes
+			add_to_variable = { JAP_naval_night_attack = 0.1 tooltip = naval_night_attack_tt }
+			add_to_variable = { JAP_night_spotting_chance = 0.1 tooltip = naval_night_spotting_chance_tt }
 		}
 	}
 }

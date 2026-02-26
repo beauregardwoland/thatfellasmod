@@ -315,6 +315,10 @@ spriteTypes = {
 		name = "GFX_goal_MON_spirit_genghis"
 		texturefile = "gfx/interface/MON_spirit_genghis.png"
 	}
+	SpriteType = {
+		name = "GFX_goal_focus_jap_amphib"
+		texturefile = "gfx/interface/focus_jap_amphib.dds"
+	}
 	spriteType = {
 		name = "GFX_EMI_MON_self_sealing_fuel_tanks_small"
 		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_self_sealing_fueltank_icon.dds"

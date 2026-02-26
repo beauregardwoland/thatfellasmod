@@ -78,6 +78,14 @@ mio_cat_eq_all_aa_track = { #Includes Super Heavy Tank Chassis
 		super_heavy_tank_aa_chassis
 	}
 }
+mio_cat_eq_all_amphibious_tank = { #Includes Super Heavy Tank Chassis
+	equipment_type = {
+		amphibious_tank_chassis
+		heavy_tank_amphibious_chassis
+		medium_tank_amphibious_chassis
+		light_tank_amphibious_chassis
+	}
+}	
 
 
  ######  ##     ## #### ########      ######   ########   #######  ##     ## ########   ######  
