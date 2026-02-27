@@ -2641,7 +2641,11 @@ gimp_ai_category = {
 		complete_effect = {
 			add_equipment_to_stockpile = {
 				type = support_equipment
-				amount = 500
+				amount = 750
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3300
 			}
 			division_template = { 
 				name = "20 Width Inf" 
@@ -2697,7 +2701,11 @@ gimp_ai_category = {
 		complete_effect = {
 			add_equipment_to_stockpile = {
 				type = support_equipment
-				amount = 500
+				amount = 750
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3300
 			}
 			division_template = { 
 				name = "20 Width Inf" 
