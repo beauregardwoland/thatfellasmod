@@ -2621,6 +2621,10 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+				add_resource = {
+					type = coal
+					amount = 12
+				}
 			}
 		}
 	}
@@ -2641,6 +2645,18 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
+			157 = {
+				add_resource = {
+					type = coal
+					amount = 4
+				}
+			}
+			158 = {
+				add_resource = {
+					type = coal
+					amount = 4
+				}
+			}
 			add_tech_bonus = {
 				name = ITA_industria_della_gomma_sintetica
 				bonus = 0.5
@@ -3201,6 +3217,20 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			159 = {
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 3780
+					}
+				}
+				add_resource = {
+					type = coal
+					amount = 4
+				}
+			}
 			add_to_variable = { ITA_iri_consumer_goods_factor = -0.10 }
 			custom_effect_tooltip = ITA_investments_in_edison_ricostruzione_industriale_tt
 
@@ -15689,7 +15719,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = ITA_pact_of_steel
-		cost = 5
+		cost = 2
 		available = {
 			NOT = { has_war_with = GER }
 			NOT = { has_country_flag = ENG_ditched_by_the_germans_flag }
@@ -15699,6 +15729,12 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = ITA_german_millitary_cooperation_focus
+			GER = {
+				give_resource_rights = {
+					receiver = ITA
+					state = 67
+				}
+			}
 		}
 	}
 
