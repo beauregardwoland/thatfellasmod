@@ -5389,7 +5389,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = SOV_military_engineering_university
-		cost = 4
+		cost = 1
 
 		available = {
 			has_full_control_of_state = 219 #MOSCOW
@@ -6664,7 +6664,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_rehabilitated_military
-		cost = 10
+		cost = 5
 
 		select_effect = {
 			add_ideas = SOV_military_reorganization_ns
@@ -6931,7 +6931,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_lessons_of_war
-		cost = 10
+		cost = 4
 
 		available = {
 
@@ -7025,7 +7025,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_military_reorganization
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_swap_to_political_advisors }
 
@@ -7076,7 +7076,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_military_reorganization
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_swap_to_political_advisors }
 
@@ -7131,7 +7131,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_military_reorganization
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_keep_commissars_organization focus = SOV_adjoined_battle_priests }
 
@@ -7191,7 +7191,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_keep_commissars_organization
-		cost = 10
+		cost = 5
 
 		allow_branch = {
 			NOT = {
@@ -8285,7 +8285,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = SOV_stalins_cult_of_personality
-		cost = 5
+		cost = 2
 
 		available = {
 			has_defensive_war = yes
@@ -8312,6 +8312,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = SOV_they_will_know_fear
 				bonus = 1
+				ahead_reduction = 2
 				uses = 1 # was 2
 				category = armor
 			}
@@ -8388,7 +8389,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_stalins_cult_of_personality
-		cost = 5
+		cost = 4
 
 		mutually_exclusive = { focus = SOV_the_faithful_servant_of_lenin }
 
@@ -8404,6 +8405,11 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.05
 			add_country_leader_trait = stalin_inheritor_of_lenin
+			custom_effect_tooltip = SOV_modify_the_red_army_tt
+			add_to_variable = {
+				SOV_the_red_army_army_strength_factor = 0.05
+				tooltip = army_strength_factor_tt
+			}
 		}
 	}
 
@@ -8414,7 +8420,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_inheritor_of_the_mantle_of_lenin
-		cost = 10
+		cost = 4
 		
 		available = {
 			custom_trigger_tooltip = {
@@ -8455,7 +8461,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_stalins_cult_of_personality
-		cost = 5
+		cost = 4
 
 		mutually_exclusive = { focus = SOV_inheritor_of_the_mantle_of_lenin }
 
@@ -8471,6 +8477,11 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.1
 			add_country_leader_trait = stalin_servant_of_lenin
+			custom_effect_tooltip = SOV_modify_five_year_plan_tt
+			add_to_variable = {
+				SOV_fyp_local_resources_factor = 0.05
+				tooltip = local_resources_factor_tt
+			}
 		}
 	}
 
@@ -8481,7 +8492,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_the_faithful_servant_of_lenin
-		cost = 10
+		cost = 4
 
 		available = {
 			custom_trigger_tooltip = {
@@ -8521,7 +8532,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_inheritor_of_the_mantle_of_lenin
-		cost = 5
+		cost = 1
 		
 		available = {
 			custom_trigger_tooltip = {
@@ -8609,11 +8620,16 @@ focus_tree = {
 				character = "SOV_iosif_stalin"
 				traits={ old_guard politically_connected media_personality harsh_leader }
 				skill=3
-				attack_skill=1
+				attack_skill=3
 				defense_skill=3
 				planning_skill=3
 				logistics_skill=3
 				legacy_id=0
+			}
+			custom_effect_tooltip = SOV_modify_the_red_army_tt
+			add_to_variable = {
+				SOV_the_red_army_army_org_factor = 0.033
+				tooltip = army_org_factor_tt
 			}
 		}
 	}
@@ -8641,6 +8657,11 @@ focus_tree = {
 
 		completion_reward = {
 			add_country_leader_trait = stalin_architect_of_communism
+			custom_effect_tooltip = SOV_modify_five_year_plan_tt
+			add_to_variable = {
+				SOV_fyp_production_factory_max_efficiency_factor = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
 		}
 	}
 
@@ -8651,7 +8672,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_great_commander
-		cost = 10
+		cost = 1
 
 		available = {
 			custom_trigger_tooltip = {
@@ -8680,7 +8701,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_stalins_cult_of_personality
-		cost = 10
+		cost = 1
 
 		available = {
 

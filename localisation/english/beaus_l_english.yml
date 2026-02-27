@@ -225,6 +225,8 @@
  modify_IJA_tt:0"Modifies §YIJA§! by:"
  modify_sov_airforce:0"Modifies §YSoviet Airforce§! by:"
  SOV_modify_defense_industry:0"Modifies §YDefense Industry§! by:"
+ SOV_modify_five_year_plan_tt:0"Modifies §YFive Year Plan§! by:"
+ SOV_modify_the_red_army_tt:0"Modifies §YThe Red Army§! by:"
  WOL_sov_naval_inf_tt:0"Create §Y2 Veteran§! Marine divisions in §YLeningrad§! additional §Y3§! will spawn if both §YWestern and Southern§! naval bases have been reinforced."
  WOL_mine_warfare_tt:0"Create Additional §YRailway gun§! if  both §YNorthern and Eastern§! bases have been reinforced."
  SOV_free_bbs_tt:0"Adds two §YMarat Class§! battleships at §Y75%§! completion"

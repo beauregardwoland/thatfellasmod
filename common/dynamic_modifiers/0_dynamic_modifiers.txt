@@ -1142,6 +1142,8 @@ SOV_the_red_army_dynamic_modifier = { #NATIONAL SPIRIT
 	dig_in_speed_factor = SOV_the_red_army_dig_in_speed_factor #0.05 -> Experts in Camouflage
 	operative_slot  = SOV_the_red_army_operative_slot  #1 -> Organization of the Partisans
 	max_command_power_mult = SOV_the_red_army_max_command_power_mult #0.1 -> Depoliticize the Military
+
+	army_strength_factor = SOV_the_red_army_army_strength_factor #0.05 -> The Glory of the Red Army
 }
 
 SOV_the_red_army_dynamic_modifier_alt = { #NATIONAL SPIRIT

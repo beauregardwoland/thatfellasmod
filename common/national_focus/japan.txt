@@ -25449,6 +25449,9 @@ focus_tree = {
 			mio:JAP_kawasaki_heavy_vehicles = {
 				add_mio_funds_gain_factor = 0.15
 			}
+			mio:JAP_kawasaki_designer = {
+				add_mio_funds_gain_factor = 0.1
+			}
 			hidden_effect = {
 				mio:JAP_kawasaki_designer_upgrade_1 = {
 					add_mio_funds_gain_factor = 0.1
