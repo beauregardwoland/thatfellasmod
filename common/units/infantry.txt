@@ -60,10 +60,10 @@ sub_units = {
 		active = no
 
 		type = {
-			infantry
+			armor
 		}
 		
-		group = infantry
+		group = armor
 		
 		categories = {
 			category_front_line

@@ -27,6 +27,7 @@ technologies = {
 
 		enable_subunits = {
 			infantry
+			bicycle_battalion
 		}
 
 		path = {
@@ -44,6 +45,8 @@ technologies = {
 		categories = {
 			infantry_weapons
 		}
+
+
 
 		ai_will_do = {
 			factor = 1
