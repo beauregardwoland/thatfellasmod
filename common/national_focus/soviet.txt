@@ -19410,7 +19410,27 @@ ai_will_do = {
 			}
 		}
 	}
-	
+	focus = {
+		id = SOV_mothership
+		icon = GFX_focus_JAP_z_bomber_project
+		prerequisite = { focus = SOV_merge_aircraft_plants }
+		available = {
+			is_special_project_being_researched = sp:sp_air_mothership_aircraft
+		}
+		x = 1
+		y = 1
+		relative_position_id = SOV_merge_aircraft_plants
+		cost = 2
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			sp:sp_air_mothership_aircraft = {
+				add_project_progress_ratio = 0.5
+			}
+		}
+	}
 }
 ###  ###  ##  ###  ##  #  #  ##  #    	   ## ### #  # ### ###         
 #  # #   #     #  #  # ## # #  # #    	  #    #  #  # #   #   {~._.~} 
