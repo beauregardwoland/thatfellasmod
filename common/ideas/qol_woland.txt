@@ -587,6 +587,13 @@ ideas = {
 				air_cas_present_factor = 0.05
 			}
 		}
+		diverted_project_funds = {
+			picture = POL_succesful_four_year_plan
+			modifier = {
+				industrial_capacity_dockyard = -0.1
+				industrial_capacity_factory = -0.025
+			}
+		}
 	}
 
 	industrial_concern = {

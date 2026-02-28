@@ -237,6 +237,7 @@
  SOV_free_bbs_tt:0"Adds two §YMarat Class§! battleships at §Y75%§! completion"
  SOV_mountaineeers:0"Expand the Mountain Rifle Divisions"
  SOV_am_tracs:0"Plavayushchy Traktor Experiments"
+ SOV_mothership:0"Zveno II Raiders"
 
 
  USA_finish_naval_reform:0 "Naval Reforms"
@@ -390,6 +391,11 @@
  ostwall_from_share:0"Expand Ostwall into §Y[FROM.GetName]§!"
  military_factory_donations_tt: "   $MODIFIER_MILITARY_FACTORY_DONATIONS$: $RIGHT|+=0$"
  axis_foriegn_buildup_tt: "Change §0Axis Investment Points§! by: $RIGHT|+=0$"
+ fuher_idea_tt: "Change §0Führer Ideas§! by: $RIGHT|+=0$"
+ var_fuher_idea:0"Führer Ideas"
+ GER_new_fuher_idea_mission:0"Führers Ambition Shifts"
+ var_fuher_idea_check_tt:0"Must have more than §Y1§! Führer Ideas points currently §Y[?ger.var_fuher_idea]§!
+
  axis_foriegn_cost_tt: "Has at Least §Y1§! §0Axis Investment Points§! current §Y[?var_axis_spare_industrial_hubs]§!"
  axis_mil_invest_tt:0"Is not currently useing §0Axis Investment Points§! investing into any §Ymilitary Projects§!"
  axis_nav_invest_tt:0"Is not currently useing §0Axis Investment Points§! investing into any §YNaval Projects§!"

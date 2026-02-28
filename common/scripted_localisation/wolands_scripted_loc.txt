@@ -355,9 +355,19 @@ defined_text = {
 }
 
 defined_text = {
-	name = sp_inter_cart_script
+	name = GER_specialist_tanks_text
 	text = {
-		trigger = { always = yes }
-		localization_key = tech_effect|tech_intermediatary_cartidges
+		trigger = { has_idea = GER_waffen_tragers }
+		localization_key = idea_desc|GER_waffen_tragers
+	}
+	text = {
+		trigger = { has_idea = GER_jagtigers }
+		localization_key = idea_desc|GER_jagtigers
+	}
+	text = {
+		trigger = { NOT = { has_idea = GER_jagtigers has_idea = GER_waffen_tragers } }
+		localization_key = ""
 	}
 }
+
+

@@ -1,5 +1,21 @@
 ideas = {
 	country = {
+		stiener_counter_attack = {
+			allowed = {
+				always = no
+			}
+
+			picture = ETH_the_common_soldier
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				army_attack_factor = 0.3
+				army_speed_factor = 0.2
+			}
+		}
 		CAN_dummy_tech = {
 			allowed = {
 				always = no
@@ -681,6 +697,59 @@ ideas = {
 				mio_cat_eq_all_amphibious_tank = {
 					breakthrough = 0.1
 					maximum_speed = 0.1
+					instant = yes
+				}
+			}
+		}
+		GER_waffen_tragers = {
+			picture = strategic_bombing_focus
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+				mio_cat_eq_all_artillery_track = {
+					build_cost_ic = -0.075
+					soft_attack = 0.05
+					hard_attack = 0.05
+					armor_value = -0.2
+					instant = yes
+				}
+				mio_cat_eq_all_tank_destroyers = {
+					build_cost_ic = -0.075
+					soft_attack = 0.05
+					hard_attack = 0.05
+					armor_value = -0.2
+					instant = yes
+				}
+			}
+		}
+
+		GER_jagtigers = {
+			picture = strategic_bombing_focus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.075
+			}
+			
+			equipment_bonus = {
+				mio_cat_eq_all_artillery_track = {
+					build_cost_ic = 0.05
+					soft_attack = 0.05
+					hard_attack = 0.05
+					armor_value = 0.2
+					instant = yes
+				}
+				mio_cat_eq_all_tank_destroyers = {
+					build_cost_ic = 0.05
+					soft_attack = 0.05
+					hard_attack = 0.05
+					armor_value = 0.2
 					instant = yes
 				}
 			}

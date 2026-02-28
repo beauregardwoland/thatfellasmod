@@ -2962,7 +2962,7 @@ focus_tree = {
 	focus = {
 		id = GER_improve_motorized_troops
 		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = GER_the_prussian_legacy }
+		prerequisite = { focus = GER_adopt_new_panzer_doctrine focus = GER_the_prussian_legacy }
 
 		x = -4
 		y = 1
@@ -3052,7 +3052,7 @@ focus_tree = {
 	focus = {
 		id = GER_lessons_of_the_great_war
 		icon = GFX_focus_generic_little_entente
-		prerequisite = { focus = GER_the_prussian_legacy }
+		prerequisite = { focus = GER_adopt_new_panzer_doctrine focus = GER_the_prussian_legacy }
 
 		x = -2
 		y = 1
@@ -4162,85 +4162,7 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = GER_uranverein
-		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = GER_improve_the_logistics_system focus = GER_defend_the_vaterland }
-		x = 1
-		y = 1
-		relative_position_id = GER_improve_the_logistics_system
-		cost = 4
-		available = {
-			has_war_with_major = yes
-		}
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_tech = atomic_research }
-				}
-				add_tech_bonus = {
-					name = GER_uranverein
-					bonus = 1.0
-					uses = 1
-					category = nuclear
-				}
-			}
-			else = {
-				add_breakthrough_progress = {
-					specialization = specialization_nuclear
-					value = 0.5
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					OR = {
-						NOT = { is_special_project_completed = sp:sp_nuclear_reactor }
-						NOT = { is_special_project_completed = sp:sp_nuclear_bomb }
-						AND = {
-							has_dlc = "Gotterdammerung"
-							NOT = { is_special_project_completed = sp:sp_nuclear_warheads }
-						}
-					}
-				}
-				GER_add_or_modify_wunderwaffen = yes
-			}
-			if = {
-				limit = {
-					NOT = { is_special_project_completed = sp:sp_nuclear_reactor }
-				}
-				add_to_variable = { 
-					GER_wunderwaffen_sp_nuclear_reactor_speed_factor = GER_wunderwaffe_research_speed_bonus
-					tooltip = sp_nuclear_reactor_speed_factor_tt
-				}
-			}
-
-			if = {
-				limit = {
-					NOT = { is_special_project_completed = sp:sp_nuclear_bomb }
-				}
-				add_to_variable = { 
-					GER_wunderwaffen_sp_nuclear_bomb_speed_factor = GER_wunderwaffe_research_speed_bonus
-					tooltip = sp_nuclear_bomb_speed_factor_tt
-				}
-			}
-			if = {
-				limit = {
-					has_dlc = "Gotterdammerung"
-					NOT = { is_special_project_completed = sp:sp_nuclear_warheads }
-				}
-				add_to_variable = { 
-					GER_wunderwaffen_sp_nuclear_warheads_speed_factor = GER_wunderwaffe_research_speed_bonus
-					tooltip = sp_nuclear_warheads_speed_factor_tt
-				}
-			}
-		}
-	}
+	
 	
 	focus = {
 		id = GER_adopt_new_panzer_doctrine
@@ -4292,9 +4214,6 @@ focus_tree = {
 			show_unit_leaders_tooltip = GER_heinz_guderian
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = heinz_guderian
-			show_unit_leaders_tooltip = GER_erwin_rommel
-			custom_effect_tooltip = available_military_high_command
-			show_ideas_tooltip = erwin_rommel
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -4320,7 +4239,7 @@ focus_tree = {
 	focus = {
 		id = GER_panzer_troops_school
 		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = GER_adopt_new_panzer_doctrine }
+		prerequisite = { focus = GER_adopt_new_panzer_doctrine focus = GER_the_prussian_legacy }
 
 		x = 2
 		y = 1
@@ -4332,6 +4251,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
+			show_unit_leaders_tooltip = GER_erwin_rommel
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = erwin_rommel
 			army_experience = 15
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -4361,12 +4283,12 @@ focus_tree = {
 	focus = {
 		id = GER_advanced_panzer_research
 		icon = GFX_focus_generic_army_tanks2
-		prerequisite = { focus = GER_adopt_new_panzer_doctrine }
+		prerequisite = { focus = GER_adopt_new_panzer_doctrine focus = GER_the_prussian_legacy }
 
 		x = 4
 		y = 1
 		relative_position_id = GER_adopt_new_panzer_doctrine
-		cost = 10
+		cost = 5
 		available = {
 			has_tech = radio
 		}
@@ -5317,7 +5239,7 @@ focus_tree = {
 		prerequisite = { focus = GER_dive_bombers focus = GER_tactical_bombers focus = GER_uralbomber_program }
 
 		x = 2
-		y = 3
+		y = 2
 		relative_position_id = GER_dive_bombers
 		cost = 5
 		available = {
@@ -5739,7 +5661,7 @@ focus_tree = {
 		prerequisite = { focus = GER_reorganize_the_luftwaffe focus = GER_develop_the_knickebein }
 
 		x = 2
-		y = 2
+		y = 1
 		relative_position_id = GER_reorganize_the_luftwaffe
 		cost = 5
 		available = {
@@ -6061,7 +5983,7 @@ focus_tree = {
 		prerequisite = { focus = GER_rocketry_innovations focus = GER_solve_the_logistical_bottlenecks focus = GER_construct_the_kammhuber_line focus = GER_establish_night_fighter_squadrons}
 
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = GER_solve_the_logistical_bottlenecks
 		cost = 4
 		available = {
@@ -6106,47 +6028,6 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				create_equipment_variant = { 
-					name = "Me 262" 
-					allow_without_tech = no
-					type = small_plane_airframe_4
-					design_team = mio:GER_messerschmitt_organization
-					modules = {
-						fixed_main_weapon_slot = aircraft_cannon_2_2x
-						fixed_auxiliary_weapon_slot_1 = aircraft_cannon_2_2x
-						engine_type_slot = jet_engine_2x
-						special_type_slot_1 = armor_plate_small
-						special_type_slot_2 = drop_tanks	
-						special_type_slot_3 = self_sealing_fuel_tanks_small	
-					}
-					icon = "GFX_GER_jet_plane_1_medium"
-					model = "GER_jet_plane_entity"
-				}
-				create_equipment_variant = { 
-					name = "Ar 234" 
-					allow_without_tech = no
-					type = medium_plane_airframe_4
-					design_team = mio:GER_dornier_organization
-					modules = {
-						fixed_main_weapon_slot = medium_bomb_bay
-						fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
-						fixed_auxiliary_weapon_slot_2 = bomb_locks
-						engine_type_slot = jet_engine_2x
-						special_type_slot_1 = fuel_tanks_medium
-						special_type_slot_2 = empty	
-					}
-					icon = "GFX_medium_plane_4_medium"
-					model = "GER_medium_jet_plane_1_entity"
-				}
-				
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-
-
 			GER_modify_airforce_modifier = yes
 			add_to_variable = { 
 				GER_military_air_agility_factor = 0.05
@@ -6176,7 +6057,7 @@ focus_tree = {
 		icon = GFX_focus_GER_amerikabomber
 		prerequisite = { focus = GER_aerodynamic_research_institute }
 
-		x = 0
+		x = 3
 		y = 1
 		relative_position_id = GER_aerodynamic_research_institute
 		cost = 4
@@ -6185,16 +6066,9 @@ focus_tree = {
 		cancel_if_invalid = no
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = GER_war_with_american_country_tt
-				 any_enemy_country = {
-					capital_scope = { 
-						OR = {
-							is_on_continent = north_america
-							is_on_continent = south_america
-						}
-					}
-				}
+			or = {
+				is_special_project_being_researched = sp:sp_air_intercontinental_bomber
+				is_special_project_completed = sp:sp_air_intercontinental_bomber
 			}
 		}
 
@@ -6251,6 +6125,9 @@ focus_tree = {
 					category = transport_planes_cat
 					category = cat_strategic_bomber
 				}
+			}
+			sp:sp_air_intercontinental_bomber = {
+				add_project_progress_ratio = 0.33
 			}
 		}
 	}
@@ -6425,7 +6302,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				create_equipment_variant = {
-					name = "Bismarck"				
+					name = "Braunschweig class"				
 					name_group = GER_BB_HISTORICAL
 					type = ship_hull_heavy_2
 					modules = {
@@ -6447,9 +6324,9 @@ focus_tree = {
 					equipment = {
 						type = ship_hull_heavy_2
 						creator = "GER"
-						version_name = "Bismarck"
+						version_name = "Braunschweig class"
 					}
-					name = "Bismarck"
+					name = "SMS Braunschweig"
 					requested_factories = 1
 					progress = 0.7
 					amount = 1
@@ -6459,9 +6336,9 @@ focus_tree = {
 					equipment = {
 						type = ship_hull_heavy_2
 						creator = "GER"
-						version_name = "Bismarck"
+						version_name = "Braunschweig class"
 					}
-					name = "Tirpitz"
+					name = "SMS Hessen"
 					requested_factories = 1
 					progress = 0.7
 					amount = 1
@@ -6478,7 +6355,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				create_equipment_variant = {
-					name = "Bismarck"				
+					name = "Braunschweig class"				
 					name_group = GER_BB_HISTORICAL
 					type = ship_hull_heavy_2
 					modules = {
@@ -6500,9 +6377,9 @@ focus_tree = {
 					equipment = {
 						type = ship_hull_heavy_2
 						creator = "GER"
-						version_name = "Bismarck"
+						version_name = "Braunschweig class"
 					}
-					name = "Bismarck"
+					name = "SMS Braunschweig"
 					requested_factories = 1
 					progress = 0.7
 					amount = 1
@@ -6512,9 +6389,9 @@ focus_tree = {
 					equipment = {
 						type = ship_hull_heavy_2
 						creator = "GER"
-						version_name = "Bismarck"
+						version_name = "Braunschweig class"
 					}
-					name = "Tirpitz"
+					name = "SMS Hessen"
 					requested_factories = 1
 					progress = 0.7
 					amount = 1
@@ -6531,7 +6408,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				create_equipment_variant = {
-					name = "Bismarck"				
+					name = "Braunschweig class"				
 					name_group = GER_BB_HISTORICAL
 					type = ship_hull_heavy_2
 					modules = {
@@ -6553,9 +6430,9 @@ focus_tree = {
 					equipment = {
 						type = ship_hull_heavy_2
 						creator = "GER"
-						version_name = "Bismarck"
+						version_name = "Braunschweig class"
 					}
-					name = "Bismarck"
+					name = "SMS Braunschweig"
 					requested_factories = 1
 					progress = 0.7
 					amount = 1
@@ -6565,9 +6442,9 @@ focus_tree = {
 					equipment = {
 						type = ship_hull_heavy_2
 						creator = "GER"
-						version_name = "Bismarck"
+						version_name = "Braunschweig class"
 					}
-					name = "Tirpitz"
+					name = "SMS Hessen"
 					requested_factories = 1
 					progress = 0.7
 					amount = 1
@@ -6584,7 +6461,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				create_equipment_variant = {
-					name = "Bismarck"				
+					name = "Braunschweig class"				
 					name_group = GER_BB_HISTORICAL
 					type = ship_hull_heavy_2
 					modules = {
@@ -6606,9 +6483,9 @@ focus_tree = {
 					equipment = {
 						type = ship_hull_heavy_2
 						creator = "GER"
-						version_name = "Bismarck"
+						version_name = "Braunschweig class"
 					}
-					name = "Bismarck"
+					name = "SMS Braunschweig"
 					requested_factories = 1
 					progress = 0.7
 					amount = 1
@@ -6618,9 +6495,9 @@ focus_tree = {
 					equipment = {
 						type = ship_hull_heavy_2
 						creator = "GER"
-						version_name = "Bismarck"
+						version_name = "Braunschweig class"
 					}
-					name = "Tirpitz"
+					name = "SMS Hessen"
 					requested_factories = 1
 					progress = 0.7
 					amount = 1
@@ -7139,7 +7016,7 @@ focus_tree = {
 		prerequisite = { focus = GER_strengthen_the_kriegsmarine }
 
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = GER_strengthen_the_kriegsmarine
 		cost = 3
 		available = {
@@ -7971,7 +7848,7 @@ focus_tree = {
 		prerequisite = { focus = GER_unrestricted_convoy_raiding }
 		
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = GER_atlantic_naval_dominance
 
 		cost = 2
@@ -38415,6 +38292,717 @@ focus_tree = {
 		}
 	}
 	
+
+
+
+	###modded additions
+
+	focus = {
+		id = GER_bismark_hitler_favor
+		icon = GFX_focus_JAP_naval_armaments_program
+		prerequisite = { focus = GER_plan_z }
+		available = {
+			or = {
+				is_special_project_being_researched = sp:sp_naval_super_heavy_battleship
+				is_special_project_completed = sp:sp_naval_super_heavy_battleship
+			}
+			custom_trigger_tooltip = {
+				tooltip = var_fuher_idea_check_tt
+				check_variable = { var_fuher_idea > 1  }
+			}
+		}
+		x = 0
+		y = 3
+		relative_position_id = GER_plan_z
+		cost = 3
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_to_variable = {
+				var_fuher_idea = -1
+				tooltip = fuher_idea_tt
+			}
+
+			sp:sp_naval_super_heavy_battleship = {
+				add_project_progress_ratio = 0.4
+			}
+
+			create_equipment_variant = {
+				name = "Bismark Class"
+				type = ship_hull_super_heavy_1
+				name_group = GER_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
+				modules = {
+					fixed_ship_battery_slot = ship_super_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = heavy_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_shbb
+					front_1_custom_slot = ship_anti_air_1
+					front_2_custom_slot = ship_super_heavy_battery_1
+					mid_1_custom_slot = dp_ship_secondaries_3
+					mid_2_custom_slot = ship_secondaries_2
+					mid_3_custom_slot = ship_secondaries_2
+					rear_1_custom_slot = ship_super_heavy_battery_1
+					rear_2_custom_slot = ship_airplane_launcher_1
+				}
+				#design_team = mio:JAP_kure_naval_arsenal_organization
+			}
+			
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_super_heavy_1
+					creator = GER 
+					version_name = "Bismark Class"
+				}
+				name = "Bismarck" 
+				requested_factories = 5
+				progress = 0.75
+				amount = 1
+				#industrial_manufacturer = mio:JAP_kure_naval_arsenal_organization
+			}
+		}
+	}
+
+	focus = {
+		id = GER_divert_naval_guns_to_ratte
+		icon = GFX_focus_generic_railway_gun
+		prerequisite = { focus = GER_trade_interdiction }
+		available = {
+			or = {
+				is_special_project_being_researched = sp:sp_land_land_cruiser
+				is_special_project_completed = sp:sp_land_land_cruiser
+			}
+			custom_trigger_tooltip = {
+				tooltip = var_fuher_idea_check_tt
+				check_variable = { var_fuher_idea > 1  }
+			}
+		}
+		x = 0
+		y = 3
+		relative_position_id = GER_trade_interdiction
+		cost = 3
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_to_variable = {
+				var_fuher_idea = -1
+				tooltip = fuher_idea_tt
+			}
+			sp:sp_land_land_cruiser = {
+				add_project_progress_ratio = 0.33
+			}
+			58 = {
+				remove_building = {
+					type = dockyard
+					level = 4
+				}
+
+			}
+			57 = {
+				remove_building = {
+					type = arms_factory
+					level = 2
+				}
+				
+			}
+			add_timed_idea = { idea = diverted_project_funds days = 90 }
+		}
+	}
+
+	focus = {
+		id = GER_comet_rocket
+		icon = GFX_focus_PER_luftwaffe_planes
+		prerequisite = { focus = GER_aerodynamic_research_institute }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = var_fuher_idea_check_tt
+				check_variable = { var_fuher_idea > 1  }
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = GER_aerodynamic_research_institute
+		cost = 3
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_to_variable = {
+				var_fuher_idea = -1
+				tooltip = fuher_idea_tt
+			}
+			set_technology = {
+				experimental_rockets = 1
+			}
+			complete_special_project = {
+				project = sp:sp_rocket_interceptor
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			GER_modify_airforce_modifier = yes
+			add_to_variable = { 
+				GER_military_air_intercept_efficiency = 0.075
+				tooltip = air_intercept_efficiency_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GER_jet_research
+		icon = GFX_focus_generic_jet_planes
+		prerequisite = { focus = GER_aerodynamic_research_institute }
+		available = {
+			or = {
+				is_special_project_being_researched = sp:sp_air_jet_engine
+				is_special_project_completed = sp:sp_air_jet_engine
+			}
+			custom_trigger_tooltip = {
+				tooltip = var_fuher_idea_check_tt
+				check_variable = { var_fuher_idea > 1  }
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_aerodynamic_research_institute
+		cost = 3
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_to_variable = {
+				var_fuher_idea = -1
+				tooltip = fuher_idea_tt
+			}
+			sp:sp_air_jet_engine = {
+				add_project_progress_ratio = 0.33
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			GER_modify_airforce_modifier = yes
+			add_to_variable = { 
+				GER_military_air_agility_factor = 0.05
+				tooltip = air_agility_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GER_me_262_research
+		icon = GFX_focus_JAP_jet_prototypes
+		prerequisite = { focus = GER_jet_research }
+		available = {
+			is_special_project_completed = sp:sp_air_axial_jet_engine
+			custom_trigger_tooltip = {
+				tooltip = var_fuher_idea_check_tt
+				check_variable = { var_fuher_idea > 1  }
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_jet_research
+		cost = 3
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_to_variable = {
+				var_fuher_idea = -1
+				tooltip = fuher_idea_tt
+			}
+			set_technology = {
+				modern_small_airframe = 1
+			}
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				create_equipment_variant = { 
+					name = "Me 262" 
+					allow_without_tech = no
+					type = small_plane_airframe_4
+					design_team = mio:GER_messerschmitt_organization
+					modules = {
+						fixed_main_weapon_slot = aircraft_cannon_2_2x
+						fixed_auxiliary_weapon_slot_1 = aircraft_cannon_2_2x
+						engine_type_slot = jet_engine_2x
+						special_type_slot_1 = armor_plate_small
+						special_type_slot_2 = drop_tanks	
+						special_type_slot_3 = self_sealing_fuel_tanks_small	
+					}
+					icon = "GFX_GER_jet_plane_1_medium"
+					model = "GER_jet_plane_entity"
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_ar_234_research
+		icon = GFX_focus_JAP_z_bomber_project
+		prerequisite = { focus = GER_jet_research }
+		available = {
+			is_special_project_completed = sp:sp_air_axial_jet_engine
+			custom_trigger_tooltip = {
+				tooltip = var_fuher_idea_check_tt
+				check_variable = { var_fuher_idea > 1  }
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_jet_research
+		cost = 3
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_to_variable = {
+				var_fuher_idea = -1
+				tooltip = fuher_idea_tt
+			}
+			set_technology = {
+				modern_medium_airframe = 1
+			}
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				create_equipment_variant = { 
+					name = "Ar 234" 
+					allow_without_tech = no
+					type = medium_plane_airframe_4
+					design_team = mio:GER_dornier_organization
+					modules = {
+						fixed_main_weapon_slot = medium_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+						fixed_auxiliary_weapon_slot_2 = bomb_locks
+						engine_type_slot = jet_engine_2x
+						special_type_slot_1 = fuel_tanks_medium
+						special_type_slot_2 = empty	
+					}
+					icon = "GFX_medium_plane_4_medium"
+					model = "GER_medium_jet_plane_1_entity"
+				}
+			}
+			
+		}
+	}
+
+	focus = {
+		id = GER_fuhers_ambition
+		icon = GFX_focus_GER_support_the_fuhrer_historical
+		prerequisite = { focus = GER_panzergrenadier }
+		available = {
+			
+		}
+		x = 0
+		y = 2
+		relative_position_id = GER_panzergrenadier
+		cost = 3
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			if = {
+				limit = {
+					controls_state = 59
+				}
+				59 = { #Hannover
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_to_variable = {
+				var_fuher_idea = 1
+				tooltip = fuher_idea_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GER_waffentragers_research
+		icon = GFX_focus_generic_self_propelled_gun
+		prerequisite = { focus = GER_fuhers_ambition }
+		mutually_exclusive = { focus = GER_bigger_better_tigers }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = var_fuher_idea_check_tt
+				check_variable = { var_fuher_idea > 1  }
+			}
+		}
+		x = -4
+		y = 1
+		relative_position_id = GER_fuhers_ambition
+		cost = 3
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_to_variable = {
+				var_fuher_idea = -1
+				tooltip = fuher_idea_tt
+			}
+			GER_modify_army_modifier = yes
+			add_ideas = GER_waffen_tragers
+		}
+	}
+
+	focus = {
+		id = GER_bigger_better_tigers
+		icon = GFX_focus_generic_army_tanks2
+		prerequisite = { focus = GER_fuhers_ambition }
+		mutually_exclusive = { focus = GER_waffentragers_research }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = var_fuher_idea_check_tt
+				check_variable = { var_fuher_idea > 1  }
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = GER_fuhers_ambition
+		cost = 3
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_to_variable = {
+				var_fuher_idea = -1
+				tooltip = fuher_idea_tt
+			}
+			GER_modify_army_modifier = yes
+			add_ideas = GER_jagtigers
+		}
+	}
+
+	focus = {
+		id = GER_E100_research
+		icon = GFX_focus_generic_heavy_tank
+		prerequisite = { focus = GER_waffentragers_research focus = GER_bigger_better_tigers }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = var_fuher_idea_check_tt
+				check_variable = { var_fuher_idea > 1  }
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_bigger_better_tigers
+		cost = 3
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_to_variable = {
+				var_fuher_idea = -1
+				tooltip = fuher_idea_tt
+			}
+			add_tech_bonus = {
+				name = GER_panzergrenadier
+				ahead_reduction = 1
+				bonus = 1
+				uses = 1
+				technology = super_heavy_tank_chassis
+			}
+		}
+	}
+
+	focus = {
+		id = GER_E50_research
+		icon = GFX_focus_generic_tank_assembly
+		prerequisite = { focus = GER_waffentragers_research focus = GER_bigger_better_tigers }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = var_fuher_idea_check_tt
+				check_variable = { var_fuher_idea > 1  }
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_waffentragers_research
+		cost = 3
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_to_variable = {
+				var_fuher_idea = -1
+				tooltip = fuher_idea_tt
+			}
+			add_tech_bonus = {
+				name = GER_panzergrenadier
+				ahead_reduction = 1
+				bonus = 1
+				uses = 1
+				technology = main_battle_tank_chassis
+			}
+		}
+	}
+
+	focus = {
+		id = GER_dora_research
+		icon = GFX_focus_generic_railway_gun
+		prerequisite = { focus = GER_fuhers_ambition }
+		available = {
+			or = {
+				is_special_project_being_researched = sp:sp_land_super_heavy_railway_gun
+				is_special_project_completed = sp:sp_land_super_heavy_railway_gun
+			}
+			custom_trigger_tooltip = {
+				tooltip = var_fuher_idea_check_tt
+				check_variable = { var_fuher_idea > 1  }
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = GER_waffentragers_research
+		cost = 3
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			sp:sp_land_super_heavy_railway_gun = {
+				add_project_progress_ratio = 0.33
+			}
+			add_to_variable = {
+				var_fuher_idea = -1
+				tooltip = fuher_idea_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GER_stg_44_research
+		icon = GFX_focus_RAJ_uranium_tipped_bullets
+		prerequisite = { focus = GER_fuhers_ambition }
+		available = {
+			is_special_project_being_researched = sp:sp_intermediatary_cartidges
+			custom_trigger_tooltip = {
+				tooltip = var_fuher_idea_check_tt
+				check_variable = { var_fuher_idea > 1  }
+			}
+		}
+		x = 4
+		y = 1
+		relative_position_id = GER_waffentragers_research
+		cost = 2
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_to_variable = {
+				var_fuher_idea = -1
+				tooltip = fuher_idea_tt
+			}
+			sp:sp_intermediatary_cartidges = {
+				add_project_progress_ratio = 0.33
+			}
+		}
+	}
+
+	focus = {
+		id = GER_volksturm_mobilization
+		icon = GFX_focus_BEL_legacy_of_the_soldier_king
+		prerequisite = { focus = GER_fuhers_ambition }
+		available = {
+			surrender_progress > 0.075
+		}
+		x = 6
+		y = 1
+		relative_position_id = GER_fuhers_ambition
+		cost = 3
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			division_template = {
+				name = "Volksturm"
+				division_names_group = GER_INF_01
+				template_counter = 6
+				role = garrison
+				is_locked = no
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					infantry = { x = 3 y = 0 }
+					infantry = { x = 3 y = 1 }
+					infantry = { x = 3 y = 2 }
+					infantry = { x = 4 y = 0 }
+					infantry = { x = 4 y = 1 }
+					infantry = { x = 4 y = 2 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					logistics_company = { x = 0 y = 1 }
+					anti_air = { x = 0 y = 2 }
+					artillery = { x = 1 y = 0 }
+					anti_tank = { x = 1 y = 1 }
+				}
+			}
+
+			64 = {
+				create_unit = {
+					division = "name = \"Volksturm\" division_template = \"Volksturm\" start_experience_factor = 0.2"
+					owner = ENG
+					count = 40
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_stieners_attack
+		icon = GFX_focus_GER_support_the_fuhrer_historical
+		prerequisite = { focus = GER_volksturm_mobilization }
+		available = {
+			surrender_progress > 0.40
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_volksturm_mobilization
+		cost = 3
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_timed_ideas = {
+				idea = stiener_counter_attack
+				days = 14
+			}
+		}
+	}
+
+	focus = {
+		id = GER_uranverein
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = GER_fuhers_ambition }
+		x = 0
+		y = 1
+		relative_position_id = GER_fuhers_ambition
+		cost = 4
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = var_fuher_idea_check_tt
+				check_variable = { var_fuher_idea > 1  }
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_to_variable = {
+				var_fuher_idea = -1
+				tooltip = fuher_idea_tt
+			}
+			if = {
+				limit = {
+					NOT = { has_tech = atomic_research }
+				}
+				add_tech_bonus = {
+					name = GER_uranverein
+					bonus = 1.0
+					uses = 1
+					category = nuclear
+				}
+			}
+			else = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					OR = {
+						NOT = { is_special_project_completed = sp:sp_nuclear_reactor }
+						NOT = { is_special_project_completed = sp:sp_nuclear_bomb }
+						AND = {
+							has_dlc = "Gotterdammerung"
+							NOT = { is_special_project_completed = sp:sp_nuclear_warheads }
+						}
+					}
+				}
+				GER_add_or_modify_wunderwaffen = yes
+			}
+			if = {
+				limit = {
+					NOT = { is_special_project_completed = sp:sp_nuclear_reactor }
+				}
+				add_to_variable = { 
+					GER_wunderwaffen_sp_nuclear_reactor_speed_factor = GER_wunderwaffe_research_speed_bonus
+					tooltip = sp_nuclear_reactor_speed_factor_tt
+				}
+			}
+
+			if = {
+				limit = {
+					NOT = { is_special_project_completed = sp:sp_nuclear_bomb }
+				}
+				add_to_variable = { 
+					GER_wunderwaffen_sp_nuclear_bomb_speed_factor = GER_wunderwaffe_research_speed_bonus
+					tooltip = sp_nuclear_bomb_speed_factor_tt
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+					NOT = { is_special_project_completed = sp:sp_nuclear_warheads }
+				}
+				add_to_variable = { 
+					GER_wunderwaffen_sp_nuclear_warheads_speed_factor = GER_wunderwaffe_research_speed_bonus
+					tooltip = sp_nuclear_warheads_speed_factor_tt
+				}
+			}
+		}
+	}
+
+
 	shared_focus = cont_axis_joint_wol
 
 }
