@@ -29,6 +29,8 @@
  ENG_wol_army_bef_two:0 "British officers don't duck"
  ENG_wol_army_bef_three:0 "Recruit Gurkhas"
  ENG_wol_army_bef_four:0 "placeholder"
+ ENG_fight_them_on_the_beach:0 "Fight Them on the Beaches"
+ ENG_fight_them_on_the_beach_tt:0"§Y20§! home gaurd divisions will be spawned in Birmingham. These divisions are §Y20§! width equiped with engineers, anti air, anti tank and artillery support companies."
  ENG_support_spa:0"Support the Spanish Republicans"
  MON_support_spa:0"Support the Spanish Republicans"
  HUN_support_spa:0"Support the Spanish Coup"

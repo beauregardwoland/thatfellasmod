@@ -14419,21 +14419,21 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			OR = {
-				AND = {
-					date > 1939.5.1
-					date < 1939.8.1
-				}
-				AND = {
-					date > 1940.4.1
-					date < 1940.8.1
-				}
-				AND = {
-					date > 1941.3.1
-					date < 1941.8.1
-				}
-				date > 1942.1.1
-			}
+			#OR = {
+			#	AND = {
+			#		date > 1939.5.1
+			#		date < 1939.8.1
+			#	}
+			##	AND = {
+			#		date > 1940.4.1
+			#		date < 1940.8.1
+			#	}
+			#	AND = {
+			#		date > 1941.3.1
+			#		date < 1941.8.1
+			#	}
+			#	date > 1942.1.1
+			#}
 		}
 
 		cancel = {
