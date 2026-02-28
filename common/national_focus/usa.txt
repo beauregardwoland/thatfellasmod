@@ -7408,11 +7408,11 @@ focus_tree = {
 			SOV = {
 				add_offsite_building = {
 				type = industrial_complex
-				level = 5
+				level = 15
 			}
 				add_offsite_building = {
 				type = arms_factory
-				level = 5
+				level = 15
 			}
 			}
 		}
@@ -7447,25 +7447,10 @@ focus_tree = {
 				idea = USA_vic_plan2
 				days = 365
 			}
-			CAN = { 
-				add_timed_idea = {
-					idea = USA_vic_plan2
-					days = 365
+			every_country = {
+				limit = {
+					is_in_faction_with = ENG
 				}
-			} 
-			RAJ = { 
-				add_timed_idea = {
-					idea = USA_vic_plan2
-					days = 365
-				}	
-			}
-			ENG = {
-				add_timed_idea = {
-					idea = USA_vic_plan2
-					days = 365
-				}
-			}
-			BRA = {
 				add_timed_idea = {
 					idea = USA_vic_plan2
 					days = 365
@@ -7506,7 +7491,7 @@ focus_tree = {
 			SOV = {
 				add_offsite_building = {
 					type = arms_factory
-					level = 20
+					level = 35
 				}
 			}
 		}
@@ -7539,54 +7524,15 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = USA_vic_plan43
-				days = 365
+				days = 180
 			}
-			CAN = { 
-				add_timed_idea = {
-					idea = USA_vic_plan43
-					days = 365
+			every_country = {
+				limit = {
+					is_in_faction_with = ENG
 				}
-			} 
-			RAJ = { 
 				add_timed_idea = {
 					idea = USA_vic_plan43
-					days = 365
-				}	
-			}
-			ENG = {
-				add_timed_idea = {
-					idea = USA_vic_plan43
-					days = 365
-				}
-			}
-			BRA = {
-				add_timed_idea = {
-					idea = USA_vic_plan43
-					days = 365
-				}
-			}
-			AST = {
-				add_timed_idea = {
-					idea = USA_vic_plan43
-					days = 365
-				}
-			}
-			FRA = {
-				add_timed_idea = {
-					idea = USA_vic_plan43
-					days = 365
-				}
-			}
-			MEX = {
-				add_timed_idea = {
-					idea = USA_vic_plan43
-					days = 365
-				}
-			}
-			SAF = {
-				add_timed_idea = {
-					idea = USA_vic_plan43
-					days = 365
+					days = 180
 				}
 			}
 		}
