@@ -1,7 +1,7 @@
 sp_naval_compact_bbs = {
 	specialization = specialization_naval 
 
-	project_tags = sp_tag_submarine
+	project_tags = sp_tag_surface_ship
 	
 	complexity = sp_complexity.small
 	prototype_time = sp_time.prototype.short
@@ -66,6 +66,74 @@ sp_naval_compact_bbs = {
 		sp_naval_generic_reward_test_failure_1
 		sp_naval_generic_reward_test_failure_2
 		sp_naval_generic_reward_test_failure_3
+	}
+	
+}
+
+sp_intermediatary_cartidges = {
+	specialization = specialization_land
+
+	project_tags = sp_tag_artillery
+	
+	complexity = sp_complexity.medium
+	prototype_time = sp_time.prototype.medium
+	allowed = {
+		has_dlc = "Man the Guns"
+	}
+
+	#special_project_parent = {
+	#	
+	#}
+
+	available = { 
+		FROM = {
+			has_tech = support_weapons4
+		}
+	}
+
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 8
+			#chromium = 8
+		 }
+	}
+	
+	project_output = {
+		country_effects = {
+			custom_effect_tooltip = sp_intermediatary_cartidges_tt
+			set_technology = {
+				tech_intermediatary_cartidges = 1
+				popup = yes
+			}
+		}
+
+	}
+
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1
+		sp_land_generic_reward_army_xp_2
+		sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
+		sp_land_generic_reward_artillery_tech_1
+		sp_land_generic_reward_artillery_tech_2
+		sp_land_generic_reward_artillery_tech_3
+		sp_land_generic_reward_artillery_bonus_1
+		sp_land_generic_reward_artillery_bonus_2
+		sp_land_generic_reward_artillery_bonus_3
+		sp_land_generic_reward_resource_scarcity
+		sp_land_generic_reward_critical_failure
 	}
 	
 }

@@ -13,8 +13,11 @@
  tooltip_white_line: "******************************************************"
  sp_naval_compact_bbs:0"Compact Battleships"
  sp_naval_compact_bbs_desc:0"The great war and following naval treaties have constrained and limited the size of battleships, in order to truly maintain the battleship as a viable weapon we must look to innovate to maintain the advantage of firepower on the seas."
- sp_intermadiary_cartidges:0"Intermediary Cartidges"
- sp_intermadiary_cartidges_desc:0"The development of more advanced rifle and submachine gun ammunition has allowed for increased range and volume of power, it has howver not come uniformly to both weapons platforms. We must aim to develop a new type of ammunition that can harness the strenghts of pistol caliber and rifle caliber rounds."
+ sp_intermediatary_cartidges:0"Intermediary Cartidges"
+ sp_intermediatary_cartidges_desc:0"The development of more advanced rifle and submachine gun ammunition has allowed for increased range and volume of power, it has howver not come uniformly to both weapons platforms. We must aim to develop a new type of ammunition that can harness the strenghts of pistol caliber and rifle caliber rounds."
+ sp_intermediatary_cartidges_tt:0"[sp_inter_cart_script]"
+ tech_intermediatary_cartidges:0"Intermediary Cartidges"
+ 
  minor_nation:0"Minor Nation QOL"
  woland_gp_allowed_vols:0"§Y6§! Volunteer Divisions Allowed"
  woland_gp_allowed_vols_1:0"§Y7§! Volunteer Divisions Allowed"

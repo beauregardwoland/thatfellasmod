@@ -757,6 +757,20 @@ country_event = {  ###zaibatsu choice
 	}
 }
 
+country_event = {  ###zaibatsu choice
+	id = wol_qol.23
+	title = wol_qol.23.t
+	desc = wol_qol.23.d
+	picture = GFX_report_event_gre_italian_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.23.a
+		ai_chance = { base = 100 }
+	}
+}
+
 country_event = {
 	id = wol_qol.101
 	title = wol_qol.101.t

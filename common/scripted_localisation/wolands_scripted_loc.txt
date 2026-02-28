@@ -353,3 +353,11 @@ defined_text = {
 	}
 	
 }
+
+defined_text = {
+	name = sp_inter_cart_script
+	text = {
+		trigger = { always = yes }
+		localization_key = tech_effect|tech_intermediatary_cartidges
+	}
+}

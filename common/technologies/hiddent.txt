@@ -115,4 +115,19 @@ technologies = {
 			maximum_speed = -0.2
 		}
 	}
+	tech_intermediatary_cartidges = { #
+
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		category_army = {
+			soft_attack = 0.025
+			hard_attack = 0.025
+		}
+		supply_consumption_factor = -0.025
+	}
 }
