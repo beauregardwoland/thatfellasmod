@@ -263,4 +263,11 @@
  wol_qol.22.b:0"Kawasaki"
  wol_qol.22.c:0"Mitsui"
  wol_qol.22.d1:0"Sumitomo"
+
+ wol_qol.23.t:0"Spanish Troop Movementd"
+ wol_qol.23.d:0"Recent reports have confirmed massive movements and shuffleing of Spanish troops, it seems the Spanish government is preparing for a large scale conflict."
+ wol_qol.23.a:0"Will the rock hold"
+ SPA_unite_iberia_2:0"Unite Iberia"
+ SPA_join_the_war:0"Join the War"
+
  jap_starter_event_tt: "§YThis will empower their associeted mios allowing them to share funds via research!§!"
