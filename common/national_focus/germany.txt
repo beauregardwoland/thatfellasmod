@@ -5245,6 +5245,10 @@ focus_tree = {
 		available = {
 		}
 
+		allow_branch = {
+			always = no
+		}
+
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
@@ -5980,11 +5984,11 @@ focus_tree = {
 	focus = {
 		id = GER_aerodynamic_research_institute
 		icon = GFX_focus_generic_aircraft_production
-		prerequisite = { focus = GER_rocketry_innovations focus = GER_solve_the_logistical_bottlenecks focus = GER_construct_the_kammhuber_line focus = GER_establish_night_fighter_squadrons}
+		prerequisite = { focus = GER_dive_bombers focus = GER_tactical_bombers focus = GER_uralbomber_program focus = GER_reorganize_the_luftwaffe }
 
 		x = 0
-		y = 1
-		relative_position_id = GER_solve_the_logistical_bottlenecks
+		y = 2
+		relative_position_id = GER_tactical_bombers
 		cost = 4
 		available = {
 		}
@@ -6057,7 +6061,7 @@ focus_tree = {
 		icon = GFX_focus_GER_amerikabomber
 		prerequisite = { focus = GER_aerodynamic_research_institute }
 
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = GER_aerodynamic_research_institute
 		cost = 4
@@ -38308,7 +38312,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = var_fuher_idea_check_tt
-				check_variable = { var_fuher_idea > 1  }
+				check_variable = { var_fuher_idea > 0.5  }
 			}
 		}
 		x = 0
@@ -38380,7 +38384,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = var_fuher_idea_check_tt
-				check_variable = { var_fuher_idea > 1  }
+				check_variable = { var_fuher_idea > 0.5  }
 			}
 		}
 		x = 0
@@ -38424,7 +38428,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = var_fuher_idea_check_tt
-				check_variable = { var_fuher_idea > 1  }
+				check_variable = { var_fuher_idea > 0.5  }
 			}
 		}
 		x = -2
@@ -38467,7 +38471,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = var_fuher_idea_check_tt
-				check_variable = { var_fuher_idea > 1  }
+				check_variable = { var_fuher_idea > 0.5  }
 			}
 		}
 		x = 0
@@ -38503,7 +38507,7 @@ focus_tree = {
 			is_special_project_completed = sp:sp_air_axial_jet_engine
 			custom_trigger_tooltip = {
 				tooltip = var_fuher_idea_check_tt
-				check_variable = { var_fuher_idea > 1  }
+				check_variable = { var_fuher_idea > 0.5  }
 			}
 		}
 		x = -1
@@ -38554,7 +38558,7 @@ focus_tree = {
 			is_special_project_completed = sp:sp_air_axial_jet_engine
 			custom_trigger_tooltip = {
 				tooltip = var_fuher_idea_check_tt
-				check_variable = { var_fuher_idea > 1  }
+				check_variable = { var_fuher_idea > 0.5  }
 			}
 		}
 		x = 1
@@ -38608,7 +38612,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = GER_panzergrenadier
-		cost = 3
+		cost = 1
 		ai_will_do = {
 			factor = 3
 		}
@@ -38655,7 +38659,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = var_fuher_idea_check_tt
-				check_variable = { var_fuher_idea > 1  }
+				check_variable = { var_fuher_idea > 0.5  }
 			}
 		}
 		x = -4
@@ -38684,7 +38688,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = var_fuher_idea_check_tt
-				check_variable = { var_fuher_idea > 1  }
+				check_variable = { var_fuher_idea > 0.5  }
 			}
 		}
 		x = -2
@@ -38712,7 +38716,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = var_fuher_idea_check_tt
-				check_variable = { var_fuher_idea > 1  }
+				check_variable = { var_fuher_idea > 0.5  }
 			}
 		}
 		x = 0
@@ -38745,7 +38749,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = var_fuher_idea_check_tt
-				check_variable = { var_fuher_idea > 1  }
+				check_variable = { var_fuher_idea > 0.5  }
 			}
 		}
 		x = 0
@@ -38782,12 +38786,12 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = var_fuher_idea_check_tt
-				check_variable = { var_fuher_idea > 1  }
+				check_variable = { var_fuher_idea > 0.5  }
 			}
 		}
 		x = 2
 		y = 1
-		relative_position_id = GER_waffentragers_research
+		relative_position_id = GER_fuhers_ambition
 		cost = 3
 		ai_will_do = {
 			factor = 3
@@ -38812,12 +38816,12 @@ focus_tree = {
 			is_special_project_being_researched = sp:sp_intermediatary_cartidges
 			custom_trigger_tooltip = {
 				tooltip = var_fuher_idea_check_tt
-				check_variable = { var_fuher_idea > 1  }
+				check_variable = { var_fuher_idea > 0.5  }
 			}
 		}
 		x = 4
 		y = 1
-		relative_position_id = GER_waffentragers_research
+		relative_position_id = GER_fuhers_ambition
 		cost = 2
 		ai_will_do = {
 			factor = 3
@@ -38873,19 +38877,13 @@ focus_tree = {
 					infantry = { x = 4 y = 1 }
 					infantry = { x = 4 y = 2 }
 				}
-				support = {
-					engineer = { x = 0 y = 0 }
-					logistics_company = { x = 0 y = 1 }
-					anti_air = { x = 0 y = 2 }
-					artillery = { x = 1 y = 0 }
-					anti_tank = { x = 1 y = 1 }
-				}
+				
 			}
 
 			64 = {
 				create_unit = {
 					division = "name = \"Volksturm\" division_template = \"Volksturm\" start_experience_factor = 0.2"
-					owner = ENG
+					owner = GER
 					count = 40
 				}
 			}
@@ -38908,7 +38906,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_timed_ideas = {
+			add_timed_idea = {
 				idea = stiener_counter_attack
 				days = 14
 			}
@@ -38926,7 +38924,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = var_fuher_idea_check_tt
-				check_variable = { var_fuher_idea > 1  }
+				check_variable = { var_fuher_idea > 0.5  }
 			}
 		}
 
