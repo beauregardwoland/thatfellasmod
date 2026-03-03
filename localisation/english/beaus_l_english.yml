@@ -393,7 +393,7 @@
  axis_foriegn_buildup_tt: "Change §0Axis Investment Points§! by: $RIGHT|+=0$"
  fuher_idea_tt: "Change §0Führer Ideas§! by: $RIGHT|+=0$"
  var_fuher_idea:0"Führer Ideas"
- GER_new_fuher_idea_mission:0"Führers Ambition Shifts"
+ GER_new_fuher_idea_mission:0"The Führer's Ambition Shifts"
  var_fuher_idea_check_tt:0"Must have more than §Y1§! Führer Ideas points currently §Y[?ger.var_fuher_idea]§!"
 
  axis_foriegn_cost_tt: "Has at Least §Y1§! §0Axis Investment Points§! current §Y[?var_axis_spare_industrial_hubs]§!"

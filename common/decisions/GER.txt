@@ -168,7 +168,7 @@ GER_mefo_bills_category = {
 				var_fuher_idea = 1
 				tooltip = fuher_idea_tt
 			}
-			activate_mission = GER_new_fuher_idea
+			activate_mission = GER_new_fuher_idea_mission
 		}
 
 		ai_will_do = {
