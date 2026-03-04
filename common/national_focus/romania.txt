@@ -5421,7 +5421,7 @@ focus_tree = {
 			add_ideas = woland_minor_allowed_vols
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_0
-				amount = 1000
+				amount = 2000
 			}
 			add_equipment_to_stockpile = {
 				type = artillery_equipment_1
