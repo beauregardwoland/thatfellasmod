@@ -5164,93 +5164,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = wuw_HUN_royal_hussars
-		icon = GFX_focus_HABSBURG_defensive_hussars
-		prerequisite = { focus = wuw_HUN_secure_army_loyalty }
-		#mutually_exclusive = { focus = wuw_HUN_seek_an_alliance_with_the_kaiser }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_secure_army_loyalty
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-			has_government = neutrality
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			add_ideas = { POL_royal_hussars_idea }
-
-			custom_effect_tooltip = wuw_HUN_royal_hussars_tt
-			hidden_effect = {
-
-				delete_unit_template_and_units = {
-					division_template = "Magyar Királyi Huszárok"
-					disband = yes #if yes, will refund equipment/manpower.
-				}
-
-				division_template = {
-					name = "Magyar Királyi Huszárok"
-					priority = 2
-					division_names_group = HUN_CAV_01
-					role = mobile
-					regiments = {
-						cavalry = { x = 0 y = 0 }
-						cavalry = { x = 0 y = 1 }
-						cavalry = { x = 0 y = 2 }
-
-						cavalry = { x = 1 y = 0 }
-						cavalry = { x = 1 y = 1 }
-						cavalry = { x = 1 y = 2 }
-
-						cavalry = { x = 2 y = 0 }
-						cavalry = { x = 2 y = 1 }
-						cavalry = { x = 2 y = 2 }
-					}
-				}
-				random_owned_controlled_state = {
-					prioritize = { 43 }
-					create_unit = {
-						division = "name = \"1 Magyar Királyi Huszárok\" division_template = \"Magyar Királyi Huszárok\" start_experience_factor = 1.0"
-						owner = HUN
-					}
-				}
-				random_owned_controlled_state = {
-					prioritize = { 43 }
-					create_unit = {
-						division = "name = \"2 Magyar Királyi Huszárok\" division_template = \"Magyar Királyi Huszárok\" start_experience_factor = 1.0"
-						owner = HUN
-					}
-				}
-				random_owned_controlled_state = {
-					prioritize = { 43 }
-					create_unit = {
-						division = "name = \"3 Magyar Királyi Huszárok\" division_template = \"Magyar Királyi Huszárok\" start_experience_factor = 1.0"
-						owner = HUN
-					}
-				}
-			}
-
-
-		}
-	}
-
-	focus = {
 		id = wuw_HUN_purchase_burgenland
 		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = wuw_HUN_enact_agrarian_reform }
@@ -18693,6 +18606,93 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = HUN_hungarian_gendarmerie
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_royal_hussars
+		icon = GFX_focus_HABSBURG_defensive_hussars
+		prerequisite = { focus = wuw_HUN_magyar_kiralyi_csendorseg }
+		#mutually_exclusive = { focus = wuw_HUN_seek_an_alliance_with_the_kaiser }
+		x = 0
+		y = 3
+		relative_position_id = wuw_HUN_magyar_kiralyi_csendorseg
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_government = neutrality
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_ideas = { POL_royal_hussars_idea }
+
+			custom_effect_tooltip = wuw_HUN_royal_hussars_tt
+			hidden_effect = {
+
+				delete_unit_template_and_units = {
+					division_template = "Magyar Királyi Huszárok"
+					disband = yes #if yes, will refund equipment/manpower.
+				}
+
+				division_template = {
+					name = "Magyar Királyi Huszárok"
+					priority = 2
+					division_names_group = HUN_CAV_01
+					role = mobile
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 1 y = 2 }
+
+						cavalry = { x = 2 y = 0 }
+						cavalry = { x = 2 y = 1 }
+						cavalry = { x = 2 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					prioritize = { 43 }
+					create_unit = {
+						division = "name = \"1 Magyar Királyi Huszárok\" division_template = \"Magyar Királyi Huszárok\" start_experience_factor = 1.0"
+						owner = HUN
+					}
+				}
+				random_owned_controlled_state = {
+					prioritize = { 43 }
+					create_unit = {
+						division = "name = \"2 Magyar Királyi Huszárok\" division_template = \"Magyar Királyi Huszárok\" start_experience_factor = 1.0"
+						owner = HUN
+					}
+				}
+				random_owned_controlled_state = {
+					prioritize = { 43 }
+					create_unit = {
+						division = "name = \"3 Magyar Királyi Huszárok\" division_template = \"Magyar Királyi Huszárok\" start_experience_factor = 1.0"
+						owner = HUN
+					}
+				}
+			}
+
+
 		}
 	}
 
