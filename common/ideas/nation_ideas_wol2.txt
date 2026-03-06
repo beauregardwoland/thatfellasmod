@@ -132,7 +132,7 @@ ideas = {
 				always = no
 			}
 
-			picture = general_staff
+			picture = generic_navy_cruiser_warfare
 
 			allowed_civil_war = {
 				always = yes
@@ -148,7 +148,7 @@ ideas = {
 				always = no
 			}
 
-			picture = general_staff
+			picture = generic_navy_cruiser_warfare
 
 			allowed_civil_war = {
 				always = yes
@@ -164,7 +164,7 @@ ideas = {
 				always = no
 			}
 
-			picture = general_staff
+			picture = generic_navy_cruiser_warfare
 
 			allowed_civil_war = {
 				always = yes
@@ -186,7 +186,7 @@ ideas = {
 				always = no
 			}
 
-			picture = general_staff
+			picture = generic_navy_cruiser_warfare
 
 			allowed_civil_war = {
 				always = yes
@@ -211,7 +211,7 @@ ideas = {
 				always = no
 			}
 
-			picture = general_staff
+			picture = army_ordnance_department
 
 			allowed_civil_war = {
 				always = yes
@@ -230,7 +230,7 @@ ideas = {
 				always = no
 			}
 
-			picture = general_staff
+			picture = army_ordnance_department
 
 			allowed_civil_war = {
 				always = yes
@@ -254,14 +254,14 @@ ideas = {
 				always = no
 			}
 
-			picture = general_staff
+			picture = army_ordnance_department
 
 			allowed_civil_war = {
 				always = yes
 			}
 
 			research_bonus = {
-				infantry_tech = 0.1
+				infantry_weapons = 0.1
 			}
 			equipment_bonus = {
 				infantry_equipment = {
@@ -276,7 +276,7 @@ ideas = {
 				always = no
 			}
 
-			picture = general_staff
+			picture = army_ordnance_department
 
 			allowed_civil_war = {
 				always = yes
@@ -288,7 +288,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.075
 			}
 			research_bonus = {
-				infantry_tech = 0.1
+				infantry_weapons = 0.1
 			}
 			equipment_bonus = {
 				infantry_equipment = {
@@ -303,14 +303,14 @@ ideas = {
 				always = no
 			}
 
-			picture = general_staff
+			picture = army_ordnance_department
 
 			allowed_civil_war = {
 				always = yes
 			}
 
 			modifier = {
-				equipment_capture_factor = 0.2
+				equipment_capture = 0.025
 				production_factory_max_efficiency_factor = 0.025
 				production_factory_efficiency_gain_factor = 0.025
 			}

@@ -5261,7 +5261,7 @@ focus_tree = {
 				remove_idea = ROM_procurement_21
 				add_idea = ROM_procurement_22
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			#custom_effect_tooltip = generic_skip_one_line_tt
 			add_political_power = 50
 		}
 	}

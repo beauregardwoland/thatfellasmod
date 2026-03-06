@@ -30316,14 +30316,14 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 3
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
 		}
 
 		available = {
-			has_war = yes
+			#has_war = yes
 		}
 
 		bypass = {
