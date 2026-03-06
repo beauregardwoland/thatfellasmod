@@ -5233,7 +5233,8 @@ focus_tree = {
 	focus = {
 		id = ROM_scavenge_equipment
 		icon = GFX_focus_generic_reorient_production
-		prerequisite = { focus = ROM_liscense_equipment focus = ROM_the_zb_53 }
+		prerequisite = { focus = ROM_liscense_equipment }
+		prerequisite = { focus = ROM_the_zb_53 }
 		x = -1
 		y = 1
 		relative_position_id = ROM_liscense_equipment
