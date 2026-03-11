@@ -29919,7 +29919,7 @@ focus_tree = {
 		prerequisite = { focus = JAP_establish_showa_aircraft_idnsutry }
 
 		relative_position_id = JAP_establish_showa_aircraft_idnsutry
-		x = -1
+		x = -3
 		y = 1
 
 		cost = 5
@@ -30032,7 +30032,7 @@ focus_tree = {
 		prerequisite = { focus = JAP_develop_new_fighters }
 
 		relative_position_id = JAP_develop_new_fighters
-		x = -1
+		x = 0
 		y = 1
 
 		cost = 5
@@ -30127,7 +30127,7 @@ focus_tree = {
 		prerequisite = { focus = JAP_establish_showa_aircraft_idnsutry }
 
 		relative_position_id = JAP_establish_showa_aircraft_idnsutry
-		x = 1
+		x = 3
 		y = 1
 
 		cost = 5
@@ -30313,7 +30313,7 @@ focus_tree = {
 		prerequisite = { focus = JAP_develop_new_fighters focus = JAP_modern_bombers }
 
 		relative_position_id = JAP_develop_new_fighters
-		x = 1
+		x = 3
 		y = 1
 
 		cost = 2
@@ -33339,20 +33339,20 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_prio_carrier_fighters
-		icon = GFX_focus_jap_zero
+		icon = GFX_focus_generic_copy_plane_designs
 		
 		#mutually_exclusive = {
 		#	focus = 
 		#}
 
-		prerequisite = { focus = JAP_sea_sturdy_aircraft focus = JAP_sea_long_operational_range }
+		prerequisite = { focus = JAP_establish_showa_aircraft_idnsutry }
 		mutually_exclusive = { focus = JAP_prio_heavy_fighters }
 
-		relative_position_id = JAP_sea_sturdy_aircraft
-		x = -3
+		relative_position_id = JAP_establish_showa_aircraft_idnsutry
+		x = -1
 		y = 1
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 3
@@ -33373,6 +33373,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			#JAP_small_army_faction_loss = yes
+			JAP_small_naval_faction_gain = yes
 			JAP_add_or_modify_army_and_naval_air_services = yes
 			add_ideas = JAP_prioritize_naval_aircraft_construction_1
 		}
@@ -33380,20 +33382,20 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_prio_heavy_fighters
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_focus_usa_escort_fighters
 		
 		#mutually_exclusive = {
 		#	focus = 
 		#}
 
-		prerequisite = { focus = JAP_sea_sturdy_aircraft focus = JAP_sea_long_operational_range }
+		prerequisite = { focus = JAP_establish_showa_aircraft_idnsutry }
 		mutually_exclusive = { focus = JAP_prio_carrier_fighters }
 
-		relative_position_id = JAP_sea_sturdy_aircraft
-		x = -1
+		relative_position_id = JAP_establish_showa_aircraft_idnsutry
+		x = 1
 		y = 1
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 3
@@ -33414,6 +33416,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			JAP_small_army_faction_gain = yes
+			#JAP_small_naval_faction_loss = yes
 			JAP_add_or_modify_army_and_naval_air_services = yes
 			add_ideas = JAP_prioritize_army_aircraft_construction_1
 		}
