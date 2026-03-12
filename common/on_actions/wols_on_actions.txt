@@ -2,31 +2,37 @@ on_actions = {
 	on_startup = {
 		effect = {
 			CAN = {  
+				country_event = wol_qol.15
 				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
 			}
 			AST = {  
+				country_event = wol_qol.15
 				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
 			}
-			RAJ = {  
+			RAJ = {
+				country_event = wol_qol.15  
 				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
 			}
 			NZL = {  
+				country_event = wol_qol.15
 				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
 			}
-			SAF = {  
+			SAF = { 
+				country_event = wol_qol.15 
 				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
 			}
 			MAL = {  
+				country_event = wol_qol.15
 				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
@@ -48,16 +54,32 @@ on_actions = {
 			}
 			GER = {
 				add_ideas = woland_gp_allowed_vols
+				country_event = wol_qol.9
+				country_event = wol_qol.17
 			}
 			SOV = {
 				add_ideas = woland_gp_allowed_vols_1
+				country_event = wol_qol.12
+				country_event = wol_qol.16
 			}
 			JAP = {
 				add_ideas = woland_major_allowed_vols
+				country_event = wol_qol.11
+				country_event = wol_qol.18
 			}
 			ITA = {
 				add_ideas = woland_major_allowed_vols
+				country_event = wol_qol.10
+				country_event = wol_qol.17
 			}
+			ENG = { country_event = wol_qol.13 country_event = wol_qol.15 }
+			USA = { country_event = wol_qol.14 }
+			MON = { country_event = wol_qol.16 }
+			BUL = { country_event = wol_qol.17 }
+			HUN = { country_event = wol_qol.17 }
+			ROM = { country_event = wol_qol.17 }
+			MAN = { country_event = wol_qol.18 }
+			SIA = { country_event = wol_qol.18 }
 			ETH = {
 				set_technology = {
 					tech_support = 1

@@ -6074,6 +6074,10 @@ focus_tree = {
 				is_special_project_being_researched = sp:sp_air_intercontinental_bomber
 				is_special_project_completed = sp:sp_air_intercontinental_bomber
 			}
+			custom_trigger_tooltip = {
+				tooltip = var_fuher_idea_check_tt
+				check_variable = { var_fuher_idea > 0.5  }
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -6130,6 +6134,9 @@ focus_tree = {
 					category = cat_strategic_bomber
 				}
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			sp:sp_air_intercontinental_bomber = {
 				add_project_progress_ratio = 0.33
 			}
@@ -38618,32 +38625,6 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			if = {
-				limit = {
-					controls_state = 59
-				}
-				59 = { #Hannover
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			else = {
-				random_owned_state = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
 			add_to_variable = {
 				var_fuher_idea = 1
 				tooltip = fuher_idea_tt
