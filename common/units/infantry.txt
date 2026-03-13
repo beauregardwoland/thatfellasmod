@@ -167,6 +167,7 @@ sub_units = {
 		weight = 0.5
 		supply_consumption = 0.05
 		breakthrough = 0.3
+		defense = -0.15
 	
 		need = {
 			infantry_equipment = 250
@@ -231,6 +232,7 @@ sub_units = {
 		weight = 0.5
 		supply_consumption = 0.05
 		breakthrough = 0.3
+		defense = -0.15
 	
 		need = {
 			infantry_equipment = 250
@@ -295,6 +297,7 @@ sub_units = {
 		
 		supply_consumption = 0.05
 		breakthrough = 0.3
+		defense = -0.15
 	
 		need = {
 			infantry_equipment = 250
@@ -356,6 +359,7 @@ sub_units = {
 
 		supply_consumption = 0.05
 		breakthrough = 0.3
+		defense = -0.15
 
 		need = {
 			infantry_equipment = 250
@@ -413,6 +417,8 @@ sub_units = {
 		suppression = 1
 		weight = 0.5
 		supply_consumption = 0.05
+		breakthrough = 0.3
+		defense = -0.15
 
 		can_be_parachuted = yes
 	
