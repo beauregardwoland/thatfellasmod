@@ -296,6 +296,7 @@ on_actions = {
 					idea = woland_day_one_production
 					days = 30
 				}
+				country_event = wol_qol.5
 				add_ideas = heavy_fighter_nerf
 				#add_ideas = air_nerf
 				army_experience = 10
