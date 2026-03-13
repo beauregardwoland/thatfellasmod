@@ -455,7 +455,7 @@
  JAP_sumitomo_heavy_vehicles = {
 	icon = GFX_idea_sumitomo
 
-	allowed = { or = { original_tag = JAP original_tag = MAN } }
+	allowed = { original_tag = JAP }
 
 	equipment_type = { armor }
 	research_categories = { mio_cat_tech_all_armor_and_modules }
@@ -765,7 +765,7 @@
  JAP_kawasaki_heavy_vehicles = {
 	icon = GFX_idea_kawasaki
 
-	allowed = { or = { original_tag = JAP original_tag = MAN } }
+	allowed = { original_tag = JAP }
 
 	equipment_type = { armor train_equipment }
 	research_categories = { mio_cat_tech_all_armor_and_modules train_tech }
@@ -7355,7 +7355,7 @@ JAP_nissan_light_vehicles = {
 
  JAP_mitsui_heavy_vehicles = {
 	icon = GFX_idea_mitsui
-	allowed = { or = { original_tag = JAP original_tag = MAN } }
+	allowed = { original_tag = JAP }
 
 	equipment_type = { mio_cat_eq_all_heavy_tank mio_cat_eq_all_tank_destroyers mio_cat_eq_all_artillery_track }
 	research_categories = { mio_cat_tech_all_armor_and_modules }
@@ -7389,9 +7389,11 @@ JAP_nissan_light_vehicles = {
 
 		production_bonus = {
 			production_conversion_speed_factor = 0.1
+			production_efficiency_cap_factor = 0.025
 		}
 		equipment_bonus = {
 			reliability = -0.05
+			soft_attack = 0.05
 		}
 	}
 	trait = {

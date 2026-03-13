@@ -31,6 +31,85 @@
 #    ### #  # #  # ### ##  
 
 ###########################
+
+MAN_sumitomo_org = { 
+	include = JAP_sumitomo_heavy_vehicles
+	icon = GFX_idea_sumitomo
+	name = "Sumitomo Metal Industries"
+	allowed = { 
+		tag = MAN
+	}
+	on_tech_research_completed = {
+		add_mio_research_bonus = 0.025
+	}
+	initial_trait = {
+		name = JAP_sumitomo_heavy_vehicles_initial
+
+		equipment_bonus = {
+			build_cost_ic = 0.025
+			armor_value = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.15
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.1
+		}
+	}
+ }
+
+MAN_kawasaki_org = { 
+	include = JAP_kawasaki_heavy_vehicles
+	icon = GFX_idea_kawasaki
+	name = "Kawasaki Heavy Industries Armored Division"
+	allowed = { 
+		tag = MAN
+	}
+	on_tech_research_completed = {
+		add_mio_research_bonus = 0.025
+	}
+	initial_trait = {
+		name = JAP_kawasaki_heavy_vehicles_initial
+
+		equipment_bonus = {
+			maximum_speed = 0.1
+			reliability = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.15
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.1
+		}
+	}
+ }
+
+ MAN_mitsui_org = { 
+	include = JAP_mitsui_heavy_vehicles
+	icon = GFX_idea_mitsui
+	name = "Mitsui Heavy Industries Co."
+	allowed = { 
+		tag = MAN
+	}
+	on_tech_research_completed = {
+		add_mio_research_bonus = 0.025
+	}
+	initial_trait = {
+		name = JAP_mitsui_heavy_vehicles_initial
+
+		production_bonus = {
+			production_conversion_speed_factor = 0.1
+			production_efficiency_cap_factor = 0.025
+			production_resource_need_factor = -0.1
+		}
+		equipment_bonus = {
+			reliability = -0.05
+			soft_attack = 0.05
+		}
+	}
+ }
+
+
 MAN_mamc_organization = {
 	include = generic_light_aircraft_organization
 	icon = GFX_idea_generic_air_manufacturer_1
