@@ -1,0 +1,10 @@
+
+NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.0001;
+NDefines.NCountry.AIR_SUPPLY_CONVERSION_SCALE = 0.05;
+NDefines.NCountry.EVENT_PROCESS_OFFSET = 30;
+
+
+
+
+
+
