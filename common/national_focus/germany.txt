@@ -14307,6 +14307,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+			date > 1940.3.01
 			#OR = {
 			#	AND = {
 			#		date > 1939.5.1
