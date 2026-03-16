@@ -28,6 +28,76 @@ focus_tree = {
 
 	continuous_focus_position = { x = 55 y = 1600 }
 
+	shortcut = {
+		name = SOV_politics_hist
+		target = SOV_the_path_of_marxism_leninism
+		scroll_wheel_factor = 0.5
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = SOV_politics_alt_hist_1
+		target = SOV_beaten_but_not_defeated
+		scroll_wheel_factor = 0.5
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = SOV_economy_foc
+		target = SOV_finish_the_five_year_plan
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = SOV_navy_foc
+		target = SOV_expand_the_red_fleet
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = SOV_airforce_foc
+		target = SOV_transpolar_flights
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = SOV_army_foc
+		target = SOV_the_glory_of_the_red_army
+		scroll_wheel_factor = 0.5
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = SOV_diplo_path
+		target = SOV_baltic_security
+		scroll_wheel_factor = 0.5
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
 
 ##    ##  #######      ######  ######## ######## ########     ########     ###     ######  ##    ## 
 ###   ## ##     ##    ##    ##    ##    ##       ##     ##    ##     ##   ## ##   ##    ## ##   ##  

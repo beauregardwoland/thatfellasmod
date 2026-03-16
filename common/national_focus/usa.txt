@@ -25,6 +25,37 @@ focus_tree = {
 	}
 	continuous_focus_position = { x = 50 y = 1600 }
 	default = no
+
+	shortcut = {
+		name = USA_politics_hist
+		target = USA_lend_lease_act
+		scroll_wheel_factor = 0.6
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = USA_airforce_foc
+		target = USA_intervention_in_the_americas
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = USA_army_foc
+		target = USA_build_the_pentagon
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
 #	focus = {
 #		id = USA_
 #		#icon = GFX_

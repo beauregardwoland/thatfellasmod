@@ -19,6 +19,57 @@ focus_tree = {
 	}
 	default = no
 
+	shortcut = {
+		name = ENG_alt_hist
+		target = ENG_a_change_in_course
+		scroll_wheel_factor = 0.6
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = ENG_hist
+		target = ENG_steady_as_she_goes
+		scroll_wheel_factor = 0.6
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = ENG_the_empire
+		target = uk_commonwealth_focus
+		scroll_wheel_factor = 0.6
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = ENG_coord_empire
+		target = commonwealth_joint_wol
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = ENG_rearmarment
+		target = ENG_wol_land_rearmament
+		scroll_wheel_factor = 0.575
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+
 	focus = {
 		id = crypto_bomb_focus
 		available = {

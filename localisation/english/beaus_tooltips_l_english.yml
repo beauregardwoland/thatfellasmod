@@ -1,0 +1,27 @@
+﻿l_english:
+ ITA_politics_hist: "Politics: Historical"
+ ITA_politics_alt_hist_1: "Politics: Left Opposition"
+ ITA_politics_alt_hist_2: "Politics: Centre Opposition"
+ ITA_economy_foc: "Economy"
+ ITA_navy_foc: "Navy"
+ ITA_airforce_foc: "AirForce"
+ ITA_army_foc: "Army"
+ ITA_diplo_path: "Foreign Affairs"
+
+ ENG_alt_hist: "Politics: A Change in Course"
+ ENG_hist: "Politics: Steady as She Goes"
+ ENG_rearmarment: "Rearmarment"
+ ENG_the_empire: "Commonwealth Nation Building"
+ ENG_coord_empire: "Commonwealth Shared Tree"
+
+ SOV_politics_hist: "Politics: Politburo"
+ SOV_politics_alt_hist_1: "Politics: The Whites"
+ SOV_economy_foc: "The Five Year Plan"
+ SOV_navy_foc: "The Red Fleet"
+ SOV_airforce_foc: "Soviet Airforce"
+ SOV_army_foc: "The Red Army"
+ SOV_diplo_path: "Foreign Affairs"
+
+ USA_politics_hist: "Politics: Election"
+ USA_airforce_foc: "War Plans Division"
+ USA_army_foc: "War Department"

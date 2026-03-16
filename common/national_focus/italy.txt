@@ -41,6 +41,92 @@ focus_tree = {
 		y = 0
 	}
 
+	shortcut = {
+		name = ITA_politics_hist
+		target = ITA_culto_del_duce
+		scroll_wheel_factor = 0.55
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	#shortcut = {
+	#	name = ITA_politics_alt_hist_1
+	#	target = ITA_defy_the_duce
+	#	scroll_wheel_factor = 0.55
+	#	trigger = {
+	#		#has_dlc = "By Blood Alone"
+	#		always = yes
+	#	}
+	#}
+
+	#shortcut = {
+	#	name = ITA_politics_alt_hist_2
+	#	target = ITA_convene_the_grand_council
+	#	scroll_wheel_factor = 0.55
+	#	trigger = {
+	#		#has_dlc = "By Blood Alone"
+	#		always = yes
+	#	}
+	#}
+
+	shortcut = {
+		name = ITA_economy_foc
+		target = ITA_italian_highways_bba
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = ITA_navy_foc
+		target = ITA_naval_power_projection
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = ITA_airforce_foc
+		target = ITA_air_innovations_bba
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = ITA_army_foc
+		target = ITA_army_primacy_bba
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = ITA_diplo_path
+		target = ITA_foreign_affairs
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = GER_cont_axis_coop
+		target = cont_axis_joint_wol
+		scroll_wheel_factor = 0.65
+	}
+
 
 ########  ##    ##    ########  ##        #######   #######  ########        ###    ##        #######  ##    ## ######## 
 ##     ##  ##  ##     ##     ## ##       ##     ## ##     ## ##     ##      ## ##   ##       ##     ## ###   ## ##       
