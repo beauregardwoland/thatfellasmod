@@ -3761,7 +3761,7 @@ focus_tree = {
 
 			add_mastery= {
 				amount = 150
-				grand_doctrine = grand_battleplan
+				#grand_doctrine = grand_battleplan
 				track = infantry
 			}
 
@@ -4035,14 +4035,14 @@ focus_tree = {
 
 			add_mastery_bonus = {
 				name = ITA_a_bandits_war
-				bonus = 0.2
-				days = 180
-				grand_doctrine = new_mobile_warfare
+				bonus = 0.25
+				days = 240
+				#grand_doctrine = new_mobile_warfare
 				track = infantry
 			}
 			add_doctrine_cost_reduction = {
 				name = ITA_a_bandits_war
-				cost_reduction = 0.25
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -5654,13 +5654,11 @@ focus_tree = {
 			}
 			else = {
 
-
-
 				add_mastery_bonus = {
 					name = ITA_intensify_torpedo_manufacturing
 					bonus = 0.1
 					days = 180
-					grand_doctrine = new_convoy_raiding
+					#grand_doctrine = new_convoy_raiding
 					track = submarines
 				}
 				add_doctrine_cost_reduction = {
@@ -6341,7 +6339,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { ITA_rm_special_forces_cap = 0.02 }
 			add_to_variable = { ITA_rm_amphibious_invasion = 0.05 }
-			add_to_variable = { ITA_rm_naval_invasion_capacity = 10 }
+			add_to_variable = { ITA_rm_naval_invasion_capacity = 4 }
 			add_to_variable = { ITA_rm_invasion_preparation = -0.1 }
 			custom_effect_tooltip = ITA_forza_navale_especiale_rm_tt
 
@@ -6613,7 +6611,7 @@ focus_tree = {
 				name = ITA_incrociatori_leggeri
 				bonus = 0.2
 				days = 180
-				grand_doctrine = new_convoy_raiding
+				#grand_doctrine = new_convoy_raiding
 				track = screens
 			}
 
@@ -6667,7 +6665,7 @@ focus_tree = {
 				name = ITA_incrociatori_pesanti
 				bonus = 0.2
 				days = 180
-				grand_doctrine = new_fleet_in_being
+				#grand_doctrine = new_fleet_in_being
 				track = capital_ships
 			}
 
@@ -6769,9 +6767,9 @@ focus_tree = {
 
 			add_mastery_bonus = {
 				name = ITA_cruiser_submarines
-				bonus = 0.2
+				bonus = 0.1
 				days = 180
-				grand_doctrine = new_convoy_raiding
+				#grand_doctrine = new_convoy_raiding
 				track = submarines
 			}
 			
@@ -6830,7 +6828,7 @@ focus_tree = {
 				name = ITA_midget_submarines
 				bonus = 0.2
 				days = 180
-				grand_doctrine = new_convoy_raiding
+				#grand_doctrine = new_convoy_raiding
 				track = submarines
 			}
 			
@@ -6912,7 +6910,7 @@ focus_tree = {
 				name = ITA_cacciatorpediniere_di_scorta
 				bonus = 0.2
 				days = 180
-				grand_doctrine = new_base_strike
+				#grand_doctrine = new_base_strike
 				track = screens
 			}
 
@@ -7221,7 +7219,7 @@ focus_tree = {
 				name = ITA_navi_da_battaglia
 				bonus = 0.2
 				days = 180
-				grand_doctrine = new_fleet_in_being
+				#grand_doctrine = new_fleet_in_being
 				track = capital_ships
 			}
 			add_doctrine_cost_reduction = {
@@ -9555,15 +9553,15 @@ focus_tree = {
 
 			custom_effect_tooltip = ITA_strengthen_the_blackshirts_template_tt
 			hidden_effect = {
-				add_to_variable = { ITA_militias_cap = 12 }
+				add_to_variable = { ITA_militias_cap = 40 }
 				set_division_template_cap = {  division_template = "Camicie Nere" division_cap = ITA_militias_cap }
 
-				add_units_to_division_template = {
-					template_name = "Camicie Nere"
-					support = { 
-						artillery = 0
-					}
-				}
+				#add_units_to_division_template = {
+				#	template_name = "Camicie Nere"
+				#	support = { 
+				#		artillery = 0
+				#	}
+				#}
 			}
 			random_controlled_state = { #Create a few more Blackshirt Divs
 				limit = {
@@ -9617,7 +9615,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = ITA_blackshirts_div_cap_12_tt
 			hidden_effect = {
-				add_to_variable = { ITA_militias_cap = 12 }
+				add_to_variable = { ITA_militias_cap = 40 }
 				set_division_template_cap = {  division_template = "Camicie Nere" division_cap = ITA_militias_cap }
 			}
 		}
@@ -13985,7 +13983,7 @@ focus_tree = {
 				custom_effect_tooltip = ITA_modify_regia_aeronautica_dynamic_modifier_ns_intro
 				if = {
 					limit = {
-						NOT = { is_special_project_completed = sp_air_intercontinental_bomber }
+						NOT = { is_special_project_completed = sp:sp_air_intercontinental_bomber }
 					}
 					add_to_variable = { 
 						ITA_ra_sp_air_intercontinental_bomber_speed_factor = 0.2
@@ -13994,7 +13992,7 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						NOT = { is_special_project_completed = sp_air_mothership_aircraft }
+						NOT = { is_special_project_completed = sp:sp_air_mothership_aircraft }
 					}
 					add_to_variable = { 
 						ITA_ra_sp_air_mothership_aircraft_speed_factor = 0.2
@@ -14079,7 +14077,7 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						NOT = { is_special_project_completed = sp_land_land_cruiser }
+						NOT = { is_special_project_completed = sp:sp_land_land_cruiser }
 					}
 					custom_effect_tooltip = ITA_modify_regio_esercito_dynamic_modifier_ns_intro
 					add_to_variable = { 
@@ -14240,7 +14238,7 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						NOT = { is_special_project_completed = sp_naval_ice_carrier }
+						NOT = { is_special_project_completed = sp:sp_naval_ice_carrier }
 					}
 					custom_effect_tooltip = ITA_modify_regia_marina_dynamic_modifier_ns_intro
 					add_to_variable = { 
@@ -15766,7 +15764,7 @@ focus_tree = {
 				name = ITA_sea_wolves_bba
 				bonus = 0.2
 				days = 240
-				grand_doctrine = new_convoy_raiding
+				#grand_doctrine = new_convoy_raiding
 				track = submarines
 			}
 

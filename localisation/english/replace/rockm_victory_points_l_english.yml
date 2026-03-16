@@ -15,6 +15,10 @@
  JAP_7075_aluminium_alloy_tt: "§Y$small_plane_airframe$§!, §Y$cv_small_plane_airframe$§! and §Y$medium_plane_airframe$§! $MODIFIER_AIR_AGILITY$: §G+10%§!"
  MAN_tsr_expand_the_textile_industry: "Expand Manetsu Contracting"
  MAN_tsr_mukden_military_academy: "Procurement Efforts"
+ ITA_strengthen_the_blackshirts_template_tt:0 "$ITA_blackshirts_div_cap_12_tt$"
+ ITA_blackshirts_div_cap_12_tt:0 "Modify template cap of §YCamicie Nere§! by §G+40§!."
+
+
 
 
  
