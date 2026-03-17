@@ -130,6 +130,23 @@ on_actions = {
 					}
 				}
 			} 
+			
+			if = {
+				limit = {  POR = { has_war_with = SPR } 
+				FROM = { tag = POR }
+				}
+				SPR = { white_peace = POR }
+				SPR = {
+					annex_country = {
+						target = POR
+					}
+					add_named_threat = {
+						threat = 5
+						name = ITA_eth_war_script_1
+					}
+				}
+			} 
+			
 			if = {
 				limit = {  CHI = { has_war_with = JAP } 
 				FROM = { tag = CHI }
