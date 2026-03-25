@@ -16,6 +16,112 @@ spriteTypes = {
 		name = "GFX_mio_cat_eq_all_artillery_track"
 		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_tank_medium_tank_spg.dds"
 	}
+	spriteType = {
+		name = "GFX_mio_cat_eq_all_aa_track"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_tank_medium_tank_aa.dds"
+	}
+	spriteType = {
+		name = "GFX_mio_cat_eq_all_planes_period"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_plane_light.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_ballistic_missile_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_tank_general_spg.dds"
+	}
+	spriteType = {
+		name = "GFX_mio_cat_eq_all_infantry_and_support_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_infantry_offense.dds"
+	}
+	spriteType = {
+		name = "GFX_mio_cat_eq_all_artillery"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_artillery.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_strat_bomber_intercontinental_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_plane_strategic_bomber.dds"
+	}
+
+	spriteType = {
+		name = "GFX_mio_trait_icon_research_bonus_icon"
+		texturefile = "gfx/interface/research_bonus_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_mio_trait_icon_research_icon"
+		texturefile = "gfx/interface/research_icon.png"
+	}
+	
+	spriteType = {
+		name = "GFX_mio_trait_icon_research_speed_icon"
+		texturefile = "gfx/interface/research_speed_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_mio_trait_icon_rocket_base_icon"
+		texturefile = "gfx/interface/rocket_base_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_mio_trait_icon_air_xp"
+		texturefile = "gfx/interface/air_xp_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_mio_trait_icon_army_xp"
+		texturefile = "gfx/interface/army_xp_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_mio_trait_icon_naval_xp"
+		texturefile = "gfx/interface/navy_xp_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_generic_mio_trait_icon_political_power"
+		texturefile = "gfx/interface/political_power_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_generic_mio_trait_icon_upgrade"
+		texturefile = "gfx/interface/upgrade_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_KR_generic_mio_trait_icon_special_forces"
+		texturefile = "gfx/interface/special_forces_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_generic_mio_trait_icon_production_output"
+		texturefile = "gfx/interface/production_output_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_generic_mio_trait_icon_military_factory"
+		texturefile = "gfx/interface/military_factory_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_generic_mio_trait_icon_funds"
+		texturefile = "gfx/interface/funds_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_generic_mio_trait_icon_dockyard"
+		texturefile = "gfx/interface/dockyard_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_generic_mio_trait_icon_civilian_factory"
+		texturefile = "gfx/interface/civilian_factory_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_generic_mio_trait_icon_refinery"
+		texturefile = "gfx/interface/refinery_icon.png"
+	}
+	
+
 	SpriteType = {
 		name = "GFX_ship_hull_carrier_submarine_0_medium" #Used for MTG equipment
 		texturefile = "gfx/interface/technologies/generic_ship_hull_cruiser_submarine.dds" #Was ship_hull_cruiser_submarine, with GOT we got a new icon that matches the new 3D model
