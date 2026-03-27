@@ -104,6 +104,24 @@ ideas = {
 			}
 		}
 
+		idea_MAN_central_government_integration_pressure = {
+			picture = ast_classify_aliens
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				autonomy_gain = -3
+			}
+		}
+
 		MAN_low_legitimacy_5 = {
 			
 			name = MAN_low_legitimacy
@@ -184,8 +202,8 @@ ideas = {
 			picture = man_low_legitimacy4
 			
 			modifier = {
-				stability_factor = 0
-				war_support_factor = 0
+				stability_factor = 0.1
+				war_support_factor = 0.1
 			}
 		}
 		MAN_low_legitimacy_1 = {
@@ -205,8 +223,8 @@ ideas = {
 			picture = man_low_legitimacy5
 			
 			modifier = {
-				stability_factor = 0.1
-				war_support_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = 0.2
 			}
 		}
 

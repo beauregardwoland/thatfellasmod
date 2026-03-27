@@ -57,6 +57,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_generic_mio_trait_rocket_propelled_bombs"
+		texturefile = "gfx/interface/rocket_propelled_bombs.png"
+	}
+
+	spriteType = {
 		name = "GFX_mio_trait_icon_rocket_base_icon"
 		texturefile = "gfx/interface/rocket_base_icon.png"
 	}
@@ -120,6 +125,11 @@ spriteTypes = {
 		name = "GFX_generic_mio_trait_icon_refinery"
 		texturefile = "gfx/interface/refinery_icon.png"
 	}
+
+	spriteType = {
+        name = "GFX_FX_generic_mio_trait_jet_engine"
+        textureFile = "gfx/interface/jet_engine_icon.png"
+    }
 	
 
 	SpriteType = {

@@ -24906,7 +24906,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				prioritize = { 531 532 528 }
+				#prioritize = { 531 532 528 }
 				random_select_amount = 2
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -24975,7 +24975,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				prioritize = { 531 532 528 }
+				#prioritize = { 531 532 528 }
 				random_select_amount = 2
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {

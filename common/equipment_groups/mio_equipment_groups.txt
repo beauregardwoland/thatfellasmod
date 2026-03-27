@@ -147,6 +147,8 @@ mio_cat_eq_all_planes_period = {
 		large_plane_airframe
 		strat_bomber_intercontinental_equipment
 		mothership_equipment
+		guided_missile_equipment
+		ballistic_missile_equipment
 	}
 }
 mio_cat_eq_all_small_plane = { #Includes all Small Aircraft (Fighter, CAS, Nav) and CV versions --- Used due to custom loc capabilities

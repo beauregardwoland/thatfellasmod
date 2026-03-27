@@ -429,7 +429,7 @@ focus_tree = {
 
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = SOV_finish_the_five_year_plan }
-		x = -2
+		x = -5
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
 		cost = 3

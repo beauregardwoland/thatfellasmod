@@ -754,5 +754,73 @@ ideas = {
 				}
 			}
 		}
+		mio_mil_amry_xp_gain_1 = {
+			picture = strategic_bombing_focus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				experience_gain_army = 0.2
+			}
+		}
+		mio_mil_amry_xp_gain_2 = {
+			picture = strategic_bombing_focus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				experience_gain_army = 0.3
+			}
+		}
+
+		mio_mil_air_xp_gain_1 = {
+			picture = strategic_bombing_focus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				experience_gain_air = 0.2
+			}
+		}
+		mio_mil_air_xp_gain_2 = {
+			picture = strategic_bombing_focus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				experience_gain_air = 0.3
+			}
+		}
+
+		mio_mil_navy_xp_gain_1 = {
+			picture = strategic_bombing_focus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				experience_gain_navy = 0.2
+			}
+		}
+		mio_mil_navy_xp_gain_2 = {
+			picture = strategic_bombing_focus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				experience_gain_navy = 0.3
+			}
+		}
 	}
 }

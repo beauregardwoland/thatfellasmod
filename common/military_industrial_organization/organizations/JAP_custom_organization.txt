@@ -5076,7 +5076,7 @@ JAP_kawasaki_designer_upgrade_1 = {
 
 ###################################
 
-JAP_mitsui_arms_manufactoring = {
+ JAP_mitsui_arms_manufactoring = {
 
 	icon = GFX_idea_mitsui
 
@@ -5483,7 +5483,7 @@ JAP_mitsui_arms_manufactoring = {
 	}
 }
 
-JAP_sumitomo_arms_manufactoring = {
+ JAP_sumitomo_arms_manufactoring = {
 
 	icon = GFX_idea_sumitomo
 
@@ -5931,7 +5931,7 @@ JAP_sumitomo_arms_manufactoring = {
 
 
 
-JAP_mitsubushi_big_arms_manufactoring = {
+ JAP_mitsubushi_big_arms_manufactoring = {
 
 	icon = GFX_idea_mitsubishi
 
@@ -6669,7 +6669,7 @@ JAP_mitsubushi_big_arms_manufactoring = {
 	}
 }
 
-JAP_sumitomo_big_arms_manufactoring = {
+ JAP_sumitomo_big_arms_manufactoring = {
 
 	icon = GFX_idea_sumitomo
 
@@ -7033,7 +7033,7 @@ JAP_sumitomo_big_arms_manufactoring = {
 	}
 }
 
-JAP_nissan_light_vehicles = {
+ JAP_nissan_light_vehicles = {
 	 
 	icon = GFX_idea_nissan
 
