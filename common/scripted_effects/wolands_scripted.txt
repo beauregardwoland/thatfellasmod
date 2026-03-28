@@ -695,3 +695,132 @@ JAP_camp_deploy = {
 		activate_mission = JAP_operation_cooldown
 	}
 }
+
+gib_french_exiles = {
+	division_template = {
+		name = "French-Exiles"
+		division_names_group = ENG_INF_01
+		template_counter = 99
+		role = garrison
+		is_locked = no
+		regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+							infantry = { x = 3 y = 0 }
+							infantry = { x = 3 y = 1 }
+							artillery_brigade = { x = 4 y = 0 }
+							artillery_brigade = { x = 4 y = 1 }
+							anti_tank_brigade = { x = 4 y = 2 }
+							anti_tank_brigade = { x = 4 y = 3 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							artillery = { x = 0 y = 1 }
+							anti_air = { x = 0 y = 2 }
+							anti_tank =  { x = 0 y = 3 }
+							logistics_company = { x = 0 y = 4 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"French-Exiles\" division_template = \"French-Exiles\" start_experience_factor = 0.8"
+							owner = ENG
+							count = 8
+						}
+					}
+}
+
+gib_nor_exiles = {
+	set_technology = {
+		tech_mountaineers = 1
+	}
+	division_template = {
+					name = "Norwegian-Exiles"
+					division_names_group = ENG_INF_01
+					template_counter = 99
+					role = garrison
+					is_locked = no
+					regiments = {
+						mountaineers = { x = 0 y = 0 }
+						mountaineers = { x = 0 y = 1 }
+						mountaineers = { x = 0 y = 2 }
+						mountaineers = { x = 1 y = 0 }
+						mountaineers = { x = 1 y = 1 }
+						mountaineers = { x = 1 y = 2 }
+						mountaineers = { x = 2 y = 0 }
+						mountaineers = { x = 2 y = 1 }
+						mountaineers = { x = 2 y = 2 }
+						mountaineers = { x = 3 y = 0 }
+						mountaineers = { x = 3 y = 1 }
+						mountaineers = { x = 3 y = 2 }
+						mountaineers = { x = 4 y = 0 }
+						mountaineers = { x = 4 y = 1 }
+						mountaineers = { x = 4 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						anti_air = { x = 0 y = 2 }
+						anti_tank =  { x = 0 y = 3 }
+						logistics_company = { x = 0 y = 4 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Norwegian-Exiles\" division_template = \"Norwegian-Exiles\" start_experience_factor = 0.8"
+						owner = ENG
+						count = 3
+					}
+				}
+}
+
+gib_greek_exiles = {
+	set_technology = {
+		rangers_tech = 1
+	}
+	division_template = {
+						name = "Greek-Exiles"
+						division_names_group = ENG_INF_01
+						template_counter = 99
+						role = garrison
+						is_locked = no
+						regiments = {
+							ranger_battalion = { x = 0 y = 0 }
+							ranger_battalion = { x = 0 y = 1 }
+							ranger_battalion = { x = 0 y = 2 }
+							ranger_battalion = { x = 1 y = 0 }
+							ranger_battalion = { x = 1 y = 1 }
+							ranger_battalion = { x = 1 y = 2 }
+							ranger_battalion = { x = 2 y = 0 }
+							ranger_battalion = { x = 2 y = 1 }
+							ranger_battalion = { x = 2 y = 2 }
+							ranger_battalion = { x = 3 y = 0 }
+							ranger_battalion = { x = 3 y = 1 }
+							artillery_brigade = { x = 4 y = 0 }
+							artillery_brigade = { x = 4 y = 1 }
+							anti_tank_brigade = { x = 4 y = 2 }
+							anti_tank_brigade = { x = 4 y = 3 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							artillery = { x = 0 y = 1 }
+							anti_air = { x = 0 y = 2 }
+							anti_tank =  { x = 0 y = 3 }
+							logistics_company = { x = 0 y = 4 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Greek-Exiles\" division_template = \"Greek-Exiles\" start_experience_factor = 0.8"
+							owner = ENG
+							count = 2
+						}
+					}
+}

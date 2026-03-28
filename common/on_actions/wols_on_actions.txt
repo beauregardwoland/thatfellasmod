@@ -56,6 +56,64 @@ on_actions = {
 				add_ideas = woland_gp_allowed_vols
 				country_event = wol_qol.9
 				country_event = wol_qol.17
+				#sets up research mios
+				every_military_industrial_organization = {
+					limit = {
+						OR = {
+							is_military_industrial_organization = GER_porsche_custom
+							is_military_industrial_organization = GER_blohm_voss_custom
+							is_military_industrial_organization = GER_heinkel_custom
+							is_military_industrial_organization = GER_carl_walt_custom
+							is_military_industrial_organization = GER_krupp_custom
+						}
+					}
+					set_variable = { max_research_speed = 0.5 }
+					set_variable = { weekly_research_speed_gain = 0.01 }
+					set_variable = { weekly_funds_requirement = 9 }
+				}
+				#sets up xp mios
+				every_military_industrial_organization = {
+					limit = {
+						OR = {
+							is_military_industrial_organization = GER_henschel_custom
+							is_military_industrial_organization = GER_rheinmetall_custom
+							is_military_industrial_organization = GER_deschimag_organization
+						}
+					}
+					set_variable = { weekly_funds_requirement = 9 }
+					set_variable = { mio_xp_gain = 0.2 }
+					set_variable = { total_campaign_xp = 0 }
+				}
+				mio:GER_opel_custom = {
+					set_variable = { invest_mio_civilian_factory_chance = 33 }
+					set_variable = { invest_mio_military_factory_chance = 33 }
+					set_variable = { invest_mio_dockyard_chance = 33 }
+					set_variable = { invest_mio_starting_construction_progress_min = 0 }
+					set_variable = { invest_mio_starting_construction_progress_max = 0.2 }
+
+					set_variable = { invest_mio_days_project_days = 250 }
+					set_variable = { invest_mio_days_project_days_math = 100 }
+					divide_variable = { var = invest_mio_days_project_days_math value = invest_mio_days_project_days }
+					multiply_variable = { invest_mio_days_project_days_math = 7 }
+					set_variable = { invest_mio_days_project_percent = 0 }
+
+					set_variable = { invest_mio_target_civ = 0 }
+					set_variable = { invest_mio_target_mil = 0 }
+					set_variable = { invest_mio_target_dock = 0 }
+
+					set_variable = { invest_mio_factory_interval_min = 160 }
+					set_variable = { invest_mio_factory_interval_max = 200 }
+					set_variable = { total_campaign_factories = 0 }
+					set_variable = { total_campaign_civs = 0 }
+					set_variable = { total_campaign_mils = 0 }
+					set_variable = { total_campaign_dockyards = 0 }
+					set_variable = { total_campaign_factory_progress = 0 }
+					set_variable = { average_campaign_factory_progress = 0 }
+					set_variable = { notification_list_maximum = 10 }
+					resize_array = { invest_mio_date_list = notification_list_maximum }
+					resize_array = { invest_mio_factory_list = notification_list_maximum }
+					resize_array = { invest_mio_state_list = notification_list_maximum }
+				}
 			}
 			SOV = {
 				add_ideas = woland_gp_allowed_vols_1
@@ -80,25 +138,29 @@ on_actions = {
 			ROM = { country_event = wol_qol.17 }
 			MAN = { country_event = wol_qol.18 }
 			SIA = { country_event = wol_qol.18 }
-			ETH = {
-				set_technology = {
-					tech_support = 1
-				}
-			}
-			NEP = {
-				set_technology = {
-					tech_support = 1
-				}
-			}
-			ARG = {
-				set_technology = {
-					tech_support = 1
-				}
-			}
 		}
 	}
 	 on_before_peace_conference_start = {
 		effect = {
+			if = {
+				limit = {  GRE = { has_war_with = ITA } 
+				FROM = { tag = GRE }
+				}
+				ITA = { white_peace = GRE }
+				ITA = {
+					annex_country = {
+						target = GRE
+					}
+					add_named_threat = {
+						threat = ITA.eth_war_tension_rework
+						name = ITA_eth_war_script
+					}
+				}
+				ENG = {
+					country_event = wol_qol.103
+				}
+			}
+
 			if = {
 				limit = {  ETH = { has_war_with = ITA } 
 				FROM = { tag = ETH }
@@ -128,6 +190,9 @@ on_actions = {
 						threat = 5
 						name = ITA_eth_war_script_1
 					}
+				}
+				ENG = {
+					country_event = wol_qol.104
 				}
 			} 
 			
@@ -173,8 +238,59 @@ on_actions = {
 						name = ITA_eth_war_script_2
 					}
 				}
+				ENG = {
+					country_event = wol_qol.105
+				}
 			}   
+		}
+	}
+
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					tag = FRA
+					GER = {
+						has_war_with = FRA
+					}
+				}
+				ENG = {
+					gib_french_exiles = yes
+				}
+			}
+
+			if = {
+				limit = {
+					tag = GRE
+					GER = {
+						has_war_with = GRE
+					}
+				}
+				ENG = {
+					gib_greek_exiles = yes
+				}
+			}
+
+			if = {
+				limit = {
+					tag = NOR
+					GER = {
+						has_war_with = NOR
+					}
+				}
+				ENG = {
+					gib_french_exiles = yes
+				}
 			}
 		}
+	}
+
+	on_weekly_GER = {
+		effect = {
+			on_actions_uppdate_xp_mios = yes
+			special_Update_MIO_Research_Speeds = yes
+			opel_weekly_invest_progress = yes
+		}
+	}
 }
 
