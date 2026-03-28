@@ -285,7 +285,7 @@ HUN_mw_aircraft_organization = {
 }
 
 HUN_mavag_aircraft_organization = {
-	include = generic_range_focused_aircraft_organization
+	include = GER_junkers_custom
 	icon = GFX_idea_HUN_mavag_aircraft
 	allowed = { 
 		original_tag = HUN
@@ -293,11 +293,11 @@ HUN_mavag_aircraft_organization = {
 		has_dlc = "Gotterdammerung"
 	}
 
-	available = {
-		FROM = {
-			has_completed_focus = wuw_HUN_establish_the_mavag_aircraft_factory
-		}
-	}
+	#available = {
+	#	FROM = {
+	#		has_completed_focus = wuw_HUN_establish_the_mavag_aircraft_factory
+	#	}
+	#}
 }
 
 HUN_mrt_aircraft_organization = {
@@ -341,11 +341,27 @@ HUN_mrt_aircraft_organization = {
 ###################################
 
 HUN_femaru_fegyver_es_gepgyar_organization = {
-	include = generic_infantry_equipment_organization
+	include = JAP_mitsui_arms_manufactoring
 	icon = GFX_idea_HUN_femaru_fegyver_es_gepgyar
 	allowed = { 
 		original_tag = HUN
 		has_dlc = "Arms Against Tyranny"
+	}
+
+	on_tech_research_completed = {
+		
+	}
+
+	initial_trait = {
+		name = JAP_mitsui_arms_manufactoring_initial
+		production_bonus = {
+			production_cost_factor = -0.03
+			production_efficiency_cap_factor = 0.03
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+			military_industrial_organization_size_up_requirement = -0.15
+		}
 	}
 }
 
@@ -382,7 +398,8 @@ HUN_danuvia_inf_organization = {
 		
 		equipment_bonus = {
 			reliability = 0.05
-			breakthrough = 0.03
+			breakthrough = 0.05
+			soft_attack = 0.05
 		}
 
 		production_bonus = {
@@ -505,7 +522,7 @@ HUN_danuvia_inf_organization = {
 }
 
 HUN_digep_artillery = {
-	include = generic_artillery_organization
+	include = GER_rheinmetall_custom
 	icon = GFX_idea_HUN_digep_artillery
 	
 	allowed = {	
@@ -521,16 +538,41 @@ HUN_digep_artillery = {
 		FROM = { original_tag = HUN }
 	}
 
+	on_tech_research_completed = {
+		
+	}
+
+	initial_trait = {
+		name = GER_rheinmetall_custom_initial
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+		equipment_bonus = {
+			soft_attack = 0.025
+			hard_attack = 0.025
+			build_cost_ic = -0.025
+		}
+		
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+			military_industrial_organization_size_up_requirement = -0.33
+			#military_industrial_organization_funds_gain = 0.1
+		}
+	}
 }
 
 HUN_mwg_raba_organization = {
-	include = generic_motorized_mechanized_organization 
+	include = GER_auto_union_custom 
 	icon = GFX_idea_HUN_mwg_raba
 	allowed = {	 
 		original_tag = HUN
 		has_dlc = "Arms Against Tyranny"
 		has_dlc = "Gotterdammerung"
 	}
+
+	equipment_type = { motorized_equipment mechanized_equipment amphibious_mechanized_equipment armored_car_equipment }
 }
 
 
