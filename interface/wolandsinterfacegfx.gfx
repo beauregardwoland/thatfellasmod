@@ -130,6 +130,21 @@ spriteTypes = {
         name = "GFX_FX_generic_mio_trait_jet_engine"
         textureFile = "gfx/interface/jet_engine_icon.png"
     }
+
+	spriteType = {
+		name = "GFX_generic_mio_trait_icon_railway_gun"
+		texturefile = "gfx/interface/railway_gun_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_generic_mio_trait_icon_fort"
+		texturefile = "gfx/interface/fort_mio_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_icon_capitalist_investment"
+		texturefile = "gfx/interface/capitalist_investment.png"
+	}
 	
 
 	SpriteType = {

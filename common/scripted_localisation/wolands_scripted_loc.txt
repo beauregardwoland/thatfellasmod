@@ -370,4 +370,47 @@ defined_text = {
 	}
 }
 
+define_text = {
+	name = MIO_Funds_Requirement_scrip_loc
+	text = {
+		trigger = {
+			check_variable = { weekly_funds_gained > weekly_funds_requirement }
+		}
+		localization_key = MIO_Research_Gain_positive_tt
+	}
+	text = {
+		localization_key = MIO_Research_Gain_negative_tt
+	}
+}
 
+define_text = {
+	name = invest_mio_chosen_project
+	text = {
+		trigger = {
+			check_variable = { invest_mio_target_civ > 0 }
+		}
+		localization_key = "invest_mio_1"
+	}
+	text = {
+		trigger = {
+			check_variable = { invest_mio_target_mil > 0 }
+		}
+		localization_key = "invest_mio_2"
+	}
+	text = {
+		trigger = {
+			check_variable = { invest_mio_target_dock > 0 }
+		}
+		localization_key = "invest_mio_3"
+	}
+	text = {
+		localization_key = "invest_mio_Notification_None"
+	}
+}
+
+define_text = {
+	name = invest_mio_Factory_Entry
+	text = {
+		localization_key = "invest_mio_[?current_factory]"
+	}
+}

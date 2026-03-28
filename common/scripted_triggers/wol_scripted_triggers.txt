@@ -1,0 +1,102 @@
+has_enabled_opel_private_invest = {
+	FROM = {
+		mio:GER_opel_organization = {
+			is_mio_trait_completed = GER_opel_custom_2
+		}
+	}
+}
+
+has_enabled_henshel_xp = {
+    FROM = {
+		mio:GER_henschel_organization = {
+			is_mio_trait_completed = GER_henschel_custom_5
+		}
+	}
+}
+has_upgraded_henshel_xp = {
+    FROM = {
+		mio:GER_henschel_organization = {
+			is_mio_trait_completed = GER_henschel_custom_8
+		}
+	}
+}
+
+has_enabled_rhein_xp = {
+    FROM = {
+		or = {
+			mio:GER_rheinmetall_organization = {
+				is_mio_trait_completed = GER_rheinmetall_custom_10
+			}
+			mio:HUN_digep_artillery = {
+				is_mio_trait_completed = GER_rheinmetall_custom_10
+			}
+		}
+		
+	}
+}
+has_upgraded_rhein_xp = {
+    FROM = {
+		or = {
+			mio:GER_rheinmetall_organization = {
+				is_mio_trait_completed = GER_rheinmetall_custom_14
+			}
+			mio:HUN_digep_artillery = {
+				is_mio_trait_completed = GER_rheinmetall_custom_14
+			}
+		}
+	}
+}
+
+has_enabled_deshig_xp = {
+    FROM = {
+		mio:GER_deschimag_organization = {
+			is_mio_trait_completed = GER_deshimag_custom_3
+		}
+	}
+}
+has_upgraded_deshig_xp = {
+    FROM = {
+		mio:GER_deschimag_organization = {
+			is_mio_trait_completed = GER_deshimag_custom_13
+		}
+	}
+}
+
+focke_wolfe_price_for_trait = {
+	or = {
+		custom_trigger_tooltip = {
+			FROM = {
+				mio:GER_focke_wulf_organization = {
+					is_mio_trait_completed = GER_focke_wolfe_custom_8
+				}
+				has_political_power > 15
+			}
+			tooltip = focke_wolfe_choice_1_tt
+		}
+		custom_trigger_tooltip = {
+			FROM = {
+				mio:GER_focke_wulf_organization = {
+					is_mio_trait_completed = GER_focke_wolfe_custom_9
+				}
+				has_air_experience > 15
+			}
+			tooltip = focke_wolfe_choice_2_tt
+		}
+	}
+}
+
+chose_pp_focke_wolf = {
+	from = {
+		mio:GER_focke_wulf_organization = {
+			is_mio_trait_completed = GER_focke_wolfe_custom_8
+		}
+	}
+}
+
+chose_xp_focke_wolf = {
+	from = {
+		mio:GER_focke_wulf_organization = {
+			is_mio_trait_completed = GER_focke_wolfe_custom_9
+		}
+	}
+}

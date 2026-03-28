@@ -1,0 +1,29 @@
+scripted_gui = {
+	misc_alerts = {
+		context_type = player_context
+		window_name = "mio_popup_warnings"
+		dirty = global.wol_alerts_dirty
+
+		ai_enabled = {
+			always = no
+		}
+
+		dynamic_lists = {
+			special_MIO_alerts_grid = {
+				array = special_MIO_alerts
+				entry_container = special_MIO_alert
+				value = alert
+				index = mio_index
+			}
+		}
+
+		effects = {
+			special_MIO_limit_ok_button_click = {
+				remove_from_array = { special_MIO_alert_names = special_MIO_alert_names^mio_index }
+				remove_from_array = { special_MIO_research_speeds = special_MIO_research_speeds^mio_index }
+				remove_from_array = { special_MIO_alerts = alert }
+				set_variable_to_random = global.wol_alerts_dirty
+			}
+		}
+	}
+}

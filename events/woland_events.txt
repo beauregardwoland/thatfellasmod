@@ -861,17 +861,6 @@ country_event = {
 }
 
 country_event = { 
-	id = wol_qol.102
-	hidden = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		ai_chance = { base = 100 }
-		invest_mio_Factories = yes
-	}
-	
-}country_event = { 
 	id = wol_qol.103
 	title = wol_qol.103.t
 	desc = wol_qol.103.d

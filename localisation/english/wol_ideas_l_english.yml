@@ -32,10 +32,23 @@
  ENG_fight_them_on_the_beach:0 "Fight Them on the Beaches"
  ENG_fight_them_on_the_beach_tt:0"§Y20§! home gaurd divisions will be spawned in Birmingham. These divisions are §Y20§! width equiped with engineers, anti air, anti tank and artillery support companies."
  ENG_support_spa:0"Support the Spanish Republicans"
+ wol_qol.103.t:0 "Greek Investors Flee"
+ wol_qol.103.d:0 "The sudden invasion and overrunning of greece has triggered an exodus crisis. As one of the leading capital economies of Europe many buisness men are fleeing with their money and little capital and investment they can carry to us."
+ wol_qol.103.a:0 "A vagrant disregard for the world order"
+ wol_qol.104.t:0 "Yugoslav Investors Flee"
+ wol_qol.104.d:0 "The sudden invasion and overrunning of Yugoslavia has triggered an exodus crisis. As one of the leading capital economies of Europe many buisness men are fleeing with their money and little capital and investment they can carry to us."
+ wol_qol.105.a:0 "A vagrant disregard for the world order"
+
+ wol_qol.105.t:0 "Chinese Investors Flee"
+ wol_qol.105.d:0 "The sudden invasion and overrunning of China has triggered an exodus crisis. As one of the leading stakeholders in the nine power treaty many buisness men are fleeing with their money and little capital and investment they can carry to us."
+ wol_qol.104.a:0 "A vagrant disregard for the world order"
+
+
  MON_support_spa:0"Support the Spanish Republicans"
  HUN_support_spa:0"Support the Spanish Coup"
  ROM_support_spa:0"Support the Spanish Coup"
  MAN_support_spa:0"Mutual Recognition"
+
 
  ENG_supermarine_2_organization:0 "$supermarine$"
  HUN_hti_turan_organization_2:0 "$HUN_hti_turan$"
@@ -234,6 +247,16 @@
  GER_me_262_research:0"The Me-262"
  GER_jet_research:0"The Ho-229"
  GER_comet_rocket:0"The Komet"
+
+ mio_mil_amry_xp_gain_1:0"MIO Iterative Research"
+ mio_mil_amry_xp_gain_2:0"MIO Iterative Research"
+ mio_mil_air_xp_gain_1:0"MIO Iterative Research"
+ mio_mil_air_xp_gain_2:0"MIO Iterative Research"
+ mio_mil_air_xp_gain_1:0"MIO Iterative Research"
+ mio_mil_air_xp_gain_2:0"MIO Iterative Research"
+
+
+
 
  ski_aircraft:0"Ski Landing Gear Development"
  CAN_kangaroo_apcs:0"Kangaroo Apcs"

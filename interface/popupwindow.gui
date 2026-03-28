@@ -908,6 +908,81 @@ guiTypes = {
 			clicksound = click_ok
 		}
 	}
+
+	containerWindowType = {
+		name = "mio_popup_warnings"
+		position = { x = 0 y = 0 }
+		size = { width = 0 height = 0 }
+		orientation = upper_left
+
+		gridboxtype = {
+			name = "special_MIO_alerts_grid"
+			position = { x = 0 y = 0 }
+			size = { width = 100% height = 100%% }
+			slotsize = { width = 0 height = 0 }
+		}
+	}
+
+	containerWindowType = {
+		name = "special_MIO_alert"
+		position = { x = -225 y = -160 }
+		size = { width = 500 height = 230 }
+		orientation = center
+		moveable = yes
+		fade_time = 200
+		fade_type = linear
+		hide_sound = menu_close_window
+		click_to_front = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_bg"
+		}
+
+		iconType = {
+			name = "diplo_popup_header_bg"
+			spriteType = "GFX_diplo_popup_header_bg"
+			position = { x = 3 y = 8 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 90 y = 36 }
+			font = "hoi_18mbs"
+			text = "special_MIO_alert_title"
+			maxWidth = 320
+			maxHeight = 24
+			fixedsize = yes
+			format = centre
+		}
+
+		instantTextBoxType = {
+			name = "message"
+			position = { x = 27 y = 110 }
+			font = "hoi_18mbs"
+			text = "special_MIO_alert_text"
+			maxWidth = 438
+			maxHeight = 180
+			format = centre
+		}
+
+		iconType = {
+			name ="diplo_popup_bottom"
+			spriteType = "GFX_diplo_popup_bottom"
+			position = { x = 3 y = 159 }
+		}
+
+		buttonType = {
+			name = "special_MIO_limit_ok_button"
+			position = { x = 180 y = 175 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonText = "OK"
+			buttonFont = "hoi_18mbs"
+			shortcut = "RETURN"
+			shortcut = "ESCAPE"
+		}
+	}
 	
 	containerWindowType = {
 		name = "custom_naval_invasion_warning"   

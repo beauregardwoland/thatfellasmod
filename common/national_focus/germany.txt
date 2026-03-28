@@ -3123,7 +3123,7 @@ focus_tree = {
 				}
 				mio:GER_rheinmetall_organization = {
 					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.25
+					add_mio_funds_gain_factor = 0.15
 					add_mio_research_bonus = 0.05
 				}
 				mio:GER_mauser_organization = {

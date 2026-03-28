@@ -56,64 +56,8 @@ on_actions = {
 				add_ideas = woland_gp_allowed_vols
 				country_event = wol_qol.9
 				country_event = wol_qol.17
-				#sets up research mios
-				every_military_industrial_organization = {
-					limit = {
-						OR = {
-							is_military_industrial_organization = GER_porsche_custom
-							is_military_industrial_organization = GER_blohm_voss_custom
-							is_military_industrial_organization = GER_heinkel_custom
-							is_military_industrial_organization = GER_carl_walt_custom
-							is_military_industrial_organization = GER_krupp_custom
-						}
-					}
-					set_variable = { max_research_speed = 0.5 }
-					set_variable = { weekly_research_speed_gain = 0.01 }
-					set_variable = { weekly_funds_requirement = 9 }
-				}
-				#sets up xp mios
-				every_military_industrial_organization = {
-					limit = {
-						OR = {
-							is_military_industrial_organization = GER_henschel_custom
-							is_military_industrial_organization = GER_rheinmetall_custom
-							is_military_industrial_organization = GER_deschimag_organization
-						}
-					}
-					set_variable = { weekly_funds_requirement = 9 }
-					set_variable = { mio_xp_gain = 0.2 }
-					set_variable = { total_campaign_xp = 0 }
-				}
-				mio:GER_opel_custom = {
-					set_variable = { invest_mio_civilian_factory_chance = 33 }
-					set_variable = { invest_mio_military_factory_chance = 33 }
-					set_variable = { invest_mio_dockyard_chance = 33 }
-					set_variable = { invest_mio_starting_construction_progress_min = 0 }
-					set_variable = { invest_mio_starting_construction_progress_max = 0.2 }
 
-					set_variable = { invest_mio_days_project_days = 250 }
-					set_variable = { invest_mio_days_project_days_math = 100 }
-					divide_variable = { var = invest_mio_days_project_days_math value = invest_mio_days_project_days }
-					multiply_variable = { invest_mio_days_project_days_math = 7 }
-					set_variable = { invest_mio_days_project_percent = 0 }
-
-					set_variable = { invest_mio_target_civ = 0 }
-					set_variable = { invest_mio_target_mil = 0 }
-					set_variable = { invest_mio_target_dock = 0 }
-
-					set_variable = { invest_mio_factory_interval_min = 160 }
-					set_variable = { invest_mio_factory_interval_max = 200 }
-					set_variable = { total_campaign_factories = 0 }
-					set_variable = { total_campaign_civs = 0 }
-					set_variable = { total_campaign_mils = 0 }
-					set_variable = { total_campaign_dockyards = 0 }
-					set_variable = { total_campaign_factory_progress = 0 }
-					set_variable = { average_campaign_factory_progress = 0 }
-					set_variable = { notification_list_maximum = 10 }
-					resize_array = { invest_mio_date_list = notification_list_maximum }
-					resize_array = { invest_mio_factory_list = notification_list_maximum }
-					resize_array = { invest_mio_state_list = notification_list_maximum }
-				}
+				setup_ger_mios_startup = yes
 			}
 			SOV = {
 				add_ideas = woland_gp_allowed_vols_1
@@ -134,8 +78,8 @@ on_actions = {
 			USA = { country_event = wol_qol.14 }
 			MON = { country_event = wol_qol.16 }
 			BUL = { country_event = wol_qol.17 }
-			HUN = { country_event = wol_qol.17 }
-			ROM = { country_event = wol_qol.17 }
+			HUN = { country_event = wol_qol.17 setup_hun_mio = yes }
+			ROM = { country_event = wol_qol.17 setup_rom_mios = yes }
 			MAN = { country_event = wol_qol.18 }
 			SIA = { country_event = wol_qol.18 }
 		}
@@ -292,5 +236,17 @@ on_actions = {
 			opel_weekly_invest_progress = yes
 		}
 	}
+
+	on_weekly_HUN = {
+		effect = {
+			on_actions_uppdate_xp_mios = yes
+		}
+	}
+	on_weekly_ROM = {
+		effect = {
+			special_Update_MIO_Research_Speeds = yes
+		}
+	}
+
 }
 
