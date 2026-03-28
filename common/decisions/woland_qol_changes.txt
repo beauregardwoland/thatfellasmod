@@ -1549,6 +1549,214 @@ gimp_ai_category = {
 		}
 	}
 	#allies
+
+	annex_fra_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+		available = {
+			is_ai = no
+			country_exists = FRA
+			FRA = {
+				is_ai = yes
+				has_capitulated = yes
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+			}
+		}
+		complete_effect = {
+			FRA = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = root
+				}
+			}
+			annex_country = {
+				target = FRA
+				transfer_troops = yes
+			}
+		}
+	}
+
+	annex_ned_ind_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		available = {
+			is_ai = no
+			country_exists = INS
+			INS = {
+				is_ai = yes
+			}
+			or = {
+				date > 1939.1.1
+				has_war = yes
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+			}
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = 1500
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+			}
+			INS = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+			}
+			annex_country = {
+				target = INS
+				transfer_troops = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = INS
+				}
+				add_compliance = 100
+			}
+		}
+	}
+
+	annex_ned_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+		available = {
+			is_ai = no
+			country_exists = HOL
+			HOL = {
+				is_ai = yes
+				has_capitulated = yes
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+			}
+		}
+		complete_effect = {
+			HOL = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = root
+				}
+			}
+			annex_country = {
+				target = HOL
+				transfer_troops = yes
+			}
+		}
+	}
+
+	annex_bel_decision = {
+		icon = decision_generic_nationalism
+		allowed = {
+			always = yes
+		}
+		
+		visible = {
+			is_ai = no
+		}
+		available = {
+			is_ai = no
+			country_exists = BEL
+			BEL = {
+				is_ai = yes
+				has_capitulated = yes
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		visible = {
+			is_ai = no
+			or = {
+				is_in_faction_with = ENG
+				tag = ENG
+			}
+		}
+		complete_effect = {
+			BEL = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = root
+				}
+			}
+			annex_country = {
+				target = BEL
+				transfer_troops = yes
+			}
+		}
+	}
+
 	annex_ice_decision = {
 		icon = decision_generic_nationalism
 		allowed = {
@@ -1604,7 +1812,10 @@ gimp_ai_category = {
 			PHI = {
 				is_ai = yes
 			}
-			date > 1940.8.1
+			or = {
+				date > 1940.8.1
+				has_war = yes
+			}
 		}
 		cost = 0
 		fire_only_once = yes
@@ -1652,7 +1863,10 @@ gimp_ai_category = {
 			CAN = {
 				is_ai = yes
 			}
-			date > 1939.1.1
+			or = {
+				date > 1939.1.1
+				has_war = yes
+			}
 		}
 		cost = 0
 		fire_only_once = yes
@@ -1700,7 +1914,10 @@ gimp_ai_category = {
 			COG = {
 				is_ai = yes
 			}
-			date > 1939.1.1
+			or = {
+				date > 1939.1.1
+				has_war = yes
+			}
 		}
 		cost = 0
 		fire_only_once = yes
@@ -1754,7 +1971,10 @@ gimp_ai_category = {
 			IRE = {
 				is_ai = yes
 			}
-			date > 1939.1.1
+			or = {
+				date > 1939.1.1
+				has_war = yes
+			}
 		}
 		cost = 0
 		fire_only_once = yes
@@ -1802,7 +2022,10 @@ gimp_ai_category = {
 			RAJ = {
 				is_ai = yes
 			}
-			date > 1939.1.1
+			or = {
+				date > 1939.1.1
+				has_war = yes
+			}
 		}
 		cost = 0
 		fire_only_once = yes
@@ -1858,7 +2081,10 @@ gimp_ai_category = {
 			}
 			or = {
 				original_tag = RAJ
+				or = {
 				date > 1939.1.1
+				has_war = yes
+			}
 			}
 			
 		}
@@ -1914,7 +2140,10 @@ gimp_ai_category = {
 			MAL = {
 				is_ai = yes
 			}
-			date > 1939.1.1
+			or = {
+				date > 1939.1.1
+				has_war = yes
+			}
 		}
 		cost = 0
 		fire_only_once = yes
@@ -1972,7 +2201,10 @@ gimp_ai_category = {
 			AST = {
 				is_ai = yes
 			}
-			#date > 1939.1.1
+			or = {
+				date > 1939.1.1
+				has_war = yes
+			}
 		}
 		cost = 0
 		fire_only_once = yes
@@ -2029,7 +2261,10 @@ gimp_ai_category = {
 				is_ai = yes
 			}
 			or = {
+				or = {
 				date > 1939.1.1
+				has_war = yes
+			}
 				tag = AST
 			}
 		}
@@ -2076,7 +2311,10 @@ gimp_ai_category = {
 				is_ai = yes
 			}
 			or = {
+				or = {
 				date > 1939.1.1
+				has_war = yes
+			}
 			}
 		}
 		cost = 0
@@ -2130,7 +2368,10 @@ gimp_ai_category = {
 				is_ai = yes
 			}
 			or = {
+				or = {
 				date > 1939.1.1
+				has_war = yes
+			}
 			}
 		}
 		cost = 0
@@ -2180,7 +2421,10 @@ gimp_ai_category = {
 			SAF = {
 				is_ai = yes
 			}
-			date > 1939.1.1
+			or = {
+				date > 1939.1.1
+				has_war = yes
+			}
 		}
 		cost = 0
 		fire_only_once = yes
@@ -2228,7 +2472,11 @@ gimp_ai_category = {
 			MON = {
 				is_ai = yes
 			}
-			has_completed_focus = SOV_secure_leningrad
+			or = {
+				has_completed_focus = SOV_secure_leningrad
+				has_war_with = GER
+			}
+			
 		}
 		cost = 0
 		fire_only_once = yes
