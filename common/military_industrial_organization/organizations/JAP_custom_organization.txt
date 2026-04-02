@@ -5941,6 +5941,7 @@ JAP_kawasaki_designer_upgrade_1 = {
 		railway_gun
 		#super_heavy_railway_gun_equipment
 		train_equipment
+		mio_cat_eq_all_h_arty_platforms
 	}
 	research_categories = { 
 		mio_cat_all_artillery_equipment
@@ -6678,6 +6679,7 @@ JAP_kawasaki_designer_upgrade_1 = {
 		anti_tank_equipment
 		anti_air_equipment
 		rocket_artillery_equipment
+		mio_cat_eq_all_h_arty_platforms
 	}
 	research_categories = { mio_cat_all_artillery_equipment }
 	on_tech_research_completed = {

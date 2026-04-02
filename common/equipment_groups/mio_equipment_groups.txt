@@ -86,6 +86,16 @@ mio_cat_eq_all_amphibious_tank = { #Includes Super Heavy Tank Chassis
 		light_tank_amphibious_chassis
 	}
 }	
+mio_cat_eq_all_h_arty_platforms = {
+	equipment_type = {
+		super_heavy_artillery_equipment
+		self_propelled_super_heavy_artillery_equipment
+		heavy_aa_equipment
+		heavy_at_equipment
+		self_propelled_heavy_aa_equipment
+		self_propelled_heavy_at_equipment
+	}
+}
 
 
  ######  ##     ## #### ########      ######   ########   #######  ##     ## ########   ######  

@@ -101,7 +101,10 @@ generic_tank_organization = {
 				has_dlc = "No Compromise, No Surrender"
 				
 			}
-		}		
+		}	
+		NOT = {
+			original_tag = MON
+		}	
 	}
 
 	equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank mio_cat_eq_all_heavy_tank }
@@ -4281,6 +4284,9 @@ generic_general_aircraft_organization = {
 				has_dlc = "No Compromise, No Surrender"
 			}
 		}
+		NOT = {
+			original_tag = MON
+		}
 	}
 
 	equipment_type = {
@@ -7119,6 +7125,9 @@ generic_artillery_organization = {
 				
 			}
 		}
+		NOT = {
+			original_tag = MON
+		}
 	}
 
 
@@ -7127,6 +7136,7 @@ generic_artillery_organization = {
 		anti_tank_equipment
 		anti_air_equipment
 		rocket_artillery_equipment
+		mio_cat_eq_all_h_arty_platforms
 	}
 
 	research_categories = {
@@ -7341,6 +7351,7 @@ generic_artillery_organization = {
 		limit_to_equipment_type = { 
 			artillery_equipment
 			rocket_artillery_equipment
+			mio_cat_eq_all_h_arty_platforms
 		}
 
 		equipment_bonus = {
@@ -7382,6 +7393,7 @@ generic_artillery_organization = {
 		limit_to_equipment_type = { 
 			artillery_equipment
 			rocket_artillery_equipment
+			mio_cat_eq_all_h_arty_platforms
 		}
 
 		production_bonus = {
@@ -7530,6 +7542,9 @@ generic_infantry_equipment_organization = {
 				has_dlc = "No Compromise, No Surrender"
 				
 			}
+		}
+		NOT = {
+			original_tag = MON
 		}
 	}
 

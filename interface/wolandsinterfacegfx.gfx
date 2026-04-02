@@ -21,6 +21,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_tank_medium_tank_aa.dds"
 	}
 	spriteType = {
+		name = "GFX_mio_cat_eq_all_h_arty_platforms"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_artillery.dds"
+	}
+	spriteType = {
 		name = "GFX_mio_cat_eq_all_planes_period"
 		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_plane_light.dds"
 	}

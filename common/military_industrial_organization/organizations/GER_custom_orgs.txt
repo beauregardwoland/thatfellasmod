@@ -1396,7 +1396,7 @@
 	equipment_type = { mio_cat_eq_all_artillery_track mio_cat_eq_all_tank_destroyers mio_cat_eq_all_aa_track }
 	research_categories = { mio_cat_all_artillery_equipment mio_cat_tech_all_armor_and_modules }
 	on_tech_research_completed = {
-		gib_funds_alket = yes
+		#gib_funds_alket = yes
 	}
 	tree_header_text = {
 		text = "First Column"
@@ -7344,7 +7344,7 @@
 	icon = GFX_idea_rheinmetall
 	allowed = { always = no }
 
-	equipment_type = { artillery_equipment anti_tank_equipment anti_air_equipment rocket_artillery_equipment }
+	equipment_type = { artillery_equipment anti_tank_equipment anti_air_equipment rocket_artillery_equipment mio_cat_eq_all_h_arty_platforms }
 	research_categories = { mio_cat_all_artillery_equipment }
 	tree_header_text = {
 		text = "Anti-Air"
@@ -7388,7 +7388,7 @@
 	}
 
 	on_tech_research_completed = {
-		gib_funds_rhein = yes  
+		#gib_funds_rhein = yes  
 		FROM = { subtract_from_variable = { rhein_Research_Number = 1 } }
 	}
 
@@ -8010,7 +8010,7 @@
 	allowed = { original_tag = GER }
 
 	
-	equipment_type = { mio_cat_eq_all_heavy_tank artillery_equipment railway_gun train_equipment }
+	equipment_type = { mio_cat_eq_all_heavy_tank artillery_equipment railway_gun train_equipment mio_cat_eq_all_h_arty_platforms }
 	research_categories = { mio_cat_tech_heavy_armor_and_modules mio_cat_all_artillery_equipment train_tech }
 	tree_header_text = {
 		text = "First Column"
@@ -8053,8 +8053,8 @@
 		name = GER_krupp_custom_initial
 
 		production_bonus = {
-			production_efficiency_cap_factor = 0.075
-			production_efficiency_gain_factor = -0.2
+			production_efficiency_cap_factor = 0.05
+			production_efficiency_gain_factor = -0.15
 			production_resource_need_factor = 0.025
 		}
 		equipment_bonus = {
