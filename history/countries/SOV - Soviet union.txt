@@ -27,6 +27,9 @@ if = {
 	set_country_flag = vlasov_owner_flag
 }
 
+recruit_character = SOV_dmitry_ustinov_char
+recruit_character = SOV_vasily_grubin_char
+
 #POLITICAL ADVISORS
 recruit_character = SOV_mikhail_kalinin
 recruit_character = SOV_nikita_khrushchyov

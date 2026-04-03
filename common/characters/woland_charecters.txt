@@ -21,4 +21,29 @@ characters = {
 			cost = 100
 		}		
 	}
+	SOV_dmitry_ustinov_char = {
+		name = SOV_nikolay_dukhov
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SOV_nikolay_dukhov_scientist_large
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_armored_specialist scientist_trait_bright }
+			skills = { specialization_land = 2 }
+		}
+	}
+
+	SOV_vasily_grubin_char = {
+		name = SOV_vasily_grubin
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SOV_vasily_grubin
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_gifted_engineer scientist_trait_artillery_specialist }
+			skills = { specialization_land = 2 }
+		}
+	}
 }
