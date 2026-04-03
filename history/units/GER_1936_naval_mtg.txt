@@ -96,7 +96,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.99
 		amount = 1
-		industrial_manufacturer = mio:GER_blohm_und_voss_organization
+		industrial_manufacturer = mio:GER_deschimag_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -107,7 +107,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.99
 		amount = 1
-		industrial_manufacturer = mio:GER_blohm_und_voss_organization
+		industrial_manufacturer = mio:GER_deschimag_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -118,7 +118,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.99
 		amount = 1
-		industrial_manufacturer = mio:GER_blohm_und_voss_organization
+		industrial_manufacturer = mio:GER_deschimag_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -129,7 +129,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.99
 		amount = 1
-		industrial_manufacturer = mio:GER_blohm_und_voss_organization
+		industrial_manufacturer = mio:GER_deschimag_organization
 	}
 	# DD: 1934 (x4) ("Z1" "Z2" "Z3" "Z4")
 	add_equipment_production = {

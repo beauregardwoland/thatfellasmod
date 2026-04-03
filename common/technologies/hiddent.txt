@@ -130,4 +130,30 @@ technologies = {
 		}
 		supply_consumption_factor = -0.025
 	}
+	desert_training_wol_tech = {
+		research_cost = 1
+		start_year = 1936
+		on_research_complete = {
+			custom_effect_tooltip = saf_desert_training_fucked_tt
+		}
+		show_effect_as_desc = yes
+
+
+		allow = { always = no } #only added by effect
+
+		category_recon = {
+			recon = 0.5
+
+			hills = {
+				movement = 0.05
+				attack = 0.05
+				defence = 0.075
+			}
+			desert = {
+				movement = 0.05
+				attack = 0.05
+				defence = 0.075
+			}
+		}
+	}
 }
