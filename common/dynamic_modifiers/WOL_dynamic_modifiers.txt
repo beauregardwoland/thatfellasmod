@@ -47,6 +47,7 @@ commonwealth_air_modifier = { #NATIONAL SPIRIT
 	air_agility_factor = commonwealth_air_agility_factor
 	naval_strike_targetting_factor = commonwealth_naval_strike_targetting_factor
 	strategic_bomb_visibility = commonwealth_strategic_bomb_visibility
+	air_manpower_requirement_factor = -0.075
 
 }
 
@@ -80,8 +81,14 @@ commonwealth_army_modifier = { #NATIONAL SPIRIT
 	experience_gain_army_unit_factor = CAN_modifier_var_3
 	army_artillery_attack_factor = CAN_modifier_var_4
 	modifier_army_sub_unit_marine_attack_factor = CAN_modifier_var_5
+	acclimatization_hot_climate_gain_factor = commonwealth_acclimatization_hot_climate_gain_factor
+	acclimatization_cold_climate_gain_factor = commonwealth_acclimatization_cold_factor
+	extra_marine_supply_grace = commonwealth_extra_marine_supply_grace
 	custom_modifier_tooltip = can_kangaroo_tt
 	custom_modifier_tooltip = can_skink_tt
+	custom_modifier_tooltip = saf_desert_training_custom_loc_tt
+	custom_modifier_tooltip = AST_jungle_warfare_tt
+
 }
 
 
@@ -100,6 +107,9 @@ commonwealth_naval_modifier = { #NATIONAL SPIRIT
 	shore_bombardment_bonus = commonwealth_shore_bombardment_bonus
 	navy_capital_ship_attack_factor = commonwealth_navy_capital_ship_attack_factor
 	custom_modifier_tooltip = CAN_destroyer_tt
+	custom_modifier_tooltip = commonwealth_convooy_tt
+
+	navy_max_range_factor = commonwealth_navy_max_range_factor
 }
 
 ROM_agrarian_refor = { #NATIONAL SPIRIT

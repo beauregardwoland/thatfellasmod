@@ -5391,7 +5391,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_ideas = CAN_trade_fleet			
+			custom_effect_tooltip = modify_commonwealth_spirit_navy
+			swap_ideas = {
+				remove_idea = comwealth_convoy
+				add_idea = comwealth_convoy_2
+			}			
 		}
 	}
 	
@@ -5427,6 +5431,12 @@ focus_tree = {
 			add_breakthrough_progress = {
 				specialization = specialization_naval
 				value = 0.5
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			sp:sp_naval_ice_carrier = {
+				add_project_progress_ratio = 0.33
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt

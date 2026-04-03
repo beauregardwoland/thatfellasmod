@@ -71,7 +71,7 @@ focus_tree = {
 
 		available = {
 			OR = {
-				threat > 0.2
+				threat > 0.15
 				NOT = { has_government = democratic }
 			}
 		}
@@ -98,7 +98,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SAF_war_measures_act
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -129,7 +129,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = SAF_war_measures_act
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
