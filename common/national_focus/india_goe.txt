@@ -31,6 +31,64 @@ focus_tree = {
     default = no
     continuous_focus_position = { x = 200 y = 3800 }
 
+    shortcut = {
+		name = RAJ_pol_independence
+		target = RAJ_purna_swaraj
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+    shortcut = {
+		name = RAJ_pol_commonwealth
+		target = RAJ_his_majestys_loyal_government
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+    shortcut = {
+		name = RAJ_army_tree
+		target = RAJ_indianize_the_army
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+    shortcut = {
+		name = RAJ_rail_tree
+		target = RAJ_bombay_baroda_and_central_india_railway
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+    shortcut = {
+		name = ENG_coord_empire
+		target = commonwealth_joint_wol
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+    shortcut = {
+		name = RAJ_vary_mil_tree
+		target = RAJ_royal_indian_navy_dlc
+		scroll_wheel_factor = 0.65
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
     focus = {
         id = RAJ_indianize_the_army
         icon = GFX_focus_RAJ_indianisation_of_army

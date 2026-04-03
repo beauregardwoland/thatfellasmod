@@ -21,7 +21,7 @@ decision_cost_army_xp_100_blocked:0 "£army_experience  §R50§!"
 decision_cost_army_xp_100_tooltip:0 "It costs 50£army_experience to select this decision"
 
 decision_cost_air_xp_100:0 "£air_experience  §Y50§!"
-decision_cost_air_xp_100_blocked:0 "£air_experience  §R59§!"
+decision_cost_air_xp_100_blocked:0 "£air_experience  §R50§!"
 decision_cost_air_xp_100_tooltip:0 "It costs 50£air_experience to select this decision"
 
 decision_cost_navy_xp_100:0 "£navy_experience  §Y50§!"
