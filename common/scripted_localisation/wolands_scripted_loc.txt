@@ -327,6 +327,17 @@ defined_text = {
 		localization_key = ""
 	}
 }
+defined_text = {
+	name = COM_convoy_loc_tt
+	text = {
+		trigger = { has_idea = comwealth_convoy }
+		localization_key = idea_desc|comwealth_convoy
+	}
+	text = {
+		trigger = { NOT = { has_idea = comwealth_convoy } }
+		localization_key = ""
+	}
+}
 
 defined_text = {
 	name = JAP_sen_toku_loc_tt
@@ -412,5 +423,28 @@ define_text = {
 	name = invest_mio_Factory_Entry
 	text = {
 		localization_key = "invest_mio_[?current_factory]"
+	}
+}
+
+defined_text = {
+	name = saf_desert_training_custom_loc
+	text = {
+		trigger = { has_tech = desert_training_wol_tech }
+		localization_key = tech_effect|desert_training_wol_tech
+	}
+	text = {
+		trigger = { NOT = { has_tech = desert_training_wol_tech } }
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = AST_jungle_warfare_loc_tt
+	text = {
+		trigger = { has_tech = jungle_warfare }
+		localization_key = tech_effect|jungle_warfare
+	}
+	text = {
+		trigger = { NOT = { has_tech = jungle_warfare } }
+		localization_key = ""
 	}
 }

@@ -1,4 +1,18 @@
 ﻿l_english:
+ MON_tank_org_1:0"Astrov Design Bureau"
+
+ MON_tank_org_2:0"Chelbayansk Tractor Plant"
+
+ MON_tank_org_3:0"Ural Heavy Machinery Plant"
+
+ MON_plane_org_1:0"Irkutsk Aviation Plant"
+
+ MON_plane_org_2:0"MIG Design Bureau Plant no.39"
+
+ MON_guns_org_1:0"Izhevsk Mechanical Plant"
+
+ MON_guns_org_2:0"Sverdlosk Machine-Building Plant"
+
 
  GER_inf_waffle_custom:0"Waffenprüfamt 2,4"
  GER_inf_waffle_custom_initial:0"Weapons Proof Office II und IV"

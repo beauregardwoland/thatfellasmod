@@ -199,11 +199,18 @@
  CAN_american_friend_3:0"American Partnership"
  CAN_american_friend_4:0"American Partnership"
  can_kangaroo_tt:0"[can_kangaroo_loc_tt]"
+ saf_desert_training_custom_loc_tt:0"[saf_desert_training_custom_loc]"
+ AST_jungle_warfare_tt:0"[AST_jungle_warfare_loc_tt]"
  can_skink_tt:0"[can_skink_loc_tt]"
  CAN_lancastors_tt:0"[CAN_lancastors_loc_tt]"
  CAN_destroyer_tt:0"[CAN_destroyer_loc_tt]"
  CAN_tank_aa:0"The Skink"
  CAN_tank_2:0"The Sexton"
+ comwealth_convoy:0"Commonwealth Trade Links"
+ comwealth_convoy_2:0"Commonwealth Trade Links"
+ commonwealth_convooy_tt:0"[COM_convoy_loc_tt]"
+
+ USA_election_status_text:0"§YElection Status§!"
 
 
  ROM_scavenge_equipment:0"Develop More Refurbishing Workshops"
@@ -256,10 +263,10 @@
  mio_mil_air_xp_gain_2:0"MIO Iterative Research"
 
 
-
-
  ski_aircraft:0"Ski Landing Gear Development"
  CAN_kangaroo_apcs:0"Kangaroo Apcs"
+ desert_training_wol_tech:0"Desert Training"
+ saf_desert_training_fucked_tt:0"   §Y$desert$§!:\n    $STAT_ADJUSTER_MOVEMENT$[?0.05|=+1%]\n    $STAT_ADJUSTER_ATTACK$[?0.05|=+1%]\n    $STAT_ADJUSTER_DEFENCE$[?0.075|=+1%]\n   §Y$hills$§!:\n    $STAT_ADJUSTER_MOVEMENT$[?0.05|=+1%]\n    $STAT_ADJUSTER_ATTACK$[?0.05|=+1%]\n    $STAT_ADJUSTER_DEFENCE$[?0.075|=+1%]\n"
  CAN_dummy_tech:0"Kangaroo Apcs"
  CAN_allied_conversions:0"Obsolete Allied Conversions"
  CAN_skink_aa:0"Domestic SPAA production"

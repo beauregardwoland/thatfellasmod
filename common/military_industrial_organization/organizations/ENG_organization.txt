@@ -602,7 +602,7 @@ ENG_hawker_organization = {
 	allowed = {	
 		OR = {
 			tag = ENG
-			tag = SAF
+			#tag = SAF
 		}
 		has_dlc = "Arms Against Tyranny"
 	}
@@ -963,7 +963,7 @@ ENG_crossley_motors_organization = {
 		has_dlc = "La Resistance"
 		OR = {
 			tag = ENG 
-			tag = SAF 
+			#tag = SAF 
 			AND = {
 				tag = HUN
 				has_dlc = "Gotterdammerung"

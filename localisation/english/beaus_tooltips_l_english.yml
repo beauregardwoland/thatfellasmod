@@ -34,13 +34,15 @@
 
  opel_invest_time_down_tt: "§gWill decrease §HConstruction timeframe days§! by: $RIGHT|-=$ Currently:§! [?invest_mio_days_project_days] days"
 
-opel_invest_civ_tt: "§gWill set Chance of constructing a §8Civilian Factory§! to: $RIGHT|W%%$ "
+ opel_invest_civ_tt: "§gWill set Chance of constructing a §8Civilian Factory§! to: $RIGHT|W%%$ "
 
-opel_invest_mil_tt: "§gWill set Chance of constructing a §GMilitary Factory§! to: $RIGHT|W%%$"
+ opel_invest_mil_tt: "§gWill set Chance of constructing a §GMilitary Factory§! to: $RIGHT|W%%$"
 
-opel_invest_dock_tt: "§gWill set Chance of constructing a §4Dockyard§! to: $RIGHT|W%%$"
+ opel_invest_dock_tt: "§gWill set Chance of constructing a §4Dockyard§! to: $RIGHT|W%%$"
 
-invest_mio_random_factories_tt: "§g§Y$GER_opel_custom$§! will invest in random parts of the country at random intervals constructing different buildings to assist the ruling government:\n\nChance of constructing a §8Civilian Factory§!: [?invest_mio_civilian_factory_chance|W%%]\nChance of constructing a §GMilitary Factory§!: [?invest_mio_military_factory_chance|W%%]\nChance of constructing a §4Dockyard§!: [?invest_mio_dockyard_chance|W%%]\n\nCurrent Construction timeframe: §W[?invest_mio_days_project_days] days§!\nCurrent Selected Project: [invest_mio_chosen_project]\nProject Progress: §W[?invest_mio_days_project_percent]% Complete§!\nWeekly Progress Gain: [?invest_mio_days_project_days_math]%\n\nTotal Factories built: [?total_campaign_factories|W0]\nTotal §8Civilian Factories§! built: [?total_campaign_civs|W0]\nTotal §GMilitary Factories§! built: [?total_campaign_mils|W0]\nTotal §4Dockyards§! built: [?total_campaign_dockyards|W0]\n\nLast [?notification_list_maximum] factories built:§!"
+ invest_mio_random_factories_tt: "§g§Y$GER_opel_custom$§! will invest in random parts of the country at random intervals constructing different buildings to assist the ruling government:\n\nChance of constructing a §8Civilian Factory§!: [?invest_mio_civilian_factory_chance|W%%]\nChance of constructing a §GMilitary Factory§!: [?invest_mio_military_factory_chance|W%%]\nChance of constructing a §4Dockyard§!: [?invest_mio_dockyard_chance|W%%]\n\nCurrent Construction timeframe: §W[?invest_mio_days_project_days] days§!\nCurrent Selected Project: [invest_mio_chosen_project]\nProject Progress: §W[?invest_mio_days_project_percent]% Complete§!\nWeekly Progress Gain: [?invest_mio_days_project_days_math]%\n\nTotal Factories built: [?total_campaign_factories|W0]\nTotal §8Civilian Factories§! built: [?total_campaign_civs|W0]\nTotal §GMilitary Factories§! built: [?total_campaign_mils|W0]\nTotal §4Dockyards§! built: [?total_campaign_dockyards|W0]\n\nLast [?notification_list_maximum] factories built:§!"
+
+ invest_mio_random_factories_usa_tt: "§g§Y$USA_ford_motor_company_organization$§! will invest in random parts of the country at random intervals constructing different buildings to assist the ruling government:\n\nChance of constructing a §8Civilian Factory§!: [?invest_mio_civilian_factory_chance|W%%]\nChance of constructing a §GMilitary Factory§!: [?invest_mio_military_factory_chance|W%%]\nChance of constructing a §4Dockyard§!: [?invest_mio_dockyard_chance|W%%]\n\nCurrent Construction timeframe: §W[?invest_mio_days_project_days] days§!\nCurrent Selected Project: [invest_mio_chosen_project]\nProject Progress: §W[?invest_mio_days_project_percent]% Complete§!\nWeekly Progress Gain: [?invest_mio_days_project_days_math]%\n\nTotal Factories built: [?total_campaign_factories|W0]\nTotal §8Civilian Factories§! built: [?total_campaign_civs|W0]\nTotal §GMilitary Factories§! built: [?total_campaign_mils|W0]\nTotal §4Dockyards§! built: [?total_campaign_dockyards|W0]\n\nLast [?notification_list_maximum] factories built:§!"
 
  invest_mio_Notification_None: "§HNone§!"
 
@@ -96,3 +98,4 @@ invest_mio_random_factories_tt: "§g§Y$GER_opel_custom$§! will invest in rando
 
  gib_focke_wolfe_cost_tt: "§gFocke-Wolfe is currently disfavored as a fighter aviation firm due to political favortism§! \nComeplete either §YPlay the Political Game trait§!(top mid left) or §YLeverage Field Reports§! trait(top mid right) to see associated costs."
  
+ gib_focke_wolfe_cost_1_tt: "§gIrkutsk Aviation Plant is currently uninterested in supporting us due to a stronger industrial base in russia§! \nComeplete either §YPlay the Political Game trait§!(top mid left) or §YLeverage Field Reports§! trait(top mid right) to see associated costs."

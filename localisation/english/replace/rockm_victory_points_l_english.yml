@@ -18,7 +18,25 @@
  ITA_strengthen_the_blackshirts_template_tt:0 "$ITA_blackshirts_div_cap_12_tt$"
  ITA_blackshirts_div_cap_12_tt:0 "Modify template cap of §YCamicie Nere§! by §G+40§!."
 
-
+ GER_porsche_organization: "$GER_porsche_custom$"
+ GER_henschel_organization: "$GER_henschel_custom$"
+ GER_man_organization: "$GER_man_custom$"
+ GER_daimler_benz_organization: "$GER_dam_benz_custom$"
+ GER_alkett_organization: "$GER_alket_custom$"
+ GER_blohm_und_voss_organization: "$GER_blohm_voss_custom$"
+ GER_deschimag_organization: "$GER_deshimag_custom$"
+ GER_deutsche_werke_organization: "$GER_deutsche_work_custom$"
+ GER_kriegsmarinewerft_wilhelmshaven_organization: "$GER_wilhemshaven_custom$"
+ GER_messerschmitt_organization: "$GER_bfw_custom$"
+ GER_junkers_organization: "$GER_junkers_custom$"
+ GER_focke_wulf_organization: "$GER_focke_wolfe_custom$"
+ GER_heinkel_organization: "$GER_heinkel_custom$"
+ GER_focke_achgelis_organization: "Focke-Achgelis"
+ GER_rheinmetall_organization: "$GER_rheinmetall_custom$"
+ GER_mauser_organization: "$GER_mauser_custom$"
+ GER_opel_organization: "$GER_opel_custom$"
+ GER_carl_walther_organization: "$GER_carl_walt_custom$"
+ GER_auto_union_organization: "$GER_auto_union_custom$"
 
 
  

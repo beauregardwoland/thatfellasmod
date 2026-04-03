@@ -1,0 +1,625 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+
+ MON_tank_org_1 = { 
+	include = GER_man_custom
+	icon = GFX_idea_astrov_design_bureau
+	allowed = { 
+		tag = MON
+	}
+
+	equipment_type = { armor }
+	research_categories = { mio_cat_tech_all_armor_and_modules }
+
+	initial_trait = {
+		name = GER_man_custom_initial
+
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.1
+		}
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.15
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+ }
+
+ MON_tank_org_2 = { 
+	include = GER_alket_custom
+	icon = GFX_idea_morozov_design_bureau
+	allowed = { 
+		tag = MON
+	}
+
+	#equipment_type = { armor }
+	#research_categories = { mio_cat_tech_all_armor_and_modules }
+	
+	initial_trait = {
+		name = GER_alket_custom_initial
+
+		production_bonus = {
+			production_capacity_factor = -0.05
+			production_conversion_speed_factor = 0.25
+			production_cost_factor = -0.025
+		}
+		equipment_bonus = {
+			soft_attack = 0.025
+			hard_attack = 0.025
+			reliability = -0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.05
+		}
+	}
+ }
+
+ MON_tank_org_3 = { 
+	include = GER_krupp_custom
+	icon = GFX_idea_SOV_mytishchy_machine_building_plant
+	allowed = { 
+		tag = MON
+	}
+
+	#equipment_type = { armor }
+	#research_categories = { mio_cat_tech_all_armor_and_modules }
+	
+	initial_trait = {
+		name = GER_krupp_custom_initial
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+			production_efficiency_gain_factor = -0.2
+			production_resource_need_factor = 0.025
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+			armor_value = 0.1
+			railway_gun_attack = 0.1
+		}
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.05
+			military_industrial_organization_research_bonus = -0.05
+		}
+	}
+ }
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+
+ MON_plane_org_1 = { 
+	include = GER_focke_wolfe_custom
+	icon = GFX_idea_yakovlev_design_bureau
+	allowed = { 
+		tag = MON
+	}
+	on_tech_research_completed = {
+		from = { add_manpower = 3300 }
+	}
+	#equipment_type = { armor }
+	#research_categories = { mio_cat_tech_all_armor_and_modules }
+
+	initial_trait = {
+		name = GER_focke_wolfe_custom_initial
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.025
+			production_resource_penalty_factor = -0.05
+		}
+		equipment_bonus = {
+			air_defence = 0.05
+			reliability = 0.05
+			air_range = 0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+			military_industrial_organization_size_up_requirement = -0.075
+			military_industrial_organization_design_team_assign_cost = 0.25
+		}
+	}
+
+	override_trait = {
+		token = GER_focke_wolfe_custom_1
+		name = GER_focke_wolfe_custom_1
+		icon = GFX_generic_mio_trait_icon_air_attack
+
+		#all_parents = { GER_wilhemshaven_custom_19 }
+
+		#any_parent = { GER_bfw_custom_12 GER_bfw_custom_13 GER_bfw_custom_15 }
+
+		#any_parent = { GER_wilhemshaven_custom_13 GER_wilhemshaven_custom_14 }
+
+		#mutually_exclusive = { GER_wilhemshaven_custom_13 }
+
+		position = { x = 0 y = 0 }
+
+		#limit_to_equipment_type = { capital_ship }
+
+		available = {
+			focke_wolfe_price_for_trait_mon = yes
+		}
+
+		equipment_bonus = {
+			air_attack = 0.1
+			air_agility = 0.05
+		}
+
+		on_complete = { gib_focke_wolfe_cost_mon = yes }
+	}
+
+	override_trait = {
+		token = GER_focke_wolfe_custom_2
+		name = GER_focke_wolfe_custom_2
+		icon = GFX_generic_mio_trait_icon_air_defence
+
+		#all_parents = { GER_wilhemshaven_custom_19 }
+
+		#any_parent = { GER_bfw_custom_12 GER_bfw_custom_13 GER_bfw_custom_15 }
+
+		#any_parent = { GER_wilhemshaven_custom_13 GER_wilhemshaven_custom_14 }
+
+		#mutually_exclusive = { GER_wilhemshaven_custom_13 }
+
+		position = { x = 8 y = 0 }
+
+		#limit_to_equipment_type = { capital_ship }
+
+		available = {
+			focke_wolfe_price_for_trait_mon = yes
+		}
+
+		equipment_bonus = {
+			air_defence = 0.1
+			air_agility = 0.05
+		}
+
+		on_complete = { gib_focke_wolfe_cost_mon = yes }
+	}
+
+	override_trait = {
+		token = GER_focke_wolfe_custom_3
+		name = GER_focke_wolfe_custom_3
+		icon = GFX_generic_mio_trait_icon_air_range
+
+		#all_parents = { GER_wilhemshaven_custom_19 }
+
+		#any_parent = { GER_bfw_custom_12 GER_bfw_custom_13 GER_bfw_custom_15 }
+
+		#any_parent = { GER_wilhemshaven_custom_13 GER_wilhemshaven_custom_14 }
+
+		#mutually_exclusive = { GER_wilhemshaven_custom_13 }
+
+		position = { x = 0 y = 2 }
+
+		#limit_to_equipment_type = { capital_ship }
+
+		available = {
+			focke_wolfe_price_for_trait_mon = yes
+		}
+
+		equipment_bonus = {
+			air_range = 0.15
+		}
+
+		on_complete = { gib_focke_wolfe_cost_mon = yes }
+	}
+
+	override_trait = {
+		token = GER_focke_wolfe_custom_4
+		name = GER_focke_wolfe_custom_4
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+
+		#all_parents = { GER_wilhemshaven_custom_19 }
+
+		#any_parent = { GER_bfw_custom_12 GER_bfw_custom_13 GER_bfw_custom_15 }
+
+		#any_parent = { GER_wilhemshaven_custom_13 GER_wilhemshaven_custom_14 }
+
+		#mutually_exclusive = { GER_wilhemshaven_custom_13 }
+
+		position = { x = 8 y = 2 }
+
+		#limit_to_equipment_type = { capital_ship }
+
+		available = {
+			focke_wolfe_price_for_trait_mon = yes
+		}
+
+		equipment_bonus = {
+			air_ground_attack = 0.1
+			air_bombing = 0.1
+		}
+
+		on_complete = { gib_focke_wolfe_cost_mon = yes }
+	}
+
+	override_trait = {
+		token = GER_focke_wolfe_custom_5
+		name = GER_focke_wolfe_custom_5
+		icon = GFX_generic_mio_trait_icon_upgrade
+
+		#all_parents = { GER_wilhemshaven_custom_19 }
+
+		all_parents = { GER_focke_wolfe_custom_1 GER_focke_wolfe_custom_2 GER_focke_wolfe_custom_3 GER_focke_wolfe_custom_4 GER_focke_wolfe_custom_6 GER_focke_wolfe_custom_7 GER_focke_wolfe_custom_12 GER_focke_wolfe_custom_13 }
+
+		#any_parent = { GER_wilhemshaven_custom_13 GER_wilhemshaven_custom_14 }
+
+		#mutually_exclusive = { GER_wilhemshaven_custom_13 }
+
+		position = { x = 4 y = 2 }
+
+		#limit_to_equipment_type = { capital_ship }
+
+		available = {
+			focke_wolfe_price_for_trait_mon = yes
+		}
+
+		equipment_bonus = {
+			air_attack = 0.05
+			air_range = 0.05
+			air_defence = 0.05
+
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+			production_efficiency_gain_factor = -0.1
+		}
+
+		on_complete = { gib_focke_wolfe_cost_mon = yes }
+	}
+
+	override_trait = {
+		token = GER_focke_wolfe_custom_6
+		name = GER_focke_wolfe_custom_6
+		icon = GFX_generic_mio_trait_icon_air_superiority
+
+		#all_parents = { GER_wilhemshaven_custom_19 }
+
+		#any_parent = { GER_focke_wolfe_custom_1 GER_focke_wolfe_custom_2 GER_focke_wolfe_custom_3 GER_focke_wolfe_custom_4 }
+
+		#any_parent = { GER_wilhemshaven_custom_13 GER_wilhemshaven_custom_14 }
+
+		#mutually_exclusive = { GER_wilhemshaven_custom_13 }
+
+		position = { x = 0 y = 4 }
+
+		#limit_to_equipment_type = { capital_ship }
+
+		available = {
+			focke_wolfe_price_for_trait_mon = yes
+		}
+
+		equipment_bonus = {
+			air_superiority = 0.025
+			air_agility = 0.1
+		}
+
+		on_complete = { gib_focke_wolfe_cost_mon = yes }
+	}
+
+	override_trait = {
+		token = GER_focke_wolfe_custom_7
+		name = GER_focke_wolfe_custom_7
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		#all_parents = { GER_wilhemshaven_custom_19 }
+
+		#any_parent = { GER_focke_wolfe_custom_1 GER_focke_wolfe_custom_2 GER_focke_wolfe_custom_3 GER_focke_wolfe_custom_4 }
+
+		#any_parent = { GER_wilhemshaven_custom_13 GER_wilhemshaven_custom_14 }
+
+		#mutually_exclusive = { GER_wilhemshaven_custom_13 }
+
+		position = { x = 8 y = 4 }
+
+		#limit_to_equipment_type = { capital_ship }
+
+		available = {
+			focke_wolfe_price_for_trait_mon = yes
+		}
+
+		equipment_bonus = {
+			build_cost_ic = -0.033
+		}
+
+		on_complete = { gib_focke_wolfe_cost_mon = yes }
+	}
+
+	override_trait = {
+		token = GER_focke_wolfe_custom_8
+		name = GER_focke_wolfe_custom_8
+		icon = GFX_generic_mio_trait_icon_political_power
+
+		#all_parents = { GER_wilhemshaven_custom_19 }
+
+		#any_parent = { GER_focke_wolfe_custom_1 GER_focke_wolfe_custom_2 GER_focke_wolfe_custom_3 GER_focke_wolfe_custom_4 }
+
+		#any_parent = { GER_wilhemshaven_custom_13 GER_wilhemshaven_custom_14 }
+
+		mutually_exclusive = { GER_focke_wolfe_custom_9 }
+
+		position = { x = 2 y = 1 }
+
+		#limit_to_equipment_type = { capital_ship }
+
+		on_complete = {
+			custom_effect_tooltip = focke_wolf_pp_cost_tt
+		}
+	}
+
+	override_trait = {
+		token = GER_focke_wolfe_custom_9
+		name = GER_focke_wolfe_custom_9
+		icon = GFX_mio_trait_icon_army_xp
+
+		#all_parents = { GER_wilhemshaven_custom_19 }
+
+		#any_parent = { GER_focke_wolfe_custom_1 GER_focke_wolfe_custom_2 GER_focke_wolfe_custom_3 GER_focke_wolfe_custom_4 }
+
+		#any_parent = { GER_wilhemshaven_custom_13 GER_wilhemshaven_custom_14 }
+
+		mutually_exclusive = { GER_focke_wolfe_custom_8 }
+
+		position = { x = 6 y = 1 }
+
+		#limit_to_equipment_type = { capital_ship }
+
+		on_complete = {
+			custom_effect_tooltip = focke_wolf_xp_cost_tt
+		}
+	}
+
+	override_trait = {
+		token = GER_focke_wolfe_custom_10
+		name = GER_focke_wolfe_custom_10
+		icon = GFX_generic_mio_trait_icon_production_capacity
+
+		#all_parents = { GER_wilhemshaven_custom_19 }
+
+		#any_parent = { GER_focke_wolfe_custom_1 GER_focke_wolfe_custom_2 GER_focke_wolfe_custom_3 GER_focke_wolfe_custom_4 }
+
+		#any_parent = { GER_wilhemshaven_custom_13 GER_wilhemshaven_custom_14 }
+
+		mutually_exclusive = { GER_focke_wolfe_custom_11 }
+
+		position = { x = 2 y = 3 }
+
+		#limit_to_equipment_type = { capital_ship }
+
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.075
+		}
+		production_bonus = {
+			production_capacity_factor = 0.075
+		}
+	}
+
+	override_trait = {
+		token = GER_focke_wolfe_custom_11
+		name = GER_focke_wolfe_custom_11
+		icon = GFX_generic_mio_trait_icon_civilian_factory
+
+		#all_parents = { GER_wilhemshaven_custom_19 }
+
+		#any_parent = { GER_focke_wolfe_custom_1 GER_focke_wolfe_custom_2 GER_focke_wolfe_custom_3 GER_focke_wolfe_custom_4 }
+
+		#any_parent = { GER_wilhemshaven_custom_13 GER_wilhemshaven_custom_14 }
+
+		mutually_exclusive = { GER_focke_wolfe_custom_10 }
+
+		position = { x = 6 y = 3 }
+
+		#limit_to_equipment_type = { capital_ship }
+
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
+			military_industrial_organization_research_bonus = 0.15
+			military_industrial_organization_design_team_assign_cost = -0.5
+		}
+	}
+
+	override_trait = {
+		token = GER_focke_wolfe_custom_12
+		name = GER_focke_wolfe_custom_12
+		icon = GFX_generic_mio_department_icon_tank_general_spg
+
+		#all_parents = { GER_wilhemshaven_custom_19 }
+
+		#any_parent = { GER_focke_wolfe_custom_1 GER_focke_wolfe_custom_2 GER_focke_wolfe_custom_3 GER_focke_wolfe_custom_4 }
+
+		#any_parent = { GER_wilhemshaven_custom_13 GER_wilhemshaven_custom_14 }
+
+		#mutually_exclusive = { GER_focke_wolfe_custom_10 }
+
+		position = { x = 4 y = 0 }
+
+		#limit_to_equipment_type = { capital_ship }
+
+		available = {
+			focke_wolfe_price_for_trait_mon = yes
+		}
+
+		equipment_bonus = {
+			air_bombing = 0.1
+			air_range = 0.05
+		}
+
+		on_complete = { gib_focke_wolfe_cost_mon = yes }
+	}
+
+	override_trait = {
+		token = GER_focke_wolfe_custom_13
+		name = GER_focke_wolfe_custom_13
+		icon = GFX_generic_mio_trait_icon_naval_strike_targetting
+
+		#all_parents = { GER_wilhemshaven_custom_19 }
+
+		#any_parent = { GER_focke_wolfe_custom_1 GER_focke_wolfe_custom_2 GER_focke_wolfe_custom_3 GER_focke_wolfe_custom_4 }
+
+		#any_parent = { GER_wilhemshaven_custom_13 GER_wilhemshaven_custom_14 }
+
+		#mutually_exclusive = { GER_focke_wolfe_custom_10 }
+
+		position = { x = 4 y = 4 }
+
+		#limit_to_equipment_type = { capital_ship }
+
+		available = {
+			focke_wolfe_price_for_trait_mon = yes
+		}
+
+		equipment_bonus = {
+			naval_strike_attack = 0.1
+			reliability_factor = 0.05
+		}
+
+		on_complete = { gib_focke_wolfe_cost_mon = yes }
+	}
+ }
+
+ MON_plane_org_2 = {
+	include = JAP_mitsui_designer
+	icon = GFX_idea_mig_design_bureau
+	allowed = { 
+		tag = MON
+	}
+	on_tech_research_completed = {
+		from = { add_manpower = 3300 }
+	}
+
+	initial_trait = {
+		name = JAP_mitsui_designer_initial
+
+		production_bonus = {
+			production_capacity_factor = 0.033
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_size_up_requirement = -0.15
+		}
+	}
+
+
+}
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+ MON_guns_org_1 = {
+	include = GER_carl_walt_custom
+	icon = GFX_idea_tula_arms_plant
+	allowed = { 
+		tag = MON
+	}
+	on_tech_research_completed = {
+		from = { add_manpower = 3300 }
+	}
+
+	initial_trait = {
+		name = GER_carl_walt_custom_initial
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.033
+		}
+		equipment_bonus = {
+			entrenchment = 10
+			soft_attack = 0.05
+			#reliability = 0.05
+		}
+		
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_size_up_requirement = -0.05
+		}
+	}
+
+}
+
+ MON_guns_org_2 = {
+	include = GER_rheinmetall_custom
+	icon = GFX_idea_grabin_design_bureau
+	allowed = { 
+		tag = MON
+	}
+	on_tech_research_completed = {
+		from = { add_manpower = 3300 }
+	}
+
+	initial_trait = {
+		name = GER_rheinmetall_custom_initial
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+		equipment_bonus = {
+			soft_attack = 0.025
+			hard_attack = 0.025
+			build_cost_ic = -0.025
+		}
+		
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+			military_industrial_organization_size_up_requirement = -0.33
+			#military_industrial_organization_funds_gain = 0.1
+		}
+	}
+		on_industrial_manufacturer_assigned = {
+		if = { #Check if the trait to give army xp is unlocked
+			limit = { has_enabled_rhein_xp_hun = yes }
+			calculate_daily_funds_gain_and_requirement_wol = yes
+			custom_effect_tooltip = {
+				localization_key = mio_XP_Gain_tt XP_ICON = mio_Army_XP_icon
+			}
+		}
+		else = {
+			custom_effect_tooltip = {
+				localization_key = wol_mio_has_completed_trait_NOT
+				TRAIT = GER_rheinmetall_custom_10
+			}
+			custom_effect_tooltip = GER_rhein_upgr_tt
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+	}
+
+
+
+}

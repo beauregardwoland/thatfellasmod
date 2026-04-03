@@ -9,7 +9,7 @@
  #################### 
 SAF_iscor_organization = {
     name = SAF_iscor_organization
-    include = generic_medium_tank_organization
+    include = GER_porsche_custom
     icon = GFX_idea_SAF_idea_iscor
     allowed = {
         original_TAG = SAF
@@ -51,7 +51,15 @@ SAF_vauxhall_heavy_organization = {
 
 ###########################
 
-
+SAF_hawker_organization = {
+	include = GER_junkers_custom
+    name = ENG_hawker_organization
+	icon = GFX_idea_hawker
+	allowed = {	
+		tag = SAF
+		has_dlc = "Arms Against Tyranny"
+	}
+}
 
 ################################### 
 
@@ -63,3 +71,63 @@ SAF_vauxhall_heavy_organization = {
 
 
 ###################################
+
+SAF_royal_arsenal_organization = {
+	include = GER_rheinmetall_custom
+    name = ENG_royal_arsenal_organization
+	icon = GFX_idea_royal_arsenal
+	allowed = {
+		original_tag = SAF
+	}
+
+	on_tech_research_completed = {
+		
+	}
+
+	initial_trait = {
+		name = GER_rheinmetall_custom_initial
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+		equipment_bonus = {
+			soft_attack = 0.025
+			hard_attack = 0.025
+			build_cost_ic = -0.025
+		}
+		
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+			military_industrial_organization_size_up_requirement = -0.33
+			#military_industrial_organization_funds_gain = 0.1
+		}
+	}
+	on_industrial_manufacturer_assigned = {
+		if = { #Check if the trait to give army xp is unlocked
+			limit = { has_enabled_rhein_xp_SAF = yes }
+			calculate_daily_funds_gain_and_requirement_wol = yes
+			custom_effect_tooltip = {
+				localization_key = mio_XP_Gain_tt XP_ICON = mio_Army_XP_icon
+			}
+		}
+		else = {
+			custom_effect_tooltip = {
+				localization_key = wol_mio_has_completed_trait_NOT
+				TRAIT = GER_rheinmetall_custom_10
+			}
+			custom_effect_tooltip = GER_rhein_upgr_tt
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+	}
+}
+
+SAF_crossley_motors_organization = {
+	include = GER_auto_union_custom
+    name = ENG_crossley_motors_organization
+	icon = GFX_idea_ENG_crossley_motors
+	allowed = {	
+		tag = SAF
+		
+	}
+}

@@ -6,30 +6,51 @@ on_actions = {
 				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
+				set_variable = { commonwealth_acclimatization_cold_factor = 0.075 }
+				set_variable = { commonwealth_monthly_population = 0.25 }
+				set_variable = { commonwealth_shore_bombardment_bonus = 0.075 }
+				set_variable = { commonwealth_spotting_chance = 0.075 }
+				add_ideas = comwealth_convoy
 			}
 			AST = {  
 				country_event = wol_qol.15
 				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
+				set_variable = { commonwealth_acclimatization_hot_climate_gain_factor = 0.05 }
+				set_variable = { commonwealth_monthly_population = 0.025 } 
+				set_variable = { commonwealth_shore_bombardment_bonus = 0.075 } 
+				set_variable = { commonwealth_spotting_chance = 0.075 }
+				set_technology = { jungle_warfare = 1 }
+				add_ideas = comwealth_convoy
 			}
 			RAJ = {
 				country_event = wol_qol.15  
 				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
+				set_variable = { commonwealth_spotting_chance = 0.075 }
 			}
 			NZL = {  
 				country_event = wol_qol.15
 				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
+				set_variable = { commonwealth_shore_bombardment_bonus = 0.075 }
+				set_variable = { commonwealth_spotting_chance = 0.075 }
+				add_ideas = comwealth_convoy
 			}
 			SAF = { 
 				country_event = wol_qol.15 
 				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
+				setup_SAF_mios = yes
+				set_technology = { desert_training_wol_tech = 1 }
+				set_variable = { commonwealth_acclimatization_hot_climate_gain_factor = 0.075 }
+				set_variable = { commonwealth_shore_bombardment_bonus = 0.075 } 
+				set_variable = { commonwealth_spotting_chance = 0.075 } 
+				add_ideas = comwealth_convoy
 			}
 			MAL = {  
 				country_event = wol_qol.15
@@ -74,9 +95,9 @@ on_actions = {
 				country_event = wol_qol.10
 				country_event = wol_qol.17
 			}
-			ENG = { country_event = wol_qol.13 country_event = wol_qol.15 }
-			USA = { country_event = wol_qol.14 }
-			MON = { country_event = wol_qol.16 }
+			ENG = { country_event = wol_qol.13 country_event = wol_qol.15 set_variable = { commonwealth_extra_marine_supply_grace = 24 } set_variable = { commonwealth_army_org_factor = 0.025 } set_variable = { commonwealth_navy_max_range_factor = 0.2 }  }
+			USA = { country_event = wol_qol.14 setup_usa_mios_startup = yes }
+			MON = { country_event = wol_qol.16  setup_MON_mios = yes }
 			BUL = { country_event = wol_qol.17 }
 			HUN = { country_event = wol_qol.17 setup_hun_mio = yes }
 			ROM = { country_event = wol_qol.17 setup_rom_mios = yes }
@@ -239,12 +260,29 @@ on_actions = {
 
 	on_weekly_HUN = {
 		effect = {
-			on_actions_uppdate_xp_mios = yes
+			on_actions_uppdate_xp_mios_hun = yes
 		}
 	}
 	on_weekly_ROM = {
 		effect = {
-			special_Update_MIO_Research_Speeds = yes
+			special_Update_MIO_Research_Speeds_rom = yes
+		}
+	}
+	on_weekly_MON = {
+		effect = {
+			special_Update_MIO_Research_Speeds_mon = yes
+			on_actions_uppdate_xp_mios_MON = yes
+		}
+	}
+	on_weekly_SAF = {
+		effect = {
+			special_Update_MIO_Research_Speeds_SAF = yes
+			on_actions_uppdate_xp_mios_SAF = yes
+		}
+	}
+	on_weekly_USA = {
+		effect = {
+			opel_weekly_invest_progress_usa = yes
 		}
 	}
 

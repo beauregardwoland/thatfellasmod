@@ -10,7 +10,7 @@
 
 
 USA_marmon_herrington_organization = {
-	include = generic_mobile_tank_organization
+	include = GER_dam_benz_custom
 	icon = GFX_idea_marmon_herrington
 	allowed = {	
 		OR = {
@@ -37,6 +37,185 @@ USA_marmon_herrington_organization = {
 					has_country_flag = has_marmon_herrington_mio_flag
 				}
 			}
+		}
+	}
+
+	override_trait = {
+		token = GER_dam_benz_custom_3
+		name = GER_dam_benz_custom_3
+		icon = GFX_generic_mio_trait_icon_surface_detection
+
+		special_trait_background = yes
+
+		any_parent = { GER_dam_benz_custom_2 GER_dam_benz_custom_1 }
+
+		position = { x = 4 y = 1 }
+
+		limit_to_equipment_type = { mio_cat_eq_all_light_tank }
+
+		equipment_bonus = {
+			recon = 0.05
+		}
+		on_complete = { daimler_benz_pp_reward_usa = yes }
+	}
+
+	override_trait = {
+		token = GER_dam_benz_custom_4
+		name = GER_dam_benz_custom_4
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		special_trait_background = yes
+
+		any_parent = { GER_dam_benz_custom_3 }
+
+		position = { x = 3 y = 2 }
+
+		limit_to_equipment_type = { mio_cat_eq_all_light_tank }
+
+		equipment_bonus = {
+			hard_attack = 0.075
+		}
+		on_complete = { daimler_benz_pp_reward_usa = yes }
+	}
+
+	override_trait = {
+		token = GER_dam_benz_custom_5
+		name = GER_dam_benz_custom_5
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		special_trait_background = yes
+
+		any_parent = { GER_dam_benz_custom_3 }
+
+		position = { x = 5 y = 2 }
+
+		limit_to_equipment_type = { mio_cat_eq_all_light_tank }
+
+		equipment_bonus = {
+			soft_attack = 0.075
+		}
+		on_complete = { daimler_benz_pp_reward_usa = yes }
+	}
+
+	override_trait = {
+		token = GER_dam_benz_custom_6
+		name = GER_dam_benz_custom_6
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		special_trait_background = yes
+
+		any_parent = { GER_dam_benz_custom_4 GER_dam_benz_custom_5 }
+
+		position = { x = 4 y = 3 }
+
+		limit_to_equipment_type = { mio_cat_eq_all_light_tank }
+
+		equipment_bonus = {
+			breakthrough = 0.075
+		}
+		on_complete = { daimler_benz_pp_reward_usa = yes }
+	}
+
+	override_trait = {
+		token = GER_dam_benz_custom_7
+		name = GER_dam_benz_custom_7
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		special_trait_background = yes
+
+		any_parent = { GER_dam_benz_custom_6 }
+
+		mutually_exclusive = { GER_dam_benz_custom_8 }
+
+		position = { x = 3 y = 4 }
+
+		limit_to_equipment_type = { mio_cat_eq_all_light_tank }
+
+		equipment_bonus = {
+			maximum_speed = 0.15
+		}
+		on_complete = { daimler_benz_pp_reward_usa = yes }
+	}
+
+	override_trait = {
+		token = GER_dam_benz_custom_8
+		name = GER_dam_benz_custom_8
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		special_trait_background = yes
+
+		any_parent = { GER_dam_benz_custom_6 }
+
+		mutually_exclusive = { GER_dam_benz_custom_7 }
+
+		position = { x = 5 y = 4 }
+
+		limit_to_equipment_type = { mio_cat_eq_all_light_tank }
+
+		equipment_bonus = {
+			armor_value = 0.2
+		}
+		on_complete = { daimler_benz_pp_reward_usa = yes }
+	}
+	override_trait = {
+		token = GER_dam_benz_custom_17
+		name = GER_dam_benz_custom_17
+		icon = GFX_generic_mio_trait_icon_civilian_factory
+
+		special_trait_background = yes
+
+		any_parent = { GER_dam_benz_custom_1 GER_dam_benz_custom_2 }
+
+		position = { x = 3 y = 1 }
+
+		#limit_to_equipment_type = { mio_cat_eq_all_small_plane }
+
+		on_complete = {
+			daimler_benz_pp_reward_usa = yes
+			from = {
+				random_core_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.15
+		}
+	}
+
+	override_trait = {
+		token = GER_dam_benz_custom_18
+		name = GER_dam_benz_custom_18
+		icon = GFX_generic_mio_trait_icon_military_factory
+
+		special_trait_background = yes
+
+		any_parent = { GER_dam_benz_custom_1 GER_dam_benz_custom_2 }
+
+		position = { x = 5 y = 1 }
+
+		#limit_to_equipment_type = { mio_cat_eq_all_small_plane }
+
+		on_complete = {
+			daimler_benz_pp_reward_usa = yes
+			from = {
+				random_core_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.15
 		}
 	}
 }
@@ -260,6 +439,7 @@ USA_chrysler_organization = {
 USA_army_ordnance_department_organization = {
 	include = generic_medium_tank_organization
 	icon = GFX_idea_army_ordnance_department
+	equipment_type = { armor }
 	
 	allowed = {	
 		tag = USA
@@ -487,7 +667,7 @@ USA_detroit_arsenal_organization = {
 
 USA_tank_destroyer_board_organization = {
 	name = tank_destroyer_board
-	include = generic_mobile_tank_organization
+	include = GER_man_custom
 	icon = GFX_idea_usa_tank_destroyer_board
 	allowed = {	
 		tag = USA 
@@ -495,25 +675,25 @@ USA_tank_destroyer_board_organization = {
 	available = {
 		FROM = { has_completed_focus = USA_tank_destroyer_doctrine }
 	}
-	initial_trait = {
-		name = ROM_mio_trait_mobile_tank_destroyers
-		
-		
-		equipment_bonus = {
-			reliability = 0.05
-			hard_attack = 0.05
-			ap_attack = 0.05
-		}
-	}
+	#initial_trait = {
+	#	name = ROM_mio_trait_mobile_tank_destroyers
+	#	
+	#	
+	#	equipment_bonus = {
+	#		reliability = 0.05
+	#		hard_attack = 0.05
+	#		ap_attack = 0.05
+	#	}
+	#}
 
-	override_trait = {
-		token = generic_mio_enlarged_breech
-		equipment_bonus = {
-			hard_attack = 0.05
-			ap_attack = 0.1
-		}
-		special_trait_background = yes
-	}
+	#override_trait = {
+	#	token = generic_mio_enlarged_breech
+	#	equipment_bonus = {
+	#		hard_attack = 0.05
+	#		ap_attack = 0.1
+	#	}
+	#	special_trait_background = yes
+	#}
 }
 
 
@@ -1352,8 +1532,41 @@ USA_springfield_armory_organization = {
 }
 
 USA_ford_motor_company_organization = {
-	include = generic_motorized_mechanized_organization
+	include = GER_opel_custom
 	icon = GFX_idea_ford_motor_company
+
+	on_industrial_manufacturer_assigned = {
+		if = {
+			limit = { has_enabled_opel_private_invest_usa = yes }
+			custom_effect_tooltip = invest_mio_random_factories_usa_tt
+			effect_tooltip = { Show_invest_mio_Notification_List = yes }
+		}
+		else = {
+			custom_effect_tooltip = {
+				localization_key = wol_mio_has_completed_trait_NOT
+				TRAIT = GER_opel_custom_2
+			}
+			custom_effect_tooltip = GER_opel_priv_invest_tt
+		}
+	}
+
+	initial_trait = {
+		name = GER_opel_custom_initial
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+			#production_resource_penalty_factor = 0.025
+		}
+		equipment_bonus = {
+			fuel_consumption = -0.033
+			reliability = 0.05
+		}
+		
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+	}
 	
 	allowed = {	 
 		OR = {
@@ -1471,12 +1684,6 @@ USA_ford_motor_company_organization = {
 					has_completed_focus = PHI_align_with_the_usa
 				}
 			}
-		}
-	}
-	
-	initial_trait = {
-		equipment_bonus = {
-			build_cost_ic = -0.05
 		}
 	}
 

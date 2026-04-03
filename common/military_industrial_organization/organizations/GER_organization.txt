@@ -33,6 +33,11 @@ GER_rheinmetall_organization = {
 		}
 	}
 
+	on_tech_research_completed = {
+		gib_funds_rhein = yes  
+		#FROM = { subtract_from_variable = { rhein_Research_Number = 1 } }
+	}
+
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
 		IF = {
@@ -1181,6 +1186,11 @@ GER_man_organization = {
 GER_alkett_organization = {
 	include = GER_alket_custom
 	icon = GFX_idea_GER_alkett
+
+	on_tech_research_completed = {
+		gib_funds_alket = yes  
+		#FROM = { subtract_from_variable = { rhein_Research_Number = 1 } }
+	}
 	
 	allowed = {	
 		original_tag = GER 

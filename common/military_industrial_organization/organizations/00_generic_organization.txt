@@ -7128,6 +7128,9 @@ generic_artillery_organization = {
 		NOT = {
 			original_tag = MON
 		}
+		NOT = {
+			original_tag = SAF
+		}
 	}
 
 
