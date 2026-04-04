@@ -111,10 +111,10 @@ GER_opel_organization = {
 				original_tag = ROM
 				has_dlc = "Death or Dishonor"
 			}
-			AND = {
-				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
+			#AND = {
+			#	original_tag = BUL
+			#	has_dlc = "Battle for the Bosporus"
+			#}
 		}
 	}
 	

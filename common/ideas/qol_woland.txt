@@ -1,5 +1,96 @@
 ideas = {
+	economy = {
+		undisturbed_isolation_alf = {
+
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = 0.4
+				production_speed_industrial_complex_factor = -0.4
+				production_speed_arms_factory_factor = -0.4
+				production_speed_dockyard_factor = -0.4
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.20
+				lend_lease_tension = 0.50
+				#send_volunteers_tension = 0.20
+				guarantee_tension = 0.75
+				max_fuel_factor = -0.45
+				fuel_gain_factor = -0.6
+				#agency_upgrade_time = 1.0
+				factory_energy_consumption = -0.3
+			}
+
+			allowed_to_remove = {
+				IF = {
+					limit = {
+						original_tag = USA
+					}
+					OR = {
+						has_war_support > 0.5
+						has_war = yes
+						has_completed_focus = USA_limited_intervention
+					}
+				}
+				ELSE = {
+					OR = {
+						has_war_support > 0.5
+						has_war = yes
+					}
+				}
+			}
+
+			cancel_if_invalid = no
+		}
+	}
 	country = {
+		great_depression_alf_2 = {
+			picture = usa_great_depression_2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.7
+				consumer_goods_factor = 0.4
+				conscription_factor = -0.4
+				join_faction_tension = 0.20
+				local_resources_factor = -0.2
+			}
+		}
+		great_depression_alf_3 = {
+			picture = usa_great_depression
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.33
+				consumer_goods_factor = 0.3
+				conscription_factor = -0.3
+				join_faction_tension = 0.20
+				local_resources_factor = -0.05
+			}
+		}
 		fra_decision_vased_eco = {
 			picture = ARG_economic_reactivation
 			modifier = {

@@ -147,6 +147,9 @@
  mongol_mil_research_armor1_bonus:0"Adapt the Truck to the Steppe"
  mongol_mil_research_armor2_bonus:0"Armor Research Board"
 
+ SOV_nikolay_dukhov:0"Nikolay Dukhov"
+ SOV_vasily_grubin:0"Vasily Grubin"
+
  MON_milchoice_1:0"Russian Way of War"
  MON_milchoice_2:0"Ideolgogical Mobilization"
  MON_milchoice_3:0"Cavalry Tradition"
@@ -210,8 +213,126 @@
  comwealth_convoy_2:0"Commonwealth Trade Links"
  commonwealth_convooy_tt:0"[COM_convoy_loc_tt]"
 
- USA_election_status_text:0"§YElection Status§!"
+ USA_election_status_text:0"§YElection Cycle§!"
+ USA_election_current_text:0"Current Election:[USA_election_objs_loc_tt]"
+ election_year_1936_text:0"§L1936 Election§!"
+ election_year_1936_mid_text:0"§L1938 Midterm Elections§!"
+ election_year_1940_text:0"§L1940 Election§!"
+ election_year_1940_mid_text:0"§L1942 Midterm Elections§!"
+ election_year_1944_text:0"§L1944 Election§!"
+ election_year_1944_mid_text:0"§L1946 Midterm Elections§!"
+ election_year_1948_text:0"§L1948 Election"
 
+ USA_election_display_loc_1936:0"FDR vs Alf Landon"
+ USA_election_display_loc_1940:0"FDR vs Wendell Willkie"
+ USA_election_display_loc_1944:0"FDR vs Thomas Dewey"
+ USA_election_display_loc_1948:0"Harry Truman vs Thomas Dewey"
+
+ USA_big_bills_promised_text:0"§4Major Campaign Promises§!\n              Made/fufilled"
+ USA_small_bills_promised_text:0"§7Minor Campaign Promises§!\n              Made/fufilled"
+
+ FDR_1936_election_tooltip:0"The FDR Campaign events will focus on promises to gradually fix the depression with options to become a §Yvolunteer country§!, better options to get §Ycongressional support§! and improveing the §Ynew deal modifier§!. America will play out in very vanilla way scaling harder over the entrance to the war and supporting the allies before entrance."
+ AL_1936_election_tooltip:0"The Alf Landon Campaign events will focus on fixeing the depression at the cost of stability with options to cooperate with buisnesses §Yboosting mios§! or §Yindustrial concerns§!. America will loose later scaling potential but can start building up its position better for an entrance to the war compared to vanilla."
+
+ wol_usa.1.t:0"Campaigning season for the [getyear] election"
+ wol_usa.1.d:0"Campainging for the [getyear] election is in full swing, with the candidates making promises and trying to win over voters. The outcome of the election will have a significant impact on the direction of the country and economical recovery."
+ wol_usa.1.a:0"Four more years. (Play as the Democrats)"
+ wol_usa.1.b:0"We must protect the American system.(Play as the Republicans)"
+
+ wol_usa.2.t:0"Adressing Consumer Purchaseing Power"
+ wol_usa.2.d:0"In a statement to the press, FDR anounces a new series of legislation meant to tackle the unemployment by..."
+ wol_usa.2.a:0"Expanding Works Programs"
+ wol_usa.2.b:0"Expanding Unemployment Benefits"
+
+ wol_usa.3.t:0"Concerneing isolationists"
+ wol_usa.3.d:0"Despite the uninterest of much of American society in foreign entanglements many choose to volunteer abroad as soldiers, support staff or as humanitarian aid workers. Supporting them would prove a great boon to certain governments and energize interventionists at home but would draw the ire of isolationistrs already who can block our measures to coalition in the legislture."
+ wol_usa.3.a:0"We cannot risk a loss of congressional support"
+ wol_usa.3.b:0"We must support Americans even if they are abroad"
+
+ wol_usa.4.t:0"Adressing Stagflation"
+ wol_usa.4.d:0"In a rallying speech, FDR have adressed the issue of the current stagflation crisis. He intends to adress it by promseing..."
+ wol_usa.4.a:0"Building up real wages"
+ wol_usa.4.b:0"Increaseing Bank Securities"
+
+ wol_usa.5.t:0"Keynesianism"
+ wol_usa.5.d:0"A recent interview has trapped the president into answering whether or not he will continue his keynesian policies to the detriment of the federal defeceit."
+ wol_usa.5.a:0"We must not be afraid to lend"
+ wol_usa.5.b:0"we will strive for fiscal stability when possible"
+
+ wol_usa.6.t:0"Educational Orders Program"
+ wol_usa.6.d:0"The governments policy of educational orders contracts meant to framilirize different compaines with the production of war materials has entered some trouble. The straight production of war materials is the best way to get machinery already tooled and ready though it limits how widespread and far these orders can reach. Expansion of manuels and routine for retooling machines has proven a good and far reaching use of funds but limits starting potential."
+ wol_usa.6.a:0"The tooling efforts should continues"
+ wol_usa.6.b:0"Who doesnt like a good book"
+
+ wol_usa.7.t:0"Anounceing Alf Landons New Deal"
+ wol_usa.7.d:0"Learning from Hoovers shortcoming Alf Landon has promised a package of legislature meant to tackle the depression head on with intervention. This deal is meant to bypass the faults and criticism's of the FDR's new deal though his first promise is..."
+ wol_usa.7.a:0"Anouunceing stronger relief for buisness"
+ wol_usa.7.b:0"Focuseing on supporting small buisness owners"
+
+ wol_usa.8.t:0"Anounceing a Balanced Budget"
+ wol_usa.8.d:0"Campagining on balanceing a budget is one thing answer how you will do it is another a question which has bogged campaign momentum immensely. Adressing this question will reverse some of the uncertainty people will feel towards our plans."
+ wol_usa.8.a:0"Anounce gradual cuts to benefits"
+ wol_usa.8.b:0"Anounce a tax reorganization"
+
+ wol_usa.9.t:0"Industrialist quid pro quo"
+ wol_usa.9.d:0"placeholder"
+ wol_usa.9.a:0"Prefer broad industrial cooperation"
+ wol_usa.9.b:0"We must have the option to chooce the best for the job"
+
+ wol_usa.10.t:0"Military Contracting"
+ wol_usa.10.d:0"placeholder"
+ wol_usa.10.a:0"Favor New Startups"
+ wol_usa.10.b:0"Prioritize Established contractors"
+
+ wol_usa.11.t:0"Reinforcing Tariffs"
+ wol_usa.11.d:0"placeholder"
+ wol_usa.11.a:0"Challenge Global Markets"
+ wol_usa.11.b:0"Ensure basic protections"
+
+
+ USA_new_deal:0"The New Deal"
+
+ num_big_bills_lim:0"Changes major Campaign Promises by: $RIGHT|+=0$"
+ pass_small_bill:0"Changes minor Campaign Promises completed by: $RIGHT|+=0$"
+
+ USA_fdr_promise_1_1:0"Expand Works Programs(§HMajor Acts§!)"
+ USA_fdr_promise_1_2:0"Expand Food Subsidies(§HMajor Acts§!)"
+ USA_fdr_promise_2_1:0"Special Measure(§HMajor Acts§!)"
+ USA_fdr_promise_2_2:0"Supply American Volunteers(§HMajor Acts§!)"
+ USA_fdr_promise_3_1:0"Raise Minimum Wage Laws(§HMajor Acts§!)"
+ USA_fdr_promise_3_2:0"Bank Rebuilding Acts(§HMajor Acts§!)"
+ USA_fdr_promise_4_1:0"Wpa Programs loan financeing(§HMajor Acts§!)"
+ USA_fdr_promise_4_2:0"Wpa Program expansion(§HMajor Acts§!)"
+ USA_fdr_promise_5_1:0"Update Educational Orders(§HMajor Acts§!)"
+ USA_fdr_promise_5_2:0"Update Educational Orders(§HMajor Acts§!)"
+ USA_fdr_promise_6_1:0"Publish New Educational Orders(§HMajor repeatable Acts§!)"
+ USA_fdr_promise_6_2:0"Publish New Educational Orders(§HMajor repeatable Acts§!)"
+
+ USA_rep_promise_1_1:0"Broad Buisness Subsidies(§HMajor Acts§!)"
+ USA_rep_promise_1_2:0"Small Buisness Relief Package(§HMajor Acts§!)"
+ USA_rep_promise_2_1:0"Anounce Budget Cuts(§HMajor Acts§!)"
+ USA_rep_promise_2_2:0"Reorganize tax brackets(§HMajor Acts§!)"
+ USA_rep_promise_3_1:0"Industrial favortism(§HMajor Acts§!)"
+ USA_rep_promise_3_2:0"Public Private Sector Harmonization Act(§HMajor Acts§!)"
+ USA_rep_promise_4_1:0"Sponsor New Arsenals(§HMajor Acts§!)"
+ USA_rep_promise_4_2:0"Expand Current Contracting(§HMajor Acts§!)"
+ USA_rep_promise_5_1:0"Cut Red Tape(§HMajor repeatable Acts§!)"
+ USA_rep_promise_5_2:0"Hold a Design Contest(§HMajor repeatable Acts§!)"
+ USA_rep_promise_6_1:0"Start trade war(§HMajor Acts§!)"
+ USA_rep_promise_6_2:0"Tariff Act(§HMajor Acts§!)"
+
+ USA_rep_small_bill_1:0"Anounce tax break(§gminor Acts§!)"
+ USA_rep_small_bill_2:0"Reorganize Civil Service(§gminor Acts§!)"
+ USA_rep_small_bill_3:0"Cross the Political Isle(§gminor Acts§!)"
+ USA_rep_small_bill_4:0"Cut Welfare Checks(§gminor Acts§!)"
+
+ USA_dem_small_bill_1:0"Pay farm Subsidies(§gminor Acts§!)"
+ USA_dem_small_bill_2:0"Sponsor Rural WPA Program(§gminor Acts§!)"
+ USA_dem_small_bill_3:0"Ensure Neutrality(§gminor Acts§!)"
+ USA_dem_small_bill_4:0"Sit down with Strikeing Workers(§gminor Acts§!)"
+
+ great_depression_alf_2:0"Slow Recovery"
+ great_depression_alf_3:0"Slow Economic Growth"
 
  ROM_scavenge_equipment:0"Develop More Refurbishing Workshops"
  ROM_staffing_1:0"Romanian General Staff"

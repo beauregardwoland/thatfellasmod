@@ -584,7 +584,10 @@ HUN_mwg_raba_organization = {
 	include = GER_auto_union_custom 
 	icon = GFX_idea_HUN_mwg_raba
 	allowed = {	 
-		original_tag = HUN
+		or = {
+			original_tag = HUN
+			original_tag = BUL
+		}
 		has_dlc = "Arms Against Tyranny"
 		has_dlc = "Gotterdammerung"
 	}

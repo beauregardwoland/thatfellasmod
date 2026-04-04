@@ -1,0 +1,46 @@
+scripted_gui = {
+
+	usa_congress_decision_ui = {
+		context_type = decision_category
+		window_name = "usa_congress_decision_ui_window"
+
+		properties = {
+			senate_icon = {
+				frame = current_senate_icon_frame
+			}
+
+			house_icon = {
+				frame = current_house_icon_frame
+			}
+			
+		}
+		triggers = {
+			1936_election_vs_icon_1_visible = {
+				has_country_flag = election_year_1936
+			}
+			1936_election_vs_icon_2_visible = {
+				has_country_flag = election_year_1936
+			}
+			1940_election_vs_icon_1_visible = {
+				has_country_flag = election_year_1940
+			}
+			1940_election_vs_icon_2_visible = {
+				has_country_flag = election_year_1940
+			}
+			1944_election_vs_icon_1_visible = {
+				has_country_flag = election_year_1944
+			}
+			1944_election_vs_icon_2_visible = {
+				has_country_flag = election_year_1944
+			}
+			1948_election_vs_icon_1_visible = {
+				has_country_flag = election_year_1948
+			}
+			1948_election_vs_icon_2_visible = {
+				has_country_flag = election_year_1948
+			}
+		}
+	}
+	
+}
+

@@ -1,5 +1,12 @@
 spriteTypes = {
-
+	spriteType = {
+		name = "GFX_portrait_SOV_nikolay_dukhov_scientist_large"
+		texturefile = "gfx/interface/SOV_nikolay_dukhov.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_SOV_vasily_grubin"
+		texturefile = "gfx/interface/SOV_vasily_grubin.png"
+	}
 	SpriteType = {
 		name = "GFX_ship_hull_carrier_submarine_medium" #Used for MTG equipment
 		texturefile = "gfx/interface/technologies/generic_ship_hull_cruiser_submarine.dds" #Was ship_hull_cruiser_submarine, with GOT we got a new icon that matches the new 3D model

@@ -1,0 +1,414 @@
+add_namespace = wol_usa
+
+
+country_event = {
+	id = wol_usa.1
+	title = wol_usa.1.t
+	desc = wol_usa.1.d
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = wol_usa.1.a
+		set_country_flag = wol_usa_election_rosevelt
+		country_event = { id = wol_usa.2 days = 60 }
+	}
+
+	option = {
+		name = wol_usa.1.b
+		set_country_flag = wol_usa_election_landon
+		country_event = { id = wol_usa.7 days = 60 }
+
+	}
+
+}
+
+
+
+country_event = {
+	id = wol_usa.2
+	title = wol_usa.2.t
+	desc = wol_usa.2.d
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = wol_usa.2.a
+		unlock_decision_tooltip = { decision = USA_fdr_promise_1_1 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_fdr_promise_1_1_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		country_event = { id = wol_usa.3 days = 30 }
+	}
+
+	option = {
+		name = wol_usa.2.b
+		unlock_decision_tooltip = { decision = USA_fdr_promise_1_2 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_fdr_promise_1_2_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		country_event = { id = wol_usa.3 days = 30 }
+	}
+
+}
+
+country_event = {
+	id = wol_usa.3
+	title = wol_usa.3.t
+	desc = wol_usa.3.d
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = wol_usa.3.a
+		unlock_decision_tooltip = { decision = USA_fdr_promise_2_1 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_fdr_promise_2_1_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		country_event = { id = wol_usa.4 days = 30 }
+	}
+
+	option = {
+		name = wol_usa.3.b
+		unlock_decision_tooltip = { decision = USA_fdr_promise_2_2 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_fdr_promise_2_2_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		country_event = { id = wol_usa.4 days = 30 }
+	}
+
+}
+
+country_event = {
+	id = wol_usa.4
+	title = wol_usa.4.t
+	desc = wol_usa.4.d
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = wol_usa.4.a
+		unlock_decision_tooltip = { decision = USA_fdr_promise_3_1 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_fdr_promise_3_1_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		country_event = { id = wol_usa.5 days = 30 }
+	}
+
+	option = {
+		name = wol_usa.4.b
+		unlock_decision_tooltip = { decision = USA_fdr_promise_3_2 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_fdr_promise_3_2_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		country_event = { id = wol_usa.5 days = 30 }
+	}
+
+}
+
+country_event = {
+	id = wol_usa.5
+	title = wol_usa.5.t
+	desc = wol_usa.5.d
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = wol_usa.5.a
+		unlock_decision_tooltip = { decision = USA_fdr_promise_4_1 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_fdr_promise_4_1_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		country_event = { id = wol_usa.6 days = 30 }
+	}
+
+	option = {
+		name = wol_usa.5.b
+		unlock_decision_tooltip = { decision = USA_fdr_promise_4_2 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_fdr_promise_4_2_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		country_event = { id = wol_usa.6 days = 30 }
+	}
+
+}
+
+country_event = {
+	id = wol_usa.6
+	title = wol_usa.6.t
+	desc = wol_usa.6.d
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = wol_usa.6.a
+		unlock_decision_tooltip = { decision = USA_fdr_promise_5_1 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_fdr_promise_5_1_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+	}
+
+	option = {
+		name = wol_usa.6.b
+		unlock_decision_tooltip = { decision = USA_fdr_promise_5_2 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_fdr_promise_5_2_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+	}
+
+}
+
+country_event = {
+	id = wol_usa.7
+	title = wol_usa.7.t
+	desc = wol_usa.7.d
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = wol_usa.7.a
+		unlock_decision_tooltip = { decision = USA_rep_promise_1_1 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_rep_promise_1_1_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		country_event = { id = wol_usa.8 days = 30 }
+	}
+
+	option = {
+		name = wol_usa.7.b
+		unlock_decision_tooltip = { decision = USA_rep_promise_1_2 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_rep_promise_1_2_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		country_event = { id = wol_usa.8 days = 30 }
+	}
+
+}
+
+country_event = {
+	id = wol_usa.8
+	title = wol_usa.8.t
+	desc = wol_usa.8.d
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = wol_usa.8.a
+		unlock_decision_tooltip = { decision = USA_rep_promise_2_1 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_rep_promise_2_1_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		country_event = { id = wol_usa.9 days = 30 }
+	}
+
+	option = {
+		name = wol_usa.8.b
+		unlock_decision_tooltip = { decision = USA_rep_promise_2_2 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_rep_promise_2_2_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		country_event = { id = wol_usa.9 days = 30 }
+	}
+
+}
+
+country_event = {
+	id = wol_usa.9
+	title = wol_usa.9.t
+	desc = wol_usa.9.d
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = wol_usa.9.a
+		unlock_decision_tooltip = { decision = USA_rep_promise_3_1 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_rep_promise_2_1_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		country_event = { id = wol_usa.10 days = 30 }
+	}
+
+	option = {
+		name = wol_usa.9.b
+		unlock_decision_tooltip = { decision = USA_rep_promise_3_2 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_rep_promise_3_2_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		country_event = { id = wol_usa.10 days = 30 }
+	}
+
+}
+
+country_event = {
+	id = wol_usa.10
+	title = wol_usa.10.t
+	desc = wol_usa.10.d
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = wol_usa.10.a
+		unlock_decision_tooltip = { decision = USA_rep_promise_4_1 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_rep_promise_4_1_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		country_event = { id = wol_usa.11 days = 30 }
+	}
+
+	option = {
+		name = wol_usa.10.b
+		unlock_decision_tooltip = { decision = USA_rep_promise_4_2 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_rep_promise_4_2_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		country_event = { id = wol_usa.11 days = 30 }
+	}
+
+}
+
+country_event = {
+	id = wol_usa.11
+	title = wol_usa.11.t
+	desc = wol_usa.11.d
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = wol_usa.11.a
+		unlock_decision_tooltip = { decision = USA_rep_promise_6_1 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_rep_promise_6_1_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		#country_event = { id = wol_usa.12 days = 30 }
+	}
+
+	option = {
+		name = wol_usa.11.b
+		unlock_decision_tooltip = { decision = USA_rep_promise_6_2 show_effect_tooltip = yes show_modifiers = yes }
+		set_country_flag = USA_rep_promise_6_2_flag
+		add_to_variable = {
+			num_big_bills_lim = 1
+			tooltip = num_big_bills_lim
+		}
+		#country_event = { id = wol_usa.12 days = 30 }
+
+	}
+
+}
+
+country_event = {
+	id = wol_usa.12
+	title = wol_usa.12.t
+	desc = wol_usa.12.d
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = wol_usa.12.a
+		set_country_flag = wol_usa_election_rosevelt
+	}
+
+	option = {
+		name = wol_usa.12.b
+		set_country_flag = wol_usa_election_landon
+	}
+
+}

@@ -28,10 +28,19 @@
  RAJ_rail_tree: "Industry"
  RAJ_vary_mil_tree: "Airforce/navy"
 
+ depression_legislation_1:0"Has either completed focus §Y$USA_agricultural_adjustment_act$§! or §Y$USA_adjusted_compensation_act$§!"
+ depression_legislation_2:0"Has either completed focus §Y$USA_fair_labour_standards_act$§! or §Y$USA_protectionist_tariffs$§!"
+ USA_depressionfocus_time_tt:0 "Current days are: [?depression_legislation_1:days|Y0]"
+ USA_depressionfocus_time_2_tt:0 "Current days are: [?depression_legislation_2:days|Y0]"
+ USA_depressionfocus_time_3_tt:0 "Current days are: [?depression_legislation_3:days|Y0]"
+
 
  USA_politics_hist: "Politics: Election"
  USA_airforce_foc: "War Plans Division"
  USA_army_foc: "War Department"
+
+ Modifiy_new_deal_tooltip: "Modifies §YNew Deal§! by:"
+ USA_no_major_acts_ongoing: "Has no §HMajor Acts§! ongoing"
 
  mio_Army_XP_icon: "£army_experience §HArmy Experience§!"
  mio_Air_XP_icon: "£air_experience §HAir Experience§!"

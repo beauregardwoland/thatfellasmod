@@ -1,3 +1,27 @@
+USA_great_depression_level_down_alf = {
+	if = {
+		limit = { has_idea = great_depression_alf_3 }
+		custom_effect_tooltip = USA_great_depression_down_tt
+		remove_ideas = great_depression_alf_3
+	}
+	if = {
+		limit = { has_idea = great_depression_alf_2 }
+		custom_effect_tooltip = USA_great_depression_down_tt
+		swap_ideas = {
+			remove_idea = great_depression_alf_2
+			add_idea = great_depression_3
+		}
+	}
+	if = {
+		limit = { has_idea = great_depression }
+		custom_effect_tooltip = USA_great_depression_down_tt
+		swap_ideas = {
+			remove_idea = great_depression
+			add_idea = great_depression_alf_2
+		}
+	}
+}
+
 state_of_pacific_up = {
 	if = {
 		limit = { has_idea = ALI_losing_4 }

@@ -1,0 +1,1105 @@
+USA_congress = {
+	USA_fdr_promise_1_1 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_fdr_promise_1_1_flag
+		}
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+
+		}
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			clr_country_flag = USA_current_major_bill_passing
+			USA_congress_small_opposition = yes
+			custom_effect_tooltip = Modifiy_new_deal_tooltip
+			add_to_variable = {
+				USA_new_deal_10 = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+		}
+	}
+	USA_fdr_promise_1_2 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_fdr_promise_1_2_flag
+		}
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+
+		}
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			USA_congress_small_opposition = yes
+			clr_country_flag = USA_current_major_bill_passing
+			custom_effect_tooltip = Modifiy_new_deal_tooltip
+			add_to_variable = {
+				USA_new_deal_1 = 0.075
+				tooltip = recruitable_population_factor_tt
+			}
+		}
+	}
+
+	USA_fdr_promise_2_1 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_fdr_promise_2_1_flag
+		}
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+
+		}
+		days_remove = 45
+		remove_effect = {
+			USA_congress_small_support = yes
+			clr_country_flag = USA_current_major_bill_passing
+		}
+	}
+	USA_fdr_promise_2_2 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_fdr_promise_2_2_flag
+		}
+		fire_only_once = yes
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+		}
+		days_remove = 60
+		remove_effect = {
+			USA_congress_small_opposition = yes
+			clr_country_flag = USA_current_major_bill_passing
+			add_ideas = woland_minor_allowed_vols
+			add_popularity = {
+				ideology = communism
+				popularity = 0.075
+			}
+		}
+	}
+
+	USA_fdr_promise_3_1 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_fdr_promise_3_1_flag
+		}
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+
+		}
+		days_remove = 60
+		remove_effect = {
+			USA_congress_small_support = yes
+			clr_country_flag = USA_current_major_bill_passing
+			custom_effect_tooltip = Modifiy_new_deal_tooltip
+			add_to_variable = {
+				USA_new_deal_10 = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+		}
+	}
+	USA_fdr_promise_3_2 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_fdr_promise_3_2_flag
+		}
+		fire_only_once = yes
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+		}
+		days_remove = 60
+		remove_effect = {
+			USA_congress_small_support = yes
+			clr_country_flag = USA_current_major_bill_passing
+			custom_effect_tooltip = Modifiy_new_deal_tooltip
+			add_to_variable = {
+				USA_new_deal_8 = 0.15
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+		}
+	}
+	USA_fdr_promise_4_1 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_fdr_promise_4_1_flag
+		}
+		fire_only_once = yes
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+
+		}
+		days_remove = 60
+		remove_effect = {
+			USA_congress_small_support = yes
+			clr_country_flag = USA_current_major_bill_passing
+			custom_effect_tooltip = Modifiy_new_deal_tooltip
+			add_to_variable = {
+				USA_new_deal_11 = 0.1
+				tooltip = political_power_cost_tt
+			}
+			add_to_variable = {
+				USA_new_deal_2 = 0.033
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				USA_new_deal_3 = 0.033
+				tooltip = industrial_capacity_dockyard_tt
+			}
+		}
+	}
+	USA_fdr_promise_4_2 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_fdr_promise_4_2_flag
+		}
+		fire_only_once = yes
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+		}
+		days_remove = 60
+		remove_effect = {
+			USA_congress_small_support = yes
+			clr_country_flag = USA_current_major_bill_passing
+			custom_effect_tooltip = Modifiy_new_deal_tooltip
+			add_to_variable = {
+				USA_new_deal_11 = -0.1
+				tooltip = political_power_cost_tt
+			}
+			add_to_variable = {
+				USA_new_deal_2 = 0.02
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				USA_new_deal_3 = 0.02
+				tooltip = industrial_capacity_dockyard_tt
+			}
+		}
+	}
+	USA_fdr_promise_5_1 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_fdr_promise_5_1_flag
+		}
+		fire_only_once = yes
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+
+		}
+		days_remove = 60
+		remove_effect = {
+			USA_congress_small_opposition = yes
+			clr_country_flag = USA_current_major_bill_passing
+			custom_effect_tooltip = Modifiy_new_deal_tooltip
+			add_to_variable = {
+				usa_new_deal_6 = 0.05
+				tooltip = production_factory_start_efficiency_factor_tt
+			}
+			unlock_decision_tooltip = { decision = USA_fdr_promise_6_1 show_effect_tooltip = yes show_modifiers = yes }
+			set_country_flag = USA_fdr_promise_6_1_flag
+		}
+	}
+	USA_fdr_promise_5_2 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_fdr_promise_5_2_flag
+		}
+		fire_only_once = yes
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+		}
+		days_remove = 60
+		remove_effect = {
+			USA_congress_small_opposition = yes
+			clr_country_flag = USA_current_major_bill_passing
+			custom_effect_tooltip = Modifiy_new_deal_tooltip
+			add_to_variable = {
+				usa_new_deal_5 = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			unlock_decision_tooltip = { decision = USA_fdr_promise_5_2 show_effect_tooltip = yes show_modifiers = yes }
+			set_country_flag = USA_fdr_promise_5_2_flag
+		}
+	}
+	USA_fdr_promise_6_1 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_fdr_promise_6_1_flag
+		}
+		#fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		days_re_enable = 200
+		modifier = {
+			equipment_conversion_speed = 0.15
+			production_factory_efficiency_gain_factor = 0.05
+			production_factory_start_efficiency_factor = 0.1
+		}
+		days_remove = 60
+		cost = 50
+		complete_effect = {
+			USA_congress_small_opposition = yes
+			add_cic = 333
+		}
+	}
+	USA_fdr_promise_6_2 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_fdr_promise_6_2_flag
+		}
+		#fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		days_re_enable = 200
+		modifier = {
+			equipment_conversion_speed = 0.15
+			production_factory_efficiency_gain_factor = 0.1
+			production_factory_start_efficiency_factor = 0.05
+		}
+		days_remove = 60
+		cost = 50
+		complete_effect = {
+			USA_congress_small_opposition = yes
+			add_cic = 333
+		}
+	}
+
+
+	USA_rep_promise_1_1 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_rep_promise_1_1_flag
+		}
+		fire_only_once = yes
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+
+		}
+		days_remove = 60
+		remove_effect = {
+			USA_congress_small_opposition = yes
+			clr_country_flag = USA_current_major_bill_passing
+			custom_effect_tooltip = Modifiy_new_deal_tooltip
+			add_to_variable = {
+				usa_new_deal_13 = 0.05
+				tooltip = production_speed_buildings_factor_tt
+			}
+		}
+	}
+	USA_rep_promise_1_2 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_rep_promise_1_2_flag
+		}
+		fire_only_once = yes
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+		}
+		days_remove = 60
+		remove_effect = {
+			USA_congress_small_opposition = yes
+			clr_country_flag = USA_current_major_bill_passing
+			custom_effect_tooltip = Modifiy_new_deal_tooltip
+			add_to_variable = {
+				usa_new_deal_8 = 0.1
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+		}
+	}
+
+	USA_rep_promise_2_1 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_rep_promise_2_1_flag
+		}
+		fire_only_once = yes
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+
+		}
+		days_remove = 60
+		remove_effect = {
+			USA_congress_small_opposition = yes
+			clr_country_flag = USA_current_major_bill_passing
+			custom_effect_tooltip = Modifiy_new_deal_tooltip
+			add_to_variable = {
+				usa_new_deal_7 = -0.033
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				USA_new_deal_10 = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+		}
+	}
+	USA_rep_promise_2_2 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_rep_promise_2_2_flag
+		}
+		fire_only_once = yes
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+		}
+		days_remove = 60
+		remove_effect = {
+			USA_congress_small_opposition = yes
+			clr_country_flag = USA_current_major_bill_passing
+			custom_effect_tooltip = Modifiy_new_deal_tooltip
+			add_to_variable = {
+				usa_new_deal_7 = -0.033
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				USA_new_deal_13 = 0.075
+				tooltip = production_speed_buildings_factor_tt
+			}
+		}
+	}
+	USA_rep_promise_3_1 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_rep_promise_3_1_flag
+		}
+		#fire_only_once = yes
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			industrial_concern_cost_factor = -1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+
+		}
+		days_remove = 60
+		days_re_enable = 140
+		remove_effect = {
+			USA_congress_small_opposition = yes
+			clr_country_flag = USA_current_major_bill_passing
+		}
+	}
+	USA_rep_promise_3_2 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_rep_promise_3_2_flag
+		}
+		fire_only_once = yes
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+		}
+		days_remove = 60
+		remove_effect = {
+			USA_congress_small_opposition = yes
+			clr_country_flag = USA_current_major_bill_passing
+			custom_effect_tooltip = Modifiy_new_deal_tooltip
+			add_to_variable = {
+				usa_new_deal_4 = 0.033
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+		}
+	}
+	USA_rep_promise_4_1 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_rep_promise_4_1_flag
+		}
+		fire_only_once = yes
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+
+		}
+		days_remove = 60
+		#days_re_enable = 140
+		remove_effect = {
+			USA_congress_small_opposition = yes
+			clr_country_flag = USA_current_major_bill_passing
+			custom_effect_tooltip = Modifiy_new_deal_tooltip
+			add_to_variable = {
+				usa_new_deal_9 = 0.05
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+			add_to_variable = {
+				usa_new_deal_14 = 0.075
+				tooltip = military_industrial_organization_research_bonus_tt
+			}
+			unlock_decision_tooltip = { decision = USA_rep_promise_5_1 show_effect_tooltip = yes show_modifiers = yes }
+			set_country_flag = USA_rep_promise_5_1_flag
+		}
+	}
+	USA_rep_promise_4_2 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_rep_promise_4_2_flag
+		}
+		fire_only_once = yes
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+		}
+		days_remove = 60
+		remove_effect = {
+			USA_congress_small_opposition = yes
+			clr_country_flag = USA_current_major_bill_passing
+			every_military_industrial_organization = {
+				add_mio_funds_gain_factor = 0.2
+			}
+			unlock_decision_tooltip = { decision = USA_rep_promise_5_2 show_effect_tooltip = yes show_modifiers = yes }
+			set_country_flag = USA_rep_promise_5_2_flag
+		}
+	}
+
+	USA_rep_promise_5_1 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_rep_promise_5_1_flag
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+
+		}
+		days_remove = 60
+		days_re_enable = 140
+		remove_effect = {
+			USA_congress_small_opposition = yes
+			clr_country_flag = USA_current_major_bill_passing
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+		}
+	}
+	USA_rep_promise_5_2 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_rep_promise_5_2_flag
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+		}
+		days_remove = 60
+		days_re_enable = 140
+		remove_effect = {
+			USA_congress_small_opposition = yes
+			clr_country_flag = USA_current_major_bill_passing
+			every_military_industrial_organization = {
+				add_mio_funds = 1000
+			}
+		}
+	}
+
+
+	USA_rep_promise_6_1 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_rep_promise_6_1_flag
+		}
+		fire_only_once = yes
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+
+		}
+		days_remove = 60
+		remove_effect = {
+			USA_congress_small_opposition = yes
+			clr_country_flag = USA_current_major_bill_passing
+			add_threat = 2
+		}
+	}
+	USA_rep_promise_6_2 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = USA_rep_promise_6_2_flag
+		}
+		fire_only_once = yes
+		cost = 25
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+		}
+		days_remove = 60
+		remove_effect = {
+			USA_congress_small_opposition = yes
+			clr_country_flag = USA_current_major_bill_passing
+			add_to_variable = {
+				USA_new_deal_10 = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+		}
+	}
+
+	USA_rep_small_bill_1 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = rep_midterms
+		}
+		#fire_only_once = yes
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			consumer_goods_factor = 0.075
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+			add_to_variable = {
+				num_small_bills = 1
+				tooltip = pass_small_bill
+			}
+		}
+		days_remove = 45
+		days_re_enable = 90
+		remove_effect = {
+			clr_country_flag = USA_current_major_bill_passing
+		}
+	}
+
+	USA_rep_small_bill_2 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = rep_midterms
+		}
+		#fire_only_once = yes
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_advisor_cost_factor = 0.5
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+			add_to_variable = {
+				num_small_bills = 1
+				tooltip = pass_small_bill
+			}
+		}
+		days_remove = 45
+		days_re_enable = 90
+		remove_effect = {
+			clr_country_flag = USA_current_major_bill_passing
+			
+		}
+	}
+
+	USA_rep_small_bill_3 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = rep_midterms
+		}
+		#fire_only_once = yes
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+			add_to_variable = {
+				num_small_bills = 1
+				tooltip = pass_small_bill
+			}
+		}
+		days_remove = 45
+		days_re_enable = 90
+		remove_effect = {
+			clr_country_flag = USA_current_major_bill_passing
+			
+		}
+	}
+	USA_rep_small_bill_4 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = rep_midterms
+		}
+		#fire_only_once = yes
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			stability_factor = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+			add_to_variable = {
+				num_small_bills = 1
+				tooltip = pass_small_bill
+			}
+		}
+		days_remove = 45
+		days_re_enable = 90
+		remove_effect = {
+			clr_country_flag = USA_current_major_bill_passing
+			
+		}
+	}
+
+	USA_dem_small_bill_1 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = dem_midterms
+		}
+		#fire_only_once = yes
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+			add_to_variable = {
+				num_small_bills = 1
+				tooltip = pass_small_bill
+			}
+		}
+		days_remove = 40
+		days_re_enable = 80
+		remove_effect = {
+			clr_country_flag = USA_current_major_bill_passing
+		}
+	}
+
+	USA_dem_small_bill_2 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = dem_midterms
+		}
+		#fire_only_once = yes
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			production_speed_buildings_factor = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+			add_to_variable = {
+				num_small_bills = 1
+				tooltip = pass_small_bill
+			}
+		}
+		days_remove = 45
+		days_re_enable = 90
+		remove_effect = {
+			clr_country_flag = USA_current_major_bill_passing
+			
+		}
+	}
+
+	USA_dem_small_bill_3 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = dem_midterms
+		}
+		#fire_only_once = yes
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			war_support_factor = -0.1
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+			add_to_variable = {
+				num_small_bills = 1
+				tooltip = pass_small_bill
+			}
+		}
+		days_remove = 45
+		days_re_enable = 90
+		remove_effect = {
+			clr_country_flag = USA_current_major_bill_passing
+			
+		}
+	}
+	USA_dem_small_bill_4 = {
+		icon = generic_political_discourse
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_no_major_acts_ongoing
+				NOT = { has_country_flag = USA_current_major_bill_passing }
+			}
+		}
+		visible = {
+			has_country_flag = dem_midterms
+		}
+		#fire_only_once = yes
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			industrial_capacity_dockyard = -0.05
+			industrial_capacity_factory = -0.05
+		}
+		complete_effect = {
+			set_country_flag = USA_current_major_bill_passing
+			add_to_variable = {
+				num_small_bills = 1
+				tooltip = pass_small_bill
+			}
+		}
+		days_remove = 45
+		days_re_enable = 90
+		remove_effect = {
+			clr_country_flag = USA_current_major_bill_passing
+			
+		}
+	}
+}

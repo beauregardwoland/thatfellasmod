@@ -600,7 +600,7 @@ USA_congress = {
 			has_completed_focus = USA_military_construction
 		}
 		visible = {
-			
+			always = no
 		}
 		days_re_enable = 200
 		modifier = {

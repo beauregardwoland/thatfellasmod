@@ -448,3 +448,67 @@ defined_text = {
 		localization_key = ""
 	}
 }
+
+defined_text = {
+	name = USA_election_objs_loc_tt
+	text = {
+		trigger = { has_country_flag = election_year_1948 }
+		localization_key = election_year_1948_text
+	}
+	text = {
+		trigger = { has_country_flag = election_year_1944_mid }
+		localization_key = election_year_1944_mid_text
+	}
+	text = {
+		trigger = { has_country_flag = election_year_1944 }
+		localization_key = election_year_1944_text
+	}
+	text = {
+		trigger = { has_country_flag = election_year_1940_mid }
+		localization_key = election_year_1940_mid_text
+	}
+	text = {
+		trigger = { has_country_flag = election_year_1940 }
+		localization_key = election_year_1940_text
+	}
+	text = {
+		trigger = { has_country_flag = election_year_1936_mid }
+		localization_key = election_year_1936_mid_text
+	}
+	text = {
+		localization_key = election_year_1936_text
+	}
+}
+
+defined_text = {
+	name = USA_election_display_loc_tt
+	text = {
+		trigger = { has_country_flag = election_year_1948 }
+		localization_key = USA_election_display_loc_1948
+	}
+	text = {
+		trigger = { has_country_flag = election_year_1944_mid }
+		localization_key = "Midterms"
+	}
+	text = {
+		trigger = { has_country_flag = election_year_1944 }
+		localization_key = USA_election_display_loc_1944
+	}
+	text = {
+		trigger = { has_country_flag = election_year_1940_mid }
+		localization_key = "Midterms"
+	}
+	text = {
+		trigger = { has_country_flag = election_year_1940 }
+		localization_key = USA_election_display_loc_1940
+	}
+	text = {
+		trigger = { has_country_flag = election_year_1936_mid }
+		localization_key = "Midterms"
+	}
+	text = {
+		localization_key = USA_election_display_loc_1936
+	}
+	
+
+}

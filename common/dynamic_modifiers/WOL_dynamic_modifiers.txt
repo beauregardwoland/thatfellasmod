@@ -345,7 +345,7 @@ USA_army = {
 	coordination_bonus = 0.05
 	modifier_army_sub_unit_category_mobile_infantry_max_org_factor = usa_army_9
 	custom_modifier_tooltip = more_gun_wol_tt #usa_army_8
-	
+	conscription_factor = usa_army_10
 }
 USA_navy = {
 	icon = GFX_idea_liberty_ships_focus
@@ -362,7 +362,7 @@ USA_navy = {
 	custom_modifier_tooltip = fleet_sub_wol_tt #usa_navy_6
 }
 USA_air = {
-	icon = GFX_idea_usa_airborne_divisions
+	icon = GFX_idea_usa_us_air_force
 	air_doctrine_cost_factor = usa_air_1
 	air_range_factor = usa_air_2
 	air_mission_xp_gain_factor = 0.15
@@ -377,6 +377,24 @@ USA_air = {
 	naval_strike_targetting_factor = usa_air_10
 	air_defence_factor = usa_air_11
 
+}
+
+USA_new_deal = {
+	icon = GFX_idea_new_deal
+	recruitable_population_factor = usa_new_deal_1
+	industrial_capacity_factory = usa_new_deal_2
+	industrial_capacity_dockyard = usa_new_deal_3
+	production_factory_max_efficiency_factor = usa_new_deal_4
+	production_factory_efficiency_gain_factor = usa_new_deal_5
+	production_factory_start_efficiency_factor = usa_new_deal_6
+	stability_factor = usa_new_deal_7
+	production_speed_industrial_complex_factor = usa_new_deal_8
+	production_speed_arms_factory_factor = usa_new_deal_9
+	consumer_goods_factor = USA_new_deal_10
+	political_power_cost = USA_new_deal_11
+	production_speed_infrastructure_factor = USA_new_deal_12
+	production_speed_buildings_factor = usa_new_deal_13
+	military_industrial_organization_research_bonus = usa_new_deal_14
 }
 
 MAN_army_modif = {

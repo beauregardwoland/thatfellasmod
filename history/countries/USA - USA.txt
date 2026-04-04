@@ -50,14 +50,17 @@ IF = {
 }
 
 set_research_slots = 4
-set_stability = 0.75
+set_stability = 0.7
 set_war_support = 0
 add_command_power = 20
 
 add_dynamic_modifier = { modifier = USA_air } 
 add_dynamic_modifier = { modifier = USA_navy } 
 add_dynamic_modifier = { modifier = USA_army } 
+add_dynamic_modifier = { modifier = USA_new_deal }
 set_variable = { var = usa_navy_9 value = -0.5 }
+set_variable = { var = usa_army_10 value = -0.2 }
+set_country_flag = election_year_1936
 
 
 set_variable = { var = senators_support value = 48 }
@@ -70,8 +73,9 @@ set_variable = { var = quorum_high value = 58 }
 USA_recalc_congress_icon_frames = yes
 
 USA = {
-	country_event = { id = usa.50 days = 2 }
-	country_event = { id = usa.51 days = 2 }
+	country_event = { id = wol_usa.1 days = 2 }
+	#country_event = { id = usa.50 days = 2 }
+	#country_event = { id = usa.51 days = 2 }
 }
 
 # Starting tech

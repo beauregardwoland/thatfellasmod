@@ -226,6 +226,9 @@ country_event = {
 
 	option = { 	
 		name = usa.6.a
+		trigger = {
+			has_country_flag = wol_usa_election_rosevelt
+		}
 		ai_chance = {
 			factor = 75
 			modifier = {
@@ -259,9 +262,15 @@ country_event = {
 			country_event = usa.30
 		}
 		add_country_leader_trait = peacetime_president
+		set_country_flag = dem_midterms
+		clr_country_flag = election_year_1936
+		set_country_flag = election_year_1936_mid
 	}
 
 	option = {
+		trigger = {
+			has_country_flag = wol_usa_election_landon
+		}
 		name = usa.6.b
 		ai_chance = {
 			factor = 25
@@ -304,6 +313,9 @@ country_event = {
 				staunch_constitutionalist
 			}
 		}
+		set_country_flag = rep_midterms
+		clr_country_flag = election_year_1936
+		set_country_flag = election_year_1936_mid
 		country_event = usa.31
 	}
 }
@@ -344,6 +356,8 @@ country_event = {
 	
 	option = {
 		name = usa.7.a
+		clr_country_flag = election_year_1940
+		set_country_flag = election_year_1940_mid
 		ai_chance = {
 			factor = 75
 		}
@@ -377,6 +391,8 @@ country_event = {
 
 	option = {
 		name = usa.7.b
+		clr_country_flag = election_year_1940
+		set_country_flag = election_year_1940_mid
 		ai_chance = {
 			factor = 25
 			modifier = {
@@ -401,7 +417,7 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = liberalism
 			traits = {
-				
+				wartime_president
 			}
 		}
 		country_event = usa.31 #weighted towards gain of support
@@ -444,6 +460,8 @@ country_event = {
 	
 	option = { 
 		name = usa.8.a
+		clr_country_flag = election_year_1940
+		set_country_flag = election_year_1940_mid
 		add_political_power = -40
 		if = {
 			limit = {
@@ -461,11 +479,22 @@ country_event = {
 			USA_election_house = yes
 			custom_effect_tooltip = usa_congress_elections_tt_bad
 			country_event = usa.30
+			random_character = {
+			limit = {
+				is_country_leader = yes
+			}
+			swap_country_leader_traits = {
+				remove = peacetime_president
+				add = wartime_president
+			}
+		}
 		}
 	}
 
 	option = { 
 		name = usa.8.b
+		clr_country_flag = election_year_1940
+		set_country_flag = election_year_1940_mid
 		set_party_name = { ideology = democratic long_name = USA_democratic_party name = USA_democratic_party }
 		add_ideas = new_deal
 		retire_country_leader = yes
@@ -477,6 +506,15 @@ country_event = {
 		USA_flip_support = yes
 		custom_effect_tooltip = usa_congress_elections_tt_good
 		country_event = usa.31
+		random_character = {
+			limit = {
+				is_country_leader = yes
+			}
+			swap_country_leader_traits = {
+				remove = peacetime_president
+				add = wartime_president
+			}
+		}
 	}
 }
 
@@ -515,6 +553,8 @@ country_event = {
 	
 	option = {
 		name = usa.9.a
+		clr_country_flag = election_year_1944
+		set_country_flag = election_year_1944_mid
 		ai_chance = {
 			factor = 75
 		}
@@ -549,6 +589,8 @@ country_event = {
 
 	option = {
 		name = usa.9.b
+		clr_country_flag = election_year_1944
+		set_country_flag = election_year_1944_mid
 		ai_chance = {
 			factor = 25
 			modifier = {
@@ -572,7 +614,7 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = conservatism
 			traits = {
-				
+				wartime_president
 			}
 		}
 		country_event = usa.31
@@ -613,6 +655,8 @@ country_event = {
 	
 	option = { 
 		name = usa.10.a
+		clr_country_flag = election_year_1944
+		set_country_flag = election_year_1944_mid
 		add_political_power = 10
 		if = {
 			limit = {
@@ -635,6 +679,8 @@ country_event = {
 
 	option = { 
 		name = usa.10.b
+		clr_country_flag = election_year_1944
+		set_country_flag = election_year_1944_mid
 		add_ideas = new_deal
 		set_party_name = { ideology = democratic long_name = USA_democratic_party name = USA_democratic_party }
 		set_variable = { election_factor = random }
@@ -691,6 +737,8 @@ country_event = {
 	
 	option = {
 		name = usa.11.a
+		clr_country_flag = election_year_1944
+		set_country_flag = election_year_1944_mid
 		ai_chance = {
 			factor = 25
 		}	
@@ -716,6 +764,8 @@ country_event = {
 
 	option = {
 		name = usa.11.b
+		clr_country_flag = election_year_1944
+		set_country_flag = election_year_1944_mid
 		ai_chance = {
 			factor = 25
 			modifier = {
@@ -749,7 +799,7 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = conservatism
 			traits = {
-				
+				wartime_president
 			}
 		}
 		country_event = usa.31
@@ -1227,7 +1277,32 @@ country_event = {
 
 	option = {
 		name = usa.32.a
-		USA_return_majority = yes
+		#USA_return_majority = yes
+		if = {
+			limit = { check_variable = { num_small_bills > 5.5 }  }
+			USA_congress_large_support = yes
+		}
+		else = {
+			USA_congress_medium_opposition = yes
+		}
+		set_variable = {
+			num_small_bills = 0
+		}
+		if = {
+			limit = { date > 1938.01.01 }
+			clr_country_flag = election_year_1936_mid
+			set_country_flag = election_year_1940
+		}
+		else_if = {
+			limit = { date > 1942.01.01 }
+			clr_country_flag = election_year_1940_mid
+			set_country_flag = election_year_1944
+		}
+		else_if = {
+			limit = { date > 1946.01.01 }
+			clr_country_flag = election_year_1944_mid
+			set_country_flag = election_year_1948
+		}
 	}
 
 }

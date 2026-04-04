@@ -19,11 +19,11 @@
  tech_intermediatary_cartidges:0"Intermediary Cartidges"
  
  minor_nation:0"Minor Nation QOL"
- woland_gp_allowed_vols:0"§Y6§! Volunteer Divisions Allowed"
- woland_gp_allowed_vols_1:0"§Y7§! Volunteer Divisions Allowed"
- woland_major_allowed_vols:0"§Y4§! Volunteer Divisions Allowed"
- woland_minor_allowed_vols:0"§Y2§! Volunteer Divisions Allowed"
- woland_spa_allowed_vols:0"§Y24§! Volunteer Divisions Allowed"
+ woland_gp_allowed_vols:0"§Y6§! Volunteer Divisions Limit"
+ woland_gp_allowed_vols_1:0"§Y7§! Volunteer Divisions Limit"
+ woland_major_allowed_vols:0"§Y4§! Volunteer Divisions Limit"
+ woland_minor_allowed_vols:0"§Y3§! Volunteer Divisions Limit"
+ woland_spa_allowed_vols:0"§Y24§! Volunteer Divisions Limit"
  
  INVASION_WARNING_TEXT: "Forces of §Y[?ui_invader_country.GetNameWithFlag]§! have successfully conducted a §CNaval Invasion§! at [?ui_invaded_state.GetName]!"
  INVASION_WARNING_DISABLE: "No longer show Enemy Invasions with this popup."
@@ -250,6 +250,11 @@
  USA_mil_equip_on:0"Small Arm Anti-Tank Solutions"
  USA_mil_equip:0"Involve Industry in War Production"
  USA_mil_equip_o:0"Mass Mechanization"
+ USA_wpa_migrantory_work:0"WPA Migrantory Work"
+ USA_combat_neutrality:0"Combat Neutrality"
+ USA_mil_industry_ties:0"Military Industrial Cokmplex Sponsorship"
+ USA_divest_wpa_funds:0"Reestablish the Gold Standard"
+ USA_continue_the_new_deal_wol:0"Continue the New Deal"
 
  USA_army:0"U.S Army"
  USA_navy:0"U.S Navy"
