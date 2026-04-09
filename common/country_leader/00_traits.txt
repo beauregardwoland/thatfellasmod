@@ -15700,7 +15700,7 @@ leader_traits = {
 	air_chief_old_guard = {
 		sprite = 1
 		experience_gain_air = @chief_experience_gain_medium
-		max_command_power = 10
+		max_command_power = 30
 
 		ai_will_do = {
 			factor = 0.25
@@ -15870,7 +15870,7 @@ leader_traits = {
 
 	air_air_combat_training_1 = {  # Chance of ace generating is increased by 5%
 		sprite = 1
-		air_ace_generation_chance_factor = 0.05
+		air_ace_generation_chance_factor = 0.1
 		#experience_gain_air = @experience_gain_low
 
 		command_cap_increase = @tier1_cp_cap_increase
@@ -15887,7 +15887,7 @@ leader_traits = {
 
 	air_air_combat_training_2 = {  # Chance of ace generating is increased by 10%
 		sprite = 1
-		air_ace_generation_chance_factor = 0.1
+		air_ace_generation_chance_factor = 0.15
 		#experience_gain_air = @experience_gain_medium
 
 		command_cap_increase = @tier2_cp_cap_increase
@@ -15904,7 +15904,7 @@ leader_traits = {
 
 	air_air_combat_training_3 = {  # Chance of ace generating is increased by 15%
 		sprite = 1
-		air_ace_generation_chance_factor = 0.15
+		air_ace_generation_chance_factor = 0.2
 		#experience_gain_air = @experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
@@ -15921,9 +15921,9 @@ leader_traits = {
 
 	air_naval_strike_1 = {
 		sprite = 2
-		naval_strike_attack_factor = 0.02
-		naval_strike_targetting_factor = 0.02
-		naval_strike_agility_factor = 0.02
+		naval_strike_attack_factor = 0.025
+		naval_strike_targetting_factor = 0.025
+		naval_strike_agility_factor = 0.025
 		#experience_gain_air = @experience_gain_low
 
 		command_cap_increase = @tier1_cp_cap_increase
@@ -15940,9 +15940,9 @@ leader_traits = {
 
 	air_naval_strike_2 = {
 		sprite = 2
-		naval_strike_attack_factor = 0.03
-		naval_strike_targetting_factor = 0.03
-		naval_strike_agility_factor = 0.03
+		naval_strike_attack_factor = 0.05
+		naval_strike_targetting_factor = 0.05
+		naval_strike_agility_factor = 0.05
 		#experience_gain_air = @experience_gain_medium
 
 		command_cap_increase = @tier2_cp_cap_increase
@@ -15959,9 +15959,9 @@ leader_traits = {
 
 	air_naval_strike_3 = {
 		sprite = 2
-		naval_strike_attack_factor = 0.05
-		naval_strike_targetting_factor = 0.05
-		naval_strike_agility_factor = 0.05
+		naval_strike_attack_factor = 0.075
+		naval_strike_targetting_factor = 0.075
+		naval_strike_agility_factor = 0.075
 		#experience_gain_air = @experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
@@ -15979,7 +15979,7 @@ leader_traits = {
 
 	air_bomber_interception_1 = {
 		sprite = 1
-		air_intercept_efficiency = 0.05
+		air_intercept_efficiency = 0.1
 		#experience_gain_air = @experience_gain_low
 
 		command_cap_increase = @tier1_cp_cap_increase
@@ -15996,7 +15996,7 @@ leader_traits = {
 
 	air_bomber_interception_2 = {
 		sprite = 1
-		air_intercept_efficiency = 0.10
+		air_intercept_efficiency = 0.15
 		#experience_gain_air = @experience_gain_medium
 
 		command_cap_increase = @tier2_cp_cap_increase
@@ -16013,7 +16013,7 @@ leader_traits = {
 
 	air_bomber_interception_3 = {
 		sprite = 1
-		air_intercept_efficiency = 0.15
+		air_intercept_efficiency = 0.2
 		#experience_gain_air = @experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
@@ -16138,8 +16138,8 @@ leader_traits = {
 
 	air_strategic_bombing_1 = {
 		sprite = 2
-		air_strategic_bomber_defence_factor = 0.01
-		air_strategic_bomber_bombing_factor = 0.03
+		air_strategic_bomber_defence_factor = 0.025
+		air_strategic_bomber_bombing_factor = 0.05
 		#experience_gain_air = @experience_gain_low
 
 		command_cap_increase = @tier1_cp_cap_increase
@@ -16156,8 +16156,8 @@ leader_traits = {
 
 	air_strategic_bombing_2 = {
 		sprite = 2
-		air_strategic_bomber_defence_factor = 0.02
-		air_strategic_bomber_bombing_factor = 0.05
+		air_strategic_bomber_defence_factor = 0.05
+		air_strategic_bomber_bombing_factor = 0.075
 		#experience_gain_air = @experience_gain_medium
 
 		command_cap_increase = @tier2_cp_cap_increase
@@ -16174,8 +16174,8 @@ leader_traits = {
 
 	air_strategic_bombing_3 = {
 		sprite = 2
-		air_strategic_bomber_defence_factor = 0.03
-		air_strategic_bomber_bombing_factor = 0.09
+		air_strategic_bomber_defence_factor = 0.075
+		air_strategic_bomber_bombing_factor = 0.1
 		#experience_gain_air = @experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
