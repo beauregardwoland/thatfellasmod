@@ -211,6 +211,28 @@ ITA_crda_organization_2 = {
 			}
 		}
 	}
+
+	override_trait = {
+		token = JAP_mitsubushi_nav_designer_24_2
+
+		#mutually_exclusive = {  }
+
+
+		position = { x = 7 y = 2 }
+
+		#any_parent = { JAP_mitsubushi_nav_designer_6_1 }
+
+		limit_to_equipment_type = {
+			mio_cat_eq_all_carrier
+		}
+
+		equipment_bonus = {
+			naval_speed = 0.05
+		}
+		production_bonus = {
+			production_capacity_factor = 0.075
+		}
+	}
 	
 	add_trait = { 
 		token = ITA_mio_trait_new_industrialization_program_1
@@ -235,6 +257,8 @@ ITA_crda_organization_2 = {
 			production_capacity_factor = 0.1
 		}
 	}
+
+	
  }
 
 ITA_crda_organization = {
