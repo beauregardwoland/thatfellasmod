@@ -346,8 +346,8 @@ USA_congress = {
 				usa_new_deal_5 = 0.05
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
-			unlock_decision_tooltip = { decision = USA_fdr_promise_5_2 show_effect_tooltip = yes show_modifiers = yes }
-			set_country_flag = USA_fdr_promise_5_2_flag
+			unlock_decision_tooltip = { decision = USA_fdr_promise_6_2 show_effect_tooltip = yes show_modifiers = yes }
+			set_country_flag = USA_fdr_promise_6_2_flag
 		}
 	}
 	USA_fdr_promise_6_1 = {

@@ -395,6 +395,7 @@ USA_new_deal = {
 	production_speed_infrastructure_factor = USA_new_deal_12
 	production_speed_buildings_factor = usa_new_deal_13
 	military_industrial_organization_research_bonus = usa_new_deal_14
+	global_building_slots_factor = usa_new_deal_15
 }
 
 MAN_army_modif = {
