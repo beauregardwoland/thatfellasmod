@@ -35,7 +35,8 @@
  USA_depressionfocus_time_3_tt:0 "Current days are: [?depression_legislation_3:days|Y0]"
 
 
- USA_politics_hist: "Politics: Election"
+ USA_politics_hist: "Politics: Democrats"
+ USA_politics_alt: "Politics:  Republicans"
  USA_airforce_foc: "War Plans Division"
  USA_army_foc: "War Department"
 

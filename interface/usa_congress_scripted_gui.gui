@@ -106,7 +106,7 @@ guiTypes = {
 			position = { x = 90 y = 200 }
 			scale = 0.75
 			pdx_tooltip = "FDR_1940_election_tooltip"
-			clicksound = decisions_ui_button
+			clicksound = decisions_ui_button 
 		}
 		buttonType = {
 			name = "1940_election_vs_icon_2"

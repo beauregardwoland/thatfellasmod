@@ -20,12 +20,14 @@ scripted_gui = {
 			}
 			1936_election_vs_icon_2_visible = {
 				has_country_flag = election_year_1936
+				NOT = { has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt } }
 			}
 			1940_election_vs_icon_1_visible = {
 				has_country_flag = election_year_1940
 			}
 			1940_election_vs_icon_2_visible = {
 				has_country_flag = election_year_1940
+				has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
 			}
 			1944_election_vs_icon_1_visible = {
 				has_country_flag = election_year_1944
@@ -38,6 +40,32 @@ scripted_gui = {
 			}
 			1948_election_vs_icon_2_visible = {
 				has_country_flag = election_year_1948
+			}
+		}
+		effects = {
+			1936_election_vs_icon_1_click = {
+				country_event = { id = wol_usa.12 } 
+			}
+			1936_election_vs_icon_2_click = {
+				country_event = { id = wol_usa.13 }
+			}
+			1940_election_vs_icon_1_click = {
+				country_event = { id = wol_usa.12 }
+			}
+			1940_election_vs_icon_2_click = {
+				country_event = { id = wol_usa.13 }
+			}
+			1944_election_vs_icon_1_click = {
+				country_event = { id = wol_usa.12 }
+			}
+			1944_election_vs_icon_2_click = {
+				country_event = { id = wol_usa.13 }
+			}
+			1948_election_vs_icon_1_click = {
+				country_event = { id = wol_usa.12 }
+			}
+			1948_election_vs_icon_2_click = {
+				country_event = { id = wol_usa.13 }
 			}
 		}
 	}

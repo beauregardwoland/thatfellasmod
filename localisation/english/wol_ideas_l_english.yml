@@ -201,17 +201,17 @@
  CAN_american_friend_2:0"American Partnership"
  CAN_american_friend_3:0"American Partnership"
  CAN_american_friend_4:0"American Partnership"
- can_kangaroo_tt:0"[can_kangaroo_loc_tt]"
- saf_desert_training_custom_loc_tt:0"[saf_desert_training_custom_loc]"
- AST_jungle_warfare_tt:0"[AST_jungle_warfare_loc_tt]"
- can_skink_tt:0"[can_skink_loc_tt]"
- CAN_lancastors_tt:0"[CAN_lancastors_loc_tt]"
- CAN_destroyer_tt:0"[CAN_destroyer_loc_tt]"
+ zcan_kangaroo_tt:0"[can_kangaroo_loc_tt]"
+ zsaf_desert_training_custom_loc_tt:0"[saf_desert_training_custom_loc]"
+ zAST_jungle_warfare_tt:0"[AST_jungle_warfare_loc_tt]"
+ zcan_skink_tt:0"[can_skink_loc_tt]"
+ zCAN_lancastors_tt:0"[CAN_lancastors_loc_tt]"
+ zCAN_destroyer_tt:0"[CAN_destroyer_loc_tt]"
  CAN_tank_aa:0"The Skink"
  CAN_tank_2:0"The Sexton"
  comwealth_convoy:0"Commonwealth Trade Links"
  comwealth_convoy_2:0"Commonwealth Trade Links"
- commonwealth_convooy_tt:0"[COM_convoy_loc_tt]"
+ zcommonwealth_convooy_tt:0"[COM_convoy_loc_tt]"
 
  USA_election_status_text:0"§YElection Cycle§!"
  USA_election_current_text:0"Current Election:[USA_election_objs_loc_tt]"
@@ -231,8 +231,12 @@
  USA_big_bills_promised_text:0"§4Major Campaign Promises§!\n              Made/fufilled"
  USA_small_bills_promised_text:0"§7Minor Campaign Promises§!\n              Made/fufilled"
 
- FDR_1936_election_tooltip:0"The FDR Campaign events will focus on promises to gradually fix the depression with options to become a §Yvolunteer country§!, better options to get §Ycongressional support§! and improveing the §Ynew deal modifier§!. America will play out in very vanilla way scaling harder over the entrance to the war and supporting the allies before entrance."
- AL_1936_election_tooltip:0"The Alf Landon Campaign events will focus on fixeing the depression at the cost of stability with options to cooperate with buisnesses §Yboosting mios§! or §Yindustrial concerns§!. America will loose later scaling potential but can start building up its position better for an entrance to the war compared to vanilla."
+ FDR_1936_election_tooltip:0"The FDR Campaign events will focus on promises to gradually fix the depression with options to become a §Yvolunteer country§!, better options to get §Ycongressional support§! and improveing the §Ynew deal modifier§!.\nAmerica will play out in very vanilla way scaling harder over the entrance to the war and supporting the allies before entrance.\nAfter the §Y1936§! election the choice in the elections only changes the generic congross laws you can pass.\nClick to see §4Democratic generic bills§!"
+
+ AL_1936_election_tooltip:0"The Alf Landon Campaign events will focus on fixeing the depression at the cost of stability with options to cooperate with buisnesses §Yboosting mios§! or §Yindustrial concerns§!.\nAmerica will loose later scaling potential but can start building up its position better for an entrance to the war compared to vanilla.\nAfter the §Y1936§! election the choice in the elections only changes the generic congross laws you can pass.\nClick to see §Rrepublican generic bills§!"
+
+ post_1936_tooltip_rep_tt:0"This election will allow you to swap between Republican and Democratic generic bills nothing else will change.\nClick to see §Rrepublican generic bills§!"
+ post_1936_tooltip_dem_tt:0"This election will allow you to swap between Republican and Democratic generic bills nothing else will change.\nClick to see §4Democratic generic bills§!"
 
  wol_usa.1.t:0"Campaigning season for the [getyear] election"
  wol_usa.1.d:0"Campainging for the [getyear] election is in full swing, with the candidates making promises and trying to win over voters. The outcome of the election will have a significant impact on the direction of the country and economical recovery."
@@ -289,6 +293,14 @@
  wol_usa.11.a:0"Challenge Global Markets"
  wol_usa.11.b:0"Ensure basic protections"
 
+ wol_usa.12.t:0"Republican Bills"
+ wol_usa.12.d:0"placeholder"
+ wol_usa.12.a:0"Thank you for this information"
+
+ wol_usa.13.t:0"Democratic Bills"
+ wol_usa.13.d:0"placeholder"
+ wol_usa.13.a:0"Thank you for this information"
+
 
  USA_new_deal:0"The New Deal"
 
@@ -320,6 +332,13 @@
  USA_rep_promise_5_2:0"Hold a Design Contest(§HMajor repeatable Acts§!)"
  USA_rep_promise_6_1:0"Start trade war(§HMajor Acts§!)"
  USA_rep_promise_6_2:0"Tariff Act(§HMajor Acts§!)"
+
+ USA_common_rep_bill_1:0"Anounce new Tariff Package"
+ USA_common_rep_bill_2:0"Strikebreaking Policy"
+ USA_common_rep_bill_3:0"Reafirm Neutrality"
+ USA_common_dem_bill_1:0"Infrastructure Acts"
+ USA_common_dem_bill_2:0"Bunker of Democracy"
+ USA_common_dem_bill_3:0"Expand Research Grants"
 
  USA_rep_small_bill_1:0"Anounce tax break(§gminor Acts§!)"
  USA_rep_small_bill_2:0"Reorganize Civil Service(§gminor Acts§!)"

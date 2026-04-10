@@ -216,10 +216,10 @@ country_event = {
 						has_completed_focus = USA_union_representation_act
 					}
 				}
-				country_event = { id = usa.32 days = 730 } # midterms
+				country_event = { id = usa.30 days = 730 } # midterms
 			}
 			else = {
-				country_event = { id = usa.35 days = 730 } # midterms
+				country_event = { id = usa.30 days = 730 } # midterms
 			}
 		}
 	}
@@ -346,10 +346,10 @@ country_event = {
 						has_completed_focus = USA_union_representation_act
 					}
 				}
-				country_event = { id = usa.32 days = 730 } # midterms
+				country_event = { id = usa.30 days = 730 } # midterms
 			}
 			else = {
-				country_event = { id = usa.35 days = 730 } # midterms
+				country_event = { id = usa.30 days = 730 } # midterms
 			}
 		}
 	}
@@ -450,10 +450,10 @@ country_event = {
 						has_completed_focus = USA_union_representation_act
 					}
 				}
-				country_event = { id = usa.32 days = 730 } # midterms
+				country_event = { id = usa.30 days = 730 } # midterms
 			}
 			else = {
-				country_event = { id = usa.35 days = 730 } # midterms
+				country_event = { id = usa.30 days = 730 } # midterms
 			}
 		}
 	}
@@ -535,10 +535,10 @@ country_event = {
 						has_completed_focus = USA_union_representation_act
 					}
 				}
-				country_event = { id = usa.32 days = 730 } # midterms
+				country_event = { id = usa.30 days = 730 } # midterms
 			}
 			else = {
-				country_event = { id = usa.35 days = 730 } # midterms
+				country_event = { id = usa.30 days = 730 } # midterms
 			}
 		}
 	}
@@ -555,6 +555,7 @@ country_event = {
 		name = usa.9.a
 		clr_country_flag = election_year_1944
 		set_country_flag = election_year_1944_mid
+		set_country_flag = democrat_player
 		ai_chance = {
 			factor = 75
 		}
@@ -591,6 +592,7 @@ country_event = {
 		name = usa.9.b
 		clr_country_flag = election_year_1944
 		set_country_flag = election_year_1944_mid
+		set_country_flag = republican_player
 		ai_chance = {
 			factor = 25
 			modifier = {
@@ -638,10 +640,10 @@ country_event = {
 						has_completed_focus = USA_union_representation_act
 					}
 				}
-				country_event = { id = usa.32 days = 730 } # midterms
+				country_event = { id = usa.30 days = 730 } # midterms
 			}
 			else = {
-				country_event = { id = usa.35 days = 730 } # midterms
+				country_event = { id = usa.30 days = 730 } # midterms
 			}
 		}
 	}
@@ -657,6 +659,7 @@ country_event = {
 		name = usa.10.a
 		clr_country_flag = election_year_1944
 		set_country_flag = election_year_1944_mid
+		set_country_flag = republican_player
 		add_political_power = 10
 		if = {
 			limit = {
@@ -681,6 +684,7 @@ country_event = {
 		name = usa.10.b
 		clr_country_flag = election_year_1944
 		set_country_flag = election_year_1944_mid
+		set_country_flag = democrat_player
 		add_ideas = new_deal
 		set_party_name = { ideology = democratic long_name = USA_democratic_party name = USA_democratic_party }
 		set_variable = { election_factor = random }
@@ -716,10 +720,10 @@ country_event = {
 						has_completed_focus = USA_union_representation_act
 					}
 				}
-				country_event = { id = usa.32 days = 730 } # midterms
+				country_event = { id = usa.30 days = 730 } # midterms
 			}
 			else = {
-				country_event = { id = usa.35 days = 730 } # midterms
+				country_event = { id = usa.30 days = 730 } # midterms
 			}
 		}
 	}
@@ -739,6 +743,7 @@ country_event = {
 		name = usa.11.a
 		clr_country_flag = election_year_1944
 		set_country_flag = election_year_1944_mid
+		set_country_flag = democrat_player
 		ai_chance = {
 			factor = 25
 		}	
@@ -766,6 +771,7 @@ country_event = {
 		name = usa.11.b
 		clr_country_flag = election_year_1944
 		set_country_flag = election_year_1944_mid
+		set_country_flag = republican_player
 		ai_chance = {
 			factor = 25
 			modifier = {
@@ -1235,10 +1241,35 @@ country_event = {
 
 	option = {
 		name = usa.30.a
-		clear_variable = sen_loc
-		clear_variable = ror_loc
-		clear_variable = senators_for_reelection
-		clear_variable = representatives_for_reelection
+		#clear_variable = sen_loc
+		#clear_variable = ror_loc
+		#clear_variable = senators_for_reelection
+		#clear_variable = representatives_for_reelection
+		if = {
+			limit = { check_variable = { num_small_bills > 5.5 }  }
+			USA_congress_large_support = yes
+		}
+		else = {
+			USA_congress_medium_opposition = yes
+		}
+		set_variable = {
+			num_small_bills = 0
+		}
+		if = {
+			limit = { date > 1938.01.01 }
+			clr_country_flag = election_year_1936_mid
+			set_country_flag = election_year_1940
+		}
+		else_if = {
+			limit = { date > 1942.01.01 }
+			clr_country_flag = election_year_1940_mid
+			set_country_flag = election_year_1944
+		}
+		else_if = {
+			limit = { date > 1946.01.01 }
+			clr_country_flag = election_year_1944_mid
+			set_country_flag = election_year_1948
+		}
 	}
 
 }

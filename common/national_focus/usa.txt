@@ -28,7 +28,17 @@ focus_tree = {
 
 	shortcut = {
 		name = USA_politics_hist
-		target = USA_lend_lease_act
+		target = USA_wpa_migrantory_work
+		scroll_wheel_factor = 0.6
+		trigger = {
+			#has_dlc = "By Blood Alone"
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = USA_politics_alt
+		target = USA_divest_wpa_funds
 		scroll_wheel_factor = 0.6
 		trigger = {
 			#has_dlc = "By Blood Alone"
@@ -132,7 +142,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_social_security
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_SWE_state_paid_vacation
 		prerequisite = { focus = USA_continue_the_new_deal_wol }
 		relative_position_id = USA_continue_the_new_deal_wol
 
@@ -4926,7 +4936,7 @@ focus_tree = {
 			}
 		}
 		
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -5722,7 +5732,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = USA_war_plans_division
 		
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -6273,7 +6283,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_airforce
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -7841,7 +7851,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_reestablish_the_gold_standard }
 		relative_position_id = USA_reestablish_the_gold_standard
-		cost = 4
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -7906,7 +7916,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_reestablish_the_gold_standard }
 		relative_position_id = USA_reestablish_the_gold_standard
-		cost = 4
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
