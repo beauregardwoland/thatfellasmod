@@ -105,7 +105,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_portrait_USA_franklin_delano_roosevelt"
 			position = { x = 90 y = 200 }
 			scale = 0.75
-			pdx_tooltip = "FDR_1940_election_tooltip"
+			pdx_tooltip = "post_1936_tooltip_dem_tt"
 			clicksound = decisions_ui_button 
 		}
 		buttonType = {
@@ -113,7 +113,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_portrait_Wendell_Wilkie"
 			position = { x = 290 y = 200 }
 			scale = 0.75
-			pdx_tooltip = "WW_1940_election_tooltip"
+			pdx_tooltip = "post_1936_tooltip_rep_tt"
 			clicksound = decisions_ui_button
 		}
 		buttonType = {
@@ -121,7 +121,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_portrait_USA_franklin_delano_roosevelt"
 			position = { x = 90 y = 200 }
 			scale = 0.75
-			pdx_tooltip = "FDR_1944_election_tooltip"
+			pdx_tooltip = "post_1936_tooltip_dem_tt"
 			clicksound = decisions_ui_button
 		}
 		buttonType = {
@@ -129,7 +129,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_portrait_Thomas_E_Dewey"
 			position = { x = 290 y = 200 }
 			scale = 0.75
-			pdx_tooltip = "TD_1944_election_tooltip"
+			pdx_tooltip = "post_1936_tooltip_rep_tt"
 			clicksound = decisions_ui_button
 		}
 		buttonType = {
@@ -137,7 +137,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_portrait_Harry_S_Truman"
 			position = { x = 90 y = 200 }
 			scale = 0.75
-			pdx_tooltip = "HT_1948_election_tooltip"
+			pdx_tooltip = "post_1936_tooltip_dem_tt"
 			clicksound = decisions_ui_button
 		}
 		buttonType = {
@@ -145,7 +145,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_portrait_Thomas_E_Dewey"
 			position = { x = 290 y = 200 }
 			scale = 0.75
-			pdx_tooltip = "TD_1948_election_tooltip"
+			pdx_tooltip = "post_1936_tooltip_rep_tt"
 			clicksound = decisions_ui_button
 		}
 
