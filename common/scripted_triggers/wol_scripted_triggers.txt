@@ -21,6 +21,14 @@ has_enabled_henshel_xp = {
 	}
 }
 
+has_enabled_henshel_xp_sov = {
+    FROM = {
+		mio:SOV_kirov_organization = {
+			is_mio_trait_completed = GER_henschel_custom_5
+		}
+	}
+}
+
 has_enabled_rhein_xp = {
     FROM = {
 		mio:GER_rheinmetall_organization = {
@@ -49,7 +57,13 @@ has_enabled_rhein_xp_SAF = {
 		}
 	}
 }
-
+has_enabled_rhein_xp_SOV = {
+	FROM = {
+		mio:SOV_grabin_design_bureau_organization = {
+			is_mio_trait_completed = GER_rheinmetall_custom_10
+		}
+	}
+}
 
 
 has_enabled_deshig_xp = {

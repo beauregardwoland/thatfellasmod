@@ -573,6 +573,33 @@
 
 }
 
+ MON_guns_org_3 = {
+	include = JAP_mitsui_arms_manufactoring
+	icon = GFX_idea_zastava_arms
+	allowed = { 
+		tag = SOV
+	}
+	#on_tech_research_completed = {
+	#	from = { add_manpower = 3300 }
+	#}
+
+	on_tech_research_completed = {
+		
+	}
+
+	initial_trait = {
+		name = JAP_mitsui_arms_manufactoring_initial
+		production_bonus = {
+			production_cost_factor = -0.03
+			production_efficiency_cap_factor = 0.03
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+			military_industrial_organization_size_up_requirement = -0.15
+		}
+	}
+ }
+
  MON_guns_org_2 = {
 	include = GER_rheinmetall_custom
 	icon = GFX_idea_grabin_design_bureau

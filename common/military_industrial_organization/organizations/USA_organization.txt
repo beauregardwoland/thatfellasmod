@@ -218,6 +218,62 @@ USA_marmon_herrington_organization = {
 			military_industrial_organization_funds_gain = 0.15
 		}
 	}
+
+	override_trait = {
+		token = GER_dam_benz_custom_20
+		name = GER_dam_benz_custom_17
+		icon = GFX_generic_mio_trait_icon_civilian_factory
+
+		any_parent = { GER_dam_benz_custom_1 GER_dam_benz_custom_2 }
+
+		position = { x = 2 y = 0 }
+
+		#limit_to_equipment_type = { mio_cat_eq_all_small_plane }
+
+		on_complete = {
+			CAN = {
+				random_core_state = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.05
+		}
+	}
+
+	override_trait = {
+		token = GER_dam_benz_custom_19
+		name = GER_dam_benz_custom_18
+		icon = GFX_generic_mio_trait_icon_civilian_factory
+
+		any_parent = { GER_dam_benz_custom_1 GER_dam_benz_custom_2 }
+
+		position = { x = 6 y = 0 }
+
+		#limit_to_equipment_type = { mio_cat_eq_all_small_plane }
+
+		on_complete = {
+			ENG = {
+				random_core_state = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.05
+		}
+	}
 }
 
 USA_chrysler_organization = {
@@ -1284,77 +1340,21 @@ USA_lockheed_organization = {
 }
 
 USA_douglas_aircraft_company_organization = {
-	include = generic_cas_aircraft_organization
+	include = GER_junkers_custom
 	icon = GFX_idea_douglas_aircraft_company
 	
 	allowed = {	
 		tag = USA 
 	}
 
-	override_trait = {
-		token = generic_mio_trait_low_altitude_attacks
-		position = { x=3 y=0 }
-	}
-
-	add_trait = {
-		token = USA_mio_trait_remote_controlled_turrets
-		name = USA_mio_trait_remote_controlled_turrets
-		icon = GFX_generic_mio_trait_icon_air_attack
-
-		special_trait_background = yes
-		
-		position = { x=0 y=1 }  
-		relative_position_id = generic_mio_trait_low_altitude_attacks
-		
-		available = {
-			FROM = {
-				has_tech = computing_machine
-			}
-		}
-
-		any_parent = { generic_mio_trait_low_altitude_attacks }
-			
-		equipment_bonus = {
-			air_attack = 0.1
-		}
-	}
-
-	add_trait = {
-		token = USA_mio_trait_specialist_nose_configurations
-		name = USA_mio_trait_specialist_nose_configurations
-		icon = GFX_generic_mio_department_icon_plane_cas_combat
-
-		special_trait_background = yes
-		
-		position = { x=0 y=2 }  
-		relative_position_id = generic_mio_trait_heavily_armed_aircraft
-
-		any_parent = { generic_mio_trait_air_brakes generic_mio_trait_wingborne_fuel_tanks }
-		any_parent = {generic_mio_trait_heavily_armed_aircraft }
-			
-		equipment_bonus = {
-			air_ground_attack = 0.1
-		}
-	}
-
 }
 
 USA_boeing_organization = {
-	include = generic_heavy_aircraft_organization
+	include = GER_heinkel_custom
 	icon = GFX_idea_boeing
 	
 	allowed = {	
 		tag = USA 
-	}
-	
-	override_trait = {
-		token = generic_mio_trait_flying_fortress
-		position = { x=-1 y=1 }
-	}
-	
-	override_trait = {
-		token = generic_mio_trait_advanced_instruments
-		position = { x=1 y=1 }
 	}
 	
 	add_trait = {
@@ -1363,10 +1363,10 @@ USA_boeing_organization = {
 		icon = GFX_generic_mio_department_icon_plane_general_engine
 		special_trait_background = yes
 		
-		position = { x=0 y=1 }  
-		relative_position_id = generic_mio_trait_flying_fortress
+		position = { x = 1 y = 4 }  
+		#relative_position_id = generic_mio_trait_flying_fortress
 		
-		any_parent = { generic_mio_trait_flying_fortress }
+		any_parent = { GER_heinkel_custom_11 GER_heinkel_custom_12 }
 		limit_to_equipment_type = { mio_cat_eq_only_strategic_bomber large_plane_maritime_patrol_plane_airframe }
 			
 		equipment_bonus = {

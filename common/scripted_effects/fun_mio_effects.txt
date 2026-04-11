@@ -1,3 +1,73 @@
+setup_BUL_mios = {
+	every_military_industrial_organization = {
+		limit = {
+			OR = {
+				is_military_industrial_organization = BUL_dvf_organization
+			}
+		}
+		set_variable = { max_research_speed = 0.5 }
+		set_variable = { weekly_research_speed_gain = 0.01 }
+		set_variable = { weekly_funds_requirement = 9 }
+	}
+	every_military_industrial_organization = {
+		limit = {
+			OR = {
+				is_military_industrial_organization = MON_guns_org_2
+				
+			}
+		}
+		set_variable = { weekly_funds_requirement = 9 }
+		set_variable = { mio_xp_gain = 0.2 }
+		set_variable = { total_campaign_xp = 0 }
+	}
+}
+
+special_Update_MIO_Research_Speeds_BUL = {
+	every_military_industrial_organization = {
+		limit = {
+			OR = {
+				is_military_industrial_organization = BUL_dvf_organization
+			}
+		}
+		set_variable = { Previous_Week_Funds = Current_Week_Funds }
+		set_variable = { Current_Week_Funds = funds }
+		set_variable = { weekly_funds_gained = Current_Week_Funds }
+		subtract_from_variable = { weekly_funds_gained = Previous_Week_Funds }
+		clamp_variable = { var = weekly_funds_gained min = 0 }
+
+		if = { #Weekly trigger for giving incremental research bonus to MIO
+			limit = {
+				check_variable = { special_mio_assigned_manufacturer_num > 0 } #So that the MIO can only gain research speed from manufacturing weapons
+				check_variable = { weekly_funds_gained > weekly_funds_requirement }
+			}
+			if = {
+				limit = { check_variable = { research_bonus < max_research_speed } }
+				add_mio_research_bonus = weekly_research_speed_gain
+			}
+			### Max Research Speed Alerts ###
+			if = {
+				limit = {
+					OR = {
+						check_variable = { research_bonus > max_research_speed }
+						check_variable = { research_bonus = max_research_speed }
+					}
+				}
+				set_mio_research_bonus = max_research_speed
+				if = {
+					limit = { NOT = { has_mio_flag = research_bonus_max_notification } }
+					set_mio_flag = research_bonus_max_notification
+					# PREV = country global = global scope
+					add_to_array = { PREV.special_MIO_alert_names = THIS }
+					add_to_array = { PREV.special_MIO_research_speeds = research_bonus }
+					add_to_array = { PREV.special_MIO_alerts = PREV }
+					PREV = { scoped_sound_effect = diplomatic_notification }
+					set_variable_to_random = global.wol_alerts_dirty
+				}
+			}
+		}
+	}
+}
+
 setup_SAF_mios = {
 	every_military_industrial_organization = {
 		limit = {
@@ -347,6 +417,100 @@ special_Update_MIO_Research_Speeds_rom = {
 			}
 		}
 	}
+}
+
+on_actions_uppdate_xp_mios_sov = {
+	every_military_industrial_organization = {
+		limit = {
+			OR = {
+				is_military_industrial_organization = SOV_kirov_organization
+				is_military_industrial_organization = SOV_grabin_design_bureau_organization
+			}
+		}
+		set_variable = { Previous_Week_Funds = Current_Week_Funds }
+		set_variable = { Current_Week_Funds = funds }
+		set_variable = { weekly_funds_gained = Current_Week_Funds }
+		subtract_from_variable = { weekly_funds_gained = Previous_Week_Funds }
+
+		### Add to total campaign xp variable ###
+		set_temp_variable = { total_xp_to_be_added = special_mio_xp_gain }
+		multiply_temp_variable = { total_xp_to_be_added = 7 }
+		add_to_variable = { total_campaign_xp = total_xp_to_be_added }
+	}
+	#henschel
+	#Remove each time to reset
+	remove_ideas = {
+		mio_mil_air_xp_gain_1
+		mio_mil_air_xp_gain_2
+	}
+	if = { #Add if above threshold
+		limit = {
+			OR = {
+				mio:SOV_kirov_organization = { check_variable = { weekly_funds_gained > weekly_funds_requirement } }
+				check_variable = { henschel_Research_Number > 0 }
+			}
+			has_enabled_henshel_xp_sov = yes
+		}
+		if = {
+			limit = { mio:SOV_kirov_organization = { is_mio_trait_completed = GER_henschel_custom_8 } }
+			add_ideas = mio_mil_air_xp_gain_2
+		}
+		else = {
+			add_ideas = mio_mil_air_xp_gain_1
+		}
+	}
+	#Rheinmetal
+	#Remove each time to reset
+	remove_ideas = {
+		mio_mil_amry_xp_gain_1
+		mio_mil_amry_xp_gain_2
+	}
+	if = { #Add if above threshold
+		limit = {
+			OR = {
+				mio:SOV_grabin_design_bureau_organization = { check_variable = { weekly_funds_gained > weekly_funds_requirement } }
+				check_variable = { rhein_Research_Number > 0 }
+			}
+			has_enabled_rhein_xp_SOV = yes
+		}
+		if = {
+			limit = { 
+				OR = {
+					mio:SOV_grabin_design_bureau_organization = { is_mio_trait_completed = GER_rheinmetall_custom_14 }
+				}
+			}
+			add_ideas = mio_mil_amry_xp_gain_2
+		}
+		else = {
+			add_ideas = mio_mil_amry_xp_gain_1
+		}
+	}
+}
+
+setup_SOV_mios_startup = {
+	#sets up research mios
+				every_military_industrial_organization = {
+					limit = {
+						OR = {
+							
+						}
+					}
+					set_variable = { max_research_speed = 0.5 }
+					set_variable = { weekly_research_speed_gain = 0.01 }
+					set_variable = { weekly_funds_requirement = 9 }
+				}
+				#sets up xp mios
+				every_military_industrial_organization = {
+					limit = {
+						OR = {
+							is_military_industrial_organization = SOV_grabin_design_bureau_organization
+							is_military_industrial_organization = SOV_kirov_organization
+						}
+					}
+					set_variable = { weekly_funds_requirement = 9 }
+					set_variable = { mio_xp_gain = 0.2 }
+					set_variable = { total_campaign_xp = 0 }
+				}
 }
 
 
@@ -808,6 +972,52 @@ invest_mio_Factories = {
 	#country_event = { id = wol_qol.102 days = RUS_factory_interval_min_temp?160 random_days = 40 }
 }
 
+special_Update_MIO_Research_Speeds_USA = {
+	every_military_industrial_organization = {
+		limit = {
+			OR = {
+				is_military_industrial_organization = USA_boeing_organization
+			}
+		}
+		set_variable = { Previous_Week_Funds = Current_Week_Funds }
+		set_variable = { Current_Week_Funds = funds }
+		set_variable = { weekly_funds_gained = Current_Week_Funds }
+		subtract_from_variable = { weekly_funds_gained = Previous_Week_Funds }
+		clamp_variable = { var = weekly_funds_gained min = 0 }
+
+		if = { #Weekly trigger for giving incremental research bonus to MIO
+			limit = {
+				check_variable = { special_mio_assigned_manufacturer_num > 0 } #So that the MIO can only gain research speed from manufacturing weapons
+				check_variable = { weekly_funds_gained > weekly_funds_requirement }
+			}
+			if = {
+				limit = { check_variable = { research_bonus < max_research_speed } }
+				add_mio_research_bonus = weekly_research_speed_gain
+			}
+			### Max Research Speed Alerts ###
+			if = {
+				limit = {
+					OR = {
+						check_variable = { research_bonus > max_research_speed }
+						check_variable = { research_bonus = max_research_speed }
+					}
+				}
+				set_mio_research_bonus = max_research_speed
+				if = {
+					limit = { NOT = { has_mio_flag = research_bonus_max_notification } }
+					set_mio_flag = research_bonus_max_notification
+					# PREV = country global = global scope
+					add_to_array = { PREV.special_MIO_alert_names = THIS }
+					add_to_array = { PREV.special_MIO_research_speeds = research_bonus }
+					add_to_array = { PREV.special_MIO_alerts = PREV }
+					PREV = { scoped_sound_effect = diplomatic_notification }
+					set_variable_to_random = global.wol_alerts_dirty
+				}
+			}
+		}
+	}
+}
+
 opel_weekly_invest_progress_usa = {
 	mio:USA_ford_motor_company_organization = {
 		if = {
@@ -952,16 +1162,16 @@ invest_mio_Factories_usa = {
 
 setup_usa_mios_startup = {
 	#sets up research mios
-				#every_military_industrial_organization = {
-				#	limit = {
-				#		OR = {
-				#			
-				#		}
-				#	}
-				#	set_variable = { max_research_speed = 0.5 }
-				#	set_variable = { weekly_research_speed_gain = 0.01 }
-				#	set_variable = { weekly_funds_requirement = 9 }
-				#}
+				every_military_industrial_organization = {
+					limit = {
+						OR = {
+							is_military_industrial_organization = USA_boeing_organization
+						}
+					}
+					set_variable = { max_research_speed = 0.5 }
+					set_variable = { weekly_research_speed_gain = 0.01 }
+					set_variable = { weekly_funds_requirement = 9 }
+				}
 				#sets up xp mios
 				#every_military_industrial_organization = {
 				#	limit = {

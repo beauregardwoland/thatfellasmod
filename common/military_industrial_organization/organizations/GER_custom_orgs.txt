@@ -6880,18 +6880,18 @@
 	research_categories = { infantry_weapons support_tech }
 	
 	tree_header_text = {
-		text = "First Column"
-		x = 0
+		text = "Ammunitions"
+		x = 1
 	}
 
 	tree_header_text = {
-		text = "Second Column"
+		text = "Facilities"
 		x = 4.1
 	}
 
 	tree_header_text = {
-		text = "Third Column"
-		x = 8
+		text = "Infantry Support"
+		x = 7
 	}
 
 	on_industrial_manufacturer_assigned = {
@@ -8141,7 +8141,7 @@
 		#	from = { has_tech = artillery1 has_army_experience > 50 }
 		#}
 
-		limit_to_equipment_type = { mio_cat_eq_all_heavy_tank artillery_equipment }
+		limit_to_equipment_type = { mio_cat_eq_all_heavy_tank artillery_equipment mio_cat_eq_all_h_arty_platforms }
 
 		position = { x = 2 y = 0 }
 
@@ -8252,7 +8252,7 @@
 		#	from = { has_tech = artillery1 has_army_experience > 50 }
 		#}
 
-		limit_to_equipment_type = { artillery_equipment mio_cat_eq_all_heavy_tank }
+		limit_to_equipment_type = { artillery_equipment mio_cat_eq_all_heavy_tank mio_cat_eq_all_h_arty_platforms }
 
 		position = { x = 0 y = 1 }
 
@@ -8278,7 +8278,7 @@
 		#	from = { has_tech = artillery1 has_army_experience > 50 }
 		#}
 
-		limit_to_equipment_type = { artillery_equipment mio_cat_eq_all_heavy_tank }
+		limit_to_equipment_type = { artillery_equipment mio_cat_eq_all_heavy_tank mio_cat_eq_all_h_arty_platforms }
 
 		position = { x = 2 y = 1 }
 
@@ -8358,7 +8358,7 @@
 		#	from = { has_tech = artillery1 has_army_experience > 50 }
 		#}
 
-		limit_to_equipment_type = { artillery_equipment mio_cat_eq_all_heavy_tank train_equipment }
+		limit_to_equipment_type = { artillery_equipment mio_cat_eq_all_heavy_tank train_equipment mio_cat_eq_all_h_arty_platforms }
 
 		position = { x = 0 y = 2 }
 
@@ -8383,7 +8383,7 @@
 		#	from = { has_tech = artillery1 has_army_experience > 50 }
 		#}
 
-		limit_to_equipment_type = { artillery_equipment mio_cat_eq_all_heavy_tank train_equipment }
+		limit_to_equipment_type = { artillery_equipment mio_cat_eq_all_heavy_tank train_equipment mio_cat_eq_all_h_arty_platforms }
 
 		position = { x = 2 y = 2 }
 
