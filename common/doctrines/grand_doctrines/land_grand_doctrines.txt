@@ -384,7 +384,8 @@ mass_assault = {
     no_supply_grace = 48
     out_of_supply_factor = -0.10
     conscription_factor = 0.15
-    land_reinforce_rate = 0.02
+    land_reinforce_rate = 0.03
+    army_strength_factor = 0.05
     enable_tactic = tactic_relentless_assault
     
 
