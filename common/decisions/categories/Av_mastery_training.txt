@@ -4,6 +4,8 @@ army_mastery_category = {
 	allowed = {
 		always = yes
 	}
+	scripted_gui = mastery_unified_window
+	visible_when_empty = yes
 }
 
 air_mastery_category = {

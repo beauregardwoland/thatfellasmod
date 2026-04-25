@@ -1,8 +1,9 @@
-#########################################################################
-# Army Mastery Decisions
-#########################################################################
+
 army_mastery_category = {
 
+#########################################################################
+# Army Mastery Decisions
+#########################################################################	
     # 1. Infantry Track
 	army_infantry_mastery_training = {
 		icon = generic_military
@@ -14,12 +15,12 @@ army_mastery_category = {
 		
 		visible = {
 			is_ai = no
-			has_subdoctrine_in_track = infantry
-			NOT = { has_completed_track = infantry }
+			has_country_flag = in_land_mastery
 		}
 
 		available = {
 			has_army_experience > 49
+			has_subdoctrine_in_track = infantry
 			NOT = { has_completed_track = infantry }
 		}
         
@@ -96,12 +97,12 @@ army_mastery_category = {
 
 		visible = {
 			is_ai = no
-			has_subdoctrine_in_track = combat_support
-			NOT = { has_completed_track = combat_support }
+			has_country_flag = in_land_mastery
 		}
 
 		available = {
 			has_army_experience > 49
+			has_subdoctrine_in_track = combat_support
 			NOT = { has_completed_track = combat_support }
 		}
 
@@ -178,12 +179,12 @@ army_mastery_category = {
 
 		visible = {
 			is_ai = no
-			has_subdoctrine_in_track = armor
-			NOT = { has_completed_track = armor }
+			has_country_flag = in_land_mastery
 		}
 
 		available = {
 			has_army_experience > 49
+			has_subdoctrine_in_track = armor
 			NOT = { has_completed_track = armor }
 		}
 
@@ -260,12 +261,12 @@ army_mastery_category = {
 
 		visible = {
 			is_ai = no
-			has_subdoctrine_in_track = operations
-			NOT = { has_completed_track = operations }
+			has_country_flag = in_land_mastery
 		}
 
 		available = {
 			has_army_experience > 49
+			has_subdoctrine_in_track = operations
 			NOT = { has_completed_track = operations }
 		}
 
@@ -330,14 +331,11 @@ army_mastery_category = {
 			}
         }
 	}
-}
 
 #########################################################################
 # Air Mastery Decisions
 #########################################################################
-air_mastery_category = {
 
-	# 1. Fighter Aircraft Track
 	air_fighter_mastery_training = {
 		icon = generic_air
 		allowed = {
@@ -348,12 +346,12 @@ air_mastery_category = {
 
 		visible = {
 			is_ai = no
-			has_subdoctrine_in_track = fighter_aircraft
-			NOT = { has_completed_track = fighter_aircraft }
+			has_country_flag = in_air_mastery
 		}
 
 		available = {
 			has_air_experience > 49
+			has_subdoctrine_in_track = fighter_aircraft
 			NOT = { has_completed_track = fighter_aircraft }
 		}
 
@@ -430,12 +428,12 @@ air_mastery_category = {
 
 		visible = {
 			is_ai = no
-			has_subdoctrine_in_track = strike_aircraft
-			NOT = { has_completed_track = strike_aircraft }
+			has_country_flag = in_air_mastery
 		}
 
 		available = {
 			has_air_experience > 49
+			has_subdoctrine_in_track = strike_aircraft
 			NOT = { has_completed_track = strike_aircraft }
 		}
 
@@ -512,12 +510,13 @@ air_mastery_category = {
 
 		visible = {
 			is_ai = no
-			has_subdoctrine_in_track = medium_aircraft
-			NOT = { has_completed_track = medium_aircraft }
+			has_country_flag = in_air_mastery
 		}
+
 
 		available = {
 			has_air_experience > 49
+			has_subdoctrine_in_track = medium_aircraft
 			NOT = { has_completed_track = medium_aircraft }
 		}
 
@@ -594,12 +593,12 @@ air_mastery_category = {
 
 		visible = {
 			is_ai = no
-			has_subdoctrine_in_track = heavy_aircraft
-			NOT = { has_completed_track = heavy_aircraft }
+			has_country_flag = in_air_mastery
 		}
 
 		available = {
 			has_air_experience > 49
+			has_subdoctrine_in_track = heavy_aircraft
 			NOT = { has_completed_track = heavy_aircraft }
 		}
 
@@ -664,12 +663,10 @@ air_mastery_category = {
 			}
         }
 	}
-}
 
 #########################################################################
 # Navy Mastery Decisions
 #########################################################################
-navy_mastery_category = {
 
 	# 1. Submarine Track
 	navy_submarine_mastery_training = {
@@ -682,12 +679,12 @@ navy_mastery_category = {
 
 		visible = {
 			is_ai = no
-			has_subdoctrine_in_track = submarines
-			NOT = { has_completed_track = submarines }
+			has_country_flag = in_sea_mastery
 		}
 
 		available = {
 			has_navy_experience > 49
+			has_subdoctrine_in_track = submarines
 			NOT = { has_completed_track = submarines }
 		}
 
@@ -764,12 +761,12 @@ navy_mastery_category = {
 
 		visible = {
 			is_ai = no
-			has_subdoctrine_in_track = screens
-			NOT = { has_completed_track = screens }
+			has_country_flag = in_sea_mastery
 		}
 
 		available = {
 			has_navy_experience > 49
+			has_subdoctrine_in_track = screens
 			NOT = { has_completed_track = screens }
 		}
 
@@ -846,12 +843,12 @@ navy_mastery_category = {
 
 		visible = {
 			is_ai = no
-			has_subdoctrine_in_track = carriers
-			NOT = { has_completed_track = carriers }
+			has_country_flag = in_sea_mastery
 		}
 
 		available = {
 			has_navy_experience > 49
+			has_subdoctrine_in_track = carriers
 			NOT = { has_completed_track = carriers }
 		}
 
@@ -928,12 +925,12 @@ navy_mastery_category = {
 
 		visible = {
 			is_ai = no
-			has_subdoctrine_in_track = capital_ships
-			NOT = { has_completed_track = capital_ships }
+			has_country_flag = in_sea_mastery
 		}
 
 		available = {
 			has_navy_experience > 49
+			has_subdoctrine_in_track = capital_ships
 			NOT = { has_completed_track = capital_ships }
 		}
 

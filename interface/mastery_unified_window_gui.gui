@@ -1,0 +1,42 @@
+
+guiTypes = {
+
+	containerWindowType = {
+		name = "mastery_unified_window_container"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 125 }
+
+		buttonType = {
+			name = "select_army_mastery"
+			quadTextureSprite = "GFX_army_experience"
+			position = {x=135 y=40}
+			scale=5
+			
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+
+		
+
+		buttonType = {
+			name = "select_navy_mastery"
+			quadTextureSprite = "GFX_navy_experience"
+			position = {x=235 y=40}
+			scale=5
+			
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+
+		buttonType = {
+			name = "select_air_mastery"
+			quadTextureSprite = "GFX_air_experience"
+			position = {x=335 y=40}
+			scale=5
+			
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+
+	}
+}
