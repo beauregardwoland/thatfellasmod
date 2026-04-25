@@ -31,23 +31,29 @@ fire_concentration = {
      # EFFECTS
      enable_tactic = tactic_overwhelming_fire
 
-     artillery_brigade = {
+    category_line_artillery = {
         combat_width = -0.2
-     }
-     category_line_artillery = {
+    }
+    category_line_artillery = {
         max_organisation = 5
-     }
+    }
 
      rewards = {
-        standing_barrage = {
+        
+        predicted_fire = {
         #1
             category_line_artillery = {
                 defense = 0.1
             }
         }
-        predicted_fire = {
+
+        standing_barrage = {
         #2
-            category_line_artillery = {
+            
+            artillery_brigade = {
+                soft_attack = 0.1
+            }
+            rocket_artillery_brigade = {
                 soft_attack = 0.1
             }
         }
@@ -62,6 +68,8 @@ fire_concentration = {
         #4
             category_anti_air = {
                 air_attack = 0.1
+                hard_attack = 0.15
+                ap_attack = 0.15
             }
         }
         weakpoint_studies = {
@@ -71,7 +79,12 @@ fire_concentration = {
                 hard_attack = 0.1
             }
             artillery_brigade = {
-                hard_attack = 0.1
+                soft_attack = 0.05
+                hard_attack = 0.05
+            }
+            rocket_artillery_brigade = {
+                soft_attack = 0.05
+                hard_attack = 0.05
             }
         }
     }
@@ -180,6 +193,7 @@ flying_batteries = {
 
     category_line_artillery = {
         soft_attack = 0.1
+        breakthrough = 0.2
     }
 
     rewards = {
@@ -197,6 +211,14 @@ flying_batteries = {
         counter_battery_tasks = {
             
             recon = {
+                battalion_mult = {
+                    category = category_line_artillery 
+                    soft_attack = 0.05
+                    defense = 0.1
+                }
+                recon = 0.25
+            }
+            mot_recon = {
                 battalion_mult = {
                     category = category_line_artillery 
                     soft_attack = 0.05
@@ -762,11 +784,11 @@ field_engineering = {
         base = 1
         modifier = {
             factor = 75
-            original_tag = ITA
-        }
-        modifier = {
-            factor = 75
-            original_tag = JAP
+            OR = {
+                original_tag = ITA
+                original_tag = JAP
+                original_tag = FIN
+            }            
         }
     }
 
