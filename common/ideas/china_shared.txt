@@ -756,10 +756,10 @@ ideas = {
 					AND = {
 						has_DLC = "Waking the Tiger"
 						NOT = { has_dlc = "No Compromise, No Surrender" }
-				OR = {
+						OR = {
 							original_tag = MAN
-					is_literally_china = yes
-				}
+							is_literally_china = yes
+						}
 					}
 				}
 			}
@@ -860,10 +860,10 @@ ideas = {
 					AND = {
 						has_DLC = "Waking the Tiger"
 						NOT = { has_dlc = "No Compromise, No Surrender" }
-				OR = {
+						OR = {
 							original_tag = MAN
-					is_literally_china = yes
-				}
+							is_literally_china = yes
+						}
 					}
 				}
 			}
@@ -1371,11 +1371,11 @@ ideas = {
 						}
 					}
 					AND = {
-				has_DLC = "Waking the Tiger"
+						has_DLC = "Waking the Tiger"
 						NOT = { has_dlc = "No Compromise, No Surrender" }
-				OR = {
-					original_tag = MAN
-					is_literally_china = yes
+						OR = {
+							original_tag = MAN
+							is_literally_china = yes
 						}
 					}
 				}
@@ -1456,11 +1456,11 @@ ideas = {
 						}
 					}
 					AND = {
-				has_DLC = "Waking the Tiger"
+						has_DLC = "Waking the Tiger"
 						NOT = { has_dlc = "No Compromise, No Surrender" }
-				OR = {
-					original_tag = MAN
-					is_literally_china = yes
+						OR = {
+							original_tag = MAN
+							is_literally_china = yes
 						}
 					}
 				}

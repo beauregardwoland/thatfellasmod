@@ -109,7 +109,6 @@ mio_cat_eq_all_h_arty_platforms = {
 mio_cat_eq_all_carrier = { #Includes all CV --- Used due to custom loc capabilities
 	equipment_type = {
 		ship_hull_carrier
-		#ship_hull_carrier_submarine
 	}
 }
 
@@ -253,6 +252,9 @@ mio_cat_eq_only_light_fighter_and_CAS_no_cv = { #Includes only Small Fighter and
 		small_plane_cas_airframe_2
 		small_plane_cas_airframe_3
 		small_plane_cas_airframe_4
+		CAS_equipment_1
+		CAS_equipment_2
+		CAS_equipment_3
 	}
 }
 

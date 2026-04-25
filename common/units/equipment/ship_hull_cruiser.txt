@@ -169,7 +169,7 @@ equipments = {
 		sub_detection = 1.5
 		naval_speed = 30
 		reliability = 0.85
-		build_cost_ic = 1425
+		build_cost_ic = 1450
 		naval_range = 5000
 		max_strength = 110
 		naval_dominance_factor = 115
@@ -883,8 +883,8 @@ equipments = {
 	    upgrade_window_override = {
        		upgrade = ship_torpedo_upgrade
         	override = torpedo_ship_reliability_upgrade
-		}
-		
+    	}
+
 		interface_category = interface_category_screen_ships
 		module_slots = {
 			fixed_ship_battery_slot = {
@@ -1183,6 +1183,7 @@ equipments = {
 					ship_secondaries
 					ship_dp_secondaries
 					ship_airplane_launcher
+					ship_mine_layer
 				}
 			}
 			mid_2_custom_slot = mid_1_custom_slot
@@ -1194,6 +1195,7 @@ equipments = {
 					ship_torpedo
 					ship_medium_battery
 					ship_light_medium_battery
+					ship_mine_layer
 				}
 			}
 		}

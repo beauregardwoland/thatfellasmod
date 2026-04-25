@@ -475,7 +475,7 @@ sp_nuclear_bomb = {
 		
 	}
 	available = { 
-		date > "1941.1.1"
+		date > "1940.06.1"
 	}
 	
 	project_output = {
@@ -704,7 +704,7 @@ sp_thermo_nuclear_bomb = {
 		has_dlc = "Gotterdammerung"
 	}
 	available = { 
-		date > "1943.1.1"
+		date > "1942.1.1"
 	}
 	
 	project_output = {

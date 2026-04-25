@@ -844,6 +844,7 @@ country_event = {
 	}
 	option = {
 		name = wol_qol.101.b
+		clr_country_flag = one_year_timer_n_prog
 	}
 }
 
@@ -910,6 +911,24 @@ country_event = {
 			type = industrial_complex
 			level = 4
 		}
+	}
+	
+}
+
+country_event = { 
+	id = wol_qol.106
+	title = wol_qol.106.t
+	desc = wol_qol.106.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.106.a
+		activate_mission = monthly_autosave_reminder
+	}
+	option = {
+		name = wol_qol.106.b
+		clr_country_flag = one_month_timer_n_prog
 	}
 	
 }

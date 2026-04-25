@@ -201,6 +201,21 @@ ideas = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						original_tag = CZE
+						has_dlc = "Peace For Our Time"
+					}
+					custom_trigger_tooltip = {
+						tooltip = CZE_bop_no_industrialists_tt
+						NOT = {
+							OR = {
+								has_idea = CZE_industrialists_veto
+								has_idea = CZE_industrialists_veto_2
+							}
+						}
+					}
+				}
 			}
 			on_add = {
 				if = {
@@ -271,10 +286,10 @@ ideas = {
 					}
 					ELSE = {
 						OR = {
-						has_completed_focus = HUN_secret_rearmament
-						NOT = { has_idea = HUN_treaty_of_triannon }
+							has_completed_focus = HUN_secret_rearmament
+							NOT = { has_idea = HUN_treaty_of_triannon }
+						}
 					}
-				}
 				}
 				ELSE_IF = {
 					limit = {
@@ -316,6 +331,21 @@ ideas = {
 							has_active_mission = TUR_etatism_crisis_1
 							has_active_mission = TUR_etatism_crisis_3
 							has_active_mission = TUR_etatism_crisis_4
+						}
+					}
+				}
+				if = {
+					limit = {
+						original_tag = CZE
+						has_dlc = "Peace For Our Time"
+					}
+					custom_trigger_tooltip = {
+						tooltip = CZE_bop_no_industrialists_tt
+						NOT = {
+							OR = {
+								has_idea = CZE_industrialists_veto
+								has_idea = CZE_industrialists_veto_2
+							}
 						}
 					}
 				}
@@ -508,6 +538,21 @@ ideas = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						original_tag = CZE
+						has_dlc = "Peace For Our Time"
+					}
+					custom_trigger_tooltip = {
+						tooltip = CZE_bop_no_industrialists_tt
+						NOT = {
+							OR = {
+								has_idea = CZE_industrialists_veto
+								has_idea = CZE_industrialists_veto_2
+							}
+						}
+					}
+				}
 			}
 
 			cost = 150
@@ -689,6 +734,21 @@ ideas = {
 							has_active_mission = TUR_etatism_crisis_1
 							has_active_mission = TUR_etatism_crisis_2
 							has_active_mission = TUR_etatism_crisis_3
+						}
+					}
+				}
+				if = {
+					limit = {
+						original_tag = CZE
+						has_dlc = "Peace For Our Time"
+					}
+					custom_trigger_tooltip = {
+						tooltip = CZE_bop_no_industrialists_tt
+						NOT = {
+							OR = {
+								has_idea = CZE_industrialists_veto
+								has_idea = CZE_industrialists_veto_2
+							}
 						}
 					}
 				}
@@ -1335,7 +1395,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				min_export = 0.15
+				min_export = 0.2
 				#industrial_capacity_factory = 0.05
 				#industrial_capacity_dockyard = 0.05
 				production_speed_buildings_factor = 0.075
@@ -1378,7 +1438,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				min_export = 0.5
+				min_export = 0.2
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
 				production_speed_buildings_factor = 0.1
@@ -1419,10 +1479,10 @@ ideas = {
 							original_tag = JAP
 						}
 					}
-				OR = {
-					has_government = fascism
-					has_government = communism
-				}
+					OR = {
+						has_government = fascism
+						has_government = communism
+					}
 				}
 				ELSE_IF = {
 					limit = {

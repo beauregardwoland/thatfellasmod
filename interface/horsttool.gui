@@ -3,7 +3,7 @@ guiTypes = {
 ####################### 
 	containerWindowType = {
 		name = "horsttool_open_container"
-		position = { x = -503 y = 4 }
+		position = { x = -425 y = 4 }
 		Orientation = UPPER_RIGHT
 		buttonType = {
 			name = "tool_open"
@@ -39,7 +39,7 @@ guiTypes = {
 		background = {
 			name = "Background"
 			#spriteType = "GFX_generic_bg_307x113"
-		spriteType = "GFX_diplo_action_justify_wargoals_bg"
+			spriteType = "GFX_diplo_action_justify_wargoals_bg"
 		}
 		
 		

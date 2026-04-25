@@ -2179,25 +2179,6 @@ USA_war_plans = {
 		}
 		fire_only_once = yes
 		days_remove = 180
-		modifier = {
-			amphibious_invasion = 0.1
-			invasion_preparation = -0.25
-		}
-		targeted_modifier = {
-			tag = JAP
-			attack_bonus_against = 0.05
-			defense_bonus_against = 0.05
-		}
-		targeted_modifier = {
-			tag = MAN
-			attack_bonus_against = 0.05
-			defense_bonus_against = 0.05
-		}
-		targeted_modifier = {
-			tag = MEN
-			attack_bonus_against = 0.05
-			defense_bonus_against = 0.05
-		}
 		complete_effect = {
 			every_country = {
 				limit = {
@@ -2209,6 +2190,74 @@ USA_war_plans = {
 				}
 				add_timed_idea = { idea = woland_warplan_orange days = 180 } 
 			}
+			if = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				set_country_flag = USA_unlock_contain_japanese_goal
+				if = {
+					limit = {
+						is_faction_leader = yes
+						JAP = {
+							IF = {
+								limit = {
+									is_in_faction = no
+								}
+								collection_size = {
+									input = {
+										input = collection:country_and_all_subjects_controlled_non_core_states
+										name = COLLECTION_OCCUPIED_STATES_BY_JAPAN_OR_FACTION_MEMBERS
+									}
+									value > 19
+								}
+							}
+							ELSE = {
+								collection_size = {
+									input = {
+										input = collection:faction_controlled_non_core_states
+										name = COLLECTION_OCCUPIED_STATES_BY_JAPAN_OR_FACTION_MEMBERS
+									}
+									value > 19
+								}
+							}
+						}
+					}
+					hidden_effect = {
+						add_faction_goal_slot = {
+							category  = long_term 
+							value = 1 
+						}
+					}
+					add_faction_goal = faction_goal_contain_japanese_expansion_asia
+					custom_effect_tooltip = generic_skip_one_line_tt
+				}
+				else = {
+					custom_effect_tooltip = USA_unlock_contain_japan_tt
+					effect_tooltip = {
+						add_faction_goal = faction_goal_contain_japanese_expansion_asia
+					}
+					custom_effect_tooltip = generic_skip_one_line_tt
+				}
+			}
+		}
+		modifier = {
+			amphibious_invasion = 0.1
+			invasion_preparation = -0.25
+		}
+		targeted_modifier = {
+			tag = JAP
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+		targeted_modifier = {
+			tag = MAN
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+		targeted_modifier = {
+			tag = MEN
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
 		}
 	}
 	USA_execute_war_plan_yellow = {
@@ -2351,8 +2400,8 @@ USA_war_plans = {
 		days_remove = 180
 		targeted_modifier = {
 			tag = GER
-			attack_bonus_against = 0.05
-			defense_bonus_against = 0.05
+			attack_bonus_against = 0.075
+			defense_bonus_against = 0.075
 		}
 		complete_effect = {
 			every_country = {

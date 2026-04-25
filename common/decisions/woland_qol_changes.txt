@@ -480,6 +480,35 @@ gimp_ai_category = {
 			country_event = wol_qol.101
 		}
 	}
+	monthly_autosave_reminder  = {
+
+		priority = 120
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		available = {
+			always = no
+		}
+
+		allowed = {  
+			#is_ai = no
+		}
+
+		activation = {
+			always = no
+		} 
+		is_good = yes
+		
+		days_mission_timeout = 31
+
+		timeout_effect = { 
+			country_event = wol_qol.106
+		}
+	}
 	hint_meta_decision = {
 
 		icon = decision_generic_nationalism

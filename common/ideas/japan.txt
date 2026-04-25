@@ -24,7 +24,7 @@ ideas = {
 				army_core_attack_factor = 0.25
 			}
 		}
-	
+
 		JAP_public_awareness_of_war_ns = {
 			allowed = {
 				always = no
@@ -744,7 +744,7 @@ ideas = {
 			research_bonus = {
 				infantry_weapons = 0.07
 				armor = 0.07
-			}			
+			}
 		}
 
 		JAP_superior_will = {
@@ -831,7 +831,7 @@ ideas = {
 				attack_bonus_against = -0.1
 				defense_bonus_against = -0.05
 			}
-			
+
 			targeted_modifier = {
 				tag = GXC
 				attack_bonus_against = -0.1
@@ -949,7 +949,7 @@ ideas = {
 				attack_bonus_against = -0.3
 				defense_bonus_against = -0.15
 			}
-			
+
 			targeted_modifier = {
 				tag = GXC
 				attack_bonus_against = -0.3
@@ -1067,7 +1067,7 @@ ideas = {
 				attack_bonus_against = -0.5
 				defense_bonus_against = -0.25
 			}
-			
+
 			targeted_modifier = {
 				tag = GXC
 				attack_bonus_against = -0.5
@@ -6312,7 +6312,7 @@ ideas = {
 			
 			allowed = {
 				OR = {
-				original_tag = JAP
+					original_tag = JAP
 					PHI_SEA = yes
 				}
 			}
@@ -6382,7 +6382,7 @@ ideas = {
 						
 			allowed = {
 				OR = {
-				original_tag = JAP		
+					original_tag = JAP
 					PHI_SEA = yes
 				}
 			}
@@ -6647,7 +6647,7 @@ ideas = {
 				consumer_goods_factor = -0.2
 			}
 		}
-	
+
 		kawasaki = {
 			
 			allowed = {
@@ -6665,11 +6665,11 @@ ideas = {
 			
 			traits = { industrial_concern }
 		}
-		
+
 		JAP_idemitsu_kosan = {
-		
-			picture = JAP_idemitsu_kosan
 						
+			picture = JAP_idemitsu_kosan
+			
 			allowed = {
 				original_tag = JAP
 				always = no
@@ -6695,7 +6695,7 @@ ideas = {
 				original_tag = JAP
 				always = no
 			}
-						
+			
 			research_bonus = {
 				electronics = 0.15
 				excavation_tech = 0.05
@@ -6709,9 +6709,9 @@ ideas = {
 		}
 
 		imperial_japanese_airways = { 
-						
+
 			picture = JAP_imperial_airways
-			
+
 			allowed = {
 				original_tag = JAP
 			}
@@ -6723,7 +6723,7 @@ ideas = {
 			available = {
 				has_completed_focus = JAP_establish_showa_aircraft_idnsutry
 			}
-						
+
 			research_bonus = {
 				air_equipment = 0.05
 			}
@@ -6904,7 +6904,7 @@ ideas = {
 					has_completed_focus = JAP_propagandize_the_nihon_shoki
 					#has_completed_focus = JAP_reform_the_education_system
 				}
-		}
+			}
 			
 			research_bonus = {
 			}
@@ -6928,7 +6928,7 @@ ideas = {
 			
 			allowed = {
 				OR = {
-				original_tag = JAP
+					original_tag = JAP
 					PHI_SEA = yes
 				}
 			}
@@ -6961,7 +6961,7 @@ ideas = {
 						
 			allowed = {
 				OR = {
-				original_tag = JAP
+					original_tag = JAP
 					PHI_SEA = yes
 				}
 			}
@@ -7027,6 +7027,61 @@ ideas = {
 			traits = { support_equipment_manufacturer }
 		}
 
+		JAP_nippon_sharyo = {
+
+			name = "JAP_nippon_sharyo_organization"
+
+			picture = JAP_nippon_sharyo
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+				support_tech = 0.07
+			}
+
+			equipment_bonus = {
+				train_equipment = {
+					build_cost_ic = -0.10
+					armor_value = 0.10
+					air_attack = 0.10
+					instant = yes
+				}
+			}
+
+			traits = { train_equipment_manufacturer }
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+
+		JAP_kayaba_industry = {
+
+			name = "JAP_kayaba_industry_organization"
+
+			picture = JAP_kayaba_industry
+
+			allowed = {
+				original_tag = JAP
+				has_dlc = "Gotterdammerung"
+			}
+
+			research_bonus = {
+				support_tech = 0.05
+				air_equipment = 0.05
+			}
+
+			traits = { helicopter_equipment_manufacturer }
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
 	}
 	
 	
@@ -7065,6 +7120,7 @@ ideas = {
 						
 			allowed = {
 				original_tag = JAP
+				has_dlc = "La Resistance"
 			}
 
 			available = {

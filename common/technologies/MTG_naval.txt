@@ -153,6 +153,16 @@ technologies = {
 					tag = USA
 				}
 			}
+			
+			modifier = {
+				factor = 1.5
+				date > 1939.1.1
+			}
+
+			modifier = {
+				factor = 1.5
+				date > 1940.1.1
+			}
 		}
 
 		categories = {
@@ -228,6 +238,16 @@ technologies = {
 			modifier = {
 				factor = 4
 				tag = ENG
+			}
+			
+			modifier = {
+				factor = 2
+				date > 1938.1.1
+			}
+
+			modifier = {
+				factor = 2
+				date > 1939.1.1
 			}
 		}
 
@@ -417,6 +437,10 @@ technologies = {
 				factor = 2
 				anti_submarine_strategy_required_trigger = yes
 			}
+			modifier = {
+				factor = 0.1
+				original_tag = GER				
+			}
 		}
 
 		categories = {
@@ -545,8 +569,17 @@ technologies = {
 				has_war_with = GER
 			}
 			modifier = {
-				factor = 2
+				factor = 5
 				anti_submarine_strategy_required_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				date > 1938.6.1
+			}
+
+			modifier = {
+				factor = 2
+				date > 1939.6.1
 			}
 		}
 
@@ -794,6 +827,15 @@ technologies = {
 					tag = USA
 				}
 				factor = 4
+			}
+			modifier = {
+				factor = 1.5
+				date > 1939.1.1
+			}
+
+			modifier = {
+				factor = 1.5
+				date > 1940.1.1
 			}
 		}
 
@@ -1146,6 +1188,15 @@ technologies = {
 				is_major = no
 				factor = 0
 			}
+			modifier = {
+				factor = 1.5
+				date > 1939.1.1
+			}
+
+			modifier = {
+				factor = 1.5
+				date > 1940.1.1
+			}
 		}
 
 		categories = {
@@ -1247,6 +1298,7 @@ technologies = {
 					tag = USA
 				}
 			}
+			
 		}
 
 		categories = {
@@ -1285,6 +1337,11 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				factor = 0
+				date < 1938.1.1
+			}
 
 			modifier = {
 				factor = 4
@@ -1472,6 +1529,15 @@ early_ship_hull_carrier = {
 					tag = JAP
 					tag = USA
 				}
+			}
+			modifier = {
+				factor = 1.5
+				date > 1939.1.1
+			}
+
+			modifier = {
+				factor = 1.5
+				date > 1940.1.1
 			}
 		}
 
@@ -1690,6 +1756,15 @@ early_ship_hull_carrier = {
 					tag = GER
 					tag = USA
 				}
+			}
+			modifier = {
+				factor = 1.5
+				date > 1939.1.1
+			}
+
+			modifier = {
+				factor = 1.5
+				date > 1940.1.1
 			}
 		}
 
@@ -1927,6 +2002,7 @@ early_ship_hull_carrier = {
 			always = no
 		}
 	}
+
 ### SPECIAL PROJECTS TECHS ###
 
 	sp_aip_engine_improved_tech = {
@@ -1954,7 +2030,7 @@ early_ship_hull_carrier = {
 		force_use_small_tech_layout = yes		
 		is_special_project_tech = yes
 		research_cost = 2
-		start_year = 1940
+		start_year = 1939
 		folder = {
 			name = mtgnavalfolder
 			position = {  x = 1 y = 13 }

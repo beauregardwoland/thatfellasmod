@@ -79,6 +79,7 @@ USA_congress = {
 	}
 	USA_special_measures = {
 		icon = ger_mefo_bills
+		visible = { always  = no}
 		available = {
 			OR = {
 				check_variable = { senators_support < senators_total }

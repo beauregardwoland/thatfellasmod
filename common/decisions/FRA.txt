@@ -2606,14 +2606,14 @@ FRA_intervention_in_overseas_territories = {
 			}
 			any_state = {
 				OR = {
-						state = 557
-						state = 272
-						state = 556
-						state = 780
-						state = 779
-						state = 778
-						state = 781
-						state = 776
+					state = 557
+					state = 272
+					state = 556
+					state = 780
+					state = 779
+					state = 778
+					state = 781
+					state = 776
 				}
 				CONTROLLER = {
 					NOT = { has_war_with = ROOT }

@@ -6186,6 +6186,7 @@ focus_tree = {
 
 		available = {
 			is_in_faction = no
+			is_subject = no
 		}
 
 		bypass = {
@@ -6270,6 +6271,7 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
 			is_in_faction = no
 			GER = {
 				OR = {
@@ -10935,6 +10937,10 @@ focus_tree = {
 
 			custom_effect_tooltip = JAP_the_surrender_broadcast_tt
 
+			hidden_effect = {
+				set_global_flag = JAP_surrendered_through_their_focus_flag 
+			}
+
 		}
 	}
 
@@ -11165,6 +11171,10 @@ focus_tree = {
 					owns_state = 621
 					owns_state = 746
 				}
+			}
+			NOT = {
+				has_country_flag = JAP_suiyuan_campaign_has_started_flag
+				has_country_flag = JAP_suiyuan_campaign_has_ended_flag
 			}
 		}
 
@@ -11895,9 +11905,9 @@ focus_tree = {
 				transfer_state_to = RNG
 			}
 			hidden_effect = {
-			CHI = {
-				every_core_state = {
-					set_state_flag = is_state_rng_wants_flag 
+				CHI = {
+					every_core_state = {
+						set_state_flag = is_state_rng_wants_flag 
 					}
 				}
 			}
@@ -29527,6 +29537,18 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
+			IF = {
+				limit = {
+					has_character = JAP_masakazu_kawabe
+					JAP_masakazu_kawabe = {
+						NOT = { has_trait = jungle_rat }
+					}
+				}
+				JAP_masakazu_kawabe = {
+					add_trait = { trait = jungle_rat }
+				}
+			}
+
 			JAP_add_or_modify_imperial_army = yes
 			add_to_variable = { JAP_army_acclimatization_hot_climate_gain_factor = 0.1 tooltip = acclimatization_hot_climate_gain_factor_tt }
 			
@@ -30111,7 +30133,7 @@ focus_tree = {
 						is_controlled_by = ROOT
 					}
 				}
-			custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_skip_one_line_tt
 				add_resource = {
 				    type = aluminium
 				    amount = 5

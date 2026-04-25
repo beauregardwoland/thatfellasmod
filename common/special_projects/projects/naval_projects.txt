@@ -1369,7 +1369,7 @@ sp_naval_aip_engine = {
 
 		}
 	}
-
+	
 	breakthrough_cost = {
 		specialization_naval = 2
 	}
@@ -1726,12 +1726,65 @@ specialization = specialization_naval
 	prototype_time = sp_time.prototype.medium
 	project_output = {
 		country_effects = {
+			if = {
+				limit = {
+					original_tag = JAP
+					is_special_project_completed = sp:sp_naval_anechoic_tiles
+				}
+				add_design_template_bonus = {
+					name = sp_naval_submarine_carrier_free_design
+					uses = 1
+					cost_factor = 0.25
+					equipment = ship_hull_carrier_submarine
+				}
+				create_equipment_variant = {
+					name = "Sentoku Class"
+					type = ship_hull_carrier_submarine
+					name_group = JAP_SS_HISTORICAL
+					parent_version = 0
+					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+					modules = {
+						fixed_ship_torpedo_slot = ship_torpedo_sub_4
+						fixed_ship_engine_slot = sub_ship_engine_2
+						rear_1_custom_slot = ship_submarine_deck_space
+						mid_1_custom_slot = ship_anechoic_tile
+					}
+					design_team = mio:JAP_sasebo_naval_arsenal_organization
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = JAP
+					NOT = { is_special_project_completed = sp:sp_naval_anechoic_tiles }
+				}
+				add_design_template_bonus = {
+					name = sp_naval_submarine_carrier_free_design
+					uses = 1
+					cost_factor = 0.25
+					equipment = ship_hull_carrier_submarine
+				}
+				create_equipment_variant = {
+					name = "Sentoku Class"
+					type = ship_hull_carrier_submarine
+					name_group = JAP_SS_HISTORICAL
+					parent_version = 0
+					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+					modules = {
+						fixed_ship_torpedo_slot = ship_torpedo_sub_4
+						fixed_ship_engine_slot = sub_ship_engine_1
+						rear_1_custom_slot = ship_submarine_deck_space
+					}
+					design_team = mio:JAP_sasebo_naval_arsenal_organization
+				}
+			}
+			else = {
 				add_design_template_bonus = {
 					name = sp_naval_submarine_carrier_free_design
 					uses = 1
 					cost_factor = 1
 					equipment = ship_hull_carrier_submarine
-				}		
+				}
+			}
 		}
 
 		enable_equipments = {
@@ -2082,7 +2135,7 @@ sp_naval_super_heavy_battleship = {
 				limit = { 
 					has_dlc = "Man the Guns"
 					}
-			has_tech = early_ship_hull_heavy
+				has_tech = early_ship_hull_heavy
 			}
 			else = {
 				has_tech = early_battleship
@@ -3474,9 +3527,9 @@ sp_naval_proximity_fuze = {
 				set_technology = {
 					sp_naval_proximity_fuze_tech = 1
 					popup = no
-					}
+				}
 			}
-			
+
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_TECH
 				TECH = sp_shock_hardening_techniques

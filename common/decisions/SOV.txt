@@ -480,8 +480,8 @@ SOV_paranoia_system = {
 				has_global_flag = SOV_soviet_civil_war
 			}
 			else = {
-			has_country_flag = { flag = SOV_third_moscow_trial_flag days > 365 }
-		}
+				has_country_flag = { flag = SOV_third_moscow_trial_flag days > 365 }
+			}
 		}
 
 		visible = {
@@ -491,7 +491,7 @@ SOV_paranoia_system = {
 				has_idea = SOV_anti_soviet_military_thinking_banned_airforce
 			}
 			OR = {
-			SOV_is_stalinist = yes
+				SOV_is_stalinist = yes
 				SOV_is_left_opposition = yes
 				SOV_is_right_opposition = yes
 				has_country_flag = SOV_assassinated_stalin_flag
@@ -571,8 +571,8 @@ SOV_paranoia_system = {
 				has_global_flag = SOV_soviet_civil_war
 			}
 			else = {
-			has_country_flag = { flag = SOV_third_moscow_trial_flag days > 365 }
-		}
+				has_country_flag = { flag = SOV_third_moscow_trial_flag days > 365 }
+			}
 		}
 
 		visible = {
@@ -582,7 +582,7 @@ SOV_paranoia_system = {
 				has_idea = SOV_purged_junior_army_officers_3
 			}
 			OR = {
-			SOV_is_stalinist = yes
+				SOV_is_stalinist = yes
 				SOV_is_left_opposition = yes
 				SOV_is_right_opposition = yes
 				has_country_flag = SOV_assassinated_stalin_flag
@@ -676,8 +676,8 @@ SOV_paranoia_system = {
 				has_global_flag = SOV_soviet_civil_war
 			}
 			else = {
-			has_country_flag = { flag = SOV_third_moscow_trial_flag days > 365 }
-		}
+				has_country_flag = { flag = SOV_third_moscow_trial_flag days > 365 }
+			}
 		}
 
 		visible = {
@@ -687,7 +687,7 @@ SOV_paranoia_system = {
 				has_idea = SOV_purged_junior_navy_officers_3
 			}
 			OR = {
-			SOV_is_stalinist = yes
+				SOV_is_stalinist = yes
 				SOV_is_left_opposition = yes
 				SOV_is_right_opposition = yes
 				has_country_flag = SOV_assassinated_stalin_flag
@@ -11656,7 +11656,7 @@ SOV_comecon_dec_cat = {
 
 
 SOV_great_patriotic_war = {
-	
+
 	SOV_raise_penal_units = {
 		priority = 21
 
@@ -13029,8 +13029,8 @@ SOV_great_patriotic_war = {
 
 		ai_will_do = {
 			base = 1
+		}
 	}
-}
 }
 
 ################################################################################
@@ -14791,8 +14791,8 @@ SOV_soviet_civil_war_dec_cat = {
 				OR = {
 					#region = 155 # Manchuria
 					region = 151
-					region = 261 
-					region = 262 
+					region = 261
+					region = 262
 					region = 149
 					region = 256
 					region = 257
@@ -15471,8 +15471,8 @@ SOV_soviet_civil_war_dec_cat = {
 					region = 147
 					region = 263
 					region = 151
-					region = 261 
-					region = 262 
+					region = 261
+					region = 262
 					region = 149
 					region = 256
 					region = 257
@@ -16494,8 +16494,8 @@ SOV_soviet_civil_war_dec_cat = {
 					region = 147
 					region = 263
 					region = 151
-					region = 261 
-					region = 262 
+					region = 261
+					region = 262
 					region = 149
 					region = 256
 					region = 257
@@ -16518,8 +16518,8 @@ SOV_soviet_civil_war_dec_cat = {
 							region = 147
 							region = 263
 							region = 151
-							region = 261 
-							region = 262 
+							region = 261
+							region = 262
 							region = 149
 							region = 256
 							region = 257
@@ -18138,15 +18138,15 @@ SOV_polish_territory = {
 		}
 
 		visible = {
-			POL = { 
-				exists = yes 
+			POL = {
+				exists = yes
 				is_subject_of = ROOT
 				NOT = { has_completed_focus = POL_surrender_the_east }
 			}
 			any_owned_state = {
 				is_core_of = POL
 				OR = {
-					
+
 					any_country_with_core = {
 						not = { tag = POL }
 					}
@@ -18162,7 +18162,7 @@ SOV_polish_territory = {
 			base = 50
 			modifier = {
 				NOT = {
-					has_war_with = GER 
+					has_war_with = GER
 				}
 				factor = 5
 			}
@@ -18172,7 +18172,7 @@ SOV_polish_territory = {
 			POL = {
 				country_event = {
 					id = soviet.74
-					hours = 4 
+					hours = 4
 					random_hours = 4
 				}
 				custom_effect_tooltip = if_they_accept_newline_tt
@@ -18181,8 +18181,8 @@ SOV_polish_territory = {
 						add_stability = 0.05
 					}
 					POL = {
-						add_autonomy_score = { 
-							value = -250 
+						add_autonomy_score = {
+							value = -250
 							localization = POL_accepted_states
 						}
 						add_popularity = {
@@ -18193,10 +18193,10 @@ SOV_polish_territory = {
 					ROOT  ={
 						every_owned_state = {
 							limit = {
-								is_core_of = POL 
+								is_core_of = POL
 								OR = {
 									# Białystok
-									state = 97 
+									state = 97
 									# Uncontested Polish Cores
 									NOT = {
 										any_country_with_core = {
@@ -18204,7 +18204,7 @@ SOV_polish_territory = {
 										}
 									}
 								}
-								
+
 							}
 							transfer_state_to = POL
 						}
@@ -18213,18 +18213,18 @@ SOV_polish_territory = {
 				custom_effect_tooltip = if_they_refuse_newline_tt
 				effect_tooltip = {
 					POL = {
-						add_autonomy_score = { 
-							value = 250 
+						add_autonomy_score = {
+							value = 250
 							localization = POL_refused_states
 						}
 					}
 					ROOT = {
 						every_owned_state = {
 							limit = {
-								is_core_of = POL 
+								is_core_of = POL
 								OR = {
 									# Białystok
-									state = 97 
+									state = 97
 									# Uncontested Polish Cores
 									NOT = {
 										any_country_with_core = {
@@ -18232,11 +18232,11 @@ SOV_polish_territory = {
 										}
 									}
 								}
-								
+
 							}
-							remove_core_of = POL  
+							remove_core_of = POL
 							add_core_of = SOV
-							add_claim_by = POL 
+							add_claim_by = POL
 						}
 					}
 				}

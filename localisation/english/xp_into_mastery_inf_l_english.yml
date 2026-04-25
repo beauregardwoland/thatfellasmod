@@ -9,4 +9,5 @@
  xp_into_mastery_navy_has_cost_tt1_key:0"£trigger_yes has more than £GFX_air_experience §Y50 army xp§!"
  xp_into_mastery_navy_has_cost_tt2_key:0"£trigger_no has more than £GFX_air_experience §Y50 army xp§!"
  yearly_autosave_reminder:0"Yearly take a save Reminder"
+ monthly_autosave_reminder:0"Monthly Reminder"
  reminder_for_yearly_saves:0"Enable Yearly take a save Reminder"

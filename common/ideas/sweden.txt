@@ -201,7 +201,7 @@ ideas = {
 			}
 		}
 
-			SWE_hungershield = {
+		SWE_hungershield = {
 			allowed = {
 				original_tag = SWE
 			}

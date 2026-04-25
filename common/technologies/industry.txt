@@ -238,25 +238,28 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
+			
 			modifier = {
-				factor = 2
-				date > "1937.1.1"
+				factor = 10
+			
+				has_resources_in_country = {
+					resource = coal
+					amount > 0
+					only_imported = yes
+				}
 			}
 
 			modifier = {
-				factor = 2
-				coal > 0
-			}
-			modifier = {
-				factor = 2
-				coal > 8
+				factor = 5
+				energy_ratio < 0.9
 			}
 		}
 		
 		categories = {
 			industry
-			cat_production		
+			cat_production
+			construction_tech
+			excavation_tech		
 		}
 	}
 	
@@ -274,25 +277,28 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-
+			
 			modifier = {
-				factor = 2
-				date > "1939.1.1"
+				factor = 5
+			
+				has_resources_in_country = {
+					resource = coal
+					amount > 0
+					only_imported = yes
+				}
 			}
-
+			
 			modifier = {
-				factor = 2
-				coal > 0
-			}
-			modifier = {
-				factor = 2
-				coal > 8
+				factor = 5
+				energy_ratio < 0.9
 			}
 		}
 		
 		categories = {
 			industry
 			cat_production
+			construction_tech
+			excavation_tech	
 		}
 	}
 
@@ -1785,7 +1791,7 @@ technologies = {
 		
 		local_resources_factor = 0.10
 		local_resources_coal_factor = 0.05
-		
+
 		path = {
 			research_cost_coeff = 1
 		}
@@ -1889,7 +1895,7 @@ technologies = {
 		
 		local_resources_factor = 0.10
 		local_resources_coal_factor = 0.05
-		
+
 		path = {
 			research_cost_coeff = 1
 		}
@@ -1988,7 +1994,7 @@ technologies = {
 		
 		local_resources_factor = 0.10
 		local_resources_coal_factor = 0.05
-		
+
 		path = {
 			research_cost_coeff = 1
 		}
@@ -2078,7 +2084,7 @@ technologies = {
 		
 		local_resources_factor = 0.10
 		local_resources_coal_factor = 0.05
-		
+
 		path = {
 			research_cost_coeff = 1
 		}
@@ -2468,5 +2474,5 @@ technologies = {
 		start_year = 1943
 		
 		show_effect_as_desc = yes
-	}			
+	}	
 }

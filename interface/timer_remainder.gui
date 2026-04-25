@@ -1,0 +1,66 @@
+guiTypes = {
+
+	
+	containerWindowType = {
+		name = "month_and_year_timer_container"
+		size = { width=1920 height=1080}
+		position = { x = -550 y = 2 }
+		Orientation = UPPER_RIGHT
+		clipping=yes
+		#moveable = yes
+
+		
+
+		buttonType = {
+			name = "1month_timer"
+			spriteType = "GFX_generic_box_smallest"
+			position = {x=8 y=4}
+			scale=0.85
+			pdx_tooltip = 1_month_timer_button_tt
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+		
+		instantTextboxType = {
+			name = "1month_timer_text"
+			position = {x=14 y=4}
+			font = "hoi_18mbs"
+			text = "[Reminder_gui_loc_tt]"
+			maxWidth = 200
+			maxHeight = 23
+			format = left
+			
+		}
+
+		instantTextboxType = {
+			name = "day_night_timer"
+			position = {x=-2 y=4}
+			font = "hoi_18mbs"
+			text = day_night_timer_text
+			maxWidth = 200
+			maxHeight = 23
+			format = left
+		}
+
+		buttonType = {
+			name = "1year_timer"
+			spriteType = "GFX_generic_box_smallest"
+			position = {x=68 y=4}
+			scale=0.85
+			pdx_tooltip = 1_month_timer_button_tt
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+		instantTextboxType = {
+			name = "1year_timer_text"
+			position = {x=70 y=4}
+			font = "hoi_18mbs"
+			text = "[Reminder_gui_loc_1_tt]"
+			maxWidth = 200
+			maxHeight = 23
+			format = left
+		}
+	}
+	
+}	
+

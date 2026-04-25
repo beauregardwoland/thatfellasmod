@@ -512,3 +512,32 @@ defined_text = {
 	
 
 }
+
+defined_text = {
+	name = Reminder_gui_loc_tt
+	text = {
+		trigger = { has_country_flag = one_month_timer_n_prog }
+		localization_key = 1_month_timer_in_prog
+	}
+	
+	text = {
+		trigger = { NOT = { has_country_flag = one_month_timer_n_prog } }
+		localization_key = 1_month_timer_not_prog
+	}
+
+}
+
+defined_text = {
+	name = Reminder_gui_loc_1_tt
+	
+	text = {
+		trigger = { has_country_flag = one_year_timer_n_prog }
+		localization_key = 1_year_timer_in_prog
+	}
+
+	text = {
+		trigger = { NOT = { has_country_flag = one_year_timer_n_prog } }
+		localization_key = 1_year_timer_not_prog
+	}
+
+}

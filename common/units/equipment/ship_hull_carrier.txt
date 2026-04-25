@@ -135,7 +135,7 @@ equipments = {
 		# (Describes combat behaviour - hidden stat)
 		offensive_weapons = no
 
-		build_cost_ic = 1561
+		build_cost_ic = 1550
 		resources = {
 			steel = 3
 			chromium = 1
@@ -293,7 +293,7 @@ equipments = {
 
 
 
-		build_cost_ic = 2437
+		build_cost_ic = 2450
 		resources = {
 			steel = 4
 			chromium = 2

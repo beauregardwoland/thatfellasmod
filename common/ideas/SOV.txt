@@ -2032,7 +2032,7 @@ ideas = {
 
 			modifier = {
 				army_org_factor = -0.1
-				experience_gain_army_factor = -1
+				experience_gain_army_factor = -0.9
 				army_org_regain = -0.15
 				custom_modifier_tooltip = SOV_military_reorganization_ns_removal_tt
 			}
@@ -4597,7 +4597,7 @@ ideas = {
 							has_country_flag = SOV_accepted_OKMO
 						}
 					}
-				}
+				}	
 			}
 
 			available = {
@@ -4867,7 +4867,8 @@ ideas = {
 			picture = astrov_design_bureau
 
 			allowed = {
-				original_tag = SOV
+				OR = {
+					original_tag = SOV
 					AND = {
 						tag = CHI
 						has_dlc = "No Compromise, No Surrender"
@@ -5149,7 +5150,7 @@ ideas = {
 
 			allowed = {
 				OR = {
-				original_tag = SOV
+					original_tag = SOV
 					AND = {
 						tag = CHI
 						has_dlc = "No Compromise, No Surrender"
@@ -9710,6 +9711,45 @@ ideas = {
 				}
 			}
 		}
+
+		SOV_kolomna_manufacturer = {
+			name = "[SOV_kolomna_locomotive_plant_name_dynamic]"
+
+			picture = SOV_kolomna_alt
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+			}
+
+			visible = {
+			}
+
+			
+			ai_will_do = {
+				factor = 0
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+				support_tech = 0.07
+			}
+
+			equipment_bonus = {
+				train_equipment = {
+					build_cost_ic = -0.10
+					armor_value = 0.10
+					air_attack = 0.10
+					instant = yes
+				}
+			}
+
+			cost = 150
+
+			traits = { train_equipment_manufacturer }
+		}
 	}
 
 	industrial_concern = {
@@ -10496,5 +10536,5 @@ ideas = {
 				industrial_capacity_dockyard = 0.05
 			}
 		}
-
+	}
 }

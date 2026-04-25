@@ -26,4 +26,64 @@ scripted_gui = {
 			}
 		}
 	}
+	month_and_year_timer = {
+		context_type = player_context
+		window_name = "month_and_year_timer_container"
+		visible = {
+			
+		}
+		
+
+		triggers = {
+			1year_timer_click_enabled = {
+				ROOT = { custom_trigger_tooltip = { NOT = { has_country_flag = one_year_timer_n_prog } tooltip = one_year_timer_n_prog_tt } }
+			}
+			1month_timer_click_enabled = {
+				ROOT = { custom_trigger_tooltip = { NOT = { has_country_flag = one_month_timer_n_prog } tooltip = one_year_timer_n_prog_tt } }
+				
+			}
+		}
+		effects = {
+			1year_timer_click = {
+				ROOT = {
+					activate_mission = yearly_autosave_reminder
+					set_country_flag = one_year_timer_n_prog
+				}
+			}
+			1month_timer_click = {
+				ROOT = {
+					activate_mission = monthly_autosave_reminder
+					set_country_flag = one_month_timer_n_prog
+				}
+			}
+		}
+	}
+
+	mastery_unified_window = {
+		context_type = decision_category
+		window_name = "mastery_unified_window_container"
+
+		triggers = {
+			select_army_mastery_click_enabled = {
+				ROOT = { NOT = { has_country_flag = in_land_mastery } }
+			}
+			select_air_mastery_click_enabled = {
+				ROOT = { NOT = { has_country_flag = in_air_mastery } }
+			}
+			select_navy_mastery_click_enabled = {
+				ROOT = { NOT = { has_country_flag = in_sea_mastery } }
+			}
+		}
+		effects = {
+			select_army_mastery_click = {
+				ROOT = { clr_country_flag = in_air_mastery clr_country_flag = in_sea_mastery set_country_flag = in_land_mastery }
+			}
+			select_air_mastery_click = {
+				ROOT = { clr_country_flag = in_land_mastery clr_country_flag = in_sea_mastery set_country_flag = in_air_mastery }
+			}
+			select_navy_mastery_click = {
+				ROOT = { clr_country_flag = in_air_mastery clr_country_flag =  in_land_mastery set_country_flag = in_sea_mastery }
+			}
+		}
+	}
 }

@@ -759,7 +759,7 @@ special_Update_MIO_Research_Speeds = {
 				is_military_industrial_organization = GER_krupp_custom
 				is_military_industrial_organization = GER_blohm_und_voss_organization
 
-				#is_military_industrial_organization = ROM_resita_works_organization
+				is_military_industrial_organization = GER_carl_walther_organization
 			}
 		}
 		set_variable = { Previous_Week_Funds = Current_Week_Funds }
