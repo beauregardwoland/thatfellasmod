@@ -36,10 +36,10 @@ scripted_gui = {
 
 		triggers = {
 			1year_timer_click_enabled = {
-				ROOT = { custom_trigger_tooltip = { NOT = { has_country_flag = one_year_timer_n_prog } tooltip = one_year_timer_n_prog_tt } }
+				ROOT = { custom_trigger_tooltip = { NOT = { has_country_flag = one_year_timer_n_prog } tooltip = one_year_timer_n_prog_tt } is_ai = no }
 			}
 			1month_timer_click_enabled = {
-				ROOT = { custom_trigger_tooltip = { NOT = { has_country_flag = one_month_timer_n_prog } tooltip = one_year_timer_n_prog_tt } }
+				ROOT = { custom_trigger_tooltip = { NOT = { has_country_flag = one_month_timer_n_prog } tooltip = one_year_timer_n_prog_tt } is_ai = no }
 				
 			}
 		}
@@ -65,13 +65,13 @@ scripted_gui = {
 
 		triggers = {
 			select_army_mastery_click_enabled = {
-				ROOT = { NOT = { has_country_flag = in_land_mastery } }
+				ROOT = { NOT = { has_country_flag = in_land_mastery } is_ai = no }
 			}
 			select_air_mastery_click_enabled = {
-				ROOT = { NOT = { has_country_flag = in_air_mastery } }
+				ROOT = { NOT = { has_country_flag = in_air_mastery } is_ai = no }
 			}
 			select_navy_mastery_click_enabled = {
-				ROOT = { NOT = { has_country_flag = in_sea_mastery } }
+				ROOT = { NOT = { has_country_flag = in_sea_mastery } is_ai = no }
 			}
 		}
 		effects = {
