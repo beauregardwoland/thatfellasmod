@@ -196,8 +196,8 @@ JAP_allied_debuff = {
 
 	
 	dig_in_speed_factor = -0.2
-	max_dig_in_factor = -0.30
-	army_armor_attack_factor = -0.1
+	max_dig_in_factor = -0.20
+	army_armor_attack_factor = -0.15
 	army_defence_factor = -0.1
 }
 
@@ -260,10 +260,11 @@ JAP_attack_buff = {
 	enable = { always = yes } 
 	icon = GFX_modifiers_SOV_civilian_labor_in_defense
 
-	breakthrough_factor = 0.2
+	breakthrough_factor = 0.15
 	army_attack_factor = 0.10
 	dig_in_speed_factor = 0.2
-	max_dig_in_factor = 0.30
+	max_dig_in_factor = 0.20
+	army_armor_attack_factor = 0.075
 	custom_modifier_tooltip = JAP_attack_buff_tt
 }
 
@@ -271,15 +272,16 @@ JAP_attack_buff_dup_allies = {
 	enable = { always = yes } 
 	#icon = GFX_modifiers_SOV_civilian_labor_in_defense
 
-	breakthrough_factor = 0.2
+	breakthrough_factor = 0.15
 	army_attack_factor = 0.10
 	dig_in_speed_factor = 0.2
-	max_dig_in_factor = 0.33
+	max_dig_in_factor = 0.2
+	army_armor_attack_factor = 0.075
 }
 2_tile_gibralter = {
 	icon = GFX_modifiers_SOV_civilian_labor_in_defense
 	max_dig_in_factor = -0.05
-	army_defence_factor = -0.15
+	army_defence_factor = -0.1
 	army_morale_factor = -0.75
 }
 JAP_IJN = {
