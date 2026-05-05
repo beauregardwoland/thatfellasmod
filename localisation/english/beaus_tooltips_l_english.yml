@@ -116,3 +116,10 @@
  gib_focke_wolfe_cost_tt: "§gFocke-Wolfe is currently disfavored as a fighter aviation firm due to political favortism§! \nComeplete either §YPlay the Political Game trait§!(top mid left) or §YLeverage Field Reports§! trait(top mid right) to see associated costs."
  
  gib_focke_wolfe_cost_1_tt: "§gIrkutsk Aviation Plant is currently uninterested in supporting us due to a stronger industrial base in russia§! \nComeplete either §YPlay the Political Game trait§!(top mid left) or §YLeverage Field Reports§! trait(top mid right) to see associated costs."
+
+ enable_consolidation: "Enable Hist day1 setup decision"
+ alt_hist_question: "Historical Game Rules"
+ RULE_OPTION_to_hist_or_not_ENABLED_DESC: "Enables the historical day 1 setup decision: this consolidates ai that do not impact a pvp historical experience greatly and lobotimizes them somewhat. The decision also consolidates china into 2 tags."
+ RULE_OPTION_to_hist_or_not_DISABLED_DESC: "Disables the historical day 1 setup decision: if you wish to use the combat and general changes in a A-hist game this keeps the vanilla setup more or less."
+ to_hist_or_not_ENABLED: "Enabled hist setup decision"
+ to_hist_or_not_DISABLED: "Disabled hist setup decision"

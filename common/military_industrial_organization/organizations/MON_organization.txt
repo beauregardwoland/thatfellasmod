@@ -525,7 +525,7 @@
 		}
 		organization_modifier = {
 			military_industrial_organization_research_bonus = 0.05
-			military_industrial_organization_size_up_requirement = -0.15
+			military_industrial_organization_size_up_requirement = -0.2
 		}
 	}
 
@@ -575,7 +575,7 @@
 
  MON_guns_org_3 = {
 	include = JAP_mitsui_arms_manufactoring
-	icon = GFX_idea_zastava_arms
+	icon = GFX_idea_CZE_zbrojovka_vsetin
 	allowed = { 
 		tag = SOV
 	}

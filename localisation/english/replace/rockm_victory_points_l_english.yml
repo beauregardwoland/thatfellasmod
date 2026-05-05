@@ -1,4 +1,6 @@
 ﻿l_english:
+ FE_IRONMAN: "Ironman Mode-§RRemember game rules§!"
+ FE_HISTORICAL: "Historical AI-§RHost tool,hist game§!"
  VICTORY_POINTS_11332:1 "Cockermouth" 
  JAP_agility_focus:0"Expand Mitsubishi Contracts"
  JAP_range_focus:0"Expand Kawasaki Contracts"
@@ -19,7 +21,8 @@
  ITA_blackshirts_div_cap_12_tt:0 "Modify template cap of §YCamicie Nere§! by §G+40§!."
  USA_reestablish_the_gold_standard:0"Landon's New Deal"
  USA_continue_the_new_deal:0"2cnd New Deal"
- 
+
+ marmon_herrington:0 "Pratt & Whitney"
 
  GER_porsche_organization: "$GER_porsche_custom$"
  GER_henschel_organization: "$GER_henschel_custom$"
