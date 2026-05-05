@@ -5,3 +5,4 @@ NDefines.NNavy.BASE_NAVAL_INVASION_DIVISION_CAP = 8;					-- base cap of division
 NDefines.NNavy.NAVAL_DOMINANCE_STRIKE_FORCE_MULTIREGION_DECAY = 0.01;    -- Percentage that the strike force mission's naval dominance multiplier decreases with for each additional assigned region
 NDefines.NNavy.HEAVY_GUN_ATTACK_TO_SHORE_BOMBARDMENT							= 0.25;
 NDefines.NNavy.LIGHT_GUN_ATTACK_TO_SHORE_BOMBARDMENT							= 0.125;
+NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.40;
