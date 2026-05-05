@@ -38,7 +38,7 @@ division_template = {
         cavalry = { x = 2 y = 1 }
 	}
 	support = {
-        recon = { x = 0 y = 0 }
+        armored_car_recon = { x = 0 y = 0 }
 	}
 }
 
@@ -92,6 +92,8 @@ division_template = {
 		armored_car = { x = 2 y = 1 }
 		armored_car = { x = 3 y = 0 }
 		armored_car = { x = 3 y = 1 }
+		armored_car = { x = 4 y = 0 }
+		armored_car = { x = 4 y = 1 }
 	}
 	support = {
         armored_car_recon = { x = 0 y = 0 }
