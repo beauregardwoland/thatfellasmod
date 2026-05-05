@@ -1,0 +1,15 @@
+to_hist_or_not = {
+	name = "enable_consolidation"
+	group = "alt_hist_question"
+	icon = "GFX_volunteers"
+	default = {
+		name = "ENABLED"
+		text = "to_hist_or_not_ENABLED"
+		desc = "RULE_OPTION_to_hist_or_not_ENABLED_DESC"
+	}
+	option = {
+		name = "DISABLED"
+		text = "to_hist_or_not_DISABLED"
+		desc = "RULE_OPTION_to_hist_or_not_DISABLED_DESC"
+	}
+}

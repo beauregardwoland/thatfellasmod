@@ -27,6 +27,10 @@ gimp_ai_category = {
 			is_ai = no
 			date < 1936.1.30
 			not = { has_global_flag = day_1_deciscion }
+			has_game_rule = {
+				rule = to_hist_or_not
+				option = ENABLED
+			}
 		}
 
 		complete_effect = {
@@ -2807,6 +2811,10 @@ gimp_ai_category = {
 		
 		visible = {
 			tag = SPR
+			has_game_rule = {
+				rule = to_hist_or_not
+				option = ENABLED
+			}
 		}
 
 		available = {
