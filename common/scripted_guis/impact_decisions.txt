@@ -1,0 +1,15 @@
+scripted_gui = {
+	
+
+	impact_decisions_window = {
+		context_type = decision_category
+		window_name = "impact_decisions_container"
+
+		triggers = {
+			
+		}
+		effects = {
+			
+		}
+	}
+}

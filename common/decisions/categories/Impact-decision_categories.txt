@@ -1,7 +1,7 @@
 Impact_buttons_1 = {
 	icon = ger_mefo_bills
 
-	picture = GFX_decision_cat_picture_generic_polynesia
+	#picture = GFX_decision_cat_picture_generic_polynesia
 
 	allowed = {
 		always = yes
@@ -9,11 +9,32 @@ Impact_buttons_1 = {
 
 	visible_when_empty = yes
 
+	#scripted_gui = impact_decisions_container
+
 	on_map_area = {
-		targets = {  336 672 335 334 333 673 638 632 630 727 631 648 646 647 645 439 428 423 427 430 431 327 623 627 624 625 628 626 }
-		name = state_of_pacific_map_area
+		targets = { 638 632 630 727 631 648 646 647 645 }
+		name = "Pacific Islands"
 		zoom = 1000
 	}
+
+	on_map_area = {
+		targets = {  439 428 423 427 430 431 }
+		name = "Indian Territory"
+		zoom = 1000
+	}
+
+	on_map_area = {
+		targets = { 327 623 627 624 625 628 626 }
+		name = "Philippino Territory"
+		zoom = 1000
+	}
+
+	on_map_area = {
+		targets = { 336 672 335 334 333 673 }
+		name = "Indonesian Territory"
+		zoom = 1000
+	}
+
 	priority = 100
 }
 

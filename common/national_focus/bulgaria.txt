@@ -8715,7 +8715,7 @@ focus_tree = {
 		relative_position_id = BUL_join_the_tripartite_pact
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		mutually_exclusive = { focus = BUL_total_war }
 
 		bypass = {
@@ -8864,7 +8864,7 @@ focus_tree = {
 		relative_position_id = BUL_bulgarian_administration_of_the_balkans
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			has_stability > 0.50
@@ -9118,7 +9118,7 @@ focus_tree = {
 		relative_position_id = BUL_total_war
 		x = -1
 		y = 2
-		cost = 10
+		cost = 5
 
 		available = {
 			is_subject = no

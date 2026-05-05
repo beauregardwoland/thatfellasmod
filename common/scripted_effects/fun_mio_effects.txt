@@ -1068,34 +1068,6 @@ invest_mio_Factories_usa = {
 		set_temp_variable = { invest_mio_target_mil_temp = invest_mio_target_mil }
 		set_temp_variable = { invest_mio_target_dock_temp = invest_mio_target_dock }
 	}
-	#set_temp_variable_to_random = { var = RUS_damage min = 0.8 max = 1 integer = no }
-	# RUS_starting_construction_progress_min affected by mio trait invest_mio_upgrade_1_3 and RUS_mio_policy_hire_state_construction_companies
-	# So, min damage is 0.40 (40%), while max damage is 0.60 (60%) with both upgrades.
-	#subtract_from_temp_variable = { RUS_damage = RUS_starting_construction_progress_min_temp }
-	#random_list = {
-	#	var:invest_mio_civilian_factory_chance_temp = {
-	#		set_temp_variable = { invest_mio_target_building = token:industrial_complex }
-	#		mio:GER_opel_custom = {
-	#			add_to_variable = { total_campaign_civs = 1 }
-	#			add_to_array = { array = invest_mio_factory_list value = 1 index = 0 }
-	#		}
-	#	}
-	#	var:invest_mio_military_factory_chance_temp = {
-	#		set_temp_variable = { invest_mio_target_building = token:arms_factory }
-	#		mio:GER_opel_custom = {
-	#			add_to_variable = { total_campaign_mils = 1 }
-	#			add_to_array = { array = invest_mio_factory_list value = 2 index = 0 }
-	#		}
-	#	}
-	#	var:invest_mio_dockyard_chance_temp = {
-	#		set_temp_variable = { invest_mio_target_building = token:dockyard }
-	#		mio:GER_opel_custom = {
-	#			add_to_variable = { total_campaign_dockyards = 1 }
-	#			add_to_array = { array = invest_mio_factory_list value = 3 index = 0 }
-	#		}
-	#	}
-	#}
-
 
 	if = {
 		limit = { check_variable = { invest_mio_target_civ_temp > 0.1 } }
