@@ -629,9 +629,9 @@
 			#military_industrial_organization_funds_gain = 0.1
 		}
 	}
-		on_industrial_manufacturer_assigned = {
+	on_industrial_manufacturer_assigned = {
 		if = { #Check if the trait to give army xp is unlocked
-			limit = { has_enabled_rhein_xp_hun = yes }
+			limit = { has_enabled_rhein_xp_MON = yes }
 			calculate_daily_funds_gain_and_requirement_wol = yes
 			custom_effect_tooltip = {
 				localization_key = mio_XP_Gain_tt XP_ICON = mio_Army_XP_icon

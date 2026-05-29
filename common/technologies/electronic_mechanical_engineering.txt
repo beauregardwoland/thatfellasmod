@@ -1156,7 +1156,7 @@ technologies = {
 		categories = {
 			cat_fortification
 		}
-
+		special_project_specialization = { specialization_land }
 	}
 
 
@@ -1188,7 +1188,7 @@ technologies = {
 			cat_fortification
 		}
 		
-
+		special_project_specialization = { specialization_land }
 	}
 
 	land_fort_tech_2 = {
@@ -1209,7 +1209,7 @@ technologies = {
 		categories = {
 			cat_fortification
 		}
-		
+		special_project_specialization = { specialization_land }
 
 	}
 
@@ -1238,7 +1238,7 @@ technologies = {
 		categories = {
 			cat_fortification
 		}
-		
+		special_project_specialization = { specialization_land specialization_naval }
 
 	}
 
@@ -1260,7 +1260,7 @@ technologies = {
 		categories = {
 			cat_fortification
 		}
-		
+		special_project_specialization = { specialization_land specialization_naval }
 
 	}
 

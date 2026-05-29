@@ -51,7 +51,7 @@ country_event = {
 
 country_event = {
 	id = allied.3
-	title = "Fall of India"
+	title = "Fall of Burma and Bengal"
 	desc = "We must divert Japans attention"
 	picture = GFX_report_event_chinese_soldiers_fighting
 	
@@ -133,6 +133,27 @@ country_event = {
 }
 
 country_event = {
+	id = allied.18
+	title = "Fall of India"
+	desc = "We must divert Japans attention"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"Damn Them!"
+		activate_mission = JAP_take_india_allied
+		ai_chance = { factor = 100 }
+		#add_ideas = ALI_losing_4
+		effect_tooltip = {
+			every_allied_country = {
+				state_of_pacific_up = yes
+			}
+		}
+	}
+}
+
+country_event = {
 	id = allied.6
 	title = "Liberation of Western Russia"
 	desc = "dopamine"
@@ -179,7 +200,7 @@ country_event = {
 
 country_event = {
 	id = allied.9
-	title = "Liberation of India"
+	title = "Liberation of Burma and Bengal"
 	desc = "dopamine"
 	picture = GFX_report_event_chinese_soldiers_fighting
 	
@@ -197,6 +218,31 @@ country_event = {
 		hidden_effect = {
 			every_allied_country = {
 				remove_mission = JAP_Victory_on_the_Continent_allied
+			}
+		}
+	}
+}
+
+country_event = {
+	id = allied.19
+	title = "Liberation of India"
+	desc = "dopamine"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	"All according to cake"
+		ai_chance = { factor = 100 }
+		#remove_ideas = ALI_losing_4
+		effect_tooltip = {
+			every_allied_country = {
+				state_of_pacific_down = yes
+			}
+		}
+		hidden_effect = {
+			every_allied_country = {
+				remove_mission = JAP_take_india_allied
 			}
 		}
 	}

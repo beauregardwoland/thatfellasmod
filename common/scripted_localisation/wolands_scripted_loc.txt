@@ -40,6 +40,14 @@ defined_text = {
         }
         localization_key = state_of_pacific5_key
     }
+	text = {
+		trigger = {
+            check_variable = {
+				global.state_of_pacific = 5
+			}
+        }
+        localization_key = state_of_pacific6_key
+    }
 }
 
 defined_text = {

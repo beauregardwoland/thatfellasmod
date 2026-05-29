@@ -53,6 +53,16 @@ state_of_pacific_up = {
 			global.state_of_pacific = 4
 		}
 	}
+	else_if = {
+		limit = { has_idea = ALI_losing_7 }
+		swap_ideas = {
+			remove_idea = ALI_losing_7
+			add_idea = ALI_losing_8
+		}
+		set_variable = {
+			global.state_of_pacific = 5
+		}
+	}
 	else = {
 		add_ideas = ALI_losing_4
 		set_variable = {
@@ -62,6 +72,16 @@ state_of_pacific_up = {
 }
 state_of_pacific_down = {
 	if = {
+		limit = { has_idea = ALI_losing_8 }
+		swap_ideas = {
+			remove_idea = ALI_losing_8
+			add_idea = ALI_losing_7
+		}
+		set_variable = {
+			global.state_of_pacific = 4
+		}
+	}
+	else_if = {
 		limit = { has_idea = ALI_losing_7 }
 		swap_ideas = {
 			remove_idea = ALI_losing_7
@@ -454,6 +474,33 @@ fuck_nissan1 = {
 fuck_nissan2 = {
 	mio:MAN_nissan_light = {
 		add_mio_funds = 1000
+	}
+}
+
+
+wol_up_carrier_tech = {
+	custom_effect_tooltip = generic_skip_one_line_tt
+	custom_effect_tooltip = wol_up_carrier_tech_tt
+	custom_effect_tooltip = generic_skip_one_line_tt
+	if = {
+		limit = { has_tech = advanced_ship_hull_carrier }
+		add_political_power = 100
+		add_cic = 10000
+	}
+	else_if = {
+		limit = { has_tech = improved_ship_hull_carrier }
+		set_technology = { advanced_ship_hull_carrier = 1 }
+	}
+	else_if = {
+		limit = { has_tech = basic_ship_hull_carrier }
+		set_technology = { improved_ship_hull_carrier = 1 }
+	}
+	else_if = {
+		limit = { has_tech = early_ship_hull_carrier }
+		set_technology = { basic_ship_hull_carrier = 1 }
+	}
+	else = {
+		set_technology = { early_ship_hull_carrier = 1 }
 	}
 }
 wol_sov_spawn_ins = {

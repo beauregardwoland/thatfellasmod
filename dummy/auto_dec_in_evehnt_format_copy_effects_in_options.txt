@@ -1,0 +1,205 @@
+add_namespace = auto_dec_wars  ###copy and paste effect in option to use in other events
+
+country_event = {  #####german declaration of war on belgium
+	id = auto_dec_wars.1
+	title = auto_dec_wars.1.t
+	desc = auto_dec_wars.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	auto_dec_wars.1.a
+		ai_chance = { factor = 100 }
+		every_country = {  ###all central powers members dec on belgium
+			limit = {
+				is_in_faction_with = GER
+			}
+			declare_war_on = {
+				target = BEL
+				type = annex_everything
+			}
+		}
+		GER = { ###germany dec on belgium
+			declare_war_on = {
+				target = BEL
+				type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = {  #####declaration of war on england
+	id = auto_dec_wars.2
+	title = auto_dec_wars.2.t
+	desc = auto_dec_wars.2.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	auto_dec_wars.2.a
+		ai_chance = { factor = 100 }
+
+		every_country = {
+			limit = {
+				or = { is_subject_of = ENG tag = ENG  }  ####scopes to england and dominions
+			}
+			GER = {  ###germany decs on scope(england and its dominions)
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+		every_country = {  
+			limit = {
+				or = { is_subject_of = ENG tag = ENG  }  ####scopes to england and dominions
+			}
+			every_country = { ###centrals decs on scope(england and its dominions)
+				limit = {
+					is_in_faction_with = GER
+				}
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+
+	}
+}
+
+country_event = {  #####ottos dec on entente
+	id = auto_dec_wars.3
+	title = auto_dec_wars.3.t
+	desc = auto_dec_wars.3.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	auto_dec_wars.3.a
+		ai_chance = { factor = 100 }
+
+		every_country = {
+			limit = {
+				or = { is_subject_of = ENG tag = ENG is_in_faction_with = ENG is_in_faction_with = FRA }  ####scopes to england its dominions and everyone in a faction with england or france
+			}
+			TUR = {  ###ottos decs on scope(england its dominions any country inm faction with england or france)
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+		
+
+	}
+}
+
+country_event = {  #####bulgaria dec on entente
+	id = auto_dec_wars.4
+	title = auto_dec_wars.4.t
+	desc = auto_dec_wars.4.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	auto_dec_wars.4.a
+		ai_chance = { factor = 100 }
+
+		every_country = {
+			limit = {
+				or = { is_subject_of = ENG tag = ENG is_in_faction_with = ENG is_in_faction_with = FRA }  ####scopes to england its dominions and everyone in a faction with england or france
+			}
+			BUL = {  ###bulgaria decs on scope(england its dominions any country in faction with england or france)
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+		
+
+	}
+}
+
+country_event = {  #####italy joins the war
+	id = auto_dec_wars.5
+	title = auto_dec_wars.5.t
+	desc = auto_dec_wars.5.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	auto_dec_wars.5.a
+		ai_chance = { factor = 100 }
+
+		every_country = {
+			limit = {
+				or = { is_in_faction_with = GER tag = GER }  ####scopes to countries in faction with germany and germany
+			}
+			declare_war_on = { ###scope declares on Shitaly
+				target = ITA
+				type = annex_everything
+			}
+		}
+		
+
+	}
+}
+
+country_event = {  #####portugal joins the war
+	id = auto_dec_wars.6
+	title = auto_dec_wars.6.t
+	desc = auto_dec_wars.6.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	auto_dec_wars.6.a
+		ai_chance = { factor = 100 }
+
+		every_country = {
+			limit = {
+				or = { is_in_faction_with = GER tag = GER }  ####scopes to countries in faction with germany and germany
+			}
+			declare_war_on = { ###scope declares on Poortugal
+				target = POR
+				type = annex_everything
+			}
+		}
+		
+
+	}
+}
+
+country_event = {  #####Romania joins the war or perhaps not since they are annoying ai
+	id = auto_dec_wars.7
+	title = auto_dec_wars.7.t
+	desc = auto_dec_wars.7.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = 	auto_dec_wars.7.a
+		ai_chance = { factor = 100 }
+
+		every_country = {
+			limit = {
+				or = { is_in_faction_with = GER tag = GER }  ####scopes to countries in faction with germany and germany
+			}
+			declare_war_on = { ###scope declares on Romania
+				target = ROM
+				type = annex_everything
+			}
+		}
+		
+
+	}
+}

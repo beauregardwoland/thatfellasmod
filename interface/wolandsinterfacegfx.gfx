@@ -16,6 +16,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/generic_ship_hull_cruiser_submarine.dds" #Was ship_hull_cruiser_submarine, with GOT we got a new icon that matches the new 3D model
 	}
 	spriteType = {
+		name = "GFX_idea_USA_browning"
+		texturefile = "gfx/interface/USA_browning.png"
+	}
+	spriteType = {
 		name = "GFX_military_industrial_organization_ship_hull_carrier_submarine"
 		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_ship_submarine_quality.dds"
 	}

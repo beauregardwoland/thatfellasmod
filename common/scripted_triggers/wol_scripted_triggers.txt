@@ -74,6 +74,14 @@ has_enabled_deshig_xp = {
 	}
 }
 
+has_enabled_deshig_xp_USA = {
+    FROM = {
+		mio:USA_electric_boat_company_organization = {
+			is_mio_trait_completed = GER_deshimag_custom_3
+		}
+	}
+}
+
 focke_wolfe_price_for_trait = {
 	or = {
 		custom_trigger_tooltip = {
