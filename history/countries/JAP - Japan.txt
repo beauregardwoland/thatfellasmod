@@ -1,10 +1,10 @@
 ﻿capital = 282 # Tokyo/Kanto
 
 # Starting Stats
-set_stability = 0.2 # Was one of the countries in roughest internal shape at this point in time, coup happens not even 2 months into the game
+set_stability = 0.3 # Was one of the countries in roughest internal shape at this point in time, coup happens not even 2 months into the game
 set_war_support = 0.6 # Was 0.8, but will make you have to scale up with Militarism a bit
 
-set_research_slots = 3 # Was 4
+set_research_slots = 4 # Was 4
 set_fuel_ratio = 1.0
 
 # This can't be used in a civil war duh
@@ -157,7 +157,7 @@ add_dynamic_modifier = {
 }
 set_variable = { JAP_industry_industry_air_damage_factor = 0.25 } 
 set_variable = { JAP_industry_lack_of_resource_penalty_factor = 0.1 }
-set_variable = { JAP_industry_research_speed_factor = -0.00 }
+set_variable = { JAP_industry_research_speed_factor = -0.15 }
 set_variable = { JAP_industry_consumer_goods_factor = 0.15 }
 set_variable = { JAP_industry_production_speed_industrial_complex_factor = 0 } 
 set_variable = { JAP_industry_production_speed_arms_factory_factor = 0 } 

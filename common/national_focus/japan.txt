@@ -8226,7 +8226,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_form_the_central_economic_council }
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -8248,7 +8248,10 @@ focus_tree = {
 
 		completion_reward = {
 			
-			add_research_slot = 1
+			#add_research_slot = 1
+			JAP_add_or_modify_early_industrialization = yes
+
+			add_to_variable = { JAP_industry_research_speed_factor = 0.15 tooltip = research_speed_factor_tt }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -8280,6 +8283,31 @@ focus_tree = {
 					}
 				}
 			}
+
+			random_core_state = {
+				limit = {
+					can_construct_building = land_facility
+					is_owned_and_controlled_by = ROOT
+				}
+				construct_building_in_random_province = {
+					land_facility = 1
+				}
+			}
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.5
+			}
+
+
 			
 		}
 	}
@@ -11457,13 +11485,14 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_revisit_the_thirteen_demands }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
+			is_ai = no
 			is_subject = no 
 			NOT = { 
 				has_war_with = CHI 
@@ -11713,11 +11742,34 @@ focus_tree = {
 					has_active_mission = JAP_kwantung_army_impatience
 				}
 
-				add_days_mission_timeout = {
-				    mission = JAP_kwantung_army_impatience
-				    days = -365 
+				#add_days_mission_timeout = {
+				#    mission = JAP_kwantung_army_impatience
+				#    days = -365 
+				#}
+
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2500
 				}
-				custom_effect_tooltip = JAP_reinforce_the_beijing_garrison_tt
+
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 250
+				}
+
+				MAN = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 5000
+					}
+
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 500
+					}
+				}
+
+				#custom_effect_tooltip = JAP_reinforce_the_beijing_garrison_tt
 
 			}
 
@@ -11740,10 +11792,10 @@ focus_tree = {
 			hidden_effect = {
 				set_global_flag = JAP_triggered_war_with_china_manually_flag
 				CHI = {
-					add_days_mission_timeout = {
-					    mission = CHI_kwantung_army_impatience_dummy
-					    days = -365 
-					}
+					#add_days_mission_timeout = {
+					#    mission = CHI_kwantung_army_impatience_dummy
+					#    days = -365 
+					#}
 				}
 			}
 			
@@ -14124,6 +14176,7 @@ focus_tree = {
 			activate_mission = JAP_Conquest_of_the_Spice_Islands
 			activate_mission = JAP_phillipines_conquest
 			activate_mission = JAP_Full_Control_of_the_Pacific
+			activate_mission = JAP_take_india
 			custom_effect_tooltip = decjap_tt_wol
 			custom_effect_tooltip = generic_skip_one_line_tt
 			hidden_effect = {
@@ -14830,12 +14883,12 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				add_equipment_to_stockpile = { 
 					type = infantry_equipment
-					amount = 500
+					amount = 10000
 					producer = JAP
 				}
 				add_equipment_to_stockpile = { 
 					type = support_equipment
-					amount = 150
+					amount = 1000
 					producer = JAP
 				}	
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -25567,7 +25620,7 @@ focus_tree = {
 
 			JAP_add_or_modify_early_industrialization = yes
 
-			add_to_variable = { JAP_industry_research_speed_factor = 0.05 tooltip = research_speed_factor_tt }
+			add_to_variable = { JAP_industry_research_speed_factor = 0.1 tooltip = research_speed_factor_tt }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -29228,7 +29281,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 4
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
@@ -29307,7 +29360,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 4
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
@@ -29356,7 +29409,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 4
+		cost = 1
 
 		ai_will_do = {
 			factor = 3
@@ -29410,7 +29463,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		cost = 3
+		cost = 1
 
 		ai_will_do = {
 			factor = 3
@@ -29480,7 +29533,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		cost = 3
+		cost = 1
 
 		ai_will_do = {
 			factor = 3
@@ -29570,7 +29623,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 4
+		cost = 3
 
 		ai_will_do = {
 			factor = 3
@@ -29979,7 +30032,7 @@ focus_tree = {
 		}
 
 		available = {
-			
+			has_completed_focus = JAP_new_order_movement
 		}
 
 		bypass = {
@@ -30187,7 +30240,7 @@ focus_tree = {
 		}
 
 		available = {
-			
+			has_completed_focus = JAP_new_order_movement
 		}
 
 		bypass = {
@@ -30839,7 +30892,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 4
+		cost = 1
 
 		ai_will_do = {
 			factor = 3
@@ -31072,7 +31125,7 @@ focus_tree = {
 		x = 3
 		y = 1
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 3
@@ -32906,8 +32959,8 @@ focus_tree = {
 		#	focus = 
 		#}
 
-		prerequisite = { focus = JAP_f_go_nuclear_project }
-		prerequisite = { focus = JAP_ni_go_nuclear_project }
+		prerequisite = { focus = JAP_f_go_nuclear_project focus = JAP_ni_go_nuclear_project }
+		#prerequisite = { focus = JAP_ni_go_nuclear_project }
 
 		relative_position_id = JAP_f_go_nuclear_project
 		x = -9
@@ -32960,7 +33013,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 4
+		cost = 1
 
 		ai_will_do = {
 			factor = 3
