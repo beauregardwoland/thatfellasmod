@@ -1874,7 +1874,10 @@
 	}
 
 	on_tech_research_cancelled = {
-		reset_mio_research_speeds = yes
+		if = {
+			limit = { NOT = { has_mio_flag = disable_research_speed_loss } }
+			reset_mio_research_speeds = yes
+		}	
 	}
 
 	initial_trait = {
@@ -2320,7 +2323,10 @@
 	}
 
 	on_tech_research_cancelled = {
-		reset_mio_research_speeds = yes
+		if = {
+			limit = { NOT = { has_mio_flag = disable_research_speed_loss } }
+			reset_mio_research_speeds = yes
+		}	
 	}
 
 
@@ -2950,9 +2956,7 @@
 		on_complete = {
 			from = {
 				add_political_power = -50
-				set_technology = {
-					early_ship_hull_carrier = 1
-				}
+				wol_up_carrier_tech = yes
 			}
 		}
 
@@ -3243,7 +3247,7 @@
 	
 	tree_header_text = {
 		text = "Torpedo-Boats"
-		x = 0
+		x = 1
 	}
 
 	tree_header_text = {
@@ -3253,7 +3257,7 @@
 
 	tree_header_text = {
 		text = "Sea-Craft"
-		x = 8
+		x = 7
 	}
 
 	on_industrial_manufacturer_assigned = {
@@ -4813,7 +4817,7 @@
 		equipment_bonus = {
 			air_defence = 0.05
 			reliability = 0.05
-			air_range = 0.1
+			air_range = 0.075
 		}
 
 		organization_modifier = {
@@ -5785,7 +5789,10 @@
 	}
 
 	on_tech_research_cancelled = {
-		reset_mio_research_speeds = yes
+		if = {
+			limit = { NOT = { has_mio_flag = disable_research_speed_loss } }
+			reset_mio_research_speeds = yes
+		}	
 	}
 	
 	trait = {
@@ -6913,7 +6920,10 @@
 	}
 
 	on_tech_research_cancelled = {
-		reset_mio_research_speeds = yes
+		if = {
+			limit = { NOT = { has_mio_flag = disable_research_speed_loss } }
+			reset_mio_research_speeds = yes
+		}	
 	}
 
 	initial_trait = {
@@ -8046,7 +8056,10 @@
 	}
 
 	on_tech_research_cancelled = {
-		reset_mio_research_speeds = yes
+		if = {
+			limit = { NOT = { has_mio_flag = disable_research_speed_loss } }
+			reset_mio_research_speeds = yes
+		}
 	}
 
 	initial_trait = {

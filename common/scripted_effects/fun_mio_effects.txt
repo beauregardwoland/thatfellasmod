@@ -811,15 +811,19 @@ reset_mio_research_speeds = {
 }
 
 opel_weekly_invest_progress = {
-	mio:GER_opel_organization = {
-		if = {
-			limit = { check_variable = { invest_mio_days_project_percent > 100 } }
-			from = { invest_mio_Factories = yes }
-		}
-		else = {
-			add_to_variable = { invest_mio_days_project_percent = invest_mio_days_project_days_math }
+	if = {
+		limit = { has_enabled_opel_private_invest = yes }
+		mio:GER_opel_organization = {
+			if = {
+				limit = { check_variable = { invest_mio_days_project_percent > 100 } }
+				from = { invest_mio_Factories = yes }
+			}
+			else = {
+				add_to_variable = { invest_mio_days_project_percent = invest_mio_days_project_days_math }
+			}
 		}
 	}
+	
 }
 
 opel_decide_current_project = {
@@ -829,11 +833,11 @@ opel_decide_current_project = {
 				set_variable = { invest_mio_target_civ = 1 }
 				
 			}
-			var:invest_mio_civilian_factory_chance = {
+			var:invest_mio_military_factory_chance = {
 				set_variable = { invest_mio_target_mil = 1 }
 				
 			}
-			var:invest_mio_civilian_factory_chance = {
+			var:invest_mio_dockyard_chance = {
 				set_variable = { invest_mio_target_dock = 1 }
 				
 			}
@@ -880,34 +884,6 @@ invest_mio_Factories = {
 		set_temp_variable = { invest_mio_target_mil_temp = invest_mio_target_mil }
 		set_temp_variable = { invest_mio_target_dock_temp = invest_mio_target_dock }
 	}
-	#set_temp_variable_to_random = { var = RUS_damage min = 0.8 max = 1 integer = no }
-	# RUS_starting_construction_progress_min affected by mio trait invest_mio_upgrade_1_3 and RUS_mio_policy_hire_state_construction_companies
-	# So, min damage is 0.40 (40%), while max damage is 0.60 (60%) with both upgrades.
-	#subtract_from_temp_variable = { RUS_damage = RUS_starting_construction_progress_min_temp }
-	#random_list = {
-	#	var:invest_mio_civilian_factory_chance_temp = {
-	#		set_temp_variable = { invest_mio_target_building = token:industrial_complex }
-	#		mio:GER_opel_custom = {
-	#			add_to_variable = { total_campaign_civs = 1 }
-	#			add_to_array = { array = invest_mio_factory_list value = 1 index = 0 }
-	#		}
-	#	}
-	#	var:invest_mio_military_factory_chance_temp = {
-	#		set_temp_variable = { invest_mio_target_building = token:arms_factory }
-	#		mio:GER_opel_custom = {
-	#			add_to_variable = { total_campaign_mils = 1 }
-	#			add_to_array = { array = invest_mio_factory_list value = 2 index = 0 }
-	#		}
-	#	}
-	#	var:invest_mio_dockyard_chance_temp = {
-	#		set_temp_variable = { invest_mio_target_building = token:dockyard }
-	#		mio:GER_opel_custom = {
-	#			add_to_variable = { total_campaign_dockyards = 1 }
-	#			add_to_array = { array = invest_mio_factory_list value = 3 index = 0 }
-	#		}
-	#	}
-	#}
-
 
 	if = {
 		limit = { check_variable = { invest_mio_target_civ_temp > 0.1 } }
@@ -977,6 +953,7 @@ special_Update_MIO_Research_Speeds_USA = {
 		limit = {
 			OR = {
 				is_military_industrial_organization = USA_boeing_organization
+				is_military_industrial_organization = USA_army_ordnance_department_organization
 			}
 		}
 		set_variable = { Previous_Week_Funds = Current_Week_Funds }
@@ -1018,17 +995,145 @@ special_Update_MIO_Research_Speeds_USA = {
 	}
 }
 
-opel_weekly_invest_progress_usa = {
-	mio:USA_ford_motor_company_organization = {
+on_actions_uppdate_xp_mios_USA = {
+	every_military_industrial_organization = {
+		limit = {
+			OR = {
+				is_military_industrial_organization = USA_electric_boat_company_organization
+			}
+		}
+		set_variable = { Previous_Week_Funds = Current_Week_Funds }
+		set_variable = { Current_Week_Funds = funds }
+		set_variable = { weekly_funds_gained = Current_Week_Funds }
+		subtract_from_variable = { weekly_funds_gained = Previous_Week_Funds }
+
+		### Add to total campaign xp variable ###
+		set_temp_variable = { total_xp_to_be_added = special_mio_xp_gain }
+		multiply_temp_variable = { total_xp_to_be_added = 7 }
+		add_to_variable = { total_campaign_xp = total_xp_to_be_added }
+	}
+	remove_ideas = {
+		mio_mil_navy_xp_gain_1
+		mio_mil_navy_xp_gain_2
+	}
+	if = { #Add if above threshold
+		limit = {
+			OR = {
+				mio:USA_electric_boat_company_organization = { check_variable = { weekly_funds_gained > weekly_funds_requirement } }
+				check_variable = { deshimag_Research_Number > 0 }
+			}
+			has_enabled_deshig_xp_USA = yes
+		}
 		if = {
-			limit = { check_variable = { invest_mio_days_project_percent > 100 } }
-			from = { invest_mio_Factories_usa = yes }
+			limit = { 
+				OR = {
+					mio:USA_electric_boat_company_organization = { is_mio_trait_completed = GER_rheinmetall_custom_14 }
+				}
+			}
+			add_ideas = mio_mil_navy_xp_gain_2
 		}
 		else = {
-			add_to_variable = { invest_mio_days_project_percent = invest_mio_days_project_days_math }
+			add_ideas = mio_mil_navy_xp_gain_1
 		}
 	}
 }
+
+opel_weekly_invest_progress_usa = {
+	if = {
+		limit = { has_enabled_opel_private_invest_usa = yes }
+		mio:USA_ford_motor_company_organization = {
+			if = {
+				limit = { check_variable = { invest_mio_days_project_percent > 100 } }
+				from = { invest_mio_Factories_usa = yes }
+			}
+			else = {
+				add_to_variable = { invest_mio_days_project_percent = invest_mio_days_project_days_math }
+			}
+		}
+	}
+	
+	every_military_industrial_organization = { #docks and civs
+		limit = {
+			OR = {
+				is_military_industrial_organization = USA_norfolk_naval_yard_organization
+				is_military_industrial_organization = USA_brooklyn_naval_yard_organization						
+			}
+		}
+		set_variable = { Previous_Week_Funds = Current_Week_Funds }
+		set_variable = { Current_Week_Funds = funds }
+		set_variable = { weekly_funds_gained = Current_Week_Funds }
+		subtract_from_variable = { weekly_funds_gained = Previous_Week_Funds }
+		clamp_variable = { var = weekly_funds_gained min = 0 }
+
+		if = { #builds if has enough funds
+			limit = {
+				check_variable = { special_mio_assigned_manufacturer_num > 0 } #So that the MIO can only gain research speed from manufacturing weapons
+				check_variable = { weekly_funds_gained > weekly_funds_requirement }
+			}
+			if = {
+				limit = { check_variable = { invest_mio_days_project_percent > 100 } }
+				invest_mio_Factories_usa_2 = yes
+			}
+			else = {
+				add_to_variable = { invest_mio_days_project_percent = invest_mio_days_project_days_math }
+			}
+		}
+	}
+	every_military_industrial_organization = { #mils and civs
+		limit = {
+			OR = {
+				is_military_industrial_organization = USA_douglas_aircraft_company_organization
+				is_military_industrial_organization = USA_grumman_organization	
+				is_military_industrial_organization = USA_chrysler_organization					
+			}
+		}
+		set_variable = { Previous_Week_Funds = Current_Week_Funds }
+		set_variable = { Current_Week_Funds = funds }
+		set_variable = { weekly_funds_gained = Current_Week_Funds }
+		subtract_from_variable = { weekly_funds_gained = Previous_Week_Funds }
+		clamp_variable = { var = weekly_funds_gained min = 0 }
+
+		if = { #builds if has enough funds
+			limit = {
+				check_variable = { special_mio_assigned_manufacturer_num > 0 } #So that the MIO can only gain research speed from manufacturing weapons
+				check_variable = { weekly_funds_gained > weekly_funds_requirement }
+			}
+			if = {
+				limit = { check_variable = { invest_mio_days_project_percent > 100 } }
+				invest_mio_Factories_usa_2 = yes
+			}
+			else = {
+				add_to_variable = { invest_mio_days_project_percent = invest_mio_days_project_days_math }
+			}
+		}
+	}
+	every_military_industrial_organization = { #civs only
+		limit = {
+			OR = { is_military_industrial_organization = USA_browning_organization }
+		}
+		set_variable = { Previous_Week_Funds = Current_Week_Funds }
+		set_variable = { Current_Week_Funds = funds }
+		set_variable = { weekly_funds_gained = Current_Week_Funds }
+		subtract_from_variable = { weekly_funds_gained = Previous_Week_Funds }
+		clamp_variable = { var = weekly_funds_gained min = 0 }
+
+		if = { #builds if has enough funds
+			limit = {
+				check_variable = { special_mio_assigned_manufacturer_num > 0 } #So that the MIO can only gain research speed from manufacturing weapons
+				check_variable = { weekly_funds_gained > weekly_funds_requirement }
+			}
+			if = {
+				limit = { check_variable = { invest_mio_days_project_percent > 100 } }
+				invest_mio_Factories_usa_2 = yes
+			}
+			else = {
+				add_to_variable = { invest_mio_days_project_percent = invest_mio_days_project_days_math }
+			}
+		}
+	}
+}
+
+
 
 opel_decide_current_project_usa = {
 	set_variable = { invest_mio_days_project_percent = 0 }
@@ -1037,11 +1142,11 @@ opel_decide_current_project_usa = {
 				set_variable = { invest_mio_target_civ = 1 }
 				
 			}
-			var:invest_mio_civilian_factory_chance = {
+			var:invest_mio_military_factory_chance = {
 				set_variable = { invest_mio_target_mil = 1 }
 				
 			}
-			var:invest_mio_civilian_factory_chance = {
+			var:invest_mio_dockyard_chance = {
 				set_variable = { invest_mio_target_dock = 1 }
 				
 			}
@@ -1132,57 +1237,277 @@ invest_mio_Factories_usa = {
 	#country_event = { id = wol_qol.102 days = RUS_factory_interval_min_temp?160 random_days = 40 }
 }
 
-setup_usa_mios_startup = {
-	#sets up research mios
-				every_military_industrial_organization = {
+invest_mio_Factories_usa_2 = {
+	
+	# Remove last element in arrays
+	remove_from_array = { array = invest_mio_factory_list }
+	remove_from_array = { array = invest_mio_state_list }
+	remove_from_array = { array = invest_mio_date_list }
+	# Add Date
+	add_to_array = { array = invest_mio_date_list value = global.date index = 0 }
+	set_temp_variable = { invest_mio_target_civ_temp = invest_mio_target_civ }
+	set_temp_variable = { invest_mio_target_mil_temp = invest_mio_target_mil }
+	set_temp_variable = { invest_mio_target_dock_temp = invest_mio_target_dock }
+	save_event_target_as = invested_mio_effect_target
+
+	if = {
+		limit = { check_variable = { invest_mio_target_civ > 0.1 } }
+		set_temp_variable = { invest_mio_target_building = token:industrial_complex }
+		add_to_variable = { total_campaign_civs = 1 }
+		add_to_array = { array = invest_mio_factory_list value = 1 index = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { invest_mio_target_mil > 0.1 } }
+		set_temp_variable = { invest_mio_target_building = token:industrial_complex }
+		add_to_variable = { total_campaign_mils = 1 }
+			add_to_array = { array = invest_mio_factory_list value = 2 index = 0 }
+	}
+	else = {
+		set_temp_variable = { invest_mio_target_building = token:dockyard }
+		add_to_variable = { total_campaign_dockyards = 1 }
+		add_to_array = { array = invest_mio_factory_list value = 3 index = 0 }
+	}
+	from = {
+		meta_effect = {
+			text = {
+				random_owned_controlled_state = {
 					limit = {
-						OR = {
-							is_military_industrial_organization = USA_boeing_organization
+						is_core_of = ROOT
+						NOT = { has_state_flag = invest_mio_Recent_Building }
+						impassable = no
+						free_building_slots = { building = [BUILDING] size > 0 include_locked = no }
+						if = {
+							limit = { check_variable = { invest_mio_target_building = token:dockyard } }
+							is_coastal = yes
 						}
 					}
-					set_variable = { max_research_speed = 0.5 }
-					set_variable = { weekly_research_speed_gain = 0.01 }
-					set_variable = { weekly_funds_requirement = 9 }
+					add_building_construction = {
+						type = [BUILDING]
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = { flag = invest_mio_Recent_Building days = 360 value = 1 }
+					PREV = { event_target:invested_mio_effect_target = { add_to_array = { array = invest_mio_state_list value = PREV.PREV index = 0 } } }
 				}
-				#sets up xp mios
-				#every_military_industrial_organization = {
-				#	limit = {
-				#		OR = {
-				#									
-				#		}
-				#	}
-				#	set_variable = { weekly_funds_requirement = 9 }
-				#	set_variable = { mio_xp_gain = 0.2 }
-				#	set_variable = { total_campaign_xp = 0 }
-				#}
-				mio:USA_ford_motor_company_organization = {
-					set_variable = { invest_mio_civilian_factory_chance = 33 }
-					set_variable = { invest_mio_military_factory_chance = 33 }
-					set_variable = { invest_mio_dockyard_chance = 33 }
-					set_variable = { invest_mio_starting_construction_progress_min = 0 }
-					set_variable = { invest_mio_starting_construction_progress_max = 0.2 }
+			}
+			BUILDING = "[?invest_mio_target_building.GetTokenKey]"
+		}
+	}
 
-					set_variable = { invest_mio_days_project_days = 250 }
-					set_variable = { invest_mio_days_project_days_math = 100 }
-					divide_variable = { var = invest_mio_days_project_days_math value = invest_mio_days_project_days }
-					multiply_variable = { invest_mio_days_project_days_math = 7 }
-					set_variable = { invest_mio_days_project_percent = 0 }
+	add_to_variable = { total_campaign_factories = 1 }
+	set_variable = { invest_mio_target_civ = 0 }
+	set_variable = { invest_mio_target_mil = 0 }
+	set_variable = { invest_mio_target_dock = 0 }
+	add_to_variable = {	weekly_funds_requirement = 1 }
+	opel_decide_current_project_usa = yes
+	# Default is 160 days as lower limit for random factory construction interval
+	# Reduced by 50 days by mio trait gamayun_upgrade_1_4 and mio policy RUS_mio_policy_buy_out_land_holdings each
+	# Thus, value can either be 160, 110 or 60 days
+	#country_event = { id = wol_qol.102 days = RUS_factory_interval_min_temp?160 random_days = 40 }
+}
 
-					set_variable = { invest_mio_target_civ = 0 }
-					set_variable = { invest_mio_target_mil = 0 }
-					set_variable = { invest_mio_target_dock = 0 }
+setup_usa_mios_startup = {
+	#sets up research mios
+	every_military_industrial_organization = {
+		limit = {
+			OR = {
+				is_military_industrial_organization = USA_boeing_organization
+				is_military_industrial_organization = USA_army_ordnance_department_organization
+			}
+		}
+		set_variable = { max_research_speed = 0.5 }
+		set_variable = { weekly_research_speed_gain = 0.01 }
+		set_variable = { weekly_funds_requirement = 9 }
+	}
+	#sets up xp mios
+	every_military_industrial_organization = {
+		limit = {
+			OR = {
+				is_military_industrial_organization = USA_boeing_organization						
+			}
+		}
+		set_variable = { weekly_funds_requirement = 9 }
+		set_variable = { mio_xp_gain = 0.2 }
+		set_variable = { total_campaign_xp = 0 }
+	}
+	every_military_industrial_organization = {
+		limit = {
+			OR = {
+				is_military_industrial_organization = USA_ford_motor_company_organization
+			}
+		}
+		set_variable = { weekly_funds_requirement = 9 }
+		set_variable = { invest_mio_civilian_factory_chance = 33 }
+		set_variable = { invest_mio_military_factory_chance = 33 }
+		set_variable = { invest_mio_dockyard_chance = 33 }
 
-					set_variable = { invest_mio_factory_interval_min = 160 }
-					set_variable = { invest_mio_factory_interval_max = 200 }
-					set_variable = { total_campaign_factories = 0 }
-					set_variable = { total_campaign_civs = 0 }
-					set_variable = { total_campaign_mils = 0 }
-					set_variable = { total_campaign_dockyards = 0 }
-					set_variable = { total_campaign_factory_progress = 0 }
-					set_variable = { average_campaign_factory_progress = 0 }
-					set_variable = { notification_list_maximum = 10 }
-					resize_array = { invest_mio_date_list = notification_list_maximum }
-					resize_array = { invest_mio_factory_list = notification_list_maximum }
-					resize_array = { invest_mio_state_list = notification_list_maximum }
-				}
+		set_variable = { invest_mio_days_project_days = 275 }
+		set_variable = { invest_mio_days_project_days_math = 100 }
+		divide_variable = { var = invest_mio_days_project_days_math value = invest_mio_days_project_days }
+		multiply_variable = { invest_mio_days_project_days_math = 7 }
+		set_variable = { invest_mio_days_project_percent = 0 }
+
+		set_variable = { invest_mio_target_civ = 0 }
+		set_variable = { invest_mio_target_mil = 0 }
+		set_variable = { invest_mio_target_dock = 0 }
+
+		set_variable = { invest_mio_factory_interval_min = 160 }
+		set_variable = { invest_mio_factory_interval_max = 200 }
+		set_variable = { total_campaign_factories = 0 }
+		set_variable = { total_campaign_civs = 0 }
+		set_variable = { total_campaign_mils = 0 }
+		set_variable = { total_campaign_dockyards = 0 }
+		set_variable = { total_campaign_factory_progress = 0 }
+		set_variable = { average_campaign_factory_progress = 0 }
+		set_variable = { notification_list_maximum = 10 }
+		resize_array = { invest_mio_date_list = notification_list_maximum }
+		resize_array = { invest_mio_factory_list = notification_list_maximum }
+		resize_array = { invest_mio_state_list = notification_list_maximum }
+	}
+	every_military_industrial_organization = {
+		limit = {
+			OR = {
+				is_military_industrial_organization = USA_grumman_organization
+			}
+		}
+		set_variable = { weekly_funds_requirement = 9 }
+		set_variable = { invest_mio_civilian_factory_chance = 33 }
+		set_variable = { invest_mio_military_factory_chance = 33 }
+		set_variable = { invest_mio_dockyard_chance = 33 }
+
+		set_variable = { invest_mio_days_project_days = 275 }
+		set_variable = { invest_mio_days_project_days_math = 100 }
+		divide_variable = { var = invest_mio_days_project_days_math value = invest_mio_days_project_days }
+		multiply_variable = { invest_mio_days_project_days_math = 7 }
+		set_variable = { invest_mio_days_project_percent = 0 }
+
+		set_variable = { invest_mio_target_civ = 0 }
+		set_variable = { invest_mio_target_mil = 0 }
+		set_variable = { invest_mio_target_dock = 0 }
+
+		set_variable = { invest_mio_factory_interval_min = 160 }
+		set_variable = { invest_mio_factory_interval_max = 200 }
+		set_variable = { total_campaign_factories = 0 }
+		set_variable = { total_campaign_civs = 0 }
+		set_variable = { total_campaign_mils = 0 }
+		set_variable = { total_campaign_dockyards = 0 }
+		set_variable = { total_campaign_factory_progress = 0 }
+		set_variable = { average_campaign_factory_progress = 0 }
+		set_variable = { notification_list_maximum = 10 }
+		resize_array = { invest_mio_date_list = notification_list_maximum }
+		resize_array = { invest_mio_factory_list = notification_list_maximum }
+		resize_array = { invest_mio_state_list = notification_list_maximum }
+
+		opel_decide_current_project = yes
+	}
+	#setup private buildiers dock and civ
+	every_military_industrial_organization = {
+		limit = {
+			OR = {
+				is_military_industrial_organization = USA_norfolk_naval_yard_organization
+				is_military_industrial_organization = USA_brooklyn_naval_yard_organization						
+			}
+		}
+		set_variable = { weekly_funds_requirement = 9 }
+
+		set_variable = { invest_mio_civilian_factory_chance = 50 }
+		#set_variable = { invest_mio_military_factory_chance = 50 }
+		set_variable = { invest_mio_dockyard_chance = 50 }
+
+		set_variable = { invest_mio_days_project_days = 275 }
+		set_variable = { invest_mio_days_project_days_math = 100 }
+		divide_variable = { var = invest_mio_days_project_days_math value = invest_mio_days_project_days }
+		multiply_variable = { invest_mio_days_project_days_math = 7 }
+		set_variable = { invest_mio_days_project_percent = 0 }
+
+		set_variable = { invest_mio_target_civ = 0 }
+		#set_variable = { invest_mio_target_mil = 0 }
+		set_variable = { invest_mio_target_dock = 0 }
+
+		set_variable = { total_campaign_factories = 0 }
+		set_variable = { total_campaign_civs = 0 }
+		#set_variable = { total_campaign_mils = 0 }
+		set_variable = { total_campaign_dockyards = 0 }
+		set_variable = { total_campaign_factory_progress = 0 }
+		set_variable = { average_campaign_factory_progress = 0 }
+		set_variable = { notification_list_maximum = 10 }
+		resize_array = { invest_mio_date_list = notification_list_maximum }
+		resize_array = { invest_mio_factory_list = notification_list_maximum }
+		resize_array = { invest_mio_state_list = notification_list_maximum }
+
+		opel_decide_current_project = yes
+	}
+	#setup private buildiers mil and civ
+	every_military_industrial_organization = {
+		limit = {
+			OR = {
+				is_military_industrial_organization = USA_douglas_aircraft_company_organization	
+				is_military_industrial_organization = USA_chrysler_organization					
+			}
+		}
+		set_variable = { weekly_funds_requirement = 9 }
+
+		set_variable = { invest_mio_civilian_factory_chance = 50 }
+		set_variable = { invest_mio_military_factory_chance = 50 }
+		#set_variable = { invest_mio_dockyard_chance = 50 }
+
+		set_variable = { invest_mio_days_project_days = 275 }
+		set_variable = { invest_mio_days_project_days_math = 100 }
+		divide_variable = { var = invest_mio_days_project_days_math value = invest_mio_days_project_days }
+		multiply_variable = { invest_mio_days_project_days_math = 7 }
+		set_variable = { invest_mio_days_project_percent = 0 }
+
+		set_variable = { invest_mio_target_civ = 0 }
+		#set_variable = { invest_mio_target_mil = 0 }
+		set_variable = { invest_mio_target_dock = 0 }
+
+		set_variable = { total_campaign_factories = 0 }
+		set_variable = { total_campaign_civs = 0 }
+		#set_variable = { total_campaign_mils = 0 }
+		set_variable = { total_campaign_dockyards = 0 }
+		set_variable = { total_campaign_factory_progress = 0 }
+		set_variable = { average_campaign_factory_progress = 0 }
+		set_variable = { notification_list_maximum = 10 }
+		resize_array = { invest_mio_date_list = notification_list_maximum }
+		resize_array = { invest_mio_factory_list = notification_list_maximum }
+		resize_array = { invest_mio_state_list = notification_list_maximum }
+
+		opel_decide_current_project = yes
+	}
+	#setup private buildiers just civ
+	every_military_industrial_organization = {
+		limit = {
+			OR = {
+				is_military_industrial_organization = USA_browning_organization
+			}
+		}
+		set_variable = { weekly_funds_requirement = 9 }
+
+		set_variable = { invest_mio_civilian_factory_chance = 100 }
+		#set_variable = { invest_mio_military_factory_chance = 50 }
+		#set_variable = { invest_mio_dockyard_chance = 50 }
+
+		set_variable = { invest_mio_days_project_days = 275 }
+		set_variable = { invest_mio_days_project_days_math = 100 }
+		divide_variable = { var = invest_mio_days_project_days_math value = invest_mio_days_project_days }
+		multiply_variable = { invest_mio_days_project_days_math = 7 }
+		set_variable = { invest_mio_days_project_percent = 0 }
+
+		set_variable = { invest_mio_target_civ = 0 }
+		#set_variable = { invest_mio_target_mil = 0 }
+		set_variable = { invest_mio_target_dock = 0 }
+
+		set_variable = { total_campaign_factories = 0 }
+		set_variable = { total_campaign_civs = 0 }
+		#set_variable = { total_campaign_mils = 0 }
+		set_variable = { total_campaign_dockyards = 0 }
+		set_variable = { total_campaign_factory_progress = 0 }
+		set_variable = { average_campaign_factory_progress = 0 }
+		set_variable = { notification_list_maximum = 10 }
+		resize_array = { invest_mio_date_list = notification_list_maximum }
+		resize_array = { invest_mio_factory_list = notification_list_maximum }
+		resize_array = { invest_mio_state_list = notification_list_maximum }
+
+		opel_decide_current_project = yes
+	}
 }

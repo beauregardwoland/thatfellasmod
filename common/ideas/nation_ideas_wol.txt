@@ -410,6 +410,10 @@ ideas = {
 					build_cost_ic = -0.075
 					instant = yes
 				}
+				motorized_rocket_equipment = {
+					build_cost_ic = -0.075
+					instant = yes
+				}
 			}
 		}
 		MON_milchoice_2 = {
@@ -450,6 +454,10 @@ ideas = {
 					instant = yes
 				}
 				mechanized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				armored_car_equipment = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
@@ -661,6 +669,10 @@ ideas = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
+				armored_car_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
 			}
 		}
 		MON_cav_choice12 = {
@@ -695,11 +707,19 @@ ideas = {
 					maximum_speed = 0.15
 					instant = yes
 				}
+				motorized_rocket_equipment = {
+					maximum_speed = 0.15
+					instant = yes
+				}
 				motorized_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
 				mechanized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				armored_car_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -730,6 +750,10 @@ ideas = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
+				armored_car_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
 			}
 		}
 		MON_cav_choice22 = {
@@ -753,6 +777,10 @@ ideas = {
 					instant = yes
 				}
 				mechanized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				armored_car_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -783,6 +811,10 @@ ideas = {
 					build_cost_ic = -0.025
 					instant = yes
 				}
+				armored_car_equipment = {
+					build_cost_ic = -0.025
+					instant = yes
+				}
 			}
 		}
 		MON_cav_choice32 = {
@@ -806,6 +838,10 @@ ideas = {
 					instant = yes
 				}
 				mechanized_equipment = {
+					build_cost_ic = -0.025
+					instant = yes
+				}
+				armored_car_equipment = {
 					build_cost_ic = -0.025
 					instant = yes
 				}
@@ -836,6 +872,10 @@ ideas = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
+				armored_car_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
 			}
 		}
 		MON_cav_choice42 = {
@@ -859,6 +899,10 @@ ideas = {
 					instant = yes
 				}
 				mechanized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				armored_car_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -942,6 +986,10 @@ ideas = {
 					instant = yes
 					build_cost_ic = -0.1
 				}
+				armored_car_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
 			}
 		}
 		MON_armor_choice22 = {
@@ -966,6 +1014,10 @@ ideas = {
 				mechanized_equipment = {
 					instant = yes
 					build_cost_ic = -0.15
+				}
+				armored_car_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
 				}
 			}
 		}

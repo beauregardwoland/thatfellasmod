@@ -45,6 +45,10 @@ ideas = {
 					max_strength = 2
 					maximum_speed = -0.2
 				}
+				armored_car_equipment = {
+					max_strength = 2
+					maximum_speed = -0.2
+				}
 			}
 		}
 		CAN_allied_conversions = {

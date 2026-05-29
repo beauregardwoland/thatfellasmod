@@ -226,6 +226,10 @@ ITA_crda_organization_2 = {
 			mio_cat_eq_all_carrier
 		}
 
+		available = {
+			always = yes
+		}
+
 		equipment_bonus = {
 			naval_speed = 0.05
 		}
@@ -257,6 +261,8 @@ ITA_crda_organization_2 = {
 			production_capacity_factor = 0.1
 		}
 	}
+
+
 
 	
  }
