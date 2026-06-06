@@ -293,7 +293,7 @@ USA_chrysler_organization = {
 	}
 
 	on_tech_research_completed = {
-		from = {
+		USA = {
 			mio:USA_detroit_arsenal_organization = {
 				add_mio_funds = 1000
 			}
@@ -543,7 +543,7 @@ USA_detroit_arsenal_organization = {
 	}
 
 	on_tech_research_completed = {
-		from = {
+		USA = {
 			mio:USA_chrysler_organization = {
 				add_mio_funds = 1000
 			}
