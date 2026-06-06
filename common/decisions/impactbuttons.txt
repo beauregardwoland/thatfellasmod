@@ -1605,7 +1605,7 @@ Impact_buttons_1 = {
 	USA_retake_phillipines = {
 		icon = GFX_decision_hol_draw_up_staff_plans
 		allowed = {
-			tag = JAP
+			tag = USA
 		}
 		available = {
 			custom_trigger_tooltip = {

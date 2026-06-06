@@ -49,6 +49,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 		}
+		special_project_specialization = { specialization_land }
 	}
 
 	infantry_weapons1 = {
@@ -102,6 +103,7 @@ technologies = {
 				original_tag = PRC
 			}
 		}
+		special_project_specialization = { specialization_land }
 	}
 
 	infantry_weapons2 = {
@@ -168,6 +170,7 @@ technologies = {
 				tag = PRC
 			}
 		}
+		special_project_specialization = { specialization_land }
 	}
 
 	improved_infantry_weapons = {
@@ -224,6 +227,7 @@ technologies = {
 			#	}
 			#}
 		}
+		special_project_specialization = { specialization_land }
 	}
 	improved_infantry_weapons_2 = {
 
@@ -273,6 +277,7 @@ technologies = {
 				date > "1942.1.1"
 			}
 		}
+		special_project_specialization = { specialization_land }
 	}
 
 	infantry_at = {
@@ -321,6 +326,7 @@ technologies = {
 				date > "1944.1.1"
 			}
 		}
+		special_project_specialization = { specialization_land }
 	}
 
 	infantry_at2 = {
@@ -364,6 +370,7 @@ technologies = {
 				date > "1945.1.1"
 			}
 		}
+		special_project_specialization = { specialization_land }
 	}
 
 	advanced_infantry_weapons = {
@@ -417,6 +424,7 @@ technologies = {
 				factor = 0.5
 			}
 		}
+		special_project_specialization = { specialization_land }
 	}
 
 	advanced_infantry_weapons2 = {
@@ -460,6 +468,7 @@ technologies = {
 				date > "1946.1.1"
 			}
 		}
+		special_project_specialization = { specialization_land }
 	}
 
 	paratroopers = {
@@ -1500,6 +1509,7 @@ technologies = {
 				date > "1946.1.1"
 			}
 		}
+		special_project_specialization = { specialization_land }
 	}
 
 	night_vision2 = {
@@ -1535,6 +1545,7 @@ technologies = {
 				date > "1946.1.6"
 			}
 		}
+		special_project_specialization = { specialization_land }
 	}
 
 	support_weapons = {
@@ -1617,6 +1628,7 @@ technologies = {
 				factor = 2
 			}
 		}
+		special_project_specialization = { specialization_land }
 	}
 
 	support_weapons2 = {
@@ -1694,6 +1706,7 @@ technologies = {
 				factor = 2
 			}
 		}
+		special_project_specialization = { specialization_land }
 	}
 
 	support_weapons3 = {
@@ -1758,6 +1771,7 @@ technologies = {
 				factor = 2
 			}
 		}
+		special_project_specialization = { specialization_land }
 	}
 
 	support_weapons4 = {
@@ -1817,6 +1831,7 @@ technologies = {
 				factor = 2
 			}
 		}
+		special_project_specialization = { specialization_land }
 	}
 
 	tech_trucks = {

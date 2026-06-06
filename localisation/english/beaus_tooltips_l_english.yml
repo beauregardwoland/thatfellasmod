@@ -49,6 +49,10 @@
 
  woland_warplan_orange: "Warplan Orange"
 
+ decision_cost_CP_10_pp_10: "£command_power §Y10§! £pol_power §Y10§!"
+ decision_cost_CP_10_pp_10_blocked: "£command_power §R10§! £pol_power §R10§!"
+ decision_cost_CP_10_pp_10_tooltip: "It costs £command_power  §Y10§! £pol_power  §Y10§! to take the decision"
+
 
 
  ITA_politics_hist: "Politics: Historical"

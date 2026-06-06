@@ -2802,12 +2802,12 @@ JAP_sumitomo_nav_designer = {
 	allowed = { original_tag = JAP }
 
 	equipment_type = {
-		mio_cat_eq_all_destroyer
+		screen_ship
 		convoy_1
 		ship_hull_submarine
 	}
 
-	research_categories = {	mio_cat_tech_all_carrier_and_modules mio_cat_tech_all_capital_ship_and_modules mio_cat_tech_all_cruiser_and_modules }
+	research_categories = {	mio_cat_tech_all_screen_ship_and_modules mio_cat_tech_all_cruiser_and_modules mio_cat_tech_all_submarine_and_modules }
 	on_tech_research_completed = {
 		if = {
 			limit = { FROM = { has_idea = sumitomo_ic } }

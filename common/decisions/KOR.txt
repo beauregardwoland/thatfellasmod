@@ -57,11 +57,11 @@ foreign_politics = {
 	    	command_power > 9
 	    	has_political_power > 9
 	    }
-	    custom_cost_text = decision_cost_CP_25_pp_25	
+	    custom_cost_text = decision_cost_CP_10_pp_10	
 
 		fire_only_once = yes
 
-		days_remove = 70
+		days_remove = 60
 
 		ai_will_do = {
 			base = 100
@@ -99,8 +99,8 @@ foreign_politics = {
 				remove_dynamic_modifier = {
 					modifier = KOR_resistance_against_colonial_rule_dm
 				}	
-				add_compliance = 20
-				add_resistance = -10
+				add_compliance = 25
+				add_resistance = -20
 			}
 		}
 
