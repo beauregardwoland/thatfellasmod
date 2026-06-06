@@ -72,7 +72,7 @@ country_event = {
 
 country_event = {
 	id = allied.4
-	title = "Fall of The Pacific Islands"
+	title = "Loss of the Straits of Signapore"
 	desc = "We must divert Japans attention"
 	picture = GFX_report_event_chinese_soldiers_fighting
 	

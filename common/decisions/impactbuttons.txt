@@ -230,27 +230,21 @@ Impact_buttons_1 = {
 
 		available = {
 			or = {
-				controls_state = 439
+				controls_state = 995
 				any_allied_country = {
-					controls_state = 439
+					controls_state = 995
 				}
 			}
 			or = {
-				controls_state = 428
+				controls_state = 998
 				any_allied_country = {
-					controls_state = 428
+					controls_state = 998
 				}
 			}
 			or = {
-				controls_state = 423
+				controls_state = 990
 				any_allied_country = {
-					controls_state = 423
-				}
-			}
-			or = {
-				controls_state = 427
-				any_allied_country = {
-					controls_state = 427
+					controls_state = 990
 				}
 			}
 			or = {
@@ -282,9 +276,80 @@ Impact_buttons_1 = {
 				country_event = allied.3
 			}
 			activate_mission = JAP_Victory_on_the_Continent1
-			add_ideas = woland_jap_vs_sov
+			#add_ideas = woland_jap_vs_sov
 		}
 		timeout_effect = { activate_mission = JAP_Victory_on_the_Continent }
+	}
+	JAP_take_india = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			or = {
+				controls_state = 439
+				any_allied_country = {
+					controls_state = 439
+				}
+			}
+			or = {
+				controls_state = 440
+				any_allied_country = {
+					controls_state = 440
+				}
+			}
+			or = {
+				controls_state = 427
+				any_allied_country = {
+					controls_state = 427
+				}
+			}
+			or = {
+				controls_state = 429
+				any_allied_country = {
+					controls_state = 429
+				}
+			}
+			or = {
+				controls_state = 428
+				any_allied_country = {
+					controls_state = 428
+				}
+			}
+			or = {
+				controls_state = 443
+				any_allied_country = {
+					controls_state = 443
+				}
+			}
+			or = {
+				controls_state = 422
+				any_allied_country = {
+					controls_state = 422
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			every_enemy_country = {
+				state_of_pacific_up = yes
+				country_event = allied.18
+			}
+			activate_mission = JAP_take_india1
+			add_ideas = woland_jap_vs_sov
+		}
+		timeout_effect = { activate_mission = JAP_take_india }
 	}
 	JAP_phillipines_conquest = {
 		allowed = {
@@ -353,6 +418,7 @@ Impact_buttons_1 = {
 				country_event = allied.16
 			}
 			activate_mission = JAP_phillipines_conquest1
+			USA_remove_islands_buff = yes
 		}
 		timeout_effect = { activate_mission = JAP_phillipines_conquest }
 	}
@@ -366,15 +432,15 @@ Impact_buttons_1 = {
 
 		available = {
 			or = {
-				controls_state = 336
+				controls_state = 333
 				any_allied_country = {
-					controls_state = 336
+					controls_state = 333
 				}
 			}
 			or = {
-				controls_state = 672
+				controls_state = 334
 				any_allied_country = {
-					controls_state = 672
+					controls_state = 334
 				}
 			}
 			or = {
@@ -385,15 +451,15 @@ Impact_buttons_1 = {
 			}
 	
 			or = {
-				controls_state = 334
+				controls_state = 667
 				any_allied_country = {
-					controls_state = 334
+					controls_state = 667
 				}
 			}
 			or = {
-				controls_state = 333
+				controls_state = 669
 				any_allied_country = {
-					controls_state = 333
+					controls_state = 669
 				}
 			}
 			or = {
@@ -418,6 +484,7 @@ Impact_buttons_1 = {
 				state_of_pacific_up = yes
 				country_event = allied.5
 			}
+			AST = { country_event = wol_qol.109 } NZL = { country_event = wol_qol.109 }
 			activate_mission = JAP_Conquest_of_the_Spice_Islands1
 		}
 		timeout_effect = { activate_mission = JAP_Conquest_of_the_Spice_Islands }
@@ -433,62 +500,32 @@ Impact_buttons_1 = {
 
 		available = {
 			or = {
-				controls_state = 638
+				controls_state = 336
 				any_allied_country = {
-					controls_state = 638
+					controls_state = 336
 				}
 			}
 			or = {
-				controls_state = 632
+				controls_state = 1021
 				any_allied_country = {
-					controls_state = 632
+					controls_state = 1021
 				}
 			}
 			or = {
-				controls_state = 630
+				controls_state = 672
 				any_allied_country = {
-					controls_state = 630
+					controls_state = 672
 				}
 			}
 	
 			or = {
-				controls_state = 727
+				controls_state = 733
 				any_allied_country = {
-					controls_state = 727
-				}
-			}
-			or = {
-				controls_state = 631
-				any_allied_country = {
-					controls_state = 631
-				}
-			}
-			or = {
-				controls_state = 648
-				any_allied_country = {
-					controls_state = 648
+					controls_state = 733
 				}
 			}
 			
-	
-			or = {
-				controls_state = 646
-				any_allied_country = {
-					controls_state = 646
-				}
-			}
-			or = {
-				controls_state = 647
-				any_allied_country = {
-					controls_state = 647
-				}
-			}
-			or = {
-				controls_state = 645
-				any_allied_country = {
-					controls_state = 645
-				}
-			}
+			
 		}
 
 		is_good = no
@@ -506,7 +543,7 @@ Impact_buttons_1 = {
 				country_event = allied.4
 			}
 			activate_mission = JAP_Full_Control_of_the_Pacific1
-			add_ideas = woland_jap_vs_usa
+			#add_ideas = woland_jap_vs_usa
 		}
 		timeout_effect = { activate_mission = JAP_Full_Control_of_the_Pacific }
 	}
@@ -525,27 +562,21 @@ Impact_buttons_1 = {
 			NOT = {
 				AND = {
 					or = {
-						controls_state = 439
+						controls_state = 995
 						any_allied_country = {
-							controls_state = 439
+							controls_state = 995
 						}
 					}
 					or = {
-						controls_state = 428
+						controls_state = 998
 						any_allied_country = {
-							controls_state = 428
+							controls_state = 998
 						}
 					}
 					or = {
-						controls_state = 423
+						controls_state = 990
 						any_allied_country = {
-							controls_state = 423
-						}
-					}
-					or = {
-						controls_state = 427
-						any_allied_country = {
-							controls_state = 427
+							controls_state = 990
 						}
 					}
 					or = {
@@ -578,11 +609,88 @@ Impact_buttons_1 = {
 				state_of_pacific_down = yes
 				country_event = allied.9
 			}
-			remove_ideas = woland_jap_vs_sov
+			#remove_ideas = woland_jap_vs_sov
 			activate_mission = JAP_Victory_on_the_Continent
 		}
 		timeout_effect = { activate_mission = JAP_Victory_on_the_Continent1 }
 	}
+
+	JAP_take_india1 = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			NOT = {
+				AND = {
+					or = {
+						controls_state = 439
+						any_allied_country = {
+							controls_state = 439
+						}
+					}
+					or = {
+						controls_state = 440
+						any_allied_country = {
+							controls_state = 440
+						}
+					}
+					or = {
+						controls_state = 427
+						any_allied_country = {
+							controls_state = 427
+						}
+					}
+					or = {
+						controls_state = 429
+						any_allied_country = {
+							controls_state = 429
+						}
+					}
+					or = {
+						controls_state = 428
+						any_allied_country = {
+							controls_state = 428
+						}
+					}
+					or = {
+						controls_state = 443
+						any_allied_country = {
+							controls_state = 443
+						}
+					}
+					or = {
+						controls_state = 422
+						any_allied_country = {
+							controls_state = 422
+						}
+					}
+				}
+			}
+		}
+
+		is_good = yes
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			every_enemy_country = {
+				state_of_pacific_down = yes
+				country_event = allied.19
+			}
+			remove_ideas = woland_jap_vs_sov
+			activate_mission = JAP_take_india
+		}
+		timeout_effect = { activate_mission = JAP_take_india1 }
+	}
+
 	JAP_phillipines_conquest1 = {
 		allowed = {
 			original_tag = JAP
@@ -654,6 +762,7 @@ Impact_buttons_1 = {
 				country_event = allied.17
 			}
 			activate_mission = JAP_phillipines_conquest
+			USA_set_islands_buff = yes
 		}
 		timeout_effect = { activate_mission = JAP_phillipines_conquest1 }
 	}
@@ -669,15 +778,15 @@ Impact_buttons_1 = {
 			NOT = {
 				AND = {
 					or = {
-						controls_state = 336
+						controls_state = 333
 						any_allied_country = {
-							controls_state = 336
+							controls_state = 333
 						}
 					}
 					or = {
-						controls_state = 672
+						controls_state = 334
 						any_allied_country = {
-							controls_state = 672
+							controls_state = 334
 						}
 					}
 					or = {
@@ -688,15 +797,15 @@ Impact_buttons_1 = {
 					}
 			
 					or = {
-						controls_state = 334
+						controls_state = 667
 						any_allied_country = {
-							controls_state = 334
+							controls_state = 667
 						}
 					}
 					or = {
-						controls_state = 333
+						controls_state = 669
 						any_allied_country = {
-							controls_state = 333
+							controls_state = 669
 						}
 					}
 					or = {
@@ -724,7 +833,8 @@ Impact_buttons_1 = {
 				state_of_pacific_down = yes
 				country_event = allied.11
 			}
-			remove_ideas = woland_jap_vs_usa
+			#remove_ideas = woland_jap_vs_usa
+			AST = { country_event = wol_qol.110 } NZL = { country_event = wol_qol.110 }
 			activate_mission = JAP_Conquest_of_the_Spice_Islands
 		}
 		timeout_effect = { activate_mission = JAP_Conquest_of_the_Spice_Islands1 }
@@ -742,60 +852,34 @@ Impact_buttons_1 = {
 			NOT = {
 				AND = {
 					or = {
-						controls_state = 638
+						controls_state = 336
 						any_allied_country = {
-							controls_state = 638
+							controls_state = 336
 						}
 					}
 					or = {
-						controls_state = 632
+						controls_state = 1021
 						any_allied_country = {
-							controls_state = 632
+							controls_state = 1021
 						}
 					}
 					or = {
-						controls_state = 630
+						controls_state = 672
 						any_allied_country = {
-							controls_state = 630
+							controls_state = 672
 						}
 					}
 			
 					or = {
-						controls_state = 727
+						controls_state = 733
 						any_allied_country = {
-							controls_state = 727
+							controls_state = 733
 						}
 					}
 					or = {
 						controls_state = 631
 						any_allied_country = {
 							controls_state = 631
-						}
-					}
-					or = {
-						controls_state = 648
-						any_allied_country = {
-							controls_state = 648
-						}
-					}
-					
-			
-					or = {
-						controls_state = 646
-						any_allied_country = {
-							controls_state = 646
-						}
-					}
-					or = {
-						controls_state = 647
-						any_allied_country = {
-							controls_state = 647
-						}
-					}
-					or = {
-						controls_state = 645
-						any_allied_country = {
-							controls_state = 645
 						}
 					}
 				}
@@ -816,7 +900,7 @@ Impact_buttons_1 = {
 				state_of_pacific_down = yes
 				country_event = allied.10
 			}
-			remove_ideas = woland_jap_vs_usa
+			#remove_ideas = woland_jap_vs_usa
 			activate_mission = JAP_Full_Control_of_the_Pacific
 		}
 		timeout_effect = { activate_mission = JAP_Full_Control_of_the_Pacific1 }
@@ -831,27 +915,21 @@ Impact_buttons_1 = {
 
 		available = {
 			or = {
-				controls_state = 439
+				controls_state = 995
 				any_allied_country = {
-					controls_state = 439
+					controls_state = 995
 				}
 			}
 			or = {
-				controls_state = 428
+				controls_state = 998
 				any_allied_country = {
-					controls_state = 428
+					controls_state = 998
 				}
 			}
 			or = {
-				controls_state = 423
+				controls_state = 990
 				any_allied_country = {
-					controls_state = 423
-				}
-			}
-			or = {
-				controls_state = 427
-				any_allied_country = {
-					controls_state = 427
+					controls_state = 990
 				}
 			}
 			or = {
@@ -882,13 +960,88 @@ Impact_buttons_1 = {
 				every_allied_country = {
 					state_of_pacific_down = yes
 				}
-				JAP = {
-					remove_ideas = woland_jap_vs_sov
-				}
+				#JAP = {
+				#	remove_ideas = woland_jap_vs_sov
+				#}
 			}
 		}
 		timeout_effect = { activate_mission = JAP_Victory_on_the_Continent_allied }
 	}
+
+	JAP_take_india_allied = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			or = {
+				controls_state = 439
+				any_allied_country = {
+					controls_state = 439
+				}
+			}
+			or = {
+				controls_state = 440
+				any_allied_country = {
+					controls_state = 440
+				}
+			}
+			or = {
+				controls_state = 427
+				any_allied_country = {
+					controls_state = 427
+				}
+			}
+			or = {
+				controls_state = 429
+				any_allied_country = {
+					controls_state = 429
+				}
+			}
+			or = {
+				controls_state = 428
+				any_allied_country = {
+					controls_state = 428
+				}
+			}
+			or = {
+				controls_state = 443
+				any_allied_country = {
+					controls_state = 443
+				}
+			}
+			or = {
+				controls_state = 422
+				any_allied_country = {
+					controls_state = 422
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			effect_tooltip = {
+				every_allied_country = {
+					state_of_pacific_down = yes
+				}
+				#JAP = {
+				#	remove_ideas = woland_jap_vs_sov
+				#}
+			}
+		}
+		timeout_effect = { activate_mission = JAP_take_india_allied }
+	}
+
 	JAP_phillipines_conquest_allied = {
 		allowed = {
 			always = yes
@@ -969,15 +1122,15 @@ Impact_buttons_1 = {
 
 		available = {
 			or = {
-				controls_state = 336
+				controls_state = 333
 				any_allied_country = {
-					controls_state = 336
+					controls_state = 333
 				}
 			}
 			or = {
-				controls_state = 672
+				controls_state = 334
 				any_allied_country = {
-					controls_state = 672
+					controls_state = 334
 				}
 			}
 			or = {
@@ -988,15 +1141,15 @@ Impact_buttons_1 = {
 			}
 	
 			or = {
-				controls_state = 334
+				controls_state = 667
 				any_allied_country = {
-					controls_state = 334
+					controls_state = 667
 				}
 			}
 			or = {
-				controls_state = 333
+				controls_state = 669
 				any_allied_country = {
-					controls_state = 333
+					controls_state = 669
 				}
 			}
 			or = {
@@ -1037,60 +1190,34 @@ Impact_buttons_1 = {
 
 		available = {
 			or = {
-				controls_state = 638
+				controls_state = 336
+					any_allied_country = {
+						controls_state = 336
+					}
+				}
+			or = {
+				controls_state = 1021
 				any_allied_country = {
-					controls_state = 638
+					controls_state = 1021
 				}
 			}
 			or = {
-				controls_state = 632
+				controls_state = 672
 				any_allied_country = {
-					controls_state = 632
+					controls_state = 672
 				}
 			}
+				
 			or = {
-				controls_state = 630
+				controls_state = 733
 				any_allied_country = {
-					controls_state = 630
-				}
-			}
-	
-			or = {
-				controls_state = 727
-				any_allied_country = {
-					controls_state = 727
+					controls_state = 733
 				}
 			}
 			or = {
 				controls_state = 631
 				any_allied_country = {
 					controls_state = 631
-				}
-			}
-			or = {
-				controls_state = 648
-				any_allied_country = {
-					controls_state = 648
-				}
-			}
-			
-	
-			or = {
-				controls_state = 646
-				any_allied_country = {
-					controls_state = 646
-				}
-			}
-			or = {
-				controls_state = 647
-				any_allied_country = {
-					controls_state = 647
-				}
-			}
-			or = {
-				controls_state = 645
-				any_allied_country = {
-					controls_state = 645
 				}
 			}
 		}
@@ -1109,9 +1236,9 @@ Impact_buttons_1 = {
 				every_allied_country = {
 					state_of_pacific_down = yes
 				}
-				JAP = {
-					remove_ideas = woland_jap_vs_sov
-				}
+				#JAP = {
+				#	remove_ideas = woland_jap_vs_usa
+				#}
 			}
 		}
 		timeout_effect = { activate_mission = JAP_Full_Control_of_the_Pacific_allied }
@@ -1145,11 +1272,12 @@ Impact_buttons_1 = {
 						JAP_set_state_debuff = yes
 					}
 				}
-				432 = { JAP_set_state_debuff = yes }
-				434 = { JAP_set_state_debuff = yes }
-				431 = { JAP_set_state_debuff = yes }
-				430 = { JAP_set_state_debuff = yes }
+				995 = { JAP_set_state_debuff = yes }
+				998 = { JAP_set_state_debuff = yes }
 				990 = { JAP_set_state_debuff = yes }
+				430 = { JAP_set_state_debuff = yes }
+				431 = { JAP_set_state_debuff = yes }
+				432 = { JAP_set_state_debuff = yes }
 				activate_mission = JAP_operation_cooldown
 			}
 			else = {
@@ -1162,11 +1290,12 @@ Impact_buttons_1 = {
 							JAP_set_state_debuff = yes
 						}
 					}
-					432 = { JAP_set_state_debuff = yes }
-					434 = { JAP_set_state_debuff = yes }
-					431 = { JAP_set_state_debuff = yes }
-					430 = { JAP_set_state_debuff = yes }
+					995 = { JAP_set_state_debuff = yes }
+					998 = { JAP_set_state_debuff = yes }
 					990 = { JAP_set_state_debuff = yes }
+					430 = { JAP_set_state_debuff = yes }
+					431 = { JAP_set_state_debuff = yes }
+					432 = { JAP_set_state_debuff = yes }
 				}
 				#activate_mission = JAP_operation_cooldown
 			}
@@ -1194,7 +1323,7 @@ Impact_buttons_1 = {
 		cost = 0
 		fire_only_once = no
 
-		highlight_states = { highlight_states_trigger  = { or = { is_core_of = INS is_core_of = MAL is_core_of = PNG } } }
+		highlight_states = { highlight_states_trigger  = { NOT = { state = 336 } NOT = { state = 672 } or = { is_core_of = INS is_core_of = PNG } } }
 
 		visible = {
 			has_completed_focus = JAP_nanshin_ron
@@ -1202,13 +1331,10 @@ Impact_buttons_1 = {
 		complete_effect = {
 			if = {
 				limit = { or = { has_completed_focus = JAP_strike_the_southern_road } }
-				MAL = { 
-					every_core_state = {
-						JAP_set_state_debuff = yes
-					}
-				}
+				
 				INS = { 
 					every_core_state = {
+						limit = { NOT = { state = 336 } NOT = { state = 672 } }
 						JAP_set_state_debuff = yes
 					}
 				}
@@ -1217,20 +1343,16 @@ Impact_buttons_1 = {
 						JAP_set_state_debuff = yes
 					}
 				}	
-				activate_mission = JAP_operation_cooldown			
+				activate_mission = JAP_operation_cooldown
 			}
 			else = {
 				set_country_flag = JAP_ind_campaign
 				custom_effect_tooltip = JAP_set_camp_tt
 				custom_effect_tooltip = generic_skip_one_line_tt
 				effect_tooltip = {
-					MAL = { 
-						every_core_state = {
-							JAP_set_state_debuff = yes
-						}
-					}
 					INS = { 
 						every_core_state = {
+							limit = { NOT = { state = 336 } NOT = { state = 672 } }
 							JAP_set_state_debuff = yes
 						}
 					}
@@ -1318,7 +1440,7 @@ Impact_buttons_1 = {
 		cost = 0
 		fire_only_once = no
 
-		highlight_states = { highlight_states_trigger  = { or = { is_core_of = HAW is_core_of = FSM is_core_of = GUM  } } }
+		highlight_states = { highlight_states_trigger  = { or = { is_core_of = MAL state = 672 state = 733 } } }
 
 		visible = {
 			has_completed_focus = JAP_nanshin_ron
@@ -1326,21 +1448,15 @@ Impact_buttons_1 = {
 		complete_effect = {
 			if = {
 				limit = { or = { has_completed_focus = JAP_strike_the_southern_road } }
-				HAW = { 
+				MAL = { 
 					every_core_state = {
 						JAP_set_state_debuff = yes
-					} 
+					}
 				}
-				FSM = {
-					every_core_state = {
-						JAP_set_state_debuff = yes
-					} 
-				}
-				GUM = {
-					every_core_state = {
-						JAP_set_state_debuff = yes
-					} 
-				}
+				672 = { JAP_set_state_debuff = yes }
+				733 = { JAP_set_state_debuff = yes }
+				
+
 				activate_mission = JAP_operation_cooldown
 			}
 			else = {
@@ -1348,21 +1464,14 @@ Impact_buttons_1 = {
 				custom_effect_tooltip = JAP_set_camp_tt
 				custom_effect_tooltip = generic_skip_one_line_tt
 				effect_tooltip = {
-					HAW = { 
+					MAL = { 
 						every_core_state = {
 							JAP_set_state_debuff = yes
-						} 
+						}
 					}
-					FSM = {
-						every_core_state = {
-							JAP_set_state_debuff = yes
-						} 
-					}
-					GUM = {
-						every_core_state = {
-							JAP_set_state_debuff = yes
-						} 
-					}
+					672 = { JAP_set_state_debuff = yes }
+					733 = { JAP_set_state_debuff = yes }
+				
 				}
 				#activate_mission = JAP_operation_cooldown
 			}
@@ -1398,7 +1507,7 @@ Impact_buttons_1 = {
 		complete_effect = {
 				
 		}
-		timeout_effect = { custom_effect_tooltip = JAP_operation_cooldown_tt clr_country_flag = JAP_set_campaign  }
+		timeout_effect = { custom_effect_tooltip = JAP_operation_cooldown_tt clr_country_flag = JAP_set_campaign }
 	}
 	MAN_tank_line  = {
 
@@ -1492,5 +1601,1329 @@ Impact_buttons_1 = {
 			max_planning_factor = 0.05
 		}
 	}
+
+	USA_retake_phillipines = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		allowed = {
+			tag = JAP
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = JAP_set_campaign_tt
+				NOT = { has_country_flag = JAP_set_campaign }
+			}
+		}
+		cost = 0
+		fire_only_once = no
+
+		days_re_enable = 270
+
+		highlight_states = { highlight_states_trigger  = { is_core_of = PHI }
+
+		visible = {
+			has_active_mission = JAP_phillipines_conquest_allied
+		}
+		complete_effect = {
+			PHI = { 
+				every_core_state = {
+					add_dynamic_modifier = { modifier = USA_phi_return scope = USA days = 60 }
+				}
+			}
+			
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}	
+
+	disable_pacific_war_event  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {  
+			original_tag = MAN
+		}
+
+		visible = { 
+			has_country_flag = island_hopping_window_flag
+			NOT = { has_country_flag = island_hopping_window_flag }
+			is_ai = no
+		}
+
+		available = {
+			always = yes
+		} 
+
+		#days_remove = 60
+
+		#fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			set_country_flag = disabled_island_hop_notif
+		}
+	}
+
+
+	JAP_take_IJ = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			JAP = {
+				or = {
+					controls_state = 645
+					any_allied_country = {
+						controls_state = 645
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			JAP = { JAP_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				645 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = USA_take_IJ
+		}
+		timeout_effect = { activate_mission = JAP_take_IJ }
+	}
+
+	JAP_take_tai = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			JAP = {
+				or = {
+					controls_state = 524
+					any_allied_country = {
+						controls_state = 524
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			JAP = { JAP_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				524 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = USA_take_tai
+		}
+		timeout_effect = { activate_mission = JAP_take_tai }
+	}
+
+	JAP_take_oki = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			JAP = {
+				or = {
+					controls_state = 526
+					any_allied_country = {
+						controls_state = 526
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			JAP = { JAP_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				526 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = USA_take_oki
+		}
+		timeout_effect = { activate_mission = JAP_take_oki }
+	}
+
+	JAP_take_minam = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			JAP = {
+				or = {
+					controls_state = 648
+					any_allied_country = {
+						controls_state = 648
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			JAP = { JAP_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				648 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = USA_take_minam
+		}
+		timeout_effect = { activate_mission = JAP_take_minam }
+	}
+
+	JAP_take_sai = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			JAP = {
+				or = {
+					controls_state = 646
+					any_allied_country = {
+						controls_state = 646
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			JAP = { JAP_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				646 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = USA_take_sai
+		}
+		timeout_effect = { activate_mission = JAP_take_sai }
+	}
+
+	JAP_take_guam = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			JAP = {
+				or = {
+					controls_state = 638
+					any_allied_country = {
+						controls_state = 638
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			JAP = { JAP_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				638 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = USA_take_guam
+		}
+		timeout_effect = { activate_mission = JAP_take_guam }
+	}
+
+	JAP_take_palau = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			JAP = {
+				or = {
+					controls_state = 647
+					any_allied_country = {
+						controls_state = 647
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			JAP = { JAP_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				647 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = USA_take_palau
+		}
+		timeout_effect = { activate_mission = JAP_take_palau }
+	}
+
+	JAP_take_car = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			JAP = {
+				or = {
+					controls_state = 684
+					any_allied_country = {
+						controls_state = 684
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			JAP = { JAP_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				684 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = USA_take_car
+		}
+		timeout_effect = { activate_mission = JAP_take_car }
+	}
+
+	JAP_take_mar = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			JAP = {
+				or = {
+					controls_state = 633
+					any_allied_country = {
+						controls_state = 633
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			JAP = { JAP_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				633 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = USA_take_mar
+		}
+		timeout_effect = { activate_mission = JAP_take_mar }
+	}
+
+	JAP_take_wak = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			JAP = {
+				or = {
+					controls_state = 632
+					any_allied_country = {
+						controls_state = 632
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			JAP = { JAP_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				632 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = USA_take_wak
+		}
+		timeout_effect = { activate_mission = JAP_take_wak }
+	}
+
+	JAP_take_mid = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			JAP = {
+				or = {
+					controls_state = 631
+					any_allied_country = {
+						controls_state = 631
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			JAP = { JAP_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				631 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = USA_take_mid
+		}
+		timeout_effect = { activate_mission = JAP_take_mid }
+	}
+
+	JAP_take_john = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			JAP = {
+				or = {
+					controls_state = 630
+					any_allied_country = {
+						controls_state = 630
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			JAP = { JAP_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				630 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = USA_take_john
+		}
+		timeout_effect = { activate_mission = JAP_take_john }
+	}
+
+	JAP_take_phoe = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			JAP = {
+				or = {
+					controls_state = 642
+					any_allied_country = {
+						controls_state = 642
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			JAP = { JAP_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				642 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = USA_take_phoe
+		}
+		timeout_effect = { activate_mission = JAP_take_phoe }
+	}
+
+	JAP_take_line = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			JAP = {
+				or = {
+					controls_state = 727
+					any_allied_country = {
+						controls_state = 727
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			JAP = { JAP_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				727 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = USA_take_line
+		}
+		timeout_effect = { activate_mission = JAP_take_line }
+	}
+
+	JAP_take_hawai = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			JAP = {
+				or = {
+					controls_state = 629
+					any_allied_country = {
+						controls_state = 629
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			JAP = { JAP_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				629 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = USA_take_hawai
+		}
+		timeout_effect = { activate_mission = JAP_take_hawai }
+	}
+
+	JAP_take_attu = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			JAP = {
+				or = {
+					controls_state = 650
+					any_allied_country = {
+						controls_state = 650
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			JAP = { JAP_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				650 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = USA_take_attu
+		}
+		timeout_effect = { activate_mission = JAP_take_attu }
+	}
+
+	USA_take_IJ = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			USA = {
+				or = {
+					controls_state = 645
+					any_allied_country = {
+						controls_state = 645
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			USA = { USA_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				645 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			
+			activate_mission = JAP_take_IJ
+		}
+		timeout_effect = { activate_mission = USA_take_IJ }
+	}
+
+	USA_take_tai = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			USA = {
+				or = {
+					controls_state = 524
+					any_allied_country = {
+						controls_state = 524
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			USA = { USA_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				524 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = JAP_take_tai
+		}
+		timeout_effect = { activate_mission = USA_take_tai }
+	}
+
+	USA_take_oki = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			USA = {
+				or = {
+					controls_state = 526
+					any_allied_country = {
+						controls_state = 526
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			USA = { USA_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				526 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = JAP_take_oki
+		}
+		timeout_effect = { activate_mission = USA_take_oki }
+	}
+
+	USA_take_minam = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			USA = {
+				or = {
+					controls_state = 648
+					any_allied_country = {
+						controls_state = 648
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			USA = { USA_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				648 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = JAP_take_minam
+		}
+		timeout_effect = { activate_mission = USA_take_minam }
+	}
+
+	USA_take_sai = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			USA = {
+				or = {
+					controls_state = 646
+					any_allied_country = {
+						controls_state = 646
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			USA = { USA_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				646 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = JAP_take_sai
+		}
+		timeout_effect = { activate_mission = USA_take_sai }
+	}
+
+	USA_take_guam = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			USA = {
+				or = {
+					controls_state = 638
+					any_allied_country = {
+						controls_state = 638
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			USA = { USA_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				638 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = JAP_take_guam
+		}
+		timeout_effect = { activate_mission = USA_take_guam }
+	}
+
+	USA_take_palau = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			USA = {
+				or = {
+					controls_state = 647
+					any_allied_country = {
+						controls_state = 647
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			USA = { USA_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				647 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = JAP_take_palau
+		}
+		timeout_effect = { activate_mission = USA_take_palau }
+	}
+
+	USA_take_car = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			USA = {
+				or = {
+					controls_state = 684
+					any_allied_country = {
+						controls_state = 684
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			USA = { USA_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				684 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = JAP_take_car
+		}
+		timeout_effect = { activate_mission = USA_take_car }
+	}
+
+	USA_take_mar = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			USA = {
+				or = {
+					controls_state = 633
+					any_allied_country = {
+						controls_state = 633
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			USA = { USA_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				633 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = JAP_take_mar
+		}
+		timeout_effect = { activate_mission = USA_take_mar }
+	}
+
+	USA_take_wak = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			USA = {
+				or = {
+					controls_state = 632
+					any_allied_country = {
+						controls_state = 632
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			USA = { USA_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				632 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = JAP_take_wak
+		}
+		timeout_effect = { activate_mission = USA_take_wak }
+	}
+
+	USA_take_mid = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			USA = {
+				or = {
+					controls_state = 631
+					any_allied_country = {
+						controls_state = 631
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			USA = { USA_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				631 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = JAP_take_mid
+		}
+		timeout_effect = { activate_mission = USA_take_mid }
+	}
+
+	USA_take_john = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			USA = {
+				or = {
+					controls_state = 630
+					any_allied_country = {
+						controls_state = 630
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			USA = { USA_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				630 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = JAP_take_john
+		}
+		timeout_effect = { activate_mission = USA_take_john }
+	}
+
+	USA_take_phoe = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			USA = {
+				or = {
+					controls_state = 642
+					any_allied_country = {
+						controls_state = 642
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			USA = { USA_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				642 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = JAP_take_phoe
+		}
+		timeout_effect = { activate_mission = USA_take_phoe }
+	}
+
+	USA_take_line = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			USA = {
+				or = {
+					controls_state = 727
+					any_allied_country = {
+						controls_state = 727
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			USA = { USA_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				727 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = JAP_take_line
+		}
+		timeout_effect = { activate_mission = USA_take_line }
+	}
+
+	USA_take_hawai = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			USA = {
+				or = {
+					controls_state = 629
+					any_allied_country = {
+						controls_state = 629
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			USA = { USA_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				629 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = JAP_take_hawai 
+		}
+		timeout_effect = { activate_mission = USA_take_hawai }
+	}
+
+	USA_take_attu = {
+		allowed = {
+			always = yes
+		}
+
+		icon = decision_generic_naval
+
+		available = {
+			USA = {
+				or = {
+					controls_state = 650
+					any_allied_country = {
+						controls_state = 650
+					}
+				}
+			}
+		}
+
+		is_good = no
+	
+	
+		days_mission_timeout = 2500
+	
+		activation = {
+			always = no
+		}
+	
+		complete_effect = {
+			USA = { USA_take_island_hopping = yes }
+			every_country = {
+				limit = { or = { tag = USA tag = JAP is_in_faction_with = USA is_in_faction_with = JAP } NOT = { has_country_flag = disabled_island_hop_notif } }
+				650 = { save_event_target_as = won_iland_hop_state }
+				country_event = wol_qol.107
+			}
+			activate_mission = JAP_take_attu
+		}
+		timeout_effect = { activate_mission = USA_take_attu }
+	}
+	
 }
 

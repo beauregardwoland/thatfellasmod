@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_generic_box_island_hopping_fin"
+		texturefile = "gfx/interface/wol_scripted_guis/generic_box_island_hopping.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_box_asia_war_fin"
+		texturefile = "gfx/interface/wol_scripted_guis/generic_box_asia_war_fin.dds"
+	}
+
+
+}

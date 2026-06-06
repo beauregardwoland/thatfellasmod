@@ -1,6 +1,13 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			USA ={ USA_set_islands_buff = yes }
+			set_variable = {
+				global.jap_held_islands = 8
+			}
+			set_variable = {
+				global.ally_held_islands = 8
+			}
 			CAN = {  
 				country_event = wol_qol.15
 				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
@@ -12,7 +19,8 @@ on_actions = {
 				set_variable = { commonwealth_spotting_chance = 0.075 }
 				add_ideas = comwealth_convoy
 			}
-			AST = {  
+			AST = {
+				add_ideas = AST_slash_nzl_held_ind
 				country_event = wol_qol.15
 				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
@@ -31,11 +39,18 @@ on_actions = {
 				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
 				set_variable = { commonwealth_spotting_chance = 0.075 }
 			}
-			NZL = {  
+			NZL = { 
+				add_ideas = AST_slash_nzl_held_ind 
 				country_event = wol_qol.15
 				add_dynamic_modifier = { modifier = commonwealth_army_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_air_modifier }
 				add_dynamic_modifier = { modifier = commonwealth_naval_modifier }
+				set_variable = { commonwealth_conscription_factor = 0.2 }
+				set_variable = { commonwealth_weekly_manpower = 333 }
+				set_variable = { commonwealth_monthly_population = 0.025 } 
+				set_variable = { commonwealth_shore_bombardment_bonus = 0.075 } 
+				set_variable = { commonwealth_spotting_chance = 0.075 }
+				set_technology = { jungle_warfare = 1 }
 				set_variable = { commonwealth_shore_bombardment_bonus = 0.075 }
 				set_variable = { commonwealth_spotting_chance = 0.075 }
 				add_ideas = comwealth_convoy

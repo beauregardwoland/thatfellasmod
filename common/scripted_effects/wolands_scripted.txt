@@ -22,6 +22,241 @@ USA_great_depression_level_down_alf = {
 	}
 }
 
+USA_set_islands_buff = {
+	638 = { add_dynamic_modifier = { modifier = USA_isle_defence_buff scope = USA } }
+	632 = { add_dynamic_modifier = { modifier = USA_isle_defence_buff scope = USA } }
+	631 = { add_dynamic_modifier = { modifier = USA_isle_defence_buff scope = USA } }
+	630 = { add_dynamic_modifier = { modifier = USA_isle_defence_buff scope = USA } }
+	642 = { add_dynamic_modifier = { modifier = USA_isle_defence_buff scope = USA } }
+	727 = { add_dynamic_modifier = { modifier = USA_isle_defence_buff scope = USA } }
+	629 = { add_dynamic_modifier = { modifier = USA_isle_defence_buff scope = USA } }
+	650 = { add_dynamic_modifier = { modifier = USA_isle_defence_buff scope = USA } }
+	
+}
+
+USA_remove_islands_buff = {
+	638 = { remove_dynamic_modifier = { modifier = USA_isle_defence_buff } }
+	632 = { remove_dynamic_modifier = { modifier = USA_isle_defence_buff } }
+	631 = { remove_dynamic_modifier = { modifier = USA_isle_defence_buff } }
+	630 = { remove_dynamic_modifier = { modifier = USA_isle_defence_buff } }
+	642 = { remove_dynamic_modifier = { modifier = USA_isle_defence_buff } }
+	727 = { remove_dynamic_modifier = { modifier = USA_isle_defence_buff } }
+	629 = { remove_dynamic_modifier = { modifier = USA_isle_defence_buff } }
+	650 = { remove_dynamic_modifier = { modifier = USA_isle_defence_buff } }
+	
+}
+
+jap_industry_spirit_up = {
+	if = {
+		limit = { has_idea = JAP_quick_war_i }
+		swap_ideas = {
+			remove_idea = JAP_quick_war_i
+			add_idea = JAP_quick_war_ii
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_quick_war_ii }
+		swap_ideas = {
+			remove_idea = JAP_quick_war_ii
+			add_idea = JAP_quick_war_iii
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_quick_war_iii }
+		swap_ideas = {
+			remove_idea = JAP_quick_war_iii
+			add_idea = JAP_quick_war_iv
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_mid_war_i }
+		swap_ideas = {
+			remove_idea = JAP_mid_war_i
+			add_idea = JAP_mid_war_ii
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_mid_war_ii }
+		swap_ideas = {
+			remove_idea = JAP_mid_war_ii
+			add_idea = JAP_mid_war_iii
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_mid_war_iii }
+		swap_ideas = {
+			remove_idea = JAP_mid_war_iii
+			add_idea = JAP_mid_war_iv
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_long_war_i }
+		swap_ideas = {
+			remove_idea = JAP_long_war_i
+			add_idea = JAP_long_war_ii
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_long_war_ii }
+		swap_ideas = {
+			remove_idea = JAP_long_war_ii
+			add_idea = JAP_long_war_iii
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_long_war_iii }
+		swap_ideas = {
+			remove_idea = JAP_long_war_iii
+			add_idea = JAP_long_war_iv
+		}
+	}
+}
+
+jap_industry_spirit_down = {
+	if = {
+		limit = { has_idea = JAP_quick_war_iv }
+		swap_ideas = {
+			remove_idea = JAP_quick_war_iv
+			add_idea = JAP_quick_war_iii
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_quick_war_iii }
+		swap_ideas = {
+			remove_idea = JAP_quick_war_iii
+			add_idea = JAP_quick_war_ii
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_quick_war_ii }
+		swap_ideas = {
+			remove_idea = JAP_quick_war_ii
+			add_idea = JAP_quick_war_i
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_mid_war_iv }
+		swap_ideas = {
+			remove_idea = JAP_mid_war_iv
+			add_idea = JAP_mid_war_i
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_mid_war_iii }
+		swap_ideas = {
+			remove_idea = JAP_mid_war_iii
+			add_idea = JAP_mid_war_ii
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_mid_war_ii }
+		swap_ideas = {
+			remove_idea = JAP_mid_war_ii
+			add_idea = JAP_mid_war_i
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_long_war_iv }
+		swap_ideas = {
+			remove_idea = JAP_long_war_iv
+			add_idea = JAP_long_war_i
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_long_war_iii }
+		swap_ideas = {
+			remove_idea = JAP_long_war_iii
+			add_idea = JAP_long_war_ii
+		}
+	}
+	else_if = {
+		limit = { has_idea = JAP_long_war_ii }
+		swap_ideas = {
+			remove_idea = JAP_long_war_ii
+			add_idea = JAP_long_war_i
+		}
+	}
+}
+
+TIB_start_pacific_war = {
+	hidden_effect = {
+		TIB = {
+			activate_mission = JAP_take_attu
+			activate_mission = JAP_take_hawai
+			activate_mission = JAP_take_line
+			activate_mission = JAP_take_phoe
+			activate_mission = JAP_take_john
+			activate_mission = JAP_take_mid
+			activate_mission = JAP_take_wak
+			activate_mission = JAP_take_guam
+			activate_mission = USA_take_IJ
+			activate_mission = USA_take_tai
+			activate_mission = USA_take_oki
+			activate_mission = USA_take_minam
+			activate_mission = USA_take_sai
+			activate_mission = USA_take_palau
+			activate_mission = USA_take_car
+			activate_mission = USA_take_mar
+		}
+	}
+}
+
+JAP_take_island_hopping = {
+	JAP = { 
+		JAP_add_or_modify_state_shintoism = yes
+		add_to_variable = { JAP_state_shinotism_stability_factor = 0.02 tooltip = stability_factor_limit_tt }
+		add_to_variable = { JAP_state_shinotism_war_support_factor = 0.02 tooltip = war_support_factor_limit_tt }
+		add_to_variable = { JAP_state_shinotism_army_core_attack_factor = 0.02 tooltip = army_core_attack_factor_tt }
+		add_to_variable = { JAP_state_shinotism_army_core_defence_factor = 0.02 tooltip = army_core_defence_factor_tt }
+	}
+	add_to_variable = {
+		global.jap_held_islands = 1
+	}
+	add_to_variable = {
+		global.ally_held_islands = -1
+	}
+	add_to_variable = {
+		global.jap_current_prog_isles = 1
+	}
+	if = {
+		limit = { check_variable = { global.jap_current_prog_isles > 3.5 } }
+		jap_industry_spirit_up = yes
+		set_variable = {
+			global.jap_current_prog_isles = 0
+		}
+	}
+	
+}
+
+USA_take_island_hopping = {
+
+	JAP = { 
+		JAP_add_or_modify_state_shintoism = yes
+		add_to_variable = { JAP_state_shinotism_stability_factor = -0.02 tooltip = stability_factor_tt }
+		add_to_variable = { JAP_state_shinotism_war_support_factor = -0.015 tooltip = war_support_factor_limit_tt }
+		add_to_variable = { JAP_state_shinotism_army_core_attack_factor = -0.02 tooltip = army_core_attack_factor_tt }
+		add_to_variable = { JAP_state_shinotism_army_core_defence_factor = -0.02 tooltip = army_core_defence_factor_tt }
+	}
+	add_to_variable = {
+		global.jap_held_islands = -1
+	}
+	add_to_variable = {
+		global.ally_held_islands = 1
+	}
+	add_to_variable = {
+		global.jap_current_prog_isles = -1
+	}
+	
+	if = {
+		limit = { check_variable = { global.jap_current_prog_isles < -0.5 } }
+		jap_industry_spirit_down = yes
+		set_variable = {
+			global.jap_current_prog_isles = 3
+		}
+	}
+	
+}
+
 state_of_pacific_up = {
 	if = {
 		limit = { has_idea = ALI_losing_4 }
@@ -709,24 +944,21 @@ JAP_camp_deploy = {
 		BRM = { 
 			every_core_state = {
 				JAP_set_state_debuff = yes
-			} 
+			}
 		}
-		432 = { JAP_set_state_debuff = yes }
-		434 = { JAP_set_state_debuff = yes  }
-		431 = { JAP_set_state_debuff = yes  }
-		430 = { JAP_set_state_debuff = yes  }
+		995 = { JAP_set_state_debuff = yes }
+		998 = { JAP_set_state_debuff = yes }
 		990 = { JAP_set_state_debuff = yes }
+		430 = { JAP_set_state_debuff = yes }
+		431 = { JAP_set_state_debuff = yes }
+		432 = { JAP_set_state_debuff = yes }
 		activate_mission = JAP_operation_cooldown
 	}
 	if = {
 		limit = { has_country_flag = JAP_ind_campaign  }
-		MAL = { 
-			every_core_state = {
-				JAP_set_state_debuff = yes
-			}
-		}
 		INS = { 
 			every_core_state = {
+				limit = { NOT = { state = 336 } NOT = { state = 672 } }
 				JAP_set_state_debuff = yes
 			}
 		}
@@ -748,21 +980,13 @@ JAP_camp_deploy = {
 	}
 	if = {
 		limit = { has_country_flag = JAP_pol_campaign  }
-		HAW = { 
+		MAL = { 
 			every_core_state = {
 				JAP_set_state_debuff = yes
-			} 
+			}
 		}
-		FSM = { 
-			every_core_state = {
-				JAP_set_state_debuff = yes
-			} 
-		}
-		GUM = {
-			every_core_state = {
-				JAP_set_state_debuff = yes
-			} 
-		}
+		672 = { JAP_set_state_debuff = yes }
+		733 = { JAP_set_state_debuff = yes }
 		activate_mission = JAP_operation_cooldown
 	}
 }

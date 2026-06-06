@@ -6,10 +6,126 @@ scripted_gui = {
 		window_name = "impact_decisions_container"
 
 		triggers = {
+			asia_war_button_click_enabled = {
+				ROOT = { NOT = { has_country_flag = asia_war_window_flag  } is_ai = no }
+			}
+			island_hopping_button_click_enabled = {
+				ROOT = { NOT = { has_country_flag = island_hopping_window_flag } is_ai = no }
+			}
+
+			asia_war_qol_1_visible = { has_country_flag = island_hopping_window_flag }
+
+			asia_war_qol_2_visible = { has_country_flag = island_hopping_window_flag }
+
+			asia_war_qol_3_visible = { has_country_flag = island_hopping_window_flag }
+
+			asia_war_qol_4_visible = { has_country_flag = asia_war_window_flag }
+
+			iwo_jima_text_visible = { has_country_flag = island_hopping_window_flag }
+
+			taiwan_text_visible = { has_country_flag = island_hopping_window_flag }
+
+			okinawa_text_visible = { has_country_flag = island_hopping_window_flag }
+
+			minam_text_visible = { has_country_flag = island_hopping_window_flag }
+
+			saipan_text_visible = { has_country_flag = island_hopping_window_flag }
+
+			palau_text_visible = { has_country_flag = island_hopping_window_flag }
+
+			carolina_text_visible = { has_country_flag = island_hopping_window_flag }
+
+			marshal_text_visible = { has_country_flag = island_hopping_window_flag }
+
+			guam_text_visible = { has_country_flag = island_hopping_window_flag }
+
+			wake_text_visible = { has_country_flag = island_hopping_window_flag }
+
+			midway_text_visible = { has_country_flag = island_hopping_window_flag }
+
+			john_text_visible = { has_country_flag = island_hopping_window_flag }
+
+			phoe_text_visible = { has_country_flag = island_hopping_window_flag }
+
+			lineee_text_visible = { has_country_flag = island_hopping_window_flag }
+
+			haiwaiii_text_visible = { has_country_flag = island_hopping_window_flag }
+
+			attul_text_visible = { has_country_flag = island_hopping_window_flag }
 			
+			iwo_jima_button_visible = { has_country_flag = island_hopping_window_flag }
+
+			taiwan_button_visible = { has_country_flag = island_hopping_window_flag }
+
+			okinawa_button_visible = { has_country_flag = island_hopping_window_flag }
+
+			minam_button_visible = { has_country_flag = island_hopping_window_flag }
+
+			saipan_button_visible = { has_country_flag = island_hopping_window_flag }
+
+			palau_button_visible = { has_country_flag = island_hopping_window_flag }
+
+			carolina_button_visible = { has_country_flag = island_hopping_window_flag }
+
+			marshal_button_visible = { has_country_flag = island_hopping_window_flag }
+
+			guam_button_visible = { has_country_flag = island_hopping_window_flag }
+
+			wake_button_visible = { has_country_flag = island_hopping_window_flag }
+
+			midway_button_visible = { has_country_flag = island_hopping_window_flag }
+
+			john_button_visible = { has_country_flag = island_hopping_window_flag }
+
+			phoe_button_visible = { has_country_flag = island_hopping_window_flag }
+
+			lineee_button_visible = { has_country_flag = island_hopping_window_flag }
+
+			haiwaiii_button_visible = { has_country_flag = island_hopping_window_flag }
+
+			attul_button_visible = { has_country_flag = island_hopping_window_flag }
 		}
 		effects = {
-			
+			asia_war_button_click = {
+				ROOT = { set_country_flag = asia_war_window_flag clr_country_flag = island_hopping_window_flag }
+			}
+			island_hopping_button_click = {
+				ROOT = { set_country_flag = island_hopping_window_flag clr_country_flag = asia_war_window_flag }
+			}
+
+			iwo_jima_button_click = { goto_state = 645 }
+
+			taiwan_button_click = { goto_state = 524 }
+
+			okinawa_button_click = { goto_state = 526 }
+
+			minam_button_click = { goto_state = 648 }
+
+			saipan_button_click = { goto_state = 646 }
+
+			palau_button_click = { goto_state = 647 }
+
+			carolina_button_click = { goto_state = 684 }
+
+			marshal_button_click = { goto_state = 633 }
+
+			guam_button_click = { goto_state = 638 }
+
+			wake_button_click = { goto_state = 632 }
+
+			midway_button_click = { goto_state = 631 }
+
+			john_button_click = { goto_state = 630 }
+
+			phoe_button_click = { goto_state = 642 }
+
+			lineee_button_click = { goto_state = 727 }
+
+			haiwaiii_button_click = { goto_state = 629 }
+
+			attul_button_click = { goto_state = 650 }
+
 		}
 	}
+
 }

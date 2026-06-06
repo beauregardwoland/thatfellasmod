@@ -74,6 +74,7 @@ commonwealth_army_modifier = { #NATIONAL SPIRIT
 	modifier_army_sub_unit_category_mobile_infantry_max_org_factor = commonwealth_army_mobile_infantry_org_factor
 	supply_node_range = commonwealth_supply_node_range
 	conscription_factor = commonwealth_conscription_factor
+	weekly_manpower = commonwealth_weekly_manpower
 	org_loss_when_moving = commonwealth_org_loss_when_moving
 	coordination_bonus = commonwealth_coordination_bonus
 	cas_damage_reduction = CAN_modifier_var_1
@@ -253,6 +254,25 @@ GER_break_france_6 = {
 	breakthrough_factor = 0.3
 	army_attack_factor = 0.3
 	army_defence_factor = 0.3
+	#custom_modifier_tooltip = JAP_attack_buff_tt
+}
+
+USA_isle_defence_buff = { 
+	enable = { always = yes } 
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	max_dig_in_factor = 0.20
+	army_attack_factor = 0.075
+	army_defence_factor = 0.075
+	#custom_modifier_tooltip = JAP_attack_buff_tt
+}
+
+USA_phi_return = { 
+	enable = { always = yes } 
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	army_attack_factor = 0.05
+	army_defence_factor = 0.05
 	#custom_modifier_tooltip = JAP_attack_buff_tt
 }
 

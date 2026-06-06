@@ -4,9 +4,379 @@ guiTypes = {
 	containerWindowType = {
 		name = "impact_decisions_container"
 		position = { x = 0 y = 0 }
-		size = { width = 100% height= 125 }
+		size = { width = 100% height= 515 }
 
+		buttonType = {
+			name = "asia_war_button"
+			quadTextureSprite = "GFX_generic_box_asia_war_fin"
+			position = { x = 85 y = 15 }
+			#scale=5
+			
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+
+		instantTextBoxType = {
+			name = "asia_war_qol_1"
+			font = "cg_16b"
+			text = island_hopping_use_tt
+			position = { x = 80 y = 265 }
+			
+			format = left
+			maxWidth = 500
+		}
+
+		instantTextBoxType = {
+			name = "asia_war_qol_2"
+			font = "cg_16b"
+			text = jap_display_modifiers_tt
+			position = { x = 20 y = 285 }
+			
+			format = left
+			maxWidth = 500
+		}
+
+		buttonType = {
+			name = "asia_war_qol_3"
+			quadTextureSprite = "GFX_idea_JAP_japanese_economy"
+			position = { x = 325 y = 445 }
+			scale = 1.05
+
+			pdx_tooltip = current_jappense_war_industry_lvl
+			
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+
+		instantTextBoxType = {
+			name = "asia_war_qol_4"
+			font = "cg_16b"
+			text = asia_war_tt2
+			position = { x = 20 y = 140 }
+			
+			format = left
+			maxWidth = 500
+		}
+
+
+		buttonType = {
+			name = "island_hopping_button"
+			quadTextureSprite = "GFX_generic_box_island_hopping_fin"
+			position = { x = 260 y = 15 }
+			#scale=5
+			
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+
+		instantTextBoxType = {
+			name = "asia_war_text"
+			font = "hoi_18mbs"
+			text = "The Asia War"
+			position = { x = 95 y = 115 }
+			
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "island_hopping_text"
+			font = "hoi_18mbs"
+			text = "Island Hopping"
+			position = { x = 260 y = 115 }
+			
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "iwo_jima_text"
+			font = "hoi_18mbs"
+			text = "[state_of_pacific_iwj]"
+			position = { x = 95 y = 140 }
+			
+			format = left
+		}
+		instantTextBoxType = {
+			name = "taiwan_text"
+			font = "hoi_18mbs"
+			text = "[state_of_pacific_tai]"
+			position = { x = 95 y = 155 }
+			
+			format = left
+		}
+		instantTextBoxType = {
+			name = "okinawa_text"
+			font = "hoi_18mbs"
+			text = "[state_of_pacific_oki]"
+			position = { x = 95 y = 170 }
+			
+			format = left
+		}
+		instantTextBoxType = {
+			name = "minam_text"
+			font = "hoi_18mbs"
+			text = "[state_of_pacific_minam]"
+			position = { x = 95 y = 185 }
+			
+			format = left
+		}
+		instantTextBoxType = {
+			name = "saipan_text"
+			font = "hoi_18mbs"
+			text = "[state_of_pacific_sai]"
+			position = { x = 95 y = 200 }
+			
+			format = left
+		}
+		instantTextBoxType = {
+			name = "palau_text"
+			font = "hoi_18mbs"
+			text = "[state_of_pacific_palau]"
+			position = { x = 95 y = 215 }
+			
+			format = left
+		}
+		instantTextBoxType = {
+			name = "carolina_text"
+			font = "hoi_18mbs"
+			text = "[state_of_pacific_car]"
+			position = { x = 95 y = 230 }
+			
+			format = left
+		}
+		instantTextBoxType = {
+			name = "marshal_text"
+			font = "hoi_18mbs"
+			text = "[state_of_pacific_mar]"
+			position = { x = 95 y = 245 }
+			
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "guam_text"
+			font = "hoi_18mbs"
+			text = "[state_of_pacific_guam]"
+			position = { x = 270 y = 140 }
+			
+			format = left
+		}
+		instantTextBoxType = {
+			name = "wake_text"
+			font = "hoi_18mbs"
+			text = "[state_of_pacific_wak]"
+			position = { x = 270 y = 155 }
+			
+			format = left
+		}
+		instantTextBoxType = {
+			name = "midway_text"
+			font = "hoi_18mbs"
+			text = "[state_of_pacific_mid]"
+			position = { x = 270 y = 170 }
+			
+			format = left
+		}
+		instantTextBoxType = {
+			name = "john_text"
+			font = "hoi_18mbs"
+			text = "[state_of_pacific_john]"
+			position = { x = 270 y = 185 }
+			
+			format = left
+		}
+		instantTextBoxType = {
+			name = "phoe_text"
+			font = "hoi_18mbs"
+			text = "[state_of_pacific_phoe]"
+			position = { x = 270 y = 200 }
+			
+			format = left
+		}
+		instantTextBoxType = {
+			name = "lineee_text"
+			font = "hoi_18mbs"
+			text = "[state_of_pacific_line]"
+			position = { x = 270 y = 215 }
+			
+			format = left
+		}
+		instantTextBoxType = {
+			name = "haiwaiii_text"
+			font = "hoi_18mbs"
+			text = "[state_of_pacific_hawai]"
+			position = { x = 270 y = 230 }
+			
+			format = left
+		}
+		instantTextBoxType = {
+			name = "attul_text"
+			font = "hoi_18mbs"
+			text = "[state_of_pacific_attu]"
+			position = { x = 270 y = 245 }
+			
+			format = left
+		}
+
+			buttonType = {
+				name = "iwo_jima_button"
+				quadTextureSprite = "GFX_air_target_icon"
+				scale = 0.6
+				clicksound = click_ok
+				oversound = ui_menu_over
+				position = { x = 75 y = 140 }
+
+			}
+			buttonType = {
+				name = "taiwan_button"
+				quadTextureSprite = "GFX_air_target_icon"
+				scale = 0.6
+				clicksound = click_ok
+				oversound = ui_menu_over
+				position = { x = 75 y = 155 }
+				
+				
+			}
+			buttonType = {
+				name = "okinawa_button"
+				quadTextureSprite = "GFX_air_target_icon"
+				scale = 0.6
+				clicksound = click_ok
+				oversound = ui_menu_over
+				position = { x = 75 y = 170 }
+				
+				
+			}
+			buttonType = {
+				name = "minam_button"
+				quadTextureSprite = "GFX_air_target_icon"
+				scale = 0.6
+				clicksound = click_ok
+				oversound = ui_menu_over
+				position = { x = 75 y = 185 }
+				
+				
+			}
+			buttonType = {
+				name = "saipan_button"
+				quadTextureSprite = "GFX_air_target_icon"
+				scale = 0.6
+				clicksound = click_ok
+				oversound = ui_menu_over
+				position = { x = 75 y = 200 }
+				
+				
+			}
+			buttonType = {
+				name = "palau_button"
+				quadTextureSprite = "GFX_air_target_icon"
+				scale = 0.6
+				clicksound = click_ok
+				oversound = ui_menu_over
+				position = { x = 75 y = 215 }
+				
+				
+			}
+			buttonType = {
+				name = "carolina_button"
+				quadTextureSprite = "GFX_air_target_icon"
+				scale = 0.6
+				clicksound = click_ok
+				oversound = ui_menu_over
+				position = { x = 75 y = 230 }
+				
+				
+			}
+			buttonType = {
+				name = "marshal_button"
+				quadTextureSprite = "GFX_air_target_icon"
+				scale = 0.6
+				clicksound = click_ok
+				oversound = ui_menu_over
+				position = { x = 75 y = 245 }
+				
+				
+			}
+
+			buttonType = {
+				name = "guam_button"
+				quadTextureSprite = "GFX_air_target_icon"
+				scale = 0.6
+				clicksound = click_ok
+				oversound = ui_menu_over
+				position = { x = 255 y = 140 }
+				
+				
+			}
+			buttonType = {
+				name = "wake_button"
+				quadTextureSprite = "GFX_air_target_icon"
+				scale = 0.6
+				clicksound = click_ok
+				oversound = ui_menu_over
+				position = { x = 255 y = 155 }
+				
+				
+			}
+			buttonType = {
+				name = "midway_button"
+				quadTextureSprite = "GFX_air_target_icon"
+				scale = 0.6
+				clicksound = click_ok
+				oversound = ui_menu_over
+				position = { x = 255 y = 170 }
+				
+				
+			}
+			buttonType = {
+				name = "john_button"
+				quadTextureSprite = "GFX_air_target_icon"
+				scale = 0.6
+				clicksound = click_ok
+				oversound = ui_menu_over
+				position = { x = 255 y = 185 }
+				
+				
+			}
+			buttonType = {
+				name = "phoe_button"
+				quadTextureSprite = "GFX_air_target_icon"
+				scale = 0.6
+				clicksound = click_ok
+				oversound = ui_menu_over
+				position = { x = 255 y = 200 }
+				
+				
+			}
+			buttonType = {
+				name = "lineee_button"
+				quadTextureSprite = "GFX_air_target_icon"
+				scale = 0.6
+				clicksound = click_ok
+				oversound = ui_menu_over
+				position = { x = 255 y = 215 }
+				
+				
+			}
+			buttonType = {
+				name = "haiwaiii_button"
+				quadTextureSprite = "GFX_air_target_icon"
+				scale = 0.6
+				clicksound = click_ok
+				oversound = ui_menu_over
+				position = { x = 255 y = 230 }
+				
+				
+			}
+			buttonType = {
+				name = "attul_button"
+				quadTextureSprite = "GFX_air_target_icon"
+				scale = 0.6
+				clicksound = click_ok
+				oversound = ui_menu_over
+				position = { x = 255 y = 245 }
+				
+				
+			}
 		
-
 	}
 }

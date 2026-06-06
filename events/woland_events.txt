@@ -934,6 +934,53 @@ country_event = {
 }
 
 country_event = { 
+	id = wol_qol.107
+	title = wol_qol.107.t
+	desc = wol_qol.107.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wol_qol.107.a
+	}
+	
+}
+
+country_event = { 
+	id = wol_qol.109
+	title = "Fall of the Malay Barrier"
+	desc = "Japan has taken the Malay Barrier opening our country to an ineviatable attack we must now prepare for a defense along the Brisbane line"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Rather Un-Ideal"
+		swap_ideas = {
+			remove_idea = AST_slash_nzl_held_ind
+			add_idea = AST_slash_nzl_lost_ind 
+		}
+	}
+	
+}
+
+country_event = { 
+	id = wol_qol.110
+	title = "Restoration of the Malay Barrier"
+	desc = " We have managed to restore Our position along the Malay Barrier and are no longer first in line against jappenese movements"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Back to 'Normal'"
+		swap_ideas = {
+			remove_idea = AST_slash_nzl_held_ind
+			add_idea = AST_slash_nzl_lost_ind 
+		}
+	}
+	
+}
+
+country_event = { 
 	id = wol_qol.666
 	title = wol_qol.666.t
 	desc = wol_qol.666.d

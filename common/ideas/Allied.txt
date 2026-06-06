@@ -102,31 +102,80 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GER
-				attack_bonus_against = -0.075
+				attack_bonus_against = -0.05
 			}
 			targeted_modifier = {
 				tag = ITA
-				attack_bonus_against = -0.075
+				attack_bonus_against = -0.05
 			}
 			targeted_modifier = {
 				tag = BUL
-				attack_bonus_against = -0.075
+				attack_bonus_against = -0.05
 			}
 			targeted_modifier = {
 				tag = ROM
-				attack_bonus_against = -0.075
+				attack_bonus_against = -0.05
 			}
 			targeted_modifier = {
 				tag = HUN
-				attack_bonus_against = -0.075
+				attack_bonus_against = -0.05
 			}
 			targeted_modifier = {
 				tag = SPA
-				attack_bonus_against = -0.075
+				attack_bonus_against = -0.05
 			}
 			targeted_modifier = {
 				tag = FIN
-				attack_bonus_against = -0.075
+				attack_bonus_against = -0.05
+			}
+			#targeted_modifier = {
+			#	tag = JAP
+			#	attack_bonus_against = 0.025
+			#	defense_bonus_against = 0.025
+			#}
+		}
+		
+		ALI_losing_5 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = -0.1
+			}
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = -0.1
+			}
+			targeted_modifier = {
+				tag = BUL
+				attack_bonus_against = -0.1
+			}
+			targeted_modifier = {
+				tag = ROM
+				attack_bonus_against = -0.1
+			}
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = -0.1
+			}
+			targeted_modifier = {
+				tag = SPA
+				attack_bonus_against = -0.1
+			}
+			targeted_modifier = {
+				tag = FIN
+				attack_bonus_against = -0.1
 			}
 			targeted_modifier = {
 				tag = JAP
@@ -135,7 +184,7 @@ ideas = {
 			}
 		}
 		
-		ALI_losing_5 = {
+		ALI_losing_6 = {
 
 			allowed = {
 				always = no
@@ -183,55 +232,6 @@ ideas = {
 				defense_bonus_against = 0.05
 			}
 		}
-		
-		ALI_losing_6 = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_pp_unity_bonus
-
-			targeted_modifier = {
-				tag = GER
-				attack_bonus_against = -0.225
-			}
-			targeted_modifier = {
-				tag = ITA
-				attack_bonus_against = -0.225
-			}
-			targeted_modifier = {
-				tag = BUL
-				attack_bonus_against = -0.225
-			}
-			targeted_modifier = {
-				tag = ROM
-				attack_bonus_against = -0.225
-			}
-			targeted_modifier = {
-				tag = HUN
-				attack_bonus_against = -0.225
-			}
-			targeted_modifier = {
-				tag = SPA
-				attack_bonus_against = -0.225
-			}
-			targeted_modifier = {
-				tag = FIN
-				attack_bonus_against = -0.225
-			}
-			targeted_modifier = {
-				tag = JAP
-				attack_bonus_against = 0.075
-				defense_bonus_against = 0.075
-			}
-		}
 
 		ALI_losing_7 = {
 
@@ -249,31 +249,81 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GER
-				attack_bonus_against = -0.3
+				attack_bonus_against = -0.2
 			}
 			targeted_modifier = {
 				tag = ITA
-				attack_bonus_against = -0.3
+				attack_bonus_against = -0.2
 			}
 			targeted_modifier = {
 				tag = BUL
-				attack_bonus_against = -0.3
+				attack_bonus_against = -0.2
 			}
 			targeted_modifier = {
 				tag = ROM
-				attack_bonus_against = -0.3
+				attack_bonus_against = -0.2
 			}
 			targeted_modifier = {
 				tag = HUN
-				attack_bonus_against = -0.3
+				attack_bonus_against = -0.25
 			}
 			targeted_modifier = {
 				tag = SPA
-				attack_bonus_against = -0.3
+				attack_bonus_against = -0.2
 			}
 			targeted_modifier = {
 				tag = FIN
-				attack_bonus_against = -0.3
+				attack_bonus_against = -0.2
+			}
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.075
+				defense_bonus_against = 0.075
+			}
+
+		}
+
+		ALI_losing_8 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = -0.25
+			}
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = -0.25
+			}
+			targeted_modifier = {
+				tag = BUL
+				attack_bonus_against = -0.25
+			}
+			targeted_modifier = {
+				tag = ROM
+				attack_bonus_against = -0.25
+			}
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = -0.25
+			}
+			targeted_modifier = {
+				tag = SPA
+				attack_bonus_against = -0.25
+			}
+			targeted_modifier = {
+				tag = FIN
+				attack_bonus_against = -0.25
 			}
 			targeted_modifier = {
 				tag = JAP

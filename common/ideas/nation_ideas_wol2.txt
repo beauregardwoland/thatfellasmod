@@ -16,6 +16,30 @@ ideas = {
 				army_speed_factor = 0.2
 			}
 		}
+		AST_slash_nzl_held_ind = {
+			picture = ast_naval_auxiliary_patrol
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		AST_slash_nzl_lost_ind = {
+			picture = JAP_east_asian_co_prosperity
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				weekly_manpower = 1000
+				mobilization_speed = 0.33
+				industrial_capacity_factory = 0.05
+			}
+		}
+
 		SAF_dummy_tech = {
 			allowed = {
 				always = no

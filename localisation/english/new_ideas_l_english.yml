@@ -47,9 +47,10 @@
  MON_Five_Year_Plan_final:0 "Five Year Plan"
  MON_Public_School:0 "Public Schools"
  #Japanese
- JAP_Victory_on_the_Continent:0 "Conquest of India"
- JAP_Full_Control_of_the_Pacific:0 "Full Control of the Pacific"
- JAP_Conquest_of_the_Spice_Islands:0 "Overlord of the Spice Islands"
+ JAP_Victory_on_the_Continent:0 "Conquest of Burma and Bengal"
+ JAP_take_india:0 "Conquest of India"
+ JAP_Full_Control_of_the_Pacific:0 "Full Control of the Signapore Straits"
+ JAP_Conquest_of_the_Spice_Islands:0 "Overlord of Outer Indonesia"
  JAP_Banzai:0 "Banzai!"
  JAP_Banzai_2:0 "Banzai!"
  JAP_tora_tora_tora_idea_2:0 "Tora Tora Tora!"

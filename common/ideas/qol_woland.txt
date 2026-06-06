@@ -264,13 +264,41 @@ ideas = {
 		JAP_quick_war_i = {
 			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
 			modifier = {
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_efficiency_gain_factor = -0.2
+				production_lack_of_resource_penalty_factor = 0.025
+			}
+		}
+		JAP_mid_war_i = {
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+			modifier = {
+				industrial_capacity_factory = 0.025
+				industrial_capacity_dockyard = 0.025
+				production_factory_max_efficiency_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.025
+			}
+		}
+		JAP_long_war_i = {
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.075
+				production_factory_start_efficiency_factor = -0.05
+				#production_lack_of_resource_penalty_factor = -0.
+			}
+		}
+
+		JAP_quick_war_ii = {
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+			modifier = {
 				industrial_capacity_factory = 0.10
 				industrial_capacity_dockyard = 0.10
 				production_factory_efficiency_gain_factor = -0.15
 				production_lack_of_resource_penalty_factor = -0.033
 			}
 		}
-		JAP_mid_war_i = {
+		JAP_mid_war_ii = {
 			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
 			modifier = {
 				industrial_capacity_factory = 0.05
@@ -279,7 +307,7 @@ ideas = {
 				production_lack_of_resource_penalty_factor = -0.1
 			}
 		}
-		JAP_long_war_i = {
+		JAP_long_war_ii = {
 			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
 			modifier = {
 				production_factory_max_efficiency_factor = 0.15
@@ -288,6 +316,63 @@ ideas = {
 				production_lack_of_resource_penalty_factor = -0.1
 			}
 		}
+
+		JAP_quick_war_iii = {
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+			modifier = {
+				industrial_capacity_factory = 0.125
+				industrial_capacity_dockyard = 0.125
+				production_factory_efficiency_gain_factor = -0.1
+				production_lack_of_resource_penalty_factor = -0.033
+			}
+		}
+		JAP_mid_war_iii = {
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+			modifier = {
+				industrial_capacity_factory = 0.075
+				industrial_capacity_dockyard = 0.075
+				production_factory_max_efficiency_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.15
+			}
+		}
+		JAP_long_war_iii = {
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.2
+				production_factory_start_efficiency_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.15
+			}
+		}
+
+		JAP_quick_war_iv = {
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+			modifier = {
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_factory_efficiency_gain_factor = -0.05
+				production_lack_of_resource_penalty_factor = -0.05
+			}
+		}
+		JAP_mid_war_iv = {
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+			modifier = {
+				industrial_capacity_factory = 0.075
+				industrial_capacity_dockyard = 0.075
+				production_factory_max_efficiency_factor = 0.075
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+		JAP_long_war_iv = {
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+				production_speed_buildings_factor = 0.2
+				production_factory_start_efficiency_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.2
+			}
+		}
+
 		allied_reclamation = {
 			allowed = {
 				always = no

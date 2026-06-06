@@ -231,9 +231,9 @@
  USA_big_bills_promised_text:0"§4Major Campaign Promises§!\n              Made/fufilled"
  USA_small_bills_promised_text:0"§7Minor Campaign Promises§!\n              Made/fufilled"
 
- FDR_1936_election_tooltip:0"The FDR Campaign events will focus on promises to gradually fix the depression with options to become a §Yvolunteer country§!, better options to get §Ycongressional support§! and improveing the §Ynew deal modifier§!.\nAmerica will play out in very vanilla way scaling harder over the entrance to the war and supporting the allies before entrance.\nAfter the §Y1936§! election the choice in the elections only changes the generic congross laws you can pass.\nClick to see §4Democratic generic bills§!"
+ FDR_1936_election_tooltip:0"The FDR Campaign events will focus on promises to gradually fix the depression with options to become a §Yvolunteer country§!, better options to get §Ycongressional support§! and improveing the §Ynew deal modifier§!.\nAmerica will play out in very vanilla way scaling harder over the entrance to the war and supporting the allies before entrance.\nAfter the §Y1936§! election the choice in the elections only changes the generic congress laws you can pass.\nClick to see §4Democratic generic bills§!"
 
- AL_1936_election_tooltip:0"The Alf Landon Campaign events will focus on fixeing the depression at the cost of stability with options to cooperate with buisnesses §Yboosting mios§! or §Yindustrial concerns§!.\nAmerica will loose later scaling potential but can start building up its position better for an entrance to the war compared to vanilla.\nAfter the §Y1936§! election the choice in the elections only changes the generic congross laws you can pass.\nClick to see §Rrepublican generic bills§!"
+ AL_1936_election_tooltip:0"The Alf Landon Campaign events will focus on fixeing the depression at the cost of stability with options to cooperate with buisnesses §Yboosting mios§! or §Yindustrial concerns§!.\nAmerica will loose later scaling potential but can start building up its position better for an entrance to the war compared to vanilla.\nAfter the §Y1936§! election the choice in the elections only changes the generic congress laws you can pass.\nClick to see §RRepublican generic bills§!"
 
  post_1936_tooltip_rep_tt:0"This election will allow you to swap between Republican and Democratic generic bills nothing else will change.\nClick to see §Rrepublican generic bills§!"
  post_1936_tooltip_dem_tt:0"This election will allow you to swap between Republican and Democratic generic bills nothing else will change.\nClick to see §4Democratic generic bills§!"
@@ -352,6 +352,7 @@
 
  great_depression_alf_2:0"Slow Recovery"
  great_depression_alf_3:0"Slow Economic Growth"
+ USA_retake_phillipines:0"Launch the Leyte Campaign"
 
  ROM_scavenge_equipment:0"Develop More Refurbishing Workshops"
  ROM_staffing_1:0"Romanian General Staff"
@@ -446,6 +447,8 @@
  GER_break_france_5:0 "Tightening Command Structure V"
  GER_break_france_6:0 "Tightening Command Structure VI"
  fra_decision_vased_eco:0"§YDecision Structure Economy§!"
+ USA_isle_defence_buff: "Phillipines Buffer"
+ USA_phi_return: "Return of the Phillipines"
 
  wol_qol.22.t:0"Favoring a Zaibatsu"
  wol_qol.22.d:0" In order to further our economic development, we have decided to favor a zaibatsu to lead our industrial efforts. Their resources and connections will be invaluable to our efforts, and we will ensure they are well taken care of in return for their support."
@@ -461,3 +464,6 @@
  SPA_join_the_war:0"Join the War"
 
  jap_starter_event_tt: "§YThis will empower their associeted mios allowing them to share funds via research!§!"
+ 
+ AST_slash_nzl_held_ind: "Malay Barrier"
+ AST_slash_nzl_lost_ind: "All in on the Brisbane Line"

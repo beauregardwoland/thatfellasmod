@@ -1,0 +1,531 @@
+
+defined_text = {
+	name = state_of_pacific_iwj
+	text = {
+        trigger = {
+            JAP = {
+				or = {
+					controls_state = 645
+					any_allied_country = {
+						controls_state = 645
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_iwj_key
+    }
+    text = {
+        localization_key = state_of_pacific_iwj_key1
+    }
+	
+}
+
+defined_text = {
+	name = state_of_pacific_tai
+	text = {
+        trigger = {
+            JAP = {
+				or = {
+					controls_state = 524
+					any_allied_country = {
+						controls_state = 524
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_tai_key
+    }
+    text = {
+        localization_key = state_of_pacific_tai_key1
+    }
+	
+}
+
+defined_text = {
+	name = state_of_pacific_oki
+	text = {
+        trigger = {
+            JAP = {
+				or = {
+					controls_state = 526
+					any_allied_country = {
+						controls_state = 526
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_oki_key
+    }
+    text = {
+        localization_key = state_of_pacific_oki_key1
+    }
+	
+}
+
+defined_text = {
+	name = state_of_pacific_minam
+	text = {
+        trigger = {
+            JAP = {
+				or = {
+					controls_state = 648
+					any_allied_country = {
+						controls_state = 648
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_minam_key
+    }
+    text = {
+        localization_key = state_of_pacific_minam_key1
+    }
+	
+}
+
+defined_text = {
+	name = state_of_pacific_sai
+	text = {
+        trigger = {
+            JAP = {
+				or = {
+					controls_state = 646
+					any_allied_country = {
+						controls_state = 646
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_sai_key
+    }
+    text = {
+        localization_key = state_of_pacific_sai_key1
+    }
+	
+}
+
+defined_text = {
+	name = state_of_pacific_guam
+	text = {
+        trigger = {
+            JAP = {
+				or = {
+					controls_state = 638
+					any_allied_country = {
+						controls_state = 638
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_guam_key
+    }
+    text = {
+        localization_key = state_of_pacific_guam_key1
+    }
+	
+}
+
+defined_text = {
+	name = state_of_pacific_palau
+	text = {
+        trigger = {
+            JAP = {
+				or = {
+					controls_state = 647
+					any_allied_country = {
+						controls_state = 647
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_palau_key
+    }
+    text = {
+        localization_key = state_of_pacific_palau_key1
+    }
+	
+}
+
+defined_text = {
+	name = state_of_pacific_car
+	text = {
+        trigger = {
+            JAP = {
+				or = {
+					controls_state = 684
+					any_allied_country = {
+						controls_state = 684
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_car_key
+    }
+    text = {
+        localization_key = state_of_pacific_car_key1
+    }
+	
+}
+
+defined_text = {
+	name = state_of_pacific_mar
+	text = {
+        trigger = {
+            JAP = {
+				or = {
+					controls_state = 633
+					any_allied_country = {
+						controls_state = 633
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_mar_key
+    }
+    text = {
+        localization_key = state_of_pacific_mar_key1
+    }
+	
+}
+
+defined_text = {
+	name = state_of_pacific_wak
+	text = {
+        trigger = {
+            JAP = {
+				or = {
+					controls_state = 632
+					any_allied_country = {
+						controls_state = 632
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_wak_key
+    }
+    text = {
+        localization_key = state_of_pacific_wak_key1
+    }
+	
+}
+
+defined_text = {
+	name = state_of_pacific_mid
+	text = {
+        trigger = {
+            JAP = {
+				or = {
+					controls_state = 631
+					any_allied_country = {
+						controls_state = 631
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_mid_key
+    }
+    text = {
+        localization_key = state_of_pacific_mid_key1
+    }
+	
+}
+
+defined_text = {
+	name = state_of_pacific_john
+	text = {
+        trigger = {
+            JAP = {
+				or = {
+					controls_state = 630
+					any_allied_country = {
+						controls_state = 630
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_john_key
+    }
+    text = {
+        localization_key = state_of_pacific_john_key1
+    }
+	
+}
+
+defined_text = {
+	name = state_of_pacific_phoe
+	text = {
+        trigger = {
+            JAP = {
+				or = {
+					controls_state = 642
+					any_allied_country = {
+						controls_state = 642
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_phoe_key
+    }
+    text = {
+        localization_key = state_of_pacific_phoe_key1
+    }
+	
+}
+
+defined_text = {
+	name = state_of_pacific_line
+	text = {
+        trigger = {
+            JAP = {
+				or = {
+					controls_state = 727
+					any_allied_country = {
+						controls_state = 727
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_line_key
+    }
+    text = {
+		trigger = {
+            USA = {
+				or = {
+					controls_state = 727
+					any_allied_country = {
+						controls_state = 727
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_line_key1
+    }
+	
+}
+
+defined_text = {
+	name = state_of_pacific_hawai
+	text = {
+        trigger = {
+            JAP = {
+				or = {
+					controls_state = 629
+					any_allied_country = {
+						controls_state = 629
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_hawai_key
+    }
+    text = {
+		trigger = {
+            USA = {
+				or = {
+					controls_state = 629
+					any_allied_country = {
+						controls_state = 629
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_hawai_key1
+    }
+	
+}
+
+defined_text = {
+	name = state_of_pacific_attu
+	text = {
+        trigger = {
+            JAP = {
+				or = {
+					controls_state = 650
+					any_allied_country = {
+						controls_state = 650
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_attu_key
+    }
+    text = {
+		trigger = {
+            USA = {
+				or = {
+					controls_state = 650
+					any_allied_country = {
+						controls_state = 650
+					}
+				}
+			}
+        }
+        localization_key = state_of_pacific_attu_key1
+    }
+	
+}
+
+defined_text = {
+	name = jap_current_war_eco_loc_tt
+
+	text = {
+        trigger = {
+            JAP = {
+				has_idea = JAP_quick_war_i
+			}
+        }
+        localization_key = idea_desc|JAP_quick_war_i
+    }
+	text = {
+        trigger = {
+            JAP = {
+				has_idea = JAP_quick_war_ii
+			}
+        }
+        localization_key = idea_desc|JAP_quick_war_ii
+    }
+	text = {
+        trigger = {
+            JAP = {
+				has_idea = JAP_quick_war_iii
+			}
+        }
+        localization_key = idea_desc|JAP_quick_war_iii
+    }
+	text = {
+        trigger = {
+            JAP = {
+				has_idea = JAP_quick_war_iv
+			}
+        }
+        localization_key = idea_desc|JAP_quick_war_iv
+    }
+
+	text = {
+        trigger = {
+            JAP = {
+				has_idea = JAP_mid_war_i
+			}
+        }
+        localization_key = idea_desc|JAP_mid_war_i
+    }
+	text = {
+        trigger = {
+            JAP = {
+				has_idea = JAP_mid_war_ii
+			}
+        }
+        localization_key = idea_desc|JAP_mid_war_ii
+    }
+	text = {
+        trigger = {
+            JAP = {
+				has_idea = JAP_mid_war_iii
+			}
+        }
+        localization_key = idea_desc|JAP_mid_war_iii
+    }
+	text = {
+        trigger = {
+            JAP = {
+				has_idea = JAP_mid_war_iv
+			}
+        }
+        localization_key = idea_desc|JAP_mid_war_iv
+    }
+
+	text = {
+        trigger = {
+            JAP = {
+				has_idea = JAP_long_war_i
+			}
+        }
+        localization_key = idea_desc|JAP_long_war_i
+    }
+	text = {
+        trigger = {
+            JAP = {
+				has_idea = JAP_long_war_ii
+			}
+        }
+        localization_key = idea_desc|JAP_long_war_ii
+    }
+	text = {
+        trigger = {
+            JAP = {
+				has_idea = JAP_long_war_iii
+			}
+        }
+        localization_key = idea_desc|JAP_long_war_iii
+    }
+	text = {
+        trigger = {
+            JAP = {
+				has_idea = JAP_long_war_iv
+			}
+        }
+        localization_key = idea_desc|JAP_long_war_iv
+    }
+
+    text = {
+        localization_key = jap_current_war_eco_loc_tt_key1
+    }
+	
+}
+
+defined_text = {
+	name = jap_current_operation_sop
+
+	text = {
+        trigger = {
+            430 = { has_dynamic_modifier = JAP_allied_debuff }
+        }
+        localization_key = jap_current_operation_key1
+    }
+	text = {
+        trigger = {
+            327 = { has_dynamic_modifier = JAP_allied_debuff }
+        }
+        localization_key = jap_current_operation_key2
+    }
+	text = {
+        trigger = {
+            336 = { has_dynamic_modifier = JAP_allied_debuff }
+        }
+        localization_key = jap_current_operation_key3
+    }
+	text = {
+        trigger = {
+            335 = { has_dynamic_modifier = JAP_allied_debuff }
+        }
+        localization_key = jap_current_operation_key4
+    }
+	text = {
+        
+        localization_key = jap_current_war_eco_loc_tt_key1
+    }
+}
+
+defined_text = {
+	name = usa_current_operation_sop
+
+	text = {
+        trigger = {
+            USA = {
+				has_idea = woland_warplan_orange
+			}
+        }
+        localization_key = usa_current_operation_key1
+    }
+	text = {
+        trigger = {
+            327 = { has_dynamic_modifier = USA_phi_return }
+        }
+        localization_key = usa_current_operation_key2
+    }
+	
+	text = {
+        
+        localization_key = jap_current_war_eco_loc_tt_key1
+    }
+}

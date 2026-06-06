@@ -70,6 +70,8 @@ JAP_state_shinotism_dm = {
 	}
 
 	surrender_limit = JAP_state_shinotism_surrender_limit
+	army_core_attack_factor = JAP_state_shinotism_army_core_attack_factor
+	army_core_defence_factor = JAP_state_shinotism_army_core_defence_factor
 	war_support_factor = JAP_state_shinotism_war_support_factor
 	pocket_penalty = JAP_state_shinotism_pocket_penalty
 	stability_factor = JAP_state_shinotism_stability_factor

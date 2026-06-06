@@ -9,30 +9,51 @@ Impact_buttons_1 = {
 
 	visible_when_empty = yes
 
-	#scripted_gui = impact_decisions_container
+	scripted_gui = impact_decisions_window
 
 	on_map_area = {
-		targets = { 638 632 630 727 631 648 646 647 645 }
-		name = "Pacific Islands"
+		targets = { 995 998 990 430 431 }
+		name = "Burma and Bengal"
 		zoom = 1000
+		target_root_trigger = {
+			has_country_flag = asia_war_window_flag
+		}
 	}
 
 	on_map_area = {
-		targets = {  439 428 423 427 430 431 }
-		name = "Indian Territory"
+		targets = { 336 1021 672 733 }
+		name = "Signapore Straits"
 		zoom = 1000
+		target_root_trigger = {
+			has_country_flag = asia_war_window_flag
+		}
+	}
+
+	on_map_area = {
+		targets = { 439 440 427 429 428 443 422 }
+		name = "Indian Proper"
+		zoom = 1000
+		target_root_trigger = {
+			has_country_flag = asia_war_window_flag
+		}
 	}
 
 	on_map_area = {
 		targets = { 327 623 627 624 625 628 626 }
 		name = "Philippino Territory"
 		zoom = 1000
+		target_root_trigger = {
+			has_country_flag = asia_war_window_flag
+		}
 	}
 
 	on_map_area = {
-		targets = { 336 672 335 334 333 673 }
+		targets = { 333 334 335 667 669 673 }
 		name = "Indonesian Territory"
 		zoom = 1000
+		target_root_trigger = {
+			has_country_flag = asia_war_window_flag
+		}
 	}
 
 	priority = 100

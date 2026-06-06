@@ -1,4 +1,56 @@
 ﻿l_english:
+ state_of_pacific_iwj_key: "[JAP.GetFlag]§OIwo Jima§!"
+ state_of_pacific_iwj_key1: "[USA.GetFlag][ENG.GetFlag]§CIwo Jima§!"
+ state_of_pacific_tai_key: "[JAP.GetFlag]§OTaiwan§!"
+ state_of_pacific_tai_key1: "[USA.GetFlag][ENG.GetFlag]§CTaiwan§!"
+ state_of_pacific_oki_key: "[JAP.GetFlag]§OOkinawa§!"
+ state_of_pacific_oki_key1: "[USA.GetFlag][ENG.GetFlag]§COkinawa§!"
+ state_of_pacific_minam_key: "[JAP.GetFlag]§OMinamitorishima§!"
+ state_of_pacific_minam_key1: "[USA.GetFlag][ENG.GetFlag]§CMinamitorishima§!"
+ state_of_pacific_sai_key: "[JAP.GetFlag]§OSaipan§!"
+ state_of_pacific_sai_key1: "[USA.GetFlag][ENG.GetFlag]§CSaipan§!"
+ state_of_pacific_guam_key: "[JAP.GetFlag]§OGuam§!"
+ state_of_pacific_guam_key1: "[USA.GetFlag][ENG.GetFlag]§CGuam§!"
+ state_of_pacific_palau_key: "[JAP.GetFlag]§OPalau§!"
+ state_of_pacific_palau_key1: "[USA.GetFlag][ENG.GetFlag]§CPalau§!"
+ state_of_pacific_car_key: "[JAP.GetFlag]§OCarolina Islands§!"
+ state_of_pacific_car_key1: "[USA.GetFlag][ENG.GetFlag]§CCarolina Islands§!"
+ state_of_pacific_mar_key: "[JAP.GetFlag]§OMarshall Islands§!"
+ state_of_pacific_mar_key1: "[USA.GetFlag][ENG.GetFlag]§CMarshall Islands§!"
+ state_of_pacific_wak_key: "[JAP.GetFlag]§OWake Island§!"
+ state_of_pacific_wak_key1: "[USA.GetFlag][ENG.GetFlag]§CWake Island§!"
+ state_of_pacific_mid_key: "[JAP.GetFlag]§OMidway Island§!"
+ state_of_pacific_mid_key1: "[USA.GetFlag][ENG.GetFlag]§CMidway Island§!"
+ state_of_pacific_john_key: "[JAP.GetFlag]§OJohnson Attol§!"
+ state_of_pacific_john_key1: "[USA.GetFlag][ENG.GetFlag]§CJohnson Attol§!"
+ state_of_pacific_phoe_key: "[JAP.GetFlag]§OPhoenix Islands§!"
+ state_of_pacific_phoe_key1: "[USA.GetFlag][ENG.GetFlag]§CPhoenix Islands§!"
+ state_of_pacific_line_key: "[JAP.GetFlag]§OLine Islands§!"
+ state_of_pacific_line_key1: "[USA.GetFlag][ENG.GetFlag]§CLine Islands§!"
+ state_of_pacific_hawai_key: "[JAP.GetFlag]§OHawaii§!"
+ state_of_pacific_hawai_key1: "[USA.GetFlag][ENG.GetFlag]§CHawaii§!"
+ state_of_pacific_attu_key: "[JAP.GetFlag]§OAttu Island§!"
+ state_of_pacific_attu_key1: "[USA.GetFlag][ENG.GetFlag]§CAttu Island§!"
+
+ island_hopping_use_tt: "^§YClick on the target icons to§!^ §Ygo to mentioned state§!"
+ jap_display_modifiers_tt: "Number of curently held [JAP.GetFlag]Jappense islands §Y[?global.jap_held_islands]§!\nNumber of curently held [USA.GetFlag][ENG.GetFlag]Allied islands §Y[?global.jap_held_islands]§!\n\n[JAP.GetFlag]§YWar Industry§! changes with ranges of §Rx§! = #of[JAP.GetFlag]Islands Held:\n§Y1§!<§Rx§!<=§Y4§!(War Industry §YI§!)| §Y5§!<§Rx§!<=§Y8§!(War Industry §YII§!)\n§Y9§!<§Rx§!<=§Y12§!(War Industry §YIII§!)| §Y13§!<§Rx§!<=§Y16§!(War Industry §YIV§!)\n\nEach island represents §Y2.0%§! §gStability , War Support, Core Attack\nand Core Defense§!\nCurrent Effects on Jappenese spirits:            v [JAP.GetFlag]War Industry lvl v\n   War Support: [?JAP.JAP_state_shinotism_war_support_factor|+=%1]\n   Stability: [?JAP.JAP_state_shinotism_war_support_factor|+=%1]\n   Attack on Core Territory: [?JAP.JAP_state_shinotism_army_core_attack_factor|+=%1]\n   Defense on Core Territory: [?JAP.JAP_state_shinotism_army_core_defence_factor|+=%1]"
+
+ asia_war_tt2: "The §YAsia War§! is divided into 5 regions each worth §R-5.0%§! Attack\nand Defense against all §YEuropean Axis Members§!\nThe regions mentioned can be highlighted from decisions below\nand are as follows:\n§Y   Burma and Bengal§!\n§Y   The Signapore Straits§!\n§Y   India Proper§!\n§Y   The Phillipines§!\n§Y   The Outer Indonesia§!\nFor every debuff of §R-5.0%§! against §YEuropean axis members§! starting\nat §R-10.0%§! a attack and defense bonus of §Y2.5%§! will be given\nagainst [JAP.GetFlag]§YJapan§! to the allies for a maximum of §G+10.0%§! Attack and Defense.\n\nSo long as the [PHI.GetFlag]§YPhillipines§! are held [USA.GetFlag]§YAmerica§! will recieve a defensive bonus on its held starting islands.\n[AST.GetFlag]§YAustralia§! and [NZL.GetFlag]§YNew Zealand§! will receive a core attack and defense bonus while §YOuter Indonesia§! is held and recieve a manpower and mobilization bonus when it falls.\nThe fall of [RAJ.GetFlag]§YIndia§! will give [JAP.GetFlag]§YJapan§! an attack modifier against the §YSoviet Union§! and a supply bonus\n\nCurrent [JAP.GetFlag]§YJapanese§! Operation: [jap_current_operation_sop]\nCurrent [USA.GetFlag][ENG.GetFlag]§YAllied§! Operation: [usa_current_operation_sop]"
+
+ current_jappense_war_industry_lvl: "[jap_current_war_eco_loc_tt]"
+
+ jap_current_war_eco_loc_tt_key1: "£GFX_trigger_no §gNot Active§!"
+ jap_current_operation_key1: "Operation B (§YBurma and Bengal§!)"
+ jap_current_operation_key2: "Operation M (§YThe Phillipines§!)"
+ jap_current_operation_key3: "Operation AI (§YMalaya and Summatra§!)"
+ jap_current_operation_key4: "Operation DE (§YThe East Indies§!)"
+ usa_current_operation_key1: "§YWarplan Orange§!"
+ usa_current_operation_key2: "§YLeyte Campaign§! (§YThe Phillipines§!)"
+
+ woland_warplan_orange: "Warplan Orange"
+
+
+
  ITA_politics_hist: "Politics: Historical"
  ITA_politics_alt_hist_1: "Politics: Left Opposition"
  ITA_politics_alt_hist_2: "Politics: Centre Opposition"
@@ -49,6 +101,9 @@
 
  wol_depreciated_mio: "There are better custom made mios to use for this country"
 
+ wol_up_carrier_tech_tt: "§gUpgrades §YCarrier Hull§! Technology to Next Tier§!"
+
+
  opel_invest_time_down_tt: "§gWill decrease §HConstruction timeframe days§! by: $RIGHT|-=$ Currently:§! [?invest_mio_days_project_days] days"
 
  opel_invest_civ_tt: "§gWill set Chance of constructing a §8Civilian Factory§! to: $RIGHT|W%%$ "
@@ -57,11 +112,14 @@
 
  opel_invest_dock_tt: "§gWill set Chance of constructing a §4Dockyard§! to: $RIGHT|W%%$"
 
- invest_mio_random_factories_tt: "§g§Y$GER_opel_custom$§! will invest in random parts of the country at random intervals constructing different buildings to assist the ruling government:\n\nChance of constructing a §8Civilian Factory§!: [?invest_mio_civilian_factory_chance|W%%]\nChance of constructing a §GMilitary Factory§!: [?invest_mio_military_factory_chance|W%%]\nChance of constructing a §4Dockyard§!: [?invest_mio_dockyard_chance|W%%]\n\nCurrent Construction timeframe: §W[?invest_mio_days_project_days] days§!\nCurrent Selected Project: [invest_mio_chosen_project]\nProject Progress: §W[?invest_mio_days_project_percent]% Complete§!\nWeekly Progress Gain: [?invest_mio_days_project_days_math]%\n\nTotal Factories built: [?total_campaign_factories|W0]\nTotal §8Civilian Factories§! built: [?total_campaign_civs|W0]\nTotal §GMilitary Factories§! built: [?total_campaign_mils|W0]\nTotal §4Dockyards§! built: [?total_campaign_dockyards|W0]\n\nLast [?notification_list_maximum] factories built:§!"
+ invest_mio_random_factories_tt: "§g§Y$GER_opel_custom$§! will invest in random parts of the country at random intervals constructing different buildings to assist the ruling government:\n\nChance of constructing a §8Civilian Factory§!: [?invest_mio_civilian_factory_chance|W%%]\nChance of constructing a §GMilitary Factory§!: [?invest_mio_military_factory_chance|W%%]\nChance of constructing a §4Dockyard§!: [?invest_mio_dockyard_chance|W%%]\n\nCurrent Construction timeframe: §W[?invest_mio_days_project_days] days§!\nCurrent Selected Project: [invest_mio_chosen_project]\nProject Progress: §W[?invest_mio_days_project_percent]% Complete§!\nWeekly Progress Gain: [?invest_mio_days_project_days_math]%\n\nTotal Factories built: [?total_campaign_factories|W0]\nTotal §8Civilian Factories§! built: [?total_campaign_civs|W0]\nTotal §GMilitary Factories§! built: [?total_campaign_mils|W0]\nTotal §4Dockyards§! built: [?total_campaign_dockyards|W0]\n\nLast [?notification_list_maximum] factories built:"
 
- invest_mio_random_factories_usa_tt: "§g§Y$USA_ford_motor_company_organization$§! will invest in random parts of the country at random intervals constructing different buildings to assist the ruling government:\n\nChance of constructing a §8Civilian Factory§!: [?invest_mio_civilian_factory_chance|W%%]\nChance of constructing a §GMilitary Factory§!: [?invest_mio_military_factory_chance|W%%]\nChance of constructing a §4Dockyard§!: [?invest_mio_dockyard_chance|W%%]\n\nCurrent Construction timeframe: §W[?invest_mio_days_project_days] days§!\nCurrent Selected Project: [invest_mio_chosen_project]\nProject Progress: §W[?invest_mio_days_project_percent]% Complete§!\nWeekly Progress Gain: [?invest_mio_days_project_days_math]%\n\nTotal Factories built: [?total_campaign_factories|W0]\nTotal §8Civilian Factories§! built: [?total_campaign_civs|W0]\nTotal §GMilitary Factories§! built: [?total_campaign_mils|W0]\nTotal §4Dockyards§! built: [?total_campaign_dockyards|W0]\n\nLast [?notification_list_maximum] factories built:§!"
+ invest_mio_random_factories_usa_tt: "§g§Y$USA_ford_motor_company_organization$§! will invest in random parts of the country at random intervals constructing different buildings to assist the ruling government:\n\nChance of constructing a §8Civilian Factory§!: [?invest_mio_civilian_factory_chance|W%%]\nChance of constructing a §GMilitary Factory§!: [?invest_mio_military_factory_chance|W%%]\nChance of constructing a §4Dockyard§!: [?invest_mio_dockyard_chance|W%%]\n\nCurrent Construction timeframe: §W[?invest_mio_days_project_days] days§!\nCurrent Selected Project: [invest_mio_chosen_project]\nProject Progress: §W[?invest_mio_days_project_percent]% Complete§!\nWeekly Progress Gain: [?invest_mio_days_project_days_math]%\n\nTotal Factories built: [?total_campaign_factories|W0]\nTotal §8Civilian Factories§! built: [?total_campaign_civs|W0]\nTotal §GMilitary Factories§! built: [?total_campaign_mils|W0]\nTotal §4Dockyards§! built: [?total_campaign_dockyards|W0]\n\nLast [?notification_list_maximum] factories built:"
 
- invest_mio_Notification_None: "§HNone§!"
+ gen_invest_mio_random_factories_tt: "§g§Y[?Scope.GetName]§! will invest in random parts of the country at random intervals constructing different buildings to assist the ruling government:\n\nMinimum daily §HFunds§! required for §Y[?Scope.GetName]§! to start building: [?daily_funds_requirement|2W] (§YIncreases§! with each building constructed)\n\n[MIO_Funds_Requirement_scrip_loc] (Current daily §HFunds§!: [?daily_funds_gained|2W])§!\n\nChance of constructing a §8Civilian Factory§!: [?invest_mio_civilian_factory_chance|W%%]\nChance of constructing a §GMilitary Factory§!: [?invest_mio_military_factory_chance|W%%]\nChance of constructing a §4Dockyard§!: [?invest_mio_dockyard_chance|W%%]\n\nCurrent Construction timeframe: §W[?invest_mio_days_project_days] days§!\nCurrent Selected Project: [invest_mio_chosen_project]\nProject Progress: §W[?invest_mio_days_project_percent]% Complete§!\nWeekly Progress Gain: [?invest_mio_days_project_days_math]%\n\nTotal Factories built: [?total_campaign_factories|W0]\nTotal §8Civilian Factories§! built: [?total_campaign_civs|W0]\nTotal §GMilitary Factories§! built: [?total_campaign_mils|W0]\nTotal §4Dockyards§! built: [?total_campaign_dockyards|W0]\n\nLast [?notification_list_maximum] factories built:"
+
+
+ invest_mio_Notification_None: "§H None§!"
 
  invest_mio_1: "§8Civilian Factory§!"
  invest_mio_2: "§GMilitary Factory§!"
@@ -115,7 +173,7 @@
 
  gib_focke_wolfe_cost_tt: "§gFocke-Wolfe is currently disfavored as a fighter aviation firm due to political favortism§! \nComeplete either §YPlay the Political Game trait§!(top mid left) or §YLeverage Field Reports§! trait(top mid right) to see associated costs."
  
- gib_focke_wolfe_cost_1_tt: "§gIrkutsk Aviation Plant is currently uninterested in supporting us due to a stronger industrial base in russia§! \nComeplete either §YPlay the Political Game trait§!(top mid left) or §YLeverage Field Reports§! trait(top mid right) to see associated costs."
+ gib_focke_wolfe_cost_1_tt: "§gIrkutsk Aviation Plant is currently uninterested in supporting us due to a stronger industrial base in Russia and the Urals§! \nComeplete either §YPlay the Political Game trait§!(top mid left) or §YLeverage Field Reports§! trait(top mid right) to see associated costs."
 
  enable_consolidation: "Enable Hist day1 setup decision"
  alt_hist_question: "Historical Game Rules"
