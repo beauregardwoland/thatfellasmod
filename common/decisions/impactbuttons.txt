@@ -1618,7 +1618,7 @@ Impact_buttons_1 = {
 
 		days_re_enable = 270
 
-		highlight_states = { highlight_states_trigger  = { is_core_of = PHI }
+		highlight_states = { highlight_states_trigger  = { is_core_of = PHI } }
 
 		visible = {
 			has_active_mission = JAP_phillipines_conquest_allied
