@@ -213,6 +213,7 @@ focus_tree = {
 		id = SAF_expand_the_cape_corps
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = SAF_reconstitute_the_cape_corps }
+		mutually_exclusive = { focus = SAF_outlaw_strikes }
 		x = 0
 		y = 5
 		relative_position_id = SAF_war_measures_act
@@ -244,6 +245,7 @@ focus_tree = {
 		id = SAF_outlaw_strikes
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = SAF_work_for_all_poor }
+		mutually_exclusive = { focus = SAF_expand_the_cape_corps }
 		x = 2
 		y = 5
 		relative_position_id = SAF_war_measures_act
@@ -1605,8 +1607,8 @@ focus_tree = {
 				add_faction_initiative = 1
 			}
 			ELSE = {
-			set_rule = { can_create_factions = yes }
-			create_faction = SAF_faction_uotap
+				set_rule = { can_create_factions = yes }
+				create_faction = SAF_faction_uotap
 			}
 			hidden_effect = {
 				news_event = { hours = 6 id = news.264 }
@@ -1857,13 +1859,27 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = SAF_soviet_advisers
-
-			add_mastery_bonus = {
-				name = SAF_invite_soviet_advisers
-				bonus = 0.1
-				days = 180
+			if = {
+				limit = {
+					has_doctrine = mass_assault
+				}
+				add_mastery_bonus = {
+					name = SAF_invite_soviet_advisers
+					bonus = 0.1
+					days = 180
 				grand_doctrine = mass_assault
+				}
 			}
+				else = {
+					add_mastery_bonus = {
+					name = SAF_invite_soviet_advisers
+					bonus = 0.05
+					days = 180
+				}
+			}
+			
+
+			
 			
 			add_doctrine_cost_reduction = {
 				name = SAF_invite_soviet_advisers
@@ -2557,12 +2573,15 @@ focus_tree = {
 		y = 7
 		relative_position_id = SAF_south_african_railways
 
-		cost = 15
+		cost = 10
 
 		ai_will_do = {
 			factor = 100
 		}
 
+		available = {
+			is_subject = no
+		}
 		
 		bypass = {
 
@@ -2593,7 +2612,16 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
 			has_war = yes
+			is_in_faction = yes
+			OR = {
+				num_of_factories > 50
+				any_other_country = {
+					is_in_faction_with = ROOT
+					num_of_factories > 50
+				}
+			}
 		}
 		
 		bypass = {
@@ -3206,7 +3234,6 @@ focus_tree = {
 				name = SAF_perfect_the_cab_rank_technique
 				bonus = 0.1
 				days = 180
-				grand_doctrine = new_battlefield_support
 				track = heavy_aircraft
 			}
 		}
@@ -3680,7 +3707,7 @@ focus_tree = {
 				name = SAF_prepare_overseas_offensive
 				cost_reduction = 0.5
 				uses = 1
-				category = convoy_defense_tree
+				category = naval_doctrine
 			}
 			add_tech_bonus = {
 				name = SAF_prepare_overseas_offensive

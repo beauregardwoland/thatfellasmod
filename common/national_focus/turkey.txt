@@ -846,8 +846,8 @@ focus_tree = {
 					IRQ = { exists = no }
 				}
 				is_subject = yes
-					}
-				}
+			}
+		}
 
 		allow_branch = {
 			NOT = { has_dlc = "Graveyard of Empires" }
@@ -2351,12 +2351,11 @@ focus_tree = {
 	focus = {
 		id = TUR_georgian_manganese_extraction
 		icon = {
-			value = GFX_focus_generic_steel
-			trigger = {
+			GFX_focus_generic_steel = {
 				SOV = { NOT = { controls_state = 231 } } #APPROPRIATE CONDITIONS FOR GENERIC ICON
 			}
+			GFX_focus_chi_mission_to_the_soviet_union = yes
 		}
-		icon = GFX_focus_chi_mission_to_the_soviet_union
 		prerequisite = { focus = TUR_halk_ve_devlet }
 		x = -2
 		y = 1
@@ -3036,68 +3035,68 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-					is_in_faction = no
-				}
+						is_in_faction = no
+					}
 					create_faction_from_template = {
 						template = faction_template_AFG_united_islamic_world_faction
 						name = the_saadabad_concordat
 					}
-				every_country = {
-					limit = {
-						has_country_flag = TUR_saadabad_pact_member
-					}
-					custom_effect_tooltip = invite_to_faction_tt
-					hidden_effect = { country_event = { id = generic.5 } }
-				}
-			}
-			else_if = {
-				limit = {
-					is_in_faction = yes
-					is_faction_leader = yes
-				}
-				every_country = {
-					limit = {
-						has_country_flag = TUR_saadabad_pact_member
-					}
-					country_event = { id = generic.5 }
-				}
-			}
-			else_if = {
-				limit = {
-					is_in_faction = yes
-					is_faction_leader = no
-				}
-				effect_tooltip = { 
 					every_country = {
 						limit = {
 							has_country_flag = TUR_saadabad_pact_member
 						}
+						custom_effect_tooltip = invite_to_faction_tt
+						hidden_effect = { country_event = { id = generic.5 } }
+					}
+				}
+				else_if = {
+					limit = {
+						is_in_faction = yes
+						is_faction_leader = yes
+					}
+					every_country = {
+						limit = {
+							has_country_flag = TUR_saadabad_pact_member
+						}
+						country_event = { id = generic.5 }
+					}
+				}
+				else_if = {
+					limit = {
+						is_in_faction = yes
+						is_faction_leader = no
+					}
+					effect_tooltip = { 
+						every_country = {
+							limit = {
+								has_country_flag = TUR_saadabad_pact_member
+							}
+							random_country = {
+								limit = {
+									is_in_faction_with = TUR
+									is_faction_leader = yes
+								}
+								PREV = { country_event = { id = generic.5 } }
+							}
+						}
+					}
+					hidden_effect = { 
 						random_country = {
 							limit = {
 								is_in_faction_with = TUR
 								is_faction_leader = yes
 							}
-							PREV = { country_event = { id = generic.5 } }
+							country_event = bftb_turkey.142
 						}
 					}
 				}
-				hidden_effect = { 
-					random_country = {
-						limit = {
-							is_in_faction_with = TUR
-							is_faction_leader = yes
-						}
-						country_event = bftb_turkey.142
+				if = {
+					limit = {
+						NOT = { has_completed_focus = TUR_treaty_of_saadabad }
 					}
+					custom_effect_tooltip = TUR_saadabad_pact_faction_tt
 				}
 			}
-			if = {
-				limit = {
-					NOT = { has_completed_focus = TUR_treaty_of_saadabad }
-				}
-				custom_effect_tooltip = TUR_saadabad_pact_faction_tt
-			}
-		}
 			else = {
 				if = {
 					limit = {
@@ -3362,117 +3361,117 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			if = { 
+			if = {
 				limit = {
 					NOT = { has_dlc = "Graveyard of Empires" }
 				}
 				if = { 
 					limit = {
-					NOT = { has_completed_focus = TUR_treaty_of_saadabad }
-				}
-				effect_tooltip = {
-					puppet = AFG
-					puppet = PER
-					puppet = IRQ
-				}
-			}
-			if = { 
-				limit = {
-					has_completed_focus = TUR_treaty_of_saadabad
-					AFG = {
-						AND = {
-							NOT = { is_in_faction_with = TUR }
-							has_country_flag = TUR_saadabad_pact_member
-						}
+						NOT = { has_completed_focus = TUR_treaty_of_saadabad }
+					}
+					effect_tooltip = {
+						puppet = AFG
+						puppet = PER
+						puppet = IRQ
 					}
 				}
-				effect_tooltip = { TUR = { puppet = AFG } }
-			}
-			if = { 
-				limit = {
-					has_completed_focus = TUR_treaty_of_saadabad
-					PER = {
-						AND = {
-							NOT = { is_in_faction_with = TUR }
-							has_country_flag = TUR_saadabad_pact_member
+				if = { 
+					limit = {
+						has_completed_focus = TUR_treaty_of_saadabad
+						AFG = {
+							AND = {
+								NOT = { is_in_faction_with = TUR }
+								has_country_flag = TUR_saadabad_pact_member
+							}
 						}
 					}
+					effect_tooltip = { TUR = { puppet = AFG } }
 				}
-				effect_tooltip = { TUR = { puppet = PER } }
-			}
-			if = { 
-				limit = {
-					has_completed_focus = TUR_treaty_of_saadabad
-					IRQ = {
-						AND = {
-							NOT = { is_in_faction_with = TUR }
-							has_country_flag = TUR_saadabad_pact_member
+				if = { 
+					limit = {
+						has_completed_focus = TUR_treaty_of_saadabad
+						PER = {
+							AND = {
+								NOT = { is_in_faction_with = TUR }
+								has_country_flag = TUR_saadabad_pact_member
+							}
 						}
 					}
+					effect_tooltip = { TUR = { puppet = PER } }
 				}
-				effect_tooltip = { TUR = { puppet = IRQ } }
-			}
-			if = { 
-				limit = {
-					has_completed_focus = TUR_treaty_of_saadabad
-					SYR = {
-						AND = {
-							NOT = { is_in_faction_with = TUR }
-							has_country_flag = TUR_saadabad_pact_member
+				if = { 
+					limit = {
+						has_completed_focus = TUR_treaty_of_saadabad
+						IRQ = {
+							AND = {
+								NOT = { is_in_faction_with = TUR }
+								has_country_flag = TUR_saadabad_pact_member
+							}
 						}
 					}
+					effect_tooltip = { TUR = { puppet = IRQ } }
 				}
-				effect_tooltip = { TUR = { puppet = SYR } }
-			}
-			if = { 
-				limit = {
-					has_completed_focus = TUR_treaty_of_saadabad
-					AFG = {
-						AND = {
-							is_in_faction_with = TUR
-							has_country_flag = TUR_saadabad_pact_member
+				if = { 
+					limit = {
+						has_completed_focus = TUR_treaty_of_saadabad
+						SYR = {
+							AND = {
+								NOT = { is_in_faction_with = TUR }
+								has_country_flag = TUR_saadabad_pact_member
+							}
 						}
 					}
+					effect_tooltip = { TUR = { puppet = SYR } }
 				}
-				TUR = { puppet = AFG }
-			}
-			if = { 
-				limit = {
-					has_completed_focus = TUR_treaty_of_saadabad
-					PER = {
-						AND = {
-							is_in_faction_with = TUR
-							has_country_flag = TUR_saadabad_pact_member
+				if = { 
+					limit = {
+						has_completed_focus = TUR_treaty_of_saadabad
+						AFG = {
+							AND = {
+								is_in_faction_with = TUR
+								has_country_flag = TUR_saadabad_pact_member
+							}
 						}
 					}
+					TUR = { puppet = AFG }
 				}
-				TUR = { puppet = PER }
-			}
-			if = { 
-				limit = {
-					has_completed_focus = TUR_treaty_of_saadabad
-					IRQ = {
-						AND = {
-							is_in_faction_with = TUR
-							has_country_flag = TUR_saadabad_pact_member
+				if = { 
+					limit = {
+						has_completed_focus = TUR_treaty_of_saadabad
+						PER = {
+							AND = {
+								is_in_faction_with = TUR
+								has_country_flag = TUR_saadabad_pact_member
+							}
 						}
 					}
+					TUR = { puppet = PER }
 				}
-				TUR = { puppet = IRQ }
-			}
-			if = { 
-				limit = {
-					has_completed_focus = TUR_treaty_of_saadabad
-					SYR = {
-						AND = {
-							is_in_faction_with = TUR
-							has_country_flag = TUR_saadabad_pact_member
+				if = { 
+					limit = {
+						has_completed_focus = TUR_treaty_of_saadabad
+						IRQ = {
+							AND = {
+								is_in_faction_with = TUR
+								has_country_flag = TUR_saadabad_pact_member
+							}
 						}
 					}
+					TUR = { puppet = IRQ }
 				}
-				TUR = { puppet = SYR }
+				if = { 
+					limit = {
+						has_completed_focus = TUR_treaty_of_saadabad
+						SYR = {
+							AND = {
+								is_in_faction_with = TUR
+								has_country_flag = TUR_saadabad_pact_member
+							}
+						}
+					}
+					TUR = { puppet = SYR }
+				}
 			}
-		}
 			else = {
 				every_country = {
 					limit = {
@@ -3818,8 +3817,8 @@ focus_tree = {
 				add_faction_initiative = 1
 			}
 			ELSE = {
-			set_rule = { can_create_factions = yes }
-			create_faction = TUR_balkan_pact
+				set_rule = { can_create_factions = yes }
+				create_faction = TUR_balkan_pact
 			}
 			every_country = {
 				limit = {

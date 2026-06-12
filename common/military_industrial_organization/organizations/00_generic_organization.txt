@@ -101,7 +101,13 @@ generic_tank_organization = {
 				has_dlc = "No Compromise, No Surrender"
 				
 			}
-		}		
+		}
+		NOT = {
+			AND =  {
+				original_tag = SIA
+				has_dlc = "Thunder at Our Gates"
+			}
+		}
 		NOT = {
 			original_tag = MON
 		}
@@ -2744,6 +2750,15 @@ generic_escort_ship_organization = {
 				has_dlc = "No Compromise, No Surrender"
 			}
 		}
+		NOT = {
+			AND = {
+				OR = {
+					original_tag = INS
+					original_tag = SIA
+				}
+				has_dlc = "Thunder at Our Gates"
+			}
+		}
 	}
 
 	equipment_type = {
@@ -4282,6 +4297,15 @@ generic_general_aircraft_organization = {
 					original_tag = KHM
 				}
 				has_dlc = "No Compromise, No Surrender"
+			}
+		}
+		NOT = {
+			AND = {
+				OR = {
+					original_tag = INS
+					original_tag = SIA
+				}
+				has_dlc = "Thunder at Our Gates"
 			}
 		}
 		NOT = {
@@ -7022,7 +7046,7 @@ generic_artillery_organization = {
 	icon = GFX_idea_generic_artillery_manufacturer_2
 
 	allowed = {
-		NOT = { OR = { original_tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = USA tag = JAP tag = CZE tag = ROM tag = MEX tag = SLO tag = RKH } }
+		NOT = { OR = { original_tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = USA tag = JAP tag = CZE tag = ROM tag = MEX tag = SLO tag = RKH tag = INS } }
 		NOT = {
 			AND = {
 				tag = POL
@@ -7123,6 +7147,15 @@ generic_artillery_organization = {
 #				}
 				has_dlc = "No Compromise, No Surrender"
 				
+			}
+		}
+		NOT = {
+			AND = {
+				OR = {
+					original_tag = AST
+					original_tag = SIA
+				}
+				has_dlc = "Thunder at Our Gates"
 			}
 		}
 		NOT = {
@@ -7444,7 +7477,7 @@ generic_infantry_equipment_organization = {
 	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
 
 	allowed = {
-		NOT = { OR = { original_tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CZE tag = HUN tag = YUG tag = ROM tag = MEX tag = TUR tag = EST tag = SLO tag = RKH } }
+		NOT = { OR = { original_tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CZE tag = HUN tag = YUG tag = ROM tag = MEX tag = TUR tag = EST tag = SLO tag = RKH tag = INS } }
 		NOT = {
 			AND = {
 				tag = POL
@@ -7544,6 +7577,14 @@ generic_infantry_equipment_organization = {
 #				}
 				has_dlc = "No Compromise, No Surrender"
 				
+			}
+		}
+		NOT = {
+			AND = {
+				OR = {
+					original_tag = SIA
+				}
+				has_dlc = "Thunder at Our Gates"
 			}
 		}
 		NOT = {
@@ -8209,6 +8250,16 @@ generic_motorized_mechanized_organization = {
 					original_tag = KUM
 				}
 				has_dlc = "No Compromise, No Surrender"
+			}
+		}
+		NOT = {
+			AND = {
+				OR = {
+					original_tag = INS
+					original_tag = AST
+					original_tag = SIA
+				}
+				has_dlc = "Thunder at Our Gates"
 			}
 		}
 	}

@@ -20,7 +20,7 @@ COM_nationbuilding = {
 		visible = { 
 			or = {
 				has_completed_focus = SAF_domestic_armarmants
-				has_completed_focus =AST_expand_domestic_designs
+				#has_completed_focus =AST_expand_domestic_designs
 			}
 		}
 
@@ -74,7 +74,7 @@ COM_nationbuilding = {
 		visible = { 
 			or = {
 				has_completed_focus = SAF_domestic_armarmants
-				has_completed_focus =AST_expand_domestic_designs
+				#has_completed_focus =AST_expand_domestic_designs
 			}
 		}
 
@@ -136,7 +136,7 @@ COM_nationbuilding = {
 		visible = { 
 			or = {
 				has_completed_focus = SAF_domestic_armarmants
-				has_completed_focus =AST_expand_domestic_designs
+				#has_completed_focus =AST_expand_domestic_designs
 			}
 		}
 
@@ -197,7 +197,7 @@ COM_nationbuilding = {
 		visible = { 
 			or = {
 				has_completed_focus = SAF_domestic_armarmants
-				has_completed_focus =AST_expand_domestic_designs
+				#has_completed_focus =AST_expand_domestic_designs
 			}
 		}
 
@@ -258,7 +258,7 @@ COM_nationbuilding = {
 		visible = { 
 			or = {
 				has_completed_focus = SAF_domestic_armarmants
-				has_completed_focus =AST_expand_domestic_designs
+				#has_completed_focus =AST_expand_domestic_designs
 			}
 		}
 
@@ -426,7 +426,7 @@ COM_nationbuilding = {
 
 		visible = { 
 			or = {
-				has_completed_focus = AST_expand_domestic_designs
+				#has_completed_focus = AST_expand_domestic_designs
 			}
 		}
 
@@ -481,7 +481,7 @@ COM_nationbuilding = {
 
 		visible = { 
 			or = {
-				has_completed_focus = AST_expand_domestic_designs
+				#has_completed_focus = AST_expand_domestic_designs
 			}
 		}
 

@@ -222,7 +222,7 @@ focus_tree = {
 		prerequisite = { focus = the_vangaurd_state }
 		available = { 
 			}
-		icon = GFX_Communist_Discourse
+		icon = GFX_focus_GER_the_peoples_victory
 		x = 2
 		y = 2
 		cost = 5
@@ -287,7 +287,7 @@ focus_tree = {
 		prerequisite = { focus = a_new_mongolia }
 		available = { 
 			}
-		icon = GFX_goal_generic_workers_democracy
+		icon = GFX_SOV_fourth_five_year_plan_ccp_2d_sov_compatibility
 		x = 8
 		y = 1
 		cost = 5
@@ -315,7 +315,7 @@ focus_tree = {
 		prerequisite = { focus = five_year_plan }
 		available = { 
 			}
-		icon = GFX_goal_generic_build_housing
+		icon = GFX_goal_generic_soviet_construction
 		x = 8
 		y = 2
 		cost = 5
@@ -338,7 +338,7 @@ focus_tree = {
 		prerequisite = { focus = expand_construction_sector }
 		available = { 
 			}
-		icon = GFX_goal_commune_politics
+		icon = GFX_focus_generic_public_works
 		x = 8
 		y = 3
 		cost = 7
@@ -416,7 +416,7 @@ focus_tree = {
 		prerequisite = { focus = public_works }
 		available = { 
 			}
-		icon = GFX_goal_generic_soviet_construction
+		icon = GFX_focus_RAJ_special_economic_zones
 		x = 8
 		y = 4
 		cost = 10
@@ -494,7 +494,7 @@ focus_tree = {
 				}
 			}
 		}
-		icon = GFX_All_resource
+		icon = GFX_focus_generic_resource_extraction
 		x = 5
 		y = 5
 		cost = 10
@@ -534,7 +534,7 @@ focus_tree = {
 					has_completed_focus = finish_the_five_year_plan
 					}
 			}
-		icon = GFX_goal_OTT_Loosen_Policy
+		icon = GFX_focus_CHI_commemorate_labour_corp
 		x = 6
 		y = 6
 		cost = 12
@@ -558,7 +558,7 @@ focus_tree = {
 					has_completed_focus = finish_the_five_year_plan
 					}
 			}
-		icon = GFX_goal_electronics
+		icon = GFX_focus_generic_education
 		x = 8
 		y = 6
 		cost = 12
@@ -583,7 +583,7 @@ focus_tree = {
 
 		available = { 
 			}
-		icon = GFX_goal_construction
+		icon = GFX_focus_CHI_planned_economy
 		x = 7
 		y = 7
 		cost = 10

@@ -851,6 +851,10 @@ SOV_kirov_organization = {
 				tag = BEL
 				has_dlc = "Gotterdammerung"
 			}
+			AND = {
+			    tag = AST
+			    has_dlc = "Thunder at Our Gates"
+			}
 		}
 	}
 
@@ -870,6 +874,11 @@ SOV_kirov_organization = {
 			}
 
 			FROM = { has_completed_focus = BEL_invite_soviet_tank_makers }
+		}
+
+		if = {
+		    limit = { FROM = { original_tag = AST } }
+		    FROM = { has_completed_focus = AST_westward_battles }
 		}
 	}
 

@@ -1890,8 +1890,14 @@
 					legacy_id = -1
 				}
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = MAN_tsr_chinese_leadership_tt
+
 			custom_effect_tooltip = generic_skip_one_line_tt
 			MAN_low_legitimacy_level_down = yes
+
 		}
 	}
 
@@ -2027,11 +2033,15 @@
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			#add_autonomy_ratio = {
-			#	value = 0.15
-			#	localization = MAN_the_two_emperors
-			#}
+			add_autonomy_ratio = {
+				value = 0.15
+				localization = MAN_the_two_emperors
+			}
 			MAN_low_legitimacy_level_down_twice = yes
+			unlock_decision_tooltip = {
+				decision = MAN_request_full_control_over_china
+				show_effect_tooltip = no 
+			}	
 			set_cosmetic_tag = MAN_restored
 		}
 	}
@@ -3138,10 +3148,10 @@
 						is_ally_with = JAP
 					}
 				}
-			add_timed_idea = {
-				idea = MAN_korean_liberation_army
-				days = 365
-			}
+				add_timed_idea = {
+					idea = MAN_korean_liberation_army
+					days = 365
+				}
 			}
 			ELSE = {
 				add_timed_idea = {
@@ -4432,16 +4442,22 @@
 		
 
 		completion_reward = {
+
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.05
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			add_trait = {
 				character = MAN_aisin_gioro_puyi
 				trait = MAN_figurehead_emperor
 				ideology = despotism
 			}
+
 		}
+
 	}
 
 	focus = {
@@ -4730,7 +4746,10 @@
 					NOT = { tag = event_target:WTT_current_china_leader }
 					is_subject = no
 				}
-				country_event = { id = wtt_manchukou.1 }
+				country_event = { 
+					id = wtt_manchukou.1 
+					hours = 2
+				}
 			}
 		}
 	}
@@ -5109,11 +5128,13 @@
 
 			MAN_low_legitimacy_clear_all = yes	
 
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			set_cosmetic_tag = MAN_restored
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			add_country_leader_trait = CHI_tsr_son_of_heaven
+			add_country_leader_trait = CHI_tsr_son_of_heaven_2
 
 			hidden_effect = {
 				news_event = { id = wtt_news.44 days = 2 }

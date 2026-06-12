@@ -24,6 +24,7 @@ focus_tree = {
 		}
 	}
 	continuous_focus_position = { x = 50 y = 1600 }
+	shared_focus = ABDA_abdacom
 	default = no
 
 	shortcut = {
@@ -7093,6 +7094,32 @@ focus_tree = {
 				days = 180
 				track = screens
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				create_equipment_variant = {
+					name = "Casablanca Class"
+					allow_without_tech = no 
+					type = ship_hull_escort_carrier
+					modules = {
+						fixed_ship_engine_slot = carrier_ship_engine_1
+						fixed_ship_deck_slot_1 = ship_escort_deck_space
+						fixed_ship_deck_slot_2 = ship_escort_deck_space
+						front_1_custom_slot = empty
+						mid_1_custom_slot = empty
+						fixed_ship_radar_slot = empty
+						fixed_ship_secondaries_slot = empty
+						fixed_ship_armor_slot = empty
+						fixed_ship_anti_air_slot = ship_anti_air_1
+					}
+					design_team = mio:USA_newport_news_shipbuilding_organization
+					name_group = USA_CVL_HISTORICAL
+				}
+			}
 		}
 	}
 	focus = {
@@ -7111,7 +7138,7 @@ focus_tree = {
 		available = {
 			is_special_project_completed = sp:sp_naval_cruiser_submarine
 		}
-
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no

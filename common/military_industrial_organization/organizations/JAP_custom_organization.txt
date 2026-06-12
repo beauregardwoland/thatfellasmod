@@ -3301,7 +3301,7 @@ JAP_kawasaki_nav_designer = {
 		ship_hull_carrier_submarine
 	}
 
-	research_categories = {	mio_cat_tech_all_submarine_and_modules mio_cat_tech_all_cruiser_and_modules }
+	research_categories = {	mio_cat_tech_all_screen_ship_and_modules mio_cat_tech_all_cruiser_and_modules mio_cat_tech_all_submarine_and_modules }
 	on_tech_research_completed = {
 		if = {
 			limit = { FROM = { has_idea = kawasaki_ic } }

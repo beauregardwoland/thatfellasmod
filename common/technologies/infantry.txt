@@ -292,6 +292,15 @@ technologies = {
 			ap_attack = 0.4
 		}
 
+		fire_support = {
+			hard_attack = 0.15
+			ap_attack = 0.5
+		}
+		mot_fire_support = {
+			hard_attack = 0.15
+			ap_attack = 0.5
+		}
+
 		path = {
 			leads_to_tech = infantry_at2
 			research_cost_coeff = 1
@@ -340,7 +349,14 @@ technologies = {
 			hard_attack = 0.1
 			ap_attack = 0.4
 		}
-
+		fire_support = {
+			hard_attack = 0.15
+			ap_attack = 0.5
+		}
+		mot_fire_support = {
+			hard_attack = 0.15
+			ap_attack = 0.5
+		}
 		research_cost = 1.5
 		start_year = 1943
 		folder = {
@@ -476,6 +492,10 @@ technologies = {
 		enable_subunits = {
 			paratrooper
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_paratrooper
+		}
 
 		path = {
 			leads_to_tech = paratroopers2
@@ -486,7 +506,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = @1936 }
+			position = { x = 3 y = @1936 }
 		}
 
 		on_research_complete_limit = {
@@ -537,6 +557,15 @@ technologies = {
 				tag = ENG
 			}
 
+			modifier = { #Sokolov Raid prep
+				factor = 20
+				tag = GER
+				has_completed_focus = GER_anschluss
+				CZE = { 
+					is_ai = no
+				}
+			}
+
 			modifier = {
 				factor = 5
 				tag = GER
@@ -561,7 +590,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = @1939 }
+			position = { x = 3 y = @1939 }
 		}
 
 		categories = {
@@ -605,7 +634,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = @1943 }
+			position = { x = 3 y = @1943 }
 		}
 
 		categories = {
@@ -786,7 +815,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = infantry_folder
-			position = { x = 5 y = @1936 }
+			position = { x = 3 y = @1936 }
 		}
 
 		categories = {
@@ -815,7 +844,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = infantry_folder
-			position = { x = 5 y = @1939 }
+			position = { x = 3 y = @1939 }
 		}
 
 		categories = {
@@ -838,7 +867,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = infantry_folder
-			position = { x = 5 y = @1943 }
+			position = { x = 3 y = @1943 }
 		}
 
 		categories = {
@@ -883,7 +912,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = @1936 }
+			position = { x = 3 y = @1936 }
 		}
 		
 		categories = {
@@ -932,7 +961,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = @1939 }
+			position = { x = 3 y = @1939 }
 		}
 		
 		categories = {
@@ -956,7 +985,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = @1943 }
+			position = { x = 3 y = @1943 }
 		}
 		
 		categories = {
@@ -1550,22 +1579,27 @@ technologies = {
 
 	support_weapons = {
 
-		category_infantry_and_bicycle = {
-			defense = 0.05
-			breakthrough = 0.05
+		enable_subunits = {
+			fire_support
+			mot_fire_support
 		}
-		category_cavalry = {
-			defense = 0.02
-			breakthrough = 0.02
-		}
-		category_special_forces_leg_infantry = {
-			defense = 0.03
-			breakthrough = 0.03
-		}
-		category_vehicle_infantry = {
-			defense = 0.05
-			breakthrough = 0.05
-		}
+
+		#category_infantry_and_bicycle = {
+		#	defense = 0.05
+		#	breakthrough = 0.05
+		#}
+		#category_cavalry = {
+		#	defense = 0.02
+		#	breakthrough = 0.02
+		#}
+		#category_special_forces_leg_infantry = {
+		#	defense = 0.03
+		#	breakthrough = 0.03
+		#}
+		#category_vehicle_infantry = {
+		#	defense = 0.05
+		#	breakthrough = 0.05
+		#}
 
 		path = {
 			leads_to_tech = support_weapons2
@@ -1633,22 +1667,39 @@ technologies = {
 
 	support_weapons2 = {
 
-		category_infantry_and_bicycle = {
-			defense = 0.05
+		field_guns = {
+			defense = 0.1
+			soft_attack = 0.1
+		}
+		fire_support = {
+			defense = 0.15
+			breakthrough = 0.15
+			soft_attack = 0.1
+		}
+
+		mot_fire_support = {
+			defense = 0.15
 			breakthrough = 0.05
+			soft_attack = 0.1
 		}
-		category_cavalry = {
-			defense = 0.02
-			breakthrough = 0.02
-		}
-		category_special_forces_leg_infantry = {
-			defense = 0.03
-			breakthrough = 0.03
-		}
-		category_vehicle_infantry = {
-			defense = 0.05
-			breakthrough = 0.05
-		}
+
+
+		#category_infantry_and_bicycle = {
+		#	defense = 0.05
+		#	breakthrough = 0.05
+		#}
+		#category_cavalry = {
+		#	defense = 0.02
+		#	breakthrough = 0.02
+		#}
+		#category_special_forces_leg_infantry = {
+		#	defense = 0.03
+		#	breakthrough = 0.03
+		#}
+		#category_vehicle_infantry = {
+		#	defense = 0.05
+		#	breakthrough = 0.05
+		#}
 
 		path = {
 			leads_to_tech = support_weapons3
@@ -1711,22 +1762,39 @@ technologies = {
 
 	support_weapons3 = {
 
-		category_infantry_and_bicycle = {
-			defense = 0.05
+		field_guns = {
+			defense = 0.1
+			soft_attack = 0.1
+		}
+
+		fire_support = {
+			defense = 0.15
+			breakthrough = 0.15
+			soft_attack = 0.1
+		}
+
+		mot_fire_support = {
+			defense = 0.15
 			breakthrough = 0.05
+			soft_attack = 0.1
 		}
-		category_cavalry = {
-			defense = 0.02
-			breakthrough = 0.02
-		}
-		category_special_forces_leg_infantry = {
-			defense = 0.03
-			breakthrough = 0.03
-		}
-		category_vehicle_infantry = {
-			defense = 0.05
-			breakthrough = 0.05
-		}
+
+		#category_infantry_and_bicycle = {
+		#	defense = 0.05
+		#	breakthrough = 0.05
+		#}
+		#category_cavalry = {
+		#	defense = 0.02
+		#	breakthrough = 0.02
+		#}
+		#category_special_forces_leg_infantry = {
+		#	defense = 0.03
+		#	breakthrough = 0.03
+		#}
+		#category_vehicle_infantry = {
+		#	defense = 0.05
+		#	breakthrough = 0.05
+		#}
 
 		path = {
 			leads_to_tech = support_weapons4
@@ -1776,22 +1844,38 @@ technologies = {
 
 	support_weapons4 = {
 
-		category_infantry_and_bicycle = {
-			defense = 0.05
+		field_guns = {
+			defense = 0.1
+			soft_attack = 0.1
+		}
+
+		fire_support = {
+			defense = 0.15
+			breakthrough = 0.15
+			soft_attack = 0.1
+		}
+		mot_fire_support = {
+			defense = 0.15
 			breakthrough = 0.05
+			soft_attack = 0.1
 		}
-		category_cavalry = {
-			defense = 0.02
-			breakthrough = 0.02
-		}
-		category_special_forces_leg_infantry = {
-			defense = 0.03
-			breakthrough = 0.03
-		}
-		category_vehicle_infantry = {
-			defense = 0.05
-			breakthrough = 0.05
-		}
+
+		#category_infantry_and_bicycle = {
+		#	defense = 0.05
+		#	breakthrough = 0.05
+		#}
+		#category_cavalry = {
+		#	defense = 0.02
+		#	breakthrough = 0.02
+		#}
+		#category_special_forces_leg_infantry = {
+		#	defense = 0.03
+		#	breakthrough = 0.03
+		#}
+		#category_vehicle_infantry = {
+		#	defense = 0.05
+		#	breakthrough = 0.05
+		#}
 
 		research_cost = 1.5
 		start_year = 1942
@@ -1840,6 +1924,11 @@ technologies = {
 			mot_anti_tank_brigade
 			mot_artillery_brigade
 			mot_anti_air_brigade
+
+		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_motorized
 		}
 
 		enable_equipments = {
@@ -1909,6 +1998,9 @@ technologies = {
 			motorized_equipment_1
 		}
 
+		mot_fire_support = {
+			breakthrough = 0.1
+		}
 		#enable_equipment_modules = {
 		#	tank_wheeled_suspension
 		#}
@@ -2276,6 +2368,11 @@ technologies = {
 			tank_half_track_suspension
 		}
 
+		mot_fire_support = {
+			breakthrough = 0.1
+			soft_attack = 0.05
+		}
+
 		motorized = {
 			hardness = 1.0
 		}
@@ -2432,6 +2529,11 @@ technologies = {
 			mechanized_equipment_2
 		}
 
+		mot_fire_support = {
+			breakthrough = 0.1
+			soft_attack = 0.05
+		}
+
 		path = {
 			leads_to_tech = mechanised_infantry3
 			research_cost_coeff = 1
@@ -2470,6 +2572,11 @@ technologies = {
 		mechanized = {
 			soft_attack = 0.15
 			hard_attack = 0.15
+		}
+
+		mot_fire_support = {
+			breakthrough = 0.1
+			soft_attack = 0.05
 		}
 
 		research_cost = 3
@@ -3143,5 +3250,21 @@ technologies = {
 		}
 	}
 	#End Pfot
+
+	#### FROM AUSTRALIAN FOCUS  ####
+
+	northern_territory_recon_support_tech = {
+
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			northern_territory_recon_support
+		}
+	}
 
 }

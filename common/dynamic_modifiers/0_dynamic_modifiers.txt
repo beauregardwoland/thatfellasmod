@@ -817,8 +817,7 @@ SOV_soviet_airforce_aircraft_production_focus_dynamic_modifier = { #NATIONAL SPI
 	strategic_bomb_visibility = SOV_soviet_airforce_strategic_bomb_visibility #-0.1 -> Long Range Aircraft
 	air_mission_efficiency = SOV_soviet_airforce_air_mission_efficiency #0.1 -> The Modern War in the Skies
 	air_nav_efficiency = SOV_soviet_airforce_air_nav_efficiency #0.1 -> Expand the Morskaya Aviatsiya
-		air_defence_factor = SOV_air_defence_factor
-
+	air_defence_factor = SOV_air_defence_factor
 }
 
 SOV_soviet_airforce_dynamic_modifier_alt = { #NATIONAL SPIRIT
@@ -845,8 +844,7 @@ SOV_soviet_airforce_dynamic_modifier_alt = { #NATIONAL SPIRIT
 	strategic_bomb_visibility = SOV_soviet_airforce_strategic_bomb_visibility #-0.1 -> Long Range Aircraft
 	air_mission_efficiency = SOV_soviet_airforce_air_mission_efficiency #0.1 -> The Modern War in the Skies
 	air_nav_efficiency = SOV_soviet_airforce_air_nav_efficiency #0.1 -> Expand the Morskaya Aviatsiya
-		air_defence_factor = SOV_air_defence_factor
-
+	air_defence_factor = SOV_air_defence_factor
 }
 
 SOV_soviet_airforce_aircraft_production_focus_dynamic_modifier_alt = { #NATIONAL SPIRIT - Same version as the previous one, but with a custom tooltip to communicate aircraft production bonuses
@@ -874,8 +872,7 @@ SOV_soviet_airforce_aircraft_production_focus_dynamic_modifier_alt = { #NATIONAL
 	strategic_bomb_visibility = SOV_soviet_airforce_strategic_bomb_visibility #-0.1 -> Long Range Aircraft
 	air_mission_efficiency = SOV_soviet_airforce_air_mission_efficiency #0.1 -> The Modern War in the Skies
 	air_nav_efficiency = SOV_soviet_airforce_air_nav_efficiency #0.1 -> Expand the Morskaya Aviatsiya
-		air_defence_factor = SOV_air_defence_factor
-
+	air_defence_factor = SOV_air_defence_factor
 }
 
 SOV_the_red_fleet_dynamic_modifier = { #NATIONAL SPIRIT
@@ -1142,7 +1139,6 @@ SOV_the_red_army_dynamic_modifier = { #NATIONAL SPIRIT
 	dig_in_speed_factor = SOV_the_red_army_dig_in_speed_factor #0.05 -> Experts in Camouflage
 	operative_slot  = SOV_the_red_army_operative_slot  #1 -> Organization of the Partisans
 	max_command_power_mult = SOV_the_red_army_max_command_power_mult #0.1 -> Depoliticize the Military
-
 	army_strength_factor = SOV_the_red_army_army_strength_factor #0.05 -> The Glory of the Red Army
 }
 

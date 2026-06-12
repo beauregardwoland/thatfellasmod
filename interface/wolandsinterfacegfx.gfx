@@ -470,6 +470,66 @@ spriteTypes = {
 		texturefile = "gfx/interface/focus_jap_amphib.dds"
 	}
 	spriteType = {
+        name = GFX_goal_focus_jap_amphib_shine # Change the name, note to keep _shine in the end
+        texturefile = gfx/interface/focus_jap_amphib.dds # Change to the focus icon
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/focus_jap_amphib.dds # Change to the focus icon
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = gfx/interface/focus_jap_amphib.dds # Change to the focus icon
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+	spriteType = {
+        name = GFX_goal_MON_spirit_genghis_shine # Change the name, note to keep _shine in the end
+        texturefile = gfx/interface/MON_spirit_genghis.png # Change to the focus icon
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/MON_spirit_genghis.png # Change to the focus icon
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = gfx/interface/MON_spirit_genghis.png # Change to the focus icon
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+	spriteType = {
 		name = "GFX_EMI_MON_self_sealing_fuel_tanks_small"
 		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_self_sealing_fueltank_icon.dds"
 		legacy_lazy_load = no

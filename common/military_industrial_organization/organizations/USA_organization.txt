@@ -537,7 +537,7 @@ USA_detroit_arsenal_organization = {
 	icon = GFX_idea_generic_industrial_concern_1
 	allowed = {	
 		OR = {
-		tag = USA
+			tag = USA
 			PHI_SEA = yes
 		}
 	}
@@ -846,7 +846,7 @@ USA_electric_boat_company_organization = {
 	icon = GFX_idea_electric_boat_company
 	allowed = {	
 		OR = {
-		tag = USA 
+			tag = USA 
 			PHI_SEA = yes
 		}
 	}
@@ -1287,7 +1287,7 @@ USA_lockheed_organization = {
 	
 	allowed = {	
 		OR = {
-		tag = USA 
+			tag = USA 
 			PHI_SEA = yes
 		}
 	}
@@ -1757,7 +1757,7 @@ USA_springfield_armory_organization = {
 	
 	allowed = {	 
 		OR = {
-		tag = USA 
+			tag = USA 
 			AND = {
 				original_tag = PHI 
 				has_dlc = "No Compromise, No Surrender"
@@ -2066,7 +2066,7 @@ USA_rock_island_arsenal_organization = {
 	
 	allowed = {	 
 		OR = {
-		tag = USA 
+			tag = USA 
 			AND = {
 				original_tag = PHI 
 				has_dlc = "No Compromise, No Surrender"

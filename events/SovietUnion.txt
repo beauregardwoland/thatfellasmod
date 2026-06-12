@@ -2384,6 +2384,9 @@ country_event = {
 						is_controlled_by = SOV
 						any_other_country = {
 							controls_state = 70
+							NOT = {	#no taking Slovakia from a comintern Slovakia/Czechoslovakia
+								owns_state = 70
+							}
 							is_in_faction_with = SOV
 							SOV = { is_faction_leader = yes }
 						}
@@ -2400,6 +2403,9 @@ country_event = {
 						is_controlled_by = SOV
 						any_other_country = {
 							controls_state = 71
+							NOT = {	#no taking Slovakia from a comintern Slovakia/Czechoslovakia
+								owns_state = 71
+							}
 							is_in_faction_with = SOV
 							SOV = { is_faction_leader = yes }
 						}
@@ -2416,6 +2422,9 @@ country_event = {
 						is_controlled_by = SOV
 						any_other_country = {
 							controls_state = 664
+							NOT = {	#no taking Slovakia from a comintern Slovakia/Czechoslovakia
+								owns_state = 664
+							}
 							is_in_faction_with = SOV
 							SOV = { is_faction_leader = yes }
 						}

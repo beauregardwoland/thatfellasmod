@@ -1959,12 +1959,12 @@ technologies = {
 			jungle = {
 				attack = 0.05
 			}
-			urban = {
-				attack = 0.05
-			}
-			fort = {
-				attack = 0.05
-			}
+			#urban = {
+			#	attack = 0.05
+			#}
+			#fort = {
+			#	attack = 0.05
+			#}
 		}
 
 		heavy_flame_tank = {

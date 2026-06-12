@@ -56,7 +56,7 @@ focus_tree = {
 			}
 			ELSE = {
 				any_owned_state = {
-					is_capital = yes 
+					is_capital = yes  
 					is_controlled_by = ROOT
 				}
 			}
@@ -3538,7 +3538,7 @@ focus_tree = {
 				}
 				create_intelligence_agency = { 
 					name = arbegnoch 
-					icon = GFX_agency_logo_eth_fetno_derash 
+					icon = GFX_intelligence_agency_logo_eth_fetno_derash 
 				}
 			}
 			# Adds resistance in northern and central Ethiopia
@@ -4227,8 +4227,8 @@ focus_tree = {
 					owns_state = 454
 					any_country = {
 						is_subject_of = PREV
-				owns_state = 454
-			}
+						owns_state = 454
+					}
 				}
 			}
 
@@ -5942,7 +5942,7 @@ focus_tree = {
 		available = { 
 			has_government = communism 
 		}
-			
+		
 		bypass = {
 		}
 
@@ -5957,8 +5957,8 @@ focus_tree = {
 						}
 					}
 				}
-			custom_effect_tooltip = ETH_support_from_the_japanese_communists_tt
-			set_country_flag = IA_anarchists_recruited_flag
+				custom_effect_tooltip = ETH_support_from_the_japanese_communists_tt
+				set_country_flag = IA_anarchists_recruited_flag
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			
@@ -6036,14 +6036,14 @@ focus_tree = {
 			}
 
 			add_mastery_bonus = {
-				name = ETH_peoples_army
+				name = ETH_peoples_army_focus
 				bonus = 0.1
 				days = 240
 				grand_doctrine = mass_assault
 				track = infantry
 			}
 			add_doctrine_cost_reduction = {
-				name = ETH_peoples_army
+				name = ETH_peoples_army_focus
 				cost_reduction = 0.25
 				uses = 2
 				category = land_doctrine
@@ -7191,23 +7191,23 @@ focus_tree = {
 		search_filters = {}
 		completion_reward = {	
 			navy_experience = 35
-					add_tech_bonus = {
-						bonus = 0.5
-						uses = 1
-						category = bb_tech
-					}		
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = bb_tech
+			}		
 			if = {
 				limit = { 
 					has_dlc = "Man the Guns"
 					country_exists = SOV
 				}
 
-					create_ship = {
-						type = ship_hull_heavy_1
-						equipment_variant = "Marat Class"
-						creator = SOV
-						name = "Marat Class I"
-					}
+				create_ship = {
+					type = ship_hull_heavy_1
+					equipment_variant = "Marat Class"
+					creator = SOV
+					name = "Marat Class I"
+				}
 
 			}
 			if = {

@@ -300,6 +300,7 @@ country_event = {
 		save_global_event_target_as = free_france
 		GER = { country_event = france.14 }
 		custom_effect_tooltip = france.10.b_tt
+		set_country_flag = GER_dont_seize_gold_reserves_flag #Can't allow Germany to seize out gold reserves just yet
 	}
 }
 
@@ -759,6 +760,7 @@ country_event = {
 				}
 				promote_leader = yes 
 			}
+			transfer_advisors_to_vichy = yes
 			# FRA Player Switches to Vichy
 			if = {
 				limit = { FRA = { has_country_flag = become_vichy } }
@@ -959,108 +961,108 @@ country_event = {
 	        }
 			set_capital = { state = 539 }
 			hidden_effect = {
-					set_state_controller = 26
-					set_state_controller = 22
-					set_state_controller = 25
-					set_state_controller = 20
-					set_state_controller = 33
+				set_state_controller = 26
+				set_state_controller = 22
+				set_state_controller = 25
+				set_state_controller = 20
+				set_state_controller = 33
 
-					#tunisia
-					if = {
-						limit = {
-							458 = {
-								owner = { original_tag = FRA }
-								controller = { 
-									original_tag = FRA
-								}
+				#tunisia
+				if = {
+					limit = {
+						458 = {
+							owner = { original_tag = FRA }
+							controller = { 
+								original_tag = FRA
 							}
 						}
-						set_state_controller = 458
-					}					
+					}
+					set_state_controller = 458
+				}					
 
-					#syria
-					if = {
-						limit = {
-							677 = {
-								owner = { original_tag = FRA }
-								controller = { 
-									original_tag = FRA
-								}
+				#syria
+				if = {
+					limit = {
+						677 = {
+							owner = { original_tag = FRA }
+							controller = { 
+								original_tag = FRA
 							}
 						}
-						set_state_controller = 677
 					}
-					if = {
-						limit = {
-							680 = {
-								owner = { original_tag = FRA }
-								controller = { 
-									original_tag = FRA
-								}
+					set_state_controller = 677
+				}
+				if = {
+					limit = {
+						680 = {
+							owner = { original_tag = FRA }
+							controller = { 
+								original_tag = FRA
 							}
 						}
-						set_state_controller = 680
 					}
-					if = {
-						limit = {
-							554 = {
-								owner = { original_tag = FRA }
-								controller = { 
-									original_tag = FRA
-								}
+					set_state_controller = 680
+				}
+				if = {
+					limit = {
+						554 = {
+							owner = { original_tag = FRA }
+							controller = { 
+								original_tag = FRA
 							}
 						}
-						set_state_controller = 554 
 					}
+					set_state_controller = 554 
+				}
 
-					if = {
-						limit = {
-							1 = {
-								owner = { original_tag = FRA }
-							}
+				if = {
+					limit = {
+						1 = {
+							owner = { original_tag = FRA }
 						}
-						set_state_controller = 1
 					}
-					if = {
-						limit = {
-							32 = {
-								owner = { original_tag = FRA }
-							}
+					set_state_controller = 1
+				}
+				if = {
+					limit = {
+						32 = {
+							owner = { original_tag = FRA }
 						}
-						set_state_controller = 32
 					}
-					if = {
-						limit = {
-							735 = {
-								owner = { original_tag = FRA }
-							}
+					set_state_controller = 32
+				}
+				if = {
+					limit = {
+						735 = {
+							owner = { original_tag = FRA }
 						}
-						set_state_controller = 735
 					}
-					if = {
-						limit = {
-							851 = {
-								owner = { original_tag = FRA }
-							}
+					set_state_controller = 735
+				}
+				if = {
+					limit = {
+						851 = {
+							owner = { original_tag = FRA }
 						}
-						set_state_controller = 851
 					}
-					if = {
-						limit = {
-							21 = {
-								owner = { original_tag = FRA }
-							}
+					set_state_controller = 851
+				}
+				if = {
+					limit = {
+						21 = {
+							owner = { original_tag = FRA }
 						}
-						set_state_controller = 21
 					}
-					if = {
-						limit = {
-							31 = {
-								owner = { original_tag = FRA }
-							}
+					set_state_controller = 21
+				}
+				if = {
+					limit = {
+						31 = {
+							owner = { original_tag = FRA }
 						}
-						set_state_controller = 31
 					}
+					set_state_controller = 31
+				}
 			}
 			start_civil_war = {
 				ideology = neutrality
@@ -1188,6 +1190,21 @@ country_event = {
 							is_core_of = LEB
 							is_core_of = SYR
 						}
+						# Keep French Indochina out of Vichy while Siam's limited war over it is ongoing
+						NOT = {
+							AND = {
+								OR = {
+									is_core_of = VIN
+									is_core_of = CAM
+									is_core_of = LAO
+								}
+								SIA = {
+									has_active_mission = SIA_limited_war_indochina
+									has_variable = limited_war_target
+									var:limited_war_target = { original_tag = FRA }
+								}
+							}
+						}
 					}
 					event_target:vichy_france = { transfer_state = PREV }
 				}
@@ -1210,12 +1227,12 @@ country_event = {
 							OR = {
 								original_tag = FRA
 								AND  = {
-								has_war_with = FRA
+									has_war_with = FRA
 									NOT = {	#Especially Switzerland can obtain states before the war
 										owns_state = PREV
 									}
 								}
-							} 
+							}
 						} #failsafe for weird shit (tm)
 					}
 					add_core_of = PREV
@@ -1297,6 +1314,8 @@ country_event = {
 						promote_leader = yes
 					}
 				}
+
+				transfer_advisors_to_vichy = yes
 				
 				add_ideas = FRA_occupation_costs_4
 				load_focus_tree = vichy_french_focus

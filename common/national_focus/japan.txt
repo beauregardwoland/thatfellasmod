@@ -5463,7 +5463,11 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			524 = {
+				NOT = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -13004,6 +13008,9 @@ focus_tree = {
 				635 = {
 					state_is_fully_controlled_by_ROOT_or_subject = yes
 				}
+				1071 = {
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
 				#726 = {
 				#	state_is_fully_controlled_by_ROOT_or_subject = yes
 				#}
@@ -13045,6 +13052,7 @@ focus_tree = {
 						state = 726
 						state = 648
 						state = 645
+						state = 1071
 					}
 					state_is_fully_controlled_by_ROOT_or_subject = yes
 					air_base < 2 
@@ -13075,6 +13083,7 @@ focus_tree = {
 						state = 726
 						state = 648
 						state = 645
+						state = 1071
 					}
 					state_is_fully_controlled_by_ROOT_or_subject = yes
 					any_province_building_level = {
@@ -13122,6 +13131,7 @@ focus_tree = {
 							state = 726
 							state = 648
 							state = 645
+							state = 1071
 						}
 						state_is_fully_controlled_by_ROOT_or_subject = yes
 						radar_station < 1
@@ -13172,7 +13182,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_unsinkable_aircraft_carriers }
 
-		cost = 1
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -13334,7 +13344,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_battle_for_australia }
 
-		cost = 1
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -13550,6 +13560,8 @@ focus_tree = {
 					amount = 6
 				}
 			}
+
+			INS_cancel_hol_ally_strategy_entirely_effect = yes
 			
 			unlock_decision_category_tooltip = prospect_for_resources
 				
@@ -13820,6 +13832,70 @@ focus_tree = {
 					}
 				}
 			}
+
+			hidden_trigger = {
+				IF = {
+					limit = {
+						is_ai = yes 
+					}
+
+					OR = {
+						# Either Siam doesn't hold it 
+						NOT = {
+							286 = { 
+								CONTROLLER = { 
+									original_tag = SIA
+								} 
+							}
+							670 = { 
+								CONTROLLER = { 
+									original_tag = SIA
+								} 
+							}
+							1017 = { 
+								CONTROLLER = { 
+									original_tag = SIA
+								} 
+							}
+							741 = { 
+								CONTROLLER = { 
+									original_tag = SIA
+								} 
+							}
+						}
+
+						# Siam holds it and we have decided on our approach tpwards them first 
+						AND = {
+							OR = {
+								286 = { 
+									CONTROLLER = { 
+										original_tag = SIA
+									} 
+								}
+								670 = { 
+									CONTROLLER = { 
+										original_tag = SIA
+									} 
+								}
+								1017 = { 
+									CONTROLLER = { 
+										original_tag = SIA
+									} 
+								}
+								741 = { 
+									CONTROLLER = { 
+										original_tag = SIA
+									} 
+								}
+							}
+							OR = {
+								has_completed_focus = JAP_sea_pressure_siam
+								has_completed_focus = JAP_occupy_siam
+							}
+						}
+					}
+				}
+			}	
 			
 		}
 
@@ -13985,7 +14061,9 @@ focus_tree = {
 				is_in_faction = no
 				NOT = {
 					has_war_with = ROOT
+					
 				}
+				has_rule = can_join_factions
 			}
 		}
 
@@ -14075,12 +14153,35 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_non_aggression_pact_with = SIA
+				}
 
-			create_wargoal = {
-				type = annex_everything
-				target = SIA
-				expire = 0
-			}	
+				diplomatic_relation = { 
+					country = SIA
+					relation = non_aggression_pact 
+					active = no 
+				}
+			}
+
+			if = {
+				limit = {
+					is_ai = yes
+					is_historical_focus_on = yes
+				}
+				declare_war_on = {
+					target = SIA
+					type = annex_everything
+				}
+			}
+			else = {
+				create_wargoal = {
+					type = annex_everything
+					target = SIA
+					expire = 0
+				}	
+			}
 
 		}
 	}
@@ -14105,15 +14206,15 @@ focus_tree = {
 			is_subject = no
 			or = {
 				and = {
-					has_idea = JAP_quick_war_i
+					has_idea = JAP_quick_war_ii
 					date > 1940.06.01
 				}
 				and = {
-					has_idea = JAP_mid_war_i
+					has_idea = JAP_mid_war_ii
 					date > 1941.01.01
 				}
 				and = {
-					has_idea = JAP_long_war_i
+					has_idea = JAP_long_war_ii
 					date > 1941.06.01
 				}
 			}
@@ -18596,10 +18697,13 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = {
-				ruling_only = yes
-				character = JAP_yamakawa_kikue
-			}	
+			OR = {
+				has_idea = JAP_yamakawa_kikue
+				has_country_leader = {
+					ruling_only = yes
+					character = JAP_yamakawa_kikue
+				}
+			}
 		}
 
 		bypass = {
@@ -18644,10 +18748,13 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = {
-				ruling_only = yes
-				character = JAP_yamakawa_kikue
-			}	
+			OR = {
+				has_idea = JAP_yamakawa_kikue
+				has_country_leader = {
+					ruling_only = yes
+					character = JAP_yamakawa_kikue
+				}
+			}
 		}
 
 		bypass = {
@@ -21468,7 +21575,8 @@ focus_tree = {
 		}
 
 		available = {
-			
+			is_subject = no
+			is_in_faction = no
 		}
 
 		bypass = {
@@ -22892,7 +23000,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_crush_the_internal_factions } 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -22927,23 +23035,13 @@ focus_tree = {
 			add_war_support = 0.05
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-				
-			IF = {
-				limit = {
-					MAN = {
-						exists = yes
-						NOT = {
-							has_war_with = ROOT
-							is_ally_with = ROOT
-						}
-					}
-				}
-				create_wargoal = {
-					type = topple_government
-					target = MAN
-					expire = 0
-				}
+			
+			create_wargoal = {
+				type = topple_government
+				target = MAN
+				expire = 0
 			}
+
 			IF = {
 				limit = {
 					SOV = {
@@ -22962,8 +23060,6 @@ focus_tree = {
 					generator = { 610 716 328 715 714 717 }
 				}
 			}
-			unlock_decision_tooltip = JAP_return_manchuria
-			custom_effect_tooltip = JAP_liberate_manchuria_tt
 			
 		}
 	}
@@ -25156,7 +25252,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		cost = 7
+		cost = 6
 
 		ai_will_do = {
 			factor = 3
@@ -25256,7 +25352,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 7
+		cost = 6
 
 		ai_will_do = {
 			factor = 3
@@ -25377,7 +25473,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		cost = 7
+		cost = 6
 
 		ai_will_do = {
 			factor = 3
@@ -25487,7 +25583,7 @@ focus_tree = {
 		x = 4
 		y = 1
 
-		cost = 7
+		cost = 6
 
 		ai_will_do = {
 			factor = 3

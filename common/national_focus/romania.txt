@@ -3248,8 +3248,8 @@ focus_tree = {
 
 	focus = {
 		id = ROM_white_squadron_focus
-		icon = GFX_goal_generic_build_airforce
-		x = -1
+		icon = GFX_focus_SOV_women_in_aviation
+		x = 0
 		y = 1
 		prerequisite = { focus = ROM_expand_the_air_force }
 		relative_position_id = ROM_expand_the_air_force

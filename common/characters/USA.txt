@@ -1304,7 +1304,7 @@ characters={
 				air_pilot_training_3
 				air_air_superiority_1
 			}
-			cost = 200
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}

@@ -1079,7 +1079,6 @@ focus_tree = {
 				name = HUN_feldmarchall_augusts_expertise
 				bonus = 0.15
 				days = 180
-				grand_doctrine = grand_battleplan
 			}
 
 			add_doctrine_cost_reduction = {
@@ -1677,7 +1676,7 @@ focus_tree = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
-			set_rule = { can_create_factions = yes }
+				set_rule = { can_create_factions = yes }
 				create_faction_from_template = faction_template_habsburg_alliance
 				add_faction_initiative = 1
 			}
@@ -5264,9 +5263,8 @@ focus_tree = {
 
 			add_mastery_bonus = {
 				name = wuw_HUN_the_legacy_of_the_isonzo_front
-				bonus = 0.25
+				bonus = 0.2
 				days = 180
-				grand_doctrine = grand_battleplan
 				track = combat_support
 			}
 
@@ -7399,7 +7397,7 @@ focus_tree = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
-			set_rule = { can_create_factions = yes }
+				set_rule = { can_create_factions = yes }
 				create_faction_from_template = faction_template_balkan_pact
 				add_faction_initiative = 1
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -9797,6 +9795,7 @@ focus_tree = {
 				limit = {
 					SLO = {
 						exists = yes
+						is_subject = no
 						owns_state = 664
 					}
 				}
@@ -9807,7 +9806,12 @@ focus_tree = {
 					664 = {
 						NOT = {
 							OR = {
-								is_owned_by = SLO
+								AND = {
+									is_owned_by = SLO
+									SLO = {
+										is_subject = no
+									}
+								}
 								is_owned_by = CZE
 								is_owned_by = ROOT
 							}
@@ -9816,7 +9820,15 @@ focus_tree = {
 				}
 				random_country = {
 					limit = {
-						owns_state = 664
+						OR = {
+							AND = {
+								owns_state = 664
+								is_subject = no
+							}
+							any_subject_country = {
+								owns_state = 664
+							}
+						}
 					}
 					country_event = {
 						id = WW_hungary.7
@@ -9895,7 +9907,15 @@ focus_tree = {
 			custom_effect_tooltip = HUN_demands_tt
 			random_country = {
 				limit = {
-					owns_state = 73
+					OR = {
+						AND = {
+							owns_state = 73
+							is_subject = no
+						}
+						any_subject_country = {
+							owns_state = 73
+						}
+					}
 				}
 				country_event = {
 					id = WW_hungary.20
@@ -16528,7 +16548,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_INDUSTRY }
 
-		cost = 3
+		cost = 2
 
 		ai_will_do = {
 			factor = 5
@@ -17019,14 +17039,10 @@ focus_tree = {
 						type = industrial_complex
 						level = 2
 						instant_build = yes
-					}
-					add_resource = {
-						type = steel
-						amount = 2
-					}					
+					}				
 					add_resource = {
 						type = coal
-						amount = 5
+						amount = 8 
 					}
 				}
 			}
